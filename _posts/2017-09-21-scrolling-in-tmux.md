@@ -12,7 +12,7 @@ It's dead simple as this:
 ctrl + b + [
 ```
 This will allow you to scroll.
-
+Pressing q would quit scroll mode.
 ## Getting back to tmux session
 ```
 tmux attach -n [session number]
