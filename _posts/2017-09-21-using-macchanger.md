@@ -60,4 +60,6 @@ Now turn the interface on again:
 Now there you go. Your mac address is temporarily changed. 
 
 ## Warning
-The fake mac address will be reset to the original mac address if you choose to connect to another wifi or restart the interface. Now, there is a solution to spoof the mac address every time the machine wakes up. See [spoofing the mac address semi-permanently](www.github.com).
+The fake mac address will be reset to the original mac address if you choose to connect to another wifi or restart the interface. Now, there is a solution to spoof the mac address every time the machine wakes up. 
+
+See [spoofing the mac address semi-permanently](https://mr-polite.github.io/hacking/2017/09/21/changing-mac-address-semi-permanently.html).

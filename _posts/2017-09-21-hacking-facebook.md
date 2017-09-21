@@ -27,7 +27,7 @@ Before running the script, I suggest that you ensure your anonymity.
 
 The best method I recommend is to set up/buy a VPN. Otherwise, use proxy. 
 
-Another good solution is to go to a random place outside your house where you can access the Internet. Then run `macchanger` to temporarily change your mac address.
+Another good solution is to go to a random place outside your house where you can access the Internet. [Then run `macchanger` to temporarily change your mac address.](https://mr-polite.github.io/hacking/2017/09/21/using-macchanger.html)
 
 ## Now ready
 Then, just run `facebook.py` (set environment path or locate your `facebook.py` file before using it. You know this already):

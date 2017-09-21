@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "scrolling in tmux"
+title: "Scrolling in tmux"
 date: 2017-09-21 09:10:00 -0100
 categories: general linux
 ---
