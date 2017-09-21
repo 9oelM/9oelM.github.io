@@ -22,12 +22,12 @@ $ ifconfig
 information about interfaces
 
 eth0: ....
-	*ether xx:xx:xx:xx:xx:xx*
+	ether xx:xx:xx:xx:xx:xx
 
 lo: ....
 
 wlan0: ...
-	*ether xx:xx:xx:xx:xx:xx*
+	ether xx:xx:xx:xx:xx:xx
 ...
 ```
 What you need to see is the `eth0` interface and `wlan0` (sometimes eth1, or some other. You need to figure it out yourself). `eth0` is the ethernet (wired)interface, and `wlan0` is wireless LAN interface. 
@@ -46,7 +46,7 @@ and use macchanger to generate a new mac address (there are many options. Just d
 ```
 # macchanger -r wlan0
 ```
-# macchanger -r wlan0
+macchanger -r wlan0
 Current MAC:   12:34:56:78:90:ab (The name of your vendor)
 Permanent MAC: 12:34:56:78:90:ab (The name of your vendor)     
 New MAC:       34:a1:f3:ds:12:39 (unknown)
@@ -56,4 +56,8 @@ Now turn the interface on again:
 ```
 # ifconfig wlan0 up
 ```
+
 Now there you go. Your mac address is temporarily changed. 
+
+## Warning
+The fake mac address will be reset to the original mac address if you choose to connect to another wifi or restart the interface. Now, there is a solution to spoof the mac address every time the machine wakes up. See [spoofing the mac address semi-permanently](www.github.com).
