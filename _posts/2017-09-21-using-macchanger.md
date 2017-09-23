@@ -45,7 +45,6 @@ You are going to see that your wireless(or wired) connection is gone on your tas
 and use macchanger to generate a new mac address (there are many options. Just do `macchanger -h` or `man macchanger` to check it out):
 ```
 # macchanger -r wlan0
-```
 macchanger -r wlan0
 Current MAC:   12:34:56:78:90:ab (The name of your vendor)
 Permanent MAC: 12:34:56:78:90:ab (The name of your vendor)     
