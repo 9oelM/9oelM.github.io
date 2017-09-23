@@ -56,7 +56,20 @@ Now turn the interface on again:
 # ifconfig wlan0 up
 ```
 
-Now there you go. Your mac address is temporarily changed. 
+Now there you go. Your mac address is temporarily changed.
+
+## One problem I faced
+Everything went well, but I needed to restart my wifi even after `ifconfig wlan0 up` because the connection was not established. [I searched on the web and found an answer to this.](https://askubuntu.com/questions/586269/spoofed-mac-address-changes-when-trying-to-connect-to-network)
+
+This solution works perfectly for me:
+```
+sudo service network-manager stop
+sudo ifconfig wlan0 down
+sudo macchanger -m XX:XX:XX:XX:XX:XX wlan0
+sudo ifconfig wlan0 up
+sudo service network-manager start
+```
+This way, you do not have to manually restart wifi after `ifconfig wlan0 up`. 
 
 ## Warning
 The fake mac address will be reset to the original mac address if you choose to connect to another wifi or restart the interface. Now, there is a solution to spoof the mac address every time the machine wakes up. 
