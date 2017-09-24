@@ -21,7 +21,7 @@ env
 ```
 and it will show you everything.
 
-## Where are they stored (copied from [unix.stackexchange.com](https://unix.stackexchange.com/questions/813/how-to-determine-where-an-environment-variable-came-from)
+## Where are they stored (copied from [unix.stackexchange.com](https://unix.stackexchange.com/questions/813/how-to-determine-where-an-environment-variable-came-from))
 System wide
 * /etc/environment: specifically meant for environment variables
 * /etc/env.d/*: environment variables, split in multiple files
@@ -35,4 +35,12 @@ User specific
 * ~/.profile: used for all shells
 * ~/.cshrc, ~/.tcshrc, ~/.zshrc, ~/.tcshrc: similar for non-bash shells
 
- 
+## Is there a standard place for putting custom scripts?
+People say it's normal to place the scripts in `/opt` or `/opt/bin` directory. 
+But the answer to the below post also says we could use `/usr/local/bin` or `/usr/local/sbin` (for superuser privileges)
+
+## Bonus: [Differences between /bin, /sbin, /usr/bin, /usr/sbin, /usr/local/bin, /usr/local/sbin](https://askubuntu.com/questions/308045/differences-between-bin-sbin-usr-bin-usr-sbin-usr-local-bin-usr-local)
+* /bin : For binaries usable before the /usr partition is mounted. This is used for trivial binaries used in the very early boot stage or ones that you need to have available in booting single-user mode. Think of binaries like cat, ls, etc.
+* /sbin : Same, but for scripts with superuser (root) privileges required.
+* /usr/bin : Same as first, but for general system-wide binaries.
+* /usr/sbin : Same as above, but for scripts with superuser (root) privileges required.
