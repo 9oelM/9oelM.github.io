@@ -35,6 +35,14 @@ User specific
 * ~/.profile: used for all shells
 * ~/.cshrc, ~/.tcshrc, ~/.zshrc, ~/.tcshrc: similar for non-bash shells
 
+So, if you were to add a path to `.profile`, add:
+```
+export PATH=$PATH:/what/ever/path
+```
+
+You will need to `source ~/.profile` or restart the terminal to take effect. 
+For more, look at [the ubuntu official documentation.](https://help.ubuntu.com/community/EnvironmentVariables#Persistent_environment_variables)
+
 ## Is there a standard place for putting custom scripts?
 People say it's normal to place the scripts in `/opt` or `/opt/bin` directory. 
 But the answer to the below post also says we could use `/usr/local/bin` or `/usr/local/sbin` (for superuser privileges)
