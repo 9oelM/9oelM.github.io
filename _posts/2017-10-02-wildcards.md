@@ -7,17 +7,18 @@ categories: general linux
 ## Wildcards (I believe we are used to * and +, right?)
 
 | Wildcard | Matches | Example |
-| -------- | ------- | ------  |
+| :--------: | :-------: | :------:  |
 | `?` | Any single char | `program.?` matches program.c and program.o but not program.log. |
 | `[set]` | Any character in a set | `[Aa]pple` matches apple and Apple |
 | `[!set]` | Any character not in a set | `[!abc]` means anything but a,b, or c |
 
 ## Extension
+
 | Wildcard | Matches |
-| ----- | ------ |
+| :-----: | :-----: |
 | `[a-z]` | All lowercase letters |
 | `[a-zA-Z]` | All lowercase and uppercase letters |
-| `[!0-9]` | ALl non-digits |
+| `[!0-9]` | All non-digits |
 
 ## Brace expansion
 * `echo b{ed,olt,ar}s`, you'll see the words beds, bolts, and bars printed.
