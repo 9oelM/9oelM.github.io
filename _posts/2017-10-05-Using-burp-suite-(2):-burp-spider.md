@@ -5,7 +5,7 @@ date: 2017-10-05 09:00:00 -0100
 categories: hacking
 ---
 ## Little notes
-For the current tutorial, I'm going to try to use burp suite with [Instagram](https://www.instagram.com).
+For the current tutorial, I'm going to try to use burp suite with [Facebook](https://www.facebook.com).
 
 ## [What does Burp Spider do](https://portswigger.net/burp/help/spider_gettingstarted.html)
 * Burp Spider is a tool for automatically crawling web applications.
@@ -19,10 +19,12 @@ The Target tool gives you an overview of your target application's content and f
 
 2. Follow every link, submit every form, step through every multi-stage process, and log in to all protected areas.
 
-
-
 3.  This manual mapping process will populate the Target site map with all of the content requested via the Proxy, and also (via passive spidering) any further content that can be inferred from application responses (via links, forms, etc.). 
 
 **Note: Provided you have sufficient time, mapping applications manually in this way is qenerally much safer and more effective than moving directly to automated crawling techniques.**
 
 4. Define the **target scope**. This just means deciding on the items you want to find something out from. Select `branches` within the site map and using the `Add to scope` / `Remove from scope` commands on the context menu. 
+
+![4FacebookSpidering]({{site.url}}/assets/images/UsingBurpSuite/4FacebookSpidering.png)
+
+Gray items are the ones that are detected but not yet requested. 
