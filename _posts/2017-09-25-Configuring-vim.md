@@ -34,14 +34,3 @@ For example, you could use [NERDTree](https://github.com/scrooloose/nerdtree) by
 
 Use other plugins in the same way. For example, use [MRU.vim](https://github.com/vim-scripts/mru.vim) to see recently opened files: 
 `ESC + : + MRU` will show you recently opened files. 
-
-## Opening new tabs
-```
-ESC + : + tabnew
-```
-To open a new tab,
-and 
-```
-ESC + : + saveas [filename]
-```
-to save the file.
