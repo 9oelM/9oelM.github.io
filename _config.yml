@@ -34,6 +34,7 @@ exclude:
   - CNAME
   - node_modules
   - assets/sass
+  - 2017-00-00-boilerplate.md  
 
 # Plugin settings
 gems:
