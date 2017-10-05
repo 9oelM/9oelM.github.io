@@ -6,14 +6,16 @@
   <body>
 
     <main class="main" aria-label="Content">
-    {% assign sortedPosts = site.post | sort: 'title' %}   	
+    
+    {% assign sorted_pages = (site.pages | sort: 'title') %}
     <ul>
-		{% for post in sortedPosts %}
-		      <li>
-		      			<a href="{{ post.url }}">{{ post.title }}</a>
-				        </li>
-					  {% endfor %}
-	</ul>
+    {% for page in sorted_pages %}
+        <li>
+            <a href="{{ page.url }}">{{ page.title }}    </a>
+            {{ page.excerpt }}
+        </li>
+    {% endfor %}
+    </ul>
     </main>
 
   </body>
