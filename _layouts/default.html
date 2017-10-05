@@ -6,8 +6,9 @@
   <body>
 
     <main class="main" aria-label="Content">
-      	<ul>
-		{% for post in site.posts %}
+    {% assign sortedPosts = site.post | sort: 'title' %}   	
+    <ul>
+		{% for post in sortedPosts %}
 		      <li>
 		      			<a href="{{ post.url }}">{{ post.title }}</a>
 				        </li>
