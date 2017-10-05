@@ -15,7 +15,7 @@ This will allow you to scroll.
 Pressing q would quit scroll mode.
 ## Getting back to tmux session
 ```
-tmux attach -n [session number]
+tmux attach -t [session number]
 ```
 would do it. you can check the session number with:
 ```
