@@ -16,4 +16,12 @@ This way bluetooth is going to work.
 
 `stop` will stop bluetooth.
 
-BLuetooth is not turned on by default on boot on kali linux.
+Bluetooth is not turned on by default on boot on kali linux.
+
+Another equivalent way is:
+```
+service bluetooth start(stop)
+```
+```
+service bluetooth status
+```
