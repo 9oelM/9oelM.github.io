@@ -11,3 +11,5 @@ Follow the install instructions from the link:
 2. `./gradlew fatjar`
 3. run `simplify.jar` from `simplify/build/libs/simplify.jar`.
 
+## Checkpoint
+

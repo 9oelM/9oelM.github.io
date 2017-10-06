@@ -33,4 +33,21 @@ The installation shell script from the repository will install most of the plugi
 For example, you could use [NERDTree](https://github.com/scrooloose/nerdtree) by typing `ESC + : + NERDTreeToggle`.
 
 Use other plugins in the same way. For example, use [MRU.vim](https://github.com/vim-scripts/mru.vim) to see recently opened files: 
-`ESC + : + MRU` will show you recently opened files. 
+`ESC + : + MRU` will show you recently opened files.
+
+### Tab space
+The source file has the size of `2 spaces` for a `tab` but vim is currently configured to use the size of `4 spaces` for a `tab`.
+
+#### 1. How to beautify the file
+If you had installed vim configuraton from [this repo](https://github.com/amix/vimrc), I found that you can just use `Autoformat`. 
+
+![Autoformat]({{site.url}}/assets/images/Vim/2vimBeautify.png)
+
+#### 2. How to permanently change the tab size to '2 spaces'
+in `.vimrc`, paste the following:
+```
+set tabstop=2 " The 'size', the with of a tab is set to 2
+set shiftwidth=2 " Indents will have width of 2
+set softtabstop=2 " The number of columns for a tab is set to 2
+```
+consult the [stackoverflow question](https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces) for more detail.
