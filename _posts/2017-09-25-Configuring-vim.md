@@ -39,7 +39,7 @@ Use other plugins in the same way. For example, use [MRU.vim](https://github.com
 The source file has the size of `2 spaces` for a `tab` but vim is currently configured to use the size of `4 spaces` for a `tab`.
 
 #### 1. How to beautify the file
-If you had installed vim configuraton from [this repo](https://github.com/amix/vimrc), I found that you can just use `Autoformat`. 
+Download the folder from [this repo](https://github.com/Chiel92/vim-autoformat) and put that into `sources_non_forked` folder if you have installed vim configurations from [the ultimate vim configuration repository](https://github.com/amix/vimrc). Then it's going to automatically work once you restart vim. Type `:Autoformat` to use.
 
 ![Autoformat]({{site.url}}/assets/images/Vim/2vimBeautify.png)
 
@@ -51,3 +51,16 @@ set shiftwidth=2 " Indents will have width of 2
 set softtabstop=2 " The number of columns for a tab is set to 2
 ```
 consult the [stackoverflow question](https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces) for more detail.
+
+### How to autoclose html tag
+1. Download [the plugin from the repo](https://github.com/alvan/vim-closetag).
+2. Put that downloaded repo into `~/.vim/` or any designated folder.
+3. If you are using pathogen, closetag.vim will start automatically working. For additional configurations, see the repo.
+
+### How to autocomplete braces
+1. Download [the plugin](https://github.com/jiangmiao/auto-pairs): 
+  ```
+  git clone git://github.com/jiangmiao/auto-pairs.git
+  ```
+2. Put it into the right folder (see how we did previous configs).
+3. Then it starts working once you restart vim.
