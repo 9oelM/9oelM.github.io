@@ -90,6 +90,14 @@ really long lines... wc command gives 10611 of lines!
 ```
 
 ## Open the jar
-use [`JD-GUI`](http://jd.benow.ca/) or [`JD Java Decompiler Mirror`](https://varaneckas.com/jad/)
+use [`JD-GUI`](http://jd.benow.ca/) or [`JD Java Decompiler Mirror`](https://varaneckas.com/jad/) to open the source file.
 
+```
+dpkg -i jd-gui_1.4.0-0_all.deb 
+```
+
+## See the source code
+![See source]({{site.url}}/assets/images/HackingKakaotalk/3seeSource.png)
+
+As we can easily discover, almost all java codes are obfuscated. A normal human being cannot just understand the code. What do we do?
 
