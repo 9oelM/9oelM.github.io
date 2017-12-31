@@ -9,8 +9,8 @@ categories: Knowledge
 > An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to the user's web browser. The browser may store it and send it back with the next request to the same server.  
 > When receiving an HTTP request, a server can send a Set-Cookie header with the response. The cookie is usually stored by the browser, and then the cookie is sent with requests made to the same server inside a Cookie HTTP header. 
 > There are two types of cookies:
-  * Session cookies: The cookie created above is a session cookie: it is deleted when the client shuts down, because it didn't specify an Expires or Max-Age directive. However, web browsers may use session restoring, which makes most session cookies permanent, as if the browser was never closed.
-  * Permanent cookies: Instead of expiring when the client closes, permanent cookies expire at a specific date (Expires) or after a specific length of time (Max-Age).
+> * Session cookies: The cookie created above is a session cookie: it is deleted when the client shuts down, because it didn't specify an Expires or Max-Age directive. However, web browsers may use session restoring, which makes most session cookies permanent, as if the browser was never closed.
+> * Permanent cookies: Instead of expiring when the client closes, permanent cookies expire at a specific date (Expires) or after a specific length of time (Max-Age).
 
 ### Sessions
 > Sessions are stored on the server, which means clients do not have access to the information you store about them - this is particularly important if you store shopping baskets or other information you do not want you visitors to be able to edit by hand by hacking their cookies. 
@@ -18,11 +18,13 @@ categories: Knowledge
 
 ### + from stackoverflow users
 > It is preferred to use sessions because the actual values are hidden from the client, and you control when the data expires and becomes invalid. If it was all based on cookies, a user (or hacker) could manipulate their cookie data and then play requests to your site.
-> *Session*:
+
+> __Session__:
 > * IDU is stored on server (i.e. server-side)
 > * Safer (because of 1)
 > * Expiration can not be set, session variables will be expired when users close the browser. (nowadays it is stored for 24 minutes as default in php)
-> *Cookies*:
+
+> __Cookies__:
 > * IDU is stored on web-browser (i.e. client-side)
 > * Not very safe, since hackers can reach and get your information (because of 1)
 > * Expiration can be set (see setcookies() for more information)
