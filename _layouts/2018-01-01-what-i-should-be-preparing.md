@@ -44,3 +44,33 @@ Experience with Core Impact
 Experience with IBM Appscan
 5 years’ experience
 Bachelor’s Degree related to position
+
+**Salesforce**
+Minimum Qualifications
+BS/MS degree, or relevant work experience
+Infrastructure and application level penetration testing experience
+Expert knowledge in computer and network security
+Extensive knowledge of the OWASP Top 10 and CWE Top 25
+Experience in exploiting web and web services security vulnerabilities including cross-site scripting, cross site request forgery, SQL injection, DoS attacks, XML/SOAP, API attacks, and more.
+Strong coding skills; Software development, Java, PHP, Perl, Python, Ruby, etc….
+BS Computer Science or equivalent knowledge and experience
+Offensive attack hacker mindset
+Experience with the latest and greatest penetration testing tools
+Desired Skills And Credentials
+Assembly/exploit developpment experience
+Bug bounty awards
+Experience in software development, Java, PHP, Perl, Python, Ruby, etc….
+Information security certifications, GPEN, OSCP, OSCE, OSWE, CEH, CISSP
+Ability to self motivate when given strategic goals.
+
+**Thales**
+University coursework in Electrical Engineering, Computer Sciences, or a related area of studies is preferred
+Advantage with professional certifications (e.g. CISA, CISSP)
+Fluent spoken English, Cantonese and Mandarin (preferred)
+Good knowledge of IT Security (e.g. ISO/IEC 27001, Enterprise Risk Assessment
+Energetic, dynamic, honest, driven with advanced business acumen
+Enterprise Security Framework, penetration testing, application security review)
+Excellent communications skills, good technical abilities, a curious nature, and a creative mind
+Experience scoping engagements and developing technical proposals
+Experience developing C, C++, PHP+, MySQL, Java
+Experience reverse engineering of malware, disk and memory forensics
