@@ -74,3 +74,11 @@ categories: employment
 * Experience scoping engagements and developing technical proposals
 * Experience developing C, C++, PHP+, MySQL, Java
 * Experience reverse engineering of malware, disk and memory forensics
+
+**Amazon**
+* Experience with ICS/SCADA penetration testing and use of attack frameworks (e.g. BlackEnergy)
+* At least 3 years of Information Security experience
+* Experience with security frameworks such as NIST 800-53r4, NISTIR 7628
+* MS in Computer Science or equivalent
+* Knowledge of networking protocols (e.g., TCP/IP, UDP, IPSEC, HTTP, HTTPS, routing protocols)
+* Knowledge of system security vulnerabilities and remediation techniques
