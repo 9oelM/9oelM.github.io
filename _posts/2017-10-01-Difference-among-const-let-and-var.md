@@ -79,4 +79,5 @@ fgh = "fgh"; // incorrect. Cannot happen
 ### Sources
 * https://gist.github.com/LeoHeo/7c2a2a6dbcf80becaaa1e61e90091e5d
 * http://blog.nekoromancer.kr/2016/01/26/es6-var-let-%EA%B7%B8%EB%A6%AC%EA%B3%A0-const/
-* https://gist.github.com/LeoHeo/7c2a2a6dbcf80becaaa1e61e90091e5d
+* https://gist.github.com/LeoHeo/7c2a2a6dbcf80becaaa1e61e90091e5d\
+* https://medium.com/craft-academy/javascript-variables-should-you-use-let-var-or-const-394f7645c88f
