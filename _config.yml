@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Mr. Polite's hacking blog
+title: Joel's hacking blog
 description: > # this means to ignore newlines until "baseurl:"
-    Kali linux tips. Hacking tips. Linux geek. Improving your anonymity.
-    This is Mr. Polite.
+    Hacking tips. Linux geek. Javascript. Web technologies. Development.
+    Joel Mun.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mr-polite.github.io" # the base hostname & protocol for your site
+url: "https://9oelM.github.io" # the base hostname & protocol for your site
 
 # Markdown settings
 markdown: kramdown
