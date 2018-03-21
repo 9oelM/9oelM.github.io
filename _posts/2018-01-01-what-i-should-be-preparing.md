@@ -4,7 +4,7 @@ title: "What I should be preparing"
 date: 2018-01-11 09:10:00 -0100
 categories: employment
 ---
-### Some job postings to see (2018 Jan)\
+### Some job postings to see (2018 Jan)
 **Goldman Sachs**
 Preferred Qualifications
 Bachelor of Science in Computer Science, System/Computer Engineering, Cyber-Security, or Information Security is preferred. Four (4) years of additional work experience may be substituted in lieu of a Bachelor’s Degree. Bachelors of Science/Arts in Forensic Computing, System/Computer Engineering, Data Science, Engineering, Operations Research, or Decision Science will be considered.
