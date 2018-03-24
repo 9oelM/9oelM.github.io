@@ -6,7 +6,7 @@ categories: development
 ---
 
 ## FYI
-Notes made with [You don't know JS]https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch4.md).
+Notes made with [You don't know JS](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch4.md).
 
 ### Important points on hoisting
 * Hoisting is just basic. Just remember hoisting happens **per scope** and only on variable and function **declarations**, not assignments or reference.
