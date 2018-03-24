@@ -5,7 +5,7 @@ date: 2018-03-24 09:10:00 -0100
 categories: development
 ---
 
-###FYI
+## FYI
 Notes made with [You don't know JS](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch1.md).
 
 ### Simplified steps in compilation
