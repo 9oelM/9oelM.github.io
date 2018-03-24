@@ -41,6 +41,7 @@ According to the principle of Least Privilege (AKA Least Authority or Least Expo
         }
     };
     ```
+    
 ### Save the global scope with immediately invoked function
 Immediately invoked.
 ```javascript
