@@ -23,7 +23,10 @@ categories: development
 * React.js
 * Vue.js
 * Handlebars.js
+* AngularJS
+* EmberJS
 * Pugjs
+* Firebase
 * Parcel
 * Webpack
 * CSSinJS
