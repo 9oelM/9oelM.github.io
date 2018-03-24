@@ -2,7 +2,7 @@
 layout: post
 title: "Using tmux"
 date: 2017-09-21 09:10:00 -0100
-categories: general linux
+categories: linux
 ---
 ## Scrolling in tmux
 Using tmux, you sometimes wanna scroll up and down the window just like you used to in the normal bash shell.

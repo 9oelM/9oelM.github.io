@@ -2,7 +2,7 @@
 layout: post
 title: "Configuring vim"
 date: 2017-09-25 09:20 -0100
-categories: general linux
+categories: linux
 ---
 ## This looks like a pretty awesome boilerplate!
 Well, I just looked at [this repository](https://github.com/amix/vimrc) and it just looks amazing. 

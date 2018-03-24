@@ -2,7 +2,7 @@
 layout: post
 date: 2017-12-31 09:10:00 -0100
 title: "Difference between cookies and sessions"
-categories: Knowledge
+categories: knowledge
 ---
 ## Difference between cookies and sessions
 ### Cookies

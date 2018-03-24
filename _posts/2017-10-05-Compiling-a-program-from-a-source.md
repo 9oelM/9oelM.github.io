@@ -2,7 +2,7 @@
 layout: post
 title: "Compiling a program from a source / installing .deb"
 date: 2017-10-05 09:00:00 -0100
-categories: general linux
+categories: linux
 ---
 Information source: [https://askubuntu.com/questions/25961/how-do-i-install-a-tar-gz-or-tar-bz2-file](https://askubuntu.com/questions/25961/how-do-i-install-a-tar-gz-or-tar-bz2-file)
 ## How you compile a program from a source

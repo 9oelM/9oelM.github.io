@@ -2,7 +2,7 @@
 layout: post
 title: "Finding a process with a name"
 date: 2017-09-21 09:00:00 -0100
-categories: general linux
+categories: linux
 ---
 ## Finding a process 
 Many times you want to look for a process to kill it.

@@ -2,7 +2,7 @@
 layout: post
 title: "Using curl to get external ip address and my geolocation"
 date: 2017-10-06 09:00:00 -0100
-categories: general linux
+categories: linux
 ---
 ## [Getting an external ip address](https://askubuntu.com/questions/95910/command-for-determining-my-public-ip)
 ```

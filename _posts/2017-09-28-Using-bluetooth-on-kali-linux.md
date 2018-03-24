@@ -2,7 +2,7 @@
 layout: post
 title: "Using bluetooth on kali linux"
 date: 2017-09-28 09:00:00 -0100
-categories: general linux
+categories: linux
 ---
 Check bluetooth status
 ```

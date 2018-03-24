@@ -2,7 +2,7 @@
 layout: post
 date: 2017-09-23 09:10:00 -0100
 title: "Editing environment path and adding custom scripts"
-categories: general linux
+categories: linux
 ---
 ## How to (copied from [linuxconfig](https://linuxconfig.org/linux-path-environment-variable))
 ```

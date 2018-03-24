@@ -2,7 +2,7 @@
 layout: post
 title: "Installing torrent on debian based linux"
 date: 2017-09-21 09:00:00 -0100
-categories: general linux
+categories: linux
 ---
 # Installing torrent on debian based linux
 ## Guidance
