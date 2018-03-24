@@ -27,6 +27,7 @@ simpleArrayTest();
 ```
 ### Hide variables inside a function.
 According to the principle of Least Privilege (AKA Least Authority or Least Exposure), you should expose only what is minimally necessary, and "hide" everything else. **This way, the design keeps private details private, which is usually considered better software.**
+
 ### Create an object as a namespace
 * > "A particularly strong example of (likely) variable collision occurs in the global scope. Multiple libraries loaded into your program can quite easily collide with each other if they don't properly hide their internal/private functions and variables."
 * > "Such libraries typically will create a single variable declaration, often an object, with a sufficiently unique name, in the global scope. **This object is then used as a "namespace" for that library, where all specific exposures of functionality are made as properties of that object (namespace), rather than as top-level lexically scoped identifiers themselves:"**
@@ -74,7 +75,8 @@ Downsides for anonymous functions:
         printArray(makeArray(10));
         function printArray(array){
             array.forEach(
-                function printNums(element){            console.log(element) 
+                function printNums(element){ 
+                    console.log(element) 
                 }); // Now it's got a name
         }
         function makeArray(size){
