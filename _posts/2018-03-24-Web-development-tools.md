@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "(Web) Development tools"
+title: "Web development tools"
 date: 2018-03-24 09:10:00 -0100
 categories: development
 ---
