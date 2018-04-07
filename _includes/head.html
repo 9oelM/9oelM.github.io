@@ -6,13 +6,14 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <!--<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">-->
+  <link rel="stylesheet" href="node_modules/getbase/css/styles.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   {% feed_meta %}
 
   <!-- temporary fix -->
   <style>
-  a {
+  /*a {
     font-weight: bold;
     color: #9cfb8e;
   }
@@ -20,11 +21,13 @@
     background-color: #1f2b47;
     border-color: #1f2b47;
   }
-  img {
-    max-width: 90%;
-  }
+  
   code {
     background-color: black;
+  }*/
+  img {
+    max-width: 90%;
+    display: block;
   }
   </style>
 </head> 
