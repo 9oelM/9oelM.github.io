@@ -1,2 +1,2 @@
 1. Merge the blog with the weebly blog
-2. Fix linting error
+2. Fix linting error (rouge)
