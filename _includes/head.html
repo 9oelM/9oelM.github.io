@@ -40,16 +40,32 @@
     color: #323232;
   }
   .main{
-    padding: 0 10rem 0 10rem;
+    padding: 5rem 10rem 0 10rem;
   }
   *, h1, h2, h3, h4{
     color: #323232;
   }
   @media only screen and (max-device-width: 750px) {
     .main{
-      padding: 0 10vw 0 10vw
+      padding: 5vh 10vw 0 10vw
     }
   }
- 
+  body{
+    display:flex;
+  }
+  body, html{
+    height: 100%;
+  }
+  ul.contentList{
+    height: 100%;
+    overflow-y: auto;
+    margin: 0;
+    min-width: 250px;
+  }
+  .main{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+  }
   </style>
 </head> 

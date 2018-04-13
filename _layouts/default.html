@@ -4,17 +4,15 @@
   {% include head.html %}
 
   <body>
-
-    <main class="main" aria-label="Content">
-    
     {% assign sorted_posts = (site.posts | sort: 'title') %}
-    <ul>
+    <ul class = "contentList">
     {% for post in sorted_posts %}
         <li>
             <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
     {% endfor %}
     </ul>
+    <main class="main" aria-label="Content">
     </main>
 
   </body>
