@@ -61,6 +61,15 @@ My choices are marked **bold!**
 ### Other prominent UI Frameworks 
 * [Bootstrap](https://getbootstrap.com/)
 
+## Backend frameworks
+* [Node.js](https://nodejs.org)
+    * [Express.js](expressjs.com/) 
+* [php](www.php.net/)
+* [django](https://www.djangoproject.com/start/)
+* [Ruby on rails](rubyonrails.org/)
+* [flask](http://flask.pocoo.org/)
+* [Spring](https://projects.spring.io/spring-framework/)
+
 ## Business solutions
 * [Firebase](https://firebase.google.com/)
 
