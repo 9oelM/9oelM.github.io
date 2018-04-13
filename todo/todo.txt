@@ -1,5 +1,10 @@
 1. Merge the blog with the weebly blog
-2. Fix linting error (rouge)
+2. Fix linting error (rouge) 
+-> https://bnhr.xyz/2017/03/25/add-syntax-highlighting-to-your-jekyll-site-with-rouge.html
+-> https://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html
+
+Need to add syntax highlighter CSS file as css/syntax.css to my existing or newly generated Jekyll site
+
 3. Make a nav bar that wraps the list of the posts
 4. Make a self introduction page
 5. Sort the list of the posts by categories
