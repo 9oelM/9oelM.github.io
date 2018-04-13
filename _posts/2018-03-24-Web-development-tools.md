@@ -67,6 +67,7 @@ My choices are marked **bold!**
 * [php](www.php.net/)
 * [django](https://www.djangoproject.com/start/)
 * [Ruby on rails](rubyonrails.org/)
+    * [RailsGuides](http://guides.rubyonrails.org/getting_started.html) 
 * [flask](http://flask.pocoo.org/)
 * [Spring](https://projects.spring.io/spring-framework/)
 
