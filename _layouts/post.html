@@ -4,7 +4,7 @@
   {% include head.html %}
 
   <body>
-    <aside class = "navbar">
+    <aside id = "menu" class = "navbar">
     {% assign sorted_posts = (site.posts | sort: 'title') %}
     <ul class = "contentList">
     {% for post in sorted_posts %}
@@ -14,9 +14,9 @@
     {% endfor %}
     </ul>
     </aside>
-    <main class="main" aria-label="Content">
+    <main id = "panel" class="main" aria-label="Content">
       <div class = "buttonContainer">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACWSURBVHhe7doxDcNAEETRKwMghesoAALANEzBnMIpnOLV1Vf7RvZ70q+2nHYbAAAAAAAAnO2lmB5V+yumtRoeNCeDhNUH+SmmTwUAAAAAAAAAAADXtiumpRr+mGpOnq3DMkhYfZCvYnpXAAAAAAAAAAAAcG2jDzrNqX8ujn5MNSfP1mEZJKw+yKaYnhUAAAAAAABwU60d7tGVO6QEH6gAAAAASUVORK5CYII=" style = "height: 70%;"/ >
+        <img class = "menuButton" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACWSURBVHhe7doxDcNAEETRKwMghesoAALANEzBnMIpnOLV1Vf7RvZ70q+2nHYbAAAAAAAAnO2lmB5V+yumtRoeNCeDhNUH+SmmTwUAAAAAAAAAAADXtiumpRr+mGpOnq3DMkhYfZCvYnpXAAAAAAAAAAAAcG2jDzrNqX8ujn5MNSfP1mEZJKw+yKaYnhUAAAAAAABwU60d7tGVO6QEH6gAAAAASUVORK5CYII=" / >
       </div>
       <div>
         <h1>{{ page.title }}</h1>
