@@ -143,7 +143,9 @@
       'tolerance': 70
     });
     let menuButton = document.getElementById('menuButton');
-    menuButton.onclick = slideout.toggle();
-  }
+    menuButton.addEventListener('click', () => {
+      slideout.toggle();
+    });
+  };
   </script>
 </head> 
