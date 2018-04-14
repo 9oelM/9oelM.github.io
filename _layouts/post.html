@@ -8,8 +8,8 @@
     {% assign sorted_posts = (site.posts | sort: 'title') %}
     <ul class = "contentList">
     {% for post in sorted_posts %}
-        <li>
-            <a href="{{ post.url }}">{{ post.title }}    </a>
+        <li class = "eachPost">
+            <a class = "eachPostLink" href="{{ post.url }}">{{ post.title }}    </a>
         </li>
     {% endfor %}
     </ul>
