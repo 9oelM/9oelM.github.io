@@ -11,3 +11,4 @@ Need to add syntax highlighter CSS file as css/syntax.css to my existing or newl
 see https://stackoverflow.com/questions/20872861/jekyll-display-posts-by-category
 
 6. Nav bar mobile optimization
+7. Paused at linking the li and href

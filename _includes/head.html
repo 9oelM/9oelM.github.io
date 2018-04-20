@@ -40,13 +40,9 @@
     background-color: transparent;
     color: #323232;
   }
-  .main{
-    padding: 5rem;
-  }
   *, h1, h2, h3, h4{
     color: #323232;
   }
-  
   body{
     display:flex;
   }
@@ -63,12 +59,15 @@
     padding: 0;
     list-style: none;
     list-style-type: none;
-    
   }
   li.eachPost{
     list-style-type:none;
     border-bottom: 1px solid #545454;
     padding: 0.5rem;
+    cursor: pointer;
+  }
+  li.eachPost:hover {
+    background-color: #d7d7d7;
   }
   a.eachPostLink{
     text-decoration: none;
@@ -164,6 +163,11 @@
     menuButton.addEventListener('click', () => {
       slideout.toggle();
     });
-  };
+    let postList = document.getElementsByClassName('eachPost');
+    for(i = 0; i < a.length; i++){
+      postList[i].addEventListener('click', () => { 
+        window.location.href = "https://9oelm.github.io" + postList[i].firstElementChild.getAttribute('href')
+    });
+    }
   </script>
 </head> 
