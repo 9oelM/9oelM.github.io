@@ -65,6 +65,18 @@ It was so good. Programming was definite and logical. Nothing was like a metapho
 Oh, and plus, I liked reading books. But they were largely two types of books that I liked. Christian and programming. Other books like, like.. anything else, I did not read at all. 
 
 ### 3. At the Navy: most unexpected and drastic change in my life. 
+So this is a long story.
+
+Ok. First of all, as a Korean national, I had to enlist to serve for about two years. But I did not want to just waste that time in the army. I wanted to do something meaningful for my future career and my life. 
+
+So I thought I could do something about computer science that is my major. And I found some positions related to it were available in the air force and the navy as well. So I made an application for both of them (actually I did for the army as well but that was not my real interest, as no 'professional' position that allow me to dive deep into computers was not really available).
+
+And in the process of searching more information on the internet, I got to know that the navy would allow me to do something more professional than the air force. The navy allowed some of applicants like myself to enlist as a special position -- information systems technician. And I even had an interview for that at the ROKN HQ. In contrast, if I were to go for the air force, nothing really professional was fully guaranteed. I liked that offer from the navy very much. The interviewers said I would either go for a position on information security or program development. Both were fine for me. So after a long time of discussion with my family members and thinking about it on my own, I decided to enlist in the navy. And I did not know I was perhaps not going really the right way.  
+
+Everything seemed to be going well until I was in the bootcamp. I hoped to go to the Navy HQ, but it was arranged randomly that I would go to the 1st Fleet Command. Well, that was fully understandable. I thought chances for program developments and cybersecurity would also be there.
+
+And before the deployment to the 1st Fleet, I was handed over the list of vacancies in the 1st Fleet Command. And there were no positions about program developments and cybersecurity AT ALL.
+
 
 ## Acquirements
 
