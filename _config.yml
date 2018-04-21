@@ -37,6 +37,6 @@ exclude:
   - 2017-00-00-boilerplate.md  
 
 # Plugin settings
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
