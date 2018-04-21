@@ -56,13 +56,6 @@
             <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
      </li>
      {% endfor %}
-     <li class = "category eachRow">Scripting</li>
-     {% assign sortedPostsScripting = site.categories.scripting | sort: 'title' %}
-      {% for post in sortedPostsScripting %}
-     <li class = "eachRow">
-            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
-     </li>
-     {% endfor %}
      <li class = "category eachRow">Windows</li>
      {% assign sortedPostsWindows = site.categories.windows | sort: 'title' %}
       {% for post in sortedPostsWindows %}
