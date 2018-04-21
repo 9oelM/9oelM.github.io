@@ -6,85 +6,79 @@
   <body>
     <aside id = "menu" class = "navbar">
     
-    
     <ul class = "contentList">
      <li class = "category eachRow">Development</li>
-      {% for post in site.categories.development %}
+      {% assign sortedPostsDevelopment = site.categories.development | sort: 'title' %}
+      {% for post in sortedPostsDevelopment %}
      <li class = "eachRow">
             <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
      </li>
      {% endfor %}
      <li class = "category eachRow">Employment</li>
-      {% for post in site.categories.employment %}
+     {% assign sortedPostsEmployment = site.categories.development | sort: 'title' %}
+      {% for post in sortedPostsEmployment %}
      <li class = "eachRow">
             <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
      </li>
      {% endfor %}
      <li class = "category eachRow">General</li>
-      {% for post in site.categories.general %}
+     {% assign sortedPostsGeneral = site.categories.development | sort: 'title' %}
+      {% for post in sortedPostsGeneral %}
      <li class = "eachRow">
             <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
      </li>
      {% endfor %}
      <li class = "category eachRow">Hacking</li>
-      {% for post in site.categories.hacking %}
+     {% assign sortedPostsHacking = site.categories.development | sort: 'title' %}
+      {% for post in sortedPostsHacking %}
      <li class = "eachRow">
             <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
      </li>
      {% endfor %}
      <li class = "category eachRow">Knowledge</li>
-      {% for post in site.categories.knowledge %}
+     {% assign sortedPostsKnowledge = site.categories.development | sort: 'title' %}
+      {% for post in sortedPostsKnowledge %}
      <li class = "eachRow">
             <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
      </li>
      {% endfor %}
      <li class = "category eachRow">Linux</li>
-      {% for post in site.categories.linux %}
+     {% assign sortedPostsLinux = site.categories.development | sort: 'title' %}
+      {% for post in sortedPostsLinux %}
      <li class = "eachRow">
             <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
      </li>
      {% endfor %}
      <li class = "category eachRow">Network</li>
-      {% for post in site.categories.network %}
+     {% assign sortedPostsNetwork = site.categories.development | sort: 'title' %}
+      {% for post in sortedPostsNetwork %}
      <li class = "eachRow">
             <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
      </li>
      {% endfor %}
      <li class = "category eachRow">Scripting</li>
-      {% for post in site.categories.scripting %}
+     {% assign sortedPostsScripting = site.categories.development | sort: 'title' %}
+      {% for post in sortedPostsScripting %}
      <li class = "eachRow">
             <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
      </li>
      {% endfor %}
      <li class = "category eachRow">Windows</li>
-      {% for post in site.categories.windows %}
+     {% assign sortedPostsWindows = site.categories.development | sort: 'title' %}
+      {% for post in sortedPostsWindows %}
      <li class = "eachRow">
             <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
      </li>
      {% endfor %}
      <li class = "category eachRow">Works</li>
-      {% for post in site.categories.works %}
+     {% assign sortedPostsWorks = site.categories.development | sort: 'title' %}
+      {% for post in sortedPostsWorks %}
      <li class = "eachRow">
             <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
      </li>
       {% endfor %}
     </ul>
     
-    
-    <!--
-    
-    {% assign sorted_posts = site.posts | sort: 'title' %}
-    <ul class = "contentList">
-    {% for post in sorted_posts %}
-        <li class = "eachRow">
-            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}    </a>
-        </li>
-    {% endfor %}
-    </ul>
-    
-    
-    
-    -->
     </aside>
     <main id = "panel" class="main" aria-label="Content">
       <div class = "buttonContainer">
