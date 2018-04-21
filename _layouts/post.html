@@ -5,14 +5,86 @@
 
   <body>
     <aside id = "menu" class = "navbar">
-    {% assign sorted_posts = (site.posts | sort: 'title') %}
+    
+    
+    <ul class = "contentList">
+     <li class = "category eachRow">Development</li>
+      {% for post in site.categories.development %}
+     <li class = "eachRow">
+            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
+     </li>
+     {% endfor %}
+     <li class = "category eachRow">Employment</li>
+      {% for post in site.categories.employment %}
+     <li class = "eachRow">
+            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
+     </li>
+     {% endfor %}
+     <li class = "category eachRow">General</li>
+      {% for post in site.categories.general %}
+     <li class = "eachRow">
+            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
+     </li>
+     {% endfor %}
+     <li class = "category eachRow">Hacking</li>
+      {% for post in site.categories.hacking %}
+     <li class = "eachRow">
+            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
+     </li>
+     {% endfor %}
+     <li class = "category eachRow">Knowledge</li>
+      {% for post in site.categories.knowledge %}
+     <li class = "eachRow">
+            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
+     </li>
+     {% endfor %}
+     <li class = "category eachRow">Linux</li>
+      {% for post in site.categories.linux %}
+     <li class = "eachRow">
+            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
+     </li>
+     {% endfor %}
+     <li class = "category eachRow">Network</li>
+      {% for post in site.categories.network %}
+     <li class = "eachRow">
+            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
+     </li>
+     {% endfor %}
+     <li class = "category eachRow">Scripting</li>
+      {% for post in site.categories.scripting %}
+     <li class = "eachRow">
+            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
+     </li>
+     {% endfor %}
+     <li class = "category eachRow">Windows</li>
+      {% for post in site.categories.windows %}
+     <li class = "eachRow">
+            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
+     </li>
+     {% endfor %}
+     <li class = "category eachRow">Works</li>
+      {% for post in site.categories.works %}
+     <li class = "eachRow">
+            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}</a>
+     </li>
+      {% endfor %}
+    </ul>
+    
+    
+    <!--
+    
+    {% assign sorted_posts = site.posts | sort: 'title' %}
     <ul class = "contentList">
     {% for post in sorted_posts %}
-        <li class = "eachPost">
-            <a class = "eachPostLink" href="{{ post.url }}">{{ post.title }}    </a>
+        <li class = "eachRow">
+            <a class = "eachRowLink" href="{{ post.url }}">{{ post.title }}    </a>
         </li>
     {% endfor %}
     </ul>
+    
+    
+    
+    -->
     </aside>
     <main id = "panel" class="main" aria-label="Content">
       <div class = "buttonContainer">

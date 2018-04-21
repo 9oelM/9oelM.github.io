@@ -40,3 +40,16 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+# Category sorting order
+categories-order:
+  - development
+  - employment
+  - general
+  - hacking
+  - knowledge
+  - linux
+  - network
+  - scripting
+  - windows
+  - works
