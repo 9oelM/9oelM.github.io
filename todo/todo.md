@@ -7,7 +7,7 @@ Need to add syntax highlighter CSS file as css/syntax.css to my existing or newl
 
 3. Make a nav bar that wraps the list of the posts
 4. Make a self introduction page
-5. Sort the list of the posts by categories
+5. Sort the list of the posts by categories: DONE
 see https://stackoverflow.com/questions/20872861/jekyll-display-posts-by-category
 https://blog.webjeda.com/jekyll-categories/
 https://stackoverflow.com/questions/22405225/how-to-make-list-order-ascending-with-jekyll-and-liquid?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
@@ -58,5 +58,5 @@ Then :
 {% endfor %}
 ```
 
-6. Nav bar mobile optimization
+6. Nav bar mobile optimization: DONE
 7. Paused at linking the li and href
