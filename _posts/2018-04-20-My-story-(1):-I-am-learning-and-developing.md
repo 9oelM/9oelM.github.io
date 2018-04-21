@@ -5,7 +5,7 @@ date: 2018-04-20 09:00:00 -0100
 categories: general
 ---
 ## Before starting to read this
-People change. And so do I. This is a record of how I, as a programmer and social animal, changed over a course of time. 
+People change. And so do I. This is a story of how I, as a developer and social being, changed over a course of time. 
 
 ## Who I was
 
@@ -33,10 +33,38 @@ But because I did not have an active emotion, I could not comfort somebody suita
 
 ## Growing pains
 
-### 1. At the university
-I met a range of more diverse people at the university. This was a place where I could learn a lot, really a lot.
+### 1. At the university: a chance to reflect on my personality and talking habits
+I met a range of more diverse people at the university. This was a place where I could learn a lot.
 
-### 2. At the army
+First, I recognized that there is some problem if I were to keep the same personality over my life. I could not understand others; I could not sympathise with others. Some of my friends that I newly made did not really like me talking straight and plain. 
+
+This was just because I got to meet more different people. People from around the world, with their own experiences from their social, linguistic, whatever background. 
+
+Moreover, some of those who I already knew back from my high school and came to the same university, while we had a brief chance to have an honest talk, told me that they got hurt from what I said in the past. My straight and plain talk were not something to be proud of but be ashamed of. Sometimes it could help (where necessary, like a business meeting), but it does not otherwise.  
+
+And I got to know that I needed some improvement on my personality. This was essential if I wanted to work and be friends with the ones that have exactly opposite personalities from mine. 
+
+But the problem was I did not know how. Some of my friends had highly respectful and amenable personalities. Even my dad does. But I did not know how I could just 'acquire' that. 
+
+Well, as a brute-force solution, at first I just attempted to be nice for everybody. When my inner self said to me, 'do not do a favor for your friend because you are going to be tired.', I tried to ignore that and just did a favor for my friend. In a sense, I tried to be a nice person in an awkward and forced fashion. It was not natural. And in a programmatic term: not native. 
+
+Yeah. My inner self and.. my 'outer' self were just just in line with each other. And that was the biggest problem. Being a nice person was not easy as I expected. 
+
+### 2. At the university: got really clear with what I like and what I don't. 
+
+I faced a fork between a compromise and determination: the university was not like the place that I imagined. I thought I could only learn the things that I wanted to learn, which was mainly computer science. But there was something called 'Common Core subjects', which is a kind of a system where freshmen or sophomores have to learn something that does not belong to the stream of their majors. 
+
+Well, some people might think this is a great opportunity for students to have a broader knowledge, understanding and experience. For me, it was not. I did not plan to become a marketor, so I hated MKTG2411 or whatever it was named. I did not plan to become an Asian/Sino state of affairs expert, so I hated some subject that I discarded the information about the name of the subject of. 
+
+All of these I thought were wasting my time. So I just did not like them. In contrast, I just got a really deep dive into the world of programming and development. I got up all night to code and program. The process of learning and exploring was so sweet for me. I bought additional books about programming to read. I joined sort of a... coding club. I made friends with coders. It was just so beautiful. And so I got B's and C's for subjects like... something on Hong Kong law or.. China's economy in the world. I just did not try to study them at my best. They were just obstacles to my way. 
+
+In that course of self-exploration, I got to know that I am mainly intersted in web development. And I dug it more. I dug `React`, I dug `Sass`, I dug Material Design, I dug `ES6` and many more. 
+
+It was so good. Programming was definite and logical. Nothing was like a metaphor in programming. If an input produced A from a function, it never produced B. Relation (in mathematics) was cool. It was what I wanted--exactly opposite from something like metaphor. A metaphor in literature could be interpreted in any ways depending on the person or the context or anything and it is meant to be like that. And that is not like function, so I did not like that.  
+
+Oh, and plus, I liked reading books. But they were largely two types of books that I liked. Christian and programming. Other books like, like.. anything else, I did not read at all. 
+
+### 3. At the Navy: most unexpected and drastic change in my life. 
 
 ## Acquirements
 
