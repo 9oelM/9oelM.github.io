@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My story (1): changes that the Navy made to me and the stories before then
+title: "My story (1): changes that the Navy made to me and the stories before then"
 date: 2018-04-20 09:00:00 -0100
 categories: general
 ---
