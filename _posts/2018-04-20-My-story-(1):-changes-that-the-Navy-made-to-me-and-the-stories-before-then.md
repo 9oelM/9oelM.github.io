@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My story (1): I am learning and developing"
+title: "My story (1): changes that the Navy made to me and the stories before then
 date: 2018-04-20 09:00:00 -0100
 categories: general
 ---
@@ -65,6 +65,8 @@ It was so good. Programming was definite and logical. Nothing was like a metapho
 Oh, and plus, I liked reading books. But they were largely two types of books that I liked. Christian and programming. Other books like, like.. anything else, I did not read at all. 
 
 ### 3. At the Navy: most unexpected and drastic change in my life. 
+
+#### Difficulties 
 So this is a long story.
 
 Ok. First of all, as a Korean national, I had to enlist to serve for about two years. But I did not want to just waste that time in the army. I wanted to do something meaningful for my future career and my life. 
@@ -85,17 +87,27 @@ It was just a big, big rude surpise for me. I panicked. I started to experience 
 And here is the list of the things that made it so difficult for me to live in the vessel:
 
 **1. No time to take a rest.** When you are on a boat, you don't know what's going to happen. If the weather's not good and one of the mooring lines placed on a bollard is cut off because of much of oscillation from the vessel, you have to get another one placed on the bollard again. It does not matter if you are sleeping or in a bathroom. And whenever another vessel comes in next to our ship for ship to ship mooring, I had to go out again to receive the mooring line from the ship. If there is an emergency departure (for example, because of an unidentified vessel in Korean waters), the vessel just has to depart regardless of morale of the crews or whatever other reasons. If there is no water in the vessel, you could not take a shower until it's in port again.
-**2. The weather.**
+**2. The weather.** The weather. The weather... it was just so cold. It was December 26 when I first got myself on the vessel. In the very middle of this winter in the East Sea, when the sensible temperature reached -10~20 degrees Celsius, I had to be outside on the main deck, working things out as the vessel came in port or departed from it. And the temperature management system inside the vessel was broken, so sometimes it was too hot, or more worse--too cold. Right next to me was just an iron wall covered with some kind of waterproof tape when I laid myself down in the bed to sleep. The coldness was penetrating through my skin to my bones. 
+**3. Seasick.** I did not know it would be this bad. Whenever the ship moved from one place to another, it was such a great pain for me. I remember one day I vomitted 3~4 times. And basically when you are having a seasick, you cannot just ask the captain to stop the vessel; it has to go its way. So the simplest solution is to bear that pain of headache and heavy nausea. The ship would normally patrol for one or two days at its maximum because it was a relatively small ship. Then I could not even go to the bathroom to wash my face because every single time I got into the bathroom while the boat was on move, I felt like vomitting with more nausea increasingly prevailing up on my throat. I could not eat anything while the ship was moving; even water. Anything that went through my throat made my seasick harder. So if the boat went on for patrolling for 24 hours, I would sleep probably for 12 hours when I am not on duty because that is the only way to avoid 'being conscious of' the seasick, and spend 8 hours for the duty (bearing the pain) and spend rest of the hours just laying on the bed doing nothing because I could not sleep anymore because I slept too much. It was just a terrible experience.       
+**4. Sleeping condition.** When the vessel is on the move, you can just hear the sound that its hull is making by bumping up with the water about every 5 seconds. It's 300 tonnes + some tonnes of oils + some tonnes of water stored + the weight of the crews that's giving a force to the ocean. So the sound.. it is actually more right to say it's a noise. You cannot just stop this noise. The beds were in the platform (means one floor down from the main deck) near the bow (means the forward side of the hull) so you could literally sleep with the sound made every 5 seconds. And the ship is rolling, pitching, heaving, yawing, surging, and swaying so it's like you are sleeping in a cart of a roller coaster that repeats some mild go-down-and-go-up course. You know that feeling when an airplane sinks down for a moment when it's flying? It's just like that, except that it would happen thousands of times. 
+**4. Living condition.** It was the first time in my life to see a triple bunk bed. The ship was small, and the ceiling was low as well. And so I could barely sleep there. It was just too cold and uncomfortable. All ten seamen lived in this kind of bed and the room assigned for sleeping was just about 4 ['Pyeongs'](https://en.wikipedia.org/wiki/Pyeong) big, which in square meters 13.223 m^2, and in acre about 0.003 ac. It was just so small. 10 people slept, read books, changed clothes, talked, took a rest there. And because of the ceiling that was too low, I often got my head bumped on it when I walked inside the vessel. At least once a day.    
+**5. Working condition.** The uniform. The exhaust from the turbine.
+**6. The people.** Even if you don't want to see some people you don't like, you've gotta see them everyday. The ship's not big, and it's always the same people running operations on it. There were about 3? people that I did not really like the way and the things they talked. Or they did un-understandable things. They all came from different backgrounds, understood things differently, communicated differently--in simple terms, they just behaved differently in a very weird fashion from my perspective. But I had to see them and listen to them and pretend to be content with what they spoke.  
+**7. Everyone superior to my rank.** I had to run errands and do everything they ask --well, precisely, no: order me to do. I had to do clean the bathroom and I hated it. I had to go empty trash cans. 
+**8. Moments I could not accept the reality that I am on a boat.** It was the most terrible thing on the boat. 
 
-**3. Seasick.** I did not know it would be this bad. 
+#### Fair escape 
+And soon, a new captain came around the beginning of 2018. 
 
-**4. Living condition.** It was the first time in my life to see a triple bunk bed. The ship was small, and the ceiling was low as well. And so I could barely sleep there. It was just too cold and uncomfortable. All ten seamen lived in this kind of bed and the room assigned for sleeping was just about 4 'Pyeongs' big, which in square meters 13.223 m^2, and in acre about 0.003 ac. It was just so small. 10 people slept, read books, changed clothes, talked, took a rest there. And because of the ceiling that was too low, I often got my head bumped on it when I walked inside the vessel. At least once a day.    
-**5. The people.**
-
-## Acquirements
+## Achievements
 
 ### 1. Passion
 
 ### 2. And programming
 
 ### 3. Ability to understand others
+
+### 4. Need for some emotion 
+
+### 5. Communication
+
