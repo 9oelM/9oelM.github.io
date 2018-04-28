@@ -83,5 +83,114 @@ I did not know well about `registerServiceWorker` [so I looked it up on stackove
 
 > The service worker is a web API that helps you cache your assets and other files so that when the user is offline or on slow network, he/she can still see results on the screen. As such, it helps you build a better user experience, that's what you should know about service worker's for now. It's all about adding offline capabilities to your site.
 
-And then I wanted to view react components on the browser so I installed react debugger on chrome. 
+And then I wanted to view react components on the browser so I installed react debugger on chrome.
+
+I just wanted to get really simple and get the taste of React. This is the code that I wrote for a Gallery app:
+
+```javascript
+import React, { Component } from 'react';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+        <Gallery/>
+    );
+  }
+}
+
+class Gallery extends Component{
+  
+  render(){
+    const listOfPictures= [
+        {
+          url: "https://images.pexels.com/photos/9816/pexels-photo-9816.jpeg",
+          date: "2018. 02. 03.",
+          title: "People"
+        },
+        {
+          url: "https://images.pexels.com/photos/106052/pexels-photo-106052.jpeg",
+          date: "2016. 03. 07.",
+          title: "Dutch people"
+        },
+        {
+          url: "https://images.pexels.com/photos/433452/pexels-photo-433452.jpeg",
+          date: "2013. 07. 22.",
+          title: "Party"
+        }
+        
+      ];
+        
+      const pictures = listOfPictures.map((eachPic) =>
+        { return <Picture key = {eachPic.url} url = {eachPic.url} date = {eachPic.date} title = {eachPic.title}/> }
+      );
+      
+      return (<div>{pictures}</div>);
+  }
+}
+
+class Picture extends Component{
+  
+  render(){
+    return (
+      <figure className = "image-container">
+        <img className = "image"  src = {this.props.url} alt = {this.props.title}/>
+        <figcaption>{`${this.props.date} ${this.props.title}`}</figcaption>
+      </figure>
+    );
+  }
+}
+
+export default App; 
+/* And in index.js, you do 
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker(); */
+```
+
+And of course, there are some questions (some of which I already got answers) that arose:
+
+### 1. How can I store `listOfPictures` in a better way? It looks ugly to just declare it inside the Gallery class. 
+
+
+### 2. How can I return multiple components at once?
+* [React Official Documentation](https://reactjs.org/docs/lists-and-keys.html)
+* [Stackoverflow post](https://stackoverflow.com/questions/32157286/rendering-react-components-from-array-of-objects)
+
+I think using `map` function is the cleanest way. 
+```javascript
+const pictures = listOfPictures.map((eachPic) =>
+        { return <Picture key = {eachPic.url} url = {eachPic.url} date = {eachPic.date} title = {eachPic.title}/> }
+      );
+      
+      return (<div>{pictures}</div>);
+```
+
+
+### 3. Does React not allow me to return multiple elements at once?
+* [Stackoverflow: Before React 16, No. After, yes.](https://stackoverflow.com/questions/34893506/return-multiple-elements-inside-react-render)
+From React 16, you can do:
+```javascript
+render() {
+  return (
+    <>
+      <ChildA />
+      <ChildB />
+      <ChildC />
+    </>
+  );
+}
+```
+or
+```javascript
+render() {
+  return (
+    <React.Fragment>
+      <ChildA />
+      <ChildB />
+      <ChildC />
+    </React.Fragment>
+  );
+}
+```
+But prior to React 16, the render method could only render a single root node. So you had to wrap around the nodes with a single set of div tags. 
 

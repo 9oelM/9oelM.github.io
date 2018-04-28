@@ -111,7 +111,7 @@ And soon, a new captain of the vessel came around the beginning of January 2018.
 
 ### 2. And programming
 
-### 3. Ability to understand others
+### 3. Ability to understand more diverse people
 
 ### 4. Need for some emotion 
 
