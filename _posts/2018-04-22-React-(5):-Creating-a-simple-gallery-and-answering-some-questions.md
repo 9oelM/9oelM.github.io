@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "React (5): Creating a simple gallery"
+title: "React (5): Creating a simple gallery and answering some questions"
 date: 2018-04-22 09:00:00 -0100
 categories: development
 ---
@@ -194,3 +194,51 @@ render() {
 ```
 But prior to React 16, the render method could only render a single root node. So you had to wrap around the nodes with a single set of div tags. 
 
+### 4. Are there any other ways that I can declare a component?
+Yes.
+
+* [Medium post](https://medium.com/@the.benhawy/3-ways-to-create-react-components-8b3620e4ea0)
+* [Stackoverflow](https://stackoverflow.com/questions/39766694/2-different-ways-to-create-react-component)
+
+#### 1. `React.createClass`
+```html
+var MyComponent = React.createClass({
+   render() {
+      return <div>
+                <h1>Hello World!</h1>
+                <p>This is my first React Component.</p>
+             </div>
+      }
+})
+
+// then do
+ReactDOM.render(<MyComponent />, document.getElementById('react-component'));
+```
+You do not need a `babel` for this. This was introduced in `ES5`.
+
+#### 2. `class` 
+```html
+class MyComponent extends React.Component{
+   render() {
+      return <div>
+                <h1>Hello World!</h1>
+                <p>This is my first React Component.</p>
+             </div>
+      }
+}
+```
+
+#### 3. Stateless functional component
+>  Stateless components are simple reusable components which do not need to maintain state. 
+
+> Somewhere in the application, you need to bind data, or remember things. Stateless components are dumb (and that is good), they cannot remember and they cannot give context to other parts of the UI.
+
+```html
+const MyComponent = () => {
+      return <div>
+                <h1>Hello World!</h1>
+                <p>This is my first React Component.</p>
+             </div>
+      }
+```
+You don't need a `render()` function for this. Just return it. 

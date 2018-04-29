@@ -2,15 +2,34 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name = "description" content = "Joel's blog on Web development and other technologies. It's a self-studying blog."/>
+  <!--<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">-->
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   <link href="{{ "/assets/css/syntax.css" | relative_url }}" rel="stylesheet" >
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   {% feed_meta %}
+  
+  <!--facebook-->
+  <meta property="og:url" content="{{ page.url | absolute_url}}">
+  <meta property="og:description" content="Joel's blog on Web development and other technologies. It's a self-studying blog.">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:site_name" content="{{site.title}}">
+  <meta property="og:see_also" content="https://9oelm.github.io">
 
+  <!--google+-->
+  <meta itemprop="name" content="{{ page.title }}">
+  <meta itemprop="description" content="Joel's blog on Web development and other technologies. It's a self-studying blog.">
+  
+  <!--Twitter-->
+  <meta name="twitter:card" content="Joel's web development blog">
+  <meta name="twitter:url" content="{{ page.url | absolute_url}}">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="Joel's blog on Web development and other technologies. It's a self-studying blog.">
+
+  
   <!-- temporary fix -->
   <style>
   /*a {
