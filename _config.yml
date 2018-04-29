@@ -7,9 +7,8 @@
 
 # Site settings
 title: Joel's web development blog
-description: > # this means to ignore newlines until the next property.
-    Joel's blog on Web development and other technologies. It's a self-studying blog.
-keywords: "Web Development" "Javascript" "React" "Linux"  "Coding tips"
+description: Joel's blog on Web development and other technologies. It's a self-studying blog.
+keywords: Web Development Javascript React Linux Coding tips
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://9oelM.github.io" # the base hostname & protocol for your site
 
