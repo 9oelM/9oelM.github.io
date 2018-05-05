@@ -25,11 +25,18 @@ But I do not even know how to use hacking/forensic tools. And I do not know abou
 * [HDCON APK problem solving](https://m.blog.naver.com/PostView.nhn?blogId=minguu1515&logNo=220550493721&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 * [HDCON 2014 Preliminary problems](https://drive.google.com/drive/folders/0B6GQ8KsMK6dnc21lQnpTNW9zbzA0)
 
-### And I wanted to get some knowledge of digital forensics and hacking in reality:
+### And I wanted to get some knowledge of digital forensics and hacking in reality (after a long time of.. just trying to get the right info):
 
 * [Maware analysis: how to](https://brunch.co.kr/@kali-km/5)
 * [Malware Analysis for the Incident Responder](https://blogs.cisco.com/security/malware-analysis-for-the-incident-responder)
 * [Malware analysis method by AhnLab](https://www.slideshare.net/youngjunchang14/slideshare-21143372)
 * [Malware analysis tools by AhnLab](https://www.slideshare.net/youngjunchang14/ss-21477787?next_slideshow=1)
-
+* [A guide to intrusion analysis procedure by KISA](https://www.kisa.or.kr/jsp/common/libraryDown.jsp?folder=012301)
+* [Malware tracker?](https://codeengn.com/file/conference/09/2013_CodeEngn_Conference_09_Malware_Tracker_[proneer].pdf)
+* [Practical Malware Analysis by BlackHat](https://www.blackhat.com/presentations/bh-dc-07/Kendall_McMillan/Presentation/bh-dc-07-Kendall_McMillan.pdf)
+* [Intrusion Detection and Malware AnalysisIntroduction to Malware](https://pdfs.semanticscholar.org/presentation/268a/1a9788833ab9d0e6aad4e8bbb80a79d6c195.pdf)
+* [Curated list of awesome malware analysis tools](https://github.com/rshipp/awesome-malware-analysis+&cd=6&hl=ko&ct=clnk&gl=kr)
+* [Build malware analysis toolkit](https://zeltser.com/build-malware-analysis-toolkit/)
+* [Book: Practical Malware analysis](http://venom630.free.fr/pdf/Practical_Malware_Analysis.pdf)
+* [Static analysis](http://blog.daum.net/boy7407/17463080)
 ## How could I just learn all these tools in just three weeks?
