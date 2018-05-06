@@ -34,7 +34,7 @@ But I do not even know how to use hacking/forensic tools. And I do not know abou
 * [Malware Analysis for the Incident Responder](https://blogs.cisco.com/security/malware-analysis-for-the-incident-responder)
 * [Malware analysis method by AhnLab](https://www.slideshare.net/youngjunchang14/slideshare-21143372)
 * [Malware analysis tools by AhnLab](https://www.slideshare.net/youngjunchang14/ss-21477787?next_slideshow=1)
-* [A guide to intrusion analysis procedure by KISA](https://www.kisa.or.kr/public/laws/laws3_View.jsp?cPage=6&mode=view&p_No=259&b_No=259&d_No=52&ST=T&SV=)
+* [A guide to intrusion analysis procedure by KISA](https://www.kisa.or.kr/public/laws/laws3_View.jsp?cPage=6&mode=view&p_No=259&b_No=259&d_No=48&ST=T&SV=)
 * [Malware tracker?](https://codeengn.com/file/conference/09/2013_CodeEngn_Conference_09_Malware_Tracker_[proneer].pdf)
 * [Practical Malware Analysis by BlackHat](https://www.blackhat.com/presentations/bh-dc-07/Kendall_McMillan/Presentation/bh-dc-07-Kendall_McMillan.pdf)
 * [Intrusion Detection and Malware Analysis: Introduction to Malware](https://pdfs.semanticscholar.org/presentation/268a/1a9788833ab9d0e6aad4e8bbb80a79d6c195.pdf)
