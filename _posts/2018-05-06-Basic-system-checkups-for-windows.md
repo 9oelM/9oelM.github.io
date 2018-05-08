@@ -73,29 +73,8 @@ ntlast -f -s
 @echo ==== fport /i ====
 fport /i
 ```
-
-## Tools on **Process**
-
-### [Autoruns](https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns)
-
-### Process Explorer
-
-### [Gmer](http://www.gmer.net/): A rootkit detector and remover
-
-## Tools/Techniques on **Network**
-
-### [TCPView](https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview)
-
-### Ethereal
-
-### Wireshark
-
 ### Check internet temp files
 * Temporary Internet Objects `%SystemRoot%Downloaded Program Files`
 * Temporary Internet Files `%USERPROFILE%Local Settings\Temporary Internet Files`
 * Opened pages `%USERPROFILE%Local Settings\History`
 * Temporary cookie files `%USERPROFILE%Local Settings\COOKIES`
-
-## Multi-function tools
-
-### SysAnalyzer
