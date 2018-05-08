@@ -21,6 +21,7 @@ categories: hacking
 * [PEiD](http://www.softpedia.com/get/Programming/Packers-Crypters-Protectors/PEiD-updated.shtml)
 * [OllyDbg](http://ollydbg.de/)
 * [IDA](https://www.hex-rays.com/products/ida/support/download.shtml)
+* [Strings](https://docs.microsoft.com/en-us/sysinternals/downloads/strings)
 
 ### Network monitoring
 
