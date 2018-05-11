@@ -22,6 +22,7 @@ categories: hacking
 * [OllyDbg](http://ollydbg.de/)
 * [IDA](https://www.hex-rays.com/products/ida/support/download.shtml)
 * [Strings](https://docs.microsoft.com/en-us/sysinternals/downloads/strings)
+* [PEView](http://wjradburn.com/software/PEview.zip)
 
 ### Network monitoring
 
