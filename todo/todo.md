@@ -60,3 +60,12 @@ Then :
 
 6. Nav bar mobile optimization: DONE
 7. Paused at linking the li and href
+
+Windows Registry
+MD5 / hash
+File signatures
+TCP/UDP checksum
+session in networking
+TCP three way handshake
+DNS mechanism
+XOR debugging?
