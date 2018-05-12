@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Base64, Hex, ASCII, URL"
+title: "Base64, Unicode, ASCII, URL"
 date: 2018-05-11 09:00:00 -0100
 categories: hacking
 ---
@@ -15,6 +15,7 @@ categories: hacking
 * [base64 helper](https://www.base64encode.org/)
 
 ### Definition
+
 > "Base64 is a group of similar binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation."
 
 ### Conversion table (value to encoding char)
@@ -39,6 +40,7 @@ categories: hacking
 ```
 
 ### Relation to ASCII
+
 > The following is the character subset of US-ASCII that is used for Base64.
 
 ```
@@ -51,6 +53,7 @@ categories: hacking
 ```
 
 ### The padding's use
+
 > "If the modified input data contains any octets that contain only padded zeroes, replace each of those octets with the padding character “=”."
 
 ### Bits
@@ -59,12 +62,15 @@ Base64 only uses 6 bits to represent one character because only 2^6 = 64 charact
 ### Conversion
 
 Here's how you could convert some data to base64:
+
 1. Take in 3 bytes (24 bits) *reminder: a byte can hold (unsigned) numbers from 0 through 255.
+
 ```
 211 19 46
 ```
 
 2. List them as if they are just one number in binary format. 
+
 ```
 11010011 00010011 00110001, so:
 
@@ -72,44 +78,52 @@ Here's how you could convert some data to base64:
 ```
 
 3. Dissect them again into 4 segments of 6 bits (because base64 uses 6 bits to represent one character). 
+
 ```
 110100 110001 001100 110001
 ```
 
 4. Get the decimal values of these 6 bit numbers.
+
 ```
 110100 110001 001100 110001
-
 52 49 12 49
 ```
 
 5. Refer to the encoding table to find the matches. Padded zeros at the end become `=`, the padding.
+
 ```
 w5MTLg==
 ```
 
 Another example for an ASCII string
+
 1. Data
+
 ```
 Hello
 ```
 
 2. Break it down into bits (refer to ASCII table)
+
 ```
 01001000 01100101 01101100 01101100 01101111 00001010 
 ```
 
 3. Get them into 6 bits each
+
 ```
 010010 000110 010101 101100 011011 000110 111100 001010 
 ```
 
 4. Get decimal values of these numbers.
+
 ```
 18 6 21 44 27 6 60 10
 ```
 
 5. Get the encoding from the table
+
 ```
 SGVsbG8=
 ```
@@ -124,6 +138,7 @@ SGVsbG8=
 American Standard Code for Information Interchange. Each character is represented by 7-bit number, defining 128 characters only. 
 
 ### Conversion table
+
 ```
 Dec  Char                           Dec  Char     Dec  Char     Dec  Char
 ---------                           ---------     ---------     ----------
@@ -174,11 +189,13 @@ It has 8 bits, thus allowing a room for 256 characters. It just has some special
 * [stackoverflow](https://stackoverflow.com/questions/22404493/is-there-a-drastic-difference-between-utf-8-and-utf-16/22404874#22404874)
 
 ### Notes on Unicode
+
 > "Unicode is a superset of ASCII, and the numbers 0–128 have the same meaning in ASCII as they have in Unicode. For example, the number 65 means Latin capital 'A'."
 
 So obviously if you were Chinese or Korean, you would not be able to express characters in your language using ASCII. So this is where Unicode kicks in.
 
 ### Different number of bits
+
 UTF is a short for Unicode Transformation Format.
 * UTF-8: minimum 8 bits. **Only this** uses first 128 characters as those in ASCII.
 * UTF-16: minimum 16 bits.
@@ -190,6 +207,7 @@ UTF is a short for Unicode Transformation Format.
 * [Dan's tools](https://www.url-encode-decode.com/)
 
 ### Definition
+
 > "URL encoding stands for encoding certain characters in a URL by replacing them with one or more character triplets that consist of the percent character "%" followed by two hexadecimal digits. The two hexadecimal digits of the triplet(s) represent the numeric value of the replaced character."
 
 This concept may also in fact be applied to URN and URI. Same thing for them.
@@ -206,6 +224,7 @@ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 0 1 2 3 4 5 6 7 8 9 - _ . ~
 ```
+
 > The unreserved characters can be encoded, but should not be encoded.
 
 
