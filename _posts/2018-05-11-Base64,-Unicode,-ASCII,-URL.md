@@ -63,13 +63,13 @@ Base64 only uses 6 bits to represent one character because only 2^6 = 64 charact
 
 Here's how you could convert some data to base64:
 
-1. Take in 3 bytes (24 bits) *reminder: a byte can hold (unsigned) numbers from 0 through 255.
+1) Take in 3 bytes (24 bits) *reminder: a byte can hold (unsigned) numbers from 0 through 255.
 
 ```
 211 19 46
 ```
 
-2. List them as if they are just one number in binary format. 
+2) List them as if they are just one number in binary format. 
 
 ```
 11010011 00010011 00110001, so:
@@ -77,20 +77,20 @@ Here's how you could convert some data to base64:
 110100110001001100110001
 ```
 
-3. Dissect them again into 4 segments of 6 bits (because base64 uses 6 bits to represent one character). 
+3) Dissect them again into 4 segments of 6 bits (because base64 uses 6 bits to represent one character). 
 
 ```
 110100 110001 001100 110001
 ```
 
-4. Get the decimal values of these 6 bit numbers.
+4) Get the decimal values of these 6 bit numbers.
 
 ```
 110100 110001 001100 110001
 52 49 12 49
 ```
 
-5. Refer to the encoding table to find the matches. Padded zeros at the end become `=`, the padding.
+5) Refer to the encoding table to find the matches. Padded zeros at the end become `=`, the padding.
 
 ```
 w5MTLg==
@@ -98,31 +98,31 @@ w5MTLg==
 
 Another example for an ASCII string
 
-1. Data
+1) Data
 
 ```
 Hello
 ```
 
-2. Break it down into bits (refer to ASCII table)
+2) Break it down into bits (refer to ASCII table)
 
 ```
 01001000 01100101 01101100 01101100 01101111 00001010 
 ```
 
-3. Get them into 6 bits each
+3) Get them into 6 bits each
 
 ```
 010010 000110 010101 101100 011011 000110 111100 001010 
 ```
 
-4. Get decimal values of these numbers.
+4) Get decimal values of these numbers.
 
 ```
 18 6 21 44 27 6 60 10
 ```
 
-5. Get the encoding from the table
+5) Get the encoding from the table
 
 ```
 SGVsbG8=
