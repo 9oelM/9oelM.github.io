@@ -147,6 +147,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker(); */
 ```
 
+![react-gallery-test](https://blog.naver.com/PostView.nhn?blogId=joelmun&Redirect=View&logNo=221279318070&categoryNo=7&isAfterWrite=true&isMrblogPost=false&isHappyBeanLeverage=true&contentLength=4291&proxyReferer=http%3A%2F%2Fblog.editor.naver.com%2Feditor&redirect=View&widgetTypeCall=true&topReferer=http%3A%2F%2Fblog.editor.naver.com%2Feditor&directAccess=false#)
+
 And of course, there are some questions (some of which I already got answers) that arose:
 
 ### 1. How can I store `listOfPictures` in a better way? It looks ugly to just declare it inside the Gallery class. 
