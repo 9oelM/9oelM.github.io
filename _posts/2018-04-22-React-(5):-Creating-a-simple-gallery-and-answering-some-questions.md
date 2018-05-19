@@ -147,7 +147,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker(); */
 ```
 
-![react-gallery-test](https://blog.naver.com/PostView.nhn?blogId=joelmun&Redirect=View&logNo=221279318070&categoryNo=7&isAfterWrite=true&isMrblogPost=false&isHappyBeanLeverage=true&contentLength=4291&proxyReferer=http%3A%2F%2Fblog.editor.naver.com%2Feditor&redirect=View&widgetTypeCall=true&topReferer=http%3A%2F%2Fblog.editor.naver.com%2Feditor&directAccess=false#)
+![react-gallery-test](https://blogfiles.pstatic.net/MjAxODA1MTlfMTU3/MDAxNTI2NjkxNDMxODg1.gnJDESfxrwOiaSaO6Qq0JNgoaYMypXzMKJCtgsWCtDYg.-QzniA0cwk20GfI2kyzgCystNW3pboQLQX-oQmKgbf0g.PNG.joelmun/30966478_572440763134394_2020511486_o.png)
 
 And of course, there are some questions (some of which I already got answers) that arose:
 
