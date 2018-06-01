@@ -174,12 +174,12 @@
   /* fix rouge error.. when the website gets rendered, it strips all the end tags. So just fix "sr" and "err" classes by overwriting them*/
   .sr{
     position: static;
-    color: #323232;
+    color: #323232 !important;
   }
   .err{ 
     /* some closing tags become error tags somehow. So style them as closing tags to fix this */
-    color: #323232;
-    background-color: #ffffff00;
+    color: #323232 !important;
+    background-color: #ffffff00 !important;
     font-weight: bold;
   }
   </style>
