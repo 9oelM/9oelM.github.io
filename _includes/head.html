@@ -171,6 +171,17 @@
   .slideout-open .slideout-menu {
     display: block;
   }
+  /* fix rouge error.. when the website gets rendered, it strips all the end tags. So just fix "sr" and "err" classes by overwriting them*/
+  .sr{
+    position: static;
+    color: #323232;
+  }
+  .err{ 
+    /* some closing tags become error tags somehow. So style them as closing tags to fix this */
+    color: #323232;
+    background-color: #ffffff00;
+    font-weight: bold;
+  }
   </style>
   <script src ="{{ "/assets/js/slideout.min.js" | relative_url }}"></script>
   <script>
@@ -193,6 +204,9 @@
       });
     }
     */
+    
+    
+    
   }
   </script>
 </head> 
