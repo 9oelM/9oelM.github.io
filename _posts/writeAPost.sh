@@ -12,6 +12,7 @@ post+="-$titleWithDashes"
 post=${post%?} # remove the trailing dash
 post+=".md"
 echo "---
+comments: true
 layout: post
 title: \"$title\"
 date: $date 09:00:00 -0100
