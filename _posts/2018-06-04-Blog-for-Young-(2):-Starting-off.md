@@ -220,3 +220,133 @@ $font-size: 50px;
   font-size: $font-size;
 }
 ```
+
+## Why are the styles not being applied?
+This was my `index.js` and the styles for the website were not being applied. I did not know why. 
+
+```javascript
+import Layout from "../components/layout"
+import Card from 'grommet/components/Card';
+
+export default () => (
+    <Layout>
+        <Card thumbnail='http://grommet.io/img/carousel-1.png'
+          label='Sample Label'
+          heading='Sample Heading'
+          description='Sample description providing more details.'
+           />
+    </Layout>
+)
+```
+
+After a tiring length of search for the answer on Google, I found the [answer](https://github.com/grommet/grommet/issues/640): `<Grommet.App>`.
+
+I needed to wrap the components inside `<Grommet.App>`. It was that simple.
+
+```javascript
+import Layout from "../components/layout"
+import Card from 'grommet/components/Card';
+import Grommet from 'grommet'
+
+export default () => (
+    <Grommet.App>
+    <Layout>
+        <Card thumbnail='http://grommet.io/img/carousel-1.png'
+          label='Sample Label'
+          heading='Sample Heading'
+          description='Sample description providing more details.'
+           />
+    </Layout>
+    </Grommet.App>
+)
+```
+
+And now the styling works. And also, you need to add the core element cdn to make styling work:
+
+```javascript
+// _document.js
+import Document, { Head, Main, NextScript } from 'next/document';
+
+export default class CustomDocument extends Document {
+  render() {
+    return (
+      <html>
+        <Head>
+        {/* This is going to be your global head */}
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/grommet/1.10.1/grommet.min.css" />
+          <script src = "https://cdnjs.cloudflare.com/ajax/libs/grommet/1.10.1/grommet.min.js"></script>
+        </Head>
+        <body>
+          <Main /> {/* each routed page will go inside here */}
+          <NextScript /> {/* You don't have to care about this. */}
+        </body>
+      </html>
+    )
+  }
+}
+```
+
+## Troubleshooting
+Now I had to convert the theme of the blog to `dxc`. To do that I had to `import "grommet/grommet-dxc.min.css";` But this kept throwing me an error:
+
+```
+ ERROR  Failed to compile with 1 errors                                                                                                                                                     10:12:43 AM
+
+ error  in ./node_modules/grommet/grommet-dxc.min.css
+
+Module parse failed: Unexpected character '@' (5:3)
+You may need an appropriate loader to handle this file type.
+|  *
+|  * github.com/inuitcss | inuitcss.com
+|  */@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}@keyframes fadein{from{opacity:0}to{opacity:1}}/*!
+|  * inuitcss, by @csswizardry
+|  *
+```
+
+Webpack does not support css loaders by default so you have to install it.
+
+And a few searches revealed to me that this is a webpack config problem.
+
+Ok so [webpack.js.org says:](https://webpack.js.org/concepts/#loaders)
+```javascript
+//At a high level, loaders have two purposes in your webpack configuration:
+
+//The test property identifies which file or files should be transformed.
+//The use property indicates which loader should be used to do the transforming.
+
+const path = require('path');
+
+const config = {
+  output: {
+    filename: 'my-first-webpack.bundle.js'
+  },
+  module: {
+    rules: [
+      { test: /\.txt$/, use: 'raw-loader' }
+    ]
+  }
+};
+
+module.exports = config;
+```
+
+So I went ahead to make few changes:
+
+`/static/styles.scss`
+```css
+@import "grommet/grommet-dxc.min.css";
+```
+
+`next.config.js`
+```javascript
+const withCss = require('@zeit/next-css');
+module.exports = withCss({ /* extra optional config */ })
+```
+
+And now the website works.
+
+### Before
+![Before](https://i.imgur.com/KpUR0E7.jpg)
+
+### After 
+![After](https://i.imgur.com/u5OGkIM.jpg)
