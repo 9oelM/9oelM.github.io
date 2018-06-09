@@ -6,7 +6,6 @@ date: 2018-06-07 09:00:00 -0100
 categories: works
 ---
 
-
 ## Error
 I kept getting this error, greatly increasing the loading speed for the website:
 
@@ -45,4 +44,59 @@ And I think this link might help as well:
 These are the things that I have done to solve the problem:
 
 1. Check if all `.js` files that use `react` have `import` statements. 
-2. 
+2. Search more...
+
+And I found this:
+1. I was referring to `grommet.min.js` from a CDN. 
+2. And this was not right, as this source was referring to `React` while it was just put inside `<head>` tag. It could not refer to `React`. 
+3. So I did this to `_document.js`:
+```javascript
+import React from "react";
+import ReactDOM from "react-dom";
+import Document, { Head, Main, NextScript } from 'next/document';
+import "../static/grommet-dxc.min.css"
+import "../static/style.css"
+import Grommet from "grommet"
+
+export default class CustomDocument extends Document {
+  render() {
+    return (
+      <html>
+        <Head>
+        {/* This is going to be your global head */}
+          <link rel = "stylesheet" href = "/_next/static/style.css" />
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet"/>
+          <script src = {Grommet.grommetux}></script>
+        </Head>
+        
+        <body>
+          <Main /> {/* each routed page will go inside here */}
+          <NextScript /> {/* You don't have to care about this. */}
+          
+        </body>
+      </html>
+    )
+  }
+}
+```
+
+Now the project runs perfectly without the reference error!
+
+## Another error
+Another one was this:
+
+```
+warning.js:33 Warning: Expected server HTML to contain a matching <a> in <article>.
+```
+
+well, this one...
+
+I found on github that this is just a warning and it does not show up on actualy production. So I ran the production server:
+
+```
+next build
+next start -p 8080 # c9.io only supports port 8080 for node.js
+```
+
+and no error happened. So all errors have been solved. 
