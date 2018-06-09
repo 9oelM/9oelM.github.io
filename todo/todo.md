@@ -69,3 +69,9 @@ session in networking
 TCP three way handshake
 DNS mechanism
 XOR debugging?
+
+---------------
+
+* Cross browser compatibility
+* Package managers (npm, yarn, ...)
+* 
