@@ -4,3 +4,4 @@
 * function vs method
 * self introductory page
 * story at navy to be completed
+* as a fast learner 
