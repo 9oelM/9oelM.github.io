@@ -3,7 +3,7 @@ comments: true
 layout: post
 title: "Blog for Young (4): Lifting it up with tests"
 date: 2018-06-09 09:00:00 -0100
-categories: development
+categories: works
 ---
 ## Adding eslint to webpack
 There's an [`eslint-loader`](https://github.com/webpack-contrib/eslint-loader) for webpack.
