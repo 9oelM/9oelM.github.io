@@ -100,3 +100,20 @@ next start -p 8080 # c9.io only supports port 8080 for node.js
 ```
 
 and no error happened. So all errors have been solved.
+
+## Another error after I installed eslint
+[Solution on stackoverflow](https://stackoverflow.com/questions/46840646/eslint-complaining-about-getinitialprops)
+
+All things set correctly, I still got an error on `getInitialProps` when I ran eslint:
+```
+/home/ubuntu/workspace/pages/_error.js
+  6:16  error  Parsing error: Unexpected token getInitialProps
+
+✖ 1 problem (1 error, 0 warnings)
+```
+And so I installed `babel-eslint` and added this line in `.eslintrc.json`: 
+```
+"parser": "babel-eslint",
+```
+
+and it complained no more. 

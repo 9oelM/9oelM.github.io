@@ -111,4 +111,7 @@ Use /* eslint-disable */ to ignore all warnings in a file.
 ```
 Yay!
 
-
+## Testing with Jest & Enzyme
+### References
+Again, helpful articles.
+* [Zerocho](https://www.zerocho.com/category/React/post/583231469a87ec001834a0ec)
