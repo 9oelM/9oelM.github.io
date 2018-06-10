@@ -50,6 +50,7 @@ And I found this:
 1. I was referring to `grommet.min.js` from a CDN. 
 2. And this was not right, as this source was referring to `React` while it was just put inside `<head>` tag. It could not refer to `React`. 
 3. So I did this to `_document.js`:
+
 ```javascript
 import React from "react";
 import ReactDOM from "react-dom";
