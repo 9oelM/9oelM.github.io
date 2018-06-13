@@ -169,3 +169,5 @@ Now you can see the `auth` page!
 The only thing you have to do now is to customize. 
 
 ![Browse /auth](https://i.imgur.com/x08iynD.jpg)
+
+### 10. Add oAuth
