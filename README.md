@@ -1,6 +1,7 @@
 # 9oelM.github.io
 Joel's blog.
-
-## Credits
-* [Jekyll](https://jekyllrb.com/)
-* [Hugo Giraudel](https://twitter.com/HugoGiraudel)
+Covers:
+* Web development technologies like React, Node, ...
+* My works 
+* Notes on scripting / programming
+* Notes on hacking / security
