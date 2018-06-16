@@ -5,3 +5,7 @@
 * self introductory page
 * story at navy to be completed
 * as a fast learner 
+* MVC
+* about page
+* compose function
+* semicolon in javascript
