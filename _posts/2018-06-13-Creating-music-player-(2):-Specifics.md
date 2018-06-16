@@ -228,41 +228,42 @@ if (module.hot) {
 ```
 
 1. You create the store with reducers first
-```javascript
-const store = createStore(reducers);
-```
+    ```javascript
+    const store = createStore(reducers);
+    ```
 
 2. Pass that store as a `store` `prop` into that app, wrapping it with `Provider` Element.
-```javascript
-<Provider store={store}>
-      <App />
-</Provider>
-```
+    ```javascript
+    <Provider store={store}>
+          <App />
+    </Provider>
+    ```
 
 3. To see if the store is working well, log the state changes:
-```javascript
-console.log(store.getState());
-// Every time the state changes, log it
-// Note that subscribe() returns a function for unregistering the listener
-const unsubscribe = store.subscribe(() =>
-  console.log(store.getState())
-)
-
-store.dispatch(toggleSearchButton())
-store.dispatch(toggleSearchButton())
-store.dispatch(toggleSearchButton())
-store.dispatch(toggleSearchButton())
-```
+    ```javascript
+    console.log(store.getState());
+    // Every time the state changes, log it
+    // Note that subscribe() returns a function for unregistering the listener
+    const unsubscribe = store.subscribe(() =>
+      console.log(store.getState())
+    )
+    
+    store.dispatch(toggleSearchButton())
+    store.dispatch(toggleSearchButton())
+    store.dispatch(toggleSearchButton())
+    store.dispatch(toggleSearchButton())
+    ```
 
 4. Look into the app
 In the javascript console on the browser, you've gotta see this:
-```javascript
-index.js:29 {jompAppView: {…}}jompAppView: {searchOn: false}__proto__: Object
-index.js:29 {jompAppView: {…}}jompAppView: {searchOn: true}__proto__: Object
-index.js:29 {jompAppView: {…}}jompAppView: {searchOn: false}__proto__: Object
-index.js:29 {jompAppView: {…}}jompAppView: {searchOn: true}__proto__: Object
-index.js:29 {jompAppView: {…}}jompAppView: {searchOn: false}__proto__: Object
-```
+    ```javascript
+    index.js:29 {jompAppView: {…}}jompAppView: {searchOn: false}__proto__: Object
+    index.js:29 {jompAppView: {…}}jompAppView: {searchOn: true}__proto__: Object
+    index.js:29 {jompAppView: {…}}jompAppView: {searchOn: false}__proto__: Object
+    index.js:29 {jompAppView: {…}}jompAppView: {searchOn: true}__proto__: Object
+    index.js:29 {jompAppView: {…}}jompAppView: {searchOn: false}__proto__: Object
+    ```
+
 You can see that searchOn is being switched from false and true, and vice versa. This is because of `store.dispatch` that triggerred the actions. 
 
 ## What the heck is `withstyles`
