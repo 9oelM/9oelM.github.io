@@ -255,7 +255,15 @@ store.dispatch(toggleSearchButton())
 ```
 
 4. Look into the app
-
+In the javascript console on the browser, you've gotta see this:
+```javascript
+index.js:29 {jompAppView: {…}}jompAppView: {searchOn: false}__proto__: Object
+index.js:29 {jompAppView: {…}}jompAppView: {searchOn: true}__proto__: Object
+index.js:29 {jompAppView: {…}}jompAppView: {searchOn: false}__proto__: Object
+index.js:29 {jompAppView: {…}}jompAppView: {searchOn: true}__proto__: Object
+index.js:29 {jompAppView: {…}}jompAppView: {searchOn: false}__proto__: Object
+```
+You can see that searchOn is being switched from false and true, and vice versa. This is because of `store.dispatch` that triggerred the actions. 
 
 ## What the heck is `withstyles`
 Mui supports something called `withstyles`.
