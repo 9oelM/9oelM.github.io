@@ -9,3 +9,5 @@
 * about page
 * compose function
 * semicolon in javascript
+* taking a rest is important
+* 
