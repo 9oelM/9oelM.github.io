@@ -6,7 +6,7 @@ date: 2018-04-20 09:00:00 -0100
 categories: general
 ---
 ## Before starting to read this
-People change. And so do I. This is a story of how I, as a developer and social being, changed over a course of time. 
+People change. And so do I. This is a story of how I, as a developer and social being, changed over a course of time. Also a story of how I got out of the problems that I faced. 
 
 ## Who I was
 
@@ -34,7 +34,7 @@ But because I did not have an active emotion, I could not comfort somebody suita
 
 ## Growing pains
 
-### 1. At the university: a chance to reflect on my personality and talking habits
+### At the university: a chance to reflect on my personality and talking habits
 I met a range of more diverse people at the university. This was a place where I could learn a lot.
 
 First, I recognized that there is some problem if I were to keep the same personality over my life. I could not understand others; I could not sympathise with others. Some of my friends that I newly made did not really like me talking straight and plain. 
@@ -51,7 +51,7 @@ Well, as a brute-force solution, at first I just attempted to be nice for everyb
 
 Yeah. My inner self and.. my 'outer' self were just just in line with each other. And that was the biggest problem. Being a nice person was not easy as I expected. 
 
-### 2. At the university: got really clear with what I like and what I don't. 
+### At the university: got really clear with what I like and what I don't. 
 
 I faced a fork between a compromise and determination: the university was not like the place that I imagined. I thought I could only learn the things that I wanted to learn, which was mainly computer science. But there was something called 'Common Core subjects', which is a kind of a system where freshmen or sophomores have to learn something that does not belong to the stream of their majors. 
 
@@ -65,7 +65,7 @@ It was so good. Programming was definite and logical. Nothing was like a metapho
 
 Oh, and plus, I liked reading books. But they were largely two types of books that I liked. Christian and programming. Other books like, like.. anything else, I did not read at all. 
 
-### 3. In the Navy: most unexpected and drastic change in my life. 
+### In the Navy: most unexpected and drastic change in my life. 
 
 #### Difficulties 
 So this is a long story.
@@ -103,18 +103,55 @@ And here is the list of the things that made it so difficult for me to live in t
 
 **7. Moments I could not accept the reality that I am on a boat.** It was the most terrible thing while I was on the boat. I hated doing chores because I did not come to the Navy for this. I hated doing works with wet mooring lines because this was not I what I came for. There was just no reason. But I did my best for all these things because I believed that this was the only way that I could somehow be deployed at the place that I initially wanted to go. I could not do proper coding or any advanced computer operations for the time I was on the boat. That made me feel sad and depressed. That was not just right. Imagine if you could not do the thing that you like the most and that you pleases you the most.  
 
-## 4. In the Navy after three months of working on the boat: a fair escape 
-And soon, a new captain of the vessel came around the beginning of January 2018. And she changed everything.  
+### The new captain
+And soon, a new captain of the vessel came around the end of December 2017. And she changed everything. She was a Lieutenant commander, small in height, but full of charm -- always smiling to the sailers, always being kind to them. 
 
-## Achievements
+So I was looking for an opportunity to let people know about what happened to me so far. I had this plan: the Navy Intranet had this thing called 'Idea panel'. I noticed people who posted terrific suggestions were seen by officers who were working at the HQ or the Fleet Command -- those who could possibly get me out of the vessel if it gets known by these people that I am actually a good developer who cannot be wasted working on a boat! 
 
-### 1. Passion
+So I started writing this report: Navy Intranet Front-end Renewal project. It was just literally about abandoning old coding practices and HTML 4.01 (all those terrible `table` and `iframe` tags... and the index page that was built first in 1999 and catching up with the contemporary development trends like React, Webpack, etc (which by far the Navy was falling behind, because we have to use Internet Explorer 8 to be compatible with the systems on the web we are using). I also posed some points on introducing open-source projects (software) to the Navy program development practice and provided a timeline for the actual development if it gets realized. The explanation of the report might be a bit vague because it is just a brief summary of it, but it was actually of great quality, reflecting my zeal to get out of the ship. So, in early January, I was still writing it. And I came across with an unexpected chance:    
 
-### 2. And programming
+In mid-January, we were dispatched from the home port and were anchored at the barge. And I was on my duty for gangway watch. It was tiring and boring. But caused me the deepest sadness and trouble in my mind was the fact that I was doing something completely irrelevant to what I meant to be doing in the navy. As I was trying to kill the time by walking around the stern, suddenly the captain came upon me across the gangway and said, `Should we grab a cup of coffee or something?` and I said I was okay because it was actually pretty cold for anybody to stay outside, although it was still a daytime. But she insisted so, so we did. She went into her cabin to get coffee for her and myself. For some reason, she begun to ask lots of questions like, "Why did you choose the Navy while you could go for [KATUSA](https://en.wikipedia.org/wiki/Korean_Augmentation_To_the_United_States_Army) or the Army?" or "How did you get on this ship?"" I was so thankful that she was doing so. I could not miss this chance. I had to tell her everything that happened. It was the day the vessel was not sailing at all. I got so much time and so did she. So I told her everything. Just about everything. And she sincerely got to worry about me after fully understanding my circumstances.     
 
-### 3. Ability to understand more diverse people
+It was more than a one and a half hour talk. The captain gave me a suggestion after listening to my plan: why not put the report forward as a official document? She told me that if I post the report in an unofficial manner on the Ideal Panel, nobody can guarantee that an answer would come back to me. In contrast, If I put it forward as an official document, the superior units would have to examine it and come back to me with some kind of reply, and that would be the way it would work better. So I gave up on the Idea Panel thing and instead prepared to send it as an official doc. 
 
-### 4. Need for some emotion 
+And it was that night that I was on the watch again. It was too cold, so I sneaked into the vessel and was thinking of just staying inside the communications room for a min. And I found something was on the monitor: an official document from the HQ saying any demands for software development or renewal be reported as a official paper. And there was a template provided as well. I was shocked. How could this go 'this' well? And I told this about the captain (later I got to know PO1 working with me who knew I was writing the report left the document opened up on the computer screen so that I could see it once I come in to the communications room) and we both were glad. I quickly finished off the report in one week and sent it off. 
 
-### 5. Communication
+### A 'fair' transfer
 
+Maybe it was one or two weeks later. One of the officers picked up a call from Naval Information Systems Management Group (NISMG). Obviously it was a call from the officer who saw my report. He handed the phone over to me, and we talked a lot of things, mainly on tech. He knew that I was not to be on the vessel because I wrote at the end of the report on structural problems in the Navy causing slow and predictable developments and gave myself as an example of that. So he asked me if I wanna go onto the land to work and of course I said yes, I especially said I really wanna go to the NIMSG because that is where all the heavy and relevant work is; it is located at the HQ and it is the most superior unit in the Navy that manages information systems and security related work. 
+
+And that was it. I could feel that I impressed some people related in this area. So I was waiting. After a few days, I again got a call from the Communication Battalion from the 1st Fleet Command to which the vessel I belonged to was involved in. And they said they would like to take me to the [CERT](https://en.wikipedia.org/wiki/Computer_emergency_response_team) in the 1st Fleet Command. I said I wanna go to the NISMG but there because I could know that they would just let me do nothing there in the 1st Fleet; it is only a small unit there. But the HR system in the Navy was rigid and inflexible; They would not let me transfer to another unit in another Command. They said it was a rule. And yeah, it was a rule, but I was just looking for some exceptions.   
+
+At the end it was determined that I was transferring to the CERT in 1st Fleet Command (I had no choice, but it was certainly better than being on the boat; I can study in my free time on the land and the work in CERT was more relevant to what I want to do and like than that on the boat). That was the beginning of the February. Because, again, they did not care about me again, I had to wait almost two months more. Later I got to know that the head of HR office of the 1st Fleet had changed and they obviously forgot about transferring me to there because the prior head did not go through a proper handover to the new one; I just again was reinstated to a genuine seaman who is working normally on the vessel with no especial affairs due to their ignorance. It would be too boring to explain all the process on how I asked the officers in the vessel to contact and go over to the HR office and talk it out, so I will just cut it. 
+
+It took a long time. I thought I could not go. Already a complete distrust towards this whole inflexible system spawned in my thoughts. But at the very end of March I was given an order to transfer to the CERT. That marked the end of all those troubles that I suffered on the boat.  
+
+### Now
+All is well. I can access the Internet often to go on Github and contribute. I can code. I can study. It is not the best that I was looking for, but it is the best option among all possibilities. Because it is a small unit relative to the superior units, I could apply for things like DEFCON and win there because nobody applied.  
+
+## Some reflections on what I got from this long standing trouble
+
+### 1. Passion proves you how much you are into the thing and it gives you opportunities.
+This environment where I could not do what I wanted to do drove me crazy. And I got to know that my passion was being oppressed and that at the same time a great passion was residing in me. I was looking for things to code and finally I did: there was a VBA script editor on something called [HanCell](https://en.wikipedia.org/wiki/Computer_emergency_response_team)(Copycat of Excel that only, only, only... Korean bureaucrats use). Using that, I coded things like gomoku. Default terminals on Windows 7 are cmd and Powershell and so I always tried them out when I had time. One big thing was Google Chrome. For some reason, the computer wired to the Intranet had Chrome installed. I could code javascript and html (on notepad) and could make some programs like static search engine or calendar (because there was no server I could launch up, it was a great chance to know about `JSON.stringify()` and `JSON.parse` and `localStorage`.) 
+
+If I couldn't even do these, I would have got crazy. But luckily there were some freaky ways that I could do some coding-related stuff!
+
+And because I was crazy about this stuff, I wanted to get out of the boat, and that was the principal reason why I started writing that report that later got me out. 
+
+I believe this is a lesson that taught me if you are passionate enough (actively doing something productive regarding what you wanna do), you are going to get a chance to do something that you actually want to do. 
+
+### 2. I can now understand more diverse people and communicate well with them
+Lots of weird and different people I met. But I'm sure there are going to be surprisingly more people who do not share similar habits and personalities with me. But I now know a bit about how to deal with them. 
+
+You know, seriously, you cannnot just do your own thing and succeed in something. You need other people's help, and often it is the case that the person you need to interact with is not the one that you are feeling comfortable with. 
+
+I learned to be as kind and polite as possible because that is the best way that could cause no trouble between and them and me. Also, never talk from your perspective; They would not understand what you are talking about if you only say while already having understood what you are talking about. See from their perspective and reckon what they might lack in knowledge. And explain things plainly. 
+
+Otherwise it will only take longer time to relay your message to your peer. That is one of the lessons from the boat where everybody is stressed out and wants to take their anger out against inferiors. 
+
+Always be reminded that we don't think the same thing ever. Try to understand people with that spirit. I know it's hard. With a series of real-life practices, you are going to be trained well if you meet the 'right' people.
+
+### 3. I got some new sense on emotion 
+Yeah it's true that some nerves in my body evolved to feel some emotion as well. I don't know how, but at some point I could feel this. Perhaps the environment was harsh enough for me to develop some emotional sense. 
+
+It might sound funny, but I can now feel some pity and express that feeling. You are gonna know when you see me (lol).
