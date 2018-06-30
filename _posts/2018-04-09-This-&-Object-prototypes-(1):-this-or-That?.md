@@ -1,7 +1,7 @@
 ---
 comments: true
 layout: post
-title: "this & Object prototypes (1): this or That?"
+title: "This & Object prototypes (1): this or That?"
 date: 2018-04-09 09:00:00 -0100
 categories: development
 ---
