@@ -7,7 +7,7 @@ categories: general
 ---
 
 # Why
-So I have about 49 weeks until I will get discharged. So this is a good time to think about what to accomplish before then.
+So I have about 49 weeks until I get discharged. So this is a good time to think about what to accomplish before then.
 
 # I wanna...
 Achieve clear understanding of:
@@ -18,4 +18,9 @@ Achieve clear understanding of:
 
 Learn:
 * Typescript
-* 
+* Backend basics (NoSQL + Express)
+
+# Other than tech?
+* Exercise. Gain weight. 
+* Prepare for employment
+* Prepare for the exchange program
