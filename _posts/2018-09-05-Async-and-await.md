@@ -1,7 +1,7 @@
 ---
 comments: true
 layout: post
-title: "async and await"
+title: "Async and await"
 date: 2018-09-05 09:00:00 -0100
 categories: development
 ---
