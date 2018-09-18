@@ -406,7 +406,6 @@ export default DrawerItem
 import * as React from "react"
 import ReactDOM from "react-dom"
 import MemoryRouter from "react-router/MemoryRouter"
-import { shallow, mount } from "enzyme"
 import DrawerItem from "../../../components/Drawer/DrawerItem"
 
 describe("DrawerItem", () => {
@@ -433,5 +432,5 @@ describe("DrawerItem", () => {
 
 ```
 
-## Improvements
-But still, I felt like I had to test props like `onClick` that receives `onToggle` prop, which is a functionality assumed to work well. 
+## More talking
+But still, I felt like I had to test props like `onClick` that receives `onToggle` prop, which is a functionality assumed to work well. But `mount` never worked, so it was not really possible to test this..
