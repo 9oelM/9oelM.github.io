@@ -80,7 +80,7 @@ and then fill up your `package.json` as follows:
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "dev": "concurrently --kill-others-on-fail \"PORT=8080 yarn server\" \"PORT=8081 yarn client\""
   },
   "dependencies": {
     "express": "^4.16.3",
@@ -120,10 +120,12 @@ on your browser.
 ## So far
 So far, this has been the project structure:
 ```
-j031:~/workspace/chat (master) $ tree -L 3 -I node_modules                                             
+j031:~/workspace/chat $ tree -L 4 -I node_modules
 .
-├── README.md
 ├── client
+│   ├── README.md
+│   ├── package-lock.json
+│   ├── package.json
 │   ├── public
 │   │   ├── favicon.ico
 │   │   ├── index.html
@@ -138,8 +140,21 @@ j031:~/workspace/chat (master) $ tree -L 3 -I node_modules
 │       └── serviceWorker.js
 ├── package-lock.json
 ├── package.json
-├── server.js
-└── yarn.lock
+└── server.js
 
-3 directories, 15 files
+3 directories, 16 files
 ```
+
+## Add proxy
+Add this line to `package.json` inside `client` folder:
+
+```
+"proxy": "http://localhost:8080/"
+```
+This tells the `create-react-app` development server to proxy our API requests to the express server.
+
+We are going to use the port 8080 for the `express` server, and 8081 for `create-react-app` server.
+
+Now you are good to go!
+
+Check out on `http://localhost:8081`!
