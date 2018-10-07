@@ -1,7 +1,7 @@
 ---
 comments: true
 layout: post
-title: "Using Socket.io"
+title: "Using React and Express together"
 date: 2018-10-07 09:00:00 -0100
 categories: development
 ---
