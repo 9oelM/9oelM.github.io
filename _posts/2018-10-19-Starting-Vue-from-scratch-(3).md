@@ -24,7 +24,7 @@ This is just another way of writing:
 <script>
 export default {
     name: 'todo-item',
-    props: ['todo'] // supposedly means a prop named todo as an array
+    props: ['todo'] // props specified inside an array
 }
 </script>
 ```
