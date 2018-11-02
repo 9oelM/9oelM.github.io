@@ -115,6 +115,3 @@ export default class HelloWorld extends Vue
 would mean that `Component` decorator would do necessary operations on the class `HelloWorld` to make it a proper Vue component.
 
 ## Difference between `public` and `private` in this Vue project
-
-다 만들면 빌드시키고,
-깃헙에 올리면 됨 
