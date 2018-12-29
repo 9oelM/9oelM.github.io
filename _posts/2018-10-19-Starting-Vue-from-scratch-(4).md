@@ -47,3 +47,4 @@ If you want to `preventDefault()`, you can simply:
 
 # `v-model`
 It's for two-way data bindings. 
+

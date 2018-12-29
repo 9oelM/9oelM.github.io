@@ -128,3 +128,4 @@ export default new Router({
 
 // You are going to use this in `main.js`
 ```
+
