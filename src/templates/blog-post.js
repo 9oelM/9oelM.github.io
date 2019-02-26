@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+
+import "./blog-post.css"
 
 class BlogPostTemplate extends React.Component {
   render() {
