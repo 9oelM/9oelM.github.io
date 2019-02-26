@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.fcdb4eed16973a08d099.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-4124805c0503dbfe42dd67d7f5715964.woff2) format("woff2"),url(/static/montserrat-latin-100-c8fb2f714bbc7bc3e8dfffa916b286dc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e4bf47bd171a9b2a72dd84c58bf90edf.woff2) format("woff2"),url(/static/montserrat-latin-100italic-d1f3f2d02ee4d7d2d4b1ad865014f189.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-444ae007121264bc1969d49b4031f9b2.woff2) format("woff2"),url(/static/montserrat-latin-200-edbce16a90aa22c297a0307b85789837.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-f316c5d1ec40f3e68654c3f38b3999f3.woff2) format("woff2"),url(/static/montserrat-latin-200italic-d7bbb730d9b5e11720b3eb32326dcca7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-0a7c6df06e85d978d096d4d18fd8d43d.woff2) format("woff2"),url(/static/montserrat-latin-300-5e86df2cad22d2ef2b03516334afae5e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-c076c4892bc7a4be7b9097e97a35012d.woff2) format("woff2"),url(/static/montserrat-latin-300italic-37c74a8d2d0d36a0a2c6e9a37ee15b0c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-501ce09c42716a2f6e1503a25eb174c9.woff2) format("woff2"),url(/static/montserrat-latin-400-f29d2b8559699b6beb5b29b25b8bc572.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-882908d9950d9c86ebd380877f293d95.woff2) format("woff2"),url(/static/montserrat-latin-400italic-22e7b04e5f2a901d49d4d342315a715a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-f0f2716c5fe401d175b88715e7d28685.woff2) format("woff2"),url(/static/montserrat-latin-500-991b453bf90a0980e78966d2af7e3d3a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-4590ebba421b3288c305305d7fa7b504.woff2) format("woff2"),url(/static/montserrat-latin-500italic-f3d41e4cdcc2314e49ddcea751d6f87f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-15c24f7109941777774ddd2c636c6a50.woff2) format("woff2"),url(/static/montserrat-latin-600-f6dc6096f48956908c1787d9a722570a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-6d10b80529d5c36c7c09fca7193af0fc.woff2) format("woff2"),url(/static/montserrat-latin-600italic-02c4833312d94b1b0866f073023a250e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-79982cd1f74c6fa7451bf9b37ead09ff.woff2) format("woff2"),url(/static/montserrat-latin-700-957e93fbbe131a59791cd820d98b7109.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-283438e9577fe6a684466bb100e105ec.woff2) format("woff2"),url(/static/montserrat-latin-700italic-ca627c5ccc65cf80c2ecaea44b997de9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-35386154b78d046218fc8f88a44ff515.woff2) format("woff2"),url(/static/montserrat-latin-800-756655905d91b77960888262e7d58d35.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-e1b52a7bd83e2324db6d92bdc206844c.woff2) format("woff2"),url(/static/montserrat-latin-800italic-a69f0add9d86c1a84311d7dd8693ba4a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-260c2ea3ef57feb82251952e605a36d5.woff2) format("woff2"),url(/static/montserrat-latin-900-186cae8091da578150d81958e217714a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-d785fb9fc74588ffb7f306799709a97d.woff2) format("woff2"),url(/static/montserrat-latin-900italic-43b527fe77254f97ea36e2b54e845ec4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-a50c381443e6993188ed9cc4b6806866.woff2) format("woff2"),url(/static/merriweather-latin-300-2c73b119ad85e697123658b8a091ff83.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-bd410cbf8c272acd4fbdd9f61a7015bf.woff2) format("woff2"),url(/static/merriweather-latin-300italic-9deeb422b65afb1daacc039296bb3640.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-f936cb550d4dcd769f75c453207ac5e6.woff2) format("woff2"),url(/static/merriweather-latin-400-ab0616e6d856817eff54eb8c5e1664e4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-5c9a23d08e2c851e5a25795b940acd4f.woff2) format("woff2"),url(/static/merriweather-latin-400italic-0ab4b54f3b1e8b14cf755970fde8ce35.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-1636f13a52ca3f0eb8784c9c57f62082.woff2) format("woff2"),url(/static/merriweather-latin-700-cc673c945b482dc1378d4a3c95ffd175.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-8b0db67123584893c6591accbc51640c.woff2) format("woff2"),url(/static/merriweather-latin-700italic-513649f5b9ba4675cff15cf3f7ad4f2a.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-46631a9aab93dec3ed34f429dd1a5646.woff2) format("woff2"),url(/static/merriweather-latin-900-a0528570caa2c785891308ce604d8db7.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-a26a8168916e5d4e5485081171d7fdb0.woff2) format("woff2"),url(/static/merriweather-latin-900italic-db42a3f34378e69ef5aebb6717f1f33e.woff) format("woff")}</style><meta name="generator" content="Gatsby 2.1.18"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="shortcut icon" href="/icons/icon-48x48.png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><title data-react-helmet="true">This &amp; Object prototypes (3): Objects | Joel&#x27;s dev blog</title><meta data-react-helmet="true" name="description" content="Types and objects Types in JS string number boolean null undefined object Built-in Objects String Number Boolean Object Function Array Date RegExp Error  and…"/><meta data-react-helmet="true" property="og:title" content="This &amp; Object prototypes (3): Objects"/><meta data-react-helmet="true" property="og:description" content="Types and objects Types in JS string number boolean null undefined object Built-in Objects String Number Boolean Object Function Array Date RegExp Error  and…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Joel Mun"/><meta data-react-helmet="true" name="twitter:title" content="This &amp; Object prototypes (3): Objects"/><meta data-react-helmet="true" name="twitter:description" content="Types and objects Types in JS string number boolean null undefined object Built-in Objects String Number Boolean Object Function Array Date RegExp Error  and…"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link as="script" rel="preload" href="/webpack-runtime-60aa013e62852d62762d.js"/><link as="script" rel="preload" href="/styles-08d0a643d74bd4a2f4ab.js"/><link as="script" rel="preload" href="/app-a11bc97cfd3d61eca974.js"/><link as="script" rel="preload" href="/0-38677d11cc87e0c35067.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-b6c6966a3c38dacb61ba.js"/><link as="fetch" rel="preload" href="/static/d/875/path---2018-06-30-this-object-prototypes-3-objects-a-46-2a3-cTVD0KjIsPStN3DqZydis9AIqCI.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">Joel&#x27;s dev blog</a></h3></header><main><h1>This &amp; Object prototypes (3): Objects</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">June 30, 2018</p><div><h2>Types and objects</h2>
+<h3>Types in JS</h3>
+<ul>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>null</li>
+<li>undefined</li>
+<li>object</li>
+</ul>
+<h3>Built-in Objects</h3>
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+<li>Object</li>
+<li>Function</li>
+<li>Array</li>
+<li>Date</li>
+<li>RegExp</li>
+<li>Error</li>
+</ul>
+<h3><code class="language-text">String</code> and <code class="language-text">string</code>, and other primitives</h3>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> strPrimitive <span class="token operator">=</span> <span class="token string">"I am a string"</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> strPrimitive<span class="token punctuation">;</span>							<span class="token comment">// "string"</span>
+strPrimitive <span class="token keyword">instanceof</span> <span class="token class-name">String</span><span class="token punctuation">;</span>					<span class="token comment">// false</span>
+
+<span class="token keyword">var</span> strObject <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span> <span class="token string">"I am a string"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> strObject<span class="token punctuation">;</span> 								<span class="token comment">// "object"</span>
+strObject <span class="token keyword">instanceof</span> <span class="token class-name">String</span><span class="token punctuation">;</span>					<span class="token comment">// true</span>
+
+<span class="token comment">// inspect the object sub-type</span>
+Object<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>toString<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span> strObject <span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// [object String]</span></code></pre></div>
+<p>Things we can know:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">1. `strPrimitive` is not created by `String` constructor, so it logs `false` on `instanceof String` test.
+2. `strObject` on the other hand is created by `String` constructor.
+3. `&quot;I am a string&quot;` is actually **not** an object but a primitive literal and immutable value. If you want to do something like `&quot;I am a string&quot;[0]&quot;` or `&quot;I am a string&quot;.substring(2,4)`, you are going to need a temporary `String` object.</code></pre></div>
+<p>The same logic applies for other objects with corresponding primitives, such as: <code class="language-text">1</code> and <code class="language-text">new Number(1)</code>.</p>
+<h3>Others</h3>
+<ul>
+<li><code class="language-text">null</code> and <code class="language-text">undefined</code> have no object wrappers. </li>
+<li><code class="language-text">Object</code>, <code class="language-text">Array</code>, <code class="language-text">Function</code>, and <code class="language-text">RegExp</code> are <strong>ALL OBJECTS</strong> regardless of whether the literal or constructed form is used (ex. <code class="language-text">new Array()</code> and <code class="language-text">[]</code>).</li>
+<li>Simpler literal form is preferred. Only use constructed form if you need extra options.</li>
+</ul>
+<h2>Contents</h2>
+<p>An object contains <strong>property names</strong> only that act as pointers (references) to where actual values are stored. </p>
+<h3>Two ways of accessing</h3>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">testObject <span class="token operator">=</span> <span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span> <span class="token punctuation">}</span>
+
+testObject<span class="token punctuation">.</span>a
+
+testObject<span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">]</span></code></pre></div>
+<p><code class="language-text">.</code> and <code class="language-text">[ ]</code> operator function the same. But their usage may vary: </p>
+<ul>
+<li><code class="language-text">.</code> operator requires an <code class="language-text">Identifier</code> compatible property name. </li>
+<li><code class="language-text">[&quot;..&quot;]</code> operator can take any UTF-8 compatible string as the property name. (Ex. <code class="language-text">[&quot;Hey++^]&quot;</code>)</li>
+<li>You can also extend the logic to make a property name where necessary (make a string first, and then use that as a property name)</li>
+<li>In objects, property names are always strings. <strong>If you use any other value besides a string (primitive) as the property, it will first be <em>converted</em> to a string.</strong> </li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> myObject <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+myObject<span class="token punctuation">[</span><span class="token boolean">true</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"foo"</span><span class="token punctuation">;</span>
+myObject<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"bar"</span><span class="token punctuation">;</span>
+myObject<span class="token punctuation">[</span>myObject<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"baz"</span><span class="token punctuation">;</span>
+
+myObject<span class="token punctuation">[</span><span class="token string">"true"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>				<span class="token comment">// "foo"</span>
+myObject<span class="token punctuation">[</span><span class="token string">"3"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>					<span class="token comment">// "bar"</span>
+myObject<span class="token punctuation">[</span><span class="token string">"[object Object]"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>	<span class="token comment">// "baz"</span></code></pre></div>
+<p>Notice that for the last property <code class="language-text">myObject</code>, <code class="language-text">toString</code> was called to fill the prop name.</p>
+<h3>You can also do this with <code class="language-text">[&quot;..&quot;]</code></h3>
+<p>This is called “Computed property names”.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> prefix <span class="token operator">=</span> <span class="token string">"foo"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> myObject <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">[</span>prefix <span class="token operator">+</span> <span class="token string">"bar"</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">"hello"</span><span class="token punctuation">,</span>
+	<span class="token punctuation">[</span>prefix <span class="token operator">+</span> <span class="token string">"baz"</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">"world"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+myObject<span class="token punctuation">[</span><span class="token string">"foobar"</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// hello</span>
+myObject<span class="token punctuation">[</span><span class="token string">"foobaz"</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// world</span></code></pre></div>
+<h2>Property vs Method</h2>
+<p>If a function belongs to an object (a class), it is referred to as a ‘method’ ion other languages. </p>
+<p>But technically, as we have seen, functions never <em>belong</em> to objects. </p>
+<p>If you access a property on an object, it is a property access but a method access.</p>
+<blockquote>
+<p><em>Perhaps</em> one could argue that a function becomes a method, not at definition time, but during run-time just for that invocation, depending on how it’s called at its call-site.</p>
+</blockquote>
+<blockquote>
+<p>The safest conclusion is probably that “function” and “method” are interchangeable in JavaScript.</p>
+</blockquote>
+<h2>Arrays</h2>
+<p>Arrays are objects, so they can have a property like</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> test <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+test<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token string">"hey"</span>
+
+test<span class="token punctuation">.</span>length <span class="token comment">// 2</span></code></pre></div>
+<p><code class="language-text">test.a</code> does not add to the length of the array. It is just a property. </p>
+<p>But if you use a property name that looks like a number, <strong>it will be understood as a numeric index.</strong> </p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> test <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+test<span class="token punctuation">[</span><span class="token string">"0"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"zero index"</span>
+test<span class="token punctuation">[</span><span class="token string">"1"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"first index"</span>
+test<span class="token punctuation">.</span>length <span class="token comment">// 2</span></code></pre></div>
+<h2><code class="language-text">Object.assign(...)</code> (also <code class="language-text">({ ...objectName })</code>)</h2>
+<p><code class="language-text">Object.assign</code> iterates over all the enumerable, owned keys on the source objects and copies them to the target object (on the LHS)</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"name"</span>
+    <span class="token punctuation">}</span>   
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> testObj <span class="token operator">=</span> <span class="token punctuation">{</span> person<span class="token punctuation">:</span> <span class="token string">"Joel"</span> <span class="token punctuation">}</span>
+<span class="token keyword">let</span> additionalObj <span class="token operator">=</span> <span class="token punctuation">{</span> 
+                        say<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                        friends<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"B"</span><span class="token punctuation">,</span> <span class="token string">"E"</span><span class="token punctuation">,</span> <span class="token string">"Q"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                        pet<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"Matt"</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+<span class="token keyword">let</span> newObj <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>
+    <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token comment">// &lt;&lt;--- the target (newly created) object</span>
+    additionalObj<span class="token punctuation">,</span>
+    testObj
+<span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newObj<span class="token punctuation">)</span>
+<span class="token comment">/*
+    {say: ƒ, friends: Array(3), pet: Dog, person: "Joel"}
+*/</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newObj<span class="token punctuation">.</span>say <span class="token operator">===</span> additionalObj<span class="token punctuation">.</span>say<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,
+</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newObj<span class="token punctuation">.</span>friends <span class="token operator">===</span> additionalObj<span class="token punctuation">.</span>friends<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,
+</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newObj<span class="token punctuation">.</span>pet <span class="token operator">===</span> additionalObj<span class="token punctuation">.</span>pet<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,
+</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newObj<span class="token punctuation">.</span>person <span class="token operator">===</span> testObj<span class="token punctuation">.</span>person<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">
+`</span></span><span class="token punctuation">)</span>
+<span class="token comment">/*  it shows that properties are copied via `=` assignment only.
+    true,
+    true,
+    true,
+    true
+*/</span></code></pre></div>
+<p>An alternative to <code class="language-text">Object.assign(...)</code> is <code class="language-text">{ ...objectName, ..}</code> syntax:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"name"</span>
+    <span class="token punctuation">}</span>   
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> testObj <span class="token operator">=</span> <span class="token punctuation">{</span> person<span class="token punctuation">:</span> <span class="token string">"Joel"</span> <span class="token punctuation">}</span>
+<span class="token keyword">let</span> additionalObj <span class="token operator">=</span> <span class="token punctuation">{</span> 
+                        say<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                        friends<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"B"</span><span class="token punctuation">,</span> <span class="token string">"E"</span><span class="token punctuation">,</span> <span class="token string">"Q"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                        pet<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"Matt"</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+<span class="token keyword">let</span> newObj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>testObj<span class="token punctuation">,</span>
+    <span class="token operator">...</span>additionalObj
+    <span class="token comment">// you can override properties here</span>
+    <span class="token comment">// like, pet: new Dog("Sally")</span>
+    <span class="token comment">// Notice how simpler and clearer the syntax is!</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newObj<span class="token punctuation">)</span>
+<span class="token comment">/*
+    {say: ƒ, friends: Array(3), pet: Dog, person: "Joel"}
+*/</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newObj<span class="token punctuation">.</span>say <span class="token operator">===</span> additionalObj<span class="token punctuation">.</span>say<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,
+</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newObj<span class="token punctuation">.</span>friends <span class="token operator">===</span> additionalObj<span class="token punctuation">.</span>friends<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,
+</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newObj<span class="token punctuation">.</span>pet <span class="token operator">===</span> additionalObj<span class="token punctuation">.</span>pet<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,
+</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newObj<span class="token punctuation">.</span>person <span class="token operator">===</span> testObj<span class="token punctuation">.</span>person<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">
+`</span></span><span class="token punctuation">)</span>
+<span class="token comment">/*  it shows that properties are copied via `=` assignment only.
+    true,
+    true,
+    true,
+    true
+*/</span></code></pre></div>
+<h2>Property descriptors</h2>
+<p>From ES5 onwards, all properties are described in terms of a <strong>property descriptor</strong>.</p>
+<h3><code class="language-text">Object.getOwnPropertyDescriptor()</code></h3>
+<p>Following on from the last example:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span> newObj<span class="token punctuation">,</span> <span class="token string">"friends"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// See you have three characteristics: writable, enumerable and configurable.</span>
+<span class="token comment">// {value: Array(3), writable: true, enumerable: true, configurable: true}</span></code></pre></div>
+<h3><code class="language-text">Object.defineProperty()</code></h3>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> test <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span> test<span class="token punctuation">,</span> <span class="token string">"myProp"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	value<span class="token punctuation">:</span> <span class="token string">"hey"</span><span class="token punctuation">,</span>
+	writable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+	configurable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+	enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+test<span class="token punctuation">.</span>myProp<span class="token punctuation">;</span> <span class="token comment">// hey</span></code></pre></div>
+<p>It’s just a difficult way of doing <code class="language-text">var test = { myProp: &quot;hey&quot; }</code>. Just know that there’s a function called <code class="language-text">Object.defineProperty()</code>.</p>
+<h3>Writable</h3>
+<p>You cannot chance a value of a property if you set <code class="language-text">writable</code> as <code class="language-text">false</code>. </p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> test <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span> test<span class="token punctuation">,</span> <span class="token string">"myProp"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	value<span class="token punctuation">:</span> <span class="token string">"hey"</span><span class="token punctuation">,</span>
+	writable<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+	configurable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+	enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+test<span class="token punctuation">.</span>myProp <span class="token operator">=</span> <span class="token string">"it cannot change"</span><span class="token punctuation">;</span>
+
+test<span class="token punctuation">.</span>myProp <span class="token comment">// hey</span></code></pre></div>
+<p>Yeap. It does not change. </p>
+<p>If you <code class="language-text">use strict</code>, you get an error by attempting to modify the value: </p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token string">'use strict'</span>
+
+<span class="token keyword">var</span> test <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span> test<span class="token punctuation">,</span> <span class="token string">"myProp"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	value<span class="token punctuation">:</span> <span class="token string">"hey"</span><span class="token punctuation">,</span>
+	writable<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+	configurable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+	enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+test<span class="token punctuation">.</span>myProp <span class="token operator">=</span> <span class="token string">"it cannot change"</span>
+<span class="token comment">/*
+logs:
+    Uncaught TypeError: Cannot assign to read only property 'myProp' of object '#&lt;Object>'
+*/</span></code></pre></div>
+<h3>Configurable</h3>
+<p>If it’s configurable, you can modify its descriptor definition using <code class="language-text">defineProperty()</code> function.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> test <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span> test<span class="token punctuation">,</span> <span class="token string">"myProp"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	value<span class="token punctuation">:</span> <span class="token string">"hey"</span><span class="token punctuation">,</span>
+	writable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+	configurable<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+	enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span> test<span class="token punctuation">,</span> <span class="token string">"myProp"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	value<span class="token punctuation">:</span> <span class="token string">"hey"</span><span class="token punctuation">,</span>
+	writable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+	configurable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+	enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token keyword">delete</span> test<span class="token punctuation">.</span>myProp <span class="token comment">//fail</span>
+test<span class="token punctuation">.</span>myProp <span class="token comment">// "hey". still here. not deleted. </span>
+<span class="token comment">/*
+    Uncaught TypeError: Cannot redefine property: myProp
+    at Function.defineProperty (&lt;anonymous>)
+*/</span></code></pre></div>
+<p>As you might have noticed, it is just a one-way action, so it cannot be undone.</p>
+<h2>Immutability</h2>
+<h3>Object constant</h3>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> myObject <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span> myObject<span class="token punctuation">,</span> <span class="token string">"NOT_CHANGING"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    value<span class="token punctuation">:</span> <span class="token string">"whatsup"</span><span class="token punctuation">,</span>
+    writable<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    configurable<span class="token punctuation">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Effect: cannot be changed, redefined or deleted.</p>
+<h3>Prevent extensions</h3>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> myObject <span class="token operator">=</span> <span class="token punctuation">{</span>
+    a<span class="token punctuation">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">preventExtensions</span><span class="token punctuation">(</span> myObject <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+myObject<span class="token punctuation">.</span>b <span class="token operator">=</span> <span class="token string">"something"</span><span class="token punctuation">;</span>
+myObject<span class="token punctuation">.</span>b<span class="token punctuation">;</span> <span class="token comment">// undefined</span></code></pre></div>
+<p>Effect: prevent the object from being added to new properties. </p>
+<h3>Doing the above two things at once: <code class="language-text">Object.seal(..)</code></h3>
+<p>It’s literally just that. It seals the object by calling <code class="language-text">preventExtensions()</code> and making <code class="language-text">configurable</code> property as <code class="language-text">false</code>.</p>
+<h3>Doing one thing more: <code class="language-text">Object.freeze(..)</code></h3>
+<p>Things it does:</p>
+<ul>
+<li><code class="language-text">Object.seal(..)</code></li>
+<li>sets <code class="language-text">writable</code> as <code class="language-text">false</code></li>
+</ul>
+<h2><code class="language-text">[[Get]]</code></h2>
+<p><code class="language-text">myObject.myProp</code> works through <code class="language-text">[[Get]]</code> operation. </p>
+<blockquote>
+<p>The default built-in <code class="language-text">[[Get]]</code> operation for an object first inspects the object for a property of the requested name, and if it finds it, it will return the value accordingly.</p>
+</blockquote>
+<p>Otherwise it returns <code class="language-text">undefined</code> for the requested property that is not found. </p>
+<h2><code class="language-text">[[Put]]</code></h2>
+<p>Simple assignment like <code class="language-text">let something = 1</code> would not just call <code class="language-text">[[Put]]</code>. </p>
+<p>If a property is already present in an object:</p>
+<blockquote>
+<ol>
+<li>Is the property an accessor descriptor (see “Getters &#x26; Setters” section below)? If so, call the setter, if any.</li>
+<li>Is the property a data descriptor with <code class="language-text">writable</code> of <code class="language-text">false</code>? If so, silently fail in <code class="language-text">non-strict mode</code>, or throw <code class="language-text">TypeError</code> in <code class="language-text">strict mode</code>.</li>
+<li>Otherwise, set the value to the existing property as normal.</li>
+</ol>
+</blockquote>
+<p>If a property is not present, it is more complex, which will be covered later. </p>
+<h2>Getters &#x26; Setters</h2>
+<p>You can override getters and setters like:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> myObj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">get</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_a
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token keyword">set</span> <span class="token function">a</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>_a <span class="token operator">=</span> val <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">></span> myObj<span class="token punctuation">.</span>a
+    undefined
+<span class="token operator">></span> myObj<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">4</span>
+    <span class="token number">4</span>
+<span class="token operator">></span> myObj<span class="token punctuation">.</span>a
+    <span class="token number">3</span></code></pre></div>
+<h2>Existence</h2>
+<p>Distinguishing between <code class="language-text">undefined</code> as a property and that as nothing.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> myObj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    test<span class="token punctuation">:</span> undefined
+<span class="token punctuation">}</span>
+
+<span class="token comment">//both would log undefined</span>
+
+myObj<span class="token punctuation">.</span>test <span class="token comment">// undefined</span>
+myObj<span class="token punctuation">.</span>sofeiewagionweiogw <span class="token comment">// undefined</span>
+
+<span class="token string">"test"</span> <span class="token keyword">in</span> myObj <span class="token comment">// true</span>
+<span class="token string">"sofeiewagionweiogw"</span> <span class="token keyword">in</span> myObj <span class="token comment">// false</span>
+
+myObj<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+myObj<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">"sofeiewagionweiogw"</span><span class="token punctuation">)</span> <span class="token comment">// false</span></code></pre></div>
+<h3><code class="language-text">in</code> vs <code class="language-text">hasownProperty(..)</code></h3>
+<p><code class="language-text">in</code>: checks the object itself and the prototype chain to see if the property is present in these by <strong>looking at the existence of the property name supplied</strong>.</p>
+<p><code class="language-text">hasOwnProperty(..)</code> checks only the target object itself. It will NOT go over the prototype chain. </p>
+<h2>Enumeration</h2>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> myObject <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>
+    myObject<span class="token punctuation">,</span>
+    <span class="token string">"a"</span><span class="token punctuation">,</span>
+    <span class="token comment">// make `a` enumerable, as normal</span>
+    <span class="token punctuation">{</span> enumerable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> value<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>
+    myObject<span class="token punctuation">,</span>
+    <span class="token string">"b"</span><span class="token punctuation">,</span>
+    <span class="token comment">// make `b` NON-enumerable</span>
+    <span class="token punctuation">{</span> enumerable<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> value<span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+myObject<span class="token punctuation">.</span>b<span class="token punctuation">;</span> <span class="token comment">// 3</span>
+<span class="token punctuation">(</span><span class="token string">"b"</span> <span class="token keyword">in</span> myObject<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+myObject<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span> <span class="token string">"b"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+
+<span class="token comment">// .......</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> k <span class="token keyword">in</span> myObject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> k<span class="token punctuation">,</span> myObject<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// "a" 2</span></code></pre></div>
+<p>It’s just that <code class="language-text">b</code> exists, but it does not get referred to inside <code class="language-text">for..in</code> loop.</p>
+<ul>
+<li>You can check with <code class="language-text">propertyIsEnumerable(..)</code> too see if the property name exists directly on the object and is enumerable.</li>
+<li><code class="language-text">Object.keys(..)</code> returns an array of all enumerable properties. </li>
+<li><code class="language-text">Object.getOwnPropertyNames(..)</code> returns an array of all properties regardless. Both <code class="language-text">keys(..)</code> and <code class="language-text">getOwnPropertyNames(..)</code> would inspect only the direct object. </li>
+</ul>
+<h2>Iteration</h2>
+<h3><code class="language-text">for..in</code></h3>
+<p>iterates over enumerable properties on an object. You are getting the values directly. </p>
+<h3>Normal <code class="language-text">(let i = 0; i &lt; arr.length; i++)</code> loop</h3>
+<p>iterates over indices to get values.  </p>
+<h3><code class="language-text">forEach(..)</code></h3>
+<p>iterates over all values in an array, ignoring any callback return values. </p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> test <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">return</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+test <span class="token comment">// undefined. </span></code></pre></div>
+<h3><code class="language-text">every(..)</code></h3>
+<p>iterates until the end or the callback returns a falsy value. </p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span>
+arr<span class="token punctuation">.</span><span class="token function">every</span><span class="token punctuation">(</span><span class="token punctuation">(</span>elem<span class="token punctuation">,</span>index<span class="token punctuation">)</span><span class="token operator">=></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">return</span> index <span class="token operator">==</span> <span class="token number">2</span> <span class="token operator">?</span> <span class="token boolean">false</span> <span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">/*
+logs:
+3
+4
+5
+*/</span></code></pre></div>
+<h3><code class="language-text">some(..)</code></h3>
+<p>reverse of <code class="language-text">every(..)</code>. Iterates until the end or the callback returns a truthy value.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">arr<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span>elem<span class="token punctuation">,</span>index<span class="token punctuation">)</span><span class="token operator">=></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">return</span> index <span class="token operator">==</span> <span class="token number">2</span> <span class="token operator">?</span> <span class="token boolean">false</span> <span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">/*
+logs:
+3
+*/</span></code></pre></div>
+<h3>Index order is not guaranteed</h3>
+<blockquote>
+<p>The order of iteration over an object’s properties is not guaranteed and may vary between different JS engines.</p>
+</blockquote>
+<h3><code class="language-text">for..of</code></h3></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEBQH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABxVp7LNvUV5APQCf/xAAcEAEAAgEFAAAAAAAAAAAAAAABAAIhERITMjT/2gAIAQEAAQUCLay4ruvEON64jSpL+qjj/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAEAH/2gAIAQIBAT8BIf/EACAQAAIABQUBAAAAAAAAAAAAAAABAhESMVEDECIyQXH/2gAIAQEABj8CFLF8naIVK5GnC36WROlEC+bf/8QAHhAAAgMAAQUAAAAAAAAAAAAAAREAITFBUWFxgZH/2gAIAQEAAT8hNwGaJYcNmMAw6FaYOBzLfscWSPK9R8DD2leCKRjoXP/aAAwDAQACAAMAAAAQiMA8/8QAFxEBAAMAAAAAAAAAAAAAAAAAEAERUf/aAAgBAwEBPxCtJP/EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8QRlf/xAAeEAEBAAICAgMAAAAAAAAAAAABEQAhQVExYYGRwf/aAAgBAQABPxCQ2RcDjTD5Aqu/XU9YG0cBLNPJJIsIPnSYXm6AWw5PzLTucqLm6AbXtjQHjOrtxKkUr95//9k=" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 0.5s;transition-delay:0.25s;border-radius:50%"/><noscript><picture><img width="50" height="50" srcset="/static/2d9562b52b70ef19bf9f1f3dfff052ef/c3bbc/profile-pic.jpg 1x,
+/static/2d9562b52b70ef19bf9f1f3dfff052ef/ac385/profile-pic.jpg 1.5x,
+/static/2d9562b52b70ef19bf9f1f3dfff052ef/587d5/profile-pic.jpg 2x,
+/static/2d9562b52b70ef19bf9f1f3dfff052ef/20b3c/profile-pic.jpg 3x" src="/static/2d9562b52b70ef19bf9f1f3dfff052ef/c3bbc/profile-pic.jpg" alt="Joel Mun" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Joel Mun</strong>@Korea.<!-- --> <a href="https://github.com/9oelM">Go check him up on Github!</a></p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2018-06-23--Semicolon-in-javascript/">← <!-- -->Semicolon in javascript</a></li><li><a rel="next" href="/2018-06-30--Warnings-and-errors-in-npm/">Warnings and errors in npm<!-- --> →</a></li></ul></main><footer>© <!-- -->2019<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a></footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-105275697-2', 'auto', {});
+      
+      
+      
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"2018-06-30-this-object-prototypes-3-objects-a46","path":"/2018-06-30--This-&-Object-prototypes-(3):-Objects/"};window.dataPath="875/path---2018-06-30-this-object-prototypes-3-objects-a-46-2a3-cTVD0KjIsPStN3DqZydis9AIqCI";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-a11bc97cfd3d61eca974.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-757facd6782ed4b633a5.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-b6c6966a3c38dacb61ba.js"],"component---src-pages-404-js":["/component---src-pages-404-js-c52f247285812e4b997e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-21953ab3e64c144078c1.js"],"pages-manifest":["/pages-manifest-b0000c8c07cd12cf9fae.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-js-b6c6966a3c38dacb61ba.js" async=""></script><script src="/0-38677d11cc87e0c35067.js" async=""></script><script src="/app-a11bc97cfd3d61eca974.js" async=""></script><script src="/styles-08d0a643d74bd4a2f4ab.js" async=""></script><script src="/webpack-runtime-60aa013e62852d62762d.js" async=""></script></body></html>
