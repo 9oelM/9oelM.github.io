@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 26 Feb 2019 15:40:32 GMT</lastBuildDate><item><title><![CDATA[GOOP: 7. GOOP now]]></title><description><![CDATA[Past I worked on  GOOP ’s project together with Jeff & Peter even before they started building a service. You can see my related posts on…]]></description><link>https://9oelm.github.io/2019-02-26--GOOP:-7.-GOOP-Now/</link><guid isPermaLink="false">https://9oelm.github.io/2019-02-26--GOOP:-7.-GOOP-Now/</guid><pubDate>Thu, 28 Feb 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Past&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 01 Mar 2019 10:48:06 GMT</lastBuildDate><item><title><![CDATA[GOOP: 7. GOOP now]]></title><description><![CDATA[Past I worked on  GOOP ’s project together with Jeff & Peter even before they started building a service. You can see my related posts on…]]></description><link>https://9oelm.github.io/2019-02-26--GOOP:-7.-GOOP-Now/</link><guid isPermaLink="false">https://9oelm.github.io/2019-02-26--GOOP:-7.-GOOP-Now/</guid><pubDate>Thu, 28 Feb 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Past&lt;/h1&gt;
 &lt;p&gt;I worked on &lt;a href=&quot;https://goop.ai&quot;&gt;GOOP&lt;/a&gt;’s project together with Jeff &amp;#x26; Peter even before they started building a service. You can see my related posts on that. &lt;/p&gt;
 &lt;p&gt;I had to go to the military after providing the design and the website for Goop. So I could no longer work for Goop after like 2017 June. That was it. A job only for a month. And now I became curious on how Goop’s doing, so I checked on &lt;/p&gt;
 &lt;h2&gt;Present&lt;/h2&gt;
@@ -3188,7 +3188,50 @@ for c9&amp;#39;s specific environment.  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now you can see the &lt;code class=&quot;language-text&quot;&gt;auth&lt;/code&gt; page!
 The only thing you have to do now is to customize. &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/x08iynD.jpg&quot; alt=&quot;Browse /auth&quot;&gt;&lt;/p&gt;
-&lt;h3&gt;10. Add oAuth&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[Blog for Young (2): More troubleshooting]]></title><description><![CDATA[Error I kept getting this error, greatly increasing the loading speed for the website: Now the website looks like this right now But it…]]></description><link>https://9oelm.github.io/2018-06-07--Blog-for-Young-(3):-More-troubleshooting/</link><guid isPermaLink="false">https://9oelm.github.io/2018-06-07--Blog-for-Young-(3):-More-troubleshooting/</guid><pubDate>Thu, 07 Jun 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Error&lt;/h2&gt;
+&lt;h3&gt;10. Add oAuth&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[Using npm]]></title><description><![CDATA[Uninstall Uninstall and remove it from project dependency Uninstall and remove it from dev dependency How to change a devDependency to…]]></description><link>https://9oelm.github.io/2018-06-07--Using-npm/</link><guid isPermaLink="false">https://9oelm.github.io/2018-06-07--Using-npm/</guid><pubDate>Thu, 07 Jun 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Uninstall&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm uninstall [package]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Uninstall and remove it from project dependency&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm --save uninstall [package]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Uninstall and remove it from dev dependency&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm --save-dev uninstall [package]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;How to change a devDependency to dependency&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install [package] --save-prod&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;How to change dependency to devDependecy&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install [package] --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;How to check if a dependency is being used&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install -g npm-check
+
+npm-check&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and it will give you a nice outline of the things happening. This could give you a great insight of what to possibly &lt;code class=&quot;language-text&quot;&gt;uninstall&lt;/code&gt;.:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;j031:~/workspace $ npm-check
+
+@zeit/next-sass   😕  NOTUSED?  Still using @zeit/next-sass?
+                               Depcheck did not find code similar to require(&amp;#39;@zeit/next-sass&amp;#39;) or import from &amp;#39;@zeit/next-sass&amp;#39;.
+                               Check your code before removing as depcheck isn&amp;#39;t able to foresee all ways dependencies can be used.
+                               Use --skip-unused to skip this check.
+                               To remove this package: npm uninstall --save @zeit/next-sass
+
+grommet-css       😕  NOTUSED?  Still using grommet-css?
+                               Depcheck did not find code similar to require(&amp;#39;grommet-css&amp;#39;) or import from &amp;#39;grommet-css&amp;#39;.
+                               Check your code before removing as depcheck isn&amp;#39;t able to foresee all ways dependencies can be used.
+                               Use --skip-unused to skip this check.
+                               To remove this package: npm uninstall --save grommet-css
+
+node-sass         😕  NOTUSED?  Still using node-sass?
+                               Depcheck did not find code similar to require(&amp;#39;node-sass&amp;#39;) or import from &amp;#39;node-sass&amp;#39;.
+                               Check your code before removing as depcheck isn&amp;#39;t able to foresee all ways dependencies can be used.
+                               Use --skip-unused to skip this check.
+                               To remove this package: npm uninstall --save node-sass
+
+path              😕  NOTUSED?  Still using path?
+                               Depcheck did not find code similar to require(&amp;#39;path&amp;#39;) or import from &amp;#39;path&amp;#39;.
+                               Check your code before removing as depcheck isn&amp;#39;t able to foresee all ways dependencies can be used.
+                               Use --skip-unused to skip this check.
+                               To remove this package: npm uninstall --save-dev path
+
+Use npm-check -u for interactive update.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Check if a module is installed&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm list --depth=0 | grep &amp;lt;module_name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Blog for Young (2): More troubleshooting]]></title><description><![CDATA[Error I kept getting this error, greatly increasing the loading speed for the website: Now the website looks like this right now But it…]]></description><link>https://9oelm.github.io/2018-06-07--Blog-for-Young-(3):-More-troubleshooting/</link><guid isPermaLink="false">https://9oelm.github.io/2018-06-07--Blog-for-Young-(3):-More-troubleshooting/</guid><pubDate>Thu, 07 Jun 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Error&lt;/h2&gt;
 &lt;p&gt;I kept getting this error, greatly increasing the loading speed for the website:&lt;/p&gt;
 &lt;p&gt;Now the website looks like this right now&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/XmhDPcL.png&quot; alt=&quot;Website now&quot;&gt;&lt;/p&gt;
@@ -3271,50 +3314,7 @@ next start -p 8080 # c9.io only supports port 8080 for node.js&lt;/code&gt;&lt;/
 ✖ 1 problem (1 error, 0 warnings)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And so I installed &lt;code class=&quot;language-text&quot;&gt;babel-eslint&lt;/code&gt; and added this line in &lt;code class=&quot;language-text&quot;&gt;.eslintrc.json&lt;/code&gt;: &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;parser&amp;quot;: &amp;quot;babel-eslint&amp;quot;,&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;and it complained no more. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using npm]]></title><description><![CDATA[Uninstall Uninstall and remove it from project dependency Uninstall and remove it from dev dependency How to change a devDependency to…]]></description><link>https://9oelm.github.io/2018-06-07--Using-npm/</link><guid isPermaLink="false">https://9oelm.github.io/2018-06-07--Using-npm/</guid><pubDate>Thu, 07 Jun 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Uninstall&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm uninstall [package]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Uninstall and remove it from project dependency&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm --save uninstall [package]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Uninstall and remove it from dev dependency&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm --save-dev uninstall [package]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;How to change a devDependency to dependency&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install [package] --save-prod&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;How to change dependency to devDependecy&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install [package] --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;How to check if a dependency is being used&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install -g npm-check
-
-npm-check&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;and it will give you a nice outline of the things happening. This could give you a great insight of what to possibly &lt;code class=&quot;language-text&quot;&gt;uninstall&lt;/code&gt;.:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;j031:~/workspace $ npm-check
-
-@zeit/next-sass   😕  NOTUSED?  Still using @zeit/next-sass?
-                               Depcheck did not find code similar to require(&amp;#39;@zeit/next-sass&amp;#39;) or import from &amp;#39;@zeit/next-sass&amp;#39;.
-                               Check your code before removing as depcheck isn&amp;#39;t able to foresee all ways dependencies can be used.
-                               Use --skip-unused to skip this check.
-                               To remove this package: npm uninstall --save @zeit/next-sass
-
-grommet-css       😕  NOTUSED?  Still using grommet-css?
-                               Depcheck did not find code similar to require(&amp;#39;grommet-css&amp;#39;) or import from &amp;#39;grommet-css&amp;#39;.
-                               Check your code before removing as depcheck isn&amp;#39;t able to foresee all ways dependencies can be used.
-                               Use --skip-unused to skip this check.
-                               To remove this package: npm uninstall --save grommet-css
-
-node-sass         😕  NOTUSED?  Still using node-sass?
-                               Depcheck did not find code similar to require(&amp;#39;node-sass&amp;#39;) or import from &amp;#39;node-sass&amp;#39;.
-                               Check your code before removing as depcheck isn&amp;#39;t able to foresee all ways dependencies can be used.
-                               Use --skip-unused to skip this check.
-                               To remove this package: npm uninstall --save node-sass
-
-path              😕  NOTUSED?  Still using path?
-                               Depcheck did not find code similar to require(&amp;#39;path&amp;#39;) or import from &amp;#39;path&amp;#39;.
-                               Check your code before removing as depcheck isn&amp;#39;t able to foresee all ways dependencies can be used.
-                               Use --skip-unused to skip this check.
-                               To remove this package: npm uninstall --save-dev path
-
-Use npm-check -u for interactive update.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Check if a module is installed&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm list --depth=0 | grep &amp;lt;module_name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Creating music player (1): setting up]]></title><description><![CDATA[Set up And simple test And check on the server if the app is working properly.  Add theme Add logic test for the theme Apply the theme Add…]]></description><link>https://9oelm.github.io/2018-06-05--Creating-music-player-(1):-setting-up/</link><guid isPermaLink="false">https://9oelm.github.io/2018-06-05--Creating-music-player-(1):-setting-up/</guid><pubDate>Tue, 05 Jun 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Set up&lt;/h2&gt;
+&lt;p&gt;and it complained no more. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Creating music player (1): setting up]]></title><description><![CDATA[Set up And simple test And check on the server if the app is working properly.  Add theme Add logic test for the theme Apply the theme Add…]]></description><link>https://9oelm.github.io/2018-06-05--Creating-music-player-(1):-setting-up/</link><guid isPermaLink="false">https://9oelm.github.io/2018-06-05--Creating-music-player-(1):-setting-up/</guid><pubDate>Tue, 05 Jun 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Set up&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install -g create-react-app
 
 create-react-app 7omp
@@ -5153,7 +5153,14 @@ It handles &lt;strong&gt;syntax processing of message data&lt;/strong&gt; such a
 &lt;h3&gt;4. Transport layer&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The transport layer ensures that messages are delivered error-free, in sequence, and with no losses or duplications.&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Ajax, animation while loading, and jQuery animation]]></title><description><![CDATA[Ajax Asynchronous JavaScript and XML.  is a simpler version of  . Loading a local JSON file with ajax The other way or  Setting up a loading…]]></description><link>https://9oelm.github.io/2018-04-25--Ajax,-animation-while-loading,-and-jQuery-animation/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-25--Ajax,-animation-while-loading,-and-jQuery-animation/</guid><pubDate>Wed, 25 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Ajax&lt;/h2&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Books to buy or print]]></title><description><![CDATA[I want to buy English books but they are too expensive in Korea… Learning React (2018)  - definitely Building Progressive Web Apps: Bringing…]]></description><link>https://9oelm.github.io/2018-04-25--Books-to-buy/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-25--Books-to-buy/</guid><pubDate>Wed, 25 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I want to buy English books but they are too expensive in Korea…&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.shopNo=0000400000&amp;#x26;sc.prdNo=279194489&amp;#x26;sc.saNo=003002001&amp;#x26;bid1=search&amp;#x26;bid2=product&amp;#x26;bid3=title&amp;#x26;bid4=001&quot;&gt;Learning React (2018)&lt;/a&gt; - definitely&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Building-Progressive-Web-Apps-Bringing/dp/1491961651/ref=pd_sim_14_28?_encoding=UTF8&amp;#x26;pd_rd_i=1491961651&amp;#x26;pd_rd_r=NCR51M576RW3WWC99ZZF&amp;#x26;pd_rd_w=oPfU8&amp;#x26;pd_rd_wg=3s8Qc&amp;#x26;psc=1&amp;#x26;refRID=NCR51M576RW3WWC99ZZF&quot;&gt;Building Progressive Web Apps: Bringing the Power of Native to the Browser&lt;/a&gt;, but too expensive.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.shopNo=0000400000&amp;#x26;sc.prdNo=213427270&amp;#x26;sc.saNo=003002001&amp;#x26;bid1=search&amp;#x26;bid2=product&amp;#x26;bid3=title&amp;#x26;bid4=001&quot;&gt;DOM Enlightenment (2013): Exploring JavaScript and the Modern DOM&lt;/a&gt; - definitely&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Testable-JavaScript-Ensuring-Reliable-Code/dp/1449323391/ref=sr_1_1?s=books&amp;#x26;ie=UTF8&amp;#x26;qid=1524666024&amp;#x26;sr=1-1&amp;#x26;keywords=Testable+JavaScript%3A+Ensuring+Reliable+Code&quot;&gt;Testable JavaScript: Ensuring Reliable Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.shopNo=0000400000&amp;#x26;sc.prdNo=279599041&amp;#x26;sc.saNo=003002001&amp;#x26;bid1=search&amp;#x26;bid2=product&amp;#x26;bid3=title&amp;#x26;bid4=001&quot;&gt;Node.js 마이크로서비스 코딩 공작소 : 마이크로서비스 아키텍처 설계와 구현, 장애 처리, 보안, 로그 수집, 배포까지&lt;/a&gt; - definitely&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Ajax, animation while loading, and jQuery animation]]></title><description><![CDATA[Ajax Asynchronous JavaScript and XML.  is a simpler version of  . Loading a local JSON file with ajax The other way or  Setting up a loading…]]></description><link>https://9oelm.github.io/2018-04-25--Ajax,-animation-while-loading,-and-jQuery-animation/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-25--Ajax,-animation-while-loading,-and-jQuery-animation/</guid><pubDate>Wed, 25 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Ajax&lt;/h2&gt;
 &lt;p&gt;Asynchronous JavaScript and XML.&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$.getJSON()&lt;/code&gt; is a simpler version of &lt;code class=&quot;language-text&quot;&gt;$.ajax()&lt;/code&gt;.&lt;/p&gt;
 &lt;h3&gt;Loading a local JSON file with ajax&lt;/h3&gt;
@@ -5203,14 +5210,7 @@ It handles &lt;strong&gt;syntax processing of message data&lt;/strong&gt; such a
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token comment&quot;&gt;// Animation complete.&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Books to buy or print]]></title><description><![CDATA[I want to buy English books but they are too expensive in Korea… Learning React (2018)  - definitely Building Progressive Web Apps: Bringing…]]></description><link>https://9oelm.github.io/2018-04-25--Books-to-buy/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-25--Books-to-buy/</guid><pubDate>Wed, 25 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I want to buy English books but they are too expensive in Korea…&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.shopNo=0000400000&amp;#x26;sc.prdNo=279194489&amp;#x26;sc.saNo=003002001&amp;#x26;bid1=search&amp;#x26;bid2=product&amp;#x26;bid3=title&amp;#x26;bid4=001&quot;&gt;Learning React (2018)&lt;/a&gt; - definitely&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Building-Progressive-Web-Apps-Bringing/dp/1491961651/ref=pd_sim_14_28?_encoding=UTF8&amp;#x26;pd_rd_i=1491961651&amp;#x26;pd_rd_r=NCR51M576RW3WWC99ZZF&amp;#x26;pd_rd_w=oPfU8&amp;#x26;pd_rd_wg=3s8Qc&amp;#x26;psc=1&amp;#x26;refRID=NCR51M576RW3WWC99ZZF&quot;&gt;Building Progressive Web Apps: Bringing the Power of Native to the Browser&lt;/a&gt;, but too expensive.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.shopNo=0000400000&amp;#x26;sc.prdNo=213427270&amp;#x26;sc.saNo=003002001&amp;#x26;bid1=search&amp;#x26;bid2=product&amp;#x26;bid3=title&amp;#x26;bid4=001&quot;&gt;DOM Enlightenment (2013): Exploring JavaScript and the Modern DOM&lt;/a&gt; - definitely&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Testable-JavaScript-Ensuring-Reliable-Code/dp/1449323391/ref=sr_1_1?s=books&amp;#x26;ie=UTF8&amp;#x26;qid=1524666024&amp;#x26;sr=1-1&amp;#x26;keywords=Testable+JavaScript%3A+Ensuring+Reliable+Code&quot;&gt;Testable JavaScript: Ensuring Reliable Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.shopNo=0000400000&amp;#x26;sc.prdNo=279599041&amp;#x26;sc.saNo=003002001&amp;#x26;bid1=search&amp;#x26;bid2=product&amp;#x26;bid3=title&amp;#x26;bid4=001&quot;&gt;Node.js 마이크로서비스 코딩 공작소 : 마이크로서비스 아키텍처 설계와 구현, 장애 처리, 보안, 로그 수집, 배포까지&lt;/a&gt; - definitely&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[List of curated websites(pages) helpful for development]]></title><description><![CDATA[velopert.com : Front and backend tips, in Korean.  launching react with express.js   kesus kim : Front and backend tips, in Korean…]]></description><link>https://9oelm.github.io/2018-04-22--List-of-curated-websites(pages)-helpful-for-development/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-22--List-of-curated-websites(pages)-helpful-for-development/</guid><pubDate>Sun, 22 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[List of curated websites(pages) helpful for development]]></title><description><![CDATA[velopert.com : Front and backend tips, in Korean.  launching react with express.js   kesus kim : Front and backend tips, in Korean…]]></description><link>https://9oelm.github.io/2018-04-22--List-of-curated-websites(pages)-helpful-for-development/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-22--List-of-curated-websites(pages)-helpful-for-development/</guid><pubDate>Sun, 22 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https://velopert.com/about&quot;&gt;velopert.com&lt;/a&gt;: Front and backend tips, in Korean. &lt;/p&gt;
 &lt;ul&gt;
@@ -5621,7 +5621,18 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;GOOP Event. This is for event organizers. By using GOOP and as long as message recipients agree on getting a message from event organizers, they (event organizers) can send out messages to audiences (event comers) and exhibitors. Organizers just need a “dedicated portal in making announcements/reminders to all exhibitor teams with just a click” and exhibitor teams get “customized and unique information that is related to their participation in the event”. Event organisers also would want to update on those who are interested in their events. So send away a message instantly to Facebook message subscribers(?) and “every audience receives tailor-made updates/reminders on event items they are interested in”&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[GOOP: 3. Research]]></title><description><![CDATA[1. First, you should find logos of other companies in the same/similar area of business (worldwide) — as many as you can. This is your first…]]></description><link>https://9oelm.github.io/2018-04-08--GOOP:-3.-Research/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--GOOP:-3.-Research/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;1. First, you should find logos of other companies in the same/similar area of business (worldwide) — as many as you can. This is your first (market) research.&lt;/h3&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[GOOP: 4. Finding the color palette and font]]></title><description><![CDATA[I was too tired migrating the post to here… please kindly look at the  post from this link .]]></description><link>https://9oelm.github.io/2018-04-08--GOOP:-4.-Finding-the-color-palette-and-font/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--GOOP:-4.-Finding-the-color-palette-and-font/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I was too tired migrating the post to here…&lt;/p&gt;
+&lt;p&gt;please kindly look at the &lt;strong&gt;&lt;a href=&quot;https://7oel.weebly.com/4-finding-the-color-palette-and-font.html&quot;&gt;post from this link&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[GOOP: 5. Now, Logo.]]></title><description><![CDATA[I know this is pretty ugly, but I have to show my thinking process anyways. And plus, I don’t draw, the computer does. So it’s ok to be bad…]]></description><link>https://9oelm.github.io/2018-04-08--GOOP:-5.-Now,-Logo./</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--GOOP:-5.-Now,-Logo./</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I know this is pretty ugly, but I have to show my thinking process anyways. And plus, I don’t draw, the computer does. So it’s ok to be bad at drawing. Don’t be mad at me. Alright? Ok. So here it is:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/kakaotalk-photo-2017-04-25-23-36-24-14_orig.jpeg&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/kakaotalk-photo-2017-04-25-23-36-25-21_orig.jpeg&quot; alt=&quot;2&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/kakaotalk-photo-2017-04-26-00-24-23-98_orig.jpeg&quot; alt=&quot;3&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/kakaotalk-photo-2017-04-26-00-24-25-89_orig.jpeg&quot; alt=&quot;4&quot;&gt;&lt;/p&gt;
+&lt;p&gt;and then, i tried to make them into feasible figures. also, I tried to make versions of one logo style of little bit of variations, so that clients (our team) may choose a better logo/get unexpected inspirations. Below here, I am throwing in the logos that I made.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/faces-invertartboard-1_orig.png&quot; alt=&quot;5&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/facesartboard-1_orig.png&quot; alt=&quot;6&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/speechbubble-samedirectionartboard-1-4x_orig.png&quot; alt=&quot;7&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/faces3-invertartboard-1_orig.png&quot; alt=&quot;8&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/logo-ver11_orig.png&quot; alt=&quot;9&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[GOOP: 3. Research]]></title><description><![CDATA[1. First, you should find logos of other companies in the same/similar area of business (worldwide) — as many as you can. This is your first…]]></description><link>https://9oelm.github.io/2018-04-08--GOOP:-3.-Research/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--GOOP:-3.-Research/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;1. First, you should find logos of other companies in the same/similar area of business (worldwide) — as many as you can. This is your first (market) research.&lt;/h3&gt;
 &lt;p&gt;Ok. here we go. I just researched businesses not necessarily in the exactly the ‘same’ area (group communication), but rather tried to include wider breadth of businesses/apps in areas like group work, student-problem-solving tools, collaborative tools, messaging, human to human interactions, decision making/search tools, discussion boards, debates and so on):&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/logosinthisfieldartboard-1_orig.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
 &lt;h3&gt;2. Sometimes a company name contains nouns that you can easily visualize. Find as many logos as possible with them.&lt;/h3&gt;
@@ -5637,18 +5648,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;Active&lt;/li&gt;
 &lt;li&gt;Young&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/inspirationsfromwords_orig.png&quot; alt=&quot;2&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[GOOP: 4. Finding the color palette and font]]></title><description><![CDATA[I was too tired migrating the post to here… please kindly look at the  post from this link .]]></description><link>https://9oelm.github.io/2018-04-08--GOOP:-4.-Finding-the-color-palette-and-font/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--GOOP:-4.-Finding-the-color-palette-and-font/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I was too tired migrating the post to here…&lt;/p&gt;
-&lt;p&gt;please kindly look at the &lt;strong&gt;&lt;a href=&quot;https://7oel.weebly.com/4-finding-the-color-palette-and-font.html&quot;&gt;post from this link&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[GOOP: 5. Now, Logo.]]></title><description><![CDATA[I know this is pretty ugly, but I have to show my thinking process anyways. And plus, I don’t draw, the computer does. So it’s ok to be bad…]]></description><link>https://9oelm.github.io/2018-04-08--GOOP:-5.-Now,-Logo./</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--GOOP:-5.-Now,-Logo./</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I know this is pretty ugly, but I have to show my thinking process anyways. And plus, I don’t draw, the computer does. So it’s ok to be bad at drawing. Don’t be mad at me. Alright? Ok. So here it is:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/kakaotalk-photo-2017-04-25-23-36-24-14_orig.jpeg&quot; alt=&quot;1&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/kakaotalk-photo-2017-04-25-23-36-25-21_orig.jpeg&quot; alt=&quot;2&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/kakaotalk-photo-2017-04-26-00-24-23-98_orig.jpeg&quot; alt=&quot;3&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/kakaotalk-photo-2017-04-26-00-24-25-89_orig.jpeg&quot; alt=&quot;4&quot;&gt;&lt;/p&gt;
-&lt;p&gt;and then, i tried to make them into feasible figures. also, I tried to make versions of one logo style of little bit of variations, so that clients (our team) may choose a better logo/get unexpected inspirations. Below here, I am throwing in the logos that I made.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/faces-invertartboard-1_orig.png&quot; alt=&quot;5&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/facesartboard-1_orig.png&quot; alt=&quot;6&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/speechbubble-samedirectionartboard-1-4x_orig.png&quot; alt=&quot;7&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/faces3-invertartboard-1_orig.png&quot; alt=&quot;8&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/logo-ver11_orig.png&quot; alt=&quot;9&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[GOOP: 6. Making the website]]></title><description><![CDATA[LINK!]]></description><link>https://9oelm.github.io/2018-04-08--GOOP:-6.-Making-the-website/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--GOOP:-6.-Making-the-website/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;&lt;a href=&quot;https://9oelm.github.io/GOOP/&quot;&gt;LINK!&lt;/a&gt;&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[Presentation design: Marketing project on Spotify]]></title><description><![CDATA[
+&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/inspirationsfromwords_orig.png&quot; alt=&quot;2&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Presentation design: Marketing project on Spotify]]></title><description><![CDATA[
  
  
  
@@ -5684,7 +5684,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide19.jpg&quot; alt=&quot;16&quot;&gt;
 &lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide29.jpg&quot; alt=&quot;17&quot;&gt;
 &lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide31.jpg&quot; alt=&quot;18&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide32.jpg&quot; alt=&quot;19&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (6): Dynamic scope, Polyfilling Block Scope, and Lexical-this]]></title><description><![CDATA[Dynamic scope “Dynamic scope seems to imply, and for good reason, that there’s a model whereby  scope can be determined dynamically at…]]></description><link>https://9oelm.github.io/2018-04-08--Scope-and-closure-(6):-Dynamic-scope,-Polyfilling-Block-Scope,-and-Lexical-this/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--Scope-and-closure-(6):-Dynamic-scope,-Polyfilling-Block-Scope,-and-Lexical-this/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Dynamic scope&lt;/h2&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide32.jpg&quot; alt=&quot;19&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[GOOP: 6. Making the website]]></title><description><![CDATA[LINK!]]></description><link>https://9oelm.github.io/2018-04-08--GOOP:-6.-Making-the-website/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--GOOP:-6.-Making-the-website/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;&lt;a href=&quot;https://9oelm.github.io/GOOP/&quot;&gt;LINK!&lt;/a&gt;&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (6): Dynamic scope, Polyfilling Block Scope, and Lexical-this]]></title><description><![CDATA[Dynamic scope “Dynamic scope seems to imply, and for good reason, that there’s a model whereby  scope can be determined dynamically at…]]></description><link>https://9oelm.github.io/2018-04-08--Scope-and-closure-(6):-Dynamic-scope,-Polyfilling-Block-Scope,-and-Lexical-this/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--Scope-and-closure-(6):-Dynamic-scope,-Polyfilling-Block-Scope,-and-Lexical-this/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Dynamic scope&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“Dynamic scope seems to imply, and for good reason, that there’s a model whereby &lt;strong&gt;scope can be determined dynamically at runtime&lt;/strong&gt;, rather than statically at author-time.” &lt;/p&gt;
 &lt;/blockquote&gt;
@@ -5822,7 +5822,13 @@ First, I’m thinking the second batch of the Tech Generation - those from the P
 &lt;li&gt;Convenient (Core emotion - if GOOP ain’t faster than what’s available, i.e. an App, no one would be using us),&lt;/li&gt;
 &lt;li&gt;Fun (They are using GOOP with a bunch of friends. Friends have fun when they interact, so GOOP’s UX should make sure of that),&lt;/li&gt;
 &lt;li&gt;Surprised (GOOP is essentially doing what an individual could not have done - integrating everyone’s preference and give recommendations based on various combinations of preference. You don’t even need to care about what your friends have chosen, GOOP will do that for you. Just sit and wait what GOOP comes up with and be surprised that there really exists an option where everyone can be satisfied)&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[CCNA Notes]]></title><description><![CDATA[FYI It was just too hard to move all the texts and images again to this blog again from  my previous blog ,  so here’s the link to the notes…]]></description><link>https://9oelm.github.io/2018-04-07--CCNA-Notes/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--CCNA-Notes/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Error page and no search result page for Grafolio mobile app]]></title><description><![CDATA[
+ 
+ 
+]]></description><link>https://9oelm.github.io/2018-04-07--Error-page-and-no-search-result-page-for-Grafolio-mobile-app/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--Error-page-and-no-search-result-page-for-Grafolio-mobile-app/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/grafolio-networkerror-ver15artboard-1-2x_orig.png&quot; alt=&quot;first&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/grafolio-searcherror-ver20bartboard-1-2x_orig.png&quot; alt=&quot;second&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/427559673_orig.png&quot; alt=&quot;third&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/new_orig.png&quot; alt=&quot;fourth&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[CCNA Notes]]></title><description><![CDATA[FYI It was just too hard to move all the texts and images again to this blog again from  my previous blog ,  so here’s the link to the notes…]]></description><link>https://9oelm.github.io/2018-04-07--CCNA-Notes/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--CCNA-Notes/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
 &lt;p&gt;It was just too hard to move all the texts and images again to this blog again from &lt;a href=&quot;https://7oel.weebly.com/&quot;&gt;my previous blog&lt;/a&gt;, &lt;a href=&quot;https://7oel.weebly.com/ccna.html&quot;&gt;so here’s the link to the notes on Cisco Certified Network Associate that I wrote on my own: LINK&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Difference between compiled and interpreted language]]></title><description><![CDATA[FYI It was just too hard to move all the texts and images again to this blog again from  my previous blog ,  so here’s the link to the notes…]]></description><link>https://9oelm.github.io/2018-04-07--Difference-between-compiled-and-interpreted-language/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--Difference-between-compiled-and-interpreted-language/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
 &lt;p&gt;It was just too hard to move all the texts and images again to this blog again from &lt;a href=&quot;https://7oel.weebly.com/&quot;&gt;my previous blog&lt;/a&gt;, &lt;a href=&quot;https://7oel.weebly.com/8-whats-the-difference-between-compiled-language-and-interpreted-language.html&quot;&gt;so here’s the link to the notes on compiled and interpreted language: LINK&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (5): modules]]></title><description><![CDATA[Getting the hang of it function   has a closure over the scope of the function  . Nothing really special is going on here. And here are some…]]></description><link>https://9oelm.github.io/2018-04-07--Scope-and-closure-(5):-modules/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--Scope-and-closure-(5):-modules/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Getting the hang of it&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;myModule&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -5937,22 +5943,7 @@ hiMachine&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; defaultMember&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; member &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;module-name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; defaultMember&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; alias &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;module-name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; defaultMember &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;module-name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;module-name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[How does a file get compressed?]]></title><description><![CDATA[You know, you sometimes compress files. And today I needed to send a relatively big folder to my friend so I just compressed it. This folder…]]></description><link>https://9oelm.github.io/2018-04-07--How-does-a-file-get-compressed/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--How-does-a-file-get-compressed/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;You know, you sometimes compress files. And today I needed to send a relatively big folder to my friend so I just compressed it. This folder contained a lot of texts (programming assignments and samples and so on, and also lecture notes, things like that). Sometimes I just do so for an enclosing purpose, but this time I did it for both that and file size reduction. Surprisingly, the file size was reduced from 4.9GB down to 1.38GB.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/screen-shot-2017-08-11-at-19-56-37_1_orig.png&quot; alt=&quot;beforeCompression&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/screen-shot-2017-08-11-at-19-56-41_orig.png&quot; alt=&quot;afterCompression&quot;&gt;&lt;/p&gt;
-&lt;p&gt;But I remember that when I compressed .mp3 files together in one folder, they did not reduce in their size almost not at all. So I became curious of the logic behind compression. So I searched up on the Internet.&lt;/p&gt;
-&lt;p&gt;Compression logic (thanks to howstuffworks.com)
-If you have a sentence:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;Ask not what your country can do for you -- ask what you can do for your country.&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Then you can reduce (or change, if you’d like) to: &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;1 not 2 3 4 5 6 7 8 -- 1 2 8 5 6 7 3 4&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;It’s just like defining variables and using them again and again. So the compressor looks for a repetition that could help reduce the file size. But unlike text files, mp3s or image files have more unique patterns which make it harder to find matching repetitions to decrease the file size. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Error page and no search result page for Grafolio mobile app]]></title><description><![CDATA[
- 
- 
-]]></description><link>https://9oelm.github.io/2018-04-07--Error-page-and-no-search-result-page-for-Grafolio-mobile-app/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--Error-page-and-no-search-result-page-for-Grafolio-mobile-app/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/grafolio-networkerror-ver15artboard-1-2x_orig.png&quot; alt=&quot;first&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/grafolio-searcherror-ver20bartboard-1-2x_orig.png&quot; alt=&quot;second&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/427559673_orig.png&quot; alt=&quot;third&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/new_orig.png&quot; alt=&quot;fourth&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Time Complexity]]></title><description><![CDATA[What is it? According to  Codilty.com : COMPLEXITY CAN BE VIEWED AS THE MAXIMUM NUMBER OF PRIMITIVE OPERATIONS THAT A PROGRAM MAY EXECUTE…]]></description><link>https://9oelm.github.io/2018-04-07--Time-Complexity/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--Time-Complexity/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What is it?&lt;/h2&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;module-name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Time Complexity]]></title><description><![CDATA[What is it? According to  Codilty.com : COMPLEXITY CAN BE VIEWED AS THE MAXIMUM NUMBER OF PRIMITIVE OPERATIONS THAT A PROGRAM MAY EXECUTE…]]></description><link>https://9oelm.github.io/2018-04-07--Time-Complexity/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--Time-Complexity/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What is it?&lt;/h2&gt;
 &lt;p&gt;According to &lt;a href=&quot;codility.com&quot;&gt;Codilty.com&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;COMPLEXITY CAN BE VIEWED AS THE MAXIMUM NUMBER OF PRIMITIVE OPERATIONS THAT A PROGRAM MAY EXECUTE. REGULAR OPERATIONS ARE SINGLE ADDITIONS, MULTIPLICATIONS, ASSIGNMENTS ETC. WE MAY LEAVE SOME OPERATIONS UNCOUNTED AND CONCENTRATE ON THOSE THAT ARE PERFORMED THE LARGEST NUMBER OF TIMES. SUCH OPERATIONS ARE REFERRED TO AS DOMINANT.&lt;/p&gt;
@@ -6019,7 +6010,16 @@ FOR &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;INT I &lt;span
 &lt;li&gt;&lt;a href=&quot;http://discrete.gr/complexity/&quot;&gt;http://discrete.gr/complexity/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.quora.com/Why-we-care-for-time-n-space-complexity-even-if-we-have&quot;&gt;https://www.quora.com/Why-we-care-for-time-n-space-complexity-even-if-we-have&lt;/a&gt; super-fast-processors-today&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://callmenick.com/post/time-complexity-analysis-why-its-important&quot;&gt;http://callmenick.com/post/time-complexity-analysis-why-its-important&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React (4)]]></title><description><![CDATA[FYI My notes are overwritten on the content copied from  https://reactjs.org/docs . Lifecycle It’s about usage of resources.  1. Mounting It…]]></description><link>https://9oelm.github.io/2018-04-05--React-(4)/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-05--React-(4)/</guid><pubDate>Thu, 05 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[How does a file get compressed?]]></title><description><![CDATA[You know, you sometimes compress files. And today I needed to send a relatively big folder to my friend so I just compressed it. This folder…]]></description><link>https://9oelm.github.io/2018-04-07--How-does-a-file-get-compressed/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--How-does-a-file-get-compressed/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;You know, you sometimes compress files. And today I needed to send a relatively big folder to my friend so I just compressed it. This folder contained a lot of texts (programming assignments and samples and so on, and also lecture notes, things like that). Sometimes I just do so for an enclosing purpose, but this time I did it for both that and file size reduction. Surprisingly, the file size was reduced from 4.9GB down to 1.38GB.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/screen-shot-2017-08-11-at-19-56-37_1_orig.png&quot; alt=&quot;beforeCompression&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/screen-shot-2017-08-11-at-19-56-41_orig.png&quot; alt=&quot;afterCompression&quot;&gt;&lt;/p&gt;
+&lt;p&gt;But I remember that when I compressed .mp3 files together in one folder, they did not reduce in their size almost not at all. So I became curious of the logic behind compression. So I searched up on the Internet.&lt;/p&gt;
+&lt;p&gt;Compression logic (thanks to howstuffworks.com)
+If you have a sentence:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;Ask not what your country can do for you -- ask what you can do for your country.&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then you can reduce (or change, if you’d like) to: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;1 not 2 3 4 5 6 7 8 -- 1 2 8 5 6 7 3 4&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It’s just like defining variables and using them again and again. So the compressor looks for a repetition that could help reduce the file size. But unlike text files, mp3s or image files have more unique patterns which make it harder to find matching repetitions to decrease the file size. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[React (4)]]></title><description><![CDATA[FYI My notes are overwritten on the content copied from  https://reactjs.org/docs . Lifecycle It’s about usage of resources.  1. Mounting It…]]></description><link>https://9oelm.github.io/2018-04-05--React-(4)/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-05--React-(4)/</guid><pubDate>Thu, 05 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
 &lt;p&gt;My notes are overwritten on the content copied from &lt;a href=&quot;https://reactjs.org/docs&quot;&gt;https://reactjs.org/docs&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Lifecycle&lt;/h2&gt;
 &lt;p&gt;It’s about usage of resources. &lt;/p&gt;
@@ -6123,132 +6123,108 @@ Closure lets the function continue to access the lexical scope it was defined in
         console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; i &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;will just work.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (1): lexical Scope]]></title><description><![CDATA[FYI Notes made with  You don’t know JS . Simplified steps in compilation Tokenizing: breaking the code into single parts, like   to   and…]]></description><link>https://9oelm.github.io/2018-03-24--Scope-and-closure-(1):-lexical-scope/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-24--Scope-and-closure-(1):-lexical-scope/</guid><pubDate>Sat, 24 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
-&lt;p&gt;Notes made with &lt;a href=&quot;https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch1.md&quot;&gt;You don’t know JS&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Simplified steps in compilation&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Tokenizing: breaking the code into single parts, like &lt;code class=&quot;language-text&quot;&gt;var test = 2&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;var&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;=&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;2&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Parsing: “taking a stream (array) of tokens and turning it into &lt;strong&gt;a tree of nested elements&lt;/strong&gt;, which collectively represent the grammatical structure of the program. This tree is called an “AST” (Abstract Syntax Tree).”&lt;/li&gt;
-&lt;li&gt;Code generation: the process of taking an AST and turning it into executable code (machine readable)&lt;/li&gt;
-&lt;li&gt;Note: Compilation happens really fast for javascript.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Explained&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Compiler declares a variable (if not previously declared in the current scope)&lt;/li&gt;
-&lt;li&gt;When executing, Engine looks up the variable in Scope and assigns to it, if found.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;LHS and RHS (&lt;em&gt;more of non-LHS&lt;/em&gt;) reference&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;LHS reference: &lt;code class=&quot;language-text&quot;&gt;a&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;var a = 1&lt;/code&gt;. **For assigning a value to a variable. **&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;RHS reference: **for referencing a value to a variable. **&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;hi&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;comment&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;comment&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;hi&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;hi&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;will just work.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Web development tools]]></title><description><![CDATA[My choices are marked  bold! Prototyping Prototyping on the web Proto.io ProtoPie Invision Prototyping on a computer Framer Adobe XD Sketch…]]></description><link>https://9oelm.github.io/2018-03-24--Web-development-tools/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-24--Web-development-tools/</guid><pubDate>Sat, 24 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;My choices are marked &lt;strong&gt;bold!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Prototyping&lt;/h2&gt;
+&lt;h3&gt;Prototyping on the web&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;RHS function call to &lt;code class=&quot;language-text&quot;&gt;hi()&lt;/code&gt; function in the last line.&lt;/li&gt;
-&lt;li&gt;LHS reference for &lt;code class=&quot;language-text&quot;&gt;comment = &amp;quot;hi&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;RHS reference for &lt;code class=&quot;language-text&quot;&gt;comment&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;window.alert(comment)&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;RHS reference for &lt;code class=&quot;language-text&quot;&gt;window&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://proto.io/&quot;&gt;Proto.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.protopie.io/&quot;&gt;ProtoPie&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.invisionapp.com/&quot;&gt;Invision&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Nested scope&lt;/h3&gt;
+&lt;h3&gt;Prototyping on a computer&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://framer.com/&quot;&gt;Framer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.adobe.com/kr/products/xd.html&quot;&gt;Adobe XD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.sketchapp.com/&quot;&gt;Sketch&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.haiku.ai/&quot;&gt;Haiku&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://sketch2react.io/&quot;&gt;SketchToReact&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/airbnb/react-sketchapp&quot;&gt;React-SketchApp&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://origami.design/&quot;&gt;Origami&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;www.adobe.com/AfterEffects&quot;&gt;AfterEffects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://zeplin.io/&quot;&gt;Zeplin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.invisionapp.com/studio&quot;&gt;Invision (Studio)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.flinto.com/&quot;&gt;Flinto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://principleformac.com/&quot;&gt;Principle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Libraries and frameworks&lt;/h2&gt;
+&lt;h3&gt;Javascript UI Frameworks&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Scopes can be nested inside other scopes. &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The javascript engine will look into &lt;strong&gt;the immediate scope first where the variable is referenced&lt;/strong&gt;, and if it cannot find the variable, it will look at the outer scope, and then outer scope and so on (until the global scope).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;if &lt;strong&gt;RHS look-up fails&lt;/strong&gt;, it will cause a &lt;code class=&quot;language-text&quot;&gt;ReferenceError&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;this will cause an error since compiler does not know the variable &lt;code class=&quot;language-text&quot;&gt;i&lt;/code&gt; at all.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;if &lt;strong&gt;LHS look-up fails and the program is not in &lt;code class=&quot;language-text&quot;&gt;strict&lt;/code&gt; mode&lt;/strong&gt;, the global scope will create a new variable of that name in the global scope. For example:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// LHS lookup fails in the first line and the global scope will make a new variable called i.&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// in other words, it will do var i; for us. &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;this works perfectly fine without any errors in javascript.&lt;/p&gt;
-&lt;/li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://reactjs.org/&quot;&gt;React.js&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hackernoon.com/23-best-react-ui-component-libraries-and-frameworks-250a81b2ac42&quot;&gt;23 Best React UI Component Libraries and Frameworks&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Two types of scope&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Lexical scope (widely used)&lt;/li&gt;
-&lt;li&gt;Dynamic scope&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Lexical scope&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.emberjs.com/&quot;&gt;Ember.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Templating engines&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;Handlebars.js&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pugjs.org/api/getting-started.html&quot;&gt;Pugjs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Bundlers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://parceljs.org/&quot;&gt;Parcel&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://webpack.js.org/&quot;&gt;Webpack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Styling frameworks&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;cssinjs.org/&quot;&gt;CSSinJS&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://sass-lang.com/&quot;&gt;Sass&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;lesscss.org/&quot;&gt;Less&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://susy.oddbird.net/&quot;&gt;Susy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Automation tools&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gruntjs.com/&quot;&gt;Grunt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Testing frameworks&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://jasmine.github.io/&quot;&gt;Jasmine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mochajs.org/&quot;&gt;Mocha&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;www.chaijs.com/&quot;&gt;Chai&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other prominent UI Frameworks&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Backend frameworks&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“The lexing process examines a string of source code characters and &lt;strong&gt;assigns semantic meaning to the tokens&lt;/strong&gt; as a result of some stateful parsing.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;The lexical scope is defined at the lexing (write) time and is based on the scopes and variables that I write. &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Scope look-up stops once it finds the first match. The same identifier name can be specified at multiple layers of nested scope, which is called “shadowing”&lt;/strong&gt;&lt;/em&gt; (the inner identifier “shadows” the outer identifier). Regardless of shadowing, scope look-up always starts at the innermost scope being executed at the time, and &lt;strong&gt;works its way outward/upward until the first match, and stops.&lt;/strong&gt; My understanding is this:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
-    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// will log 1 because var test = 1 is in the current scope&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
-        &lt;span class=&quot;token comment&quot;&gt;// will log 2 because var test = 2 is in the current scope&lt;/span&gt;
-        console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// will log 3 because var test = 3 is in the current scope&lt;/span&gt;
-            console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;token function&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// a is executed here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;But if you allege to have two variables of the same name that can be referenced at the same time, you could attach one to the global object as its property (FYI, Global variables are also automatically properties of the global object like &lt;code class=&quot;language-text&quot;&gt;window&lt;/code&gt;) . For example:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;another 0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// logs 0&lt;/span&gt;
-    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;test&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// logs another 0&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// This is completely possible. &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Other ways in Lexical scope&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“Both of them are equally frowned-upon in the wider community as bad practices to use in your code. But the typical arguments against them are often missing the most important point: &lt;strong&gt;cheating lexical scope leads to poorer performance.&lt;/strong&gt;”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;1. &lt;code class=&quot;language-text&quot;&gt;eval()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://nodejs.org&quot;&gt;Node.js&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;code class=&quot;language-text&quot;&gt;eval(..)&lt;/code&gt; function in JavaScript takes a string as an argument, and &lt;strong&gt;treats the contents of the string as if it had actually been authored code at that point in the program.&lt;/strong&gt;
-For example:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;str&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;eval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;str&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// will print 0&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;b = 0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;Note: &lt;code class=&quot;language-text&quot;&gt;eval()&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;strict&lt;/code&gt; mode is almost useless because “eval(..) when used in a strict-mode program operates in its own lexical scope, which means declarations made inside of the eval() do not actually modify the enclosing scope.”&lt;/li&gt;
-&lt;li&gt;Note 2: this function is not really worth using because it does not add anything to the program most of the time. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;expressjs.com/&quot;&gt;Express.js&lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;2. &lt;code class=&quot;language-text&quot;&gt;with()&lt;/code&gt;: deprecated. So I’m not gonna study it.&lt;/h3&gt;
-&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;eval()&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;with()&lt;/code&gt; are never good.&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“The JavaScript Engine has a number of performance optimizations that it performs during the compilation phase. Some of these boil down to being able to essentially statically analyze the code as it lexes, and pre-determine where all the variable and function declarations are, so that it takes less effort to resolve identifiers during execution.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“But if the Engine finds an eval(..) or with in the code, &lt;strong&gt;it essentially has to assume that all its awareness of identifier location may be invalid, because it cannot know at lexing time exactly what code you may pass to eval(..) to modify the lexical scope, or the contents of the object you may pass to with to create a new lexical scope to be consulted.”&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“In other words, in the pessimistic sense, &lt;strong&gt;most of those optimizations it would make are pointless if eval(..) or with are present, so it simply doesn’t perform the optimizations at all.&lt;/strong&gt;”&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (2): writing good codes]]></title><description><![CDATA[FYI Notes made with  You don’t know JS . Writing good codes Function scope It encourages the idea that all variables belong to the function…]]></description><link>https://9oelm.github.io/2018-03-24--Scope-and-closure-(2):-writing-good-codes/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-24--Scope-and-closure-(2):-writing-good-codes/</guid><pubDate>Sat, 24 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;www.php.net/&quot;&gt;php&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.djangoproject.com/start/&quot;&gt;django&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;rubyonrails.org/&quot;&gt;Ruby on rails&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://guides.rubyonrails.org/getting_started.html&quot;&gt;RailsGuides&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://flask.pocoo.org/&quot;&gt;flask&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://projects.spring.io/spring-framework/&quot;&gt;Spring&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Business solutions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;IDEs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VSCode&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;brackets.io/&quot;&gt;Bracket (yet too light)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.jetbrains.com/webstorm/&quot;&gt;WebStorm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Helpful links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://okky.kr/article/452690&quot;&gt;https://okky.kr/article/452690&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (2): writing good codes]]></title><description><![CDATA[FYI Notes made with  You don’t know JS . Writing good codes Function scope It encourages the idea that all variables belong to the function…]]></description><link>https://9oelm.github.io/2018-03-24--Scope-and-closure-(2):-writing-good-codes/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-24--Scope-and-closure-(2):-writing-good-codes/</guid><pubDate>Sat, 24 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
 &lt;p&gt;Notes made with &lt;a href=&quot;https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md&quot;&gt;You don’t know JS&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Writing good codes&lt;/h2&gt;
 &lt;h3&gt;Function scope&lt;/h3&gt;
@@ -6383,107 +6359,162 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;Also remember &lt;strong&gt;functions are hoisted first, and then variables.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;The hoisted functions or variables will override any other functions or variables that have the same name.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Function declarations that appear inside of normal blocks like &lt;code class=&quot;language-text&quot;&gt;if&lt;/code&gt; typically hoist to the enclosing (outer) scope.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Web development tools]]></title><description><![CDATA[My choices are marked  bold! Prototyping Prototyping on the web Proto.io ProtoPie Invision Prototyping on a computer Framer Adobe XD Sketch…]]></description><link>https://9oelm.github.io/2018-03-24--Web-development-tools/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-24--Web-development-tools/</guid><pubDate>Sat, 24 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;My choices are marked &lt;strong&gt;bold!&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;Prototyping&lt;/h2&gt;
-&lt;h3&gt;Prototyping on the web&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://proto.io/&quot;&gt;Proto.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.protopie.io/&quot;&gt;ProtoPie&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.invisionapp.com/&quot;&gt;Invision&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Prototyping on a computer&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://framer.com/&quot;&gt;Framer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.adobe.com/kr/products/xd.html&quot;&gt;Adobe XD&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.sketchapp.com/&quot;&gt;Sketch&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.haiku.ai/&quot;&gt;Haiku&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://sketch2react.io/&quot;&gt;SketchToReact&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/airbnb/react-sketchapp&quot;&gt;React-SketchApp&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://origami.design/&quot;&gt;Origami&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;www.adobe.com/AfterEffects&quot;&gt;AfterEffects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://zeplin.io/&quot;&gt;Zeplin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.invisionapp.com/studio&quot;&gt;Invision (Studio)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.flinto.com/&quot;&gt;Flinto&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://principleformac.com/&quot;&gt;Principle&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Libraries and frameworks&lt;/h2&gt;
-&lt;h3&gt;Javascript UI Frameworks&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (1): lexical Scope]]></title><description><![CDATA[FYI Notes made with  You don’t know JS . Simplified steps in compilation Tokenizing: breaking the code into single parts, like   to   and…]]></description><link>https://9oelm.github.io/2018-03-24--Scope-and-closure-(1):-lexical-scope/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-24--Scope-and-closure-(1):-lexical-scope/</guid><pubDate>Sat, 24 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
+&lt;p&gt;Notes made with &lt;a href=&quot;https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch1.md&quot;&gt;You don’t know JS&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Simplified steps in compilation&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Tokenizing: breaking the code into single parts, like &lt;code class=&quot;language-text&quot;&gt;var test = 2&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;var&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;=&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;2&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Parsing: “taking a stream (array) of tokens and turning it into &lt;strong&gt;a tree of nested elements&lt;/strong&gt;, which collectively represent the grammatical structure of the program. This tree is called an “AST” (Abstract Syntax Tree).”&lt;/li&gt;
+&lt;li&gt;Code generation: the process of taking an AST and turning it into executable code (machine readable)&lt;/li&gt;
+&lt;li&gt;Note: Compilation happens really fast for javascript.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Explained&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Compiler declares a variable (if not previously declared in the current scope)&lt;/li&gt;
+&lt;li&gt;When executing, Engine looks up the variable in Scope and assigns to it, if found.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;LHS and RHS (&lt;em&gt;more of non-LHS&lt;/em&gt;) reference&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;LHS reference: &lt;code class=&quot;language-text&quot;&gt;a&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;var a = 1&lt;/code&gt;. **For assigning a value to a variable. **&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://reactjs.org/&quot;&gt;React.js&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;RHS reference: **for referencing a value to a variable. **&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;hi&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;comment&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;comment&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;hi&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;hi&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://hackernoon.com/23-best-react-ui-component-libraries-and-frameworks-250a81b2ac42&quot;&gt;23 Best React UI Component Libraries and Frameworks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;RHS function call to &lt;code class=&quot;language-text&quot;&gt;hi()&lt;/code&gt; function in the last line.&lt;/li&gt;
+&lt;li&gt;LHS reference for &lt;code class=&quot;language-text&quot;&gt;comment = &amp;quot;hi&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;RHS reference for &lt;code class=&quot;language-text&quot;&gt;comment&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;window.alert(comment)&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;RHS reference for &lt;code class=&quot;language-text&quot;&gt;window&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.emberjs.com/&quot;&gt;Ember.js&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Templating engines&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;Handlebars.js&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://pugjs.org/api/getting-started.html&quot;&gt;Pugjs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Bundlers&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://parceljs.org/&quot;&gt;Parcel&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://webpack.js.org/&quot;&gt;Webpack&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Styling frameworks&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;cssinjs.org/&quot;&gt;CSSinJS&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://sass-lang.com/&quot;&gt;Sass&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;lesscss.org/&quot;&gt;Less&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://susy.oddbird.net/&quot;&gt;Susy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Automation tools&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://gruntjs.com/&quot;&gt;Grunt&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Testing frameworks&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://jasmine.github.io/&quot;&gt;Jasmine&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mochajs.org/&quot;&gt;Mocha&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;www.chaijs.com/&quot;&gt;Chai&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Other prominent UI Frameworks&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Backend frameworks&lt;/h2&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Nested scope&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://nodejs.org&quot;&gt;Node.js&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;expressjs.com/&quot;&gt;Express.js&lt;/a&gt; &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Scopes can be nested inside other scopes. &lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;www.php.net/&quot;&gt;php&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.djangoproject.com/start/&quot;&gt;django&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;rubyonrails.org/&quot;&gt;Ruby on rails&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://guides.rubyonrails.org/getting_started.html&quot;&gt;RailsGuides&lt;/a&gt; &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The javascript engine will look into &lt;strong&gt;the immediate scope first where the variable is referenced&lt;/strong&gt;, and if it cannot find the variable, it will look at the outer scope, and then outer scope and so on (until the global scope).&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://flask.pocoo.org/&quot;&gt;flask&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://projects.spring.io/spring-framework/&quot;&gt;Spring&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;if &lt;strong&gt;RHS look-up fails&lt;/strong&gt;, it will cause a &lt;code class=&quot;language-text&quot;&gt;ReferenceError&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;this will cause an error since compiler does not know the variable &lt;code class=&quot;language-text&quot;&gt;i&lt;/code&gt; at all.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;if &lt;strong&gt;LHS look-up fails and the program is not in &lt;code class=&quot;language-text&quot;&gt;strict&lt;/code&gt; mode&lt;/strong&gt;, the global scope will create a new variable of that name in the global scope. For example:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// LHS lookup fails in the first line and the global scope will make a new variable called i.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// in other words, it will do var i; for us. &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;this works perfectly fine without any errors in javascript.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Business solutions&lt;/h2&gt;
+&lt;h3&gt;Two types of scope&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Lexical scope (widely used)&lt;/li&gt;
+&lt;li&gt;Dynamic scope&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Lexical scope&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The lexing process examines a string of source code characters and &lt;strong&gt;assigns semantic meaning to the tokens&lt;/strong&gt; as a result of some stateful parsing.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;The lexical scope is defined at the lexing (write) time and is based on the scopes and variables that I write. &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Scope look-up stops once it finds the first match. The same identifier name can be specified at multiple layers of nested scope, which is called “shadowing”&lt;/strong&gt;&lt;/em&gt; (the inner identifier “shadows” the outer identifier). Regardless of shadowing, scope look-up always starts at the innermost scope being executed at the time, and &lt;strong&gt;works its way outward/upward until the first match, and stops.&lt;/strong&gt; My understanding is this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// will log 1 because var test = 1 is in the current scope&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+        &lt;span class=&quot;token comment&quot;&gt;// will log 2 because var test = 2 is in the current scope&lt;/span&gt;
+        console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// will log 3 because var test = 3 is in the current scope&lt;/span&gt;
+            console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// a is executed here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;But if you allege to have two variables of the same name that can be referenced at the same time, you could attach one to the global object as its property (FYI, Global variables are also automatically properties of the global object like &lt;code class=&quot;language-text&quot;&gt;window&lt;/code&gt;) . For example:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;another 0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;test&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// logs 0&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;test&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// logs another 0&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// This is completely possible. &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;IDEs&lt;/h2&gt;
+&lt;h3&gt;Other ways in Lexical scope&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Both of them are equally frowned-upon in the wider community as bad practices to use in your code. But the typical arguments against them are often missing the most important point: &lt;strong&gt;cheating lexical scope leads to poorer performance.&lt;/strong&gt;”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;1. &lt;code class=&quot;language-text&quot;&gt;eval()&lt;/code&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VSCode&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;brackets.io/&quot;&gt;Bracket (yet too light)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.jetbrains.com/webstorm/&quot;&gt;WebStorm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code class=&quot;language-text&quot;&gt;eval(..)&lt;/code&gt; function in JavaScript takes a string as an argument, and &lt;strong&gt;treats the contents of the string as if it had actually been authored code at that point in the program.&lt;/strong&gt;
+For example:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;str&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;eval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;str&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// will print 0&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;b = 0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Note: &lt;code class=&quot;language-text&quot;&gt;eval()&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;strict&lt;/code&gt; mode is almost useless because “eval(..) when used in a strict-mode program operates in its own lexical scope, which means declarations made inside of the eval() do not actually modify the enclosing scope.”&lt;/li&gt;
+&lt;li&gt;Note 2: this function is not really worth using because it does not add anything to the program most of the time. &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Helpful links&lt;/h2&gt;
+&lt;h3&gt;2. &lt;code class=&quot;language-text&quot;&gt;with()&lt;/code&gt;: deprecated. So I’m not gonna study it.&lt;/h3&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;eval()&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;with()&lt;/code&gt; are never good.&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The JavaScript Engine has a number of performance optimizations that it performs during the compilation phase. Some of these boil down to being able to essentially statically analyze the code as it lexes, and pre-determine where all the variable and function declarations are, so that it takes less effort to resolve identifiers during execution.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“But if the Engine finds an eval(..) or with in the code, &lt;strong&gt;it essentially has to assume that all its awareness of identifier location may be invalid, because it cannot know at lexing time exactly what code you may pass to eval(..) to modify the lexical scope, or the contents of the object you may pass to with to create a new lexical scope to be consulted.”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“In other words, in the pessimistic sense, &lt;strong&gt;most of those optimizations it would make are pointless if eval(..) or with are present, so it simply doesn’t perform the optimizations at all.&lt;/strong&gt;”&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[React (2)]]></title><description><![CDATA[FYI My notes are overwritten on the content copied from  https://reactjs.org/docs . JSX It is a “syntax extension to JavaScript”. React…]]></description><link>https://9oelm.github.io/2018-03-22--React-(2)/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-22--React-(2)/</guid><pubDate>Thu, 22 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
+&lt;p&gt;My notes are overwritten on the content copied from &lt;a href=&quot;https://reactjs.org/docs&quot;&gt;https://reactjs.org/docs&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;JSX&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://okky.kr/article/452690&quot;&gt;https://okky.kr/article/452690&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;It is a “syntax extension to JavaScript”.&lt;/li&gt;
+&lt;li&gt;React embraces the fact that &lt;strong&gt;rendering logic is inherently coupled with other UI logic:&lt;/strong&gt; how events are handled, how the state changes over time, and how the data is prepared for display.&lt;/li&gt;
+&lt;li&gt;You can &lt;strong&gt;embed&lt;/strong&gt; any JavaScript expression in JSX by wrapping it in curly braces: &lt;code class=&quot;language-text&quot;&gt;&amp;lt;p&amp;gt;4+4 is {4+4}&amp;lt;/p&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We split JSX over multiple lines for &lt;strong&gt;readability&lt;/strong&gt;. While it isn’t required, when doing this, we also recommend wrapping it in parentheses to &lt;strong&gt;avoid the pitfalls of automatic semicolon insertion&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; element &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// ( &amp;lt;- here if you don&apos;t understand&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Hello&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h2&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Good to see you here&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h2&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// &amp;lt;- ) here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getGreeting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;formatName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Stranger&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JSX Prevents Injection Attacks because it converts the values embedded in JSX to string before rendering them. I think it means this: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;const title = &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;window.alert(&apos;this is malicious&apos;);&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+// This is safe:
+const element = &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;{title}&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React (1)]]></title><description><![CDATA[FYI My notes are overwritten on the content copied from  https://reactjs.org/tutorial/tutorial.html . Component React component class, or…]]></description><link>https://9oelm.github.io/2018-03-22--React-(1)/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-22--React-(1)/</guid><pubDate>Thu, 22 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
 &lt;p&gt;My notes are overwritten on the content copied from &lt;a href=&quot;https://reactjs.org/tutorial/tutorial.html&quot;&gt;https://reactjs.org/tutorial/tutorial.html&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Component&lt;/h2&gt;
@@ -6609,38 +6640,7 @@ and the concept of the constructor is the same thing. It initializes variables.
 ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Game &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;root&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React (2)]]></title><description><![CDATA[FYI My notes are overwritten on the content copied from  https://reactjs.org/docs . JSX It is a “syntax extension to JavaScript”. React…]]></description><link>https://9oelm.github.io/2018-03-22--React-(2)/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-22--React-(2)/</guid><pubDate>Thu, 22 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
-&lt;p&gt;My notes are overwritten on the content copied from &lt;a href=&quot;https://reactjs.org/docs&quot;&gt;https://reactjs.org/docs&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;JSX&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;It is a “syntax extension to JavaScript”.&lt;/li&gt;
-&lt;li&gt;React embraces the fact that &lt;strong&gt;rendering logic is inherently coupled with other UI logic:&lt;/strong&gt; how events are handled, how the state changes over time, and how the data is prepared for display.&lt;/li&gt;
-&lt;li&gt;You can &lt;strong&gt;embed&lt;/strong&gt; any JavaScript expression in JSX by wrapping it in curly braces: &lt;code class=&quot;language-text&quot;&gt;&amp;lt;p&amp;gt;4+4 is {4+4}&amp;lt;/p&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;We split JSX over multiple lines for &lt;strong&gt;readability&lt;/strong&gt;. While it isn’t required, when doing this, we also recommend wrapping it in parentheses to &lt;strong&gt;avoid the pitfalls of automatic semicolon insertion&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; element &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// ( &amp;lt;- here if you don&apos;t understand&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Hello&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h2&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Good to see you here&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h2&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// &amp;lt;- ) here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions: &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getGreeting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;formatName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Hello&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Stranger&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;JSX Prevents Injection Attacks because it converts the values embedded in JSX to string before rendering them. I think it means this: &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;const title = &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;window.alert(&apos;this is malicious&apos;);&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-// This is safe:
-const element = &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;{title}&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React (3)]]></title><description><![CDATA[FYI My notes are overwritten on the content copied from  https://reactjs.org/docs . Rendering elements An element : is the smallest building…]]></description><link>https://9oelm.github.io/2018-03-22--React-(3)/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-22--React-(3)/</guid><pubDate>Thu, 22 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[React (3)]]></title><description><![CDATA[FYI My notes are overwritten on the content copied from  https://reactjs.org/docs . Rendering elements An element : is the smallest building…]]></description><link>https://9oelm.github.io/2018-03-22--React-(3)/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-22--React-(3)/</guid><pubDate>Thu, 22 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
 &lt;p&gt;My notes are overwritten on the content copied from &lt;a href=&quot;https://reactjs.org/docs&quot;&gt;https://reactjs.org/docs&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Rendering elements&lt;/h2&gt;
 &lt;ul&gt;
@@ -6721,6 +6721,34 @@ document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
 &lt;li&gt;Instead, you are going to use ‘state’. &lt;strong&gt;State&lt;/strong&gt; allows React components to change their output over time in response to user actions, network responses, and anything else, without violating this rule.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Windows cmd commands]]></title><description><![CDATA[Equivalents on Windows Just download vim. If cannot… just use   (only avialable on Windows 32bit)  (or   (or  )) Network related The…]]></description><link>https://9oelm.github.io/2018-03-21--Window-cmd-commands/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-21--Window-cmd-commands/</guid><pubDate>Wed, 21 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Equivalents on Windows&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;cat&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;type &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;ls&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;dir /s (recursively show lower directories and files) /ah (show hidden files) /on(alphabetically sorted) /od (sorted by date) ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;vim&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Just download vim. If cannot… just use &lt;code class=&quot;language-text&quot;&gt;edit&lt;/code&gt; (only avialable on Windows 32bit)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;mv (rename)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ren&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;diff&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;fc &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;ps&lt;/code&gt; (or &lt;code class=&quot;language-text&quot;&gt;top&lt;/code&gt; (or &lt;code class=&quot;language-text&quot;&gt;htop&lt;/code&gt;))&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;tasklist&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;pkill&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;taskkill&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;who am i&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;echo %USERDOMAIN%\%USERNAME% or whoami&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Network related&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-xp/bb490947(v=technet.10)&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;netstat&lt;/code&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;netstat [-a] [-e] [-n] [-o] [-p Protocol] [-r] [-s] [Interval]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://technet.microsoft.com/en-us/library/cc958876.aspx&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pathping&lt;/code&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The PathPing tool is a route tracing tool that combines features of Ping and Tracert with additional information that neither of those tools provides. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pathping&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;For more&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.lemoda.net/windows/windows2unix/windows2unix.html&quot;&gt;https://www.lemoda.net/windows/windows2unix/windows2unix.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Using git]]></title><description><![CDATA[How to revert git revert will create a new commit that’s the opposite (or inverse) of the given SHA. If the old commit is “matter”, the new…]]></description><link>https://9oelm.github.io/2018-03-21--Using-git/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-21--Using-git/</guid><pubDate>Wed, 21 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;&lt;a href=&quot;https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/&quot;&gt;How to revert&lt;/a&gt;&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git revert &amp;lt;SHA&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;git revert will create a new commit that’s the opposite (or inverse) of the given SHA. If the old commit is “matter”, the new commit is “anti-matter”—anything removed in the old commit will be added in the new commit and anything added in the old commit will be removed in the new commit.&lt;/p&gt;
@@ -6794,35 +6822,7 @@ git merge anotherBranch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;Sources&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://kb.netgear.com/1141/What-is-WEP-wireless-encryption&quot;&gt;Netgear&lt;/a&gt;
-[&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Windows cmd commands]]></title><description><![CDATA[Equivalents on Windows Just download vim. If cannot… just use   (only avialable on Windows 32bit)  (or   (or  )) Network related The…]]></description><link>https://9oelm.github.io/2018-03-21--Window-cmd-commands/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-21--Window-cmd-commands/</guid><pubDate>Wed, 21 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Equivalents on Windows&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;cat&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;type &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;ls&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;dir /s (recursively show lower directories and files) /ah (show hidden files) /on(alphabetically sorted) /od (sorted by date) ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;vim&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Just download vim. If cannot… just use &lt;code class=&quot;language-text&quot;&gt;edit&lt;/code&gt; (only avialable on Windows 32bit)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;mv (rename)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ren&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;diff&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;fc &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;ps&lt;/code&gt; (or &lt;code class=&quot;language-text&quot;&gt;top&lt;/code&gt; (or &lt;code class=&quot;language-text&quot;&gt;htop&lt;/code&gt;))&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;tasklist&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;pkill&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;taskkill&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;who am i&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;echo %USERDOMAIN%\%USERNAME% or whoami&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Network related&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-xp/bb490947(v=technet.10)&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;netstat&lt;/code&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;netstat [-a] [-e] [-n] [-o] [-p Protocol] [-r] [-s] [Interval]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://technet.microsoft.com/en-us/library/cc958876.aspx&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pathping&lt;/code&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The PathPing tool is a route tracing tool that combines features of Ping and Tracert with additional information that neither of those tools provides. &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pathping&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;For more&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.lemoda.net/windows/windows2unix/windows2unix.html&quot;&gt;https://www.lemoda.net/windows/windows2unix/windows2unix.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[What I should be preparing]]></title><description><![CDATA[Some job postings to see (2018 Jan)\ Goldman Sachs Bachelor of Science in Computer Science, System/Computer Engineering, Cyber-Security, or…]]></description><link>https://9oelm.github.io/2018-01-01--what-i-should-be-preparing/</link><guid isPermaLink="false">https://9oelm.github.io/2018-01-01--what-i-should-be-preparing/</guid><pubDate>Mon, 01 Jan 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Some job postings to see (2018 Jan)\&lt;/h3&gt;
+[&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What I should be preparing]]></title><description><![CDATA[Some job postings to see (2018 Jan)\ Goldman Sachs Bachelor of Science in Computer Science, System/Computer Engineering, Cyber-Security, or…]]></description><link>https://9oelm.github.io/2018-01-01--what-i-should-be-preparing/</link><guid isPermaLink="false">https://9oelm.github.io/2018-01-01--what-i-should-be-preparing/</guid><pubDate>Mon, 01 Jan 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Some job postings to see (2018 Jan)\&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Goldman Sachs&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Bachelor of Science in Computer Science, System/Computer Engineering, Cyber-Security, or Information Security is preferred. &lt;/li&gt;
@@ -6946,7 +6946,16 @@ When receiving an HTTP request, a server can send a Set-Cookie header with the r
 &lt;li&gt;&lt;a href=&quot;http://www.hackingwithphp.com/10/1/0/cookies-vs-sessions&quot;&gt;hackingwithphp&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies&quot;&gt;Mozila&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/6253633/cookies-vs-sessions&quot;&gt;Stackoverflow&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Hacking kakaotalk (1)]]></title><description><![CDATA[Get the APK use somewhere like  https://apps.evozi.com/apk-downloader/  to download the apk of an application.   Using  dex2jar would output…]]></description><link>https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(1)/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(1)/</guid><pubDate>Sun, 15 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Get the APK&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Hacking kakaotalk (2): working out the obfuscated codes continued]]></title><description><![CDATA[Use  g
+Follow the install instructions from the link: run   from  . Checkpoint]]></description><link>https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(3)-working-out-the-obfuscated-codes-continued/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(3)-working-out-the-obfuscated-codes-continued/</guid><pubDate>Sun, 15 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Use &lt;a href=&quot;https://github.com/CalebFenton/simplify&quot;&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;simplify&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;g
+Follow the install instructions from the link:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git clone --recursive https://github.com/CalebFenton/simplify.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;./gradlew fatjar&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;run &lt;code class=&quot;language-text&quot;&gt;simplify.jar&lt;/code&gt; from &lt;code class=&quot;language-text&quot;&gt;simplify/build/libs/simplify.jar&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Checkpoint&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Hacking kakaotalk (1)]]></title><description><![CDATA[Get the APK use somewhere like  https://apps.evozi.com/apk-downloader/  to download the apk of an application.   Using  dex2jar would output…]]></description><link>https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(1)/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(1)/</guid><pubDate>Sun, 15 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Get the APK&lt;/h2&gt;
 &lt;p&gt;use somewhere like &lt;a href=&quot;https://apps.evozi.com/apk-downloader/&quot;&gt;https://apps.evozi.com/apk-downloader/&lt;/a&gt; to download the apk of an application.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;%7B%7Bsite.url%7D%7D/assets/images/HackingKakaotalk/1downloadApk.png&quot; alt=&quot;Download apk&quot;&gt; &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;%7B%7Bsite.url%7D%7D/assets/images/HackingKakaotalk/2downloadApk2.png&quot; alt=&quot;Download apk 2&quot;&gt;&lt;/p&gt;
@@ -7021,35 +7030,7 @@ really long lines... wc command gives 10611 of lines!
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;dpkg -i jd-gui_1.4.0-0_all.deb &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;See the source code&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;%7B%7Bsite.url%7D%7D/assets/images/HackingKakaotalk/3seeSource.png&quot; alt=&quot;See source&quot;&gt;&lt;/p&gt;
-&lt;p&gt;As we can easily discover, almost all java codes are obfuscated. A normal human being cannot just understand the code. What do we do?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hacking kakaotalk (2): working out the obfuscated codes continued]]></title><description><![CDATA[Use  g
-Follow the install instructions from the link: run   from  . Checkpoint]]></description><link>https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(3)-working-out-the-obfuscated-codes-continued/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(3)-working-out-the-obfuscated-codes-continued/</guid><pubDate>Sun, 15 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Use &lt;a href=&quot;https://github.com/CalebFenton/simplify&quot;&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;simplify&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;g
-Follow the install instructions from the link:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git clone --recursive https://github.com/CalebFenton/simplify.git&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;./gradlew fatjar&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;run &lt;code class=&quot;language-text&quot;&gt;simplify.jar&lt;/code&gt; from &lt;code class=&quot;language-text&quot;&gt;simplify/build/libs/simplify.jar&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;Checkpoint&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Using curl to get external ip address and my geolocation]]></title><description><![CDATA[Getting an external ip address Getting my geolocation It will provide you with the data in JSON format. alternatively:]]></description><link>https://9oelm.github.io/2017-10-06--Using-curl-to-get-external-ip-address-and-my-geolocation/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-06--Using-curl-to-get-external-ip-address-and-my-geolocation/</guid><pubDate>Fri, 06 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;a href=&quot;https://askubuntu.com/questions/95910/command-for-determining-my-public-ip&quot;&gt;Getting an external ip address&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;curl ifconfig.me [or icanhazip.com or ipecho.net or ipinfo.io/ip]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;&lt;a href=&quot;http://xmodulo.com/geographic-location-ip-address-command-line.html&quot;&gt;Getting my geolocation&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;It will provide you with the data in JSON format.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ curl ipinfo.io/[your ip]
-{
-  &amp;quot;ip&amp;quot;: ...
-  &amp;quot;hostname&amp;quot;: ...
-  &amp;quot;city&amp;quot;: ...
-  &amp;quot;region&amp;quot;: ...
-  &amp;quot;country&amp;quot;: ...
-  &amp;quot;loc&amp;quot;: &amp;quot;coordinateX&amp;quot;, &amp;quot;coordinatey&amp;quot;,
-  &amp;quot;org&amp;quot;: &amp;quot;organization name&amp;quot;
-  &amp;quot;postal&amp;quot;: ...
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;alternatively:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ curl freegeoip.net/xml/[your ip]
-...
-data shown in xml format
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[VPN]]></title><description><![CDATA[What is VPN and how does it work Virtual Private Network. Microsoft’s Explanation Virtual private networks (VPNs) are point-to-point…]]></description><link>https://9oelm.github.io/2017-10-06--VPN/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-06--VPN/</guid><pubDate>Fri, 06 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What is VPN and how does it work&lt;/h2&gt;
+&lt;p&gt;As we can easily discover, almost all java codes are obfuscated. A normal human being cannot just understand the code. What do we do?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[VPN]]></title><description><![CDATA[What is VPN and how does it work Virtual Private Network. Microsoft’s Explanation Virtual private networks (VPNs) are point-to-point…]]></description><link>https://9oelm.github.io/2017-10-06--VPN/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-06--VPN/</guid><pubDate>Fri, 06 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What is VPN and how does it work&lt;/h2&gt;
 &lt;p&gt;Virtual Private Network.&lt;/p&gt;
 &lt;h3&gt;&lt;a href=&quot;https://technet.microsoft.com/en-us/library/cc731954(v=ws.10).aspx&quot;&gt;Microsoft’s Explanation&lt;/a&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -7105,7 +7086,26 @@ A site-to-site VPN connection connects two portions of a private network. The VP
 &lt;li&gt;&lt;a href=&quot;https://technet.microsoft.com/en-us/library/cc731954(v=ws.10).aspx&quot;&gt;Microsoft&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://tiptopsecurity.com/all-about-vpns/&quot;&gt;tiptopsecurity&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.expressvpn.com/what-is-vpn&quot;&gt;expressvpn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Screenshotting on Kali]]></title><description><![CDATA[How to The entire screen Partial screen]]></description><link>https://9oelm.github.io/2017-10-05--Screenshotting-on-Kali/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-05--Screenshotting-on-Kali/</guid><pubDate>Thu, 05 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Using curl to get external ip address and my geolocation]]></title><description><![CDATA[Getting an external ip address Getting my geolocation It will provide you with the data in JSON format. alternatively:]]></description><link>https://9oelm.github.io/2017-10-06--Using-curl-to-get-external-ip-address-and-my-geolocation/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-06--Using-curl-to-get-external-ip-address-and-my-geolocation/</guid><pubDate>Fri, 06 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;a href=&quot;https://askubuntu.com/questions/95910/command-for-determining-my-public-ip&quot;&gt;Getting an external ip address&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;curl ifconfig.me [or icanhazip.com or ipecho.net or ipinfo.io/ip]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;&lt;a href=&quot;http://xmodulo.com/geographic-location-ip-address-command-line.html&quot;&gt;Getting my geolocation&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;It will provide you with the data in JSON format.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ curl ipinfo.io/[your ip]
+{
+  &amp;quot;ip&amp;quot;: ...
+  &amp;quot;hostname&amp;quot;: ...
+  &amp;quot;city&amp;quot;: ...
+  &amp;quot;region&amp;quot;: ...
+  &amp;quot;country&amp;quot;: ...
+  &amp;quot;loc&amp;quot;: &amp;quot;coordinateX&amp;quot;, &amp;quot;coordinatey&amp;quot;,
+  &amp;quot;org&amp;quot;: &amp;quot;organization name&amp;quot;
+  &amp;quot;postal&amp;quot;: ...
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;alternatively:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ curl freegeoip.net/xml/[your ip]
+...
+data shown in xml format
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Screenshotting on Kali]]></title><description><![CDATA[How to The entire screen Partial screen]]></description><link>https://9oelm.github.io/2017-10-05--Screenshotting-on-Kali/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-05--Screenshotting-on-Kali/</guid><pubDate>Thu, 05 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to&lt;/h2&gt;
 &lt;p&gt;The entire screen&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Prt Sc &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Partial screen&lt;/p&gt;
@@ -7170,7 +7170,27 @@ fgh = &amp;quot;fgh&amp;quot;; // incorrect. Cannot happen &lt;/code&gt;&lt;/pre
 &lt;li&gt;&lt;a href=&quot;http://blog.nekoromancer.kr/2016/01/26/es6-var-let-%EA%B7%B8%EB%A6%AC%EA%B3%A0-const/&quot;&gt;http://blog.nekoromancer.kr/2016/01/26/es6-var-let-%EA%B7%B8%EB%A6%AC%EA%B3%A0-const/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://gist.github.com/LeoHeo/7c2a2a6dbcf80becaaa1e61e90091e5d%5C&quot;&gt;https://gist.github.com/LeoHeo/7c2a2a6dbcf80becaaa1e61e90091e5d\&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.com/craft-academy/javascript-variables-should-you-use-let-var-or-const-394f7645c88f&quot;&gt;https://medium.com/craft-academy/javascript-variables-should-you-use-let-var-or-const-394f7645c88f&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Hacking instagram (1)]]></title><description><![CDATA[What I found This repo . And so I just needed to follow a few steps. Steps (After following all directions from the repo’s  ) Launch tor…]]></description><link>https://9oelm.github.io/2017-09-29--Hacking-instagram-(1)/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-29--Hacking-instagram-(1)/</guid><pubDate>Fri, 29 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What I found&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Using tor]]></title><description><![CDATA[Note Below content is just a excerpt from the websites. If you need to see in detail, don’t hesitate to go onto  the original website . What…]]></description><link>https://9oelm.github.io/2017-09-29--Using-tor/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-29--Using-tor/</guid><pubDate>Fri, 29 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Note&lt;/h2&gt;
+&lt;p&gt;Below content is just a excerpt from the websites. If you need to see in detail, don’t hesitate to go onto &lt;a href=&quot;https://www.torproject.org/about/overview.html.en&quot;&gt;the original website&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;What is Tor&lt;/h2&gt;
+&lt;p&gt;Tor is an Internet networking protocol designed to anonymize the data relayed across it. &lt;a href=&quot;https://www.tomsguide.com/us/what-is-tor-faq,news-17754.html&quot;&gt;(Tom’s guide)&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;How does Tor work&lt;/h2&gt;
+&lt;h3&gt;The Tor network&lt;/h3&gt;
+&lt;p&gt;The Tor network is a group of volunteer-operated servers that allows people to improve their privacy and security on the Internet. Tor’s users employ this network by connecting through &lt;strong&gt;a series of virtual tunnels rather than making a direct connection&lt;/strong&gt;, thus allowing both organizations and individuals to share information over public networks without compromising their privacy. &lt;/p&gt;
+&lt;p&gt;The variety of people who use Tor is actually part of what makes it so secure. &lt;strong&gt;Tor hides you among the other users on the network&lt;/strong&gt;, so the more populous and diverse the user base for Tor is, the more your anonymity will be protected. &lt;/p&gt;
+&lt;p&gt;Using Tor &lt;strong&gt;protects&lt;/strong&gt; you against a common form of Internet surveillance known as &lt;strong&gt;“traffic analysis.”&lt;/strong&gt; Traffic analysis can be used to infer who is talking to whom over a public network. Knowing the source and destination of your Internet traffic allows others to track your behavior and interests.&lt;/p&gt;
+&lt;h3&gt;Why privacy is in danger without Tor&lt;/h3&gt;
+&lt;p&gt;Internet data packets are comprised of (1) Data payload and (2) header used for routing. The data payload may be encrypted, but the header may not, because it needs to publicly state where the data has to go.&lt;/p&gt;
+&lt;p&gt;Now, authorized/unauthorized intermediaries, such as ISPs, could sit there and watch over the headers. &lt;/p&gt;
+&lt;h3&gt;What Tor does for your privacy&lt;/h3&gt;
+&lt;p&gt;Instead of taking a direct route from source to destination, data packets on the Tor network take a random pathway through several relays that cover your tracks so no observer at any single point can tell where the data came from or where it’s going.&lt;/p&gt;
+&lt;p&gt;Below is a picture from the Tor website to help understand.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.torproject.org/images/htw2.png&quot; alt=&quot;Tor network explained&quot;&gt;&lt;/p&gt;
+&lt;p&gt;To create a private network pathway with Tor, the user’s software or client incrementally builds a circuit of encrypted connections through relays on the network. The circuit is extended one hop at a time, and each relay along the way knows only which relay gave it data and which relay it is giving data to. No individual relay ever knows the complete path that a data packet has taken. The client negotiates a separate set of encryption keys for each hop along the circuit to ensure that each
+hop can’t trace these connections as they pass through. &lt;/p&gt;
+&lt;p&gt;For efficiency, the Tor software uses the same circuit for connections that happen within the same ten minutes or so. Later requests are given a new circuit, to keep people from linking your earlier actions to the new ones. &lt;/p&gt;
+&lt;h3&gt;Kind warning on Tor&lt;/h3&gt;
+&lt;p&gt;Tor does not completely save you from the issue of privacy. It only focuses on &lt;strong&gt;protecting the transport of data&lt;/strong&gt;. See the &lt;a href=&quot;https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29#Weaknesses&quot;&gt;weaknesses&lt;/a&gt; section of Wikipedia page on Tor for more. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hacking instagram (1)]]></title><description><![CDATA[What I found This repo . And so I just needed to follow a few steps. Steps (After following all directions from the repo’s  ) Launch tor…]]></description><link>https://9oelm.github.io/2017-09-29--Hacking-instagram-(1)/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-29--Hacking-instagram-(1)/</guid><pubDate>Fri, 29 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What I found&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Mr-Polite/instagram-py&quot;&gt;This repo&lt;/a&gt;. And so I just needed to follow a few steps.&lt;/p&gt;
 &lt;h2&gt;Steps (After following all directions from the repo’s &lt;code class=&quot;language-text&quot;&gt;README.md&lt;/code&gt;)&lt;/h2&gt;
 &lt;ol&gt;
@@ -7193,36 +7213,7 @@ Initially I was thinking of trying crackstation’s approx. 15GB wordlist on the
 &lt;li&gt;
 &lt;p&gt;The script is certainly faster than &lt;a href=&quot;https://github.com/Ethical-H4CK3R/Instagram&quot;&gt;Ethical-H4CK3R’s &lt;code class=&quot;language-text&quot;&gt;Instagram&lt;/code&gt; script&lt;/a&gt;, but still, this is the limitation of bruteforcing with one single machine. Firstly, using tor network will greatly slow your network down. Secondly, you need to switch IP Addresses from time to time because Instagram will suspend login attempts from suspicious IPs, which would make the program even slower.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Using tor]]></title><description><![CDATA[Note Below content is just a excerpt from the websites. If you need to see in detail, don’t hesitate to go onto  the original website . What…]]></description><link>https://9oelm.github.io/2017-09-29--Using-tor/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-29--Using-tor/</guid><pubDate>Fri, 29 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Note&lt;/h2&gt;
-&lt;p&gt;Below content is just a excerpt from the websites. If you need to see in detail, don’t hesitate to go onto &lt;a href=&quot;https://www.torproject.org/about/overview.html.en&quot;&gt;the original website&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;What is Tor&lt;/h2&gt;
-&lt;p&gt;Tor is an Internet networking protocol designed to anonymize the data relayed across it. &lt;a href=&quot;https://www.tomsguide.com/us/what-is-tor-faq,news-17754.html&quot;&gt;(Tom’s guide)&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;How does Tor work&lt;/h2&gt;
-&lt;h3&gt;The Tor network&lt;/h3&gt;
-&lt;p&gt;The Tor network is a group of volunteer-operated servers that allows people to improve their privacy and security on the Internet. Tor’s users employ this network by connecting through &lt;strong&gt;a series of virtual tunnels rather than making a direct connection&lt;/strong&gt;, thus allowing both organizations and individuals to share information over public networks without compromising their privacy. &lt;/p&gt;
-&lt;p&gt;The variety of people who use Tor is actually part of what makes it so secure. &lt;strong&gt;Tor hides you among the other users on the network&lt;/strong&gt;, so the more populous and diverse the user base for Tor is, the more your anonymity will be protected. &lt;/p&gt;
-&lt;p&gt;Using Tor &lt;strong&gt;protects&lt;/strong&gt; you against a common form of Internet surveillance known as &lt;strong&gt;“traffic analysis.”&lt;/strong&gt; Traffic analysis can be used to infer who is talking to whom over a public network. Knowing the source and destination of your Internet traffic allows others to track your behavior and interests.&lt;/p&gt;
-&lt;h3&gt;Why privacy is in danger without Tor&lt;/h3&gt;
-&lt;p&gt;Internet data packets are comprised of (1) Data payload and (2) header used for routing. The data payload may be encrypted, but the header may not, because it needs to publicly state where the data has to go.&lt;/p&gt;
-&lt;p&gt;Now, authorized/unauthorized intermediaries, such as ISPs, could sit there and watch over the headers. &lt;/p&gt;
-&lt;h3&gt;What Tor does for your privacy&lt;/h3&gt;
-&lt;p&gt;Instead of taking a direct route from source to destination, data packets on the Tor network take a random pathway through several relays that cover your tracks so no observer at any single point can tell where the data came from or where it’s going.&lt;/p&gt;
-&lt;p&gt;Below is a picture from the Tor website to help understand.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://www.torproject.org/images/htw2.png&quot; alt=&quot;Tor network explained&quot;&gt;&lt;/p&gt;
-&lt;p&gt;To create a private network pathway with Tor, the user’s software or client incrementally builds a circuit of encrypted connections through relays on the network. The circuit is extended one hop at a time, and each relay along the way knows only which relay gave it data and which relay it is giving data to. No individual relay ever knows the complete path that a data packet has taken. The client negotiates a separate set of encryption keys for each hop along the circuit to ensure that each
-hop can’t trace these connections as they pass through. &lt;/p&gt;
-&lt;p&gt;For efficiency, the Tor software uses the same circuit for connections that happen within the same ten minutes or so. Later requests are given a new circuit, to keep people from linking your earlier actions to the new ones. &lt;/p&gt;
-&lt;h3&gt;Kind warning on Tor&lt;/h3&gt;
-&lt;p&gt;Tor does not completely save you from the issue of privacy. It only focuses on &lt;strong&gt;protecting the transport of data&lt;/strong&gt;. See the &lt;a href=&quot;https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29#Weaknesses&quot;&gt;weaknesses&lt;/a&gt; section of Wikipedia page on Tor for more. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Editing environment path and adding custom scripts (2)]]></title><description><![CDATA[I wanted to add all subdirectories of   as environment path, but  that’s not what something people recommended . People say it’s  dangerous…]]></description><link>https://9oelm.github.io/2017-09-28--Editing-environment-path-and-adding-custom-scripts-(2)/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-28--Editing-environment-path-and-adding-custom-scripts-(2)/</guid><pubDate>Thu, 28 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I wanted to add all subdirectories of &lt;code class=&quot;language-text&quot;&gt;usr/local/bin&lt;/code&gt; as environment path, but &lt;a href=&quot;https://unix.stackexchange.com/questions/17715/how-can-i-set-all-subdirectories-of-a-directory-into-path&quot;&gt;that’s not what something people recommended&lt;/a&gt;. People say it’s &lt;em&gt;dangerous&lt;/em&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using bluetooth on kali linux]]></title><description><![CDATA[Check bluetooth status And turn it on: This way bluetooth is going to work.   will stop bluetooth. Bluetooth is not turned on by default on…]]></description><link>https://9oelm.github.io/2017-09-28--Using-bluetooth-on-kali-linux/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-28--Using-bluetooth-on-kali-linux/</guid><pubDate>Thu, 28 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Check bluetooth status&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/etc/init.d/bluetooth status&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And turn it on:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/etc/init.d/bluetooth start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This way bluetooth is going to work. &lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;stop&lt;/code&gt; will stop bluetooth.&lt;/p&gt;
-&lt;p&gt;Bluetooth is not turned on by default on boot on kali linux.&lt;/p&gt;
-&lt;p&gt;Another equivalent way is:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;service bluetooth start(stop)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;service bluetooth status&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using vim]]></title><description><![CDATA[How to search in vim Search command Next match Previous match How to navigate in vim Go forward by word Go back by word Move one character…]]></description><link>https://9oelm.github.io/2017-09-28--Using-vim/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-28--Using-vim/</guid><pubDate>Thu, 28 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to search in vim&lt;/h2&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Editing environment path and adding custom scripts (2)]]></title><description><![CDATA[I wanted to add all subdirectories of   as environment path, but  that’s not what something people recommended . People say it’s  dangerous…]]></description><link>https://9oelm.github.io/2017-09-28--Editing-environment-path-and-adding-custom-scripts-(2)/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-28--Editing-environment-path-and-adding-custom-scripts-(2)/</guid><pubDate>Thu, 28 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I wanted to add all subdirectories of &lt;code class=&quot;language-text&quot;&gt;usr/local/bin&lt;/code&gt; as environment path, but &lt;a href=&quot;https://unix.stackexchange.com/questions/17715/how-can-i-set-all-subdirectories-of-a-directory-into-path&quot;&gt;that’s not what something people recommended&lt;/a&gt;. People say it’s &lt;em&gt;dangerous&lt;/em&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using vim]]></title><description><![CDATA[How to search in vim Search command Next match Previous match How to navigate in vim Go forward by word Go back by word Move one character…]]></description><link>https://9oelm.github.io/2017-09-28--Using-vim/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-28--Using-vim/</guid><pubDate>Thu, 28 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to search in vim&lt;/h2&gt;
 &lt;p&gt;Search command&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ESC + : + / + [search pattern] + enter&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Next match&lt;/p&gt;
@@ -7272,7 +7263,35 @@ Paste after cursor&lt;/p&gt;
 &lt;p&gt;To open a new tab,
 and &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ESC + : + saveas [filename]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;to save the file.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Configuring vim]]></title><description><![CDATA[This looks like a pretty awesome boilerplate! Well, I just looked at  this repository  and it just looks amazing.  I cloned the repo to my…]]></description><link>https://9oelm.github.io/2017-09-25--Configuring-vim/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-25--Configuring-vim/</guid><pubDate>Mon, 25 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;This looks like a pretty awesome boilerplate!&lt;/h2&gt;
+&lt;p&gt;to save the file.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using bluetooth on kali linux]]></title><description><![CDATA[Check bluetooth status And turn it on: This way bluetooth is going to work.   will stop bluetooth. Bluetooth is not turned on by default on…]]></description><link>https://9oelm.github.io/2017-09-28--Using-bluetooth-on-kali-linux/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-28--Using-bluetooth-on-kali-linux/</guid><pubDate>Thu, 28 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Check bluetooth status&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/etc/init.d/bluetooth status&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And turn it on:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/etc/init.d/bluetooth start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This way bluetooth is going to work. &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;stop&lt;/code&gt; will stop bluetooth.&lt;/p&gt;
+&lt;p&gt;Bluetooth is not turned on by default on boot on kali linux.&lt;/p&gt;
+&lt;p&gt;Another equivalent way is:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;service bluetooth start(stop)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;service bluetooth status&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Turning monitor mode on and off]]></title><description><![CDATA[On This would just work: This also works: To scout the nearby APs, you do: Off For my computer, I do not have to type  . It just works.  For…]]></description><link>https://9oelm.github.io/2017-09-25--Turning-monitor-mode-on-and-off/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-25--Turning-monitor-mode-on-and-off/</guid><pubDate>Mon, 25 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;On&lt;/h2&gt;
+&lt;p&gt;This would just work:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;airmon-ng start wlan0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This also works:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ifconfig wlan0 down
+iwconfig wlan0 mode monitor
+ifconfig wlan0 up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To scout the nearby APs, you do:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;airodump-ng wlan0mon (or whatever the name ifconfig gives)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Off&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;~# airmon-ng stop wlan0mon
+PHY	Interface	Driver		Chipset
+
+phy0	wlan0mon	ath9k_htc	Atheros Communications, Inc. AR9271 802.11n
+		(mac80211 station mode vif enabled on [phy0]wlan0)
+		(mac80211 monitor mode vif disabled for [phy0]wlan0mon)
+~# service network-manager start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For my computer, I do not have to type &lt;code class=&quot;language-text&quot;&gt;service network-manager start&lt;/code&gt;. It just works. &lt;/p&gt;
+&lt;h2&gt;For more&lt;/h2&gt;
+&lt;p&gt;see &lt;a href=&quot;https://www.aircrack-ng.org/doku.php?id=airmon-ng&quot;&gt;the official documentation&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Configuring vim]]></title><description><![CDATA[This looks like a pretty awesome boilerplate! Well, I just looked at  this repository  and it just looks amazing.  I cloned the repo to my…]]></description><link>https://9oelm.github.io/2017-09-25--Configuring-vim/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-25--Configuring-vim/</guid><pubDate>Mon, 25 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;This looks like a pretty awesome boilerplate!&lt;/h2&gt;
 &lt;p&gt;Well, I just looked at &lt;a href=&quot;https://github.com/amix/vimrc&quot;&gt;this repository&lt;/a&gt; and it just looks amazing. &lt;/p&gt;
 &lt;p&gt;I cloned the repo to my local computer and installed the configuration.&lt;/p&gt;
 &lt;h2&gt;Vim configuration information&lt;/h2&gt;
@@ -7317,26 +7336,7 @@ set softtabstop=2 &amp;quot; The number of columns for a tab is set to 2&lt;/cod
 &lt;/li&gt;
 &lt;li&gt;Put it into the right folder (see how we did previous configs).&lt;/li&gt;
 &lt;li&gt;Then it starts working once you restart vim.&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Turning monitor mode on and off]]></title><description><![CDATA[On This would just work: This also works: To scout the nearby APs, you do: Off For my computer, I do not have to type  . It just works.  For…]]></description><link>https://9oelm.github.io/2017-09-25--Turning-monitor-mode-on-and-off/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-25--Turning-monitor-mode-on-and-off/</guid><pubDate>Mon, 25 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;On&lt;/h2&gt;
-&lt;p&gt;This would just work:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;airmon-ng start wlan0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This also works:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ifconfig wlan0 down
-iwconfig wlan0 mode monitor
-ifconfig wlan0 up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To scout the nearby APs, you do:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;airodump-ng wlan0mon (or whatever the name ifconfig gives)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Off&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;~# airmon-ng stop wlan0mon
-PHY	Interface	Driver		Chipset
-
-phy0	wlan0mon	ath9k_htc	Atheros Communications, Inc. AR9271 802.11n
-		(mac80211 station mode vif enabled on [phy0]wlan0)
-		(mac80211 monitor mode vif disabled for [phy0]wlan0mon)
-~# service network-manager start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;For my computer, I do not have to type &lt;code class=&quot;language-text&quot;&gt;service network-manager start&lt;/code&gt;. It just works. &lt;/p&gt;
-&lt;h2&gt;For more&lt;/h2&gt;
-&lt;p&gt;see &lt;a href=&quot;https://www.aircrack-ng.org/doku.php?id=airmon-ng&quot;&gt;the official documentation&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Changing mac address without macchanger]]></title><description><![CDATA[How to (got the info from  wikibooks ) really easy. Just enter the following commands sequentially: Then, do   to check the mac address of…]]></description><link>https://9oelm.github.io/2017-09-23--Changing-mac-address-without-macchanger/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-23--Changing-mac-address-without-macchanger/</guid><pubDate>Sat, 23 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to (got the info from &lt;a href=&quot;https://en.wikibooks.org/wiki/Changing_Your_MAC_Address/Linux&quot;&gt;wikibooks&lt;/a&gt;)&lt;/h2&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Changing mac address without macchanger]]></title><description><![CDATA[How to (got the info from  wikibooks ) really easy. Just enter the following commands sequentially: Then, do   to check the mac address of…]]></description><link>https://9oelm.github.io/2017-09-23--Changing-mac-address-without-macchanger/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-23--Changing-mac-address-without-macchanger/</guid><pubDate>Sat, 23 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to (got the info from &lt;a href=&quot;https://en.wikibooks.org/wiki/Changing_Your_MAC_Address/Linux&quot;&gt;wikibooks&lt;/a&gt;)&lt;/h2&gt;
 &lt;p&gt;really easy. Just enter the following commands sequentially:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/etc/init.d/networking stop
 ifconfig eth0 hw ether 02:01:02:03:04:08
@@ -7381,24 +7381,7 @@ But the answer to the below post also says we could use &lt;code class=&quot;lan
 &lt;li&gt;/sbin : Same, but for scripts with superuser (root) privileges required.&lt;/li&gt;
 &lt;li&gt;/usr/bin : Same as first, but for general system-wide binaries.&lt;/li&gt;
 &lt;li&gt;/usr/sbin : Same as above, but for scripts with superuser (root) privileges required.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Using tmux]]></title><description><![CDATA[Scrolling in tmux Using tmux, you sometimes wanna scroll up and down the window just like you used to in the normal bash shell. It’s dead…]]></description><link>https://9oelm.github.io/2017-09-21--Using-tmux/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--Using-tmux/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Scrolling in tmux&lt;/h2&gt;
-&lt;p&gt;Using tmux, you sometimes wanna scroll up and down the window just like you used to in the normal bash shell.&lt;/p&gt;
-&lt;p&gt;It’s dead simple as this:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl + b + [&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This will allow you to scroll.
-Pressing q would quit scroll mode.&lt;/p&gt;
-&lt;h2&gt;Getting back to tmux session&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;tmux attach -t [session number]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;would do it. you can check the session number with:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;tmux ls&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Killing a window / a pane&lt;/h2&gt;
-&lt;p&gt;for a window:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl + b + &amp;amp;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;for a pane:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl + b + x&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Selecting a pane&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl + b + q &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;will show you numbers on panes. Type the number of a pane to go to that pane.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Changing mac address semi permanently]]></title><description><![CDATA[How to Dead simple. Open up the file /etc/network/interfaces. It will show you something like: and add at the end of the file, this line…]]></description><link>https://9oelm.github.io/2017-09-21--changing-mac-address-semi-permanently/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--changing-mac-address-semi-permanently/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Changing mac address semi permanently]]></title><description><![CDATA[How to Dead simple. Open up the file /etc/network/interfaces. It will show you something like: and add at the end of the file, this line…]]></description><link>https://9oelm.github.io/2017-09-21--changing-mac-address-semi-permanently/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--changing-mac-address-semi-permanently/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to&lt;/h2&gt;
 &lt;p&gt;Dead simple.&lt;/p&gt;
 &lt;p&gt;Open up the file /etc/network/interfaces. It will show you something like:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# This file describes the network interfaces avilable on your system 
@@ -7416,7 +7399,26 @@ iface lo inet loopback&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;But the above solution sets your mac address to the same value every time.So you might wanna use macchanger:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pre-up macchanger -r eth0 
 pre-up macchanger -r wlan0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Adding these lines to &lt;code class=&quot;language-text&quot;&gt;/etc/network/interfaces&lt;/code&gt; file will set the mac addresses to random values every time your computer wakes up.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Finding a process with a name]]></title><description><![CDATA[Many times you want to look for a process to kill it.
+&lt;p&gt;Adding these lines to &lt;code class=&quot;language-text&quot;&gt;/etc/network/interfaces&lt;/code&gt; file will set the mac addresses to random values every time your computer wakes up.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hacking facebook]]></title><description><![CDATA[What I wanted There are many ways to hack somebody’s Facebook account.  One of the most popular methods is to use social engineering…]]></description><link>https://9oelm.github.io/2017-09-21--hacking-facebook/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--hacking-facebook/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What I wanted&lt;/h2&gt;
+&lt;p&gt;There are many ways to hack somebody’s Facebook account. &lt;/p&gt;
+&lt;p&gt;One of the most popular methods is to use social engineering techniques. But this has a crucial limitation: you need to be physically close enough to the victim, most favorably in your LAN.&lt;/p&gt;
+&lt;p&gt;So I decided to find out some other ways like buffer overflow or brute force. Here’s one of them: &lt;/p&gt;
+&lt;h2&gt;How to&lt;/h2&gt;
+&lt;p&gt;Materials:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A dictionary&lt;/li&gt;
+&lt;li&gt;facebook.py&lt;/li&gt;
+&lt;li&gt;linux environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;First, download python-mechanize. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ apt-get install python-mechanize&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;But before all that&lt;/h2&gt;
+&lt;p&gt;Before running the script, I suggest that you ensure your anonymity. &lt;/p&gt;
+&lt;p&gt;The best method I recommend is to set up/buy a VPN. Otherwise, use proxy. &lt;/p&gt;
+&lt;p&gt;Another good solution is to go to a random place outside your house where you can access the Internet. &lt;a href=&quot;https://mr-polite.github.io/hacking/2017/09/21/using-macchanger.html&quot;&gt;Then run &lt;code class=&quot;language-text&quot;&gt;macchanger&lt;/code&gt; to temporarily change your mac address.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Now ready&lt;/h2&gt;
+&lt;p&gt;Then, just run &lt;code class=&quot;language-text&quot;&gt;facebook.py&lt;/code&gt; (set environment path or locate your &lt;code class=&quot;language-text&quot;&gt;facebook.py&lt;/code&gt; file before using it. You know this already):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python facebook.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Finding a process with a name]]></title><description><![CDATA[Many times you want to look for a process to kill it.
 Here’s how: the default pgrep command shows the PIDs of all matching processes. the -l…]]></description><link>https://9oelm.github.io/2017-09-21--finding-a-process-with-a-name/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--finding-a-process-with-a-name/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Many times you want to look for a process to kill it.
 Here’s how:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pgrep bash
@@ -7448,26 +7450,7 @@ Here’s how:&lt;/p&gt;
 &lt;p&gt;It is the same as:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;kill -9 `pgrep bash`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Simply killing all the instances of process  named the same is:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;killall [process name]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Hacking facebook]]></title><description><![CDATA[What I wanted There are many ways to hack somebody’s Facebook account.  One of the most popular methods is to use social engineering…]]></description><link>https://9oelm.github.io/2017-09-21--hacking-facebook/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--hacking-facebook/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What I wanted&lt;/h2&gt;
-&lt;p&gt;There are many ways to hack somebody’s Facebook account. &lt;/p&gt;
-&lt;p&gt;One of the most popular methods is to use social engineering techniques. But this has a crucial limitation: you need to be physically close enough to the victim, most favorably in your LAN.&lt;/p&gt;
-&lt;p&gt;So I decided to find out some other ways like buffer overflow or brute force. Here’s one of them: &lt;/p&gt;
-&lt;h2&gt;How to&lt;/h2&gt;
-&lt;p&gt;Materials:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A dictionary&lt;/li&gt;
-&lt;li&gt;facebook.py&lt;/li&gt;
-&lt;li&gt;linux environment&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;First, download python-mechanize. &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ apt-get install python-mechanize&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;But before all that&lt;/h2&gt;
-&lt;p&gt;Before running the script, I suggest that you ensure your anonymity. &lt;/p&gt;
-&lt;p&gt;The best method I recommend is to set up/buy a VPN. Otherwise, use proxy. &lt;/p&gt;
-&lt;p&gt;Another good solution is to go to a random place outside your house where you can access the Internet. &lt;a href=&quot;https://mr-polite.github.io/hacking/2017/09/21/using-macchanger.html&quot;&gt;Then run &lt;code class=&quot;language-text&quot;&gt;macchanger&lt;/code&gt; to temporarily change your mac address.&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Now ready&lt;/h2&gt;
-&lt;p&gt;Then, just run &lt;code class=&quot;language-text&quot;&gt;facebook.py&lt;/code&gt; (set environment path or locate your &lt;code class=&quot;language-text&quot;&gt;facebook.py&lt;/code&gt; file before using it. You know this already):&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ python facebook.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using macchanger]]></title><description><![CDATA[What is macchanger Macchanger is a little program that helps you fake (sometimes called spoof) your mac address.  Using ifconfig and…]]></description><link>https://9oelm.github.io/2017-09-21--using-macchanger/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--using-macchanger/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;What is macchanger&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;killall [process name]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using macchanger]]></title><description><![CDATA[What is macchanger Macchanger is a little program that helps you fake (sometimes called spoof) your mac address.  Using ifconfig and…]]></description><link>https://9oelm.github.io/2017-09-21--using-macchanger/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--using-macchanger/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;What is macchanger&lt;/h1&gt;
 &lt;p&gt;Macchanger is a little program that helps you fake (sometimes called spoof) your mac address. &lt;/p&gt;
 &lt;h2&gt;Using ifconfig and macchanger&lt;/h2&gt;
 &lt;p&gt;The usage is really simple.&lt;/p&gt;
@@ -7512,7 +7495,24 @@ sudo service network-manager start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This way, you do not have to manually restart wifi after &lt;code class=&quot;language-text&quot;&gt;ifconfig wlan0 up&lt;/code&gt;. &lt;/p&gt;
 &lt;h2&gt;Warning&lt;/h2&gt;
 &lt;p&gt;The fake mac address will be reset to the original mac address if you choose to connect to another wifi or restart the interface. Now, there is a solution to spoof the mac address every time the machine wakes up. &lt;/p&gt;
-&lt;p&gt;See &lt;a href=&quot;https://mr-polite.github.io/hacking/2017/09/21/changing-mac-address-semi-permanently.html&quot;&gt;spoofing the mac address semi-permanently&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Installing torrent on debian based linux]]></title><description><![CDATA[Guidance First, download utorrent server from the  utorrent website . Then, follow this guide in detail:
+&lt;p&gt;See &lt;a href=&quot;https://mr-polite.github.io/hacking/2017/09/21/changing-mac-address-semi-permanently.html&quot;&gt;spoofing the mac address semi-permanently&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using tmux]]></title><description><![CDATA[Scrolling in tmux Using tmux, you sometimes wanna scroll up and down the window just like you used to in the normal bash shell. It’s dead…]]></description><link>https://9oelm.github.io/2017-09-21--Using-tmux/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--Using-tmux/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Scrolling in tmux&lt;/h2&gt;
+&lt;p&gt;Using tmux, you sometimes wanna scroll up and down the window just like you used to in the normal bash shell.&lt;/p&gt;
+&lt;p&gt;It’s dead simple as this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl + b + [&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will allow you to scroll.
+Pressing q would quit scroll mode.&lt;/p&gt;
+&lt;h2&gt;Getting back to tmux session&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;tmux attach -t [session number]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;would do it. you can check the session number with:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;tmux ls&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Killing a window / a pane&lt;/h2&gt;
+&lt;p&gt;for a window:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl + b + &amp;amp;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;for a pane:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl + b + x&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Selecting a pane&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl + b + q &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;will show you numbers on panes. Type the number of a pane to go to that pane.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Installing torrent on debian based linux]]></title><description><![CDATA[Guidance First, download utorrent server from the  utorrent website . Then, follow this guide in detail:
  https://askubuntu.com/questions…]]></description><link>https://9oelm.github.io/2017-09-20--installing-torrent-on-debian/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-20--installing-torrent-on-debian/</guid><pubDate>Wed, 20 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Guidance&lt;/h2&gt;
 &lt;p&gt;First, download utorrent server from the &lt;a href=&quot;http://www.utorrent.com/downloads/linux&quot;&gt;utorrent website&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Then, follow this guide in detail:
