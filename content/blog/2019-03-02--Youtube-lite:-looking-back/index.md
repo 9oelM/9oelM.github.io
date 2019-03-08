@@ -4,7 +4,7 @@ date: "2019-03-02T09:00:00.009Z"
 category: "works"
 ---
 So I nearly worked half a year (indeed!) on the project [Youtube Lite](https://youtube-lite.js.org).
-Here's a [related post on that if you wanna see.](https://9oelm.github.io/2018-09-18--Controlled-youtube-(2\):-adding-tests/)
+Here's a [related post on that if you wanna see.](https://9oelm.github.io/2018-09-18--Controlled-youtube-(2):-adding-tests/)
 
 # Things I learned
 
@@ -29,4 +29,4 @@ Here's a [related post on that if you wanna see.](https://9oelm.github.io/2018-0
 ## Setup, setup, setup
 - Project setup is really important. Choosing suitable tools will make your life happier. Get dependencies for linting, bundling, warning, testing, ... anything that helps make your life easier. 
 - Also, keep updated with project dependencies. It may be a good idea to use something like [Dependabot](https://dependabot.com/). If you have like 10+ dependencies to update and you update them once and tests break, you don't know which one they break from. 
-- It gets really difficult for you to change dependencies after you have subsisted 
+- It gets really difficult for you to change dependencies after you have subsisted on them for a while. So your initial decision becomes important.
