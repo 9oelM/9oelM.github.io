@@ -31,7 +31,7 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>. Joel loves javascript and has also recently started to gradually love python as well. He's greatly fascinated by exploring new programming languages and technologies and launching up off-the-wall projects using them. 
+              Written by <strong>{author}</strong>. Joel loves javascript and has also recently started to gradually love python as well. He's greatly fascinated by exploring new programming languages and technologies, and launching up off-the-wall projects using them. 
               {` `}
               <a href={`https://github.com/${social.twitter}`}>
                 Go check him up on Github!
