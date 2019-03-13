@@ -1,5 +1,5 @@
 ---
-title: "Envirnoment setup on cloud"
+title: "Environment setup on cloud"
 date: "2018-12-29T09:00:00.009Z"
 category: "development"
 ---
