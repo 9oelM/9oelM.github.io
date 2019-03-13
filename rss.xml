@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 09 Mar 2019 12:58:51 GMT</lastBuildDate><item><title><![CDATA[100 Books Project (1): Reflection and reading notes on Remember Who You Are: Life Stories That Inspire the Heart and Mind]]></title><description><![CDATA[Reflections Again, another big encouragement from a book.  Things I got to know: Success is not everything. Things after success are…]]></description><link>https://9oelm.github.io/2019-03-09--100BooksProject-(1):Remember-Who-You-Are:-Life-Stories-That-Inspire-the-Heart-and-Mind/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-09--100BooksProject-(1):Remember-Who-You-Are:-Life-Stories-That-Inspire-the-Heart-and-Mind/</guid><pubDate>Sat, 09 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Reflections&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 13 Mar 2019 13:45:19 GMT</lastBuildDate><item><title><![CDATA[Updating python 3 on an outdated Ubuntu]]></title><description><![CDATA[The problem Sometimes you cannot easily change the version of Ubuntu  and  python if you are running them on cloud. I am using  cloud9 , as…]]></description><link>https://9oelm.github.io/2019-03-13--Updating-python3-on-an-outdated-ubuntu/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-13--Updating-python3-on-an-outdated-ubuntu/</guid><pubDate>Wed, 13 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;The problem&lt;/h1&gt;
+&lt;p&gt;Sometimes you cannot easily change the version of Ubuntu &lt;em&gt;and&lt;/em&gt; python if you are running them on cloud. I am using &lt;a href=&quot;c9.io&quot;&gt;cloud9&lt;/a&gt;, as you might have expected, because I’m still in the Navy, without any personal devices. I cannot go home to open up my laptop to do anything better.&lt;/p&gt;
+&lt;p&gt;The version of Ubuntu and &lt;code class=&quot;language-text&quot;&gt;python&lt;/code&gt; were both too not satisfiable. I had to update the version of &lt;code class=&quot;language-text&quot;&gt;python&lt;/code&gt; on Ubuntu 14.04.5:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 14.04.5 LTS
+Release:        14.04
+Codename:       trusty
+
+$ python3 --version
+Python 3.4.3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The python version was not enough for me to do some works on Jupyter notebook. I needed &lt;code class=&quot;language-text&quot;&gt;python^3.7&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;and below command did not work at all for me:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo apt-get update
+
+$ sudo apt-get upgrade
+
+$ sudo apt-get install python3.7
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package python3.7
+E: Couldn&amp;#39;t find any package by regex &amp;#39;python3.7&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;same for &lt;code class=&quot;language-text&quot;&gt;python3.6&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;So &lt;a href=&quot;https://docs.python-guide.org/starting/install3/linux/&quot;&gt;I searched up&lt;/a&gt; and I think I found a solution.&lt;/p&gt;
+&lt;h1&gt;Solution&lt;/h1&gt;
+&lt;h2&gt;use the python distribution from deadsnakes’ PPA&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+$ sudo apt-get update
+$ sudo apt-get install python3.7&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;These lines of commands worked for me!&lt;/p&gt;
+&lt;h2&gt;PPA&lt;/h2&gt;
+&lt;p&gt;But what’s PPA in linux? &lt;a href=&quot;https://itsfoss.com/ppa-guide/&quot;&gt;Again I searched&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PPA stands for Personal Package Archive.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ubuntu controls software and its version too. But a new release of software does not of course get immediately reflected by Ubuntu (for stability, safety, etc). But if you really want to get it, you then get to use &lt;strong&gt;PPA&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;Therefore, PPA’s not official, it’s personal to the developer. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ubuntu provides &lt;a href=&quot;https://launchpad.net/ubuntu&quot;&gt;a platform called Launchpad&lt;/a&gt; that enables software developers to create their own repositories.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Yeah. So even &lt;em&gt;you&lt;/em&gt; can add a repo to Launchpad.&lt;/p&gt;
+&lt;p&gt;So this is what you actually did:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo apt-get install software-properties-common # ?
+$ sudo add-apt-repository ppa:deadsnakes/ppa # adds the PPA repository to the list.
+$ sudo apt-get update
+$ sudo apt-get install python3.7 # installs the package&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;&lt;a href=&quot;https://askubuntu.com/questions/1000118/what-is-software-properties-common&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;software-properties-common&lt;/code&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Then what’s &lt;code class=&quot;language-text&quot;&gt;software-properties-common&lt;/code&gt;?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This software provides an abstraction of the used apt repositories. It allows you to easily manage your distribution and independent software vendor software sources.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Without it, you would need to add and remove repositories (such as &lt;strong&gt;PPAs&lt;/strong&gt;) manually by editing /etc/apt/sources.list and/or any subsidiary files in /etc/apt/sources.list.d&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Yes. Yeap. In short, it provides an easy and useful mechanism for you to add/remove PPAs. So you need them.&lt;/p&gt;
+&lt;h1&gt;Switching &lt;code class=&quot;language-text&quot;&gt;python&lt;/code&gt; version&lt;/h1&gt;
+&lt;p&gt;But if I enter &lt;code class=&quot;language-text&quot;&gt;python3 --version&lt;/code&gt;, it would show me:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Python 3.4.3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So how do I get it pointed to &lt;code class=&quot;language-text&quot;&gt;python3.7&lt;/code&gt; I have just newly installed?&lt;/p&gt;
+&lt;h1&gt;Get &lt;code class=&quot;language-text&quot;&gt;python3.7&lt;/code&gt; kernel on Jupyter notebook&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;ref: &lt;a href=&quot;https://ipython.readthedocs.io/en/latest/install/kernel_install.html&quot;&gt;IPython docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Jupyter team maintains the IPython kernel since the Jupyter notebook server depends on the IPython kernel functionality.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So in fact I didn’t actually need to upgrade python version on Ubuntu. But anyways, that was a good piece of knowledge.&lt;/p&gt;
+&lt;p&gt;Then how do I get it on my Jupyter.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;python3 -m pip install ipykernel
+python3 -m ipykernel install --user&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ahh. Another error came up!!!!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo python3.7 -m pip install ipykernel                                                                                         
+Traceback (most recent call last):
+  File &amp;quot;/usr/lib/python3.7/runpy.py&amp;quot;, line 183, in _run_module_as_main
+    mod_name, mod_spec, code = _get_module_details(mod_name, _Error)
+  File &amp;quot;/usr/lib/python3.7/runpy.py&amp;quot;, line 142, in _get_module_details
+    return _get_module_details(pkg_main_name, error)
+  File &amp;quot;/usr/lib/python3.7/runpy.py&amp;quot;, line 109, in _get_module_details
+    __import__(pkg_name)
+  File &amp;quot;/usr/lib/python3/dist-packages/pip/__init__.py&amp;quot;, line 59, in &amp;lt;module&amp;gt;
+    from pip.log import logger
+  File &amp;quot;/usr/lib/python3/dist-packages/pip/log.py&amp;quot;, line 9, in &amp;lt;module&amp;gt;
+    import colorama, pkg_resources
+  File &amp;quot;&amp;lt;frozen importlib._bootstrap&amp;gt;&amp;quot;, line 983, in _find_and_load
+  File &amp;quot;&amp;lt;frozen importlib._bootstrap&amp;gt;&amp;quot;, line 967, in _find_and_load_unlocked
+  File &amp;quot;&amp;lt;frozen importlib._bootstrap&amp;gt;&amp;quot;, line 668, in _load_unlocked
+  File &amp;quot;&amp;lt;frozen importlib._bootstrap&amp;gt;&amp;quot;, line 638, in _load_backward_compatible
+  File &amp;quot;/usr/share/python-wheels/setuptools-3.3-py2.py3-none-any.whl/pkg_resources.py&amp;quot;, line 1479, in &amp;lt;module&amp;gt;
+    register_loader_type(importlib_bootstrap.SourceFileLoader, DefaultProvider)
+AttributeError: module &amp;#39;importlib._bootstrap&amp;#39; has no attribute &amp;#39;SourceFileLoader&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now I’m fully exhausted. Returning next time to solve this problem. At least I got &lt;code class=&quot;language-text&quot;&gt;python3.7&lt;/code&gt; working on Ubuntu. I wish if I could use my laptop to just create an environment with &lt;code class=&quot;language-text&quot;&gt;conda&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;virtualenv&lt;/code&gt; to setup a project with a dedicated python version… or &lt;code class=&quot;language-text&quot;&gt;docker&lt;/code&gt; or whatever. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[100 Books Project (1): Reflection and reading notes on Remember Who You Are: Life Stories That Inspire the Heart and Mind]]></title><description><![CDATA[Reflections Again, another big encouragement from a book.  Things I got to know: Success is not everything. Things after success are…]]></description><link>https://9oelm.github.io/2019-03-09--100BooksProject-(1):Remember-Who-You-Are:-Life-Stories-That-Inspire-the-Heart-and-Mind/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-09--100BooksProject-(1):Remember-Who-You-Are:-Life-Stories-That-Inspire-the-Heart-and-Mind/</guid><pubDate>Sat, 09 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Reflections&lt;/h1&gt;
 &lt;p&gt;Again, another big encouragement from a book. &lt;/p&gt;
 &lt;p&gt;Things I got to know:&lt;/p&gt;
 &lt;ul&gt;
@@ -143,7 +236,7 @@ GOOP has:&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/goop-where-good-friends-stay/id1260299914?ls=1&amp;#x26;mt=8&quot;&gt;been downloaded 10K+ times on Google Play&lt;/a&gt;. Stats not shown on App Store. &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.facebook.com/goop4groups/?ref=goop&quot;&gt;got 1K+ likes on Facebook&lt;/a&gt;. &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Yeah, true that. I have only contributed at the beginning for the logo, design, and landing page, but it was really a worthwhile experience, looking back—especially because Goop has made such a success now. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Envirnoment setup on cloud]]></title><description><![CDATA[The problem So now I had to build an open source project called  , but on cloud only because for now I cannot have an access to my own…]]></description><link>https://9oelm.github.io/2018-12-29--Environment-setup-on-cloud/</link><guid isPermaLink="false">https://9oelm.github.io/2018-12-29--Environment-setup-on-cloud/</guid><pubDate>Sat, 29 Dec 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;The problem&lt;/h1&gt;
+&lt;p&gt;Yeah, true that. I have only contributed at the beginning for the logo, design, and landing page, but it was really a worthwhile experience, looking back—especially because Goop has made such a success now. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Environment setup on cloud]]></title><description><![CDATA[The problem So now I had to build an open source project called  , but on cloud only because for now I cannot have an access to my own…]]></description><link>https://9oelm.github.io/2018-12-29--Environment-setup-on-cloud/</link><guid isPermaLink="false">https://9oelm.github.io/2018-12-29--Environment-setup-on-cloud/</guid><pubDate>Sat, 29 Dec 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;The problem&lt;/h1&gt;
 &lt;p&gt;So now I had to build an open source project called &lt;a href=&quot;https://github.com/TypeStrong/typedoc&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;typedoc&lt;/code&gt;&lt;/a&gt;, but on cloud only because for now I cannot have an access to my own laptop. Plus I wanted a stronger computing power. &lt;/p&gt;
 &lt;h1&gt;Resort&lt;/h1&gt;
 &lt;p&gt;So I knew Google provides its cloud platform with $300.00 free trial credits. And I started to look at GCP from then.&lt;/p&gt;
