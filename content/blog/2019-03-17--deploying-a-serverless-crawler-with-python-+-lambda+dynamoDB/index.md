@@ -1,6 +1,6 @@
 ---
 title: "Deploying a serverless crawler with python + lambda + dynamoDB"
-date: "2019-03-13T09:00:00.009Z"
+date: "2019-03-18T09:00:00.009Z"
 category: "development"
 tags: ["development", "aws", "python", "serverless", "lambda", "dynamoDB"]
 ---
