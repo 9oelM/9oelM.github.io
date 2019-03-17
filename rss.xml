@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 13 Mar 2019 19:07:13 GMT</lastBuildDate><item><title><![CDATA[Updating python 3 on an outdated Ubuntu]]></title><description><![CDATA[The problem Sometimes you cannot easily change the version of Ubuntu  and  python if you are running them on cloud. I am using  cloud9 , as…]]></description><link>https://9oelm.github.io/2019-03-13--Updating-python3-on-an-outdated-ubuntu/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-13--Updating-python3-on-an-outdated-ubuntu/</guid><pubDate>Wed, 13 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;The problem&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 17 Mar 2019 16:07:48 GMT</lastBuildDate><item><title><![CDATA[Updating python 3 on an outdated Ubuntu]]></title><description><![CDATA[The problem Sometimes you cannot easily change the version of Ubuntu  and  python if you are running them on cloud. I am using  cloud9 , as…]]></description><link>https://9oelm.github.io/2019-03-13--Updating-python3-on-an-outdated-ubuntu/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-13--Updating-python3-on-an-outdated-ubuntu/</guid><pubDate>Wed, 13 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;The problem&lt;/h1&gt;
 &lt;p&gt;Sometimes you cannot easily change the version of Ubuntu &lt;em&gt;and&lt;/em&gt; python if you are running them on cloud. I am using &lt;a href=&quot;c9.io&quot;&gt;cloud9&lt;/a&gt;, as you might have expected, because I’m still in the Navy, without any personal devices. I cannot go home to open up my laptop to do anything better.&lt;/p&gt;
 &lt;p&gt;The version of Ubuntu and &lt;code class=&quot;language-text&quot;&gt;python&lt;/code&gt; were both too not satisfiable. I had to update the version of &lt;code class=&quot;language-text&quot;&gt;python&lt;/code&gt; on Ubuntu 14.04.5:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ lsb_release -a
@@ -214,7 +214,299 @@ AttributeError: module &amp;#39;importlib._bootstrap&amp;#39; has no attribute &
 &lt;/blockquote&gt;
 &lt;p&gt;이 과정 속에 정말 많은 여러가지가 섞여 있다. 내가 말하지 않은 것들도 말이다: 관계의 치유, 생각의 전환, 회개, 믿음, 등등… 여러모로 진짜 많은 생각을 하게 만드는 책이다. &lt;/p&gt;
 &lt;h1&gt;Epilogue&lt;/h1&gt;
-&lt;p&gt;사실 내가 횡설수설했다. 너무 많이 적어서. 감안해줬으면 좋겠다. 진짜. 근데 이 책은 좋았다.  &lt;/p&gt;</content:encoded></item><item><title><![CDATA[100 Books Project (1): Reflection and reading notes on Remember Who You Are: Life Stories That Inspire the Heart and Mind]]></title><description><![CDATA[Reflections Again, another big encouragement from a book.  Things I got to know: Success is not everything. Things after success are…]]></description><link>https://9oelm.github.io/2019-03-09--100BooksProject-(1):Remember-Who-You-Are:-Life-Stories-That-Inspire-the-Heart-and-Mind/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-09--100BooksProject-(1):Remember-Who-You-Are:-Life-Stories-That-Inspire-the-Heart-and-Mind/</guid><pubDate>Sat, 09 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Reflections&lt;/h1&gt;
+&lt;p&gt;사실 내가 횡설수설했다. 너무 많이 적어서. 감안해줬으면 좋겠다. 진짜. 근데 이 책은 좋았다.  &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Deploying a serverless crawler with python + lambda + dynamoDB]]></title><description><![CDATA[Prerequisites Have a recent version of node installed Install   globally Initialize serverless project To initialize it with a python…]]></description><link>https://9oelm.github.io/2019-03-17--deploying-a-serverless-crawler-with-python-+-lambda+dynamoDB/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-17--deploying-a-serverless-crawler-with-python-+-lambda+dynamoDB/</guid><pubDate>Wed, 13 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Prerequisites&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Have a recent version of node installed&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; stable&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install &lt;code class=&quot;language-text&quot;&gt;serverless&lt;/code&gt; globally&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g serverless&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Initialize serverless project&lt;/h1&gt;
+&lt;p&gt;To initialize it with a python &lt;a href=&quot;https://serverless.com/framework/docs/providers/aws/cli-reference/create/&quot;&gt;template&lt;/a&gt;,&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;serverless create --template aws-python3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;see more templates &lt;a href=&quot;https://serverless.com/framework/docs/providers/aws/cli-reference/create#available-templates&quot;&gt;from the documentation.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Then you are gonna see something like&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Serverless: Generating boilerplate...
+ _______                             __
+|   _   .-----.----.--.--.-----.----|  .-----.-----.-----.
+|   |___|  -__|   _|  |  |  -__|   _|  |  -__|__ --|__ --|
+|____   |_____|__|  \___/|_____|__| |__|_____|_____|_____|
+|   |   |             The Serverless Application Framework
+|       |                           serverless.com, v1.39.0
+ -------&amp;#39;
+
+Serverless: Successfully generated boilerplate for template: &amp;quot;aws-python3&amp;quot;
+Serverless: NOTE: Please update the &amp;quot;service&amp;quot; property in serverless.yml with your service name&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Successful!&lt;/p&gt;
+&lt;h1&gt;Give permission to &lt;code class=&quot;language-text&quot;&gt;serverless&lt;/code&gt; cli on aws&lt;/h1&gt;
+&lt;h2&gt;AWS Access keys&lt;/h2&gt;
+&lt;p&gt;You need to create something called &lt;em&gt;AWS Access Keys&lt;/em&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Head over to &lt;a href=&quot;https://console.aws.amazon.com/iam/home&quot;&gt;Identity and Access Management home&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Browse to &lt;a href=&quot;https://console.aws.amazon.com/iam/home#/users&quot;&gt;Users tab&lt;/a&gt; and click &lt;em&gt;add user&lt;/em&gt;.
+
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 97.10144927536231%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABsklEQVQ4y61U227iQAyd79rX/Yd+0D70C/aj2n2s+tJSRWWhpRBEbjOZa3JqG4ZShCqEsHJkZzI+sY8nUbiC3b06TMoosUopwVqLqqrQNA3W6zW89xiGASkx0glExBgRIvsE4wKsD7KmmJUJmKgsSyyXS3Rdh77vobWG6Q2M0RR30F1LsUFrI1xIlDnSNYofyXMRapQFyEIGJ2lt0BmHutFotIV2EZ3dwSW6H9D7AYbg47hvf094aI4kML3F/48GT8UHXt5rIeFEGwa4SCBvdwjpq0qVq8v6cNn7qg9wrgmhc060Yw0Zq9VKNIwhCAKBdba0z1on+zl2GZ6HkhBpiEKYJ81gos1mI1PvSMeqqiVm8JD4ed63jck7T5pSh8N4WsOc6EPEfD7HbDbDdDpFXdfyjI9X27Z74hC8EAfqQh1P+PAF3CoTTSYTFEUh5IvFQkil7V1XW7ivc5hJj8l5QLyZCXLVueWs3+HaN8JjOyXF2VM+JjpV7blQuLKpS6r4scJrkAwywC2u33L+fi8B/y8j5T8vHR7frEDxd3tJm/zL2GiPadnj5u8Dfv25x+/bf/gEkpXSGXsIP1MAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Add user&quot;
+        title=&quot;&quot;
+        src=&quot;/static/83a303283d988a2c050cd02c9223e8fc/40fad/1.png&quot;
+        srcset=&quot;/static/83a303283d988a2c050cd02c9223e8fc/707e9/1.png 148w,
+/static/83a303283d988a2c050cd02c9223e8fc/649e0/1.png 295w,
+/static/83a303283d988a2c050cd02c9223e8fc/40fad/1.png 590w,
+/static/83a303283d988a2c050cd02c9223e8fc/b3fef/1.png 885w,
+/static/83a303283d988a2c050cd02c9223e8fc/819be/1.png 897w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click on &lt;em&gt;Attach existing policies directly&lt;/em&gt; and &lt;em&gt;Create policy&lt;/em&gt;.
+Add the following &lt;a href=&quot;https://gist.github.com/ServerlessBot/7618156b8671840a539f405dea2704c8&quot;&gt;json provided by &lt;code class=&quot;language-text&quot;&gt;serverless&lt;/code&gt; team&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token property&quot;&gt;&quot;Statement&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;Action&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;apigateway:*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:CancelUpdateStack&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:ContinueUpdateRollback&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:CreateChangeSet&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:CreateStack&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:CreateUploadBucket&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:DeleteStack&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:Describe*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:EstimateTemplateCost&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:ExecuteChangeSet&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:Get*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:List*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:PreviewStackUpdate&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:UpdateStack&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:UpdateTerminationProtection&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;cloudformation:ValidateTemplate&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;dynamodb:CreateTable&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;dynamodb:DeleteTable&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;dynamodb:DescribeTable&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:AttachInternetGateway&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:AuthorizeSecurityGroupIngress&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:CreateInternetGateway&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:CreateNetworkAcl&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:CreateNetworkAclEntry&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:CreateRouteTable&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:CreateSecurityGroup&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:CreateSubnet&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:CreateTags&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:CreateVpc&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:DeleteInternetGateway&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:DeleteNetworkAcl&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:DeleteNetworkAclEntry&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:DeleteRouteTable&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:DeleteSecurityGroup&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:DeleteSubnet&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:DeleteVpc&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:Describe*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:DetachInternetGateway&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;ec2:ModifyVpcAttribute&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;events:DeleteRule&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;events:DescribeRule&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;events:ListRuleNamesByTarget&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;events:ListRules&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;events:ListTargetsByRule&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;events:PutRule&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;events:PutTargets&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;events:RemoveTargets&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;iam:CreateRole&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;iam:DeleteRole&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;iam:DeleteRolePolicy&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;iam:GetRole&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;iam:PassRole&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;iam:PutRolePolicy&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;iot:CreateTopicRule&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;iot:DeleteTopicRule&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;iot:DisableTopicRule&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;iot:EnableTopicRule&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;iot:ReplaceTopicRule&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;kinesis:CreateStream&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;kinesis:DeleteStream&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;kinesis:DescribeStream&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;lambda:*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;logs:CreateLogGroup&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;logs:DeleteLogGroup&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;logs:DescribeLogGroups&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;logs:DescribeLogStreams&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;logs:FilterLogEvents&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;logs:GetLogEvents&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:CreateBucket&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:DeleteBucket&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:DeleteBucketPolicy&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:DeleteObject&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:DeleteObjectVersion&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:GetObject&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:GetObjectVersion&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:ListAllMyBuckets&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:ListBucket&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:PutBucketNotification&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:PutBucketPolicy&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:PutBucketTagging&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:PutBucketWebsite&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:PutEncryptionConfiguration&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;s3:PutObject&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;sns:CreateTopic&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;sns:DeleteTopic&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;sns:GetSubscriptionAttributes&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;sns:GetTopicAttributes&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;sns:ListSubscriptions&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;sns:ListSubscriptionsByTopic&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;sns:ListTopics&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;sns:SetSubscriptionAttributes&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;sns:SetTopicAttributes&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;sns:Subscribe&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;sns:Unsubscribe&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;states:CreateStateMachine&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&quot;states:DeleteStateMachine&quot;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;Effect&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Allow&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;Resource&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;*&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token property&quot;&gt;&quot;Version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;2012-10-17&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;em&gt;Next&lt;/em&gt; until you see &lt;em&gt;Create user&lt;/em&gt;. Then, copy the &lt;em&gt;Access Key ID&lt;/em&gt; and &lt;em&gt;Secret access key&lt;/em&gt; to somewhere like notepad.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enter in the API keys&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;export&lt;/span&gt; AWS_ACCESS_KEY_ID&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;your-key-here&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;export&lt;/span&gt; AWS_SECRET_ACCESS_KEY&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;your-secret-key-here&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are now available for serverless to use&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deploy&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;serverless deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then you are gonna see &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Serverless: Packaging service&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Serverless: Excluding development dependencies&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Serverless: Creating Stack&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Serverless: Checking Stack create progress&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Serverless: Stack create finished&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Serverless: Uploading CloudFormation &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; to S3&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Serverless: Uploading artifacts&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Serverless: Uploading &lt;span class=&quot;token function&quot;&gt;service&lt;/span&gt; aws-python3.zip &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; to S3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;1.97 KB&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Serverless: Validating template&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Serverless: Updating Stack&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Serverless: Checking Stack update progress&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Serverless: Stack update finished&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Service Information
+service: aws-python3
+stage: dev
+region: us-east-1
+stack: aws-python3-dev
+resources: 5
+api keys:
+None
+endpoints:
+None
+functions:
+hello: aws-python3-dev-hello
+layers:
+None&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add a profile
+Yes. Do add a profile so that next time you create a similar kind of project, you will not have to enter in your api keys again.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html&quot;&gt;install &lt;code class=&quot;language-text&quot;&gt;awscli&lt;/code&gt;&lt;/a&gt; (if this does not work, use &lt;a href=&quot;https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/install-bundle.html&quot;&gt;bundle installer.&lt;/a&gt; If the install command &lt;a href=&quot;https://github.com/MeetMe/newrelic-plugin-agent/issues/151&quot;&gt;breaks with an error, perhaps run &lt;code class=&quot;language-text&quot;&gt;apt-get install&lt;/code&gt;apt-get install python-dev`&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;pip &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; awscli --upgrade --user&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://serverless.com/framework/docs/providers/aws/cli-reference/config-credentials/&quot;&gt;initialize a profile&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;serverless config credentials --provider aws --key 1234 --secret 5678 --profile custom-profile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Later on, you can use this profile in this way:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;serverless deploy --aws-profile profileIjustMade&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;of course you can modify your profile info and api keys in &lt;code class=&quot;language-text&quot;&gt;~/.aws/credentials&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;Check your function is working&lt;/h1&gt;
+&lt;p&gt;First, set a function name in &lt;code class=&quot;language-text&quot;&gt;serverless.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;functions:
+  hello:
+    handler: handler.hello
+    name: hello&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then &lt;code class=&quot;language-text&quot;&gt;sls deploy&lt;/code&gt; again to make changes.
+Now, &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ serverless invoke -f hello
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;statusCode&quot;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt; 200,
+    &lt;span class=&quot;token string&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;{\&quot;message\&quot;: \&quot;Go Serverless v1.0! Your function executed successfully!\&quot;, \&quot;input\&quot;: {}}&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;yes, it works!!&lt;/p&gt;
+&lt;h1&gt;Want to include python modules? Make a &lt;a href=&quot;https://docs.aws.amazon.com/ko_kr/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html&quot;&gt;deployment package.&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A deployment package is a ZIP archive that contains your function code and dependencies.&lt;/strong&gt; &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You need to create a deployment package if you use the Lambda API to manage functions, or &lt;strong&gt;if your code uses libraries other than the AWS SDK.&lt;/strong&gt; Other libraries and dependencies need to be included in the deployment package. You can upload the package directly to Lambda, or you can use an Amazon S3 bucket, and then upload it to Lambda.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;First, you would need to have aws cli installed. If you have not, check above for steps. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then install dependencies to a local directory with pip, and include them in your deployment package.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;j031:~/workspace &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; $ &lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; packages
+j031:~/workspace &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; $ &lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; packages/
+j031:~/workspace/packages &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; $ &lt;span class=&quot;token function&quot;&gt;ls&lt;/span&gt;
+j031:~/workspace/packages &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; $ pip &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; requests --target &lt;span class=&quot;token keyword&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create zip of packages &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ zip -r9 ../function.zip .&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add function code to the zip&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;j031:~/workspace/es (master) $ zip -g function.zip handler.py
+adding: handler.py (deflated 50%)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Upload!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;j031:~/workspace/es (master) $ aws lambda update-function-code --function-name crawler --zip-file fileb://function.zip&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you feel tiredsome, just create &lt;code class=&quot;language-text&quot;&gt;update.sh&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sh&quot;&gt;&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;mkdir .tmp
+zip -r9 ./.tmp/function.zip ./packages
+zip -g ./.tmp/function.zip handler.py
+aws lambda update-function-code --function-name crawler --zip-file fileb://./.tmp/function.zip
+rm -rf ./.tmp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;OR use serverless-python-requirements&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/UnitedIncome/serverless-python-requirements&quot;&gt;Just install it&lt;/a&gt;, and produce &lt;code class=&quot;language-text&quot;&gt;requirements.txt&lt;/code&gt; by running &lt;code class=&quot;language-text&quot;&gt;pip freeze &amp;gt; requirements.txt&lt;/code&gt; and run &lt;code class=&quot;language-text&quot;&gt;sls deploy&lt;/code&gt;.
+&lt;em&gt;I find this way very much simpler and easier!&lt;/em&gt;&lt;/p&gt;
+&lt;h1&gt;Source code&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/9oelM/es&quot;&gt;The source code can be found from this repo!&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[100 Books Project (1): Reflection and reading notes on Remember Who You Are: Life Stories That Inspire the Heart and Mind]]></title><description><![CDATA[Reflections Again, another big encouragement from a book.  Things I got to know: Success is not everything. Things after success are…]]></description><link>https://9oelm.github.io/2019-03-09--100BooksProject-(1):Remember-Who-You-Are:-Life-Stories-That-Inspire-the-Heart-and-Mind/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-09--100BooksProject-(1):Remember-Who-You-Are:-Life-Stories-That-Inspire-the-Heart-and-Mind/</guid><pubDate>Sat, 09 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Reflections&lt;/h1&gt;
 &lt;p&gt;Again, another big encouragement from a book. &lt;/p&gt;
 &lt;p&gt;Things I got to know:&lt;/p&gt;
 &lt;ul&gt;

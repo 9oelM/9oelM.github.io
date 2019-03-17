@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.7ed804335a7a5fb887dd.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-4124805c0503dbfe42dd67d7f5715964.woff2) format("woff2"),url(/static/montserrat-latin-100-c8fb2f714bbc7bc3e8dfffa916b286dc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e4bf47bd171a9b2a72dd84c58bf90edf.woff2) format("woff2"),url(/static/montserrat-latin-100italic-d1f3f2d02ee4d7d2d4b1ad865014f189.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-444ae007121264bc1969d49b4031f9b2.woff2) format("woff2"),url(/static/montserrat-latin-200-edbce16a90aa22c297a0307b85789837.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-f316c5d1ec40f3e68654c3f38b3999f3.woff2) format("woff2"),url(/static/montserrat-latin-200italic-d7bbb730d9b5e11720b3eb32326dcca7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-0a7c6df06e85d978d096d4d18fd8d43d.woff2) format("woff2"),url(/static/montserrat-latin-300-5e86df2cad22d2ef2b03516334afae5e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-c076c4892bc7a4be7b9097e97a35012d.woff2) format("woff2"),url(/static/montserrat-latin-300italic-37c74a8d2d0d36a0a2c6e9a37ee15b0c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-501ce09c42716a2f6e1503a25eb174c9.woff2) format("woff2"),url(/static/montserrat-latin-400-f29d2b8559699b6beb5b29b25b8bc572.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-882908d9950d9c86ebd380877f293d95.woff2) format("woff2"),url(/static/montserrat-latin-400italic-22e7b04e5f2a901d49d4d342315a715a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-f0f2716c5fe401d175b88715e7d28685.woff2) format("woff2"),url(/static/montserrat-latin-500-991b453bf90a0980e78966d2af7e3d3a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-4590ebba421b3288c305305d7fa7b504.woff2) format("woff2"),url(/static/montserrat-latin-500italic-f3d41e4cdcc2314e49ddcea751d6f87f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-15c24f7109941777774ddd2c636c6a50.woff2) format("woff2"),url(/static/montserrat-latin-600-f6dc6096f48956908c1787d9a722570a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-6d10b80529d5c36c7c09fca7193af0fc.woff2) format("woff2"),url(/static/montserrat-latin-600italic-02c4833312d94b1b0866f073023a250e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-79982cd1f74c6fa7451bf9b37ead09ff.woff2) format("woff2"),url(/static/montserrat-latin-700-957e93fbbe131a59791cd820d98b7109.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-283438e9577fe6a684466bb100e105ec.woff2) format("woff2"),url(/static/montserrat-latin-700italic-ca627c5ccc65cf80c2ecaea44b997de9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-35386154b78d046218fc8f88a44ff515.woff2) format("woff2"),url(/static/montserrat-latin-800-756655905d91b77960888262e7d58d35.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-e1b52a7bd83e2324db6d92bdc206844c.woff2) format("woff2"),url(/static/montserrat-latin-800italic-a69f0add9d86c1a84311d7dd8693ba4a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-260c2ea3ef57feb82251952e605a36d5.woff2) format("woff2"),url(/static/montserrat-latin-900-186cae8091da578150d81958e217714a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-d785fb9fc74588ffb7f306799709a97d.woff2) format("woff2"),url(/static/montserrat-latin-900italic-43b527fe77254f97ea36e2b54e845ec4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-a50c381443e6993188ed9cc4b6806866.woff2) format("woff2"),url(/static/merriweather-latin-300-2c73b119ad85e697123658b8a091ff83.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-bd410cbf8c272acd4fbdd9f61a7015bf.woff2) format("woff2"),url(/static/merriweather-latin-300italic-9deeb422b65afb1daacc039296bb3640.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-f936cb550d4dcd769f75c453207ac5e6.woff2) format("woff2"),url(/static/merriweather-latin-400-ab0616e6d856817eff54eb8c5e1664e4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-5c9a23d08e2c851e5a25795b940acd4f.woff2) format("woff2"),url(/static/merriweather-latin-400italic-0ab4b54f3b1e8b14cf755970fde8ce35.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-1636f13a52ca3f0eb8784c9c57f62082.woff2) format("woff2"),url(/static/merriweather-latin-700-cc673c945b482dc1378d4a3c95ffd175.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-8b0db67123584893c6591accbc51640c.woff2) format("woff2"),url(/static/merriweather-latin-700italic-513649f5b9ba4675cff15cf3f7ad4f2a.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-46631a9aab93dec3ed34f429dd1a5646.woff2) format("woff2"),url(/static/merriweather-latin-900-a0528570caa2c785891308ce604d8db7.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-a26a8168916e5d4e5485081171d7fdb0.woff2) format("woff2"),url(/static/merriweather-latin-900italic-db42a3f34378e69ef5aebb6717f1f33e.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre code{white-space:pre-wrap!important;white-space:-moz-pre-wrap!important;white-space:-pre-wrap!important;white-space:-o-pre-wrap!important;word-wrap:break-word!important}</style><meta name="generator" content="Gatsby 2.1.18"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#009688"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><title data-react-helmet="true">Deploying a serverless crawler with python + lambda + dynamoDB | Joel&#x27;s dev blog</title><meta data-react-helmet="true" name="description" content="Prerequisites Have a recent version of node installed Install   globally Initialize serverless project To initialize it with a python  template , see more…"/><meta data-react-helmet="true" property="og:title" content="Deploying a serverless crawler with python + lambda + dynamoDB"/><meta data-react-helmet="true" property="og:description" content="Prerequisites Have a recent version of node installed Install   globally Initialize serverless project To initialize it with a python  template , see more…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Joel Mun"/><meta data-react-helmet="true" name="twitter:title" content="Deploying a serverless crawler with python + lambda + dynamoDB"/><meta data-react-helmet="true" name="twitter:description" content="Prerequisites Have a recent version of node installed Install   globally Initialize serverless project To initialize it with a python  template , see more…"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link as="script" rel="preload" href="/webpack-runtime-0489b67025381e2a7e2b.js"/><link as="script" rel="preload" href="/app-2fc270c585f0fd68b56d.js"/><link as="script" rel="preload" href="/styles-f6d9c6f8d24ce816fc91.js"/><link as="script" rel="preload" href="/0-bb9f324e33466de5edd0.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-280da5ee589fe49faed5.js"/><link as="fetch" rel="preload" href="/static/d/712/path---2019-03-17-deploying-a-serverless-crawler-with-python-lambda-dynamo-db-210-3f2-rhW8pUpm9BmGfgMwkXjSDerZFls.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">Joel&#x27;s dev blog</a></h3></header><main><h1>Deploying a serverless crawler with python + lambda + dynamoDB</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">March 13, 2019</p><div><h1>Prerequisites</h1>
+<ul>
+<li>
+<p>Have a recent version of node installed</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">nvm <span class="token function">install</span> stable</code></pre></div>
+</li>
+<li>
+<p>Install <code class="language-text">serverless</code> globally</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g serverless</code></pre></div>
+</li>
+</ul>
+<h1>Initialize serverless project</h1>
+<p>To initialize it with a python <a href="https://serverless.com/framework/docs/providers/aws/cli-reference/create/">template</a>,</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">serverless create --template aws-python3</code></pre></div>
+<p>see more templates <a href="https://serverless.com/framework/docs/providers/aws/cli-reference/create#available-templates">from the documentation.</a></p>
+<p>Then you are gonna see something like</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Serverless: Generating boilerplate...
+ _______                             __
+|   _   .-----.----.--.--.-----.----|  .-----.-----.-----.
+|   |___|  -__|   _|  |  |  -__|   _|  |  -__|__ --|__ --|
+|____   |_____|__|  \___/|_____|__| |__|_____|_____|_____|
+|   |   |             The Serverless Application Framework
+|       |                           serverless.com, v1.39.0
+ -------&#39;
+
+Serverless: Successfully generated boilerplate for template: &quot;aws-python3&quot;
+Serverless: NOTE: Please update the &quot;service&quot; property in serverless.yml with your service name</code></pre></div>
+<p>Successful!</p>
+<h1>Give permission to <code class="language-text">serverless</code> cli on aws</h1>
+<h2>AWS Access keys</h2>
+<p>You need to create something called <em>AWS Access Keys</em>.</p>
+<ol>
+<li>
+<p>Head over to <a href="https://console.aws.amazon.com/iam/home">Identity and Access Management home</a></p>
+</li>
+<li>
+<p>Browse to <a href="https://console.aws.amazon.com/iam/home#/users">Users tab</a> and click <em>add user</em>.
+
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 97.10144927536231%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABsklEQVQ4y61U227iQAyd79rX/Yd+0D70C/aj2n2s+tJSRWWhpRBEbjOZa3JqG4ZShCqEsHJkZzI+sY8nUbiC3b06TMoosUopwVqLqqrQNA3W6zW89xiGASkx0glExBgRIvsE4wKsD7KmmJUJmKgsSyyXS3Rdh77vobWG6Q2M0RR30F1LsUFrI1xIlDnSNYofyXMRapQFyEIGJ2lt0BmHutFotIV2EZ3dwSW6H9D7AYbg47hvf094aI4kML3F/48GT8UHXt5rIeFEGwa4SCBvdwjpq0qVq8v6cNn7qg9wrgmhc060Yw0Zq9VKNIwhCAKBdba0z1on+zl2GZ6HkhBpiEKYJ81gos1mI1PvSMeqqiVm8JD4ed63jck7T5pSh8N4WsOc6EPEfD7HbDbDdDpFXdfyjI9X27Z74hC8EAfqQh1P+PAF3CoTTSYTFEUh5IvFQkil7V1XW7ivc5hJj8l5QLyZCXLVueWs3+HaN8JjOyXF2VM+JjpV7blQuLKpS6r4scJrkAwywC2u33L+fi8B/y8j5T8vHR7frEDxd3tJm/zL2GiPadnj5u8Dfv25x+/bf/gEkpXSGXsIP1MAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Add user"
+        title=""
+        src="/static/83a303283d988a2c050cd02c9223e8fc/40fad/1.png"
+        srcset="/static/83a303283d988a2c050cd02c9223e8fc/707e9/1.png 148w,
+/static/83a303283d988a2c050cd02c9223e8fc/649e0/1.png 295w,
+/static/83a303283d988a2c050cd02c9223e8fc/40fad/1.png 590w,
+/static/83a303283d988a2c050cd02c9223e8fc/b3fef/1.png 885w,
+/static/83a303283d988a2c050cd02c9223e8fc/819be/1.png 897w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  </p>
+</li>
+<li>
+<p>Click on <em>Attach existing policies directly</em> and <em>Create policy</em>.
+Add the following <a href="https://gist.github.com/ServerlessBot/7618156b8671840a539f405dea2704c8">json provided by <code class="language-text">serverless</code> team</a>:</p>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+<span class="token property">"Statement"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"Action"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"apigateway:*"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:CancelUpdateStack"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:ContinueUpdateRollback"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:CreateChangeSet"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:CreateStack"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:CreateUploadBucket"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:DeleteStack"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:Describe*"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:EstimateTemplateCost"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:ExecuteChangeSet"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:Get*"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:List*"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:PreviewStackUpdate"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:UpdateStack"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:UpdateTerminationProtection"</span><span class="token punctuation">,</span>
+            <span class="token string">"cloudformation:ValidateTemplate"</span><span class="token punctuation">,</span>
+            <span class="token string">"dynamodb:CreateTable"</span><span class="token punctuation">,</span>
+            <span class="token string">"dynamodb:DeleteTable"</span><span class="token punctuation">,</span>
+            <span class="token string">"dynamodb:DescribeTable"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:AttachInternetGateway"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:AuthorizeSecurityGroupIngress"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:CreateInternetGateway"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:CreateNetworkAcl"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:CreateNetworkAclEntry"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:CreateRouteTable"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:CreateSecurityGroup"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:CreateSubnet"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:CreateTags"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:CreateVpc"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:DeleteInternetGateway"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:DeleteNetworkAcl"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:DeleteNetworkAclEntry"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:DeleteRouteTable"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:DeleteSecurityGroup"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:DeleteSubnet"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:DeleteVpc"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:Describe*"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:DetachInternetGateway"</span><span class="token punctuation">,</span>
+            <span class="token string">"ec2:ModifyVpcAttribute"</span><span class="token punctuation">,</span>
+            <span class="token string">"events:DeleteRule"</span><span class="token punctuation">,</span>
+            <span class="token string">"events:DescribeRule"</span><span class="token punctuation">,</span>
+            <span class="token string">"events:ListRuleNamesByTarget"</span><span class="token punctuation">,</span>
+            <span class="token string">"events:ListRules"</span><span class="token punctuation">,</span>
+            <span class="token string">"events:ListTargetsByRule"</span><span class="token punctuation">,</span>
+            <span class="token string">"events:PutRule"</span><span class="token punctuation">,</span>
+            <span class="token string">"events:PutTargets"</span><span class="token punctuation">,</span>
+            <span class="token string">"events:RemoveTargets"</span><span class="token punctuation">,</span>
+            <span class="token string">"iam:CreateRole"</span><span class="token punctuation">,</span>
+            <span class="token string">"iam:DeleteRole"</span><span class="token punctuation">,</span>
+            <span class="token string">"iam:DeleteRolePolicy"</span><span class="token punctuation">,</span>
+            <span class="token string">"iam:GetRole"</span><span class="token punctuation">,</span>
+            <span class="token string">"iam:PassRole"</span><span class="token punctuation">,</span>
+            <span class="token string">"iam:PutRolePolicy"</span><span class="token punctuation">,</span>
+            <span class="token string">"iot:CreateTopicRule"</span><span class="token punctuation">,</span>
+            <span class="token string">"iot:DeleteTopicRule"</span><span class="token punctuation">,</span>
+            <span class="token string">"iot:DisableTopicRule"</span><span class="token punctuation">,</span>
+            <span class="token string">"iot:EnableTopicRule"</span><span class="token punctuation">,</span>
+            <span class="token string">"iot:ReplaceTopicRule"</span><span class="token punctuation">,</span>
+            <span class="token string">"kinesis:CreateStream"</span><span class="token punctuation">,</span>
+            <span class="token string">"kinesis:DeleteStream"</span><span class="token punctuation">,</span>
+            <span class="token string">"kinesis:DescribeStream"</span><span class="token punctuation">,</span>
+            <span class="token string">"lambda:*"</span><span class="token punctuation">,</span>
+            <span class="token string">"logs:CreateLogGroup"</span><span class="token punctuation">,</span>
+            <span class="token string">"logs:DeleteLogGroup"</span><span class="token punctuation">,</span>
+            <span class="token string">"logs:DescribeLogGroups"</span><span class="token punctuation">,</span>
+            <span class="token string">"logs:DescribeLogStreams"</span><span class="token punctuation">,</span>
+            <span class="token string">"logs:FilterLogEvents"</span><span class="token punctuation">,</span>
+            <span class="token string">"logs:GetLogEvents"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:CreateBucket"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:DeleteBucket"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:DeleteBucketPolicy"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:DeleteObject"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:DeleteObjectVersion"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:GetObject"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:GetObjectVersion"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:ListAllMyBuckets"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:ListBucket"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:PutBucketNotification"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:PutBucketPolicy"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:PutBucketTagging"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:PutBucketWebsite"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:PutEncryptionConfiguration"</span><span class="token punctuation">,</span>
+            <span class="token string">"s3:PutObject"</span><span class="token punctuation">,</span>
+            <span class="token string">"sns:CreateTopic"</span><span class="token punctuation">,</span>
+            <span class="token string">"sns:DeleteTopic"</span><span class="token punctuation">,</span>
+            <span class="token string">"sns:GetSubscriptionAttributes"</span><span class="token punctuation">,</span>
+            <span class="token string">"sns:GetTopicAttributes"</span><span class="token punctuation">,</span>
+            <span class="token string">"sns:ListSubscriptions"</span><span class="token punctuation">,</span>
+            <span class="token string">"sns:ListSubscriptionsByTopic"</span><span class="token punctuation">,</span>
+            <span class="token string">"sns:ListTopics"</span><span class="token punctuation">,</span>
+            <span class="token string">"sns:SetSubscriptionAttributes"</span><span class="token punctuation">,</span>
+            <span class="token string">"sns:SetTopicAttributes"</span><span class="token punctuation">,</span>
+            <span class="token string">"sns:Subscribe"</span><span class="token punctuation">,</span>
+            <span class="token string">"sns:Unsubscribe"</span><span class="token punctuation">,</span>
+            <span class="token string">"states:CreateStateMachine"</span><span class="token punctuation">,</span>
+            <span class="token string">"states:DeleteStateMachine"</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">"Effect"</span><span class="token operator">:</span> <span class="token string">"Allow"</span><span class="token punctuation">,</span>
+        <span class="token property">"Resource"</span><span class="token operator">:</span> <span class="token string">"*"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token property">"Version"</span><span class="token operator">:</span> <span class="token string">"2012-10-17"</span>
+<span class="token punctuation">}</span></code></pre></div>
+</li>
+<li>
+<p>Click <em>Next</em> until you see <em>Create user</em>. Then, copy the <em>Access Key ID</em> and <em>Secret access key</em> to somewhere like notepad.</p>
+</li>
+<li>
+<p>Enter in the API keys</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">export</span> AWS_ACCESS_KEY_ID<span class="token operator">=</span><span class="token operator">&lt;</span>your-key-here<span class="token operator">></span>
+<span class="token function">export</span> AWS_SECRET_ACCESS_KEY<span class="token operator">=</span><span class="token operator">&lt;</span>your-secret-key-here<span class="token operator">></span>
+<span class="token comment"># AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are now available for serverless to use</span></code></pre></div>
+</li>
+<li>
+<p>Deploy</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">serverless deploy</code></pre></div>
+<p>Then you are gonna see </p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">Serverless: Packaging service<span class="token punctuation">..</span>.
+Serverless: Excluding development dependencies<span class="token punctuation">..</span>.
+Serverless: Creating Stack<span class="token punctuation">..</span>.
+Serverless: Checking Stack create progress<span class="token punctuation">..</span>.
+<span class="token punctuation">..</span><span class="token punctuation">..</span>.
+Serverless: Stack create finished<span class="token punctuation">..</span>.
+Serverless: Uploading CloudFormation <span class="token function">file</span> to S3<span class="token punctuation">..</span>.
+Serverless: Uploading artifacts<span class="token punctuation">..</span>.
+Serverless: Uploading <span class="token function">service</span> aws-python3.zip <span class="token function">file</span> to S3 <span class="token punctuation">(</span>1.97 KB<span class="token punctuation">)</span><span class="token punctuation">..</span>.
+Serverless: Validating template<span class="token punctuation">..</span>.
+Serverless: Updating Stack<span class="token punctuation">..</span>.
+Serverless: Checking Stack update progress<span class="token punctuation">..</span>.
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>.
+Serverless: Stack update finished<span class="token punctuation">..</span>.
+Service Information
+service: aws-python3
+stage: dev
+region: us-east-1
+stack: aws-python3-dev
+resources: 5
+api keys:
+None
+endpoints:
+None
+functions:
+hello: aws-python3-dev-hello
+layers:
+None</code></pre></div>
+</li>
+<li>
+<p>Add a profile
+Yes. Do add a profile so that next time you create a similar kind of project, you will not have to enter in your api keys again.</p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html">install <code class="language-text">awscli</code></a> (if this does not work, use <a href="https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/install-bundle.html">bundle installer.</a> If the install command <a href="https://github.com/MeetMe/newrelic-plugin-agent/issues/151">breaks with an error, perhaps run <code class="language-text">apt-get install</code>apt-get install python-dev`</a></p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">pip <span class="token function">install</span> awscli --upgrade --user</code></pre></div>
+</li>
+<li>
+<p><a href="https://serverless.com/framework/docs/providers/aws/cli-reference/config-credentials/">initialize a profile</a></p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">serverless config credentials --provider aws --key 1234 --secret 5678 --profile custom-profile</code></pre></div>
+</li>
+<li>
+<p>Later on, you can use this profile in this way:</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">serverless deploy --aws-profile profileIjustMade</code></pre></div>
+<p>of course you can modify your profile info and api keys in <code class="language-text">~/.aws/credentials</code>.</p>
+</li>
+</ol>
+<h1>Check your function is working</h1>
+<p>First, set a function name in <code class="language-text">serverless.yml</code>:</p>
+<div class="gatsby-highlight" data-language="yml"><pre class="language-yml"><code class="language-yml">functions:
+  hello:
+    handler: handler.hello
+    name: hello</code></pre></div>
+<p>Then <code class="language-text">sls deploy</code> again to make changes.
+Now, </p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ serverless invoke -f hello
+<span class="token punctuation">{</span>
+    <span class="token string">"statusCode"</span><span class="token keyword">:</span> 200,
+    <span class="token string">"body"</span><span class="token keyword">:</span> <span class="token string">"{\"message\": \"Go Serverless v1.0! Your function executed successfully!\", \"input\": {}}"</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>yes, it works!!</p>
+<h1>Want to include python modules? Make a <a href="https://docs.aws.amazon.com/ko_kr/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html">deployment package.</a></h1>
+<blockquote>
+<p><strong>A deployment package is a ZIP archive that contains your function code and dependencies.</strong> </p>
+</blockquote>
+<blockquote>
+<p>You need to create a deployment package if you use the Lambda API to manage functions, or <strong>if your code uses libraries other than the AWS SDK.</strong> Other libraries and dependencies need to be included in the deployment package. You can upload the package directly to Lambda, or you can use an Amazon S3 bucket, and then upload it to Lambda.</p>
+</blockquote>
+<ol>
+<li>
+<p>First, you would need to have aws cli installed. If you have not, check above for steps. </p>
+</li>
+<li>
+<p>Then install dependencies to a local directory with pip, and include them in your deployment package.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">j031:~/workspace <span class="token punctuation">(</span>master<span class="token punctuation">)</span> $ <span class="token function">mkdir</span> packages
+j031:~/workspace <span class="token punctuation">(</span>master<span class="token punctuation">)</span> $ <span class="token function">cd</span> packages/
+j031:~/workspace/packages <span class="token punctuation">(</span>master<span class="token punctuation">)</span> $ <span class="token function">ls</span>
+j031:~/workspace/packages <span class="token punctuation">(</span>master<span class="token punctuation">)</span> $ pip <span class="token function">install</span> requests --target <span class="token keyword">.</span></code></pre></div>
+</li>
+<li>
+<p>Create zip of packages </p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ zip -r9 ../function.zip .</code></pre></div>
+</li>
+<li>
+<p>Add function code to the zip</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">j031:~/workspace/es (master) $ zip -g function.zip handler.py
+adding: handler.py (deflated 50%)</code></pre></div>
+</li>
+<li>
+<p>Upload!</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">j031:~/workspace/es (master) $ aws lambda update-function-code --function-name crawler --zip-file fileb://function.zip</code></pre></div>
+</li>
+<li>
+<p>If you feel tiredsome, just create <code class="language-text">update.sh</code>:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">mkdir .tmp
+zip -r9 ./.tmp/function.zip ./packages
+zip -g ./.tmp/function.zip handler.py
+aws lambda update-function-code --function-name crawler --zip-file fileb://./.tmp/function.zip
+rm -rf ./.tmp</code></pre></div>
+</li>
+</ol>
+<h1>OR use serverless-python-requirements</h1>
+<p><a href="https://github.com/UnitedIncome/serverless-python-requirements">Just install it</a>, and produce <code class="language-text">requirements.txt</code> by running <code class="language-text">pip freeze &gt; requirements.txt</code> and run <code class="language-text">sls deploy</code>.
+<em>I find this way very much simpler and easier!</em></p>
+<h1>Source code</h1>
+<p><a href="https://github.com/9oelM/es">The source code can be found from this repo!</a></p></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEBQH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABxVp7LNvUV5APQCf/xAAcEAEAAgEFAAAAAAAAAAAAAAABAAIhERITMjT/2gAIAQEAAQUCLay4ruvEON64jSpL+qjj/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAEAH/2gAIAQIBAT8BIf/EACAQAAIABQUBAAAAAAAAAAAAAAABAhESMVEDECIyQXH/2gAIAQEABj8CFLF8naIVK5GnC36WROlEC+bf/8QAHhAAAgMAAQUAAAAAAAAAAAAAAREAITFBUWFxgZH/2gAIAQEAAT8hNwGaJYcNmMAw6FaYOBzLfscWSPK9R8DD2leCKRjoXP/aAAwDAQACAAMAAAAQiMA8/8QAFxEBAAMAAAAAAAAAAAAAAAAAEAERUf/aAAgBAwEBPxCtJP/EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8QRlf/xAAeEAEBAAICAgMAAAAAAAAAAAABEQAhQVExYYGRwf/aAAgBAQABPxCQ2RcDjTD5Aqu/XU9YG0cBLNPJJIsIPnSYXm6AWw5PzLTucqLm6AbXtjQHjOrtxKkUr95//9k=" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 0.5s;transition-delay:0.25s;border-radius:50%"/><noscript><picture><img width="50" height="50" srcset="/static/2d9562b52b70ef19bf9f1f3dfff052ef/c3bbc/profile-pic.jpg 1x,
+/static/2d9562b52b70ef19bf9f1f3dfff052ef/ac385/profile-pic.jpg 1.5x,
+/static/2d9562b52b70ef19bf9f1f3dfff052ef/587d5/profile-pic.jpg 2x,
+/static/2d9562b52b70ef19bf9f1f3dfff052ef/20b3c/profile-pic.jpg 3x" src="/static/2d9562b52b70ef19bf9f1f3dfff052ef/c3bbc/profile-pic.jpg" alt="Joel Mun" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Joel Mun</strong>. Joel loves javascript and has also recently started to gradually love python as well. He&#x27;s greatly fascinated by exploring new programming languages and technologies, and launching up off-the-wall projects using them.<!-- --> <a href="https://github.com/9oelM">Go check him up on Github!</a></p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2019-03-09--100BooksProject-(1):Remember-Who-You-Are:-Life-Stories-That-Inspire-the-Heart-and-Mind/">← <!-- -->100 Books Project (1): Reflection and reading notes on Remember Who You Are: Life Stories That Inspire the Heart and Mind</a></li><li><a rel="next" href="/2019-03-13--100BooksProject-(2):Crossroads-(갈림길)/">100 Books Project (2): Crossroads (갈림길)<!-- --> →</a></li></ul></main><footer>© Joel Mun <!-- -->2019<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a></footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-105275697-3', 'auto', {});
+      
+      
+      
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"2019-03-17-deploying-a-serverless-crawler-with-python-lambda-dynamo-db-210","path":"/2019-03-17--deploying-a-serverless-crawler-with-python-+-lambda+dynamoDB/"};window.dataPath="712/path---2019-03-17-deploying-a-serverless-crawler-with-python-lambda-dynamo-db-210-3f2-rhW8pUpm9BmGfgMwkXjSDerZFls";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-2fc270c585f0fd68b56d.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-1973d26eafc53a9664df.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-280da5ee589fe49faed5.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0ff9c557020a6758f1c3.js"],"component---src-pages-index-js":["/component---src-pages-index-js-1c214ebdd6dfd9663ebc.js"],"pages-manifest":["/pages-manifest-631f6a65e39bb5ead980.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-js-280da5ee589fe49faed5.js" async=""></script><script src="/0-bb9f324e33466de5edd0.js" async=""></script><script src="/styles-f6d9c6f8d24ce816fc91.js" async=""></script><script src="/app-2fc270c585f0fd68b56d.js" async=""></script><script src="/webpack-runtime-0489b67025381e2a7e2b.js" async=""></script></body></html>
