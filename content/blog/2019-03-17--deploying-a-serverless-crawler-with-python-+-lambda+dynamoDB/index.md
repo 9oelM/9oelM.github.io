@@ -1,9 +1,12 @@
 ---
-title: "Deploying a serverless crawler with python + lambda + dynamoDB"
+title: "Deploying a serverless crawler with python + lambda"
 date: "2019-03-18T09:00:00.009Z"
 category: "development"
-tags: ["development", "aws", "python", "serverless", "lambda", "dynamoDB"]
+tags: ["development", "aws", "python", "serverless", "lambda"]
 ---
+# What I'm gonna build
+I'm gonna build a simple crawler that will send HTTP request to zigbang.com's api server to receive data on estates, and then save it to dynamoDB. 
+
 # Prerequisites
 * Have a recent version of node installed
 ```bash
@@ -279,3 +282,25 @@ rm -rf ./.tmp
 
 # Source code
 [The source code can be found from this repo!](https://github.com/9oelM/es)
+
+# serverless.yml
+In the `name` and other relevant fields, fill out suitable values.
+```yml
+service: crawl-service # NOTE: update this with your service name
+
+...
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: us-east-1
+
+...
+
+functions:
+  crawler:
+    handler: handler.crawler # # The file and module for this specific function.
+    name: crawler
+    
+    ...
+```
