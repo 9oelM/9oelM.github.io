@@ -1,4 +1,856 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 17 Mar 2019 16:09:48 GMT</lastBuildDate><item><title><![CDATA[Deploying a serverless crawler with python + lambda + dynamoDB]]></title><description><![CDATA[Prerequisites Have a recent version of node installed Install   globally Initialize serverless project To initialize it with a python…]]></description><link>https://9oelm.github.io/2019-03-17--deploying-a-serverless-crawler-with-python-+-lambda+dynamoDB/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-17--deploying-a-serverless-crawler-with-python-+-lambda+dynamoDB/</guid><pubDate>Mon, 18 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Prerequisites&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 05 May 2019 07:23:44 GMT</lastBuildDate><item><title><![CDATA[Memoization in python using a decorator: getting a prime number]]></title><description><![CDATA[Rationale I was creating an   function: Time complexity For now, forget about the condition in the while loop:  .
+You know that you are…]]></description><link>https://9oelm.github.io/2019-05-05--Memoization-in-python-using-a-decorator:-getting-a-prime-number/</link><guid isPermaLink="false">https://9oelm.github.io/2019-05-05--Memoization-in-python-using-a-decorator:-getting-a-prime-number/</guid><pubDate>Sun, 05 May 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Rationale&lt;/h1&gt;
+&lt;p&gt;I was creating an &lt;code class=&quot;language-text&quot;&gt;isPrime&lt;/code&gt; function:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isPrime&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    prime &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    fac &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; fac &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; fac &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; prime&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;fac&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fac&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;fac&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; fac&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+                prime&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;
+        fac &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; prime&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Time complexity&lt;/h2&gt;
+&lt;p&gt;For now, forget about the condition in the while loop: &lt;code class=&quot;language-text&quot;&gt;fac * fac &amp;lt;= n + 1&lt;/code&gt;.
+You know that you are going to fill out the array of size &lt;code class=&quot;language-text&quot;&gt;n&lt;/code&gt; anyways.
+This is going to take &lt;code class=&quot;language-text&quot;&gt;O(n)&lt;/code&gt; time (&lt;code class=&quot;language-text&quot;&gt;prime[i] = False&lt;/code&gt; run at least &lt;code class=&quot;language-text&quot;&gt;n&lt;/code&gt; times overall). &lt;/p&gt;
+&lt;p&gt;And the tricky part is &lt;code class=&quot;language-text&quot;&gt;for i in range(fac*fac, n + 1, fac):&lt;/code&gt;.
+It is going to take less than &lt;code class=&quot;language-text&quot;&gt;O(nlogn)&lt;/code&gt; time. This is because if you compare this series with a harmonic series:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Harmonic: 1 + 1/2 + 1/3 + 1/4 + 1/5 + … + 1/n&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;for i in range(fac*fac, n + 1, fac)&lt;/code&gt;: you have to run at least about &lt;code class=&quot;language-text&quot;&gt;n + 1 / fac&lt;/code&gt; ~= &lt;code class=&quot;language-text&quot;&gt;n / fac&lt;/code&gt; times. So each time you are going to get 1/2 + 1/3 + 1/5 + 1/7 … + n/n. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, obviously, the number of calculation of harmonic series of a given &lt;code class=&quot;language-text&quot;&gt;n&lt;/code&gt; is greater than that of a series of reciprocals of prime numbers up to &lt;code class=&quot;language-text&quot;&gt;n&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;Harmonic series has a time complexity of &lt;code class=&quot;language-text&quot;&gt;nlogn&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;or, better, &lt;a href=&quot;https://en.wikipedia.org/wiki/Divergence_of_the_sum_of_the_reciprocals_of_the_primes&quot;&gt;a series of reciprocals of prime numbers has a time complexity of &lt;code class=&quot;language-text&quot;&gt;nloglogn&lt;/code&gt;.&lt;/a&gt;. I will cut the explanation off here for now because it is going to be too complex.&lt;/p&gt;
+&lt;p&gt;Anyways, so if you add up: &lt;code class=&quot;language-text&quot;&gt;O(n) + O(nloglogn) = O(nloglogn)&lt;/code&gt; as you can discard the same term with a smaller multiple.
+&lt;br&gt;
+So the time complexity of this algorithm, called Sieve of Eratosthenes, has a time complexity of &lt;code class=&quot;language-text&quot;&gt;O(nloglogn)&lt;/code&gt; (this many arithmetic operations will happen).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.desmos.com/calculator/rufvsd67ha&quot;&gt;
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAACrElEQVQ4y61U2XLbMAzU/39Wp+l0kpe+pKnjI/ERRYctWQdFnd5iIVGjZPIYz8CkQHCJxZLw2rbFMAxIkgRVVaHrOtDHsa7rec5RrWlg6wbHONexEx/jGEPz+EELwxBlWaKRDc7HA6y1Ore2VrCiNNgHV5SmQqN+q3FujwIej0esVisYY+YAjjyAc93AbwF58S8KWttK4sc1xjGe5jkq5/P5A+V2osKMe6Xf4BQXAmolplU/zcXpHlKmkyAEZIZccIE8sW2nmkUZKqHdKLVmBnS0277XkmiGvXxcLpc5Qw0k8FS7kwhAMGbKzQ5ID558Nk1RRdGYoRPFZaiqyciaHcIrDAWRTGuJ1XpOB7KuRhLJfR+V3BIeohkGQaCiODG4YCqLl/dEBWhUcTsCUrSiQCHZ5O8+SgE0Iko9JfKBMlXr+05rRprMsNNi90qtEQZFGMAImM2ymbKKMtX9gyhW79MkQD3RYh1lc8mSxBEMgVhfrjX1LIoT0iMYM+RLIc33VKi1HQYJLGO5SlGMOr2ik+9+uMlGeTmyPhsz55qwII5HIRo5KZAM/r2+IZa6JKcDzmLpOUJWZMhMIWOu87zMdX7Nr2qjr5j8Gbw0uSCKzvhx/4Dn9SO22yds9mvs/D1+/7nH4/ovdm8v2J52WB82uHv4hafdSr+3R/HtN/h5f4fV67PGeY2k7V8MXv2DFLgFfzehRkuTVOpqxTH6SCuWErRC+yYNZegHpU0fR8Z5FKCuW0TXCIVQa6d7Ob8EfktJVIClb2oGn/2eFSduNwRphLIq9aTl03NzZ/NLWdj4RMd1vYdGLu8hOAqgUTou0LWl5eZlq1q2uTlD/oVBiMfNkzwxtqV67oGunTn7ykdzPn0pBCTlKItHyt03UKZ6QRJqhl/1wyXg5xI4gdz6f+RxChiu7X2VAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Graph&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c3b3332fa37b6e174af4844388dd78de/40fad/1.png&quot;
+        srcset=&quot;/static/c3b3332fa37b6e174af4844388dd78de/707e9/1.png 148w,
+/static/c3b3332fa37b6e174af4844388dd78de/649e0/1.png 295w,
+/static/c3b3332fa37b6e174af4844388dd78de/40fad/1.png 590w,
+/static/c3b3332fa37b6e174af4844388dd78de/30b4c/1.png 800w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/53c4386da68a4b1f096e4e3325fd129a/a9773/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 503px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 40.75546719681908%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA9klEQVQoz5WRvU7EMBCE/eS8AXRU9JR0JxqQEAWIi4SQEHQHjoscp1Oc80+c2I4z2IlIAUKYlT5PM7s7K5Pj8ztcFRt0vUUjNIRqcZCz1gc5qdDmd5SBjMqFwseeg5wdneL+5hF+DFBSgJUlKH0HYyVKShEGj9xScTA5uXjC7csWfgjQnYvbugVtLNreZWGsRyNbkFVBsakaeNtDKo1xxAxmDfH5i+S11kEpBfLwusOOt9Npzrkl/piM/yBV6ifF2xoVr+LAMG3gnE+aTCGELJLXWjsnvHy+Bt0zBD+gruv4GQxCiCVlbn0NJdb0GJz/0Zyb7nvKTxrPa/p1s030AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Legend&quot;
+        title=&quot;&quot;
+        src=&quot;/static/53c4386da68a4b1f096e4e3325fd129a/a9773/2.png&quot;
+        srcset=&quot;/static/53c4386da68a4b1f096e4e3325fd129a/e0115/2.png 148w,
+/static/53c4386da68a4b1f096e4e3325fd129a/0b7c8/2.png 295w,
+/static/53c4386da68a4b1f096e4e3325fd129a/a9773/2.png 503w&quot;
+        sizes=&quot;(max-width: 503px) 100vw, 503px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;See that &lt;code class=&quot;language-text&quot;&gt;xlog(log(x))&lt;/code&gt; is &lt;code class=&quot;language-text&quot;&gt;O(x)&lt;/code&gt;, but &lt;code class=&quot;language-text&quot;&gt;xlog(log(x))&lt;/code&gt; grows much faster than &lt;code class=&quot;language-text&quot;&gt;log(x)&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;So you may.. think of caching. &lt;/p&gt;
+&lt;p&gt;Ok. So that was the main rationale for memoization. Sorry for the rationale being too long.&lt;/p&gt;
+&lt;p&gt;So let’s see how we can memoize. &lt;/p&gt;
+&lt;h1&gt;Memoization&lt;/h1&gt;
+&lt;p&gt;A decorator is just a higher-order function. Takes in a function as a parameter and outputs a function with some additional functionalities. &lt;/p&gt;
+&lt;p&gt;A normal decorator may look like this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;memoize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;func&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    cache &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;memoizer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;**&lt;/span&gt;kwargs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        key &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;kwargs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; key &lt;span class=&quot;token operator&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; cache&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            cache&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; func&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;**&lt;/span&gt;kwargs&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; cache&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; memoizer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note that &lt;code class=&quot;language-text&quot;&gt;cache&lt;/code&gt; won’t be permitted to be accessed inside &lt;code class=&quot;language-text&quot;&gt;memoizer&lt;/code&gt; if it is not a mutable object: for example, &lt;code class=&quot;language-text&quot;&gt;int&lt;/code&gt;. If you want to enable it, you should go for &lt;a href=&quot;https://www.python.org/dev/peps/pep-3104/&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;nonlocal&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So this is the memoized version of getting prime numbers. I fixed the previous code to enable memoization of a list.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; typing &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Callable
+
+intToList &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Callable&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;memoize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;func &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; intToList&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; intToList&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    cache &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;memoizer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;nonlocal&lt;/span&gt; cache
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cache&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# haven&apos;t met this n before&lt;/span&gt;
+            cache &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; func&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# if new, calculate from scratch again&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; cache 
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; memoizer
+
+@memoize
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getPrime&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    prime &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    fac &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; fac &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; fac &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; prime&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;fac&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fac&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;fac&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; fac&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+                prime&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;
+        fac &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; prime&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Fair enough. A true memoization would detect that &lt;code class=&quot;language-text&quot;&gt;n&lt;/code&gt; is bigger than &lt;code class=&quot;language-text&quot;&gt;len(cache)&lt;/code&gt;, so that calculation runs only from &lt;code class=&quot;language-text&quot;&gt;len(cache)&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;n&lt;/code&gt;. But that requires more adjustments to the code. For now, I decided to be complacent with this: if you enter &lt;code class=&quot;language-text&quot;&gt;n&lt;/code&gt; that is less than any previous inputs, &lt;code class=&quot;language-text&quot;&gt;getPrime&lt;/code&gt; is just going to return &lt;code class=&quot;language-text&quot;&gt;cache&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;So this is an actual usage with &lt;code class=&quot;language-text&quot;&gt;isPrime&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; typing &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Callable
+
+intToList &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Callable&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;memoize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;func &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; intToList&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; intToList&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;with memoize&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    cache &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;memoizer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;nonlocal&lt;/span&gt; cache
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cache&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# haven&apos;t met this n before&lt;/span&gt;
+            cache &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; func&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# if new, calculate from scratch again&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; cache 
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; memoizer
+
+@memoize
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getPrime&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; List&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    prime &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    fac &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; fac &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; fac &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; prime&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;fac&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fac&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;fac&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; fac&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+                prime&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;
+        fac &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; prime
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isPrime&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;bool&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; getPrime&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; __name__ &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;__main__&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; timeit
+    script &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;isPrime(20)\nisPrime(17)\nisPrime(10)&quot;&lt;/span&gt;             
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;timeit&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;timeit&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;script&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setup&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;from __main__ import isPrime&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Remember, &lt;a href=&quot;https://docs.python.org/3/library/timeit.html#timeit.timeit&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;timeit&lt;/code&gt; by default runs 1000000 times of execution.&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;timeit&lt;/code&gt; gave this result:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;With @memoize&lt;/th&gt;
+&lt;th&gt;Without @memoize&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Result (1000000 executions)&lt;/td&gt;
+&lt;td&gt;1.5277864220000001&lt;/td&gt;
+&lt;td&gt;14.473305422&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Wow. It’s gotta be a must. It’s really much faster… It should be. &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/10fb85f3592119b7e1224458df4589f9/87ac4/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 544px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 17.463235294117645%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAi0lEQVQI102O2wrDIBBE/f/vC7SExgQCxUSt15eqYbpuScjDgfG4uiMeT49hcISHlIZYkVKEcw77vjPWWkZrfTmlFLuUEs92YowQqwyY54ZlqZimQo++OI6GWitKKUzP9/Pdt9au+56FfGn6KGAcA235YNvetDUjhABjDHM26I1O11t2l/N/1nvP+QeWqePNjS4SSAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Timeit Result&quot;
+        title=&quot;&quot;
+        src=&quot;/static/10fb85f3592119b7e1224458df4589f9/87ac4/3.png&quot;
+        srcset=&quot;/static/10fb85f3592119b7e1224458df4589f9/083cf/3.png 148w,
+/static/10fb85f3592119b7e1224458df4589f9/a2157/3.png 295w,
+/static/10fb85f3592119b7e1224458df4589f9/87ac4/3.png 544w&quot;
+        sizes=&quot;(max-width: 544px) 100vw, 544px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h1&gt;Sources&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@chenfelix/time-complexity-sieve-of-eratosthenes-fb0184da81dc&quot;&gt;https://medium.com/@chenfelix/time-complexity-sieve-of-eratosthenes-fb0184da81dc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2582732/time-complexity-of-sieve-of-eratosthenes-algorithm&quot;&gt;https://stackoverflow.com/questions/2582732/time-complexity-of-sieve-of-eratosthenes-algorithm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://nedbatchelder.com/blog/201601/isolated_memoize.html&quot;&gt;https://nedbatchelder.com/blog/201601/isolated_memoize.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[군대에서 딥러닝 환경 구축하기 (Configuring a deep learning environment inside a military base)]]></title><description><![CDATA[문제 열악해도 너무 열악하다.  내 컴퓨터가 없다. 당연히 개인 GPU도 쓸 수 없다. 학교 GPU Farm에도 연결이 불가능하다.  로컬 컴퓨터(싸지방 컴)에서 작업은 당연히 못한다. 성능이 떨어질 뿐더러 저장도 안된다.  ssh connection…]]></description><link>https://9oelm.github.io/2019-04-08--군대에서-딥러닝-환경-구축하기-(Configuring-a-deep-learning-environment-inside-a-military-base)/</link><guid isPermaLink="false">https://9oelm.github.io/2019-04-08--군대에서-딥러닝-환경-구축하기-(Configuring-a-deep-learning-environment-inside-a-military-base)/</guid><pubDate>Mon, 08 Apr 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;문제&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;열악해도 너무 열악하다. &lt;/li&gt;
+&lt;li&gt;내 컴퓨터가 없다.&lt;/li&gt;
+&lt;li&gt;당연히 개인 GPU도 쓸 수 없다.&lt;/li&gt;
+&lt;li&gt;학교 GPU Farm에도 연결이 불가능하다. &lt;/li&gt;
+&lt;li&gt;로컬 컴퓨터(싸지방 컴)에서 작업은 당연히 못한다. 성능이 떨어질 뿐더러 저장도 안된다. &lt;/li&gt;
+&lt;li&gt;ssh connection이 불가하다.&lt;/li&gt;
+&lt;li&gt;과연 싸지방에서 딥러닝 공부/실습을 할 수 있을까?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;목표&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;군대에서 싸지방으로 딥러닝 공부를 가능하게 만들기&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fast.ai&quot;&gt;fast.ai&lt;/a&gt; course material을 cloud에서 jupyter로 볼 수 있게 만들기 (내가 딥러닝을 처음 공부하기 위해 선택한 교재다)&lt;/li&gt;
+&lt;li&gt;내 개인 딥러닝 프로젝트를 cloud에서 돌릴 수 있게 만들기&lt;/li&gt;
+&lt;li&gt;최소한의 비용이 나가게 하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Quick rundown&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;인내심이 필요함. 인내심이 없다면… 아무도 모른다.&lt;/li&gt;
+&lt;li&gt;AWS, Google (GCP) 계정이 필요함&lt;/li&gt;
+&lt;li&gt;계정 만들고 각 회사의 Cloud service에 가입하는 과정에서 신용카드 번호가 필요함 (돈이 나가는 것은 아님. AWS는 12 months of free tier, GCP는 $300 credit을 준다)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;시작&lt;/h2&gt;
+&lt;h3&gt;1. 구글 계정 만들기&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&amp;#x26;flowName=GlifWebSignIn&amp;#x26;flowEntry=SignUp&amp;#x26;nogm=true&quot;&gt;링크에 들어가서 계정을 만들자.&lt;/a&gt; (있으면 스킵)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2. GCP에서 Credit 받기&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://cloud.google.com/&quot;&gt;GCP에서 무료로 시작하기&lt;/a&gt; 클릭. GCP 들어가자마자 만약 GCP Signup이 되어있지 않으면 바로 Try it free라는 문구가 뜬다. 클릭.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d7c11308573b7bf5503ded3e1137e71d/c6e42/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 60.36161335187761%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAByElEQVQoz21Ty47bMAz03/fU7+it935AT0WBvRZYtNvtJnYc25L1smzJmXLkOM0GNTCmHiOSQ1GV1grWGhhjYAn7z47jeIPWGqO5jgXLFPDr7PDxq8LTq4bVvfiwqFLOaHqNTo9ohxFnNUIZh7hkrOuKy+Xyzm7jFVnO5WUGLjPWNCPGGSklOlzx+2xQK4s/3YjjYNCOHofBIgjpf05pl2WBDwHWh2KD92WtKpsxYHIa3o0YlC6SgpCc20jvs9vG0zQVUGG+gutVlt+P2uP7i8HzyWOeZ4kYEcXO4uxRLkFp5O3BdoccF8mfvml8+NLj85ORmmSYIOSUwY+ke/DgJBdCp5zTUg2zLRnGGEtRsQoyixsxC2idnxCmbbyDh431pW773Ev9CDqtnHM41A3ejjWOTVPqZ62VFjFoTifUTY2+78vcXHEUftNs6GSPPnZUVn6v9Qk/D7VsDlBKlZ4juP78Vott0LYtuq4rAV+ES/5ZnJFPMFBxyDQpyz5IK3KkbbyANskF8BL2dSf86a48RJG8FxsPxV9XuRxK50uR6MxMSdaTOHrk3qMqrXBtC0ZLKd/ahD2WloRljpLd9hL29siZrRNv/bfjL42DoTq7xW68AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;GCP&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d7c11308573b7bf5503ded3e1137e71d/40fad/1.png&quot;
+        srcset=&quot;/static/d7c11308573b7bf5503ded3e1137e71d/707e9/1.png 148w,
+/static/d7c11308573b7bf5503ded3e1137e71d/649e0/1.png 295w,
+/static/d7c11308573b7bf5503ded3e1137e71d/40fad/1.png 590w,
+/static/d7c11308573b7bf5503ded3e1137e71d/c6e42/1.png 719w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;가입 절차를 마무리하자. 신용카드 번호를 적어도 걱정없다. Credits가 다 나가도 돈이 청구되지 않는다. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;3. AWS 가입하기&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://portal.aws.amazon.com/billing/signup?redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&amp;#x26;language=ko_kr#/&quot;&gt;링크에 들어가서 계정을 만들자.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ca2105cee856e38b97224c111ad8683e/89fdf/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 42.662473794549264%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABHklEQVQoz32RXU+DMBSG+ZlqnAkx88KP6IW/VRwDt3DhhEJpuxEYMF5Pa1lYAC+enOa0PDnvwbl7eMNiecnt8nXEtfuMK/fJcHP/MrpfkMd9fIcjpYRGDJBKGYStcq/AUoaEJWCMmV5O77jICWHIiDTP4WRZBk2qK+f43u3w4Xn4XK3gEeswJFmKsixR10d0XYe2bc37hPo9sWUk/Ilj+L6PdRAg3GywjaI/YVUTDdoOaNrTvJCTZCjUVQsM+kzo6OUhhsq+UKkIdUXxuDAifZ8Qsa0O70VWps89uqc/kGqPQsXgLEAhtjjV6h/hxIRnrDCnhR+KCgVFblqgOjbnyPPCwVTDiXtpmqWGRP/tXmRXMxt5Ssgm9prY3U5N+AsdE4fqk+2S0QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;AWS&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ca2105cee856e38b97224c111ad8683e/40fad/2.png&quot;
+        srcset=&quot;/static/ca2105cee856e38b97224c111ad8683e/707e9/2.png 148w,
+/static/ca2105cee856e38b97224c111ad8683e/649e0/2.png 295w,
+/static/ca2105cee856e38b97224c111ad8683e/40fad/2.png 590w,
+/static/ca2105cee856e38b97224c111ad8683e/b3fef/2.png 885w,
+/static/ca2105cee856e38b97224c111ad8683e/301c0/2.png 1180w,
+/static/ca2105cee856e38b97224c111ad8683e/b5a53/2.png 1770w,
+/static/ca2105cee856e38b97224c111ad8683e/89fdf/2.png 1908w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;중간에 신용카드 정보를 적는 과정이 있다. 신용카드와 함께 등록되어 있는 주소가 여기 입력하는 주소와 다르면 나중에 서비스를 이용하지 못할 수도 있다 (물론 고칠 수 있다. 하지만 귀찮다). 그러니 한 번에 끝내자.&lt;/p&gt;
+&lt;p&gt;학교에서 간혹 가다 AWS Educate를 지원하는 곳이 있다. 본인이 학교를 다니다가 왔으면 학교가 별도의 Credit을 지원하는지 꼭 확인해보자. &lt;/p&gt;
+&lt;h3&gt;4. AWS 가입 완료&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;가입이 완료됐으면 Confirmation 이메일이 올 것이다. &lt;/li&gt;
+&lt;li&gt;이제 &lt;a href=&quot;https://aws.amazon.com/ko/console/&quot;&gt;AWS Console&lt;/a&gt;에 접속할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;5. Cloud9 + EC2 Instance 생성&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;이 글을 적는 본인도 참 어이가 없는데, 별 방법이 없어서 이 방법을 써야 한다 (특히 SSH가 안 되기 때문에). 이해가 잘 안 될 수도 있는데, GCP Instance를 설정하는 용도로 AWS Cloud9을 쓸 것이다. 단지 그 용도로. &lt;/li&gt;
+&lt;li&gt;일단 AWS에 로그인 한 후 &lt;a href=&quot;https://console.aws.amazon.com/cloud9&quot;&gt;AWS Cloud9&lt;/a&gt;으로 이동하자. 웹에서 IDE와 Terminal에 엑세스할 수 있을 것이다.
+Cloud9이 찾기 힘들다면 검색해서 바로 찾자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fc0ccc0f6469b02e68324fa09a0b7db6/b0a39/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 61.04611149346181%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABU0lEQVQoz4VRi07DMAzMD4OEUBFjiCE0PnZrt7brK22SGp9XtxkdwtKpydU+nx2z2X3Ty9snJa9bet7uKXnf09Pmix6SjxmPyU5ww72sOcB450jDjUS19dQHPvM9THC03P307fkwjAunMG3bURhHGhneezoeU8qLgvp+EH4YHDVtK98QkBMkN8tOVJTltS6EGaZpGuqsnQW7jhuEaxHC2p5qzrFTjvJVVXHTXs7KAwYkRHDBubxcpNh5L8nKQXTSYreDcHlerEQNRQHifD6LUw24zbKM+VyENApeS5pm5JxfBLHDeAx8j4cDlbybuAkmgOu4EQQv7DJ2hzBKIGSHXIhiOJtH5gZ1XVOcC8HTaZnmriCKMbKKxQ8AN8ojcMdLrwR/j5ym6bxoacJ7q9gd9rfkjrw7J1i98u2jhJUTJJU8no78XxjtBMDFPeg/O+33rzzgB6ivkcBSNEAsAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Cloud9&quot;
+        title=&quot;&quot;
+        src=&quot;/static/fc0ccc0f6469b02e68324fa09a0b7db6/40fad/3.png&quot;
+        srcset=&quot;/static/fc0ccc0f6469b02e68324fa09a0b7db6/707e9/3.png 148w,
+/static/fc0ccc0f6469b02e68324fa09a0b7db6/649e0/3.png 295w,
+/static/fc0ccc0f6469b02e68324fa09a0b7db6/40fad/3.png 590w,
+/static/fc0ccc0f6469b02e68324fa09a0b7db6/b3fef/3.png 885w,
+/static/fc0ccc0f6469b02e68324fa09a0b7db6/301c0/3.png 1180w,
+/static/fc0ccc0f6469b02e68324fa09a0b7db6/b0a39/3.png 1453w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;그리고는 오른쪽에 있는 Create environment를 클릭&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/571fd6e7d4b067ea8194c95665843ef3/e8f64/4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 17.47414262384322%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAm0lEQVQI122P6wrCMAyF9/5P4yv4AiKI+qND2dZ6Ge3aNFvnnOXYiqCggS85uRCSoq5qaG1grcOuOmNdSmxEhe2hgZAtSpVIMWvx1rkm5PXTUxri4nA8tShuTIjzhGytH9B0PaQhGA5w4Z6Y/mK/c2ZY70H9gIKTm+cHYowgonStTtd2GMfxhxDC65M855yDz0s8g/dL+NUCpASeq27iftWkNuIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Create environment&quot;
+        title=&quot;&quot;
+        src=&quot;/static/571fd6e7d4b067ea8194c95665843ef3/40fad/4.png&quot;
+        srcset=&quot;/static/571fd6e7d4b067ea8194c95665843ef3/707e9/4.png 148w,
+/static/571fd6e7d4b067ea8194c95665843ef3/649e0/4.png 295w,
+/static/571fd6e7d4b067ea8194c95665843ef3/40fad/4.png 590w,
+/static/571fd6e7d4b067ea8194c95665843ef3/b3fef/4.png 885w,
+/static/571fd6e7d4b067ea8194c95665843ef3/301c0/4.png 1180w,
+/static/571fd6e7d4b067ea8194c95665843ef3/b5a53/4.png 1770w,
+/static/571fd6e7d4b067ea8194c95665843ef3/e8f64/4.png 1837w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;이름은 아무거나 친다. 나는 &lt;code class=&quot;language-text&quot;&gt;gcp&lt;/code&gt;라고 했다. &lt;/p&gt;
+&lt;p&gt;EC2 Instance 설정을 할 수 있다. OS는 Amazon linux에서 Ubuntu로 바꿔주자. 나머지는 그대로. 어차피 여기서 데이터 학습을 돌릴 게 아니라서 최소 사양의 Instance로 만들어도 상관없다. &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0d01d7e11e3589e6396e74874b338bae/8fb9d/5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 92.21748400852879%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB8UlEQVQ4y41Uu47bMBDUJ+d/8gOpUqdMG6QIUgdIdWdZL4oSRVIva7JDUTrBlu9CYECKpoezO7tMqrqGbhqYroPvPbz36AW2HzDOC87H+f40TUhI1rQtWoE2HV7yCtfsitf0ijTLkRcF0muGSikYa9EPA4ZxXOdhFMjFQsRBMUlrDAiSOr8qVKK61hpK1SgrJajC/hDJRsHZ8H2PJKiLhKazqFsT1PJPDIFYlmXH7XYLOO4RO2EgMytJI4SFNijLUkItg0qtm0DOw1MMbc/kM8K3kB28c8gDYSF5q0HTSHiv6Ej0lNAKWUeVQliIwia4b/fcDZH4TOUThT6Uz2uaBoe5TzctyyjCRXA9z/P7Cp0o7GWzk5mlMMTcncG9R7iZ0kp4WamgpFRIfm/CR+PUZWWs5E7LtwkHqIJlss8RW/nMh98eTbGrIS8X5jBDye6QnG6XEi4WuPNr6JtZobTuO6UTQq6tdWviJezbQc0OydkUVZ2G/NYpXXgoWpmt88Ec7m3zEbzcyMVVK93VufOQeYhhXqRkLhIykUsf13IJoQi9QcPJi+TGGQPNW4RQGuOBkGEGgyL4/b+jlypKNrLjfI9gSLuu2YqMgn2e5bmsazR/fqD5/Q36769Hwo/Ap43g+5jnBQol4X//DPXlE/TPr/gHqnFzN6olY0gAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Instance configuration&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0d01d7e11e3589e6396e74874b338bae/40fad/5.png&quot;
+        srcset=&quot;/static/0d01d7e11e3589e6396e74874b338bae/707e9/5.png 148w,
+/static/0d01d7e11e3589e6396e74874b338bae/649e0/5.png 295w,
+/static/0d01d7e11e3589e6396e74874b338bae/40fad/5.png 590w,
+/static/0d01d7e11e3589e6396e74874b338bae/b3fef/5.png 885w,
+/static/0d01d7e11e3589e6396e74874b338bae/8fb9d/5.png 938w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;아. 그리고 EC2 Instance를 켜고 끄는 것에 신경쓰지 않아도 된다. Cloud9에 접속할 때 자동으로 켜지고, 끄고 나서 30분뒤에 EC2도 같이 자동으로 꺼진다. 설정만 바꾸지 않는다면.
+그 다음 계속 그냥 진행. 노란 확인 버튼만 계속 누르면 된다.
+다 왔다. 이제 방금 만든 instance를 IDE에서 열어보자. 한 1~2분 기다리면 IDE가 준비된다. &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/908eddd2313c072a7977c5b72cedd1c0/5e92d/6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 116.20294599018004%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAC90lEQVQ4y5WUW0/UUBSF+yNMQB+MEXjAB0EgJoYYoy/66L+TGO4gFxH0wV8BCS+AmjiZYQoznU5vp+3M9N7l3qcUBiRhaPKlTXu6zlp7n3OUB08mMDYxi3cfPuLR2BSGR6cx+eo9Ho+/xMOxGTybeYvR57MYn36D4ZEpjE2+xtDICww9vQV6ryyufcXi6iZ+7O1gfmUTS1++YXv3J9a29rCysYv17e+YX93Cwto2Pi9vYGF9B3PLm5hbumD5ik9LG1BAl6ZpEMJFu93GbVeW5/AyQE8BK8zhJoCfE/SOn0t6NFaJkwRJmiFOUsR8Z+K4gL6FYQjDslExO9g8NrB/UsHh8V8c/qrg4OgP9o9+Sw6Ik+o5lDwOkLl6gdNEKnTkfe7SNIVN7ltuD5oXot0Joft096OCTkxE8p3mBlDCMIDV1uGYJmzTQJbEUijPC9mEBF3PhapbqGoWTnWbJhDQDQMtotnSoVGpHNeF8DwoURTBpEiWTVgWDNNCEATXHAoa7NJg2xGwHAcOIccT/K3b7aJH/zBKmibo9XpShOuVUN1YJMsy6ZKfeXaPBFVVRb2uonZaR6VSRbVWQ5tcsqmy7kocR3J2h2J0aKYybhm5qKFAQKXJsrSYrI+UmyqJkbDgzSVSCvULcixLxhUwbec6DlN8c6h5Summ39VNhzy4KbpoUBe5ozcxCFUEOLP9uwU5Jjs5px9qTgSPFnA/Li2KDi34ikhQs7r/R74ZnZtjkCA74R9FlF/CYox8JvGWFwwimMKgyBovbIpdCtlBiqbToVJ0YPUSCHonF/YgguZFDVtu99KVE6ZQ2zbtlhAuO2bBgR1S5NJhgwrPjsqopeP7CcrIXZwZQm49vjcsTzps2N6F+MCCV03xU1xGlvR3O71nZBbkHy8jRhkcOnksvweT3BskxifSwA5bVHwhm5GDlqPssmbQ6XPehNrUcc7xxQDrUB4OtKUapkO1u47aJoyCOsFjBhLkvez7PuH14d/KwIIuDeZT6S7+AUX3tUCSAJ8hAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Open IDE&quot;
+        title=&quot;&quot;
+        src=&quot;/static/908eddd2313c072a7977c5b72cedd1c0/40fad/6.png&quot;
+        srcset=&quot;/static/908eddd2313c072a7977c5b72cedd1c0/707e9/6.png 148w,
+/static/908eddd2313c072a7977c5b72cedd1c0/649e0/6.png 295w,
+/static/908eddd2313c072a7977c5b72cedd1c0/40fad/6.png 590w,
+/static/908eddd2313c072a7977c5b72cedd1c0/5e92d/6.png 611w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;6. Cloud9에서 GCP Instance 생성&lt;/h3&gt;
+&lt;p&gt;사실 지금부터는 &lt;a href=&quot;https://course.fast.ai/start_gcp.html&quot;&gt;fast.ai에서 gcp docs&lt;/a&gt;를 보는 게 더 편할 수도 있다. 동일한 방법을 여기서도 소개한다.&lt;/p&gt;
+&lt;p&gt;cloud9 IDE 하단에 보이는 Terminal에서 다음 command를 실행한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Create environment variable for correct distribution&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;export&lt;/span&gt; CLOUD_SDK_REPO&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;cloud-sdk-&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;lsb_release -c -s&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Add the Cloud SDK distribution URI as a package source&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;deb http://packages.cloud.google.com/apt &lt;span class=&quot;token variable&quot;&gt;$CLOUD_SDK_REPO&lt;/span&gt; main&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;tee&lt;/span&gt; -a /etc/apt/sources.list.d/google-cloud-sdk.list
+
+&lt;span class=&quot;token comment&quot;&gt;# Import the Google Cloud Platform public key&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; https://packages.cloud.google.com/apt/doc/apt-key.gpg &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; apt-key add -
+
+&lt;span class=&quot;token comment&quot;&gt;# Update the package list and install the Cloud SDK&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; update &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; google-cloud-sdk&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;중간중간에 &lt;code class=&quot;language-text&quot;&gt;Y/N&lt;/code&gt;을 묻는 문구가 나올 수도 있다. 나는 대부분 큰 영향은 없다고 생각하고 &lt;code class=&quot;language-text&quot;&gt;Y&lt;/code&gt;라고 눌렀다. 다 환경설정에 지대한 영향을 미치지는 않는 질문들이다. &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2ea37b6eb97a6f314cbf871ccc432f6d/868a5/7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 85.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABmElEQVQ4y6WS63KCMBCFef+Xa8eq1YoooEbutAQIxJnT3VipIFpn+uObJUtycnY3ljjsIYRAFEWI4xhBGCDLMqRpiiRJOspSUj5HnNK+PISUJQpZUJQ9rCj/QkwbZVGYTU2joLW+oW1bE0/6ZOD1GFZaVPCDCHXFYm13eMgwP3YpY2n6qZQisabn5J6Dv7Cubxu6uefiEVYn8qC8fzt8Dj3KjeCJJ3nSJmrdDrgurx3F6peokdAzOkb0Dj8lFA1K0eRNVA2qWhlqgtdjWNd9qyjxbvt4mdmYfrh4W26wWO9M7mMrcIgLiETimJYI85qofuIvfUG6mQ+/zm3MVi4m7w5ckSDIqiuRM5wboydYkuD2kGAX5sSnwQ9ys/aDjBx+dWJDZ6MOWXC52cPxQxKO4R2zrkyGvy9i90Q7QZ5qWSnY7pH6dTDC/G17AdYE5zyR9sp9LEhPRZY1JgsH0+UWc9vDigaxcgXW5JjhfrLTpxyeh9Jgs48N3Esu29lFppeXcp8u+SLIz2O+8gwLZ2emzW75gsukHw3lG0KAGxbbfO6pAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Use terminal&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2ea37b6eb97a6f314cbf871ccc432f6d/40fad/7.png&quot;
+        srcset=&quot;/static/2ea37b6eb97a6f314cbf871ccc432f6d/707e9/7.png 148w,
+/static/2ea37b6eb97a6f314cbf871ccc432f6d/649e0/7.png 295w,
+/static/2ea37b6eb97a6f314cbf871ccc432f6d/40fad/7.png 590w,
+/static/2ea37b6eb97a6f314cbf871ccc432f6d/b3fef/7.png 885w,
+/static/2ea37b6eb97a6f314cbf871ccc432f6d/868a5/7.png 1050w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;7. GCP에서 프로젝트 생성&lt;/h3&gt;
+&lt;p&gt;GCP 홈페이지 네비게이션 좌측에 있는 프로젝트 Dropdown을 클릭하여 새 프로젝트를 만들자. &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b3248637453cab515e6050437bef257e/cddd7/8.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 22.07880434782609%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA4UlEQVQY033K30vCUADF8f1z9ST02n8Q0YPRaz/Jimm0iuYg8Do37+7cWj31VAQRoYRKUPSPWBp2Z9+mQvXkgQ/nPBxj/9Sn5IQUHYVZDjDtYLJ3LI/1UnWqWGHrULCZ+d9juyc+hcx29j+wQ4y55XNyeTGxsFYjt+oyv1JhybzGlC32vCZW1MG56mInf86SDuXLLlbY4jhz1GizuBFj+J5LIOuooE5yERE1FG5V8Pb6Anwz0l/MSqo1ejj9PD7cY0gpUSokjuNfQgie2s/0h9Dr65neBykfnym9wYib2zt+APSf+8/HZVtPAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Add new project&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b3248637453cab515e6050437bef257e/40fad/8.png&quot;
+        srcset=&quot;/static/b3248637453cab515e6050437bef257e/707e9/8.png 148w,
+/static/b3248637453cab515e6050437bef257e/649e0/8.png 295w,
+/static/b3248637453cab515e6050437bef257e/40fad/8.png 590w,
+/static/b3248637453cab515e6050437bef257e/b3fef/8.png 885w,
+/static/b3248637453cab515e6050437bef257e/301c0/8.png 1180w,
+/static/b3248637453cab515e6050437bef257e/cddd7/8.png 1472w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;나는 fast-ai로 이름지었다. &lt;/p&gt;
+&lt;p&gt;billing account와 project가 연결되어 있는지 확인하자. &lt;a href=&quot;https://console.cloud.google.com/billing/projects&quot;&gt;billing/projects&lt;/a&gt;에 들어가서 무언가가 있으면 연결이 되어있다는 뜻이다. &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dc7041ed8bdfc8aaa85370089eefd8aa/d821c/9.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 34.493346980552715%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABAUlEQVQoz52QPW7DMAyFffNcIMgxcoAMHgJkib1mzZ4treHUtaw/SuIrJcUFCiRLCTxREMVPj2r6vkfbtpimCeP4QI6UGMz/U+OcQ1aMESEEwXERcxLwa8X0vtZkqtYaSikBRkwq4PNB0DY9wfybs3PpQT4KgUHEYoSxRnGYqRlGRPCecB8tFu+lHMBS8xQFHiXnRhJ9I8RZcnwqyYQe1prqMC/DMJSxK3RBd2Ycj9WZ1g73jy9Yp3C9Ena7BZuNETG224TLhcvjSukyQQEao2GNLf/onMG5i+i6OooXt/M8I5DG7cbY74HTCTgc8p7lkXqPKFQg3sb6f3/PXimD1vgBSiQdpUNnoC0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Billing account and project connected&quot;
+        title=&quot;&quot;
+        src=&quot;/static/dc7041ed8bdfc8aaa85370089eefd8aa/40fad/9.png&quot;
+        srcset=&quot;/static/dc7041ed8bdfc8aaa85370089eefd8aa/707e9/9.png 148w,
+/static/dc7041ed8bdfc8aaa85370089eefd8aa/649e0/9.png 295w,
+/static/dc7041ed8bdfc8aaa85370089eefd8aa/40fad/9.png 590w,
+/static/dc7041ed8bdfc8aaa85370089eefd8aa/b3fef/9.png 885w,
+/static/dc7041ed8bdfc8aaa85370089eefd8aa/d821c/9.png 977w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;다 끝나면 &lt;strong&gt;Cloud9으로 돌아가&lt;/strong&gt; init하자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ gcloud init
+Welcome&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt; This &lt;span class=&quot;token function&quot;&gt;command&lt;/span&gt; will take you through the configuration of gcloud.
+
+Your current configuration has been &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; to: &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;default&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+You can skip diagnostics next &lt;span class=&quot;token function&quot;&gt;time&lt;/span&gt; by using the following flag:
+  gcloud init --skip-diagnostics
+
+Network diagnostic detects and fixes local network connection issues.
+Checking network connection&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.done.                                                                                                                                                                                                                 
+Reachability Check passed.
+Network diagnostic passed &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;1/1 checks passed&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;.
+
+You must log &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; to continue. Would you like to log &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Y/n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;?  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;  이 다음에 &lt;code class=&quot;language-text&quot;&gt;Y&lt;/code&gt;를 입력하고 시키는 대로만 진행하자. 로그인은 방금 GCP에서 작업한 구글 계정으로 한다. 진행하다 보면 내가 만들었던 프로젝트를 선택할 수 있다:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;You are logged &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; as: &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;email@gmail.com&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;.
+
+Pick cloud project to use: 
+ &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;1&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; fast-ai-******
+ &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;2&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; Create a new project
+Please enter numeric choice or text value &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;must exactly match list 
+item&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:  1
+
+Your current project has been &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; to: &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;fast-ai-******&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;  완료.&lt;/p&gt;
+&lt;h3&gt;8. GCP Instance 생성&lt;/h3&gt;
+&lt;p&gt;다음 커맨드를 cloud9 terminal에 복붙하자. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;export&lt;/span&gt; IMAGE_FAMILY&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;pytorch-latest-gpu&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# or &quot;pytorch-latest-cpu&quot; for non-GPU instances&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;export&lt;/span&gt; ZONE&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;us-west2-b&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# budget: &quot;us-west1-b&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;export&lt;/span&gt; INSTANCE_NAME&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;my-fastai-instance&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;export&lt;/span&gt; INSTANCE_TYPE&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;n1-highmem-8&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# budget: &quot;n1-highmem-4&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# budget: &apos;type=nvidia-tesla-k80,count=1&apos;&lt;/span&gt;
+gcloud compute instances create &lt;span class=&quot;token variable&quot;&gt;$INSTANCE_NAME&lt;/span&gt; \
+        --zone&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$ZONE&lt;/span&gt; \
+        --image-family&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$IMAGE_FAMILY&lt;/span&gt; \
+        --image-project&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;deeplearning-platform-release \
+        --maintenance-policy&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;TERMINATE \
+        --accelerator&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;type=nvidia-tesla-p4,count=1&quot;&lt;/span&gt; \
+        --machine-type&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$INSTANCE_TYPE&lt;/span&gt; \
+        --boot-disk-size&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;200GB \
+        --metadata&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;install-nvidia-driver=True&quot;&lt;/span&gt; \
+        --preemptible&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;아마도 &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ERROR: &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;gcloud.compute.instances.create&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; Could not fetch resource:
+ - Quota &lt;span class=&quot;token string&quot;&gt;&apos;GPUS_ALL_REGIONS&apos;&lt;/span&gt; exceeded. Limit: 0.0 globally.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이런 에러가 뜰 것이다. 뜬다면&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GCP 홈페이지 맨 오른쪽 위에 계속 떠 있는 ‘활성화’ 버튼을 누르고 ‘업그레이드’ 클릭&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://console.cloud.google.com/iam-admin/quotas&quot;&gt;GCP Quotas page&lt;/a&gt;에 들어가서 다음과 같이 필터 설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/eed77c4764c80ac4953110df498fef0c/08646/10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 29.86322188449848%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA0klEQVQY021Quw7DIAzk/7+rS9cOXTq1UxspIoSEgHlcsQlppdbSibPB5zPqNQzw2wbrMrQlECWUUpBzPpDSb+1z19BzpbWGtRYcJSfhMUYRYBARxnHEuq7SyLUQgrzLuXBXRUJOUZjaqjuG96HC79wLWKw7JIrCy+6Eh9YE9+eG89Vg0F5MKZ7ELud5hnNOYIyRc5omEe5uff0O59OxIsftYXG66CpITZAnceOyLG3tfU2O/i9dUNzWNdlxr7eVcfSqVvwUev6XfwkcQyp4SH/7Bjik1w2EuLBgAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Filters&quot;
+        title=&quot;&quot;
+        src=&quot;/static/eed77c4764c80ac4953110df498fef0c/40fad/10.png&quot;
+        srcset=&quot;/static/eed77c4764c80ac4953110df498fef0c/707e9/10.png 148w,
+/static/eed77c4764c80ac4953110df498fef0c/649e0/10.png 295w,
+/static/eed77c4764c80ac4953110df498fef0c/40fad/10.png 590w,
+/static/eed77c4764c80ac4953110df498fef0c/b3fef/10.png 885w,
+/static/eed77c4764c80ac4953110df498fef0c/301c0/10.png 1180w,
+/static/eed77c4764c80ac4953110df498fef0c/08646/10.png 1316w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;‘할당량 수정’ 클릭 후 요청을 제출한다. &lt;strong&gt;2일쯤 걸린다는데…&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9c30cc2d3c3a7a272d86647d6c38e24c/dd6a0/11.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 103.25732899022802%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACVklEQVQ4y52UuY4TQRCG55kQR0gIJCsR8gxEK2ADsl2JM0ALEQlPwCGOZ0AiAhFg4dus7fGcPXfP7Z+u9rRlyxby0NKnqpmqrqmpqm4tCGNYjMNxHHQ6HXS7Xei6jul0in6/jyiKwDlHkiQHoSU8AwsLeH6AXn+I6WwOl/mwLEcENpDwFGmWg6f7SRukLvy0sswBFIISq7UUVIK6oWzsh6FdmBznnzy8/EwwvPriyedn75nkucTb5cPK58VHT+558pbh3dcQ2o9BjBunJo4e2zh6ZOH2Uxu3zixcOzFw9YGBK/d1XL63n0vHc1x/uMDNU0PoOo7fOKsajvUIvQsfw1mI/jTAQDCaB5joIXQ3h+GVMFixwmtodN0tMHdIlrD9jGpYIvAcmIsZHHsB5pgIfBe2tYDH7KaOh61lXUKjzoRhhOFwhMnkDxjzxJiIzqYZslzYxNgEQSh9oigWo8GlnfSgeUf2LC9QiOS0TARMOZezRtmSTNMUuQiWZZlkUyefoii2bORfVZW0acpQ1zWWy2Ur1B611gHJ8L+o4OuAlH4QBDAMQx45cmq7tgJSDeI4lkFJp7X5dbWhpkwafR9bv0xYlgXbtuUlQdJ1XYkldJts4zFc04Td2KkRFIiasVPDzSKrbimpqET2pSiPela+OwFV2+mX1VXVtnY7GdKg+uL6CuXgJlsjseYfY6V8qcEy4OqKqqSkr6hBJtkG2iNPys9BiG+/fHzvhTJLzhP5NXIi2QZ525y8HuHO2W/cPR9CNxz4Hltn2hbZlLKk6LlEnVWVXduAfwFabzyEc3CTtwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;할당량 수정&quot;
+        title=&quot;&quot;
+        src=&quot;/static/9c30cc2d3c3a7a272d86647d6c38e24c/40fad/11.png&quot;
+        srcset=&quot;/static/9c30cc2d3c3a7a272d86647d6c38e24c/707e9/11.png 148w,
+/static/9c30cc2d3c3a7a272d86647d6c38e24c/649e0/11.png 295w,
+/static/9c30cc2d3c3a7a272d86647d6c38e24c/40fad/11.png 590w,
+/static/9c30cc2d3c3a7a272d86647d6c38e24c/dd6a0/11.png 614w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;완료하면 이런 이메일을 받게 된다. &lt;em&gt;언제 끝나나..&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Hello,
+
+Thank you for contacting Google Cloud Platform Support.
+
+This message is to confirm that we&amp;#39;ve received your quota request for  
+project &amp;#39;fast-ai-******&amp;#39;. Quota increase requests typically take two  
+business days to process. If this quota request is very urgent, please  
+respond to this email so that our support agents can have full context when  
+processing your quota increase request.
+
+While we make every effort to provide you with a resolution to your case  
+within two business days, please understand that some of the quota increase  
+requests may require further evaluation which takes additional time.
+
+If you have any further information and clarification you would like to  
+include in your request, please feel free to reply to this email.
+
+Best regards,
+Google Cloud Platform Support&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;2일만 기다리자. 2일만…&lt;/p&gt;
+&lt;p&gt;자고 일어나서 이메일을 확인하니까 벌써 뭔가 Notification이 와 있었다. 확인.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Hello,
+
+Your quota request for project &amp;#39;***********&amp;#39; has been approved and your  
+quota has been adjusted accordingly.
+
+Changed Quota:
++------------------+------------------+
+| GLOBAL Attribute | GPUS_ALL_REGIONS |
++------------------+------------------+
+|     Changes      |      0 -&amp;gt; 1      |
++------------------+------------------+
+....&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;드디어 GPU를 쓸 수 있다. &lt;/p&gt;
+&lt;p&gt;그럼 다시 Cloud9 terminal로 돌아가자. 다시 다음 Command를 실행한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;export&lt;/span&gt; IMAGE_FAMILY&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;pytorch-latest-gpu&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# or &quot;pytorch-latest-cpu&quot; for non-GPU instances&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;export&lt;/span&gt; ZONE&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;us-west2-b&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# budget: &quot;us-west1-b&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;export&lt;/span&gt; INSTANCE_NAME&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;my-fastai-instance&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;export&lt;/span&gt; INSTANCE_TYPE&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;n1-highmem-8&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# budget: &quot;n1-highmem-4&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# budget: &apos;type=nvidia-tesla-k80,count=1&apos;&lt;/span&gt;
+gcloud compute instances create &lt;span class=&quot;token variable&quot;&gt;$INSTANCE_NAME&lt;/span&gt; \
+        --zone&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$ZONE&lt;/span&gt; \
+        --image-family&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$IMAGE_FAMILY&lt;/span&gt; \
+        --image-project&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;deeplearning-platform-release \
+        --maintenance-policy&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;TERMINATE \
+        --accelerator&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;type=nvidia-tesla-p4,count=1&quot;&lt;/span&gt; \
+        --machine-type&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$INSTANCE_TYPE&lt;/span&gt; \
+        --boot-disk-size&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;200GB \
+        --metadata&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;install-nvidia-driver=True&quot;&lt;/span&gt; \
+        --preemptible&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;완료되면 뭐라뭐라 뜬다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Created &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;https://www.googleapis.com/compute/v1/projects/fast-ai-******/zones/us-west2-b/instances/my-fastai-instance&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;.
+WARNING: Some requests generated warnings:
+ - Disk size: &lt;span class=&quot;token string&quot;&gt;&apos;200 GB&apos;&lt;/span&gt; is larger than image size: &lt;span class=&quot;token string&quot;&gt;&apos;30 GB&apos;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;.&lt;/span&gt; You might need to resize the root repartition manually &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; the operating system does not support automatic resizing. See https://cloud.google.com/compute/docs/disks/persistent-disks&lt;span class=&quot;token comment&quot;&gt;#repartitionrootpd for details.&lt;/span&gt;
+
+NAME                ZONE        MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP    STATUS
+
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이제 연결해보자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;gcloud compute &lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; --zone&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$ZONE&lt;/span&gt; jupyter@&lt;span class=&quot;token variable&quot;&gt;$INSTANCE_NAME&lt;/span&gt; -- -L 8080:localhost:8080&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;passphrase&lt;/code&gt;를 물어보면서 진행을 묻는다. 만든 적 없으니 다 엔터 치면 instance에 접속이 가능하다. 드디어 성공.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9d82a9076c35b7d2f3a797db1c997172/e7bf0/12.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 583px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 34.476843910806174%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABDUlEQVQoz5VRWVKDUBDk/seJllaJClnZQoCEbJAg4Jpcop2eRwz650fX9DBM93Q9K4kcRJ6N9cLFRlAsx9hnIxSrMZp9gI9q8S9YsW8j9h+Rx46IOtiJGIXJi9UE78cYpzrFV4fPl0TR7/vc2qVDHNdTvYwC1cZT0W3iotp6qHe+XBrqteSvZYRWwL4pQuW1zkwai/HKfGp+6Jb2In4Qk0N+NSoF5DQkyLl34dRRQUbjojqJy5tEPLcZTo3BuV121fT9iAaJfE9/ZtZGonnDG415gcZiHIGJOdfrWbn8V/TXo3AYjG41Ioczd4BV9ARfTGbOANHkDvPpPdLgAVlo64MxPo2zkI/5rELUYf0GcMjoJpqjERoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Connection successful&quot;
+        title=&quot;&quot;
+        src=&quot;/static/9d82a9076c35b7d2f3a797db1c997172/e7bf0/12.png&quot;
+        srcset=&quot;/static/9d82a9076c35b7d2f3a797db1c997172/1f372/12.png 148w,
+/static/9d82a9076c35b7d2f3a797db1c997172/8955b/12.png 295w,
+/static/9d82a9076c35b7d2f3a797db1c997172/e7bf0/12.png 583w&quot;
+        sizes=&quot;(max-width: 583px) 100vw, 583px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;shell의 &lt;code class=&quot;language-text&quot;&gt;$&lt;/code&gt;앞에 &lt;code class=&quot;language-text&quot;&gt;jupyter@my-fastai-instance&lt;/code&gt;라는 글이 생긴 걸 볼 수 있다.&lt;/p&gt;
+&lt;h4&gt;주의할 점&lt;/h4&gt;
+&lt;p&gt;우리는 &lt;a href=&quot;https://course.fast.ai/start_gcp.html#preemptible-instances&quot;&gt;Preemtible instance&lt;/a&gt;를 생성했다 (command 입력시 &lt;code class=&quot;language-text&quot;&gt;preemptible&lt;/code&gt; flag를 참고). Fast.ai의 말에 따르면 (1) 큰 수요가 있으면 30초 안에 멈출 수도 있고 (그러지 않ㅇ기를 바래야지) (2) 24시간을 쓴 후에는 무조건 꺼진단다. 그래서 이게 더 싸고 초보자에게 알맞는 instance라고 한다. &lt;/p&gt;
+&lt;h3&gt;9. 업데이트 후 notebook 실행&lt;/h3&gt;
+&lt;p&gt;사실 instance에 이미 &lt;code class=&quot;language-text&quot;&gt;tutorials&lt;/code&gt;라는 폴더가 있고 그곳에 jupyter notebook이 있다. &lt;code class=&quot;language-text&quot;&gt;course-v3&lt;/code&gt;라는 폴더에 접근하자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; tutorials/fastai/course-v3
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout &lt;span class=&quot;token keyword&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; pull&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;course를 가장 최신 상태로 업데이트했다. &lt;/p&gt;
+&lt;p&gt;그리고 &lt;code class=&quot;language-text&quot;&gt;conda&lt;/code&gt;를 써서 업데이트.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; /opt/anaconda3/bin/conda &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -c fastai fastai&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;나는 &lt;code class=&quot;language-text&quot;&gt;pipenv&lt;/code&gt;를 써서 사실 &lt;code class=&quot;language-text&quot;&gt;conda&lt;/code&gt;가 어떻게 돌아가는지는 잘 모른다. 확인해보니 &lt;code class=&quot;language-text&quot;&gt;conda&lt;/code&gt;는 깔려있고 &lt;code class=&quot;language-text&quot;&gt;pipenv&lt;/code&gt;는 안 깔려있기도 하고, fastai도 이렇게 시키니까 그냥 &lt;code class=&quot;language-text&quot;&gt;conda&lt;/code&gt;를 쓰자. &lt;/p&gt;
+&lt;h3&gt;10. 기타&lt;/h3&gt;
+&lt;p&gt;일단 &lt;a href=&quot;https://www.opera.com&quot;&gt;opera 브라우저&lt;/a&gt;를 설치하자. 싸지방에서 Github이 막혀있으므로 vpn을 지원하는 opera를 사용해야 한다. 물론 속도가 좀 느려지는 건 감안해야 한다. 울지 말자. 할 수 있다. &lt;/p&gt;
+&lt;p&gt;오페라 브라우저를 열은 후 설정 -&gt; 고급 -&gt; 기능 -&gt; vpn 사용 on.&lt;/p&gt;
+&lt;p&gt;이제 깃헙에 들어갈 수 있다.&lt;/p&gt;
+&lt;p&gt;됐다. 거의 다 왔다. &lt;/p&gt;
+&lt;h3&gt;10. Jupyer notebook 실행&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[Deploying a serverless crawler with python + lambda]]></title><description><![CDATA[What I’m gonna build I’m gonna build a simple crawler that will send HTTP request to zigbang.com’s api server to receive data on estates…]]></description><link>https://9oelm.github.io/2019-03-17--deploying-a-serverless-crawler-with-python-+-lambda+dynamoDB/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-17--deploying-a-serverless-crawler-with-python-+-lambda+dynamoDB/</guid><pubDate>Mon, 18 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;What I’m gonna build&lt;/h1&gt;
+&lt;p&gt;I’m gonna build a simple crawler that will send HTTP request to zigbang.com’s api server to receive data on estates, and then save it to dynamoDB. &lt;/p&gt;
+&lt;h1&gt;Prerequisites&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Have a recent version of node installed&lt;/p&gt;
@@ -290,7 +1142,26 @@ rm -rf ./.tmp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/UnitedIncome/serverless-python-requirements&quot;&gt;Just install it&lt;/a&gt;, and produce &lt;code class=&quot;language-text&quot;&gt;requirements.txt&lt;/code&gt; by running &lt;code class=&quot;language-text&quot;&gt;pip freeze &amp;gt; requirements.txt&lt;/code&gt; and run &lt;code class=&quot;language-text&quot;&gt;sls deploy&lt;/code&gt;.
 &lt;em&gt;I find this way very much simpler and easier!&lt;/em&gt;&lt;/p&gt;
 &lt;h1&gt;Source code&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/9oelM/es&quot;&gt;The source code can be found from this repo!&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Updating python 3 on an outdated Ubuntu]]></title><description><![CDATA[The problem Sometimes you cannot easily change the version of Ubuntu  and  python if you are running them on cloud. I am using  cloud9 , as…]]></description><link>https://9oelm.github.io/2019-03-13--Updating-python3-on-an-outdated-ubuntu/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-13--Updating-python3-on-an-outdated-ubuntu/</guid><pubDate>Wed, 13 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;The problem&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/9oelM/es&quot;&gt;The source code can be found from this repo!&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;serverless.yml&lt;/h1&gt;
+&lt;p&gt;In the &lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt; and other relevant fields, fill out suitable values.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;service: crawl-service # NOTE: update this with your service name
+
+...
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: us-east-1
+
+...
+
+functions:
+  crawler:
+    handler: handler.crawler # # The file and module for this specific function.
+    name: crawler
+    
+    ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Updating python 3 on an outdated Ubuntu]]></title><description><![CDATA[The problem Sometimes you cannot easily change the version of Ubuntu  and  python if you are running them on cloud. I am using  cloud9 , as…]]></description><link>https://9oelm.github.io/2019-03-13--Updating-python3-on-an-outdated-ubuntu/</link><guid isPermaLink="false">https://9oelm.github.io/2019-03-13--Updating-python3-on-an-outdated-ubuntu/</guid><pubDate>Wed, 13 Mar 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;The problem&lt;/h1&gt;
 &lt;p&gt;Sometimes you cannot easily change the version of Ubuntu &lt;em&gt;and&lt;/em&gt; python if you are running them on cloud. I am using &lt;a href=&quot;c9.io&quot;&gt;cloud9&lt;/a&gt;, as you might have expected, because I’m still in the Navy, without any personal devices. I cannot go home to open up my laptop to do anything better.&lt;/p&gt;
 &lt;p&gt;The version of Ubuntu and &lt;code class=&quot;language-text&quot;&gt;python&lt;/code&gt; were both too not satisfiable. I had to update the version of &lt;code class=&quot;language-text&quot;&gt;python&lt;/code&gt; on Ubuntu 14.04.5:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ lsb_release -a
