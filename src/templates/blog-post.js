@@ -13,9 +13,10 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const { title, siteUrl } = this.props.data.site.siteMetadata
     const { previous, next } = this.props.pageContext
+    const { location } = this.props
 
     return (
-      <Layout location={this.props.location} title={title}>
+      <Layout location={location} title={title}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -67,7 +68,7 @@ class BlogPostTemplate extends React.Component {
         <Disqus 
           identifier={post.id}
           title={post.frontmatter.title}
-          url={`${siteUrl}${window.location.pathname}`}
+          url={`${siteUrl}${location.pathname}`}
         />
       </Layout>
     )
