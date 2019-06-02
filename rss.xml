@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 17 May 2019 14:39:58 GMT</lastBuildDate><item><title><![CDATA[프로그래머스 (여행경로) 풀이: 파이썬 [Python]]]></title><description><![CDATA[여행경로 문제 프로그래머스 문제 링크 문제 설명 주어진 항공권을 모두 이용하여 여행경로를 짜려고 합니다. 항상 ICN 공항에서 출발합니다. 항공권 정보가 담긴 2차원 배열 tickets…]]></description><link>https://9oelm.github.io/2019-05-06--프로그래머스-(여행경로)-문제-풀이:-파이썬-[Python]/</link><guid isPermaLink="false">https://9oelm.github.io/2019-05-06--프로그래머스-(여행경로)-문제-풀이:-파이썬-[Python]/</guid><pubDate>Mon, 06 May 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;여행경로 문제&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 02 Jun 2019 12:00:38 GMT</lastBuildDate><item><title><![CDATA[프로그래머스 (여행경로) 풀이: 파이썬 [Python]]]></title><description><![CDATA[여행경로 문제 프로그래머스 문제 링크 문제 설명 주어진 항공권을 모두 이용하여 여행경로를 짜려고 합니다. 항상 ICN 공항에서 출발합니다. 항공권 정보가 담긴 2차원 배열 tickets…]]></description><link>https://9oelm.github.io/2019-05-06--프로그래머스-(여행경로)-문제-풀이:-파이썬-[Python]/</link><guid isPermaLink="false">https://9oelm.github.io/2019-05-06--프로그래머스-(여행경로)-문제-풀이:-파이썬-[Python]/</guid><pubDate>Mon, 06 May 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;여행경로 문제&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43164?language=python3&quot;&gt;프로그래머스 문제 링크&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;문제 설명&lt;/h2&gt;
 &lt;p&gt;주어진 항공권을 모두 이용하여 여행경로를 짜려고 합니다. 항상 ICN 공항에서 출발합니다.&lt;/p&gt;
@@ -3190,27 +3190,7 @@ Promise&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;h2&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Promise.race(iterable)&lt;/code&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;It’s just almost the same as &lt;code class=&quot;language-text&quot;&gt;Promise.all&lt;/code&gt;, but different in that it resolves or rejects when any one of the promises inside the iterable object rejects or resolves.&lt;/p&gt;
 &lt;h3&gt;Chaining after &lt;code class=&quot;language-text&quot;&gt;Promise.race&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;Promise.all&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;You can chain with &lt;code class=&quot;language-text&quot;&gt;then&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;catch&lt;/code&gt;, because what is returned from these is also a promise.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What to do for next 49 weeks]]></title><description><![CDATA[Why So I have about 49 weeks until I get discharged. So this is a good time to think about what to accomplish before then. I wanna… Achieve…]]></description><link>https://9oelm.github.io/2018-08-31--What-to-do-for-next-49-weeks/</link><guid isPermaLink="false">https://9oelm.github.io/2018-08-31--What-to-do-for-next-49-weeks/</guid><pubDate>Fri, 31 Aug 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Why&lt;/h1&gt;
-&lt;p&gt;So I have about 49 weeks until I get discharged. So this is a good time to think about what to accomplish before then.&lt;/p&gt;
-&lt;h1&gt;I wanna…&lt;/h1&gt;
-&lt;p&gt;Achieve clear understanding of:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;React&lt;/li&gt;
-&lt;li&gt;Javascript (ES7/8)&lt;/li&gt;
-&lt;li&gt;Jest + Enzyme&lt;/li&gt;
-&lt;li&gt;Webpack&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Learn:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Typescript&lt;/li&gt;
-&lt;li&gt;Backend basics (NoSQL + Express)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;Other than tech?&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Exercise. Gain weight. &lt;/li&gt;
-&lt;li&gt;Prepare for employment&lt;/li&gt;
-&lt;li&gt;Prepare for the exchange program&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Page transition in React]]></title><description><![CDATA[I always wondered how this sleek transition effects work in React and Native apps, so this is now a chance to find something out.  Resources…]]></description><link>https://9oelm.github.io/2018-08-11--Page-transition-in-React/</link><guid isPermaLink="false">https://9oelm.github.io/2018-08-11--Page-transition-in-React/</guid><pubDate>Sat, 11 Aug 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I always wondered how this sleek transition effects work in React and Native apps, so this is now a chance to find something out. &lt;/p&gt;
+&lt;p&gt;You can chain with &lt;code class=&quot;language-text&quot;&gt;then&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;catch&lt;/code&gt;, because what is returned from these is also a promise.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Page transition in React]]></title><description><![CDATA[I always wondered how this sleek transition effects work in React and Native apps, so this is now a chance to find something out.  Resources…]]></description><link>https://9oelm.github.io/2018-08-11--Page-transition-in-React/</link><guid isPermaLink="false">https://9oelm.github.io/2018-08-11--Page-transition-in-React/</guid><pubDate>Sat, 11 Aug 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I always wondered how this sleek transition effects work in React and Native apps, so this is now a chance to find something out. &lt;/p&gt;
 &lt;h1&gt;Resources&lt;/h1&gt;
 &lt;h2&gt;Articles for transition&lt;/h2&gt;
 &lt;ul&gt;
@@ -6517,23 +6497,7 @@ fport /i&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;Temporary Internet Files &lt;code class=&quot;language-text&quot;&gt;%USERPROFILE%Local Settings\Temporary Internet Files&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Opened pages &lt;code class=&quot;language-text&quot;&gt;%USERPROFILE%Local Settings\History&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Temporary cookie files &lt;code class=&quot;language-text&quot;&gt;%USERPROFILE%Local Settings\COOKIES&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[GET and POST]]></title><description><![CDATA[Sources stackoverflow post Mozilla on GET Mozilla on POST What they have in common They are all used to send an HTTP request to the server…]]></description><link>https://9oelm.github.io/2018-05-06--GET-and-POST/</link><guid isPermaLink="false">https://9oelm.github.io/2018-05-06--GET-and-POST/</guid><pubDate>Sun, 06 May 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Sources&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/3477333/what-is-the-difference-between-post-and-get?utm_medium=organic&amp;#x26;utm_source=google_rich_qa&amp;#x26;utm_campaign=google_rich_qa&quot;&gt;stackoverflow post&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Methods/GET&quot;&gt;Mozilla on GET&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST&quot;&gt;Mozilla on POST&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;What they have in common&lt;/h3&gt;
-&lt;p&gt;They are all used to send an HTTP request to the server.&lt;/p&gt;
-&lt;h3&gt;GET&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The HTTP GET method requests a representation of the specified resource. &lt;strong&gt;Requests using GET should only retrieve data.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;POST&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A POST request is typically sent via an HTML form and results in a change on the server.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Unlike &lt;code class=&quot;language-text&quot;&gt;GET&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;POST&lt;/code&gt; has a body in its request.  &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Listening, Established, Close_wait and Time_wait in netstat]]></title><description><![CDATA[Sources superuser askubuntu Due to the way TCP/IP works, connections can not be closed immediately. Packets may arrive out of order or be…]]></description><link>https://9oelm.github.io/2018-05-06--Listening,-Established,-Close_wait-and-Time_wait-in-netstat/</link><guid isPermaLink="false">https://9oelm.github.io/2018-05-06--Listening,-Established,-Close_wait-and-Time_wait-in-netstat/</guid><pubDate>Sun, 06 May 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Sources&lt;/h3&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Listening, Established, Close_wait and Time_wait in netstat]]></title><description><![CDATA[Sources superuser askubuntu Due to the way TCP/IP works, connections can not be closed immediately. Packets may arrive out of order or be…]]></description><link>https://9oelm.github.io/2018-05-06--Listening,-Established,-Close_wait-and-Time_wait-in-netstat/</link><guid isPermaLink="false">https://9oelm.github.io/2018-05-06--Listening,-Established,-Close_wait-and-Time_wait-in-netstat/</guid><pubDate>Sun, 06 May 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Sources&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://superuser.com/questions/173535/what-are-close-wait-and-time-wait-states&quot;&gt;superuser&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://askubuntu.com/questions/538443/whats-the-difference-between-port-status-listening-time-wait-close-wait&quot;&gt;askubuntu&lt;/a&gt;&lt;/li&gt;
@@ -6799,14 +6763,7 @@ It handles &lt;strong&gt;syntax processing of message data&lt;/strong&gt; such a
 &lt;h3&gt;4. Transport layer&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The transport layer ensures that messages are delivered error-free, in sequence, and with no losses or duplications.&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Books to buy or print]]></title><description><![CDATA[I want to buy English books but they are too expensive in Korea… Learning React (2018)  - definitely Building Progressive Web Apps: Bringing…]]></description><link>https://9oelm.github.io/2018-04-25--Books-to-buy/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-25--Books-to-buy/</guid><pubDate>Wed, 25 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I want to buy English books but they are too expensive in Korea…&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.shopNo=0000400000&amp;#x26;sc.prdNo=279194489&amp;#x26;sc.saNo=003002001&amp;#x26;bid1=search&amp;#x26;bid2=product&amp;#x26;bid3=title&amp;#x26;bid4=001&quot;&gt;Learning React (2018)&lt;/a&gt; - definitely&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Building-Progressive-Web-Apps-Bringing/dp/1491961651/ref=pd_sim_14_28?_encoding=UTF8&amp;#x26;pd_rd_i=1491961651&amp;#x26;pd_rd_r=NCR51M576RW3WWC99ZZF&amp;#x26;pd_rd_w=oPfU8&amp;#x26;pd_rd_wg=3s8Qc&amp;#x26;psc=1&amp;#x26;refRID=NCR51M576RW3WWC99ZZF&quot;&gt;Building Progressive Web Apps: Bringing the Power of Native to the Browser&lt;/a&gt;, but too expensive.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.shopNo=0000400000&amp;#x26;sc.prdNo=213427270&amp;#x26;sc.saNo=003002001&amp;#x26;bid1=search&amp;#x26;bid2=product&amp;#x26;bid3=title&amp;#x26;bid4=001&quot;&gt;DOM Enlightenment (2013): Exploring JavaScript and the Modern DOM&lt;/a&gt; - definitely&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Testable-JavaScript-Ensuring-Reliable-Code/dp/1449323391/ref=sr_1_1?s=books&amp;#x26;ie=UTF8&amp;#x26;qid=1524666024&amp;#x26;sr=1-1&amp;#x26;keywords=Testable+JavaScript%3A+Ensuring+Reliable+Code&quot;&gt;Testable JavaScript: Ensuring Reliable Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.shopNo=0000400000&amp;#x26;sc.prdNo=279599041&amp;#x26;sc.saNo=003002001&amp;#x26;bid1=search&amp;#x26;bid2=product&amp;#x26;bid3=title&amp;#x26;bid4=001&quot;&gt;Node.js 마이크로서비스 코딩 공작소 : 마이크로서비스 아키텍처 설계와 구현, 장애 처리, 보안, 로그 수집, 배포까지&lt;/a&gt; - definitely&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Ajax, animation while loading, and jQuery animation]]></title><description><![CDATA[Ajax Asynchronous JavaScript and XML.  is a simpler version of  . Loading a local JSON file with ajax The other way or  Setting up a loading…]]></description><link>https://9oelm.github.io/2018-04-25--Ajax,-animation-while-loading,-and-jQuery-animation/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-25--Ajax,-animation-while-loading,-and-jQuery-animation/</guid><pubDate>Wed, 25 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Ajax&lt;/h2&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Ajax, animation while loading, and jQuery animation]]></title><description><![CDATA[Ajax Asynchronous JavaScript and XML.  is a simpler version of  . Loading a local JSON file with ajax The other way or  Setting up a loading…]]></description><link>https://9oelm.github.io/2018-04-25--Ajax,-animation-while-loading,-and-jQuery-animation/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-25--Ajax,-animation-while-loading,-and-jQuery-animation/</guid><pubDate>Wed, 25 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Ajax&lt;/h2&gt;
 &lt;p&gt;Asynchronous JavaScript and XML.&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$.getJSON()&lt;/code&gt; is a simpler version of &lt;code class=&quot;language-text&quot;&gt;$.ajax()&lt;/code&gt;.&lt;/p&gt;
 &lt;h3&gt;Loading a local JSON file with ajax&lt;/h3&gt;
@@ -7063,22 +7020,7 @@ ReactDOM.render(&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;tok
                 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;This is my first React Component.&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
              &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
       }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You don’t need a &lt;code class=&quot;language-text&quot;&gt;render()&lt;/code&gt; function for this. Just return it. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[List of curated websites(pages) helpful for development]]></title><description><![CDATA[velopert.com : Front and backend tips, in Korean.  launching react with express.js   kesus kim : Front and backend tips, in Korean…]]></description><link>https://9oelm.github.io/2018-04-22--List-of-curated-websites(pages)-helpful-for-development/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-22--List-of-curated-websites(pages)-helpful-for-development/</guid><pubDate>Sun, 22 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://velopert.com/about&quot;&gt;velopert.com&lt;/a&gt;: Front and backend tips, in Korean. &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://velopert.com/1492&quot;&gt;launching react with express.js&lt;/a&gt; &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.kesuskim.com/&quot;&gt;kesus kim&lt;/a&gt;: Front and backend tips, in Korean.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.kesuskim.com/2017/07/develop-website-using-next-js/&quot;&gt;integrating next.js with node.js (Express)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blueshw.github.io/2018/04/15/why-nextjs/&quot;&gt;bono’s blog on nextjs operation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://webframeworks.kr/&quot;&gt;webframeworks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[My story (1): changes that occurred from high school to the Navy]]></title><description><![CDATA[Before starting to read this People change. And so do I. This is a story of how I, as a developer and social being, changed over a course of…]]></description><link>https://9oelm.github.io/2018-04-20--My-story-(1):-changes-that-occurred-from-high-school-to-the-Navy/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-20--My-story-(1):-changes-that-occurred-from-high-school-to-the-Navy/</guid><pubDate>Fri, 20 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Before starting to read this&lt;/h2&gt;
+&lt;p&gt;You don’t need a &lt;code class=&quot;language-text&quot;&gt;render()&lt;/code&gt; function for this. Just return it. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[My story (1): changes that occurred from high school to the Navy]]></title><description><![CDATA[Before starting to read this People change. And so do I. This is a story of how I, as a developer and social being, changed over a course of…]]></description><link>https://9oelm.github.io/2018-04-20--My-story-(1):-changes-that-occurred-from-high-school-to-the-Navy/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-20--My-story-(1):-changes-that-occurred-from-high-school-to-the-Navy/</guid><pubDate>Fri, 20 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Before starting to read this&lt;/h2&gt;
 &lt;p&gt;People change. And so do I. This is a story of how I, as a developer and social being, changed over a course of time. Also a story of how I got out of the problems that I faced. &lt;/p&gt;
 &lt;h2&gt;Who I was&lt;/h2&gt;
 &lt;h3&gt;1. Logical&lt;/h3&gt;
@@ -8468,93 +8410,7 @@ git merge anotherBranch&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;Sources&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://kb.netgear.com/1141/What-is-WEP-wireless-encryption&quot;&gt;Netgear&lt;/a&gt;
-[&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What I should be preparing]]></title><description><![CDATA[Some job postings to see (2018 Jan)\ Goldman Sachs Bachelor of Science in Computer Science, System/Computer Engineering, Cyber-Security, or…]]></description><link>https://9oelm.github.io/2018-01-01--what-i-should-be-preparing/</link><guid isPermaLink="false">https://9oelm.github.io/2018-01-01--what-i-should-be-preparing/</guid><pubDate>Mon, 01 Jan 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Some job postings to see (2018 Jan)\&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Goldman Sachs&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Bachelor of Science in Computer Science, System/Computer Engineering, Cyber-Security, or Information Security is preferred. &lt;/li&gt;
-&lt;li&gt;Four (4) years of additional work experience may be substituted in lieu of a Bachelor’s Degree. &lt;/li&gt;
-&lt;li&gt;Bachelors of Science/Arts in Forensic Computing, System/Computer Engineering, Data Science, Engineering, Operations Research, or Decision Science will be considered.&lt;/li&gt;
-&lt;li&gt;Coursework or experience in computer science, computer security, computer networking, system design, system integration, software development, emerging technologies, open source frameworks, encryption schemes, and application testing/penetration testing/reviews preferred.&lt;/li&gt;
-&lt;li&gt;Industry Certifications such as CISSP or GIAC Cyber Defense, Penetration Testing, or Incident Response and Forensics-related certifications&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;EY&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Infrastructure Information systems security assessment, design, architecture, implementation, management and reporting&lt;/li&gt;
-&lt;li&gt;Strong technical or security skills related to a broad range of operating systems, databases or security tools, e.g., UNIX, Linux, Windows 2000 and NT, firewalls and IDS systems&lt;/li&gt;
-&lt;li&gt;Experience with programming languages such as Java, C, C++, C#, asp, and .NET&lt;/li&gt;
-&lt;li&gt;Experience of security testing methods and techniques including network, operating and application system configuration review and internal/external penetration testing&lt;/li&gt;
-&lt;li&gt;Experience of manual attack and penetration testing above and beyond the running of automated tools&lt;/li&gt;
-&lt;li&gt;Experience in developing custom scripts or programs (used for port scanning and vulnerability identification)&lt;/li&gt;
-&lt;li&gt;An understanding of web based application vulnerabilities and experience in application security review and testing&lt;/li&gt;
-&lt;li&gt;An understanding of mobile application vulnerabilities and experience in mobile application security review and testing&lt;/li&gt;
-&lt;li&gt;Familiarity with security standards reference such as OWASP, SANS, NIST&lt;/li&gt;
-&lt;li&gt;Understanding of secure development practice and framework&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Credit Suisse&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Knowledge or experience of agile development (e.g. XP, SCRUM, Automated testing, Kanban…)&lt;/li&gt;
-&lt;li&gt;Experience developing and testing using an Object Oriented language e.g. Java, Groovy, Scala, C#, Ruby&lt;/li&gt;
-&lt;li&gt;Experience developing and testing using JavaScript (server and client side), AngularJS, React, and HTML5&lt;/li&gt;
-&lt;li&gt;Strong client relationship skills with a strong customer service-oriented attitude&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Verizon&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Experience with mobile application penetration testing highly desired&lt;/li&gt;
-&lt;li&gt;Certifications such as CEH, OSCP, CISSP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;IBM&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Preferred Tech And Prof Experience&lt;/li&gt;
-&lt;li&gt;Familiarity with the following protocols: ARP, DHCP, DNS, DSN, FTP, HTTP, IMAP, ICMP, IDRP, IP, IRC, NFS, POP3, PAR, RLOGIN, SMB, SMTP, SSL, SSH, TCP, TELNET, UDP. Strong knowledge of Windows® Internals, Windows® Application Programming Interfaces (API), Portable Executable (PE) formats, Windows® Registry, and security models.&lt;/li&gt;
-&lt;li&gt;Security+ and CEH&lt;/li&gt;
-&lt;li&gt;OSCP, GPEN, GWAPT, LPT, GCIH&lt;/li&gt;
-&lt;li&gt;Experience with dynamic source code analysis&lt;/li&gt;
-&lt;li&gt;Extensive experience with Tenable Nessus&lt;/li&gt;
-&lt;li&gt;Experience with Core Impact&lt;/li&gt;
-&lt;li&gt;Experience with IBM Appscan&lt;/li&gt;
-&lt;li&gt;5 years’ experience&lt;/li&gt;
-&lt;li&gt;Bachelor’s Degree related to position&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Salesforce&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;BS/MS degree, or relevant work experience&lt;/li&gt;
-&lt;li&gt;Infrastructure and application level penetration testing experience&lt;/li&gt;
-&lt;li&gt;Expert knowledge in computer and network security&lt;/li&gt;
-&lt;li&gt;Extensive knowledge of the OWASP Top 10 and CWE Top 25&lt;/li&gt;
-&lt;li&gt;Experience in exploiting web and web services security vulnerabilities including cross-site scripting, cross site request forgery, SQL injection, DoS attacks, XML/SOAP, API attacks, and more.&lt;/li&gt;
-&lt;li&gt;Strong coding skills; Software development, Java, PHP, Perl, Python, Ruby, etc….&lt;/li&gt;
-&lt;li&gt;BS Computer Science or equivalent knowledge and experience&lt;/li&gt;
-&lt;li&gt;Offensive attack hacker mindset&lt;/li&gt;
-&lt;li&gt;Experience with the latest and greatest penetration testing tools&lt;/li&gt;
-&lt;li&gt;Desired Skills And Credentials&lt;/li&gt;
-&lt;li&gt;Assembly/exploit developpment experience&lt;/li&gt;
-&lt;li&gt;Bug bounty awards&lt;/li&gt;
-&lt;li&gt;Experience in software development, Java, PHP, Perl, Python, Ruby, etc….&lt;/li&gt;
-&lt;li&gt;Information security certifications, GPEN, OSCP, OSCE, OSWE, CEH, CISSP&lt;/li&gt;
-&lt;li&gt;Ability to self motivate when given strategic goals.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Thales&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;University coursework in Electrical Engineering, Computer Sciences, or a related area of studies is preferred&lt;/li&gt;
-&lt;li&gt;Advantage with professional certifications (e.g. CISA, CISSP)&lt;/li&gt;
-&lt;li&gt;Fluent spoken English, Cantonese and Mandarin (preferred)&lt;/li&gt;
-&lt;li&gt;Good knowledge of IT Security (e.g. ISO/IEC 27001, Enterprise Risk Assessment&lt;/li&gt;
-&lt;li&gt;Energetic, dynamic, honest, driven with advanced business acumen&lt;/li&gt;
-&lt;li&gt;Enterprise Security Framework, penetration testing, application security review)&lt;/li&gt;
-&lt;li&gt;Excellent communications skills, good technical abilities, a curious nature, and a creative mind&lt;/li&gt;
-&lt;li&gt;Experience scoping engagements and developing technical proposals&lt;/li&gt;
-&lt;li&gt;Experience developing C, C++, PHP+, MySQL, Java&lt;/li&gt;
-&lt;li&gt;Experience reverse engineering of malware, disk and memory forensics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Amazon&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Experience with ICS/SCADA penetration testing and use of attack frameworks (e.g. BlackEnergy)&lt;/li&gt;
-&lt;li&gt;At least 3 years of Information Security experience&lt;/li&gt;
-&lt;li&gt;Experience with security frameworks such as NIST 800-53r4, NISTIR 7628&lt;/li&gt;
-&lt;li&gt;MS in Computer Science or equivalent&lt;/li&gt;
-&lt;li&gt;Knowledge of networking protocols (e.g., TCP/IP, UDP, IPSEC, HTTP, HTTPS, routing protocols)&lt;/li&gt;
-&lt;li&gt;Knowledge of system security vulnerabilities and remediation techniques&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Difference between cookies and sessions]]></title><description><![CDATA[Cookies An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to the user’s web browser. The browser may…]]></description><link>https://9oelm.github.io/2017-12-31--Difference-between-cookies-and-sessions/</link><guid isPermaLink="false">https://9oelm.github.io/2017-12-31--Difference-between-cookies-and-sessions/</guid><pubDate>Sun, 31 Dec 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Cookies&lt;/h3&gt;
+[&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Difference between cookies and sessions]]></title><description><![CDATA[Cookies An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to the user’s web browser. The browser may…]]></description><link>https://9oelm.github.io/2017-12-31--Difference-between-cookies-and-sessions/</link><guid isPermaLink="false">https://9oelm.github.io/2017-12-31--Difference-between-cookies-and-sessions/</guid><pubDate>Sun, 31 Dec 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Cookies&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to the user’s web browser. The browser may store it and send it back with the next request to the same server.&lt;br&gt;
 When receiving an HTTP request, a server can send a Set-Cookie header with the response. The cookie is usually stored by the browser, and then the cookie is sent with requests made to the same server inside a Cookie HTTP header. &lt;/p&gt;
@@ -8592,91 +8448,7 @@ When receiving an HTTP request, a server can send a Set-Cookie header with the r
 &lt;li&gt;&lt;a href=&quot;http://www.hackingwithphp.com/10/1/0/cookies-vs-sessions&quot;&gt;hackingwithphp&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies&quot;&gt;Mozila&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/6253633/cookies-vs-sessions&quot;&gt;Stackoverflow&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Hacking kakaotalk (2): working out the obfuscated codes continued]]></title><description><![CDATA[Use  g
-Follow the install instructions from the link: run   from  . Checkpoint]]></description><link>https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(3)-working-out-the-obfuscated-codes-continued/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(3)-working-out-the-obfuscated-codes-continued/</guid><pubDate>Sun, 15 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Use &lt;a href=&quot;https://github.com/CalebFenton/simplify&quot;&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;simplify&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;g
-Follow the install instructions from the link:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git clone --recursive https://github.com/CalebFenton/simplify.git&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;./gradlew fatjar&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;run &lt;code class=&quot;language-text&quot;&gt;simplify.jar&lt;/code&gt; from &lt;code class=&quot;language-text&quot;&gt;simplify/build/libs/simplify.jar&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;Checkpoint&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Hacking kakaotalk (1)]]></title><description><![CDATA[Get the APK use somewhere like  https://apps.evozi.com/apk-downloader/  to download the apk of an application.   Using  dex2jar would output…]]></description><link>https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(1)/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-05--Hacking-kakaotalk-(1)/</guid><pubDate>Sun, 15 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Get the APK&lt;/h2&gt;
-&lt;p&gt;use somewhere like &lt;a href=&quot;https://apps.evozi.com/apk-downloader/&quot;&gt;https://apps.evozi.com/apk-downloader/&lt;/a&gt; to download the apk of an application.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%7B%7Bsite.url%7D%7D/assets/images/HackingKakaotalk/1downloadApk.png&quot; alt=&quot;Download apk&quot;&gt; &lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%7B%7Bsite.url%7D%7D/assets/images/HackingKakaotalk/2downloadApk2.png&quot; alt=&quot;Download apk 2&quot;&gt;&lt;/p&gt;
-&lt;h2&gt;Using &lt;a href=&quot;https://github.com/pxb1988/dex2jar&quot;&gt;dex2jar&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sh d2j-dex2jar.sh [flags] ~/path/to/apk_to_decompile.apk&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;would output the file &lt;code class=&quot;language-text&quot;&gt;apk_to_decompile-dex2jar.jar&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;in this case,&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sh d2j-dex2jar.sh com.kakao.talk.apk &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;would do. I would add flag &lt;code class=&quot;language-text&quot;&gt;-v&lt;/code&gt; to generate verbose output. Then you could see the process.&lt;/p&gt;
-&lt;p&gt;then you would see&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;com.kakao.talk.apk
-com.kakao.talk-dex2jar.jar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;in your directory.&lt;/p&gt;
-&lt;p&gt;I wanted to view the contents:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ jar tvf com.kakao.talk-dex2jar.jar
-     0 Thu Oct 05 19:07:44 EDT 2017 a/
-     0 Thu Oct 05 19:07:44 EDT 2017 a/a/
-     0 Thu Oct 05 19:07:44 EDT 2017 a/a/a/
-   570 Thu Oct 05 19:07:44 EDT 2017 a/a/a/a.class
-     0 Thu Oct 05 19:07:44 EDT 2017 android/
-     0 Thu Oct 05 19:07:44 EDT 2017 android/opengl/
-     0 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/
-   271 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$f.class
-  1071 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$a.class
-  2003 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$b.class
-   289 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$r.class
-  2691 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$c.class
-   452 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$g.class
-  1089 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$d.class
-   470 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$h.class
-  1014 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$e.class
-  2261 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$i.class
-   292 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$j.class
-   822 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$k.class
-   867 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$l.class
-  6804 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$m.class
-   633 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$n.class
-   188 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$o.class
-   955 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$p.class
-   561 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a$q.class
-  5656 Thu Oct 05 19:07:44 EDT 2017 android/opengl/a/a.class
-     0 Thu Oct 05 19:07:44 EDT 2017 android/support/
-     0 Thu Oct 05 19:07:44 EDT 2017 android/support/a/
-
-..... 
-.....
-
-really long lines... wc command gives 10611 of lines!
-
-.....
-.....
-
-   436 Thu Oct 05 19:08:14 EDT 2017 h/b/o.class
-   436 Thu Oct 05 19:08:14 EDT 2017 h/b/p.class
-   469 Thu Oct 05 19:08:14 EDT 2017 h/b/q.class
-   445 Thu Oct 05 19:08:14 EDT 2017 h/b/r.class
-   459 Thu Oct 05 19:08:14 EDT 2017 h/b/s.class
-   459 Thu Oct 05 19:08:14 EDT 2017 h/b/t.class
-   424 Thu Oct 05 19:08:14 EDT 2017 h/b/u.class
-   369 Thu Oct 05 19:08:14 EDT 2017 h/b/v.class
-   372 Thu Oct 05 19:08:14 EDT 2017 h/b/w.class
-   994 Thu Oct 05 19:08:14 EDT 2017 org/apache/commons/a/d.class
-  3566 Thu Oct 05 19:08:14 EDT 2017 org/apache/commons/a/f.class
-     0 Thu Oct 05 19:08:14 EDT 2017 org/apache/commons/b/
-  7660 Thu Oct 05 19:08:14 EDT 2017 org/apache/commons/b/i.class
-     0 Thu Oct 05 19:08:14 EDT 2017 org/apmem/
-     0 Thu Oct 05 19:08:14 EDT 2017 org/apmem/tools/
-     0 Thu Oct 05 19:08:14 EDT 2017 org/apmem/tools/layouts/
-  3404 Thu Oct 05 19:08:14 EDT 2017 org/apmem/tools/layouts/FlowLayout$LayoutParams.class&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Open the jar&lt;/h2&gt;
-&lt;p&gt;use &lt;a href=&quot;http://jd.benow.ca/&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;JD-GUI&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;https://varaneckas.com/jad/&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;JD Java Decompiler Mirror&lt;/code&gt;&lt;/a&gt; to open the source file.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;dpkg -i jd-gui_1.4.0-0_all.deb &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;See the source code&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;%7B%7Bsite.url%7D%7D/assets/images/HackingKakaotalk/3seeSource.png&quot; alt=&quot;See source&quot;&gt;&lt;/p&gt;
-&lt;p&gt;As we can easily discover, almost all java codes are obfuscated. A normal human being cannot just understand the code. What do we do?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using curl to get external ip address and my geolocation]]></title><description><![CDATA[Getting an external ip address Getting my geolocation It will provide you with the data in JSON format. alternatively:]]></description><link>https://9oelm.github.io/2017-10-06--Using-curl-to-get-external-ip-address-and-my-geolocation/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-06--Using-curl-to-get-external-ip-address-and-my-geolocation/</guid><pubDate>Fri, 06 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;a href=&quot;https://askubuntu.com/questions/95910/command-for-determining-my-public-ip&quot;&gt;Getting an external ip address&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Using curl to get external ip address and my geolocation]]></title><description><![CDATA[Getting an external ip address Getting my geolocation It will provide you with the data in JSON format. alternatively:]]></description><link>https://9oelm.github.io/2017-10-06--Using-curl-to-get-external-ip-address-and-my-geolocation/</link><guid isPermaLink="false">https://9oelm.github.io/2017-10-06--Using-curl-to-get-external-ip-address-and-my-geolocation/</guid><pubDate>Fri, 06 Oct 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;a href=&quot;https://askubuntu.com/questions/95910/command-for-determining-my-public-ip&quot;&gt;Getting an external ip address&lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;curl ifconfig.me [or icanhazip.com or ipecho.net or ipinfo.io/ip]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;&lt;a href=&quot;http://xmodulo.com/geographic-location-ip-address-command-line.html&quot;&gt;Getting my geolocation&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;It will provide you with the data in JSON format.&lt;/p&gt;
@@ -8836,30 +8608,7 @@ fgh = &amp;quot;fgh&amp;quot;; // incorrect. Cannot happen &lt;/code&gt;&lt;/pre
 hop can’t trace these connections as they pass through. &lt;/p&gt;
 &lt;p&gt;For efficiency, the Tor software uses the same circuit for connections that happen within the same ten minutes or so. Later requests are given a new circuit, to keep people from linking your earlier actions to the new ones. &lt;/p&gt;
 &lt;h3&gt;Kind warning on Tor&lt;/h3&gt;
-&lt;p&gt;Tor does not completely save you from the issue of privacy. It only focuses on &lt;strong&gt;protecting the transport of data&lt;/strong&gt;. See the &lt;a href=&quot;https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29#Weaknesses&quot;&gt;weaknesses&lt;/a&gt; section of Wikipedia page on Tor for more. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hacking instagram (1)]]></title><description><![CDATA[What I found This repo . And so I just needed to follow a few steps. Steps (After following all directions from the repo’s  ) Launch tor…]]></description><link>https://9oelm.github.io/2017-09-29--Hacking-instagram-(1)/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-29--Hacking-instagram-(1)/</guid><pubDate>Fri, 29 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What I found&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Mr-Polite/instagram-py&quot;&gt;This repo&lt;/a&gt;. And so I just needed to follow a few steps.&lt;/p&gt;
-&lt;h2&gt;Steps (After following all directions from the repo’s &lt;code class=&quot;language-text&quot;&gt;README.md&lt;/code&gt;)&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Launch tor&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;service tor start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Execute the source file&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;instagram-py userID wordlist&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;What I saw is that this works. This is authentic. But there were some problems.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;Issues&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;The script will take a long time to read your wordlist if it’s long.
-Initially I was thinking of trying crackstation’s approx. 15GB wordlist on the Instagram account that I made for a testing purpose. But it will just take too long time to process your wordlist even before trying it.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The script is certainly faster than &lt;a href=&quot;https://github.com/Ethical-H4CK3R/Instagram&quot;&gt;Ethical-H4CK3R’s &lt;code class=&quot;language-text&quot;&gt;Instagram&lt;/code&gt; script&lt;/a&gt;, but still, this is the limitation of bruteforcing with one single machine. Firstly, using tor network will greatly slow your network down. Secondly, you need to switch IP Addresses from time to time because Instagram will suspend login attempts from suspicious IPs, which would make the program even slower.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Using bluetooth on kali linux]]></title><description><![CDATA[Check bluetooth status And turn it on: This way bluetooth is going to work.   will stop bluetooth. Bluetooth is not turned on by default on…]]></description><link>https://9oelm.github.io/2017-09-28--Using-bluetooth-on-kali-linux/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-28--Using-bluetooth-on-kali-linux/</guid><pubDate>Thu, 28 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Check bluetooth status&lt;/p&gt;
+&lt;p&gt;Tor does not completely save you from the issue of privacy. It only focuses on &lt;strong&gt;protecting the transport of data&lt;/strong&gt;. See the &lt;a href=&quot;https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29#Weaknesses&quot;&gt;weaknesses&lt;/a&gt; section of Wikipedia page on Tor for more. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using bluetooth on kali linux]]></title><description><![CDATA[Check bluetooth status And turn it on: This way bluetooth is going to work.   will stop bluetooth. Bluetooth is not turned on by default on…]]></description><link>https://9oelm.github.io/2017-09-28--Using-bluetooth-on-kali-linux/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-28--Using-bluetooth-on-kali-linux/</guid><pubDate>Thu, 28 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Check bluetooth status&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/etc/init.d/bluetooth status&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And turn it on:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/etc/init.d/bluetooth start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
