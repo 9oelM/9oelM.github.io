@@ -31,7 +31,7 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>. Joel loves: <strong>javascript</strong> & python. Also likes: Typescript, React, Node. Also is <strong>not</strong> a fan of: Vue.
+              Written by <strong>{author}</strong>. Joel loves: <strong>javascript</strong> & python. Also likes: React, Node.
               {` `}
               <a href={`https://github.com/${social.twitter}`}>
                 Go check him up on Github!
