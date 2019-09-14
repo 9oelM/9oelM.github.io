@@ -1,12 +1,12 @@
 ---
-title: "New javascript specifications in 2019 (What's new in Javascript - Google I/O '19")
+title: "New javascript specifications in 2019 (What's new in Javascript - Google I/O '19)"
 date: "2019-09-10T09:00:00.009Z"
 category: "development"
 tags: ["development", "javascript", "Google I/O '19"]
 ---
 
 # Must must must watch!
-I got so much great insight from [this video in Google IO 2019]() detailing latest javascript specs.
+I got so much great insight from [this video in Google IO 2019](https://youtu.be/c0oy0vQKEZE) detailing latest javascript specs.
 
 ## Improvements from the past
 - 2x faster javascript parsing on Chrome 75 (V8 v7.5) compared to Chrome 61 (V8 v6.1)
