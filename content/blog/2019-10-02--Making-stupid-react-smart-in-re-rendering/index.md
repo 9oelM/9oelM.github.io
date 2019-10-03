@@ -2,7 +2,7 @@
 title: "Making stupid react smart in re-rendering"
 date: "2019-10-02T09:00:00.009Z"
 category: "development"
-tags: ["development", "react", "purecomponent", "javascript", "typescript"]
+tags: ["development", "react", "purecomponent", "javascript", "typescript", "optimization"]
 ---
 
 ## I believed React is smart enough to know this.... but aye?
@@ -12,13 +12,13 @@ And I saw them re-rendering from the top to deep down to the bottom for no reaso
 At first, I thought it would be easy to get them correct.
 
 ![react flame chart](./react-flame-chart.png)
-Of coruse, the tree was much bigger than this. The tree didn't just reach the end. 
+Of course, the tree was much bigger than this. The tree didn't just reach the end. This made useless re-rendering even a bigger concern.
 From the top to bottom, `Provider`, `ConnectedRouter`, `App`, `PersistGate`, `ComponentA`, `ComponentB`, .... and so on.
 
 And I saw that there were no use of `shouldComponentUpdate`/`PureComponent`/`memo` in our app yet. 
 So I decided to make use of them, still not yet aware of what was to come for me. 
 
-## Takeaway 1: Parent component pretty much does not care about its children`
+## Takeaway 1: Parent component pretty much does not care about its `children`
 
 I was optimizing the app and witnessed an interesting fact. 
 Here's the code to demonstrate it:
@@ -94,7 +94,7 @@ And the result?
 
 ![children re-render test 2](./children-re-render-test-2.gif)
 
-It **does not render the children components anymore**! 
+It **does not re-render the children components anymore**! 
 I still have not understood exactly why React _can_ in this code but _cannot_ in the previous code, 
 but this is what it is.
 
@@ -418,7 +418,7 @@ Result? Only parent component re-renders. Essentially, you are only comparing pr
 
 ### 2. Stringify them
 
-By default, `JSON.stringify` does not support stringifying functions. So you've gotta use third party libaries like [`jsonfn`](https://github.com/vkiryukhin/jsonfn#readme).
+By default, `JSON.stringify` does not support stringifying functions. So you've gotta use third party libaries like [jsonfn](https://github.com/vkiryukhin/jsonfn#readme).
 
 Let's do this:
 
@@ -448,10 +448,10 @@ Yeap. That's all.
 
 ## Summary
 
-1. If you do not use `children` prop, every component inside the `render` function of a parent will re-render by default.
-2. There are ways to prevent useless re-renders:
-  - Use `memo` with `areEqual`, or
-  - Use `PureComponent` or `shouldComponentUpdate`
-3. If there are functions in your props, before using `areEqual` or `shouldComponentUpdate`:
-  - Exclude them, or
-  - Stringify them
+* If you do not use `children` prop, every component inside the `render` function of a parent will re-render by default.
+* There are ways to prevent useless re-renders:
+  * Use `memo` with `areEqual`, or
+  * Use `PureComponent` or `shouldComponentUpdate`
+* If there are functions in your props, before using `areEqual` or `shouldComponentUpdate`:
+  * Exclude them, or
+  * Stringify them
