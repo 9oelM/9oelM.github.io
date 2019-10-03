@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 03 Oct 2019 04:33:21 GMT</lastBuildDate><item><title><![CDATA[Making stupid react smart in re-rendering]]></title><description><![CDATA[I believed React is smart enough to know this… but aye? We had a bunch of large component trees in our company’s web application.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 03 Oct 2019 04:35:14 GMT</lastBuildDate><item><title><![CDATA[Making stupid react smart in re-rendering]]></title><description><![CDATA[I believed React is smart enough to know this… but aye? We had a bunch of large component trees in our company’s web application.
 And I saw…]]></description><link>https://9oelm.github.io/2019-10-02--Making-stupid-react-smart-in-re-rendering/</link><guid isPermaLink="false">https://9oelm.github.io/2019-10-02--Making-stupid-react-smart-in-re-rendering/</guid><pubDate>Wed, 02 Oct 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;I believed React is smart enough to know this… but aye?&lt;/h2&gt;
 &lt;p&gt;We had a bunch of large component trees in our company’s web application.
 And I saw them re-rendering from the top to deep down to the bottom for no reason.
@@ -389,15 +389,23 @@ Then you only have object properties that are not functions, to apply that to &l
 &lt;p&gt;&lt;img src=&quot;/children-re-render-test-5-79833449b2fdc4cfe140e26c73eb8969.gif&quot; alt=&quot;children re-render test 5&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Yeap. That’s all.&lt;/p&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;If you do not use &lt;code class=&quot;language-text&quot;&gt;children&lt;/code&gt; prop, every component inside the &lt;code class=&quot;language-text&quot;&gt;render&lt;/code&gt; function of a parent will re-render by default.&lt;/li&gt;
-&lt;li&gt;There are ways to prevent useless re-renders:
-a. Use &lt;code class=&quot;language-text&quot;&gt;memo&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;areEqual&lt;/code&gt;, or
-b. Use &lt;code class=&quot;language-text&quot;&gt;PureComponent&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;shouldComponentUpdate&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;If there are functions in your props, before using &lt;code class=&quot;language-text&quot;&gt;areEqual&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;shouldComponentUpdate&lt;/code&gt;:
-a. Exclude them, or
-b. Stringify them&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[New javascript specifications in 2019 (What's new in Javascript - Google I/O '19)]]></title><description><![CDATA[Must must must watch! I got so much great insight from  this video in Google IO 2019  detailing latest javascript specs. Improvements from…]]></description><link>https://9oelm.github.io/2019-09-10--Latest-javascript-specs/</link><guid isPermaLink="false">https://9oelm.github.io/2019-09-10--Latest-javascript-specs/</guid><pubDate>Tue, 10 Sep 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Must must must watch!&lt;/h1&gt;
+&lt;li&gt;
+&lt;p&gt;There are ways to prevent useless re-renders:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code class=&quot;language-text&quot;&gt;memo&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;areEqual&lt;/code&gt;, or&lt;/li&gt;
+&lt;li&gt;Use &lt;code class=&quot;language-text&quot;&gt;PureComponent&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;shouldComponentUpdate&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If there are functions in your props, before using &lt;code class=&quot;language-text&quot;&gt;areEqual&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;shouldComponentUpdate&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Exclude them, or&lt;/li&gt;
+&lt;li&gt;Stringify them&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[New javascript specifications in 2019 (What's new in Javascript - Google I/O '19)]]></title><description><![CDATA[Must must must watch! I got so much great insight from  this video in Google IO 2019  detailing latest javascript specs. Improvements from…]]></description><link>https://9oelm.github.io/2019-09-10--Latest-javascript-specs/</link><guid isPermaLink="false">https://9oelm.github.io/2019-09-10--Latest-javascript-specs/</guid><pubDate>Tue, 10 Sep 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Must must must watch!&lt;/h1&gt;
 &lt;p&gt;I got so much great insight from &lt;a href=&quot;https://youtu.be/c0oy0vQKEZE&quot;&gt;this video in Google IO 2019&lt;/a&gt; detailing latest javascript specs.&lt;/p&gt;
 &lt;h2&gt;Improvements from the past&lt;/h2&gt;
 &lt;ul&gt;
