@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 03 Oct 2019 04:27:17 GMT</lastBuildDate><item><title><![CDATA[Making stupid react smart in re-rendering]]></title><description><![CDATA[I believed React is smart enough to know this… but aye? We had a bunch of large component trees in our company’s web application.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 03 Oct 2019 04:33:21 GMT</lastBuildDate><item><title><![CDATA[Making stupid react smart in re-rendering]]></title><description><![CDATA[I believed React is smart enough to know this… but aye? We had a bunch of large component trees in our company’s web application.
 And I saw…]]></description><link>https://9oelm.github.io/2019-10-02--Making-stupid-react-smart-in-re-rendering/</link><guid isPermaLink="false">https://9oelm.github.io/2019-10-02--Making-stupid-react-smart-in-re-rendering/</guid><pubDate>Wed, 02 Oct 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;I believed React is smart enough to know this… but aye?&lt;/h2&gt;
 &lt;p&gt;We had a bunch of large component trees in our company’s web application.
 And I saw them re-rendering from the top to deep down to the bottom for no reason.
@@ -38,11 +38,11 @@ At first, I thought it would be easy to get them correct.&lt;/p&gt;
   
   &lt;/a&gt;
     
-Of coruse, the tree was much bigger than this. The tree didn’t just reach the end.
+Of course, the tree was much bigger than this. The tree didn’t just reach the end. This made useless re-rendering even a bigger concern.
 From the top to bottom, &lt;code class=&quot;language-text&quot;&gt;Provider&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;ConnectedRouter&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;App&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;PersistGate&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;ComponentA&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;ComponentB&lt;/code&gt;, … and so on.&lt;/p&gt;
 &lt;p&gt;And I saw that there were no use of &lt;code class=&quot;language-text&quot;&gt;shouldComponentUpdate&lt;/code&gt;/&lt;code class=&quot;language-text&quot;&gt;PureComponent&lt;/code&gt;/&lt;code class=&quot;language-text&quot;&gt;memo&lt;/code&gt; in our app yet.
 So I decided to make use of them, still not yet aware of what was to come for me. &lt;/p&gt;
-&lt;h2&gt;Takeaway 1: Parent component pretty much does not care about its children`&lt;/h2&gt;
+&lt;h2&gt;Takeaway 1: Parent component pretty much does not care about its &lt;code class=&quot;language-text&quot;&gt;children&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;I was optimizing the app and witnessed an interesting fact.
 Here’s the code to demonstrate it:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useState &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -101,7 +101,7 @@ How can this happen? This is from React’s own documentation:&lt;/p&gt;
 &lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Parent&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Child1&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;Child2&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;Parent&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And the result?&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/children-re-render-test-2-7539727ef06cafe36adbef41dc809aa0.gif&quot; alt=&quot;children re-render test 2&quot;&gt;&lt;/p&gt;
-&lt;p&gt;It &lt;strong&gt;does not render the children components anymore&lt;/strong&gt;!
+&lt;p&gt;It &lt;strong&gt;does not re-render the children components anymore&lt;/strong&gt;!
 I still have not understood exactly why React &lt;em&gt;can&lt;/em&gt; in this code but &lt;em&gt;cannot&lt;/em&gt; in the previous code,
 but this is what it is.&lt;/p&gt;
 &lt;h2&gt;Takeaway 3: use &lt;code class=&quot;language-text&quot;&gt;React.memo&lt;/code&gt;&lt;/h2&gt;
@@ -373,7 +373,7 @@ Then you only have object properties that are not functions, to apply that to &l
 &lt;p&gt;Result? Only parent component re-renders. Essentially, you are only comparing props which are not functions.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/children-re-render-test-5-79833449b2fdc4cfe140e26c73eb8969.gif&quot; alt=&quot;children re-render test 5&quot;&gt;&lt;/p&gt;
 &lt;h3&gt;2. Stringify them&lt;/h3&gt;
-&lt;p&gt;By default, &lt;code class=&quot;language-text&quot;&gt;JSON.stringify&lt;/code&gt; does not support stringifying functions. So you’ve gotta use third party libaries like &lt;a href=&quot;https://github.com/vkiryukhin/jsonfn#readme&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;jsonfn&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;By default, &lt;code class=&quot;language-text&quot;&gt;JSON.stringify&lt;/code&gt; does not support stringifying functions. So you’ve gotta use third party libaries like &lt;a href=&quot;https://github.com/vkiryukhin/jsonfn#readme&quot;&gt;jsonfn&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let’s do this:&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;util.js&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; JSONfn &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;json-fn&apos;&lt;/span&gt;
@@ -391,12 +391,12 @@ Then you only have object properties that are not functions, to apply that to &l
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;If you do not use &lt;code class=&quot;language-text&quot;&gt;children&lt;/code&gt; prop, every component inside the &lt;code class=&quot;language-text&quot;&gt;render&lt;/code&gt; function of a parent will re-render by default.&lt;/li&gt;
-&lt;li&gt;There are ways to prevent useless re-renders:&lt;/li&gt;
-&lt;li&gt;Use &lt;code class=&quot;language-text&quot;&gt;memo&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;areEqual&lt;/code&gt;, or&lt;/li&gt;
-&lt;li&gt;Use &lt;code class=&quot;language-text&quot;&gt;PureComponent&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;shouldComponentUpdate&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;If there are functions in your props, before using &lt;code class=&quot;language-text&quot;&gt;areEqual&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;shouldComponentUpdate&lt;/code&gt;:&lt;/li&gt;
-&lt;li&gt;Exclude them, or&lt;/li&gt;
-&lt;li&gt;Stringify them&lt;/li&gt;
+&lt;li&gt;There are ways to prevent useless re-renders:
+a. Use &lt;code class=&quot;language-text&quot;&gt;memo&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;areEqual&lt;/code&gt;, or
+b. Use &lt;code class=&quot;language-text&quot;&gt;PureComponent&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;shouldComponentUpdate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;If there are functions in your props, before using &lt;code class=&quot;language-text&quot;&gt;areEqual&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;shouldComponentUpdate&lt;/code&gt;:
+a. Exclude them, or
+b. Stringify them&lt;/li&gt;
 &lt;/ol&gt;</content:encoded></item><item><title><![CDATA[New javascript specifications in 2019 (What's new in Javascript - Google I/O '19)]]></title><description><![CDATA[Must must must watch! I got so much great insight from  this video in Google IO 2019  detailing latest javascript specs. Improvements from…]]></description><link>https://9oelm.github.io/2019-09-10--Latest-javascript-specs/</link><guid isPermaLink="false">https://9oelm.github.io/2019-09-10--Latest-javascript-specs/</guid><pubDate>Tue, 10 Sep 2019 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Must must must watch!&lt;/h1&gt;
 &lt;p&gt;I got so much great insight from &lt;a href=&quot;https://youtu.be/c0oy0vQKEZE&quot;&gt;this video in Google IO 2019&lt;/a&gt; detailing latest javascript specs.&lt;/p&gt;
 &lt;h2&gt;Improvements from the past&lt;/h2&gt;
