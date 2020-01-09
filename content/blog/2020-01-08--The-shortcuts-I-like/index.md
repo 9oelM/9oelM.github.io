@@ -57,6 +57,30 @@ So.. here are the most useful commands I use on my Mac (to be updated more):
 - Close current window: `⌘ + W`
 - Find saved bookmark by autocompletion: `⌘ + L` + `/` + `what you are trying to search` + `tab`
 
+### + Chrome, With [Viminum](https://github.com/philc/vimium/):
+- Separate the current tab out to a new window: `shift + w`
+- scroll left: `h`
+- scroll right: `l`
+- scroll up: `k`
+- scroll up half a page: `u`
+- scroll down: `j`
+- scroll down half a page: `d`
+- scroll to the top: `gg`
+- scroll to the bottom: `G`
+- open URL, bookmark, history search: `o`
+- open URL, bookmark, history search, in a new tab: `O`
+- open bookmark: `b`
+- open bookmark in a new tab: `B`
+- search through currently open tabs: `T`
+- open a link in the current tab: `f`
+- open a link in a new tab: `F`
+
+### + Chrome, with [Rearrange Tabs](https://chrome.google.com/webstore/detail/rearrange-tabs/ccnnhhnmpoffieppjjkhdakcoejcpbga)
+- Move selected tab to left: `⌃ + ⌘ + ←`
+- Move selected tab to right: `⌃ + ⌘ + →`
+- Move selected tab leftmost: `⌃ + ⌘ + ↓`
+- Move selected tab rightmost: `⌃ + ⌘ + ↑`
+
 ## Visual Studio Code
 - Show all keybindings: `⌘ + K` + `⌘ + S`
 - Hide the side bar: `⌘ + B`
@@ -96,6 +120,22 @@ So.. here are the most useful commands I use on my Mac (to be updated more):
 ## Iterm
 - Fullscreen: `⌘ + enter` (only iterm has a difference fullscreen command on Mac)
 - Unfortunately, you would need some custom keybindings for iterm written in `json`. For more, see [my gist](https://gist.github.com/9oelM/7a0516f143be2e220fe455a044d3336e)
+
+### Iterm: with tmux
+- Create new window: `⌃ + b`, then `c`
+- Close current window: `⌃ + b`, then `&`
+- Next window: `⌃ + b`, then `n`
+- Previous window: `⌃ + b`, then `p`
+- Switch to the pane in direction: `⌃ + b`, then `arrow key`
+- Resize panes (probably most used): `⌃ (hold down) + b (press)`, then `arrow key` **note**: you have to disable `Mission control`, `Application windows`, `Move left/right a space` on MacOS because they override tmux controls when using this function.
+- [Copy to clipboard](https://apple.stackexchange.com/questions/208387/copy-to-clipboard-from-tmux-in-el-capitan): 
+  - Go to iterm config
+  - General -> Selection -> `Applications in terminal may access clipboard`
+  - This way, `⌘ + C` and `⌘ + V` works very normally without any additional config.
+
+### Iterm: with [fzf](https://github.com/junegunn/fzf/)
+- Search through the whole computer: `⌃ + T`
+- Search through the whole history of commands entered: `⌃ + r`
 
 ## Slack
 - Keyboard shortcut help: `⌘ + /`
