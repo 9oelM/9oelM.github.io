@@ -1,0 +1,879 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.16aaefe531b6b7795df4.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-4124805c0503dbfe42dd67d7f5715964.woff2) format("woff2"),url(/static/montserrat-latin-100-c8fb2f714bbc7bc3e8dfffa916b286dc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e4bf47bd171a9b2a72dd84c58bf90edf.woff2) format("woff2"),url(/static/montserrat-latin-100italic-d1f3f2d02ee4d7d2d4b1ad865014f189.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-444ae007121264bc1969d49b4031f9b2.woff2) format("woff2"),url(/static/montserrat-latin-200-edbce16a90aa22c297a0307b85789837.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-f316c5d1ec40f3e68654c3f38b3999f3.woff2) format("woff2"),url(/static/montserrat-latin-200italic-d7bbb730d9b5e11720b3eb32326dcca7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-0a7c6df06e85d978d096d4d18fd8d43d.woff2) format("woff2"),url(/static/montserrat-latin-300-5e86df2cad22d2ef2b03516334afae5e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-c076c4892bc7a4be7b9097e97a35012d.woff2) format("woff2"),url(/static/montserrat-latin-300italic-37c74a8d2d0d36a0a2c6e9a37ee15b0c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-501ce09c42716a2f6e1503a25eb174c9.woff2) format("woff2"),url(/static/montserrat-latin-400-f29d2b8559699b6beb5b29b25b8bc572.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-882908d9950d9c86ebd380877f293d95.woff2) format("woff2"),url(/static/montserrat-latin-400italic-22e7b04e5f2a901d49d4d342315a715a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-f0f2716c5fe401d175b88715e7d28685.woff2) format("woff2"),url(/static/montserrat-latin-500-991b453bf90a0980e78966d2af7e3d3a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-4590ebba421b3288c305305d7fa7b504.woff2) format("woff2"),url(/static/montserrat-latin-500italic-f3d41e4cdcc2314e49ddcea751d6f87f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-15c24f7109941777774ddd2c636c6a50.woff2) format("woff2"),url(/static/montserrat-latin-600-f6dc6096f48956908c1787d9a722570a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-6d10b80529d5c36c7c09fca7193af0fc.woff2) format("woff2"),url(/static/montserrat-latin-600italic-02c4833312d94b1b0866f073023a250e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-79982cd1f74c6fa7451bf9b37ead09ff.woff2) format("woff2"),url(/static/montserrat-latin-700-957e93fbbe131a59791cd820d98b7109.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-283438e9577fe6a684466bb100e105ec.woff2) format("woff2"),url(/static/montserrat-latin-700italic-ca627c5ccc65cf80c2ecaea44b997de9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-35386154b78d046218fc8f88a44ff515.woff2) format("woff2"),url(/static/montserrat-latin-800-756655905d91b77960888262e7d58d35.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-e1b52a7bd83e2324db6d92bdc206844c.woff2) format("woff2"),url(/static/montserrat-latin-800italic-a69f0add9d86c1a84311d7dd8693ba4a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-260c2ea3ef57feb82251952e605a36d5.woff2) format("woff2"),url(/static/montserrat-latin-900-186cae8091da578150d81958e217714a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-d785fb9fc74588ffb7f306799709a97d.woff2) format("woff2"),url(/static/montserrat-latin-900italic-43b527fe77254f97ea36e2b54e845ec4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-a50c381443e6993188ed9cc4b6806866.woff2) format("woff2"),url(/static/merriweather-latin-300-2c73b119ad85e697123658b8a091ff83.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-bd410cbf8c272acd4fbdd9f61a7015bf.woff2) format("woff2"),url(/static/merriweather-latin-300italic-9deeb422b65afb1daacc039296bb3640.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-f936cb550d4dcd769f75c453207ac5e6.woff2) format("woff2"),url(/static/merriweather-latin-400-ab0616e6d856817eff54eb8c5e1664e4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-5c9a23d08e2c851e5a25795b940acd4f.woff2) format("woff2"),url(/static/merriweather-latin-400italic-0ab4b54f3b1e8b14cf755970fde8ce35.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-1636f13a52ca3f0eb8784c9c57f62082.woff2) format("woff2"),url(/static/merriweather-latin-700-cc673c945b482dc1378d4a3c95ffd175.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-8b0db67123584893c6591accbc51640c.woff2) format("woff2"),url(/static/merriweather-latin-700italic-513649f5b9ba4675cff15cf3f7ad4f2a.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-46631a9aab93dec3ed34f429dd1a5646.woff2) format("woff2"),url(/static/merriweather-latin-900-a0528570caa2c785891308ce604d8db7.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-a26a8168916e5d4e5485081171d7fdb0.woff2) format("woff2"),url(/static/merriweather-latin-900italic-db42a3f34378e69ef5aebb6717f1f33e.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:0;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}#disqus_thread{width:95%;margin:auto}pre code{white-space:pre-wrap!important;white-space:-moz-pre-wrap!important;white-space:-pre-wrap!important;white-space:-o-pre-wrap!important;word-wrap:break-word!important}</style><meta name="generator" content="Gatsby 2.1.18"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#009688"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><title data-react-helmet="true">Extensive introduction to why and how you might want to use and test redux-observable | Joel&#x27;s dev blog</title><meta data-react-helmet="true" name="description" content="Problem I was struggling at my company trying to write some tests for RxJS operations.
+Most of the network requests were managed by RxJS, and none of them were…"/><meta data-react-helmet="true" property="og:title" content="Extensive introduction to why and how you might want to use and test redux-observable"/><meta data-react-helmet="true" property="og:description" content="Problem I was struggling at my company trying to write some tests for RxJS operations.
+Most of the network requests were managed by RxJS, and none of them were…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Joel Mun"/><meta data-react-helmet="true" name="twitter:title" content="Extensive introduction to why and how you might want to use and test redux-observable"/><meta data-react-helmet="true" name="twitter:description" content="Problem I was struggling at my company trying to write some tests for RxJS operations.
+Most of the network requests were managed by RxJS, and none of them were…"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link as="script" rel="preload" href="/component---src-templates-blog-post-js-4262b9a1dc50890999f0.js"/><link as="script" rel="preload" href="/0-63a21d0c1363172370b5.js"/><link as="script" rel="preload" href="/app-67b162db32dac4df8e1d.js"/><link as="script" rel="preload" href="/styles-fa6c583b3cd626e54a0e.js"/><link as="script" rel="preload" href="/webpack-runtime-3144670b7c6476089916.js"/><link as="fetch" rel="preload" href="/static/d/632/path---2020-01-24-fundamental-yet-extensive-introduction-to-why-and-how-you-might-want-to-use-redux-observable-for-async-actions-1-de-852-1aIs1KFAeenMeZW1aZ4hlhXrxqU.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div style="margin-left:auto;margin-right:auto;max-width:70rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">Joel&#x27;s dev blog</a></h3></header><main><h1>Extensive introduction to why and how you might want to use and test redux-observable</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">January 24, 2020</p><div><h1>Problem</h1>
+<p>I was struggling at my company trying to write some tests for RxJS operations.
+Most of the network requests were managed by RxJS, and none of them were covered by tests. I wanted to write tests, but just did not know how to.</p>
+<p>But I really just wanted to start from the basics - I mean, the really basics, including why, and how we might want to use <code class="language-text">redux-observable</code>.</p>
+<h1>tl;dr</h1>
+<p>If you want to hop straight into the source code, <a href="https://github.com/9oelM/redux-observable">here it is.</a></p>
+<h1>First things first</h1>
+<h2>What is reactive programming?</h2>
+<blockquote>
+<p><a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754#reactive-programming-is-programming-with-asynchronous-data-streams">Reactive programming is programming with asynchronous data streams.</a></p>
+</blockquote>
+<ul>
+<li>Typical events are async event streams, and want to observe over them</li>
+<li>You have useful functions to combine/create/filter those streams</li>
+</ul>
+<blockquote>
+<p>A <strong>stream</strong> is a sequence of ongoing events ordered in time. It can emit three different things: a value (of some type), an error, or a “completed” signal. </p>
+</blockquote>
+<blockquote>
+<p>We capture these emitted events only asynchronously, by <strong>defining a function that will execute when a value is emitted,</strong> another function when an error is emitted, and another function when ‘completed’ is emitted.</p>
+</blockquote>
+<p>So this is essentially going back to <a href="https://github.com/9oelM/frontend-interview#observer">the observer design pattern</a>.</p>
+<h2>Why bother to use rxjs?</h2>
+<h3>Abstraction.</h3>
+<p>If you use RP, you don’t have to really worry about implementation details, because it gives you high level of abstraction layer. So you never have to bother with <code class="language-text">Promise</code>s and <code class="language-text">await</code> in javascript anymore. Just declaratively implement what you want to do, and that’s it.</p>
+<h3>Async works made easier</h3>
+<p>Nowadays async operations have become a common thing, beacuse you might need to handle UI interactions &#x26; tonnes of network requests. </p>
+<p>So there’s a good chance that it is going to be a good fit for heavily network based application (both for frontend and backend).</p>
+<h3>Lots of helper functions to simplify work declaratively</h3>
+<p>You have dedicated helper functions to implement what you want to do, which otherwise you might do in a very complex way. Even if this does not fully come to your mind right now, you are going to notice it as you go through this article.</p>
+<h2>Why bother to use it with Redux?</h2>
+<p>Now we have a brief understanding of advantages of using RxJS. Now, we want to handle actions in Redux, but not all actions are synchronous. </p>
+<p>For a simple example, I have wrote a simple application that fetches text from the server and shows it, like this:</p>
+<p><img src="/1-421fc0f32fd5495ee252e8946c8844b6.gif" alt="simple application that fetches text from the server and shows it"> </p>
+<blockquote>
+<p>I assumed that you have a prior knowledge of some Typescript and React fundamentals including hooks.</p>
+</blockquote>
+<p>This is the project structure (omitted unimportant ones):</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">src
+├── App.tsx
+├── DummyTextRequestButton
+│   └── DummyTextRequestButton.tsx
+├── DummyTextViewer
+│   └── DummyTextViewer.tsx
+├── redux
+│   ├── actions.ts
+│   ├── constants.ts
+│   ├── reducer.ts
+│   ├── store.ts
+│   └── types.ts</code></pre></div>
+<h3>Redux-related things first</h3>
+<p>In redux, as you know, we mainly have actions and reducers. I have created three types of actions:</p>
+<ol>
+<li><code class="language-text">StartRequestText</code>: I will <code class="language-text">dispatch</code> this right before <code class="language-text">fetch</code>ing from the dummy text API.</li>
+<li><code class="language-text">FinishRequestText</code>: I will <code class="language-text">dispatch</code> this right after receiving the text.</li>
+<li><code class="language-text">ErrorRequestText</code>: I will <code class="language-text">dispatch</code> this as soon as I encounter an error in the process described above.</li>
+</ol>
+<p>The above actions are implemented like this in <code class="language-text">actions.ts</code>:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import { Constants as C } from &#39;./constants&#39;;
+import { Action } from &#39;redux&#39;;
+
+export interface StartRequestTextAction extends Action&lt;C.START_REQUEST_TEXT&gt; {}
+
+export const startRequestText: () =&gt; StartRequestTextAction = () =&gt; ({
+  type: C.START_REQUEST_TEXT,
+});
+
+export interface FinishRequestTextAction extends Action&lt;typeof C.FINISH_REQUEST_TEXT&gt; {
+  text: string;
+}
+
+export const finishRequestText: (text: string) =&gt; FinishRequestTextAction = (text) =&gt; ({
+  type: C.FINISH_REQUEST_TEXT,
+  text,
+});
+
+export interface ErrorRequestTextAction extends Action&lt;typeof C.ERROR_REQUEST_TEXT&gt; {
+  errorMsg: string;
+}
+
+export const errorRequestText: (errorMsg: string) =&gt; ErrorRequestTextAction = (errorMsg) =&gt; ({
+  type: C.ERROR_REQUEST_TEXT,
+  errorMsg,
+});</code></pre></div>
+<p>And I simply defined some action types in <code class="language-text">constants.ts</code>:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">export enum Constants {
+  START_REQUEST_TEXT = &#39;START_REQUEST_TEXT&#39;,
+  FINISH_REQUEST_TEXT = &#39;FINISH_REQUEST_TEXT&#39;,
+  ERROR_REQUEST_TEXT = &#39;ERROR_REQUEST_TEXT&#39;,
+}</code></pre></div>
+<p>Putting them into <code class="language-text">reducer.ts</code> is not difficult at all.
+We just have to update the state for each different action.
+You can see that I’m updating <code class="language-text">isLoading</code>, <code class="language-text">text</code>, and <code class="language-text">errorMsg</code> individually according to each <code class="language-text">type</code> of an <code class="language-text">action</code>:</p>
+<p><code class="language-text">reducer.ts</code></p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import { Reducer, combineReducers } from &#39;redux&#39;;
+
+import { SimpleTextState, AllActions } from &#39;./types&#39;;
+import { Constants as C } from &#39;./constants&#39;;
+import { RootState } from &#39;./types&#39;;
+
+export const simpleTextReducer: Reducer&lt;SimpleTextState, AllActions&gt; =
+  (state = { isLoading: false }, action) =&gt; {
+    switch (action.type) {
+      case C.START_REQUEST_TEXT:
+        return {
+          ...state,
+          isLoading: true,
+        };
+      case C.FINISH_REQUEST_TEXT:
+        return {
+          ...state,
+          text: action.text,
+          isLoading: false,
+        };
+      case C.ERROR_REQUEST_TEXT:
+        return {
+          ...state,
+          errorMsg: action.errorMsg,
+          isLoading: false,
+        };
+      default:
+        return state;
+    }
+  }
+
+const reducers: Reducer&lt;RootState&gt; = combineReducers&lt;RootState&gt;({
+  simpleText: simpleTextReducer,
+});
+
+export default reducers;</code></pre></div>
+<p>Again, not so much in <code class="language-text">store.ts</code>. Just combine reducers (although we just have one, which is not usual in production envrionments) and configure redux devtools extension, and create store.</p>
+<p><code class="language-text">store.ts</code></p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import { combineReducers, createStore, Action, Reducer } from &#39;redux&#39;;
+import reducers from &#39;./reducer&#39;;
+import { SimpleTextState, RootState } from &#39;./types&#39;;
+import { Constants as C } from &#39;./constants&#39;;
+
+const store = createStore&lt;State, AllActions, any, any&gt;(
+  reducers, (window as any).__REDUX_DEVTOOLS_EXTENSION__ &amp;&amp; (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+export default store;</code></pre></div>
+<p>And I defined the types we need in <code class="language-text">types.ts</code>:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import * as actions from &quot;./actions&quot;;
+import { ActionType } from &#39;typesafe-actions&#39;;
+
+export type AllActions = ActionType&lt;typeof actions&gt;;
+
+export interface RootState {
+  simpleText: SimpleTextState;
+}
+
+export interface SimpleTextState {
+  text?: string;
+  errorMsg?: string;
+  isLoading: boolean;
+}</code></pre></div>
+<p><code class="language-text">App.tsx</code>
+In the parent component, we just want to show two things: the button and the text.</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import React from &#39;react&#39;;
+import { Provider } from &#39;react-redux&#39;;
+
+import store from &#39;./redux/store&#39;;
+import DummyTextRequestButton from &#39;./DummyTextRequestButton/DummyTextRequestButton&#39;;
+import DummyTextViewer from &#39;./DummyTextViewer/DummyTextViewer&#39;;
+
+const App: React.FC = () =&gt; {
+  return (
+    &lt;Provider store={store}&gt;
+      &lt;div className=&quot;App&quot;&gt;
+        &lt;DummyTextRequestButton /&gt;
+        &lt;DummyTextViewer /&gt;
+      &lt;/div&gt;
+    &lt;/Provider&gt;
+  );
+}
+
+export default App;</code></pre></div>
+<p><code class="language-text">DummyTextRequestButton.tsx</code></p>
+<p>In this component, we have the logic of dispatching all of the actions we have defined earlier.
+You have to recognize that we want to port the logic in <code class="language-text">handleClick</code> to <code class="language-text">redux-observable</code> later, because right now it’s not reactive at all.</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import React, { FC } from &#39;react&#39;;
+import { Dispatch } from &#39;redux&#39;;
+import { useDispatch } from &#39;react-redux&#39;;
+import { startRequestText, errorRequestText, finishRequestText } from &#39;../redux/actions&#39;;
+
+const DummyTextRequestButton: FC = () =&gt; {
+  const dispatch: Dispatch = useDispatch();
+
+  const REQUEST_URL: string = &#39;https://baconipsum.com/api/?type=meat?paras=200&#39;;
+
+  const handleClick = async () =&gt; {
+    dispatch(startRequestText());
+
+    const response: string | Error = await fetch(REQUEST_URL)
+      .then((resp: Response) =&gt; resp.text())
+      .catch((err: Error) =&gt; err);
+
+    (response instanceof Error) ?
+      dispatch(errorRequestText(response.message)) :
+      dispatch(finishRequestText(response));
+  }
+
+  return (
+    &lt;button 
+      style={{ backgroundColor: &#39;grey&#39;, color: &#39;white&#39;, width: 150, height: 50 }}
+      onClick={handleClick}
+    &gt;
+      Click me to request dummy text
+    &lt;/button&gt;
+  )
+};
+
+export default DummyTextRequestButton;</code></pre></div>
+<p><code class="language-text">DummyTextViewer.tsx</code>
+This component consumes the redux state. Shows error, text, or loading based on the state.</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import React, { FC, ReactNode } from &#39;react&#39;;
+import { useSelector } from &#39;react-redux&#39;;
+
+import { RootState } from &#39;../redux/types&#39;;
+
+const DummyTextViewer: FC = () =&gt; {
+  const {
+    simpleText: {
+      text, errorMsg, isLoading,
+    }
+  }: RootState = useSelector((state: RootState) =&gt; state);
+
+  const textViewer: ReactNode = errorMsg !== undefined ?
+    &lt;p&gt;oops, there was an error&lt;/p&gt; : (
+      &lt;p&gt;{text}&lt;/p&gt;
+    );
+
+  const dummyTextViewer: ReactNode | null = isLoading ? 
+    (&lt;p&gt;loading...&lt;/p&gt;) : textViewer;
+
+  return (
+    &lt;section&gt;
+      {dummyTextViewer}
+    &lt;/section&gt;
+  )
+}
+
+export default DummyTextViewer;</code></pre></div>
+<h3>With RxJS and redux-observable?</h3>
+<p>First of all, we are going to introduce relevant modules to our project:</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> i --save redux-devtools-extension redux-observable rxjs</code></pre></div>
+<p>Then we want to get rid of somewhat complex logic inside <code class="language-text">DummyTextRequestButton.tsx</code>:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import React, { FC } from &#39;react&#39;;
+import { Dispatch } from &#39;redux&#39;;
+import { useDispatch } from &#39;react-redux&#39;;
+import { startRequestText } from &#39;../redux/actions&#39;;
+
+const DummyTextRequestButton: FC = () =&gt; {
+  const dispatch: Dispatch = useDispatch();
+
+  /** Now we just want to trigger the first single action */
+  const handleClick = async () =&gt; {
+    dispatch(startRequestText());
+  }
+
+  return (
+    &lt;button 
+      style={{ backgroundColor: &#39;grey&#39;, color: &#39;white&#39;, width: 150, height: 50 }}
+      onClick={handleClick}
+    &gt;
+      Click me to request dummy text
+    &lt;/button&gt;
+  )
+};
+
+export default DummyTextRequestButton;</code></pre></div>
+<p>We can do it like above because we are going to port our logic to <code class="language-text">redux-observable</code>.</p>
+<p>Then, we are going to create something called <code class="language-text">epics.ts</code> inside <code class="language-text">redux</code> folder:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import { Epic, ofType, combineEpics } from &quot;redux-observable&quot;;
+import { from, of } from &#39;rxjs&#39;;
+import { catchError, mergeMap } from &#39;rxjs/operators&#39;;
+import { fromFetch } from &#39;rxjs/fetch&#39;;
+
+import { Constants as C } from &#39;./constants&#39;;
+import { RootState, AllActions } from &quot;./types&quot;;
+import * as actions from &quot;./actions&quot;;
+
+const startRequestTextEpic: Epic&lt;AllActions, AllActions, RootState&gt; = (action$, _store) =&gt;
+  action$.pipe(
+    ofType(C.START_REQUEST_TEXT),
+    mergeMap(() =&gt; {
+      const REQUEST_URL: string = &#39;https://baconipsum.com/api/?type=meat?paras=200&#39;;
+
+      const sendRequest$ = fromFetch(REQUEST_URL);
+
+      return sendRequest$.pipe(
+        mergeMap(
+          (resp: Response) =&gt; {
+            return from(resp.text())
+              .pipe(
+                mergeMap((text: string) =&gt; of(actions.finishRequestText(text))),
+              );
+          }
+        ),
+        catchError((error: Error) =&gt; of(actions.errorRequestText(error.message)))
+      )
+    }),
+  );
+
+const rootEpic: Epic&lt;AllActions, AllActions, RootState&gt; = combineEpics(
+  startRequestTextEpic,
+);
+
+export default rootEpic;</code></pre></div>
+<p>I know, I know. Lots of things going on here, but let me explain one by one.</p>
+<blockquote>
+<p>An <strong>epic</strong> is really just something that listens to a redux action and outputs other actions accordingly.</p>
+</blockquote>
+<p>So how is that done in the code above? We can see that <code class="language-text">startRequestTextEpic</code> is listening to an action of the type called <code class="language-text">C.START_REQUEST_TEXT</code> only. So this code, won’t get executed it any other actions are dispatched from redux.</p>
+<p>Ok, forget about <code class="language-text">mergeMap</code> for now and then let’s go on for now. We can see that we are using RxJS’s own <code class="language-text">fetch</code> method called <code class="language-text">fromFetch</code>, which essentially just makes <code class="language-text">fetch</code> into an observable.</p>
+<p>Now you process the response from <code class="language-text">fetch</code>, and the <code class="language-text">text</code> inside the response would be a payload to <code class="language-text">finishRequestText</code> action.</p>
+<p>Otherwise, if you have an error while <code class="language-text">fetch</code>ing, the error is going to be caught and will dispatch <code class="language-text">errorRequestText</code> action.</p>
+<p>In this way, we have successfully ported our implementation in <code class="language-text">handleClick</code> to inside an epic, and all that’s left for we us to do is actually configure a few things in <code class="language-text">store.ts</code> to be able to use <code class="language-text">redux-observable</code> in our project:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import { createStore, applyMiddleware } from &#39;redux&#39;;
+import { createEpicMiddleware, Epic } from &#39;redux-observable&#39;;
+import { composeWithDevTools } from &#39;redux-devtools-extension&#39;;
+
+import reducers from &#39;./reducer&#39;;
+import { RootState, AllActions } from &#39;./types&#39;;
+import rootEpic from &#39;./epics&#39;;
+
+const epicMiddleware = createEpicMiddleware();
+
+const composeEnhancers = composeWithDevTools({
+  // Specify name here, actionsBlacklist, actionsCreators and other options if needed
+});
+
+const initialRootState: RootState = { simpleText: { isLoading: false } };
+
+const store = createStore&lt;RootState, AllActions, any, any&gt;(
+  reducers,
+  initialRootState,
+  composeEnhancers(
+    applyMiddleware(
+      epicMiddleware,
+    ),
+  )
+);
+
+epicMiddleware.run(rootEpic as Epic&lt;AllActions, AllActions, any&gt;);
+
+export default store;</code></pre></div>
+<p>So, after adding <code class="language-text">redux-observable</code>, now we have some benefits:</p>
+<ol>
+<li>Reactiveness. You can easily handle asynchronous actions and state updates in redux by reacting to actions being dispatched.</li>
+<li>Separation of concerns. Now you don’t have to care about what to do after <code class="language-text">startRequestText</code> in <code class="language-text">DummyTextButton</code>, because all of the logics have been ported to <code class="language-text">startRequestTextEpic</code>.</li>
+<li>Great toolchains. Right now we have used just few functions from RxJS, but combination of many functions will make it easier to process your data streams.</li>
+</ol>
+<h3>Extending further by utilizing what RxJS has</h3>
+<p>Now we have one little problem: when a user clicks on the button many times in such a short time, the request is going to be sent more than one time, which might be kind of useless, as shown in this gif:</p>
+<p><img src="/2-f23377929cc31526a5b09dbe8a0a8414.gif" alt="Requests are sent more than one time unintendedly"></p>
+<p>I clicked on the button three times, but actually what you all need is just a single request. So here’s what you can do:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import { Epic, ofType, combineEpics } from &quot;redux-observable&quot;;
+import { from, of, timer } from &#39;rxjs&#39;;
+import { catchError, mergeMap, debounce } from &#39;rxjs/operators&#39;;
+import { fromFetch } from &#39;rxjs/fetch&#39;;
+
+import { Constants as C } from &#39;./constants&#39;;
+import { RootState, AllActions } from &quot;./types&quot;;
+import * as actions from &quot;./actions&quot;;
+
+const startRequestTextEpic: Epic&lt;AllActions, AllActions, RootState&gt; = (action$, _store) =&gt;
+  action$.pipe(
+    ofType(C.START_REQUEST_TEXT),
+    debounce(() =&gt; timer(1000)),
+    mergeMap(() =&gt; {
+      const REQUEST_URL: string = &#39;https://baconipsum.com/api/?type=meat?paras=200&#39;;
+
+      const sendRequest$ = fromFetch(REQUEST_URL);
+
+      return sendRequest$.pipe(
+        mergeMap(
+          (resp: Response) =&gt; {
+            return from(resp.text())
+              .pipe(
+                mergeMap((text: string) =&gt; of(actions.finishRequestText(text))),
+              );
+          }
+        ),
+        catchError((error: Error) =&gt; of(actions.errorRequestText(error.message)))
+      )
+    }),
+  );
+
+const rootEpic: Epic&lt;AllActions, AllActions, RootState&gt; = combineEpics(
+  startRequestTextEpic,
+);
+
+export default rootEpic;</code></pre></div>
+<p>We just added <code class="language-text">debounce</code>, and it is going to filter out only one action of type <code class="language-text">START_REQUEST_TEXT</code> for a second, which means even if you click on the button three times in a single second, the request is going to be sent only once, like in the gif below:</p>
+<p><img src="/3-bc920a1f20fc783e2677d4fdc3137422.gif" alt="Requests are sent just one time"></p>
+<p>Alternatively, what you would want better is actually <code class="language-text">switchMap</code>; It would cancel any pending request and switch to the last one:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">ofType(C.START_REQUEST_TEXT),
+    switchMap(() =&gt; {
+      const REQUEST_URL: string = &#39;https://baconipsum.com/api/?type=meat?paras=200&#39;;</code></pre></div>
+<p><img src="/4-18611d4e6ff4780e0d043d7c0dde371e.gif" alt="The pending requests are cancelled, and only the last one is not"></p>
+<p>Now, let’s say that you would have another button to show some other text, like this:</p>
+<p><img src="/5-ec43e9315a2034e6e4ef9fd2784154e5.gif" alt="You have another button to show some other text"></p>
+<p>Because we now have an additional UI, we need to handle one special case (we are not going to cover other cases, although there are many): <strong>you click on request dummy text button, but you change your mind to see hi instead</strong>. Then you would need to <strong>cancel and finish</strong> your action. </p>
+<p>For the sake of simplicity, I’m not going to show the entire code but <code class="language-text">epics.ts</code> to demontrate that (you can still look into <a href="https://github.com/9oelM/redux-observable/tree/master/redux-observable">the entire codebase from the Github repository</a>):</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import { Epic, ofType, combineEpics } from &quot;redux-observable&quot;;
+import { from, of, race, Observable } from &#39;rxjs&#39;;
+import { catchError, mergeMap, switchMap, filter, map, take, merge } from &#39;rxjs/operators&#39;;
+import { fromFetch } from &#39;rxjs/fetch&#39;;
+
+import { Constants as C } from &#39;./constants&#39;;
+import { RootState, AllActions } from &quot;./types&quot;;
+import * as A from &quot;./actions&quot;;
+
+const startRequestTextEpic: Epic&lt;AllActions, AllActions, RootState&gt; = (action$, store$) =&gt;
+  action$.pipe(
+    ofType(C.START_REQUEST_TEXT),
+    switchMap(() =&gt; {
+      const REQUEST_URL: string = &#39;https://baconipsum.com/api/?type=meat?paras=1000&#39;;
+
+      const sendRequest$: Observable&lt;A.FinishRequestTextAction | A.ErrorRequestTextAction&gt; =
+        fromFetch(REQUEST_URL).pipe(
+          mergeMap(
+            (resp: Response) =&gt; 
+              from(resp.text())
+                .pipe(
+                  mergeMap((text: string) =&gt; of(A.finishRequestText(text))),
+                )
+          ),
+          catchError((error: Error) =&gt; of(A.errorRequestText(error.message))),
+        )
+
+      const cancelRequest$: Observable&lt;A.FinishRequestTextAction&gt; = action$.pipe(
+        ofType(C.TOGGLE_HI_TEXT),
+        filter(() =&gt; store$.value.simpleText.isHiTextShown),
+        map(() =&gt; A.finishRequestText(&#39;&#39;)),
+        take(1),
+      );
+
+      return race(sendRequest$, cancelRequest$);
+    }),
+  );
+
+const rootEpic: Epic&lt;AllActions, AllActions, RootState&gt; = combineEpics(
+  startRequestTextEpic,
+);
+
+export default rootEpic;</code></pre></div>
+<p>We now have two major parts: <code class="language-text">sendRequest$</code> and <code class="language-text">cancelRequest$</code>. In <code class="language-text">cancelRequest$</code> ovservable, we are going to force finish requesting text, because there is no need to request the text anymore if you have switched to see the <code class="language-text">hi</code> text.</p>
+<p><code class="language-text">race</code> would take the job of cancelling out any other ongoing action if the other action is finished. It’s just like <code class="language-text">Promise.race</code> in javascript! So, let’s see this in gif:</p>
+<p><img src="/6-f96e8bed5d17d151d373b5fceb3fe471.gif" alt="The network request will be cancelled if you switch to see the hi text"></p>
+<h3>Checkpoint</h3>
+<p>Do you now get why you would use redux-observable? It equips you with a nice set of tools to perform side-effects after actions are dispatched in redux.
+Otherwise it should have been a great pain for you manage events like cancellation manually, in vanilla javascript.</p>
+<p>But hey, we are not done yet. Let’s finish it with a guide to how to test these epics.</p>
+<h2>Testing your epics</h2>
+<h3>Method 1: Test output actions based on input actions.</h3>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import { ActionsObservable, StateObservable } from &#39;redux-observable&#39;;
+import { of, Subject, Observable } from &#39;rxjs&#39;;
+import { toArray } from &#39;rxjs/operators&#39;;
+import * as rxjs from &#39;rxjs&#39;;
+import * as FF from &#39;rxjs/fetch&#39;;
+
+import { startRequestTextEpic } from &#39;./epics&#39;;
+import { Constants as C } from &#39;./constants&#39;;
+import { RootState, AllActions } from &#39;./types&#39;;
+
+describe(&#39;startRequestTextEpic&#39;, () =&gt; {
+  let initialState: RootState;
+
+  beforeEach(() =&gt; {
+    initialState = { simpleText: { isLoading: false, isHiTextShown: false } };
+  })
+
+  it(&#39;should dispatch finishRequestText if there is no error&#39;, async () =&gt; {
+    const fakeFetchResponse: string = &#39;test response, hi&#39;;
+
+    /**
+     * Surprisingly, jest supports mocking individual functions 
+     * from modules like this in each different test
+     */
+    // @ts-ignore: this is valid. See https://github.com/facebook/jest/issues/936#issuecomment-214556122
+    rxjs.race = jest.fn((...observables: Array&lt;Observable&lt;AllActions&gt;&gt;) =&gt; observables[0]);
+    // @ts-ignore this is valid also
+    FF.fromFetch = jest.fn(() =&gt; of({ text: () =&gt; of(fakeFetchResponse) }));
+
+    const action$ = ActionsObservable.of({
+      type: C.START_REQUEST_TEXT,
+    }) as ActionsObservable&lt;AllActions&gt;;
+
+    const state$ = new StateObservable&lt;RootState&gt;(new Subject(), initialState);
+
+    const actualActions$: Observable&lt;AllActions&gt; = startRequestTextEpic(action$, state$, {});
+    const actualActionsArray: Array&lt;AllActions&gt; = await actualActions$.pipe(toArray());.toPromise();
+    
+    const expectedActionsArray: Array&lt;AllActions&gt; = [
+      {
+        type: C.FINISH_REQUEST_TEXT,
+        text: fakeFetchResponse,
+      }
+    ]
+    expect(actualActionsArray).toEqual(expectedActionsArray);
+  });
+});</code></pre></div>
+<p>Whoa, lots of things to go through, right? But basically, all we are doing are just:</p>
+<ol>
+<li><strong>Mocking functions from certain modules to make them work according to our purpose</strong>. We are mocking <code class="language-text">rxjs.race</code> and <code class="language-text">FF.fromFetch</code> because, for <code class="language-text">race</code>, we don’t want race won’t work well in a test environment and we can decide on which observable to emit, instead of depending on the code itself, and for <code class="language-text">fromFetch</code>, we don’t want to use real <code class="language-text">fetch</code> because it is going to take more time for no useful reason.</li>
+<li><strong>Running the epic with initial action and state</strong>. The epic will run, and spit out another set of actions as a result.</li>
+<li><strong>Testing the equality of the output actions with the expected</strong>. We just need to test if the epic gives expected set of actions.</li>
+</ol>
+<p>That’s pretty much it! But we need to test more, so why not simplify this process with a simple function?:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import { Action } from &#39;redux&#39;;
+import { Epic } from &#39;redux-observable&#39;;
+import { ActionsObservable, StateObservable } from &#39;redux-observable&#39;;
+import { Subject, Observable } from &#39;rxjs&#39;;
+import { toArray } from &#39;rxjs/operators&#39;;
+import { AllActions } from &#39;./types&#39;;
+
+interface RunEpicTestParams&lt;ActionsUsed extends Action&lt;any&gt;, RootState&gt; {
+  epicToTest: Epic&lt;ActionsUsed, ActionsUsed, RootState&gt;;
+  inputActions: Array&lt;ActionsUsed&gt;;
+  initialState: RootState;
+  expectedActions: Array&lt;ActionsUsed&gt;;
+  done(): void;
+}
+
+export async function runEpicTest&lt;ActionsUsed extends Action, State&gt;({
+  epicToTest,
+  inputActions,
+  initialState,
+  expectedActions,
+  done,
+}: RunEpicTestParams&lt;AllActions, State&gt;): Promise&lt;void&gt; {
+  const inputAction$ = ActionsObservable.of(...inputActions) as ActionsObservable&lt;ActionsUsed&gt;;
+  const state$ = new StateObservable&lt;State&gt;(new Subject(), initialState);
+
+  const actualActions$: Observable&lt;ActionsUsed&gt; = epicToTest(inputAction$, state$, {}) as Observable&lt;ActionsUsed&gt;;
+  const actualActionsArray: Array&lt;AllActions&gt; = await actualActions$.pipe(toArray()).toPromise();
+  
+  expect(actualActionsArray).toEqual(expectedActions);
+  done();
+}</code></pre></div>
+<p>Now, we can turn out test into:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">describe(&#39;startRequestTextEpic&#39;, () =&gt; {
+  let initialState: RootState;
+  let inputActions: Array&lt;AllActions&gt;;
+
+  beforeEach(() =&gt; {
+    initialState = { simpleText: { isLoading: false, isHiTextShown: false } };
+    inputActions = [{ type: C.START_REQUEST_TEXT }];
+  })
+
+  it(&#39;should dispatch finishRequestText if there is no error&#39;, async (done) =&gt; {
+    const fakeFetchResponse: string = &#39;test response, hi&#39;;
+
+    /**
+     * Surprisingly, jest supports mocking individual functions 
+     * from modules like this in each different test
+     */
+    // @ts-ignore: this is valid. See https://github.com/facebook/jest/issues/936#issuecomment-214556122
+    rxjs.race = jest.fn((...observables: Array&lt;Observable&lt;AllActions&gt;&gt;) =&gt; observables[0]);
+    // @ts-ignore this is valid also
+    FF.fromFetch = jest.fn(() =&gt; of({ text: () =&gt; of(fakeFetchResponse) }));
+    runEpicTest&lt;AllActions, RootState&gt;({
+      epicToTest: startRequestTextEpic,
+      expectedActions: [
+        {
+          type: C.FINISH_REQUEST_TEXT,
+          text: fakeFetchResponse,
+        }
+      ],
+      inputActions,
+      initialState,
+      done,
+    });
+  });
+});</code></pre></div>
+<p>Much less boilerplate, right?</p>
+<p>Now we can write out tests for other things as well, like this:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">describe(&#39;startRequestTextEpic&#39;, () =&gt; {
+  let initialState: RootState;
+  let inputActions: Array&lt;AllActions&gt;;
+
+  beforeEach(() =&gt; {
+    initialState = { simpleText: { isLoading: false, isHiTextShown: false } };
+    inputActions = [{ type: C.START_REQUEST_TEXT }];
+  })
+
+  it(&#39;should dispatch finishRequestText if there is no error&#39;, (done) =&gt; {
+    // Already covered above
+  });
+
+  it(&#39;should dispatch errorRequestText if there is an error while fetching data&#39;, (done) =&gt; {
+    const fakeErrorMessage: string = &#39;test error message, hi&#39;;
+    // @ts-ignore
+    FF.fromFetch = jest.fn(() =&gt; of({ text: () =&gt; { throw new Error(fakeErrorMessage)} }));
+    
+    runEpicTest&lt;AllActions, RootState&gt;({
+      epicToTest: startRequestTextEpic,
+      expectedActions: [
+        {
+          type: C.ERROR_REQUEST_TEXT,
+          errorMsg: fakeErrorMessage,
+        }
+      ],
+      inputActions,
+      initialState,
+      done,
+    });
+  });
+
+  it(&#39;should dispatch finishRequestText earlier if TOGGLE_HI_TEXT is called in the middle&#39;, (done) =&gt; {
+    initialState = { simpleText: { ...initialState.simpleText, isHiTextShown: true } };
+
+    // @ts-ignore
+    rxjs.race = jest.fn((...observables: Array&lt;Observable&lt;AllActions&gt;&gt;) =&gt; observables[1]);
+
+    runEpicTest&lt;AllActions, RootState&gt;({
+      epicToTest: startRequestTextEpic,
+      expectedActions: [
+        {
+          type: C.FINISH_REQUEST_TEXT,
+          text: &#39;&#39;,
+        }
+      ],
+      inputActions: [...inputActions, { type: C.TOGGLE_HI_TEXT }],
+      initialState,
+      done,
+    });
+  });
+});</code></pre></div>
+<p>Now you’ve got to see all of your tests pass: </p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/41932aa437b7d0d81dd007703e6a87f6/5d6f0/7.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 38.85793871866295%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABHElEQVQoz41Ry1LCQBBcIyGgovg8cKCs4qRICJCQzQsCsXyUVln+gP//F+3MbJaicoFDb2Ymsz3dO8r/HWH194j7PIQ7LdCZZbiKSzzkb+gtS/T1hmo51HN0HNpBhGud4jbd4iapiGyDu+xV4BF5Z54LoTtNCQlOJxoOoeWb2IJzris1puMphBovccJ4ieEQVB3bZgtnYmta+jh39ogVJ94swUW4wtmCUdRxIQ2sjJUahelugI3dOuYB7ECxipYfwwsyucjfLtmUeC/n5p1N36hx5K4lNP/pDc307twshJvcRpNMPnYpw+oLo/cf2ep5bXWw/pCcl9HXW1zStu07H8Sg/MSw+kYvWkuBCYWMbLaDVCwzsTw4K2gSNGr/C/nlT8KKC2wAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="All of your tests pass"
+        title=""
+        src="/static/41932aa437b7d0d81dd007703e6a87f6/40fad/7.png"
+        srcset="/static/41932aa437b7d0d81dd007703e6a87f6/707e9/7.png 148w,
+/static/41932aa437b7d0d81dd007703e6a87f6/649e0/7.png 295w,
+/static/41932aa437b7d0d81dd007703e6a87f6/40fad/7.png 590w,
+/static/41932aa437b7d0d81dd007703e6a87f6/b3fef/7.png 885w,
+/static/41932aa437b7d0d81dd007703e6a87f6/301c0/7.png 1180w,
+/static/41932aa437b7d0d81dd007703e6a87f6/5d6f0/7.png 1436w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h3>Method 2: Use marble testing</h3>
+<p>Previously, we’ve only used some basic methods to test epics. Using marble tests would allow you to focus more on <em>when</em> things happen.</p>
+<p>If you are not familiar with the marble diagrams, please refer to <a href="http://reactivex.io/documentation/observable.html">ReactiveX’s explanation on marble diagrams</a>. Alternatively, there are many other good resources out on the web.</p>
+<p>For the marble syntax, refer to <a href="https://rxjs-dev.firebaseapp.com/guide/testing/marble-testing#marble-syntax">rxjs API docs</a>.</p>
+<h4>Hot vs Cold observables</h4>
+<p>There was a great article on Medium that simplified the definition of hot and cold observables, <a href="https://medium.com/@bencabanes/marble-testing-observable-introduction-1f5ad39231c#f123">so I excerpted the definitions from it</a>. (Or look at <a href="https://rxjs-dev.firebaseapp.com/guide/testing/marble-testing">rxjs API doc</a>)</p>
+<p>cold: begins subscription when the test begins. </p>
+<blockquote>
+<p><code class="language-text">cold(--a--b--|, { a: &#39;Hello&#39;, b: &#39;World&#39; })</code> → Emit ‘Hello’ at 30ms and ‘World’ at 60ms, complete at 90ms.</p>
+</blockquote>
+<p>hot: begins subscription at the point of caret.</p>
+<blockquote>
+<p><code class="language-text">hot(--^--a--b--|, { a: &#39;Hello&#39;, b: &#39;World&#39; })</code> → Subscription begins at point of caret, then emit ‘Hello’ at 30ms and ‘World’ at 60ms, complete at 90ms.</p>
+</blockquote>
+<h4>Testing events in relation to time</h4>
+<p>What we couldn’t really answer using method 1 was something like ‘can actions be really be cancelled if there are multiple action inputs, because we are using <code class="language-text">switchMap</code>?’</p>
+<p>Now because we have a control over time, this is totally possible. </p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">import { of, Observable } from &#39;rxjs&#39;;
+import * as rxjs from &#39;rxjs&#39;;
+import * as FF from &#39;rxjs/fetch&#39;;
+import { TestScheduler } from &#39;rxjs/testing&#39;;
+
+import { startRequestTextEpic } from &#39;./epics&#39;;
+import { Constants as C } from &#39;./constants&#39;;
+import { RootState, AllActions } from &#39;./types&#39;;
+import { ActionsObservable, StateObservable } from &#39;redux-observable&#39;;
+import { HotObservable } from &#39;rxjs/internal/testing/HotObservable&#39;;
+import { StartRequestTextAction } from &#39;./actions&#39;;
+import { delay } from &#39;rxjs/operators&#39;;
+import { ColdObservable } from &#39;rxjs/internal/testing/ColdObservable&#39;;
+
+  let initialState: RootState;
+
+  beforeEach(() =&gt; {
+    initialState = { simpleText: { isLoading: false, isHiTextShown: false } };
+  })
+
+  it(&#39;should dispatch finishRequestText if there is no error&#39;, (done) =&gt; {
+      const fakeFetchResponse: string = &#39;fake response&#39;;
+      // @ts-ignore: this is valid. See https://github.com/facebook/jest/issues/936#issuecomment-214556122
+      rxjs.race = jest.fn((...observables: Array&lt;Observable&lt;AllActions&gt;&gt;) =&gt; observables[0]);
+      // @ts-ignore this is valid also
+      FF.fromFetch = jest.fn(() =&gt; of({ text: () =&gt; of(fakeFetchResponse).pipe(delay(1)) }));
+
+      const testScheduler = new TestScheduler((actual, expected) =&gt; {
+        // somehow assert the two objects are equal
+        // e.g. with chai `expect(actual).deep.equal(expected)`
+        expect(actual).toEqual(expected);
+        done();
+      });
+
+      // https://github.com/redux-observable/redux-observable/issues/620#issuecomment-466736543
+      testScheduler.run(({ hot, cold, expectObservable }) =&gt; {
+      const actionInput$: ColdObservable&lt;StartRequestTextAction&gt; = cold(&#39;1ms -a&#39;, {
+        a: { type: C.START_REQUEST_TEXT }
+      });
+      const action$: ActionsObservable&lt;AllActions&gt; = new ActionsObservable(actionInput$) as ActionsObservable&lt;AllActions&gt;;
+
+      const stateInput$: HotObservable&lt;RootState&gt; = hot(&#39;-a&#39;, {
+        a: initialState,
+      });
+      const state$ = new StateObservable(stateInput$, initialState);
+
+      const output$ = startRequestTextEpic(action$, state$, {});
+    
+      expectObservable(output$).toBe(&#39;1ms --a&#39;, {
+        a: {
+          type: C.FINISH_REQUEST_TEXT,
+          text: fakeFetchResponse,
+        }
+      });
+    });
+  });
+
+    ...</code></pre></div>
+<p>This one is really basic; We request text, and for the sake of the test, we delay the response from <code class="language-text">fromFetch</code> by <code class="language-text">1</code>ms. Then we run <code class="language-text">START_REQUEST_TEXT</code>, and expect the output action to be <code class="language-text">FINISH_REQUEST_TEXT</code> after another <code class="language-text">1</code>ms elapses. Simple. Right?</p>
+<p>But what about some more complex test, like actions being cancelled because of <code class="language-text">switchMap</code>?:</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts">  it(&#39;should dispatch only one finishRequestText despite many startRequestText&#39;, (done) =&gt; {
+    const fakeFetchResponse: string = &#39;fake response&#39;;
+    // @ts-ignore: this is valid. See https://github.com/facebook/jest/issues/936#issuecomment-214556122
+    rxjs.race = jest.fn((...observables: Array&lt;Observable&lt;AllActions&gt;&gt;) =&gt; observables[0]);
+    // @ts-ignore this is valid also
+    FF.fromFetch = jest.fn(() =&gt; of({ text: () =&gt; {
+      return of(fakeFetchResponse).pipe(
+        delay(5),
+      )
+    }}));
+    const testScheduler = new TestScheduler((actual, expected) =&gt; {
+      // somehow assert the two objects are equal
+      // e.g. with chai `expect(actual).deep.equal(expected)`
+      expect(actual).toStrictEqual(expected);
+      done();
+    });
+    //                                12345   67890
+    const inputMarble: string =  &#39;1ms -abc(d|)--------&#39;
+    //                                12345   67890
+    const outputMarble: string = &#39;1ms -----   ----(d|)&#39;
+                                                // ^ it is normal to have this parenthesis because 
+                                                //   &#39;complete&#39; event and d are synchronous
+                                                //   this position is the 10th frame
+
+    // https://github.com/redux-observable/redux-observable/issues/620#issuecomment-466736543
+    testScheduler.run(({ hot, cold, expectObservable }) =&gt; {
+      const actionInput$: ColdObservable&lt;StartRequestTextAction&gt; = cold(inputMarble, {
+        a: { type: C.START_REQUEST_TEXT },
+        b: { type: C.START_REQUEST_TEXT },
+        c: { type: C.START_REQUEST_TEXT },
+        d: { type: C.START_REQUEST_TEXT },
+      });
+      const action$: ActionsObservable&lt;AllActions&gt; = new ActionsObservable(actionInput$) as ActionsObservable&lt;AllActions&gt;;
+
+      const stateInput$: HotObservable&lt;RootState&gt; = hot(&#39;-a&#39;, {
+        a: initialState,
+      });
+      const state$ = new StateObservable(stateInput$, initialState);
+
+      const output$ = startRequestTextEpic(action$, state$, {});
+      
+      expectObservable(output$).toBe(outputMarble, {
+        d: {
+          type: C.FINISH_REQUEST_TEXT,
+          text: fakeFetchResponse,
+        }
+      });
+    });
+  });</code></pre></div>
+<p>In the above code, we are faking <code class="language-text">fromFetch</code> again, and this time it is going to get you a response after <code class="language-text">5</code>ms.
+Now you decide to <code class="language-text">START_REQUEST_TEXT</code> four times just in <code class="language-text">4ms</code>, in a row, each for each <code class="language-text">1ms</code>.</p>
+<p>Then what is supposed to happen is that all of <code class="language-text">a</code>, <code class="language-text">b</code>, <code class="language-text">c</code> get cancelled, because they are cancelled by the actions dispatched right after them, at the time <code class="language-text">fromFetch</code> has not returned a response yet.
+This is what <code class="language-text">switchMap</code> exactly does. It will cancel other observables and only emit the most decently projected observable, which is <code class="language-text">d</code> (after <code class="language-text">5ms</code>).</p>
+<p>So that’s basically it! Of course, we could again make an abstraction of this testing logic, just like we did for <code class="language-text">runEpicTest</code>, but too bad - I’m too tired right now, so I will leave that work left for you. :)</p>
+<h1>Conclusion</h1>
+<p>So far, we’ve covered:</p>
+<ol>
+<li>why you might want to use <code class="language-text">rxjs</code> and <code class="language-text">redux-observable</code> (maybe you could suggest more reasons in the comments section)</li>
+<li>how you could replace <code class="language-text">redux</code> based code into a <code class="language-text">redux-observable</code> one</li>
+<li>extensibility (benefits) of using <code class="language-text">redux-observable</code>, especially for a complex logic</li>
+<li>two methods of how you can test your <code class="language-text">epic</code>s</li>
+</ol>
+<h2>Appendix</h2>
+<p>Just some last words for you.</p>
+<h3>Suspicion on ‘always a pass’</h3>
+<p>Sometimes, it’s hard to know if your test is really working or just being passed because jest finishes tests earlier than the time you want. <a href="https://jestjs.io/docs/en/asynchronous">Make sure you use <code class="language-text">done</code></a>, and if you are still not sure, try to break the test by changing something like <code class="language-text">expect(...).toEqual(...)</code> to <code class="language-text">expect(...).not.toEqual(...)</code>. Then you should see something like this:</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/c83c82de1cd5fbac0ff66c857a02e2ef/204e3/8.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 115.7303370786517%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAABYlAAAWJQFJUiTwAAADqElEQVQ4y5VVyZbbNhCkFoqLVms8nvGSOHZy8EikSAKERFKzj33LKQe//ED+/xM6VQ1xnu3nHHIoNdAEGo1GVSv4M7fyT1nL67KVcXUtUXmUF82jnHVPMnd3stjfywS+4MpJsPkBW+DTXhamkr++/ipf/34nQZof5NJey8v2UdbdZw1wfv1F1u2TBk/MtcTVUca7VsKilWHeyAjgnGMiLBqZGSer+iBBkOHnqpYBbI8h7XaPxQfd+C28r1Fw3egUNNg22NtKQGeKk6f2Rqb1rWbEMbMaYTOzmhSd2hAB++wYcKTZeT/nHAeaMhyxuZHI3EpY4or2ViaYT1DT3j/IWxlgXcCMaLNGMdx1J+Aw+oco7Dyv5QUe5+XOyBKW41cYT+GPs1rWOyuLzMhZbvDNyDyzas+xZn3yLeBLtlaCCzg/lqW8Kyr5HfaPqtSFCwSNsSDc1hosReAVfPPMH8Kgq9wHnGE8hW+S4dUHeH4tLuo0gV1vkC18E1wjLFnXO5TgAdd2EtcVrMX18Wh5hxJ0KMFRr8xHCa72eGVsjqpWZg6bLWhSdRKXjaTGSGItOOgktTUohCwQMLUGj+TntNPa4DG8nbtSghikPOtKWTVOlo2VtK7xYg4UsKCDAYFrtZyPUYrxjn7SzCnCwirBRzsebvjKuO6JAkoDhxcGuWf1PQ55kuXhASc/qKVvaZ2skc0SifRICqMiSO2dBAwSg3sJ6EEOpsrHG7U9yMnEHJWnKVQVlyS+88i8BCkEiiJgdlG+16uxniRnDP5Rvwzk4eXHLEKSvOz0oIQwHjpHQgEDMMte8L1mBxkO2f4c5C7x0+/fdg/SJ0I2CWXHgH1H2fwPPEfe+Dp8355+zMD9Z9b+GwNuvGOQe12OUacx6kTtDgESflQc1apeOWfXUe2ynkfd+5zABJKhhi92lfwC+VGKlxi/L0qVGiX4GnPK8U3hLfV+Bks/1746+eZAcInJWyy8BJfel5VqmvgAXdP3Ab6PwG+YX8DPBEJQhbqlvomIBCe5/ZXxk7E14arQ4xLzVa/lCnQAmZPaazmBtBJIj2LwLcuXwpeI1+Yro5vM6gb/IzdQA9het8BB5vsC2q6gkgKapRKgbeh7Ag1HFSRqKwXlRjlGldF5MEDKM1dBZgYoEQgfajaCUhvAKHfKSa9d6Joa57WpXeh4fNL1MHfaA7Rjj/m6vDJs5O4lPjzKwuFPq/38rGf+E65o3V7OD2hx0POiQiLIKj5pma3uX825kIDKdvUuAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Your tests start to fail"
+        title=""
+        src="/static/c83c82de1cd5fbac0ff66c857a02e2ef/40fad/8.png"
+        srcset="/static/c83c82de1cd5fbac0ff66c857a02e2ef/707e9/8.png 148w,
+/static/c83c82de1cd5fbac0ff66c857a02e2ef/649e0/8.png 295w,
+/static/c83c82de1cd5fbac0ff66c857a02e2ef/40fad/8.png 590w,
+/static/c83c82de1cd5fbac0ff66c857a02e2ef/b3fef/8.png 885w,
+/static/c83c82de1cd5fbac0ff66c857a02e2ef/301c0/8.png 1180w,
+/static/c83c82de1cd5fbac0ff66c857a02e2ef/204e3/8.png 1424w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>if your tests are still being passed, then there’s a problem.</p>
+<h3>Shoudn’t I test how epic changes the state as well?</h3>
+<p>No. Because epic is supposed to test how set of actions gives another set of actions. </p>
+<p>You are going to test that in your tests for reducer, because reducer is actually where the action will change the state.</p>
+<p>What epic really does is just until dispatching actions. It’s related to the state because it uses the state, but it does not directly modify the state. That’s the role of the reducer.</p>
+<h3>Source code repository</h3>
+<ul>
+<li><a href="https://github.com/9oelM/redux-observable/tree/master/redux-only">redux implementation</a></li>
+<li><a href="https://github.com/9oelM/redux-observable/tree/master/redux-observable">redux-observable implementation and tests</a></li>
+</ul></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEBQH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABxVp7LNvUV5APQCf/xAAcEAEAAgEFAAAAAAAAAAAAAAABAAIhAxESMjT/2gAIAQEAAQUCLby4ryvEDTeuI0qS/qq4/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAEAH/2gAIAQIBAT8BIf/EACAQAAIABQUBAAAAAAAAAAAAAAABAhESMTIDECJBUXH/2gAIAQEABj8CsKXl/TKIVK5GnC32YonSiBfNv//EAB4QAAICAgIDAAAAAAAAAAAAAAERACExQVFhcYGR/9oACAEBAAE/ITaMZEIbhsx5QGHBWTBw5ln7HFkjyPUfAw9SuiKRzoXP/9oADAMBAAIAAwAAABCIwDz/xAAXEQEAAwAAAAAAAAAAAAAAAAAQARFR/9oACAEDAQE/EK0k/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEQEf/aAAgBAgEBPxBGV//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACFBUWFxgaH/2gAIAQEAAT8QkNEXA5KRgoqt+Op4wF6AkZpoJJFhB90mG89ALYcn7MtOxyouboBte2NEeM6u3GqRSr9z/9k=" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 0.5s;transition-delay:0.25s;border-radius:50%"/><noscript><picture><img width="50" height="50" srcset="/static/2d9562b52b70ef19bf9f1f3dfff052ef/c3bbc/profile-pic.jpg 1x,
+/static/2d9562b52b70ef19bf9f1f3dfff052ef/ac385/profile-pic.jpg 1.5x,
+/static/2d9562b52b70ef19bf9f1f3dfff052ef/587d5/profile-pic.jpg 2x,
+/static/2d9562b52b70ef19bf9f1f3dfff052ef/20b3c/profile-pic.jpg 3x" src="/static/2d9562b52b70ef19bf9f1f3dfff052ef/c3bbc/profile-pic.jpg" alt="Joel Mun" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Joel Mun</strong>. Joel loves javascript and has also recently started to gradually love python as well. He&#x27;s greatly fascinated by exploring new programming languages and technologies, and launching up off-the-wall projects using them.<!-- --> <a href="https://github.com/9oelM">Go check him up on Github!</a></p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2020-01-08--The-shortcuts-I-like/">← <!-- -->The shortcuts I like</a></li><li></li></ul><div id="disqus_thread" identifier="48bd2e8d-9a74-5583-af50-fe0fd901f65e" title="Extensive introduction to why and how you might want to use and test redux-observable" url="https://9oelm.github.io/2020-01-24--Fundamental-yet-extensive-introduction-to-why-and-how-you-might-want-to-use-redux-observable-for-async-actions/"></div></main><footer>© Joel Mun <!-- -->2020<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a></footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-105275697-3', 'auto', {});
+      
+      
+      
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"2020-01-24-fundamental-yet-extensive-introduction-to-why-and-how-you-might-want-to-use-redux-observable-for-async-actions-1de","path":"/2020-01-24--Fundamental-yet-extensive-introduction-to-why-and-how-you-might-want-to-use-redux-observable-for-async-actions/"};window.dataPath="632/path---2020-01-24-fundamental-yet-extensive-introduction-to-why-and-how-you-might-want-to-use-redux-observable-for-async-actions-1-de-852-1aIs1KFAeenMeZW1aZ4hlhXrxqU";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-67b162db32dac4df8e1d.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-218dfb3689e1ed90b306.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-4262b9a1dc50890999f0.js"],"component---src-pages-404-js":["/component---src-pages-404-js-95f5274f97c9156b42f7.js"],"component---src-pages-index-js":["/component---src-pages-index-js-729e4e88cf5d95a3eb78.js"],"pages-manifest":["/pages-manifest-502027d0b2340b27553e.js"]};/*]]>*/</script><script src="/webpack-runtime-3144670b7c6476089916.js" async=""></script><script src="/styles-fa6c583b3cd626e54a0e.js" async=""></script><script src="/app-67b162db32dac4df8e1d.js" async=""></script><script src="/0-63a21d0c1363172370b5.js" async=""></script><script src="/component---src-templates-blog-post-js-4262b9a1dc50890999f0.js" async=""></script></body></html>

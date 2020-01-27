@@ -1,4 +1,862 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 09 Jan 2020 14:02:23 GMT</lastBuildDate><item><title><![CDATA[The shortcuts I like]]></title><description><![CDATA[Before we get started These are the keys usually used in combination with normal keys on Mac: Command (or Cmd) ⌘ Shift ⇧ (I will write as…]]></description><link>https://9oelm.github.io/2020-01-08--The-shortcuts-I-like/</link><guid isPermaLink="false">https://9oelm.github.io/2020-01-08--The-shortcuts-I-like/</guid><pubDate>Wed, 08 Jan 2020 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Before we get started&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 27 Jan 2020 08:27:22 GMT</lastBuildDate><item><title><![CDATA[Extensive introduction to why and how you might want to use and test redux-observable]]></title><description><![CDATA[Problem I was struggling at my company trying to write some tests for RxJS operations.
+Most of the network requests were managed by RxJS…]]></description><link>https://9oelm.github.io/2020-01-24--Fundamental-yet-extensive-introduction-to-why-and-how-you-might-want-to-use-redux-observable-for-async-actions/</link><guid isPermaLink="false">https://9oelm.github.io/2020-01-24--Fundamental-yet-extensive-introduction-to-why-and-how-you-might-want-to-use-redux-observable-for-async-actions/</guid><pubDate>Fri, 24 Jan 2020 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Problem&lt;/h1&gt;
+&lt;p&gt;I was struggling at my company trying to write some tests for RxJS operations.
+Most of the network requests were managed by RxJS, and none of them were covered by tests. I wanted to write tests, but just did not know how to.&lt;/p&gt;
+&lt;p&gt;But I really just wanted to start from the basics - I mean, the really basics, including why, and how we might want to use &lt;code class=&quot;language-text&quot;&gt;redux-observable&lt;/code&gt;.&lt;/p&gt;
+&lt;h1&gt;tl;dr&lt;/h1&gt;
+&lt;p&gt;If you want to hop straight into the source code, &lt;a href=&quot;https://github.com/9oelM/redux-observable&quot;&gt;here it is.&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;First things first&lt;/h1&gt;
+&lt;h2&gt;What is reactive programming?&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/staltz/868e7e9bc2a7b8c1f754#reactive-programming-is-programming-with-asynchronous-data-streams&quot;&gt;Reactive programming is programming with asynchronous data streams.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Typical events are async event streams, and want to observe over them&lt;/li&gt;
+&lt;li&gt;You have useful functions to combine/create/filter those streams&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A &lt;strong&gt;stream&lt;/strong&gt; is a sequence of ongoing events ordered in time. It can emit three different things: a value (of some type), an error, or a “completed” signal. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We capture these emitted events only asynchronously, by &lt;strong&gt;defining a function that will execute when a value is emitted,&lt;/strong&gt; another function when an error is emitted, and another function when ‘completed’ is emitted.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So this is essentially going back to &lt;a href=&quot;https://github.com/9oelM/frontend-interview#observer&quot;&gt;the observer design pattern&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Why bother to use rxjs?&lt;/h2&gt;
+&lt;h3&gt;Abstraction.&lt;/h3&gt;
+&lt;p&gt;If you use RP, you don’t have to really worry about implementation details, because it gives you high level of abstraction layer. So you never have to bother with &lt;code class=&quot;language-text&quot;&gt;Promise&lt;/code&gt;s and &lt;code class=&quot;language-text&quot;&gt;await&lt;/code&gt; in javascript anymore. Just declaratively implement what you want to do, and that’s it.&lt;/p&gt;
+&lt;h3&gt;Async works made easier&lt;/h3&gt;
+&lt;p&gt;Nowadays async operations have become a common thing, beacuse you might need to handle UI interactions &amp;#x26; tonnes of network requests. &lt;/p&gt;
+&lt;p&gt;So there’s a good chance that it is going to be a good fit for heavily network based application (both for frontend and backend).&lt;/p&gt;
+&lt;h3&gt;Lots of helper functions to simplify work declaratively&lt;/h3&gt;
+&lt;p&gt;You have dedicated helper functions to implement what you want to do, which otherwise you might do in a very complex way. Even if this does not fully come to your mind right now, you are going to notice it as you go through this article.&lt;/p&gt;
+&lt;h2&gt;Why bother to use it with Redux?&lt;/h2&gt;
+&lt;p&gt;Now we have a brief understanding of advantages of using RxJS. Now, we want to handle actions in Redux, but not all actions are synchronous. &lt;/p&gt;
+&lt;p&gt;For a simple example, I have wrote a simple application that fetches text from the server and shows it, like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/1-421fc0f32fd5495ee252e8946c8844b6.gif&quot; alt=&quot;simple application that fetches text from the server and shows it&quot;&gt; &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I assumed that you have a prior knowledge of some Typescript and React fundamentals including hooks.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is the project structure (omitted unimportant ones):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;src
+├── App.tsx
+├── DummyTextRequestButton
+│   └── DummyTextRequestButton.tsx
+├── DummyTextViewer
+│   └── DummyTextViewer.tsx
+├── redux
+│   ├── actions.ts
+│   ├── constants.ts
+│   ├── reducer.ts
+│   ├── store.ts
+│   └── types.ts&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Redux-related things first&lt;/h3&gt;
+&lt;p&gt;In redux, as you know, we mainly have actions and reducers. I have created three types of actions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;StartRequestText&lt;/code&gt;: I will &lt;code class=&quot;language-text&quot;&gt;dispatch&lt;/code&gt; this right before &lt;code class=&quot;language-text&quot;&gt;fetch&lt;/code&gt;ing from the dummy text API.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;FinishRequestText&lt;/code&gt;: I will &lt;code class=&quot;language-text&quot;&gt;dispatch&lt;/code&gt; this right after receiving the text.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ErrorRequestText&lt;/code&gt;: I will &lt;code class=&quot;language-text&quot;&gt;dispatch&lt;/code&gt; this as soon as I encounter an error in the process described above.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The above actions are implemented like this in &lt;code class=&quot;language-text&quot;&gt;actions.ts&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import { Constants as C } from &amp;#39;./constants&amp;#39;;
+import { Action } from &amp;#39;redux&amp;#39;;
+
+export interface StartRequestTextAction extends Action&amp;lt;C.START_REQUEST_TEXT&amp;gt; {}
+
+export const startRequestText: () =&amp;gt; StartRequestTextAction = () =&amp;gt; ({
+  type: C.START_REQUEST_TEXT,
+});
+
+export interface FinishRequestTextAction extends Action&amp;lt;typeof C.FINISH_REQUEST_TEXT&amp;gt; {
+  text: string;
+}
+
+export const finishRequestText: (text: string) =&amp;gt; FinishRequestTextAction = (text) =&amp;gt; ({
+  type: C.FINISH_REQUEST_TEXT,
+  text,
+});
+
+export interface ErrorRequestTextAction extends Action&amp;lt;typeof C.ERROR_REQUEST_TEXT&amp;gt; {
+  errorMsg: string;
+}
+
+export const errorRequestText: (errorMsg: string) =&amp;gt; ErrorRequestTextAction = (errorMsg) =&amp;gt; ({
+  type: C.ERROR_REQUEST_TEXT,
+  errorMsg,
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And I simply defined some action types in &lt;code class=&quot;language-text&quot;&gt;constants.ts&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;export enum Constants {
+  START_REQUEST_TEXT = &amp;#39;START_REQUEST_TEXT&amp;#39;,
+  FINISH_REQUEST_TEXT = &amp;#39;FINISH_REQUEST_TEXT&amp;#39;,
+  ERROR_REQUEST_TEXT = &amp;#39;ERROR_REQUEST_TEXT&amp;#39;,
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Putting them into &lt;code class=&quot;language-text&quot;&gt;reducer.ts&lt;/code&gt; is not difficult at all.
+We just have to update the state for each different action.
+You can see that I’m updating &lt;code class=&quot;language-text&quot;&gt;isLoading&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;text&lt;/code&gt;, and &lt;code class=&quot;language-text&quot;&gt;errorMsg&lt;/code&gt; individually according to each &lt;code class=&quot;language-text&quot;&gt;type&lt;/code&gt; of an &lt;code class=&quot;language-text&quot;&gt;action&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;reducer.ts&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import { Reducer, combineReducers } from &amp;#39;redux&amp;#39;;
+
+import { SimpleTextState, AllActions } from &amp;#39;./types&amp;#39;;
+import { Constants as C } from &amp;#39;./constants&amp;#39;;
+import { RootState } from &amp;#39;./types&amp;#39;;
+
+export const simpleTextReducer: Reducer&amp;lt;SimpleTextState, AllActions&amp;gt; =
+  (state = { isLoading: false }, action) =&amp;gt; {
+    switch (action.type) {
+      case C.START_REQUEST_TEXT:
+        return {
+          ...state,
+          isLoading: true,
+        };
+      case C.FINISH_REQUEST_TEXT:
+        return {
+          ...state,
+          text: action.text,
+          isLoading: false,
+        };
+      case C.ERROR_REQUEST_TEXT:
+        return {
+          ...state,
+          errorMsg: action.errorMsg,
+          isLoading: false,
+        };
+      default:
+        return state;
+    }
+  }
+
+const reducers: Reducer&amp;lt;RootState&amp;gt; = combineReducers&amp;lt;RootState&amp;gt;({
+  simpleText: simpleTextReducer,
+});
+
+export default reducers;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Again, not so much in &lt;code class=&quot;language-text&quot;&gt;store.ts&lt;/code&gt;. Just combine reducers (although we just have one, which is not usual in production envrionments) and configure redux devtools extension, and create store.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;store.ts&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import { combineReducers, createStore, Action, Reducer } from &amp;#39;redux&amp;#39;;
+import reducers from &amp;#39;./reducer&amp;#39;;
+import { SimpleTextState, RootState } from &amp;#39;./types&amp;#39;;
+import { Constants as C } from &amp;#39;./constants&amp;#39;;
+
+const store = createStore&amp;lt;State, AllActions, any, any&amp;gt;(
+  reducers, (window as any).__REDUX_DEVTOOLS_EXTENSION__ &amp;amp;&amp;amp; (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+export default store;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And I defined the types we need in &lt;code class=&quot;language-text&quot;&gt;types.ts&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import * as actions from &amp;quot;./actions&amp;quot;;
+import { ActionType } from &amp;#39;typesafe-actions&amp;#39;;
+
+export type AllActions = ActionType&amp;lt;typeof actions&amp;gt;;
+
+export interface RootState {
+  simpleText: SimpleTextState;
+}
+
+export interface SimpleTextState {
+  text?: string;
+  errorMsg?: string;
+  isLoading: boolean;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;App.tsx&lt;/code&gt;
+In the parent component, we just want to show two things: the button and the text.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import React from &amp;#39;react&amp;#39;;
+import { Provider } from &amp;#39;react-redux&amp;#39;;
+
+import store from &amp;#39;./redux/store&amp;#39;;
+import DummyTextRequestButton from &amp;#39;./DummyTextRequestButton/DummyTextRequestButton&amp;#39;;
+import DummyTextViewer from &amp;#39;./DummyTextViewer/DummyTextViewer&amp;#39;;
+
+const App: React.FC = () =&amp;gt; {
+  return (
+    &amp;lt;Provider store={store}&amp;gt;
+      &amp;lt;div className=&amp;quot;App&amp;quot;&amp;gt;
+        &amp;lt;DummyTextRequestButton /&amp;gt;
+        &amp;lt;DummyTextViewer /&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/Provider&amp;gt;
+  );
+}
+
+export default App;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;DummyTextRequestButton.tsx&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;In this component, we have the logic of dispatching all of the actions we have defined earlier.
+You have to recognize that we want to port the logic in &lt;code class=&quot;language-text&quot;&gt;handleClick&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;redux-observable&lt;/code&gt; later, because right now it’s not reactive at all.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import React, { FC } from &amp;#39;react&amp;#39;;
+import { Dispatch } from &amp;#39;redux&amp;#39;;
+import { useDispatch } from &amp;#39;react-redux&amp;#39;;
+import { startRequestText, errorRequestText, finishRequestText } from &amp;#39;../redux/actions&amp;#39;;
+
+const DummyTextRequestButton: FC = () =&amp;gt; {
+  const dispatch: Dispatch = useDispatch();
+
+  const REQUEST_URL: string = &amp;#39;https://baconipsum.com/api/?type=meat?paras=200&amp;#39;;
+
+  const handleClick = async () =&amp;gt; {
+    dispatch(startRequestText());
+
+    const response: string | Error = await fetch(REQUEST_URL)
+      .then((resp: Response) =&amp;gt; resp.text())
+      .catch((err: Error) =&amp;gt; err);
+
+    (response instanceof Error) ?
+      dispatch(errorRequestText(response.message)) :
+      dispatch(finishRequestText(response));
+  }
+
+  return (
+    &amp;lt;button 
+      style={{ backgroundColor: &amp;#39;grey&amp;#39;, color: &amp;#39;white&amp;#39;, width: 150, height: 50 }}
+      onClick={handleClick}
+    &amp;gt;
+      Click me to request dummy text
+    &amp;lt;/button&amp;gt;
+  )
+};
+
+export default DummyTextRequestButton;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;DummyTextViewer.tsx&lt;/code&gt;
+This component consumes the redux state. Shows error, text, or loading based on the state.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import React, { FC, ReactNode } from &amp;#39;react&amp;#39;;
+import { useSelector } from &amp;#39;react-redux&amp;#39;;
+
+import { RootState } from &amp;#39;../redux/types&amp;#39;;
+
+const DummyTextViewer: FC = () =&amp;gt; {
+  const {
+    simpleText: {
+      text, errorMsg, isLoading,
+    }
+  }: RootState = useSelector((state: RootState) =&amp;gt; state);
+
+  const textViewer: ReactNode = errorMsg !== undefined ?
+    &amp;lt;p&amp;gt;oops, there was an error&amp;lt;/p&amp;gt; : (
+      &amp;lt;p&amp;gt;{text}&amp;lt;/p&amp;gt;
+    );
+
+  const dummyTextViewer: ReactNode | null = isLoading ? 
+    (&amp;lt;p&amp;gt;loading...&amp;lt;/p&amp;gt;) : textViewer;
+
+  return (
+    &amp;lt;section&amp;gt;
+      {dummyTextViewer}
+    &amp;lt;/section&amp;gt;
+  )
+}
+
+export default DummyTextViewer;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;With RxJS and redux-observable?&lt;/h3&gt;
+&lt;p&gt;First of all, we are going to introduce relevant modules to our project:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i --save redux-devtools-extension redux-observable rxjs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then we want to get rid of somewhat complex logic inside &lt;code class=&quot;language-text&quot;&gt;DummyTextRequestButton.tsx&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import React, { FC } from &amp;#39;react&amp;#39;;
+import { Dispatch } from &amp;#39;redux&amp;#39;;
+import { useDispatch } from &amp;#39;react-redux&amp;#39;;
+import { startRequestText } from &amp;#39;../redux/actions&amp;#39;;
+
+const DummyTextRequestButton: FC = () =&amp;gt; {
+  const dispatch: Dispatch = useDispatch();
+
+  /** Now we just want to trigger the first single action */
+  const handleClick = async () =&amp;gt; {
+    dispatch(startRequestText());
+  }
+
+  return (
+    &amp;lt;button 
+      style={{ backgroundColor: &amp;#39;grey&amp;#39;, color: &amp;#39;white&amp;#39;, width: 150, height: 50 }}
+      onClick={handleClick}
+    &amp;gt;
+      Click me to request dummy text
+    &amp;lt;/button&amp;gt;
+  )
+};
+
+export default DummyTextRequestButton;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We can do it like above because we are going to port our logic to &lt;code class=&quot;language-text&quot;&gt;redux-observable&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Then, we are going to create something called &lt;code class=&quot;language-text&quot;&gt;epics.ts&lt;/code&gt; inside &lt;code class=&quot;language-text&quot;&gt;redux&lt;/code&gt; folder:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import { Epic, ofType, combineEpics } from &amp;quot;redux-observable&amp;quot;;
+import { from, of } from &amp;#39;rxjs&amp;#39;;
+import { catchError, mergeMap } from &amp;#39;rxjs/operators&amp;#39;;
+import { fromFetch } from &amp;#39;rxjs/fetch&amp;#39;;
+
+import { Constants as C } from &amp;#39;./constants&amp;#39;;
+import { RootState, AllActions } from &amp;quot;./types&amp;quot;;
+import * as actions from &amp;quot;./actions&amp;quot;;
+
+const startRequestTextEpic: Epic&amp;lt;AllActions, AllActions, RootState&amp;gt; = (action$, _store) =&amp;gt;
+  action$.pipe(
+    ofType(C.START_REQUEST_TEXT),
+    mergeMap(() =&amp;gt; {
+      const REQUEST_URL: string = &amp;#39;https://baconipsum.com/api/?type=meat?paras=200&amp;#39;;
+
+      const sendRequest$ = fromFetch(REQUEST_URL);
+
+      return sendRequest$.pipe(
+        mergeMap(
+          (resp: Response) =&amp;gt; {
+            return from(resp.text())
+              .pipe(
+                mergeMap((text: string) =&amp;gt; of(actions.finishRequestText(text))),
+              );
+          }
+        ),
+        catchError((error: Error) =&amp;gt; of(actions.errorRequestText(error.message)))
+      )
+    }),
+  );
+
+const rootEpic: Epic&amp;lt;AllActions, AllActions, RootState&amp;gt; = combineEpics(
+  startRequestTextEpic,
+);
+
+export default rootEpic;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I know, I know. Lots of things going on here, but let me explain one by one.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An &lt;strong&gt;epic&lt;/strong&gt; is really just something that listens to a redux action and outputs other actions accordingly.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So how is that done in the code above? We can see that &lt;code class=&quot;language-text&quot;&gt;startRequestTextEpic&lt;/code&gt; is listening to an action of the type called &lt;code class=&quot;language-text&quot;&gt;C.START_REQUEST_TEXT&lt;/code&gt; only. So this code, won’t get executed it any other actions are dispatched from redux.&lt;/p&gt;
+&lt;p&gt;Ok, forget about &lt;code class=&quot;language-text&quot;&gt;mergeMap&lt;/code&gt; for now and then let’s go on for now. We can see that we are using RxJS’s own &lt;code class=&quot;language-text&quot;&gt;fetch&lt;/code&gt; method called &lt;code class=&quot;language-text&quot;&gt;fromFetch&lt;/code&gt;, which essentially just makes &lt;code class=&quot;language-text&quot;&gt;fetch&lt;/code&gt; into an observable.&lt;/p&gt;
+&lt;p&gt;Now you process the response from &lt;code class=&quot;language-text&quot;&gt;fetch&lt;/code&gt;, and the &lt;code class=&quot;language-text&quot;&gt;text&lt;/code&gt; inside the response would be a payload to &lt;code class=&quot;language-text&quot;&gt;finishRequestText&lt;/code&gt; action.&lt;/p&gt;
+&lt;p&gt;Otherwise, if you have an error while &lt;code class=&quot;language-text&quot;&gt;fetch&lt;/code&gt;ing, the error is going to be caught and will dispatch &lt;code class=&quot;language-text&quot;&gt;errorRequestText&lt;/code&gt; action.&lt;/p&gt;
+&lt;p&gt;In this way, we have successfully ported our implementation in &lt;code class=&quot;language-text&quot;&gt;handleClick&lt;/code&gt; to inside an epic, and all that’s left for we us to do is actually configure a few things in &lt;code class=&quot;language-text&quot;&gt;store.ts&lt;/code&gt; to be able to use &lt;code class=&quot;language-text&quot;&gt;redux-observable&lt;/code&gt; in our project:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import { createStore, applyMiddleware } from &amp;#39;redux&amp;#39;;
+import { createEpicMiddleware, Epic } from &amp;#39;redux-observable&amp;#39;;
+import { composeWithDevTools } from &amp;#39;redux-devtools-extension&amp;#39;;
+
+import reducers from &amp;#39;./reducer&amp;#39;;
+import { RootState, AllActions } from &amp;#39;./types&amp;#39;;
+import rootEpic from &amp;#39;./epics&amp;#39;;
+
+const epicMiddleware = createEpicMiddleware();
+
+const composeEnhancers = composeWithDevTools({
+  // Specify name here, actionsBlacklist, actionsCreators and other options if needed
+});
+
+const initialRootState: RootState = { simpleText: { isLoading: false } };
+
+const store = createStore&amp;lt;RootState, AllActions, any, any&amp;gt;(
+  reducers,
+  initialRootState,
+  composeEnhancers(
+    applyMiddleware(
+      epicMiddleware,
+    ),
+  )
+);
+
+epicMiddleware.run(rootEpic as Epic&amp;lt;AllActions, AllActions, any&amp;gt;);
+
+export default store;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So, after adding &lt;code class=&quot;language-text&quot;&gt;redux-observable&lt;/code&gt;, now we have some benefits:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Reactiveness. You can easily handle asynchronous actions and state updates in redux by reacting to actions being dispatched.&lt;/li&gt;
+&lt;li&gt;Separation of concerns. Now you don’t have to care about what to do after &lt;code class=&quot;language-text&quot;&gt;startRequestText&lt;/code&gt; in &lt;code class=&quot;language-text&quot;&gt;DummyTextButton&lt;/code&gt;, because all of the logics have been ported to &lt;code class=&quot;language-text&quot;&gt;startRequestTextEpic&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Great toolchains. Right now we have used just few functions from RxJS, but combination of many functions will make it easier to process your data streams.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Extending further by utilizing what RxJS has&lt;/h3&gt;
+&lt;p&gt;Now we have one little problem: when a user clicks on the button many times in such a short time, the request is going to be sent more than one time, which might be kind of useless, as shown in this gif:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2-f23377929cc31526a5b09dbe8a0a8414.gif&quot; alt=&quot;Requests are sent more than one time unintendedly&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I clicked on the button three times, but actually what you all need is just a single request. So here’s what you can do:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import { Epic, ofType, combineEpics } from &amp;quot;redux-observable&amp;quot;;
+import { from, of, timer } from &amp;#39;rxjs&amp;#39;;
+import { catchError, mergeMap, debounce } from &amp;#39;rxjs/operators&amp;#39;;
+import { fromFetch } from &amp;#39;rxjs/fetch&amp;#39;;
+
+import { Constants as C } from &amp;#39;./constants&amp;#39;;
+import { RootState, AllActions } from &amp;quot;./types&amp;quot;;
+import * as actions from &amp;quot;./actions&amp;quot;;
+
+const startRequestTextEpic: Epic&amp;lt;AllActions, AllActions, RootState&amp;gt; = (action$, _store) =&amp;gt;
+  action$.pipe(
+    ofType(C.START_REQUEST_TEXT),
+    debounce(() =&amp;gt; timer(1000)),
+    mergeMap(() =&amp;gt; {
+      const REQUEST_URL: string = &amp;#39;https://baconipsum.com/api/?type=meat?paras=200&amp;#39;;
+
+      const sendRequest$ = fromFetch(REQUEST_URL);
+
+      return sendRequest$.pipe(
+        mergeMap(
+          (resp: Response) =&amp;gt; {
+            return from(resp.text())
+              .pipe(
+                mergeMap((text: string) =&amp;gt; of(actions.finishRequestText(text))),
+              );
+          }
+        ),
+        catchError((error: Error) =&amp;gt; of(actions.errorRequestText(error.message)))
+      )
+    }),
+  );
+
+const rootEpic: Epic&amp;lt;AllActions, AllActions, RootState&amp;gt; = combineEpics(
+  startRequestTextEpic,
+);
+
+export default rootEpic;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We just added &lt;code class=&quot;language-text&quot;&gt;debounce&lt;/code&gt;, and it is going to filter out only one action of type &lt;code class=&quot;language-text&quot;&gt;START_REQUEST_TEXT&lt;/code&gt; for a second, which means even if you click on the button three times in a single second, the request is going to be sent only once, like in the gif below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/3-bc920a1f20fc783e2677d4fdc3137422.gif&quot; alt=&quot;Requests are sent just one time&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Alternatively, what you would want better is actually &lt;code class=&quot;language-text&quot;&gt;switchMap&lt;/code&gt;; It would cancel any pending request and switch to the last one:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;ofType(C.START_REQUEST_TEXT),
+    switchMap(() =&amp;gt; {
+      const REQUEST_URL: string = &amp;#39;https://baconipsum.com/api/?type=meat?paras=200&amp;#39;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/4-18611d4e6ff4780e0d043d7c0dde371e.gif&quot; alt=&quot;The pending requests are cancelled, and only the last one is not&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Now, let’s say that you would have another button to show some other text, like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/5-ec43e9315a2034e6e4ef9fd2784154e5.gif&quot; alt=&quot;You have another button to show some other text&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Because we now have an additional UI, we need to handle one special case (we are not going to cover other cases, although there are many): &lt;strong&gt;you click on request dummy text button, but you change your mind to see hi instead&lt;/strong&gt;. Then you would need to &lt;strong&gt;cancel and finish&lt;/strong&gt; your action. &lt;/p&gt;
+&lt;p&gt;For the sake of simplicity, I’m not going to show the entire code but &lt;code class=&quot;language-text&quot;&gt;epics.ts&lt;/code&gt; to demontrate that (you can still look into &lt;a href=&quot;https://github.com/9oelM/redux-observable/tree/master/redux-observable&quot;&gt;the entire codebase from the Github repository&lt;/a&gt;):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import { Epic, ofType, combineEpics } from &amp;quot;redux-observable&amp;quot;;
+import { from, of, race, Observable } from &amp;#39;rxjs&amp;#39;;
+import { catchError, mergeMap, switchMap, filter, map, take, merge } from &amp;#39;rxjs/operators&amp;#39;;
+import { fromFetch } from &amp;#39;rxjs/fetch&amp;#39;;
+
+import { Constants as C } from &amp;#39;./constants&amp;#39;;
+import { RootState, AllActions } from &amp;quot;./types&amp;quot;;
+import * as A from &amp;quot;./actions&amp;quot;;
+
+const startRequestTextEpic: Epic&amp;lt;AllActions, AllActions, RootState&amp;gt; = (action$, store$) =&amp;gt;
+  action$.pipe(
+    ofType(C.START_REQUEST_TEXT),
+    switchMap(() =&amp;gt; {
+      const REQUEST_URL: string = &amp;#39;https://baconipsum.com/api/?type=meat?paras=1000&amp;#39;;
+
+      const sendRequest$: Observable&amp;lt;A.FinishRequestTextAction | A.ErrorRequestTextAction&amp;gt; =
+        fromFetch(REQUEST_URL).pipe(
+          mergeMap(
+            (resp: Response) =&amp;gt; 
+              from(resp.text())
+                .pipe(
+                  mergeMap((text: string) =&amp;gt; of(A.finishRequestText(text))),
+                )
+          ),
+          catchError((error: Error) =&amp;gt; of(A.errorRequestText(error.message))),
+        )
+
+      const cancelRequest$: Observable&amp;lt;A.FinishRequestTextAction&amp;gt; = action$.pipe(
+        ofType(C.TOGGLE_HI_TEXT),
+        filter(() =&amp;gt; store$.value.simpleText.isHiTextShown),
+        map(() =&amp;gt; A.finishRequestText(&amp;#39;&amp;#39;)),
+        take(1),
+      );
+
+      return race(sendRequest$, cancelRequest$);
+    }),
+  );
+
+const rootEpic: Epic&amp;lt;AllActions, AllActions, RootState&amp;gt; = combineEpics(
+  startRequestTextEpic,
+);
+
+export default rootEpic;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We now have two major parts: &lt;code class=&quot;language-text&quot;&gt;sendRequest$&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;cancelRequest$&lt;/code&gt;. In &lt;code class=&quot;language-text&quot;&gt;cancelRequest$&lt;/code&gt; ovservable, we are going to force finish requesting text, because there is no need to request the text anymore if you have switched to see the &lt;code class=&quot;language-text&quot;&gt;hi&lt;/code&gt; text.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;race&lt;/code&gt; would take the job of cancelling out any other ongoing action if the other action is finished. It’s just like &lt;code class=&quot;language-text&quot;&gt;Promise.race&lt;/code&gt; in javascript! So, let’s see this in gif:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/6-f96e8bed5d17d151d373b5fceb3fe471.gif&quot; alt=&quot;The network request will be cancelled if you switch to see the hi text&quot;&gt;&lt;/p&gt;
+&lt;h3&gt;Checkpoint&lt;/h3&gt;
+&lt;p&gt;Do you now get why you would use redux-observable? It equips you with a nice set of tools to perform side-effects after actions are dispatched in redux.
+Otherwise it should have been a great pain for you manage events like cancellation manually, in vanilla javascript.&lt;/p&gt;
+&lt;p&gt;But hey, we are not done yet. Let’s finish it with a guide to how to test these epics.&lt;/p&gt;
+&lt;h2&gt;Testing your epics&lt;/h2&gt;
+&lt;h3&gt;Method 1: Test output actions based on input actions.&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import { ActionsObservable, StateObservable } from &amp;#39;redux-observable&amp;#39;;
+import { of, Subject, Observable } from &amp;#39;rxjs&amp;#39;;
+import { toArray } from &amp;#39;rxjs/operators&amp;#39;;
+import * as rxjs from &amp;#39;rxjs&amp;#39;;
+import * as FF from &amp;#39;rxjs/fetch&amp;#39;;
+
+import { startRequestTextEpic } from &amp;#39;./epics&amp;#39;;
+import { Constants as C } from &amp;#39;./constants&amp;#39;;
+import { RootState, AllActions } from &amp;#39;./types&amp;#39;;
+
+describe(&amp;#39;startRequestTextEpic&amp;#39;, () =&amp;gt; {
+  let initialState: RootState;
+
+  beforeEach(() =&amp;gt; {
+    initialState = { simpleText: { isLoading: false, isHiTextShown: false } };
+  })
+
+  it(&amp;#39;should dispatch finishRequestText if there is no error&amp;#39;, async () =&amp;gt; {
+    const fakeFetchResponse: string = &amp;#39;test response, hi&amp;#39;;
+
+    /**
+     * Surprisingly, jest supports mocking individual functions 
+     * from modules like this in each different test
+     */
+    // @ts-ignore: this is valid. See https://github.com/facebook/jest/issues/936#issuecomment-214556122
+    rxjs.race = jest.fn((...observables: Array&amp;lt;Observable&amp;lt;AllActions&amp;gt;&amp;gt;) =&amp;gt; observables[0]);
+    // @ts-ignore this is valid also
+    FF.fromFetch = jest.fn(() =&amp;gt; of({ text: () =&amp;gt; of(fakeFetchResponse) }));
+
+    const action$ = ActionsObservable.of({
+      type: C.START_REQUEST_TEXT,
+    }) as ActionsObservable&amp;lt;AllActions&amp;gt;;
+
+    const state$ = new StateObservable&amp;lt;RootState&amp;gt;(new Subject(), initialState);
+
+    const actualActions$: Observable&amp;lt;AllActions&amp;gt; = startRequestTextEpic(action$, state$, {});
+    const actualActionsArray: Array&amp;lt;AllActions&amp;gt; = await actualActions$.pipe(toArray());.toPromise();
+    
+    const expectedActionsArray: Array&amp;lt;AllActions&amp;gt; = [
+      {
+        type: C.FINISH_REQUEST_TEXT,
+        text: fakeFetchResponse,
+      }
+    ]
+    expect(actualActionsArray).toEqual(expectedActionsArray);
+  });
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Whoa, lots of things to go through, right? But basically, all we are doing are just:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Mocking functions from certain modules to make them work according to our purpose&lt;/strong&gt;. We are mocking &lt;code class=&quot;language-text&quot;&gt;rxjs.race&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;FF.fromFetch&lt;/code&gt; because, for &lt;code class=&quot;language-text&quot;&gt;race&lt;/code&gt;, we don’t want race won’t work well in a test environment and we can decide on which observable to emit, instead of depending on the code itself, and for &lt;code class=&quot;language-text&quot;&gt;fromFetch&lt;/code&gt;, we don’t want to use real &lt;code class=&quot;language-text&quot;&gt;fetch&lt;/code&gt; because it is going to take more time for no useful reason.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Running the epic with initial action and state&lt;/strong&gt;. The epic will run, and spit out another set of actions as a result.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Testing the equality of the output actions with the expected&lt;/strong&gt;. We just need to test if the epic gives expected set of actions.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That’s pretty much it! But we need to test more, so why not simplify this process with a simple function?:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import { Action } from &amp;#39;redux&amp;#39;;
+import { Epic } from &amp;#39;redux-observable&amp;#39;;
+import { ActionsObservable, StateObservable } from &amp;#39;redux-observable&amp;#39;;
+import { Subject, Observable } from &amp;#39;rxjs&amp;#39;;
+import { toArray } from &amp;#39;rxjs/operators&amp;#39;;
+import { AllActions } from &amp;#39;./types&amp;#39;;
+
+interface RunEpicTestParams&amp;lt;ActionsUsed extends Action&amp;lt;any&amp;gt;, RootState&amp;gt; {
+  epicToTest: Epic&amp;lt;ActionsUsed, ActionsUsed, RootState&amp;gt;;
+  inputActions: Array&amp;lt;ActionsUsed&amp;gt;;
+  initialState: RootState;
+  expectedActions: Array&amp;lt;ActionsUsed&amp;gt;;
+  done(): void;
+}
+
+export async function runEpicTest&amp;lt;ActionsUsed extends Action, State&amp;gt;({
+  epicToTest,
+  inputActions,
+  initialState,
+  expectedActions,
+  done,
+}: RunEpicTestParams&amp;lt;AllActions, State&amp;gt;): Promise&amp;lt;void&amp;gt; {
+  const inputAction$ = ActionsObservable.of(...inputActions) as ActionsObservable&amp;lt;ActionsUsed&amp;gt;;
+  const state$ = new StateObservable&amp;lt;State&amp;gt;(new Subject(), initialState);
+
+  const actualActions$: Observable&amp;lt;ActionsUsed&amp;gt; = epicToTest(inputAction$, state$, {}) as Observable&amp;lt;ActionsUsed&amp;gt;;
+  const actualActionsArray: Array&amp;lt;AllActions&amp;gt; = await actualActions$.pipe(toArray()).toPromise();
+  
+  expect(actualActionsArray).toEqual(expectedActions);
+  done();
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, we can turn out test into:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;describe(&amp;#39;startRequestTextEpic&amp;#39;, () =&amp;gt; {
+  let initialState: RootState;
+  let inputActions: Array&amp;lt;AllActions&amp;gt;;
+
+  beforeEach(() =&amp;gt; {
+    initialState = { simpleText: { isLoading: false, isHiTextShown: false } };
+    inputActions = [{ type: C.START_REQUEST_TEXT }];
+  })
+
+  it(&amp;#39;should dispatch finishRequestText if there is no error&amp;#39;, async (done) =&amp;gt; {
+    const fakeFetchResponse: string = &amp;#39;test response, hi&amp;#39;;
+
+    /**
+     * Surprisingly, jest supports mocking individual functions 
+     * from modules like this in each different test
+     */
+    // @ts-ignore: this is valid. See https://github.com/facebook/jest/issues/936#issuecomment-214556122
+    rxjs.race = jest.fn((...observables: Array&amp;lt;Observable&amp;lt;AllActions&amp;gt;&amp;gt;) =&amp;gt; observables[0]);
+    // @ts-ignore this is valid also
+    FF.fromFetch = jest.fn(() =&amp;gt; of({ text: () =&amp;gt; of(fakeFetchResponse) }));
+    runEpicTest&amp;lt;AllActions, RootState&amp;gt;({
+      epicToTest: startRequestTextEpic,
+      expectedActions: [
+        {
+          type: C.FINISH_REQUEST_TEXT,
+          text: fakeFetchResponse,
+        }
+      ],
+      inputActions,
+      initialState,
+      done,
+    });
+  });
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Much less boilerplate, right?&lt;/p&gt;
+&lt;p&gt;Now we can write out tests for other things as well, like this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;describe(&amp;#39;startRequestTextEpic&amp;#39;, () =&amp;gt; {
+  let initialState: RootState;
+  let inputActions: Array&amp;lt;AllActions&amp;gt;;
+
+  beforeEach(() =&amp;gt; {
+    initialState = { simpleText: { isLoading: false, isHiTextShown: false } };
+    inputActions = [{ type: C.START_REQUEST_TEXT }];
+  })
+
+  it(&amp;#39;should dispatch finishRequestText if there is no error&amp;#39;, (done) =&amp;gt; {
+    // Already covered above
+  });
+
+  it(&amp;#39;should dispatch errorRequestText if there is an error while fetching data&amp;#39;, (done) =&amp;gt; {
+    const fakeErrorMessage: string = &amp;#39;test error message, hi&amp;#39;;
+    // @ts-ignore
+    FF.fromFetch = jest.fn(() =&amp;gt; of({ text: () =&amp;gt; { throw new Error(fakeErrorMessage)} }));
+    
+    runEpicTest&amp;lt;AllActions, RootState&amp;gt;({
+      epicToTest: startRequestTextEpic,
+      expectedActions: [
+        {
+          type: C.ERROR_REQUEST_TEXT,
+          errorMsg: fakeErrorMessage,
+        }
+      ],
+      inputActions,
+      initialState,
+      done,
+    });
+  });
+
+  it(&amp;#39;should dispatch finishRequestText earlier if TOGGLE_HI_TEXT is called in the middle&amp;#39;, (done) =&amp;gt; {
+    initialState = { simpleText: { ...initialState.simpleText, isHiTextShown: true } };
+
+    // @ts-ignore
+    rxjs.race = jest.fn((...observables: Array&amp;lt;Observable&amp;lt;AllActions&amp;gt;&amp;gt;) =&amp;gt; observables[1]);
+
+    runEpicTest&amp;lt;AllActions, RootState&amp;gt;({
+      epicToTest: startRequestTextEpic,
+      expectedActions: [
+        {
+          type: C.FINISH_REQUEST_TEXT,
+          text: &amp;#39;&amp;#39;,
+        }
+      ],
+      inputActions: [...inputActions, { type: C.TOGGLE_HI_TEXT }],
+      initialState,
+      done,
+    });
+  });
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now you’ve got to see all of your tests pass: &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/41932aa437b7d0d81dd007703e6a87f6/5d6f0/7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 38.85793871866295%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABHElEQVQoz41Ry1LCQBBcIyGgovg8cKCs4qRICJCQzQsCsXyUVln+gP//F+3MbJaicoFDb2Ymsz3dO8r/HWH194j7PIQ7LdCZZbiKSzzkb+gtS/T1hmo51HN0HNpBhGud4jbd4iapiGyDu+xV4BF5Z54LoTtNCQlOJxoOoeWb2IJzris1puMphBovccJ4ieEQVB3bZgtnYmta+jh39ogVJ94swUW4wtmCUdRxIQ2sjJUahelugI3dOuYB7ECxipYfwwsyucjfLtmUeC/n5p1N36hx5K4lNP/pDc307twshJvcRpNMPnYpw+oLo/cf2ep5bXWw/pCcl9HXW1zStu07H8Sg/MSw+kYvWkuBCYWMbLaDVCwzsTw4K2gSNGr/C/nlT8KKC2wAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;All of your tests pass&quot;
+        title=&quot;&quot;
+        src=&quot;/static/41932aa437b7d0d81dd007703e6a87f6/40fad/7.png&quot;
+        srcset=&quot;/static/41932aa437b7d0d81dd007703e6a87f6/707e9/7.png 148w,
+/static/41932aa437b7d0d81dd007703e6a87f6/649e0/7.png 295w,
+/static/41932aa437b7d0d81dd007703e6a87f6/40fad/7.png 590w,
+/static/41932aa437b7d0d81dd007703e6a87f6/b3fef/7.png 885w,
+/static/41932aa437b7d0d81dd007703e6a87f6/301c0/7.png 1180w,
+/static/41932aa437b7d0d81dd007703e6a87f6/5d6f0/7.png 1436w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;Method 2: Use marble testing&lt;/h3&gt;
+&lt;p&gt;Previously, we’ve only used some basic methods to test epics. Using marble tests would allow you to focus more on &lt;em&gt;when&lt;/em&gt; things happen.&lt;/p&gt;
+&lt;p&gt;If you are not familiar with the marble diagrams, please refer to &lt;a href=&quot;http://reactivex.io/documentation/observable.html&quot;&gt;ReactiveX’s explanation on marble diagrams&lt;/a&gt;. Alternatively, there are many other good resources out on the web.&lt;/p&gt;
+&lt;p&gt;For the marble syntax, refer to &lt;a href=&quot;https://rxjs-dev.firebaseapp.com/guide/testing/marble-testing#marble-syntax&quot;&gt;rxjs API docs&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Hot vs Cold observables&lt;/h4&gt;
+&lt;p&gt;There was a great article on Medium that simplified the definition of hot and cold observables, &lt;a href=&quot;https://medium.com/@bencabanes/marble-testing-observable-introduction-1f5ad39231c#f123&quot;&gt;so I excerpted the definitions from it&lt;/a&gt;. (Or look at &lt;a href=&quot;https://rxjs-dev.firebaseapp.com/guide/testing/marble-testing&quot;&gt;rxjs API doc&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;cold: begins subscription when the test begins. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;cold(--a--b--|, { a: &amp;#39;Hello&amp;#39;, b: &amp;#39;World&amp;#39; })&lt;/code&gt; → Emit ‘Hello’ at 30ms and ‘World’ at 60ms, complete at 90ms.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;hot: begins subscription at the point of caret.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;hot(--^--a--b--|, { a: &amp;#39;Hello&amp;#39;, b: &amp;#39;World&amp;#39; })&lt;/code&gt; → Subscription begins at point of caret, then emit ‘Hello’ at 30ms and ‘World’ at 60ms, complete at 90ms.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Testing events in relation to time&lt;/h4&gt;
+&lt;p&gt;What we couldn’t really answer using method 1 was something like ‘can actions be really be cancelled if there are multiple action inputs, because we are using &lt;code class=&quot;language-text&quot;&gt;switchMap&lt;/code&gt;?’&lt;/p&gt;
+&lt;p&gt;Now because we have a control over time, this is totally possible. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;import { of, Observable } from &amp;#39;rxjs&amp;#39;;
+import * as rxjs from &amp;#39;rxjs&amp;#39;;
+import * as FF from &amp;#39;rxjs/fetch&amp;#39;;
+import { TestScheduler } from &amp;#39;rxjs/testing&amp;#39;;
+
+import { startRequestTextEpic } from &amp;#39;./epics&amp;#39;;
+import { Constants as C } from &amp;#39;./constants&amp;#39;;
+import { RootState, AllActions } from &amp;#39;./types&amp;#39;;
+import { ActionsObservable, StateObservable } from &amp;#39;redux-observable&amp;#39;;
+import { HotObservable } from &amp;#39;rxjs/internal/testing/HotObservable&amp;#39;;
+import { StartRequestTextAction } from &amp;#39;./actions&amp;#39;;
+import { delay } from &amp;#39;rxjs/operators&amp;#39;;
+import { ColdObservable } from &amp;#39;rxjs/internal/testing/ColdObservable&amp;#39;;
+
+  let initialState: RootState;
+
+  beforeEach(() =&amp;gt; {
+    initialState = { simpleText: { isLoading: false, isHiTextShown: false } };
+  })
+
+  it(&amp;#39;should dispatch finishRequestText if there is no error&amp;#39;, (done) =&amp;gt; {
+      const fakeFetchResponse: string = &amp;#39;fake response&amp;#39;;
+      // @ts-ignore: this is valid. See https://github.com/facebook/jest/issues/936#issuecomment-214556122
+      rxjs.race = jest.fn((...observables: Array&amp;lt;Observable&amp;lt;AllActions&amp;gt;&amp;gt;) =&amp;gt; observables[0]);
+      // @ts-ignore this is valid also
+      FF.fromFetch = jest.fn(() =&amp;gt; of({ text: () =&amp;gt; of(fakeFetchResponse).pipe(delay(1)) }));
+
+      const testScheduler = new TestScheduler((actual, expected) =&amp;gt; {
+        // somehow assert the two objects are equal
+        // e.g. with chai `expect(actual).deep.equal(expected)`
+        expect(actual).toEqual(expected);
+        done();
+      });
+
+      // https://github.com/redux-observable/redux-observable/issues/620#issuecomment-466736543
+      testScheduler.run(({ hot, cold, expectObservable }) =&amp;gt; {
+      const actionInput$: ColdObservable&amp;lt;StartRequestTextAction&amp;gt; = cold(&amp;#39;1ms -a&amp;#39;, {
+        a: { type: C.START_REQUEST_TEXT }
+      });
+      const action$: ActionsObservable&amp;lt;AllActions&amp;gt; = new ActionsObservable(actionInput$) as ActionsObservable&amp;lt;AllActions&amp;gt;;
+
+      const stateInput$: HotObservable&amp;lt;RootState&amp;gt; = hot(&amp;#39;-a&amp;#39;, {
+        a: initialState,
+      });
+      const state$ = new StateObservable(stateInput$, initialState);
+
+      const output$ = startRequestTextEpic(action$, state$, {});
+    
+      expectObservable(output$).toBe(&amp;#39;1ms --a&amp;#39;, {
+        a: {
+          type: C.FINISH_REQUEST_TEXT,
+          text: fakeFetchResponse,
+        }
+      });
+    });
+  });
+
+    ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This one is really basic; We request text, and for the sake of the test, we delay the response from &lt;code class=&quot;language-text&quot;&gt;fromFetch&lt;/code&gt; by &lt;code class=&quot;language-text&quot;&gt;1&lt;/code&gt;ms. Then we run &lt;code class=&quot;language-text&quot;&gt;START_REQUEST_TEXT&lt;/code&gt;, and expect the output action to be &lt;code class=&quot;language-text&quot;&gt;FINISH_REQUEST_TEXT&lt;/code&gt; after another &lt;code class=&quot;language-text&quot;&gt;1&lt;/code&gt;ms elapses. Simple. Right?&lt;/p&gt;
+&lt;p&gt;But what about some more complex test, like actions being cancelled because of &lt;code class=&quot;language-text&quot;&gt;switchMap&lt;/code&gt;?:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;  it(&amp;#39;should dispatch only one finishRequestText despite many startRequestText&amp;#39;, (done) =&amp;gt; {
+    const fakeFetchResponse: string = &amp;#39;fake response&amp;#39;;
+    // @ts-ignore: this is valid. See https://github.com/facebook/jest/issues/936#issuecomment-214556122
+    rxjs.race = jest.fn((...observables: Array&amp;lt;Observable&amp;lt;AllActions&amp;gt;&amp;gt;) =&amp;gt; observables[0]);
+    // @ts-ignore this is valid also
+    FF.fromFetch = jest.fn(() =&amp;gt; of({ text: () =&amp;gt; {
+      return of(fakeFetchResponse).pipe(
+        delay(5),
+      )
+    }}));
+    const testScheduler = new TestScheduler((actual, expected) =&amp;gt; {
+      // somehow assert the two objects are equal
+      // e.g. with chai `expect(actual).deep.equal(expected)`
+      expect(actual).toStrictEqual(expected);
+      done();
+    });
+    //                                12345   67890
+    const inputMarble: string =  &amp;#39;1ms -abc(d|)--------&amp;#39;
+    //                                12345   67890
+    const outputMarble: string = &amp;#39;1ms -----   ----(d|)&amp;#39;
+                                                // ^ it is normal to have this parenthesis because 
+                                                //   &amp;#39;complete&amp;#39; event and d are synchronous
+                                                //   this position is the 10th frame
+
+    // https://github.com/redux-observable/redux-observable/issues/620#issuecomment-466736543
+    testScheduler.run(({ hot, cold, expectObservable }) =&amp;gt; {
+      const actionInput$: ColdObservable&amp;lt;StartRequestTextAction&amp;gt; = cold(inputMarble, {
+        a: { type: C.START_REQUEST_TEXT },
+        b: { type: C.START_REQUEST_TEXT },
+        c: { type: C.START_REQUEST_TEXT },
+        d: { type: C.START_REQUEST_TEXT },
+      });
+      const action$: ActionsObservable&amp;lt;AllActions&amp;gt; = new ActionsObservable(actionInput$) as ActionsObservable&amp;lt;AllActions&amp;gt;;
+
+      const stateInput$: HotObservable&amp;lt;RootState&amp;gt; = hot(&amp;#39;-a&amp;#39;, {
+        a: initialState,
+      });
+      const state$ = new StateObservable(stateInput$, initialState);
+
+      const output$ = startRequestTextEpic(action$, state$, {});
+      
+      expectObservable(output$).toBe(outputMarble, {
+        d: {
+          type: C.FINISH_REQUEST_TEXT,
+          text: fakeFetchResponse,
+        }
+      });
+    });
+  });&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In the above code, we are faking &lt;code class=&quot;language-text&quot;&gt;fromFetch&lt;/code&gt; again, and this time it is going to get you a response after &lt;code class=&quot;language-text&quot;&gt;5&lt;/code&gt;ms.
+Now you decide to &lt;code class=&quot;language-text&quot;&gt;START_REQUEST_TEXT&lt;/code&gt; four times just in &lt;code class=&quot;language-text&quot;&gt;4ms&lt;/code&gt;, in a row, each for each &lt;code class=&quot;language-text&quot;&gt;1ms&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Then what is supposed to happen is that all of &lt;code class=&quot;language-text&quot;&gt;a&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;b&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;c&lt;/code&gt; get cancelled, because they are cancelled by the actions dispatched right after them, at the time &lt;code class=&quot;language-text&quot;&gt;fromFetch&lt;/code&gt; has not returned a response yet.
+This is what &lt;code class=&quot;language-text&quot;&gt;switchMap&lt;/code&gt; exactly does. It will cancel other observables and only emit the most decently projected observable, which is &lt;code class=&quot;language-text&quot;&gt;d&lt;/code&gt; (after &lt;code class=&quot;language-text&quot;&gt;5ms&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;So that’s basically it! Of course, we could again make an abstraction of this testing logic, just like we did for &lt;code class=&quot;language-text&quot;&gt;runEpicTest&lt;/code&gt;, but too bad - I’m too tired right now, so I will leave that work left for you. :)&lt;/p&gt;
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;So far, we’ve covered:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;why you might want to use &lt;code class=&quot;language-text&quot;&gt;rxjs&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;redux-observable&lt;/code&gt; (maybe you could suggest more reasons in the comments section)&lt;/li&gt;
+&lt;li&gt;how you could replace &lt;code class=&quot;language-text&quot;&gt;redux&lt;/code&gt; based code into a &lt;code class=&quot;language-text&quot;&gt;redux-observable&lt;/code&gt; one&lt;/li&gt;
+&lt;li&gt;extensibility (benefits) of using &lt;code class=&quot;language-text&quot;&gt;redux-observable&lt;/code&gt;, especially for a complex logic&lt;/li&gt;
+&lt;li&gt;two methods of how you can test your &lt;code class=&quot;language-text&quot;&gt;epic&lt;/code&gt;s&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Appendix&lt;/h2&gt;
+&lt;p&gt;Just some last words for you.&lt;/p&gt;
+&lt;h3&gt;Suspicion on ‘always a pass’&lt;/h3&gt;
+&lt;p&gt;Sometimes, it’s hard to know if your test is really working or just being passed because jest finishes tests earlier than the time you want. &lt;a href=&quot;https://jestjs.io/docs/en/asynchronous&quot;&gt;Make sure you use &lt;code class=&quot;language-text&quot;&gt;done&lt;/code&gt;&lt;/a&gt;, and if you are still not sure, try to break the test by changing something like &lt;code class=&quot;language-text&quot;&gt;expect(...).toEqual(...)&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;expect(...).not.toEqual(...)&lt;/code&gt;. Then you should see something like this:&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c83c82de1cd5fbac0ff66c857a02e2ef/204e3/8.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 115.7303370786517%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAABYlAAAWJQFJUiTwAAADqElEQVQ4y5VVyZbbNhCkFoqLVms8nvGSOHZy8EikSAKERFKzj33LKQe//ED+/xM6VQ1xnu3nHHIoNdAEGo1GVSv4M7fyT1nL67KVcXUtUXmUF82jnHVPMnd3stjfywS+4MpJsPkBW+DTXhamkr++/ipf/34nQZof5NJey8v2UdbdZw1wfv1F1u2TBk/MtcTVUca7VsKilWHeyAjgnGMiLBqZGSer+iBBkOHnqpYBbI8h7XaPxQfd+C28r1Fw3egUNNg22NtKQGeKk6f2Rqb1rWbEMbMaYTOzmhSd2hAB++wYcKTZeT/nHAeaMhyxuZHI3EpY4or2ViaYT1DT3j/IWxlgXcCMaLNGMdx1J+Aw+oco7Dyv5QUe5+XOyBKW41cYT+GPs1rWOyuLzMhZbvDNyDyzas+xZn3yLeBLtlaCCzg/lqW8Kyr5HfaPqtSFCwSNsSDc1hosReAVfPPMH8Kgq9wHnGE8hW+S4dUHeH4tLuo0gV1vkC18E1wjLFnXO5TgAdd2EtcVrMX18Wh5hxJ0KMFRr8xHCa72eGVsjqpWZg6bLWhSdRKXjaTGSGItOOgktTUohCwQMLUGj+TntNPa4DG8nbtSghikPOtKWTVOlo2VtK7xYg4UsKCDAYFrtZyPUYrxjn7SzCnCwirBRzsebvjKuO6JAkoDhxcGuWf1PQ55kuXhASc/qKVvaZ2skc0SifRICqMiSO2dBAwSg3sJ6EEOpsrHG7U9yMnEHJWnKVQVlyS+88i8BCkEiiJgdlG+16uxniRnDP5Rvwzk4eXHLEKSvOz0oIQwHjpHQgEDMMte8L1mBxkO2f4c5C7x0+/fdg/SJ0I2CWXHgH1H2fwPPEfe+Dp8355+zMD9Z9b+GwNuvGOQe12OUacx6kTtDgESflQc1apeOWfXUe2ynkfd+5zABJKhhi92lfwC+VGKlxi/L0qVGiX4GnPK8U3hLfV+Bks/1746+eZAcInJWyy8BJfel5VqmvgAXdP3Ab6PwG+YX8DPBEJQhbqlvomIBCe5/ZXxk7E14arQ4xLzVa/lCnQAmZPaazmBtBJIj2LwLcuXwpeI1+Yro5vM6gb/IzdQA9het8BB5vsC2q6gkgKapRKgbeh7Ag1HFSRqKwXlRjlGldF5MEDKM1dBZgYoEQgfajaCUhvAKHfKSa9d6Joa57WpXeh4fNL1MHfaA7Rjj/m6vDJs5O4lPjzKwuFPq/38rGf+E65o3V7OD2hx0POiQiLIKj5pma3uX825kIDKdvUuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Your tests start to fail&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c83c82de1cd5fbac0ff66c857a02e2ef/40fad/8.png&quot;
+        srcset=&quot;/static/c83c82de1cd5fbac0ff66c857a02e2ef/707e9/8.png 148w,
+/static/c83c82de1cd5fbac0ff66c857a02e2ef/649e0/8.png 295w,
+/static/c83c82de1cd5fbac0ff66c857a02e2ef/40fad/8.png 590w,
+/static/c83c82de1cd5fbac0ff66c857a02e2ef/b3fef/8.png 885w,
+/static/c83c82de1cd5fbac0ff66c857a02e2ef/301c0/8.png 1180w,
+/static/c83c82de1cd5fbac0ff66c857a02e2ef/204e3/8.png 1424w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;if your tests are still being passed, then there’s a problem.&lt;/p&gt;
+&lt;h3&gt;Shoudn’t I test how epic changes the state as well?&lt;/h3&gt;
+&lt;p&gt;No. Because epic is supposed to test how set of actions gives another set of actions. &lt;/p&gt;
+&lt;p&gt;You are going to test that in your tests for reducer, because reducer is actually where the action will change the state.&lt;/p&gt;
+&lt;p&gt;What epic really does is just until dispatching actions. It’s related to the state because it uses the state, but it does not directly modify the state. That’s the role of the reducer.&lt;/p&gt;
+&lt;h3&gt;Source code repository&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/9oelM/redux-observable/tree/master/redux-only&quot;&gt;redux implementation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/9oelM/redux-observable/tree/master/redux-observable&quot;&gt;redux-observable implementation and tests&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[The shortcuts I like]]></title><description><![CDATA[Before we get started These are the keys usually used in combination with normal keys on Mac: Command (or Cmd) ⌘ Shift ⇧ (I will write as…]]></description><link>https://9oelm.github.io/2020-01-08--The-shortcuts-I-like/</link><guid isPermaLink="false">https://9oelm.github.io/2020-01-08--The-shortcuts-I-like/</guid><pubDate>Wed, 08 Jan 2020 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Before we get started&lt;/h2&gt;
 &lt;p&gt;These are the keys usually used in combination with normal keys on Mac:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Command (or Cmd) ⌘&lt;/li&gt;
