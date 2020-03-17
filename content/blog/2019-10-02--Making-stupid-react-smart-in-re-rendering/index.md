@@ -345,11 +345,14 @@ a === b // true
 ```
 
 Then how can we deal with functions in props?
-Well, there are two ways: 
-1. Exclude them
-2. Stringify them
+Well, there are 4 ways: 
+  - Exclude them (not recommended)
+  - Stringify them (not recommended)
+  - Use `useCallback`
+  - Bind the function to the class.
 
-### 1. Exclude them
+
+### 1. Exclude them (not recommended)
 
 `util.ts`
 
@@ -416,7 +419,7 @@ Result? Only parent component re-renders. Essentially, you are only comparing pr
 
 ![children re-render test 5](./children-re-render-test-5.gif)
 
-### 2. Stringify them
+### 2. Stringify them (not recommended)
 
 By default, `JSON.stringify` does not support stringifying functions. So you've gotta use third party libaries like [jsonfn](https://github.com/vkiryukhin/jsonfn#readme).
 
@@ -444,7 +447,57 @@ Using this function will give you the same result as the last example. Here's an
 
 ![children re-render test 5](./children-re-render-test-5.gif)
 
-Yeap. That's all.
+### 3. Use useCallback
+Probably this is the wisest solution when you are trying to prevent rerender in a functional component.
+
+```js
+const sayHiInChildren = useCallback(child => console.log(`hi~~~~~~~~~ — from ${child}`), [])
+```
+`useCallback` will look at the dependencies fed into the array and will only give a different function when some dependency changed. Otherwise it is going to return a memoized callback, which won’t cause a rerender even if it’s fed as a prop.
+
+### 4. Bind the function to the class
+
+As you know useCallback cannot be used in class components.What can we do in the class components?
+You can either do:
+
+```js
+class Parent extends React.Component {
+  sayHiInChildren = child => console.log(`hi~~~~~~~~~ - from ${child}`);
+
+  render() {
+    return <div onMouseEnter={handleMouseEnter} style = {{border: '1px solid black', padding: '50px'}}>
+      Parent. Count: {count}
+      <Child1 num={1} sayHiInChildren={sayHiInChildren}/>
+      <Child2 num={2} sayHiInChildren={sayHiInChildren}/>
+    </div>
+  }
+}
+```
+
+or
+
+```js
+class Parent extends React.Component {
+  constructor(...args) {
+    super(...args);
+    this.sayHiInChildren = this.sayHiInChildren.bind(this);
+  }
+
+  sayHiInChildren(child){
+    console.log(`hi~~~~~~~~~ - from ${child}`);
+  }
+
+  render() {
+    return <div onMouseEnter={handleMouseEnter} style = {{border: '1px solid black', padding: '50px'}}>
+      Parent. Count: {count}
+      <Child1 num={1} sayHiInChildren={sayHiInChildren}/>
+      <Child2 num={2} sayHiInChildren={sayHiInChildren}/>
+    </div>
+  }
+}
+```
+
+The two methods differ only in the syntax (arrow function binds directly to the parent context, while traditional function has to be bound manually), and they bring the same effect. In this way, you can retain a consistent reference of a function, which will allow you to prevent useless re-render.
 
 ## Summary
 
@@ -453,5 +506,10 @@ Yeap. That's all.
   * Use `memo` with `areEqual`, or
   * Use `PureComponent` or `shouldComponentUpdate`
 * If there are functions in your props, before using `areEqual` or `shouldComponentUpdate`:
-  * Exclude them, or
-  * Stringify them
+  * Exclude them (not recommended)
+  * Stringify them (not recommended)
+  * Use `useCallback`
+  * Bind the function to the class.
+
+## Edit
+Yes, and you should really take into consideration how much tradeoff your optimization could bring. In other words, the optimization could not work as you expected.
