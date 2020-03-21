@@ -1,0 +1,449 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.16aaefe531b6b7795df4.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-4124805c0503dbfe42dd67d7f5715964.woff2) format("woff2"),url(/static/montserrat-latin-100-c8fb2f714bbc7bc3e8dfffa916b286dc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e4bf47bd171a9b2a72dd84c58bf90edf.woff2) format("woff2"),url(/static/montserrat-latin-100italic-d1f3f2d02ee4d7d2d4b1ad865014f189.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-444ae007121264bc1969d49b4031f9b2.woff2) format("woff2"),url(/static/montserrat-latin-200-edbce16a90aa22c297a0307b85789837.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-f316c5d1ec40f3e68654c3f38b3999f3.woff2) format("woff2"),url(/static/montserrat-latin-200italic-d7bbb730d9b5e11720b3eb32326dcca7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-0a7c6df06e85d978d096d4d18fd8d43d.woff2) format("woff2"),url(/static/montserrat-latin-300-5e86df2cad22d2ef2b03516334afae5e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-c076c4892bc7a4be7b9097e97a35012d.woff2) format("woff2"),url(/static/montserrat-latin-300italic-37c74a8d2d0d36a0a2c6e9a37ee15b0c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-501ce09c42716a2f6e1503a25eb174c9.woff2) format("woff2"),url(/static/montserrat-latin-400-f29d2b8559699b6beb5b29b25b8bc572.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-882908d9950d9c86ebd380877f293d95.woff2) format("woff2"),url(/static/montserrat-latin-400italic-22e7b04e5f2a901d49d4d342315a715a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-f0f2716c5fe401d175b88715e7d28685.woff2) format("woff2"),url(/static/montserrat-latin-500-991b453bf90a0980e78966d2af7e3d3a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-4590ebba421b3288c305305d7fa7b504.woff2) format("woff2"),url(/static/montserrat-latin-500italic-f3d41e4cdcc2314e49ddcea751d6f87f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-15c24f7109941777774ddd2c636c6a50.woff2) format("woff2"),url(/static/montserrat-latin-600-f6dc6096f48956908c1787d9a722570a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-6d10b80529d5c36c7c09fca7193af0fc.woff2) format("woff2"),url(/static/montserrat-latin-600italic-02c4833312d94b1b0866f073023a250e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-79982cd1f74c6fa7451bf9b37ead09ff.woff2) format("woff2"),url(/static/montserrat-latin-700-957e93fbbe131a59791cd820d98b7109.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-283438e9577fe6a684466bb100e105ec.woff2) format("woff2"),url(/static/montserrat-latin-700italic-ca627c5ccc65cf80c2ecaea44b997de9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-35386154b78d046218fc8f88a44ff515.woff2) format("woff2"),url(/static/montserrat-latin-800-756655905d91b77960888262e7d58d35.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-e1b52a7bd83e2324db6d92bdc206844c.woff2) format("woff2"),url(/static/montserrat-latin-800italic-a69f0add9d86c1a84311d7dd8693ba4a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-260c2ea3ef57feb82251952e605a36d5.woff2) format("woff2"),url(/static/montserrat-latin-900-186cae8091da578150d81958e217714a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-d785fb9fc74588ffb7f306799709a97d.woff2) format("woff2"),url(/static/montserrat-latin-900italic-43b527fe77254f97ea36e2b54e845ec4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-a50c381443e6993188ed9cc4b6806866.woff2) format("woff2"),url(/static/merriweather-latin-300-2c73b119ad85e697123658b8a091ff83.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-bd410cbf8c272acd4fbdd9f61a7015bf.woff2) format("woff2"),url(/static/merriweather-latin-300italic-9deeb422b65afb1daacc039296bb3640.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-f936cb550d4dcd769f75c453207ac5e6.woff2) format("woff2"),url(/static/merriweather-latin-400-ab0616e6d856817eff54eb8c5e1664e4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-5c9a23d08e2c851e5a25795b940acd4f.woff2) format("woff2"),url(/static/merriweather-latin-400italic-0ab4b54f3b1e8b14cf755970fde8ce35.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-1636f13a52ca3f0eb8784c9c57f62082.woff2) format("woff2"),url(/static/merriweather-latin-700-cc673c945b482dc1378d4a3c95ffd175.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-8b0db67123584893c6591accbc51640c.woff2) format("woff2"),url(/static/merriweather-latin-700italic-513649f5b9ba4675cff15cf3f7ad4f2a.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-46631a9aab93dec3ed34f429dd1a5646.woff2) format("woff2"),url(/static/merriweather-latin-900-a0528570caa2c785891308ce604d8db7.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-a26a8168916e5d4e5485081171d7fdb0.woff2) format("woff2"),url(/static/merriweather-latin-900italic-db42a3f34378e69ef5aebb6717f1f33e.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:0;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}#disqus_thread{width:95%;margin:auto}pre code{white-space:pre-wrap!important;white-space:-moz-pre-wrap!important;white-space:-pre-wrap!important;white-space:-o-pre-wrap!important;word-wrap:break-word!important}</style><meta name="generator" content="Gatsby 2.1.18"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#009688"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><title data-react-helmet="true">Creating music player | Joel&#x27;s dev blog</title><meta data-react-helmet="true" name="description" content="Set up And simple test And check on the server if the app is working properly.  Add theme Add logic test for the theme Apply the theme Add support for sass Try…"/><meta data-react-helmet="true" property="og:title" content="Creating music player"/><meta data-react-helmet="true" property="og:description" content="Set up And simple test And check on the server if the app is working properly.  Add theme Add logic test for the theme Apply the theme Add support for sass Try…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Joel Mun"/><meta data-react-helmet="true" name="twitter:title" content="Creating music player"/><meta data-react-helmet="true" name="twitter:description" content="Set up And simple test And check on the server if the app is working properly.  Add theme Add logic test for the theme Apply the theme Add support for sass Try…"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link as="script" rel="preload" href="/component---src-templates-blog-post-js-87a06ec9f8b74b5f95a7.js"/><link as="script" rel="preload" href="/0-63a21d0c1363172370b5.js"/><link as="script" rel="preload" href="/app-67b162db32dac4df8e1d.js"/><link as="script" rel="preload" href="/styles-fa6c583b3cd626e54a0e.js"/><link as="script" rel="preload" href="/webpack-runtime-b45dbaa9dfb127b329e0.js"/><link as="fetch" rel="preload" href="/static/d/820/path---2018-06-05-creating-music-player-698-4d6-waggEFXxhtpkPVIax3tEZqgbks.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div style="margin-left:auto;margin-right:auto;max-width:70rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">Joel&#x27;s dev blog</a></h3></header><main><h1>Creating music player</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">June 05, 2018</p><div><h2>Set up</h2>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm install -g create-react-app
+
+create-react-app 7omp
+
+cd 7omp
+
+npm install --save @material-ui/core typeface-roboto @material-ui/icons</code></pre></div>
+<h2>And simple test</h2>
+<p><code class="language-text">App.js</code></p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'typeface-roboto'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'@material-ui/core/Button'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>Button variant<span class="token operator">=</span><span class="token string">"contained"</span> color<span class="token operator">=</span><span class="token string">"primary"</span><span class="token operator">></span>
+      Hello World
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<p>And check on the server if the app is working properly. </p>
+<h2>Add theme</h2>
+<p><code class="language-text">src/styles/theme.js</code></p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> purple <span class="token keyword">from</span> <span class="token string">'@material-ui/core/colors/purple'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> red <span class="token keyword">from</span> <span class="token string">'@material-ui/core/colors/red'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createMuiTheme <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@material-ui/core/styles'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> theme <span class="token operator">=</span> <span class="token function">createMuiTheme</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  palette<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    primary<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      light<span class="token punctuation">:</span> <span class="token string">'#ffcccb'</span><span class="token punctuation">,</span>
+      main<span class="token punctuation">:</span> <span class="token string">'#ef9a9a'</span><span class="token punctuation">,</span>
+      dark<span class="token punctuation">:</span> <span class="token string">'#ba6b6c'</span><span class="token punctuation">,</span>
+      contrastText<span class="token punctuation">:</span> <span class="token string">'#000'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    secondary<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      light<span class="token punctuation">:</span> <span class="token string">'#ffc1e3'</span><span class="token punctuation">,</span>
+      main<span class="token punctuation">:</span> <span class="token string">'#f48fb1'</span><span class="token punctuation">,</span>
+      dark<span class="token punctuation">:</span> <span class="token string">'#bf5f82'</span><span class="token punctuation">,</span>
+      contrastText<span class="token punctuation">:</span> <span class="token string">'#000'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> theme<span class="token punctuation">;</span></code></pre></div>
+<h2>Add logic test for the theme</h2>
+<p><code class="language-text">src/__test__/theme.test.js</code></p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> Theme <span class="token keyword">from</span> <span class="token string">'../styles/theme'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> customThemeInserted <span class="token operator">=</span> <span class="token punctuation">{</span>
+    primary<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        light<span class="token punctuation">:</span> <span class="token string">'#ffcccb'</span><span class="token punctuation">,</span>
+        main<span class="token punctuation">:</span> <span class="token string">'#ef9a9a'</span><span class="token punctuation">,</span>
+        dark<span class="token punctuation">:</span> <span class="token string">'#ba6b6c'</span><span class="token punctuation">,</span>
+        contrastText<span class="token punctuation">:</span> <span class="token string">'#000'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    secondary<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        light<span class="token punctuation">:</span> <span class="token string">'#ffc1e3'</span><span class="token punctuation">,</span>
+        main<span class="token punctuation">:</span> <span class="token string">'#f48fb1'</span><span class="token punctuation">,</span>
+        dark<span class="token punctuation">:</span> <span class="token string">'#bf5f82'</span><span class="token punctuation">,</span>
+        contrastText<span class="token punctuation">:</span> <span class="token string">'#000'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*
+The theme contains palette object created by createMuiTheme function
+*/</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'The palette of the theme has been inserted correctly'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>Theme<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">'palette'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>Theme<span class="token punctuation">.</span>palette<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">'primary'</span><span class="token punctuation">,</span> customThemeInserted<span class="token punctuation">.</span>primary<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>Theme<span class="token punctuation">.</span>palette<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toHaveProperty</span><span class="token punctuation">(</span><span class="token string">'secondary'</span><span class="token punctuation">,</span> customThemeInserted<span class="token punctuation">.</span>secondary<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<h2><a href="https://github.com/mui-org/material-ui/issues/6446">Apply the theme</a></h2>
+<p><code class="language-text">layout.js</code></p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Grid <span class="token keyword">from</span> <span class="token string">'@material-ui/core/Grid'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> MuiThemeProvider <span class="token keyword">from</span> <span class="token string">'@material-ui/core/styles/MuiThemeProvider'</span>
+<span class="token keyword">import</span> Theme <span class="token keyword">from</span> <span class="token string">'../styles/theme'</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Layout</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+    
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> children <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>    
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>MuiThemeProvider theme<span class="token operator">=</span><span class="token punctuation">{</span>Theme<span class="token punctuation">}</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Grid container  direction <span class="token operator">=</span> <span class="token string">"column"</span><span class="token operator">></span>
+            <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Grid<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>MuiThemeProvider<span class="token operator">></span>
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Layout<span class="token punctuation">;</span></code></pre></div>
+<h2>Add support for sass</h2>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm install --save node-sass-chokidar</code></pre></div>
+<h2>Try out on production</h2>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm install -g serve
+serve -s build
+serve -p 8080</code></pre></div>
+<h2>Make the hot reloading work</h2>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm install --save-dev react-app-rewired react-app-rewire-hot-loader react-hot-loader</code></pre></div>
+<p>just following the simple steps at <a href="https://daveceddia.com/hot-reloading-create-react-app/">here</a> made it work!</p>
+<h2>Adding redux to the project</h2>
+<p>Sources:</p>
+<ul>
+<li><a href="https://redux.js.org/basics/example-todo-list">redux homepage todo example</a></li>
+<li><a href="https://d2.naver.com/helloworld/1848131">naver d2</a></li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm install --save react-redux redux</code></pre></div>
+<h3>1. Edit the entry point for the use of redux</h3>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> registerServiceWorker <span class="token keyword">from</span> <span class="token string">'./registerServiceWorker'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"./styles/customStyles.css"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AppContainer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-hot-loader'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Provider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-redux'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> rootReducer <span class="token keyword">from</span> <span class="token string">'./reducer'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span>rootReducer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">render</span> <span class="token operator">=</span> Component <span class="token operator">=></span> <span class="token punctuation">{</span>
+  ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+    <span class="token comment">// Wrap App inside AppContainer</span>
+    <span class="token operator">&lt;</span>AppContainer<span class="token operator">></span>
+    <span class="token operator">&lt;</span>Provider store<span class="token operator">=</span><span class="token punctuation">{</span>store<span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Provider<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>AppContainer<span class="token operator">></span><span class="token punctuation">,</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">registerServiceWorker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">render</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Webpack Hot Module Replacement API</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>module<span class="token punctuation">.</span>hot<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  module<span class="token punctuation">.</span>hot<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token string">'./App'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">render</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><code class="language-text">AppContainer</code> is just for the hot reloading. <code class="language-text">Provider</code> is to make it easy to set the context for all children elements. If you add Provider once at the top, children elements can access the store through the context.  </p>
+<h3>2. Project structure</h3>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">j031:~/workspace/7omp (add4-addRedux) $ tree -L 3 -I node_modules
+.
+├── README.md
+├── config-overrides.js
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── App.js
+    ├── __test__
+    │   ├── App.test.js
+    │   └── theme.test.js
+    ├── actions ---------------------------&gt; for redux actions
+    │   ├── constants.js
+    │   └── index.js
+    ├── components
+    │   ├── Layout.js
+    │   ├── LowerAppBar.js
+    │   ├── MainContainer.js
+    │   ├── Player.js
+    │   └── UpperAppBar.js
+    ├── index.js ---------------------------&gt; redux entry point
+    ├── logo.svg
+    ├── reducers ---------------------------&gt; for redux reducers
+    │   └── reducers.js
+    ├── registerServiceWorker.js
+    ├── store ---------------------------&gt; for redux store
+    │   └── index.js
+    └── styles
+        ├── customStyles.css
+        ├── customStyles.sass
+        └── muiTheme.js
+
+8 directories, 24 files</code></pre></div>
+<h3>3. Make actions</h3>
+<p><code class="language-text">actions/index.js</code></p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Import constants (action types)</span>
+<span class="token keyword">import</span> <span class="token constant">C</span> <span class="token keyword">from</span> <span class="token string">"./constants"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Action creators</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">toggleSearchButton</span> <span class="token operator">=</span> searchOn <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token constant">C</span><span class="token punctuation">.</span><span class="token constant">TOGGLE_SEARCH_BUTTON</span><span class="token punctuation">,</span>
+  searchOn <span class="token comment">// Boolean</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<p>Action creators just literally return actions. That’s it.
+But they’ve gotta have their types.</p>
+<p>To make it easy for the type, I created a file called <code class="language-text">constants</code>:
+<code class="language-text">actions/constants.js</code></p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token constant">C</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token constant">TOGGLE_SEARCH_BUTTON</span><span class="token punctuation">:</span> <span class="token string">'TOGGLE_SEARCH_BUTTON'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token constant">C</span></code></pre></div>
+<h3>4. Make reducers</h3>
+<p><code class="language-text">reducers/reducers.js</code></p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> combineReducers <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'redux'</span>
+
+<span class="token comment">/*
+Reducers specify how the application's state changes in response to actions sent to the store. Remember that actions only describe what happened, but don't describe how the application's state changes.
+*/</span>
+
+<span class="token keyword">import</span> <span class="token constant">C</span> <span class="token keyword">from</span> <span class="token string">'../actions/constants'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> initialState <span class="token operator">=</span> <span class="token punctuation">{</span>
+    searchOn<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token comment">// search button is not clicked yet</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// This reducer is only for storing information on user interactions in the app</span>
+<span class="token comment">// the state would be undefined for the first time, so fill it with initialState instead</span>
+<span class="token keyword">function</span> <span class="token function">jompAppView</span><span class="token punctuation">(</span>state <span class="token operator">=</span> initialState<span class="token punctuation">,</span> action<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">switch</span><span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// return new objects instead of modifying them</span>
+        <span class="token keyword">case</span> <span class="token constant">C</span><span class="token punctuation">.</span><span class="token constant">TOGGLE_SEARCH_BUTTON</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> state<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                searchOn<span class="token punctuation">:</span> <span class="token operator">!</span>state<span class="token punctuation">.</span>searchOn
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">default</span><span class="token punctuation">:</span> 
+            <span class="token keyword">return</span> state<span class="token punctuation">;</span>
+        <span class="token comment">/*
+        It's important to return the previous state for any unknown action.
+        */</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* state shape
+{
+    searchOn: false
+}
+*/</span>
+
+<span class="token comment">/*
+    Finally, combine reducers
+*/</span>
+<span class="token keyword">const</span> jompApp <span class="token operator">=</span> <span class="token function">combineReducers</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    jompAppView<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> jompApp</code></pre></div>
+<p>This is the reducer. For now, there is only one reducer function, <code class="language-text">jompAppView</code>. But in the future, there will be more reducer functions, and that is why you do <code class="language-text">combineReducers</code> at the end. </p>
+<h3>5. Store</h3>
+<p><code class="language-text">store/index.js</code> is empty for now. Additional configuration will require some content in this file. </p>
+<p><code class="language-text">index.js</code></p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> registerServiceWorker <span class="token keyword">from</span> <span class="token string">'./registerServiceWorker'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"./styles/customStyles.css"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AppContainer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-hot-loader'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Provider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-redux'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> reducers <span class="token keyword">from</span> <span class="token string">'./reducers/reducers'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> toggleSearchButton <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./actions/index'</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span>reducers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">render</span> <span class="token operator">=</span> Component <span class="token operator">=></span> <span class="token punctuation">{</span>
+  ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+    <span class="token comment">// Wrap App inside AppContainer</span>
+    <span class="token operator">&lt;</span>AppContainer<span class="token operator">></span>
+    <span class="token operator">&lt;</span>Provider store<span class="token operator">=</span><span class="token punctuation">{</span>store<span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Provider<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>AppContainer<span class="token operator">></span><span class="token punctuation">,</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Every time the state changes, log it</span>
+<span class="token comment">// Note that subscribe() returns a function for unregistering the listener</span>
+<span class="token keyword">const</span> unsubscribe <span class="token operator">=</span> store<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">toggleSearchButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">toggleSearchButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">toggleSearchButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">toggleSearchButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token function">registerServiceWorker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">render</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Webpack Hot Module Replacement API</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>module<span class="token punctuation">.</span>hot<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  module<span class="token punctuation">.</span>hot<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token string">'./App'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">render</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ol>
+<li>
+<p>You create the store with reducers first</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span>reducers<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+</li>
+<li>
+<p>Pass that store as a <code class="language-text">store</code> <code class="language-text">prop</code> into that app, wrapping it with <code class="language-text">Provider</code> Element.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>Provider store<span class="token operator">=</span><span class="token punctuation">{</span>store<span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Provider<span class="token operator">></span></code></pre></div>
+</li>
+<li>
+<p>To see if the store is working well, log the state changes:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Every time the state changes, log it</span>
+<span class="token comment">// Note that subscribe() returns a function for unregistering the listener</span>
+<span class="token keyword">const</span> unsubscribe <span class="token operator">=</span> store<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">toggleSearchButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">toggleSearchButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">toggleSearchButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">toggleSearchButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+</li>
+<li>
+<p>Look into the app
+In the javascript console on the browser, you’ve gotta see this:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">index<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">29</span> <span class="token punctuation">{</span>jompAppView<span class="token punctuation">:</span> <span class="token punctuation">{</span>…<span class="token punctuation">}</span><span class="token punctuation">}</span>jompAppView<span class="token punctuation">:</span> <span class="token punctuation">{</span>searchOn<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span>__proto__<span class="token punctuation">:</span> Object
+index<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">29</span> <span class="token punctuation">{</span>jompAppView<span class="token punctuation">:</span> <span class="token punctuation">{</span>…<span class="token punctuation">}</span><span class="token punctuation">}</span>jompAppView<span class="token punctuation">:</span> <span class="token punctuation">{</span>searchOn<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span>__proto__<span class="token punctuation">:</span> Object
+index<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">29</span> <span class="token punctuation">{</span>jompAppView<span class="token punctuation">:</span> <span class="token punctuation">{</span>…<span class="token punctuation">}</span><span class="token punctuation">}</span>jompAppView<span class="token punctuation">:</span> <span class="token punctuation">{</span>searchOn<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span>__proto__<span class="token punctuation">:</span> Object
+index<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">29</span> <span class="token punctuation">{</span>jompAppView<span class="token punctuation">:</span> <span class="token punctuation">{</span>…<span class="token punctuation">}</span><span class="token punctuation">}</span>jompAppView<span class="token punctuation">:</span> <span class="token punctuation">{</span>searchOn<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span>__proto__<span class="token punctuation">:</span> Object
+index<span class="token punctuation">.</span>js<span class="token punctuation">:</span><span class="token number">29</span> <span class="token punctuation">{</span>jompAppView<span class="token punctuation">:</span> <span class="token punctuation">{</span>…<span class="token punctuation">}</span><span class="token punctuation">}</span>jompAppView<span class="token punctuation">:</span> <span class="token punctuation">{</span>searchOn<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span>__proto__<span class="token punctuation">:</span> Object</code></pre></div>
+</li>
+</ol>
+<p>You can see that searchOn is being switched from false and true, and vice versa. This is because of <code class="language-text">store.dispatch</code> that triggerred the actions. </p>
+<h2>What the heck is <code class="language-text">withstyles</code></h2>
+<p>Mui supports something called <code class="language-text">withstyles</code>.</p>
+<p>See:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> withStyles <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@material-ui/core/styles'</span><span class="token punctuation">;</span></code></pre></div>
+<p>and do something like</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">styles</span> <span class="token operator">=</span> theme <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  card<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span> <span class="token string">'flex'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  details<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span> <span class="token string">'flex'</span><span class="token punctuation">,</span>
+    flexDirection<span class="token punctuation">:</span> <span class="token string">'column'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  content<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    flex<span class="token punctuation">:</span> <span class="token string">'1 0 auto'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  cover<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> <span class="token number">151</span><span class="token punctuation">,</span>
+    height<span class="token punctuation">:</span> <span class="token number">151</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  controls<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span> <span class="token string">'flex'</span><span class="token punctuation">,</span>
+    alignItems<span class="token punctuation">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+    paddingLeft<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>spacing<span class="token punctuation">.</span>unit<span class="token punctuation">,</span>
+    paddingBottom<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>spacing<span class="token punctuation">.</span>unit<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  playIcon<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    height<span class="token punctuation">:</span> <span class="token number">38</span><span class="token punctuation">,</span>
+    width<span class="token punctuation">:</span> <span class="token number">38</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>But I did not quite get the hang of how it works and how it actually gets applied to React. So I finally found the <a href="https://material-ui.com/customization/css-in-js/">API</a>.</p>
+<h2>Starting off</h2>
+<p><a href="https://9oelm.github.io/works/2018/06/13/Creating-music-player-(2)-Specifics.html">Last time</a>, we looked into how redux in a web development project could be installed and set up. Now we are going to find out how to actually connect the source with redux configruations (for example, editing state in the <code class="language-text">store</code> when a button is clicked)</p>
+<h2>Redux and React are not… a family</h2>
+<p>They are just separate, unrelated libraries. They are just good to be used together. </p>
+<h2>Subscribing</h2>
+<p>Passing a function as an argument to <code class="language-text">store.subscribe</code> function would append that function to it:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">store<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"something happened - perhaps write something more like store.getState().data"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+<p>When you wanna unsubscribe it, just call that function returned from <code class="language-text">subscribe</code> function:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> unsubscribe <span class="token operator">=</span> store<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"something happened - perhaps write something more like store.getState().data"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// stop logging</span></code></pre></div>
+<h2>Container components</h2>
+<p>For now, I will just need one container component, which is <code class="language-text">UpperAppBarContainer</code>. </p>
+<p>First you need to pass <code class="language-text">this.props.onClick</code> to <code class="language-text">UpperAppBar</code>’s prop:
+<code class="language-text">components/UpperAppBar.js</code></p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">UpperAppBar</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+    
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> classes<span class="token punctuation">,</span> onClick <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span> <span class="token punctuation">{</span><span class="token comment">/* &lt;-- Here */</span><span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>classes<span class="token punctuation">.</span>root<span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>AppBar position<span class="token operator">=</span><span class="token string">"static"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Toolbar<span class="token operator">></span>
+          <span class="token operator">&lt;</span>IconButton className<span class="token operator">=</span><span class="token punctuation">{</span>classes<span class="token punctuation">.</span>menuButton<span class="token punctuation">}</span> color<span class="token operator">=</span><span class="token string">"inherit"</span> aria<span class="token operator">-</span>label<span class="token operator">=</span><span class="token string">"Menu"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>MenuIcon <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>IconButton<span class="token operator">></span>
+          
+          <span class="token operator">&lt;</span>Typography variant<span class="token operator">=</span><span class="token string">"title"</span> color<span class="token operator">=</span><span class="token string">"inherit"</span> className<span class="token operator">=</span><span class="token punctuation">{</span>classes<span class="token punctuation">.</span>flex<span class="token punctuation">}</span><span class="token operator">></span>
+            <span class="token number">7</span>o Music Player
+          <span class="token operator">&lt;</span><span class="token operator">/</span>Typography<span class="token operator">></span>
+          <span class="token operator">&lt;</span>IconButton color <span class="token operator">=</span> <span class="token string">"inherit"</span> aria<span class="token operator">-</span>label<span class="token operator">=</span><span class="token string">"Search"</span> onClick <span class="token operator">=</span> <span class="token punctuation">{</span>onClick<span class="token punctuation">}</span> <span class="token operator">></span> <span class="token punctuation">{</span><span class="token comment">/* &lt;-- And Here */</span><span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span>SearchIcon <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>IconButton<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Toolbar<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>AppBar<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>And then you need to make a container component with <code class="language-text">react-redux</code>.
+<code class="language-text">components/containers/containers.js</code></p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> UpperAppBar <span class="token keyword">from</span> <span class="token string">'../UpperAppBar'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-redux'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> toggleSearchButton <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../actions/index'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> UpperAppBarContainer <span class="token operator">=</span> <span class="token function">connect</span><span class="token punctuation">(</span>
+    <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token comment">// no new states needed to be told</span>
+    dispatch <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token function">onClick</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">toggleSearchButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"clicked"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// just for testing purpose</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">(</span>UpperAppBar<span class="token punctuation">)</span></code></pre></div>
+<p>I don’t know well, but inside that <code class="language-text">connect</code> function, you are passing the <code class="language-text">onClick</code> function as a prop to the <code class="language-text">UpperAppBar</code>. And the </p>
+<p><a href="https://www.sohamkamani.com/blog/2017/03/31/react-redux-connect-explained/">sohamkamani.com</a></p>
+<blockquote>
+<p>mapStateToProps and mapDispatchToProps are both pure functions that are provided the stores “state” and “dispatch” respectively. <strong>Furthermore, both functions have to return an object, whose keys will then be passed on as the props of the component they are connected to.</strong></p>
+</blockquote></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEBQH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABxVp7LNvUV5APQCf/xAAcEAEAAgEFAAAAAAAAAAAAAAABAAIhAxESMjT/2gAIAQEAAQUCLby4ryvEDTeuI0qS/qq4/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAEAH/2gAIAQIBAT8BIf/EACAQAAIABQUBAAAAAAAAAAAAAAABAhESMTIDECJBUXH/2gAIAQEABj8CsKXl/TKIVK5GnC32YonSiBfNv//EAB4QAAICAgIDAAAAAAAAAAAAAAERACExQVFhcYGR/9oACAEBAAE/ITaMZEIbhsx5QGHBWTBw5ln7HFkjyPUfAw9SuiKRzoXP/9oADAMBAAIAAwAAABCIwDz/xAAXEQEAAwAAAAAAAAAAAAAAAAAQARFR/9oACAEDAQE/EK0k/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEQEf/aAAgBAgEBPxBGV//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACFBUWFxgaH/2gAIAQEAAT8QkNEXA5KRgoqt+Op4wF6AkZpoJJFhB90mG89ALYcn7MtOxyouboBte2NEeM6u3GqRSr9z/9k=" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 0.5s;transition-delay:0.25s;border-radius:50%"/><noscript><picture><img width="50" height="50" srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/c3bbc/profile-pic.jpg 1x,
+/static/1265356b9e6bab3ff8ccafeaca6d96b8/ac385/profile-pic.jpg 1.5x,
+/static/1265356b9e6bab3ff8ccafeaca6d96b8/587d5/profile-pic.jpg 2x,
+/static/1265356b9e6bab3ff8ccafeaca6d96b8/20b3c/profile-pic.jpg 3x" src="/static/1265356b9e6bab3ff8ccafeaca6d96b8/c3bbc/profile-pic.jpg" alt="Joel Mun" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Joel Mun</strong>. Joel loves Javascript and Typescript. He&#x27;s been looking into Assemblyscript and WebAssembly recently, though.<!-- --> <a href="https://github.com/9oelM">Go check him up on Github!</a></p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2018-06-04--Yet-another-blog-in-nextjs/">← <!-- -->Yet another blog in nextjs</a></li><li><a rel="next" href="/2018-06-07--Using-npm/">Using npm<!-- --> →</a></li></ul><div id="disqus_thread" identifier="4cfec386-47a6-5e68-9518-e858f5d142d0" title="Creating music player" url="https://9oelm.github.io/2018-06-05--Creating-music-player/"></div></main><footer>© Joel Mun <!-- -->2020<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a></footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-105275697-3', 'auto', {});
+      
+      
+      
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"2018-06-05-creating-music-player-698","path":"/2018-06-05--Creating-music-player/"};window.dataPath="820/path---2018-06-05-creating-music-player-698-4d6-waggEFXxhtpkPVIax3tEZqgbks";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-67b162db32dac4df8e1d.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-218dfb3689e1ed90b306.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-87a06ec9f8b74b5f95a7.js"],"component---src-pages-404-js":["/component---src-pages-404-js-95f5274f97c9156b42f7.js"],"component---src-pages-index-js":["/component---src-pages-index-js-e5fa959f6bd28f72f321.js"],"pages-manifest":["/pages-manifest-3daeea3af54ad4818b32.js"]};/*]]>*/</script><script src="/webpack-runtime-b45dbaa9dfb127b329e0.js" async=""></script><script src="/styles-fa6c583b3cd626e54a0e.js" async=""></script><script src="/app-67b162db32dac4df8e1d.js" async=""></script><script src="/0-63a21d0c1363172370b5.js" async=""></script><script src="/component---src-templates-blog-post-js-87a06ec9f8b74b5f95a7.js" async=""></script></body></html>
