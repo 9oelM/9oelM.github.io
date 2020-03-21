@@ -74,3 +74,15 @@ This way, you do not have to manually restart wifi after `ifconfig wlan0 up`.
 The fake mac address will be reset to the original mac address if you choose to connect to another wifi or restart the interface. Now, there is a solution to spoof the mac address every time the machine wakes up. 
 
 See [spoofing the mac address semi-permanently](https://mr-polite.github.io/hacking/2017/09/21/changing-mac-address-semi-permanently.html).
+
+## Bonus: Changing mac address without macchanger
+
+really easy. Just enter the following commands sequentially:
+
+```
+/etc/init.d/networking stop
+ifconfig eth0 hw ether 02:01:02:03:04:08
+/etc/init.d/networking start 
+```
+
+Then, do `ifconfig` to check the mac address of eth0 interface. It should be 02:01:02:03:04:08. 

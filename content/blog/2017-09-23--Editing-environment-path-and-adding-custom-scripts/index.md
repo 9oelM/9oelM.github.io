@@ -46,8 +46,11 @@ For more, look at [the ubuntu official documentation.](https://help.ubuntu.com/c
 People say it's normal to place the scripts in `/opt` or `/opt/bin` directory. 
 But the answer to the below post also says we could use `/usr/local/bin` or `/usr/local/sbin` (for superuser privileges)
 
-## Bonus: [Differences between /bin, /sbin, /usr/bin, /usr/sbin, /usr/local/bin, /usr/local/sbin](https://askubuntu.com/questions/308045/differences-between-bin-sbin-usr-bin-usr-sbin-usr-local-bin-usr-local)
+## Bonus 1: [Differences between /bin, /sbin, /usr/bin, /usr/sbin, /usr/local/bin, /usr/local/sbin](https://askubuntu.com/questions/308045/differences-between-bin-sbin-usr-bin-usr-sbin-usr-local-bin-usr-local)
 * /bin : For binaries usable before the /usr partition is mounted. This is used for trivial binaries used in the very early boot stage or ones that you need to have available in booting single-user mode. Think of binaries like cat, ls, etc.
 * /sbin : Same, but for scripts with superuser (root) privileges required.
 * /usr/bin : Same as first, but for general system-wide binaries.
 * /usr/sbin : Same as above, but for scripts with superuser (root) privileges required.
+
+## Bonus 2:
+I wanted to add all subdirectories of `usr/local/bin` as environment path, but [that's not what something people recommended](https://unix.stackexchange.com/questions/17715/how-can-i-set-all-subdirectories-of-a-directory-into-path). People say it's _dangerous_.
