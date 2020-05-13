@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 13 May 2020 16:01:25 GMT</lastBuildDate><item><title><![CDATA[[개발자도 리뷰 할 수 있다] 낙성대 문기사불백 리뷰]]></title><description><![CDATA[…]]></description><link>https://9oelm.github.io/2020-05-14--[개발자도 리뷰할 수 있다]-낙성대-문기사불백-리뷰/</link><guid isPermaLink="false">https://9oelm.github.io/2020-05-14--[개발자도 리뷰할 수 있다]-낙성대-문기사불백-리뷰/</guid><pubDate>Thu, 14 May 2020 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;한국어로 포스트를 잘 쓰진 않는데, 갑자기 최근에 갔던 문기사불백이란 식당을 리뷰하고 싶은 마음이 불같이 일어서 한 번 리뷰를 써보도록 하겠다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 13 May 2020 16:06:54 GMT</lastBuildDate><item><title><![CDATA[[개발자도 리뷰 할 수 있다] 낙성대 문기사불백 리뷰]]></title><description><![CDATA[…]]></description><link>https://9oelm.github.io/2020-05-14--[개발자도 리뷰할 수 있다]-낙성대-문기사불백-리뷰/</link><guid isPermaLink="false">https://9oelm.github.io/2020-05-14--[개발자도 리뷰할 수 있다]-낙성대-문기사불백-리뷰/</guid><pubDate>Thu, 14 May 2020 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;한국어로 포스트를 잘 쓰진 않는데, 갑자기 최근에 갔던 문기사불백이란 식당을 리뷰하고 싶은 마음이 불같이 일어서 한 번 리뷰를 써보도록 하겠다.&lt;/p&gt;
 &lt;h1&gt;문기사불백을 발견하다&lt;/h1&gt;
 &lt;p&gt;떄는 일요일 점심. 집에 들어가기도 뭐 하고, 적당한 가격에 뭔가를 든든하게 먹으면 좋겠다는 생각에 &lt;a href=&quot;https://store.naver.com/restaurants/detail?entry=plt&amp;#x26;id=37272335&amp;#x26;query=%EB%B0%B1%EC%B1%84%EA%B9%80%EC%B9%98%EC%B0%8C%EA%B0%9C%20%EB%82%99%EC%84%B1%EB%8C%80%EC%A0%90&quot;&gt;낙성대역 백채&lt;/a&gt;로 향하고 있던 길이었다.&lt;/p&gt;
 &lt;p&gt;그런데 왠걸, 백채 옆에 전에는 한 번도 보지 못했던 음식점이 생겼다. &lt;a href=&quot;https://map.naver.com/v5/search/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1/place/1079093572?c=14132947.3606300,4505744.2552834,15,0,0,0,dh&quot;&gt;여기에&lt;/a&gt;.&lt;/p&gt;
@@ -11,7 +11,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6e257fc491791bfb06a653b4657056e0/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E0.jpeg&quot;
+    href=&quot;/static/6e257fc491791bfb06a653b4657056e0/ec5fe/front0.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -30,10 +30,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 앞 0&quot;
         title=&quot;&quot;
-        src=&quot;/static/6e257fc491791bfb06a653b4657056e0/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E0.jpeg&quot;
-        srcset=&quot;/static/6e257fc491791bfb06a653b4657056e0/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E0.jpeg 148w,
-/static/6e257fc491791bfb06a653b4657056e0/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E0.jpeg 295w,
-/static/6e257fc491791bfb06a653b4657056e0/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E0.jpeg 540w&quot;
+        src=&quot;/static/6e257fc491791bfb06a653b4657056e0/ec5fe/front0.jpeg&quot;
+        srcset=&quot;/static/6e257fc491791bfb06a653b4657056e0/59252/front0.jpeg 148w,
+/static/6e257fc491791bfb06a653b4657056e0/20821/front0.jpeg 295w,
+/static/6e257fc491791bfb06a653b4657056e0/ec5fe/front0.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
@@ -44,7 +44,7 @@
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/10c84c35c8e27d6065e79f8eb4e6ff8e/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E1.jpeg&quot;
+    href=&quot;/static/10c84c35c8e27d6065e79f8eb4e6ff8e/ec5fe/front1.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -63,10 +63,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 앞 1&quot;
         title=&quot;&quot;
-        src=&quot;/static/10c84c35c8e27d6065e79f8eb4e6ff8e/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E1.jpeg&quot;
-        srcset=&quot;/static/10c84c35c8e27d6065e79f8eb4e6ff8e/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E1.jpeg 148w,
-/static/10c84c35c8e27d6065e79f8eb4e6ff8e/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E1.jpeg 295w,
-/static/10c84c35c8e27d6065e79f8eb4e6ff8e/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E1.jpeg 540w&quot;
+        src=&quot;/static/10c84c35c8e27d6065e79f8eb4e6ff8e/ec5fe/front1.jpeg&quot;
+        srcset=&quot;/static/10c84c35c8e27d6065e79f8eb4e6ff8e/59252/front1.jpeg 148w,
+/static/10c84c35c8e27d6065e79f8eb4e6ff8e/20821/front1.jpeg 295w,
+/static/10c84c35c8e27d6065e79f8eb4e6ff8e/ec5fe/front1.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
@@ -80,7 +80,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/924b1f60cc3dace3a4a552ce0629fdaa/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%A9%94%EB%89%B4.jpeg&quot;
+    href=&quot;/static/924b1f60cc3dace3a4a552ce0629fdaa/ec5fe/menu.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -99,10 +99,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 메뉴&quot;
         title=&quot;&quot;
-        src=&quot;/static/924b1f60cc3dace3a4a552ce0629fdaa/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%A9%94%EB%89%B4.jpeg&quot;
-        srcset=&quot;/static/924b1f60cc3dace3a4a552ce0629fdaa/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%A9%94%EB%89%B4.jpeg 148w,
-/static/924b1f60cc3dace3a4a552ce0629fdaa/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%A9%94%EB%89%B4.jpeg 295w,
-/static/924b1f60cc3dace3a4a552ce0629fdaa/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%A9%94%EB%89%B4.jpeg 540w&quot;
+        src=&quot;/static/924b1f60cc3dace3a4a552ce0629fdaa/ec5fe/menu.jpeg&quot;
+        srcset=&quot;/static/924b1f60cc3dace3a4a552ce0629fdaa/59252/menu.jpeg 148w,
+/static/924b1f60cc3dace3a4a552ce0629fdaa/20821/menu.jpeg 295w,
+/static/924b1f60cc3dace3a4a552ce0629fdaa/ec5fe/menu.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
@@ -118,7 +118,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/19d08b96717747d99647a68f130c5804/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%82%AC%EC%9D%B8.jpeg&quot;
+    href=&quot;/static/19d08b96717747d99647a68f130c5804/ec5fe/signs.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -137,10 +137,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 싸인&quot;
         title=&quot;&quot;
-        src=&quot;/static/19d08b96717747d99647a68f130c5804/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%82%AC%EC%9D%B8.jpeg&quot;
-        srcset=&quot;/static/19d08b96717747d99647a68f130c5804/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%82%AC%EC%9D%B8.jpeg 148w,
-/static/19d08b96717747d99647a68f130c5804/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%82%AC%EC%9D%B8.jpeg 295w,
-/static/19d08b96717747d99647a68f130c5804/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%82%AC%EC%9D%B8.jpeg 540w&quot;
+        src=&quot;/static/19d08b96717747d99647a68f130c5804/ec5fe/signs.jpeg&quot;
+        srcset=&quot;/static/19d08b96717747d99647a68f130c5804/59252/signs.jpeg 148w,
+/static/19d08b96717747d99647a68f130c5804/20821/signs.jpeg 295w,
+/static/19d08b96717747d99647a68f130c5804/ec5fe/signs.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
@@ -153,7 +153,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7c3efc83ae5b0a252e3c821743b48a10/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B12%EC%9D%B8%EB%B6%84.jpeg&quot;
+    href=&quot;/static/7c3efc83ae5b0a252e3c821743b48a10/ec5fe/two-servings.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -172,10 +172,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 2인분&quot;
         title=&quot;&quot;
-        src=&quot;/static/7c3efc83ae5b0a252e3c821743b48a10/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B12%EC%9D%B8%EB%B6%84.jpeg&quot;
-        srcset=&quot;/static/7c3efc83ae5b0a252e3c821743b48a10/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B12%EC%9D%B8%EB%B6%84.jpeg 148w,
-/static/7c3efc83ae5b0a252e3c821743b48a10/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B12%EC%9D%B8%EB%B6%84.jpeg 295w,
-/static/7c3efc83ae5b0a252e3c821743b48a10/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B12%EC%9D%B8%EB%B6%84.jpeg 540w&quot;
+        src=&quot;/static/7c3efc83ae5b0a252e3c821743b48a10/ec5fe/two-servings.jpeg&quot;
+        srcset=&quot;/static/7c3efc83ae5b0a252e3c821743b48a10/59252/two-servings.jpeg 148w,
+/static/7c3efc83ae5b0a252e3c821743b48a10/20821/two-servings.jpeg 295w,
+/static/7c3efc83ae5b0a252e3c821743b48a10/ec5fe/two-servings.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
@@ -188,7 +188,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/93915de02b00ac294ca5ee84577bfa70/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%9A%B0%EC%82%B0.jpeg&quot;
+    href=&quot;/static/93915de02b00ac294ca5ee84577bfa70/ec5fe/umbrella.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -207,10 +207,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 우산&quot;
         title=&quot;&quot;
-        src=&quot;/static/93915de02b00ac294ca5ee84577bfa70/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%9A%B0%EC%82%B0.jpeg&quot;
-        srcset=&quot;/static/93915de02b00ac294ca5ee84577bfa70/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%9A%B0%EC%82%B0.jpeg 148w,
-/static/93915de02b00ac294ca5ee84577bfa70/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%9A%B0%EC%82%B0.jpeg 295w,
-/static/93915de02b00ac294ca5ee84577bfa70/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%9A%B0%EC%82%B0.jpeg 540w&quot;
+        src=&quot;/static/93915de02b00ac294ca5ee84577bfa70/ec5fe/umbrella.jpeg&quot;
+        srcset=&quot;/static/93915de02b00ac294ca5ee84577bfa70/59252/umbrella.jpeg 148w,
+/static/93915de02b00ac294ca5ee84577bfa70/20821/umbrella.jpeg 295w,
+/static/93915de02b00ac294ca5ee84577bfa70/ec5fe/umbrella.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
@@ -223,7 +223,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/504c36da78a9382a1f5e5bf4767f79d8/bef88/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg&quot;
+    href=&quot;/static/504c36da78a9382a1f5e5bf4767f79d8/bef88/one-person-seat.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -242,12 +242,12 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 1인석&quot;
         title=&quot;&quot;
-        src=&quot;/static/504c36da78a9382a1f5e5bf4767f79d8/f8fb9/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg&quot;
-        srcset=&quot;/static/504c36da78a9382a1f5e5bf4767f79d8/e8976/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg 148w,
-/static/504c36da78a9382a1f5e5bf4767f79d8/63df2/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg 295w,
-/static/504c36da78a9382a1f5e5bf4767f79d8/f8fb9/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg 590w,
-/static/504c36da78a9382a1f5e5bf4767f79d8/85e3d/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg 885w,
-/static/504c36da78a9382a1f5e5bf4767f79d8/bef88/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg 960w&quot;
+        src=&quot;/static/504c36da78a9382a1f5e5bf4767f79d8/f8fb9/one-person-seat.jpeg&quot;
+        srcset=&quot;/static/504c36da78a9382a1f5e5bf4767f79d8/e8976/one-person-seat.jpeg 148w,
+/static/504c36da78a9382a1f5e5bf4767f79d8/63df2/one-person-seat.jpeg 295w,
+/static/504c36da78a9382a1f5e5bf4767f79d8/f8fb9/one-person-seat.jpeg 590w,
+/static/504c36da78a9382a1f5e5bf4767f79d8/85e3d/one-person-seat.jpeg 885w,
+/static/504c36da78a9382a1f5e5bf4767f79d8/bef88/one-person-seat.jpeg 960w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -260,7 +260,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/2aefa8bd4331c2be33860b38a4ada183/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%A5.jpeg&quot;
+    href=&quot;/static/2aefa8bd4331c2be33860b38a4ada183/ec5fe/bob.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -279,10 +279,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 밥&quot;
         title=&quot;&quot;
-        src=&quot;/static/2aefa8bd4331c2be33860b38a4ada183/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%A5.jpeg&quot;
-        srcset=&quot;/static/2aefa8bd4331c2be33860b38a4ada183/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%A5.jpeg 148w,
-/static/2aefa8bd4331c2be33860b38a4ada183/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%A5.jpeg 295w,
-/static/2aefa8bd4331c2be33860b38a4ada183/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%A5.jpeg 540w&quot;
+        src=&quot;/static/2aefa8bd4331c2be33860b38a4ada183/ec5fe/bob.jpeg&quot;
+        srcset=&quot;/static/2aefa8bd4331c2be33860b38a4ada183/59252/bob.jpeg 148w,
+/static/2aefa8bd4331c2be33860b38a4ada183/20821/bob.jpeg 295w,
+/static/2aefa8bd4331c2be33860b38a4ada183/ec5fe/bob.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
@@ -294,7 +294,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4a543858df083cf67fa0e4a0ddb27789/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B0.jpeg&quot;
+    href=&quot;/static/4a543858df083cf67fa0e4a0ddb27789/ec5fe/gogi0.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -313,10 +313,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 불고기&quot;
         title=&quot;&quot;
-        src=&quot;/static/4a543858df083cf67fa0e4a0ddb27789/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B0.jpeg&quot;
-        srcset=&quot;/static/4a543858df083cf67fa0e4a0ddb27789/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B0.jpeg 148w,
-/static/4a543858df083cf67fa0e4a0ddb27789/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B0.jpeg 295w,
-/static/4a543858df083cf67fa0e4a0ddb27789/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B0.jpeg 540w&quot;
+        src=&quot;/static/4a543858df083cf67fa0e4a0ddb27789/ec5fe/gogi0.jpeg&quot;
+        srcset=&quot;/static/4a543858df083cf67fa0e4a0ddb27789/59252/gogi0.jpeg 148w,
+/static/4a543858df083cf67fa0e4a0ddb27789/20821/gogi0.jpeg 295w,
+/static/4a543858df083cf67fa0e4a0ddb27789/ec5fe/gogi0.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
@@ -327,7 +327,7 @@
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/db46addc21f7dff761683c6120a785e5/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B01.jpeg&quot;
+    href=&quot;/static/db46addc21f7dff761683c6120a785e5/ec5fe/gogi1.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -346,10 +346,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 불고기 1&quot;
         title=&quot;&quot;
-        src=&quot;/static/db46addc21f7dff761683c6120a785e5/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B01.jpeg&quot;
-        srcset=&quot;/static/db46addc21f7dff761683c6120a785e5/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B01.jpeg 148w,
-/static/db46addc21f7dff761683c6120a785e5/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B01.jpeg 295w,
-/static/db46addc21f7dff761683c6120a785e5/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B01.jpeg 540w&quot;
+        src=&quot;/static/db46addc21f7dff761683c6120a785e5/ec5fe/gogi1.jpeg&quot;
+        srcset=&quot;/static/db46addc21f7dff761683c6120a785e5/59252/gogi1.jpeg 148w,
+/static/db46addc21f7dff761683c6120a785e5/20821/gogi1.jpeg 295w,
+/static/db46addc21f7dff761683c6120a785e5/ec5fe/gogi1.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
@@ -364,7 +364,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/9f98df04831e0b4ccfbed93726876f24/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%85%80%ED%94%84.jpeg&quot;
+    href=&quot;/static/9f98df04831e0b4ccfbed93726876f24/ec5fe/self.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -383,10 +383,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 셀프&quot;
         title=&quot;&quot;
-        src=&quot;/static/9f98df04831e0b4ccfbed93726876f24/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%85%80%ED%94%84.jpeg&quot;
-        srcset=&quot;/static/9f98df04831e0b4ccfbed93726876f24/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%85%80%ED%94%84.jpeg 148w,
-/static/9f98df04831e0b4ccfbed93726876f24/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%85%80%ED%94%84.jpeg 295w,
-/static/9f98df04831e0b4ccfbed93726876f24/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%85%80%ED%94%84.jpeg 540w&quot;
+        src=&quot;/static/9f98df04831e0b4ccfbed93726876f24/ec5fe/self.jpeg&quot;
+        srcset=&quot;/static/9f98df04831e0b4ccfbed93726876f24/59252/self.jpeg 148w,
+/static/9f98df04831e0b4ccfbed93726876f24/20821/self.jpeg 295w,
+/static/9f98df04831e0b4ccfbed93726876f24/ec5fe/self.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
@@ -398,7 +398,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d0d07f27f296df1fd92dd218482f1e3f/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%88%9C%EB%91%90%EB%B6%80%EC%B0%8C%EA%B0%9C.jpeg&quot;
+    href=&quot;/static/d0d07f27f296df1fd92dd218482f1e3f/ec5fe/sundubu.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -417,10 +417,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 순두부찌개&quot;
         title=&quot;&quot;
-        src=&quot;/static/d0d07f27f296df1fd92dd218482f1e3f/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%88%9C%EB%91%90%EB%B6%80%EC%B0%8C%EA%B0%9C.jpeg&quot;
-        srcset=&quot;/static/d0d07f27f296df1fd92dd218482f1e3f/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%88%9C%EB%91%90%EB%B6%80%EC%B0%8C%EA%B0%9C.jpeg 148w,
-/static/d0d07f27f296df1fd92dd218482f1e3f/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%88%9C%EB%91%90%EB%B6%80%EC%B0%8C%EA%B0%9C.jpeg 295w,
-/static/d0d07f27f296df1fd92dd218482f1e3f/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%88%9C%EB%91%90%EB%B6%80%EC%B0%8C%EA%B0%9C.jpeg 540w&quot;
+        src=&quot;/static/d0d07f27f296df1fd92dd218482f1e3f/ec5fe/sundubu.jpeg&quot;
+        srcset=&quot;/static/d0d07f27f296df1fd92dd218482f1e3f/59252/sundubu.jpeg 148w,
+/static/d0d07f27f296df1fd92dd218482f1e3f/20821/sundubu.jpeg 295w,
+/static/d0d07f27f296df1fd92dd218482f1e3f/ec5fe/sundubu.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
@@ -442,12 +442,45 @@
 &lt;h1&gt;에필로그&lt;/h1&gt;
 &lt;p&gt;아, 아니나 다를까. 어쩐지… 진짜 궁금하긴 해서 네이버에 검색해보니 여러 검색 결과가 나왔는데, &lt;a href=&quot;https://blog.naver.com/kyeomjo/221941889694&quot;&gt;엄청난 기획으로 이루어진 식당이었다&lt;/a&gt;. 칭찬해! &lt;/p&gt;
 &lt;p&gt;그리고 심지어 &lt;em&gt;백채에서 새로 만들어 낸 브랜드인 것 같다(!?)&lt;/em&gt;. 왜냐하면 네이버에서 검색하면  백채 홈페이지로 연결되는 링크를 볼 수 있다. 정작 링크 타고 들어가면 아무것도 나오지 않는데 말이다. 준비중이어서 그랬나 보다. 하여튼 연관성이 있다. 어쩐지 브랜딩을 확실하게 하더라니까.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%B1%EC%B1%84.png&quot; alt=&quot;문기사불백백채&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0e782a092b8a7d26c6c323c604bf8fff/32b22/baekchae.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50.73099415204678%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABlElEQVQoz41SXVeCQBDdtARZkAUERCH8ttT8ykqrt06deuz//5jbzFgdT/XQw2XuzN75YHbV67rA06KDt02BaceHZ1UQOqcI/gFTr/6KqbLpoGUsga+rcCwFz658g5OO/eP4X0WVsauYhgY9X2MVR9gQBsbFKPAwJiS6hknYwJD4MHCF81lM8T8nTF0Lz2WOXZbgfdDHS1kIf8hSPLZbuGz64u9aCfbZAXfE254tBX+uRxn6dAqNTq6RZjbyUiMX30GW1dEtPbTIOvUT2a9rnUDXDmC/YXOsIpyhIn2KdT/Cqhdimvu4KgPMzw2mhRE+bnsYZZ7EerHGMHUxyw2WdDZpN9BPXFzSZfYTLVY13TNsB02suiFWZYjFeYBNL8J+nIhln8EaTliUB74m/d0oFn5NA3GDG+IqooJcbE4TXVDHGVkW3k8SLCkuYrIPFyn4RXCT22GMLk27J83+U8f+VgrSL3Myi1jMv72j6bgwN+Ez9jmBd+TTqzi2bu2wx8anr+SmqGikz8TyrTHnVXzF5eyfj/0DYH34Sq6mKYgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;문기사불백백채&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0e782a092b8a7d26c6c323c604bf8fff/40fad/baekchae.png&quot;
+        srcset=&quot;/static/0e782a092b8a7d26c6c323c604bf8fff/707e9/baekchae.png 148w,
+/static/0e782a092b8a7d26c6c323c604bf8fff/649e0/baekchae.png 295w,
+/static/0e782a092b8a7d26c6c323c604bf8fff/40fad/baekchae.png 590w,
+/static/0e782a092b8a7d26c6c323c604bf8fff/32b22/baekchae.png 684w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;그럼 이것으로, &lt;strong&gt;[개발자도 리뷰할 수 있다] 낙성대 문기사불백 리뷰&lt;/strong&gt;를 마치겠다. 긴 글 읽어 주셔서 감사합니다.&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%83%81%ED%98%B8.jpeg&quot;
+    href=&quot;/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/ec5fe/logo.jpeg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -466,10 +499,10 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;문기사불백 상호&quot;
         title=&quot;&quot;
-        src=&quot;/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%83%81%ED%98%B8.jpeg&quot;
-        srcset=&quot;/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%83%81%ED%98%B8.jpeg 148w,
-/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%83%81%ED%98%B8.jpeg 295w,
-/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%83%81%ED%98%B8.jpeg 540w&quot;
+        src=&quot;/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/ec5fe/logo.jpeg&quot;
+        srcset=&quot;/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/59252/logo.jpeg 148w,
+/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/20821/logo.jpeg 295w,
+/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/ec5fe/logo.jpeg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
       /&gt;
     &lt;/span&gt;
