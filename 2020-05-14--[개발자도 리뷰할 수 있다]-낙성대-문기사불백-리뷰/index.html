@@ -1,0 +1,497 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.16aaefe531b6b7795df4.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-4124805c0503dbfe42dd67d7f5715964.woff2) format("woff2"),url(/static/montserrat-latin-100-c8fb2f714bbc7bc3e8dfffa916b286dc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e4bf47bd171a9b2a72dd84c58bf90edf.woff2) format("woff2"),url(/static/montserrat-latin-100italic-d1f3f2d02ee4d7d2d4b1ad865014f189.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-444ae007121264bc1969d49b4031f9b2.woff2) format("woff2"),url(/static/montserrat-latin-200-edbce16a90aa22c297a0307b85789837.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-f316c5d1ec40f3e68654c3f38b3999f3.woff2) format("woff2"),url(/static/montserrat-latin-200italic-d7bbb730d9b5e11720b3eb32326dcca7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-0a7c6df06e85d978d096d4d18fd8d43d.woff2) format("woff2"),url(/static/montserrat-latin-300-5e86df2cad22d2ef2b03516334afae5e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-c076c4892bc7a4be7b9097e97a35012d.woff2) format("woff2"),url(/static/montserrat-latin-300italic-37c74a8d2d0d36a0a2c6e9a37ee15b0c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-501ce09c42716a2f6e1503a25eb174c9.woff2) format("woff2"),url(/static/montserrat-latin-400-f29d2b8559699b6beb5b29b25b8bc572.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-882908d9950d9c86ebd380877f293d95.woff2) format("woff2"),url(/static/montserrat-latin-400italic-22e7b04e5f2a901d49d4d342315a715a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-f0f2716c5fe401d175b88715e7d28685.woff2) format("woff2"),url(/static/montserrat-latin-500-991b453bf90a0980e78966d2af7e3d3a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-4590ebba421b3288c305305d7fa7b504.woff2) format("woff2"),url(/static/montserrat-latin-500italic-f3d41e4cdcc2314e49ddcea751d6f87f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-15c24f7109941777774ddd2c636c6a50.woff2) format("woff2"),url(/static/montserrat-latin-600-f6dc6096f48956908c1787d9a722570a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-6d10b80529d5c36c7c09fca7193af0fc.woff2) format("woff2"),url(/static/montserrat-latin-600italic-02c4833312d94b1b0866f073023a250e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-79982cd1f74c6fa7451bf9b37ead09ff.woff2) format("woff2"),url(/static/montserrat-latin-700-957e93fbbe131a59791cd820d98b7109.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-283438e9577fe6a684466bb100e105ec.woff2) format("woff2"),url(/static/montserrat-latin-700italic-ca627c5ccc65cf80c2ecaea44b997de9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-35386154b78d046218fc8f88a44ff515.woff2) format("woff2"),url(/static/montserrat-latin-800-756655905d91b77960888262e7d58d35.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-e1b52a7bd83e2324db6d92bdc206844c.woff2) format("woff2"),url(/static/montserrat-latin-800italic-a69f0add9d86c1a84311d7dd8693ba4a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-260c2ea3ef57feb82251952e605a36d5.woff2) format("woff2"),url(/static/montserrat-latin-900-186cae8091da578150d81958e217714a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-d785fb9fc74588ffb7f306799709a97d.woff2) format("woff2"),url(/static/montserrat-latin-900italic-43b527fe77254f97ea36e2b54e845ec4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-a50c381443e6993188ed9cc4b6806866.woff2) format("woff2"),url(/static/merriweather-latin-300-2c73b119ad85e697123658b8a091ff83.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-bd410cbf8c272acd4fbdd9f61a7015bf.woff2) format("woff2"),url(/static/merriweather-latin-300italic-9deeb422b65afb1daacc039296bb3640.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-f936cb550d4dcd769f75c453207ac5e6.woff2) format("woff2"),url(/static/merriweather-latin-400-ab0616e6d856817eff54eb8c5e1664e4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-5c9a23d08e2c851e5a25795b940acd4f.woff2) format("woff2"),url(/static/merriweather-latin-400italic-0ab4b54f3b1e8b14cf755970fde8ce35.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-1636f13a52ca3f0eb8784c9c57f62082.woff2) format("woff2"),url(/static/merriweather-latin-700-cc673c945b482dc1378d4a3c95ffd175.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-8b0db67123584893c6591accbc51640c.woff2) format("woff2"),url(/static/merriweather-latin-700italic-513649f5b9ba4675cff15cf3f7ad4f2a.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-46631a9aab93dec3ed34f429dd1a5646.woff2) format("woff2"),url(/static/merriweather-latin-900-a0528570caa2c785891308ce604d8db7.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-a26a8168916e5d4e5485081171d7fdb0.woff2) format("woff2"),url(/static/merriweather-latin-900italic-db42a3f34378e69ef5aebb6717f1f33e.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:0;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}#disqus_thread{width:95%;margin:auto}pre code{white-space:pre-wrap!important;white-space:-moz-pre-wrap!important;white-space:-pre-wrap!important;white-space:-o-pre-wrap!important;word-wrap:break-word!important}</style><meta name="generator" content="Gatsby 2.1.18"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#009688"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><title data-react-helmet="true">[개발자도 리뷰 할 수 있다] 낙성대 문기사불백 리뷰 | Joel&#x27;s dev blog</title><meta data-react-helmet="true" name="description" content="…"/><meta data-react-helmet="true" property="og:title" content="[개발자도 리뷰 할 수 있다] 낙성대 문기사불백 리뷰"/><meta data-react-helmet="true" property="og:description" content="…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Joel Mun"/><meta data-react-helmet="true" name="twitter:title" content="[개발자도 리뷰 할 수 있다] 낙성대 문기사불백 리뷰"/><meta data-react-helmet="true" name="twitter:description" content="…"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link as="script" rel="preload" href="/component---src-templates-blog-post-js-87a06ec9f8b74b5f95a7.js"/><link as="script" rel="preload" href="/0-63a21d0c1363172370b5.js"/><link as="script" rel="preload" href="/app-67b162db32dac4df8e1d.js"/><link as="script" rel="preload" href="/styles-fa6c583b3cd626e54a0e.js"/><link as="script" rel="preload" href="/webpack-runtime-8f1e3ace1d82f8100cb5.js"/><link as="fetch" rel="preload" href="/static/d/76/path---2020-05-14-개발자도-리뷰할-수-있다-낙성대-문기사불백-리뷰-acb-56f-gLzBesHI49FeLAaTX24dJDyG8.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div style="margin-left:auto;margin-right:auto;max-width:70rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">Joel&#x27;s dev blog</a></h3></header><main><h1>[개발자도 리뷰 할 수 있다] 낙성대 문기사불백 리뷰</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">May 14, 2020</p><div><p>한국어로 포스트를 잘 쓰진 않는데, 갑자기 최근에 갔던 문기사불백이란 식당을 리뷰하고 싶은 마음이 불같이 일어서 한 번 리뷰를 써보도록 하겠다.</p>
+<h1>문기사불백을 발견하다</h1>
+<p>떄는 일요일 점심. 집에 들어가기도 뭐 하고, 적당한 가격에 뭔가를 든든하게 먹으면 좋겠다는 생각에 <a href="https://store.naver.com/restaurants/detail?entry=plt&#x26;id=37272335&#x26;query=%EB%B0%B1%EC%B1%84%EA%B9%80%EC%B9%98%EC%B0%8C%EA%B0%9C%20%EB%82%99%EC%84%B1%EB%8C%80%EC%A0%90">낙성대역 백채</a>로 향하고 있던 길이었다.</p>
+<p>그런데 왠걸, 백채 옆에 전에는 한 번도 보지 못했던 음식점이 생겼다. <a href="https://map.naver.com/v5/search/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1/place/1079093572?c=14132947.3606300,4505744.2552834,15,0,0,0,dh">여기에</a>.</p>
+<p>이름은 바로 <strong><em>문기사불백</em></strong>. 식당의 외관을 보고 호감이 갔던 이유는:</p>
+<ol>
+<li>나도 문씨이다</li>
+<li>깔끔해 보였다</li>
+<li>컨셉이 확실해 보였다</li>
+</ol>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/6e257fc491791bfb06a653b4657056e0/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E0.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQCA//EABYBAQEBAAAAAAAAAAAAAAAAAAECAP/aAAwDAQACEAMQAAABZx0KmUBcr4WaXIa4UZEv/8QAHBAAAgIDAQEAAAAAAAAAAAAAAQIAAxESIRAi/9oACAEBAAEFAqdVrs+4ylYvIlg2bpsaAjOBHQNHUwVHHv8A/8QAFREBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQMBAT8BK//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BX//EAB8QAAEDAwUAAAAAAAAAAAAAAAEAAhEQIVEgMTJhcf/aAAgBAQAGPwIkob+Uu62Aos0LNIrBbPa5aP/EACAQAAICAgEFAQAAAAAAAAAAAAERACExQVEQYXGBkbH/2gAIAQEAAT8hGliChDrAA22rtCSqIDsF5LiX9F+TFe00YAEoMXUJFACdQYjqWRo8iBlPjhNx9dE8wFBIfJ//2gAMAwEAAgADAAAAEMcKDgAv/8QAGhEBAAIDAQAAAAAAAAAAAAAAAQARECFRcf/aAAgBAwEBPxABtlnZQzzP/8QAGhEBAAEFAAAAAAAAAAAAAAAAARAAESExQf/aAAgBAgEBPxBeQ3KNZn//xAAeEAEBAAICAwEBAAAAAAAAAAABEQAxIVFBYXGBof/aAAgBAQABPxBu0Xh59zGPPlI7dPMwKty4kqkC1Ha6yk16ZS/hhTLRA1kCjNXmUP1zY8YusjrHhBweHTuwWis0D71jKaLXYv15wqjZXEH01hSTx//Z'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 앞 0"
+        title=""
+        src="/static/6e257fc491791bfb06a653b4657056e0/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E0.jpeg"
+        srcset="/static/6e257fc491791bfb06a653b4657056e0/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E0.jpeg 148w,
+/static/6e257fc491791bfb06a653b4657056e0/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E0.jpeg 295w,
+/static/6e257fc491791bfb06a653b4657056e0/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E0.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/10c84c35c8e27d6065e79f8eb4e6ff8e/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E1.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAEDBAIF/8QAFwEBAQEBAAAAAAAAAAAAAAAAAgABA//aAAwDAQACEAMQAAABnrDIexUqqLsyF71SvCHNcC3/xAAeEAACAgICAwAAAAAAAAAAAAABEQACAxMQEiEjMv/aAAgBAQABBQLWYMd5osYMl28j3KLpCnqtM59lj4r8dREOP//EABURAQEAAAAAAAAAAAAAAAAAACAh/9oACAEDAQE/AYv/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AV//xAAgEAABAwMFAQAAAAAAAAAAAAAAAQIyECFxETEzQVGR/9oACAEBAAY/ApL9JOpI5HG7y6aZLEXHtqJivZ//xAAgEAADAAIBBAMAAAAAAAAAAAAAAREhMVFBYYGRsfDx/9oACAEBAAE/IV990ohlK89qWt5ZNVex2zA9UvldSmjaCI2imT8ITMaw/Jka1yPW8oJGkPiPPsf/2gAMAwEAAgADAAAAENzgDA/v/8QAGREBAQADAQAAAAAAAAAAAAAAAQAQESFR/9oACAEDAQE/EGL43dzn/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAEQMREhUf/aAAgBAgEBPxDLNcKFU//EACAQAQACAgEEAwAAAAAAAAAAAAERIQAxUUFhscFxofH/2gAIAQEAAT8QDoXgXk4ywhETt+GBhNNq7d+8mUVdU6R4wRjEVENRvWqxglgGCFx84PMCUOnbjNofRN5JDJJMk/eVuiwa2wy2crDipKSvowGKMQWMRri5Z//Z'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 앞 1"
+        title=""
+        src="/static/10c84c35c8e27d6065e79f8eb4e6ff8e/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E1.jpeg"
+        srcset="/static/10c84c35c8e27d6065e79f8eb4e6ff8e/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E1.jpeg 148w,
+/static/10c84c35c8e27d6065e79f8eb4e6ff8e/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E1.jpeg 295w,
+/static/10c84c35c8e27d6065e79f8eb4e6ff8e/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%95%9E1.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>그래서 함께 동반하던 동생들도 극적으로 처음 보는 문기사불백을 시도해 보기로 마음을 굳히게 되었다. 이제는 주유소 쪽에서 횡단보도만 건너면 문기사불백이 바로 코앞이다. 설렌다.</p>
+<h1>식당의 느낌, 그리고 컨셉트</h1>
+<p>식당의 외관에서도 느꼈지만, 들어가자마자 느낄 수 있었던 것은 확실한 컨셉이었다. 일단 기사식당 + 포차(?) 컨셉트를 잡되 (그곳에서 일하시는 분들을 ‘기사’라고 칭하는 것 같았다), 기존의 기사식당의 느낌은 약간 서민적이고 약간은 지저분한? 느낌이라면 이 곳은 확실히 깔끔하고 정돈된 느낌이었다. <strong>메뉴는 대표적으로 순두부찌개와 불백(불고기)</strong> 가 있었다 (물론 철판낙지도 있는 것 같았는데 나는 먹지 않았음으로 그 이 메뉴는 패스하도록 하겠다. 그렇지만 주력 메뉴는 순두부찌개와 불백 두 개 같았다)</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/924b1f60cc3dace3a4a552ce0629fdaa/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%A9%94%EB%89%B4.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQIA/9oADAMBAAIQAxAAAAHo5zaVc1JaSvjS6KgWVCVIDV//xAAbEAACAgMBAAAAAAAAAAAAAAABAhARAAMSIf/aAAgBAQABBQKgIKKYvyCwXA3j3yNWdosbnIj/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPwFj/8QAFhEBAQEAAAAAAAAAAAAAAAAAEBEA/9oACAECAQE/AdCv/8QAGxAAAgIDAQAAAAAAAAAAAAAAARARIgAhMSD/2gAIAQEABj8CsCtgedkKvct3IlQF/8QAHhABAAICAgMBAAAAAAAAAAAAAQARITFBgRBxweH/2gAIAQEAAT8h0gLyShur7i1qfU3T9mH6lXL1CsSE2NMtzbQHfpHViuIKRsarMvj/2gAMAwEAAgADAAAAELfoPYfv/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQAQEUH/2gAIAQMBAT8QmkA60K//xAAYEQADAQEAAAAAAAAAAAAAAAAAAREQQf/aAAgBAgEBPxCJlFiJO5//xAAdEAEAAwADAQEBAAAAAAAAAAABABEhMVGBQZHw/9oACAEBAAE/EMW8CCqgB0jHshEWyO1zFnTM9Qqu59unuKFF4L2CGsBHyKgxTw1kYtFfP5sdHU1QWvyYgyjEuDl9hpP/2Q=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 메뉴"
+        title=""
+        src="/static/924b1f60cc3dace3a4a552ce0629fdaa/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%A9%94%EB%89%B4.jpeg"
+        srcset="/static/924b1f60cc3dace3a4a552ce0629fdaa/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%A9%94%EB%89%B4.jpeg 148w,
+/static/924b1f60cc3dace3a4a552ce0629fdaa/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%A9%94%EB%89%B4.jpeg 295w,
+/static/924b1f60cc3dace3a4a552ce0629fdaa/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%A9%94%EB%89%B4.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>약간 백채같은 느낌이 들었다. 확실한 방향을 정하고 그 곳으로 이미 진출해버린 느낌. 백채 하면 딱 생각나는 것은 고기가 듬뿍 들어간 감칠맛 나는 김치찌개이듯이, 아직 먹지도 않았었는데 다음부터 문기사불백을 생각할 때마다 순두부 찌개랑 불백이 생각날 것만 같았다.</p>
+<p>컨셉에 대해서 잡담을 좀 해 보자면, 요즘에는 다 컨셉으로 대박난다고 생각한다. 물론 자영업자 분들께서 정말 피땀 흘려서 노력해서 만드시는 것이지만, 불고기와 순두부찌개는 한국인이라면 좋아하지 않을 수 없는 메뉴고, 맛 없게 만들기가 매우 어렵다. 그래서 요즘엔 어떤 특정한 컨셉 (‘기사’ 식당, ‘옛날(레트로 감성)’ 식당, 등등)을 잡고 식당을 운영하면 더 눈에 띠기 때문에 영업에 훨씬 이익이 될 것이라 생각한다. 그래서 카페도 이젠 한국에도 거의 포화상태인데, ‘공사장을 개조해서 만든 카페’라든지, ‘한옥 스타일의 카페’라든지, ‘프랑스의 문화를 잠시나마 살펴볼 수 있는 미술 작품들과 책이 있는 특별한 체험을 할 수 있는 카페’라든지, 이런 특정한 <em>컨셉</em>을 잡은 업주들이 성공할 수 있다고 생각한다.</p>
+<h1>가게 둘러보기</h1>
+<h2>싸인들?</h2>
+<p>가게에 이런 싸인들이 붙어 있었다. 모두 비교적 거의 최신 사인이었다. 싸인 날짜가 거의 다 1달쯤밖에 안된 사인들이었는데, 사실 궁금증이 일기는 한다. 진짜 이 연예인 분들이 와서 사인을 한 것인지, 아니면 느낌만을 살리기 위해서 직접 종이에 적으셔서 사인을 하신 것인지 말이다 (왜냐하면 사인을 사장님이 직접 하시고 붙여놔도 문제는 없으니까 ㅎㅎ 사인을 본인이 하고 벽에 붙여놓는 행위가 연예인 분들께서 직접 오셔서 식사를 하셨다는 것을 100% 암시한다고 볼 수는 없다)</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/19d08b96717747d99647a68f130c5804/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%82%AC%EC%9D%B8.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAMEAQIF/8QAFgEAAwAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAGLbEkq6MgehJFJSdJcA8W2K1oMv//EAB0QAAICAgMBAAAAAAAAAAAAAAABAgMQEgQRISL/2gAIAQEAAQUCyvMo6Lo/aZshnJslF1vZH//EABgRAAIDAAAAAAAAAAAAAAAAAAAQAhEx/9oACAEDAQE/AXZHV//EABgRAAMBAQAAAAAAAAAAAAAAAAABEBEx/9oACAECAQE/AYjB8n//xAAbEAACAgMBAAAAAAAAAAAAAAABEQACEDAxkf/aAAgBAQAGPwLKRnD5oAqVKWPVj//EABsQAAMAAwEBAAAAAAAAAAAAAAABESExUUFx/9oACAEBAAE/IUiEEb0yewVM7efRSuoc6XBEE5T0hvOTL0KtrY3aGRo//9oADAMBAAIAAwAAABCo5n2Lz//EABkRAQACAwAAAAAAAAAAAAAAAAEAEBEhMf/aAAgBAwEBPxCk3Bhida//xAAZEQEAAgMAAAAAAAAAAAAAAAABABARITH/2gAIAQIBAT8QxS1ErONf/8QAHRABAAICAgMAAAAAAAAAAAAAAQARIVExQRBxwf/aAAgBAQABPxC4uHiWXFgNs6g5lXtGEIs6FMx13cABaHUGJyfpAWd3iEMtpTNEFWRZJ4gWdxKrEoxbBoVP/9k='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 싸인"
+        title=""
+        src="/static/19d08b96717747d99647a68f130c5804/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%82%AC%EC%9D%B8.jpeg"
+        srcset="/static/19d08b96717747d99647a68f130c5804/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%82%AC%EC%9D%B8.jpeg 148w,
+/static/19d08b96717747d99647a68f130c5804/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%82%AC%EC%9D%B8.jpeg 295w,
+/static/19d08b96717747d99647a68f130c5804/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%82%AC%EC%9D%B8.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h2>포장</h2>
+<p>포장 메뉴도 판다. 근데 나는 사실 이건 사진 않을 것 같다. 왜냐하면 저녁 9~10시 쯔음에 동네 시장에 가면 거의 600~700g 되는 돼지불고기를 10000원에 살 수 있다 (저번에 3~4끼니에 걸쳐서 먹었다. 양이 너무 많아서). 문기사불백의 불백 포장은 500g이라고 되어있긴 한데, 포장의 크기가 느낌상 그런 건지 왜 이렇게 작은진 모르겠다. 여튼 가격상 살 이유는 못 느끼겠다.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/7c3efc83ae5b0a252e3c821743b48a10/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B12%EC%9D%B8%EB%B6%84.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFAgP/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAdSK2fLA5ToeFHgVjED3ADUNH//EABoQAAIDAQEAAAAAAAAAAAAAAAECAAMRBBL/2gAIAQEAAQUCnScRbR5ZsLuhD8x9XZAdmw4Y9ypD0OTdY3qVKGX/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPwFj/8QAFxEAAwEAAAAAAAAAAAAAAAAAARARAP/aAAgBAgEBPwGInV//xAAfEAACAQMFAQAAAAAAAAAAAAAAIQEQIjECERJRYYH/2gAIAQEABj8CojIy3BEzv8LdEUbPehI4wooz/8QAHhABAAICAQUAAAAAAAAAAAAAAQAhEVExYXGBkaH/2gAIAQEAAT8hirMYAwbgiNmYTbxBqmk9NWxGpzG+frOrmOkUlYudEyhA0EI27EY8Rm5//9oADAMBAAIAAwAAABCXxMwML//EABkRAQACAwAAAAAAAAAAAAAAAAEAIRARYf/aAAgBAwEBPxC2DyG81uf/xAAXEQEBAQEAAAAAAAAAAAAAAAABABEx/9oACAECAQE/EMbIb2CYQX//xAAeEAEAAgIDAAMAAAAAAAAAAAABABEhQTFRcWGBof/aAAgBAQABPxCoag5Ka+Yalqg5EBICoUqzerZ7Gnlgc0821Fe/pR2u3qCOEA47xmCENBT7BgNlgl5gWBcafXUaaKA/rKlIZcF+47ZbbDDLxRP/2Q=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 2인분"
+        title=""
+        src="/static/7c3efc83ae5b0a252e3c821743b48a10/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B12%EC%9D%B8%EB%B6%84.jpeg"
+        srcset="/static/7c3efc83ae5b0a252e3c821743b48a10/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B12%EC%9D%B8%EB%B6%84.jpeg 148w,
+/static/7c3efc83ae5b0a252e3c821743b48a10/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B12%EC%9D%B8%EB%B6%84.jpeg 295w,
+/static/7c3efc83ae5b0a252e3c821743b48a10/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B12%EC%9D%B8%EB%B6%84.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h2>우산</h2>
+<p>비가 올락말락 하는 날씨였는데, 우산을 빌려주신다는 말과 함께 질 좋아보이는 우산 여러개가 꽃혀 있었다. 이미지 상승 + 감성 up + 재방문 고객 유도의 효과가 있을 것이라고 본다.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/93915de02b00ac294ca5ee84577bfa70/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%9A%B0%EC%82%B0.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAEDBAUGAv/EABUBAQEAAAAAAAAAAAAAAAAAAAMC/9oADAMBAAIQAxAAAAHGzqKjvbBD1lc0wnQuaINPgmpFH//EAB0QAAIDAAIDAAAAAAAAAAAAAAEDAAIRBBITMkH/2gAIAQEAAQUCAbcLvtF5iSQvjkALplEelABNiTimMnmZK2PX7P/EABgRAAMBAQAAAAAAAAAAAAAAAAAQEQEC/9oACAEDAQE/AYtKdL//xAAWEQADAAAAAAAAAAAAAAAAAAABECD/2gAIAQIBAT8BQj//xAAiEAACAQMCBwAAAAAAAAAAAAAAAQIQIVEREiIxMkFhgZH/2gAIAQEABj8CT2x+kLPVYPYrDzqX5ukn5dL5OFnWxx7V/8QAHBABAAMBAQADAAAAAAAAAAAAAQARIUFREDHB/9oACAEBAAE/ITLQ+wKFNniNNOrHkoEJXsH3pgSsomiMeb+uTcU4SrvsG9VUKUFt3UKf3moa+X//2gAMAwEAAgADAAAAENwfMIg//8QAGREBAAIDAAAAAAAAAAAAAAAAAQARECEx/9oACAEDAQE/EELuPYwLlcv/xAAZEQADAAMAAAAAAAAAAAAAAAAAAREQITH/2gAIAQIBAT8QrS0LhVhBY//EAB8QAQADAAICAwEAAAAAAAAAAAEAESExQWGxkaHh8f/aAAgBAQABPxBuEMaXm4WZkq0VStfEtsNClq+Mi0qCOEeHrxHH01lUO/uXJMTKRXj1LDajA8ctxE1AmESk/ZUA4B+ZigTXzK/RZhe/2EACBQdSB3B0Y+kGf//Z'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 우산"
+        title=""
+        src="/static/93915de02b00ac294ca5ee84577bfa70/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%9A%B0%EC%82%B0.jpeg"
+        srcset="/static/93915de02b00ac294ca5ee84577bfa70/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%9A%B0%EC%82%B0.jpeg 148w,
+/static/93915de02b00ac294ca5ee84577bfa70/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%9A%B0%EC%82%B0.jpeg 295w,
+/static/93915de02b00ac294ca5ee84577bfa70/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%9A%B0%EC%82%B0.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>우산을 빌려주는 식당은 많진 않다. 왜냐하면 우산 가져가 버리고 그냥 안 오면 그만이기 때문에. 그렇지만 식당 측에서도 현명한 판단이라는 생각이 드는 게, 5000원짜리 우산이라고 친다면 5명이 가져갔다고 하자. 그 중 1명의 손님만 나중에 돌아와서 2만원만 썼다고 해도 그 우산 값은 이미 커버가 가능하다. 그냥 홍보 효과를 노린 것 같기도 하고. 단지 저 우산에 ‘문기사불백 것’이라는 표시가 더 강했으면 하는 생각이 든다. 그러면 그 우산을 보는 다른 잠재 고객들에게도 홍보가 될 것 같아서 말이다.</p>
+<h2>1인석</h2>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/504c36da78a9382a1f5e5bf4767f79d8/bef88/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUBAgP/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAABponiKYi4P//EABsQAAEEAwAAAAAAAAAAAAAAAAEAAhESAzJB/9oACAEBAAEFAm5RB3c2p5YzYr//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwFH/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGhAAAgIDAAAAAAAAAAAAAAAAAAExURARYf/aAAgBAQAGPwJU3ormZJP/xAAdEAABBAIDAAAAAAAAAAAAAAAAAREhUTFBkaHB/9oACAEBAAE/IXBFNk2p4KQGdj9y05Fvn//aAAwDAQACAAMAAAAQnD//xAAXEQEBAQEAAAAAAAAAAAAAAAABABFB/9oACAEDAQE/EMXsIv/EABURAQEAAAAAAAAAAAAAAAAAAAAh/9oACAECAQE/EIj/xAAcEAEAAwEAAwEAAAAAAAAAAAABABEhMVFxsdH/2gAIAQEAAT8QIEqOq4O+D9iHdpa2bVefIQJWmn2wSNcVQoZ5WLku0rWFs//Z'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 1인석"
+        title=""
+        src="/static/504c36da78a9382a1f5e5bf4767f79d8/f8fb9/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg"
+        srcset="/static/504c36da78a9382a1f5e5bf4767f79d8/e8976/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg 148w,
+/static/504c36da78a9382a1f5e5bf4767f79d8/63df2/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg 295w,
+/static/504c36da78a9382a1f5e5bf4767f79d8/f8fb9/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg 590w,
+/static/504c36da78a9382a1f5e5bf4767f79d8/85e3d/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg 885w,
+/static/504c36da78a9382a1f5e5bf4767f79d8/bef88/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B11%EC%9D%B8%EC%84%9D.jpeg 960w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>역시 낙성대에 자취생들이 많은 것을 감안한 것인지, 가게 한 켠에는 혼밥할 수 있는 구조로 테이블과 의자가 배치되어 있었다.</p>
+<h1>밥</h1>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/2aefa8bd4331c2be33860b38a4ada183/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%A5.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAL/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAUP1NGOVQpuiQzOtgkNI6CugB//EAB4QAAICAgIDAAAAAAAAAAAAAAECAAMEERIhEBMx/9oACAEBAAEFAg3asVezIct6EMFCRqU2mRYIMlzU1r8u9qTxHgfNz//EABYRAQEBAAAAAAAAAAAAAAAAABEQAP/aAAgBAwEBPwEhi//EABcRAQADAAAAAAAAAAAAAAAAAAEAESD/2gAIAQIBAT8BWXn/xAAfEAACAQMFAQAAAAAAAAAAAAAAAREhMVEQICIyM2H/2gAIAQEABj8C+5OUFGWSKpM80y8jdJk7aRnb/8QAGxABAAIDAQEAAAAAAAAAAAAAAQARITFBgZH/2gAIAQEAAT8h7gti0syF5w3FN9GI6pfrOleKagPragFPoQF0INS2yihUwb5Vs0iR5zxP/9oADAMBAAIAAwAAABBAKsAP/wD/xAAZEQEAAgMAAAAAAAAAAAAAAAABABARITH/2gAIAQMBAT8QAHZgm1Sv/8QAGBEBAQEBAQAAAAAAAAAAAAAAAQARITH/2gAIAQIBAT8QVfOQrctJsv/EAB8QAQACAgAHAAAAAAAAAAAAAAEAESExQVFhcYGRof/aAAgBAQABPxBRigAlHlmYJ0Bw8SolsGLgphheGzusFffD/U5ROifErQJ1n3CIswYU9I2mkcBwxFqovTBQgXBnETldrtYG9yqgN8pY4ek//9k='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 밥"
+        title=""
+        src="/static/2aefa8bd4331c2be33860b38a4ada183/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%A5.jpeg"
+        srcset="/static/2aefa8bd4331c2be33860b38a4ada183/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%A5.jpeg 148w,
+/static/2aefa8bd4331c2be33860b38a4ada183/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%A5.jpeg 295w,
+/static/2aefa8bd4331c2be33860b38a4ada183/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%A5.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>일단 다 정말 깔끔했다. 새 식당이라서 그런진 몰라도 밥그릇이나 밑반찬 그릇의 상태가 매우 양호해 보였다.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/4a543858df083cf67fa0e4a0ddb27789/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B0.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIEBQED/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQIA/9oADAMBAAIQAxAAAAH3lS1Jc1rBxewgVaUSXaQPBn//xAAdEAACAgIDAQAAAAAAAAAAAAABAgADERIEEBMx/9oACAEBAAEFAg5qZrLjPXSVEqWdTEAcA5n0q5ACHQmZxOTUtbdf/8QAGBEAAwEBAAAAAAAAAAAAAAAAABARATH/2gAIAQMBAT8BhSrOL//EABcRAAMBAAAAAAAAAAAAAAAAAAEQESD/2gAIAQIBAT8BuCv/xAAfEAABAwUAAwAAAAAAAAAAAAABABEhEBIiMXECMmH/2gAIAQEABj8CYC7i9Bx1aQzLqYEP9TyabMLHyjquGlBpi81//8QAHxAAAgIDAAIDAAAAAAAAAAAAAREAITFBYRBRcYHB/9oACAEBAAE/IS03iK0/GtH+glCtEjZ4MCANwmmgpwaMnsOCjiK6NAZs4e1wxtT08RqfkAsWhM34/9oADAMBAAIAAwAAABB0L40EH//EABkRAAIDAQAAAAAAAAAAAAAAAAABEBFRIf/aAAgBAwEBPxC3HBaGlg1w/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAEQMREhUf/aAAgBAgEBPxBpRgaN9LR//8QAIRABAQACAgIBBQAAAAAAAAAAAREAIUFxMVFhgZGhwdH/2gAIAQEAAT8QSMBTZL7w5LXZay+estoWl1OnkyyKgagnH5w8zNqiHwvWNkqjDDXrPrWLvf6yWKE1LhHcw87hAn33jqOFDEj4x5ENKXDfeKGh7H8wHQbdgYLZ6MXef//Z'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 불고기"
+        title=""
+        src="/static/4a543858df083cf67fa0e4a0ddb27789/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B0.jpeg"
+        srcset="/static/4a543858df083cf67fa0e4a0ddb27789/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B0.jpeg 148w,
+/static/4a543858df083cf67fa0e4a0ddb27789/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B0.jpeg 295w,
+/static/4a543858df083cf67fa0e4a0ddb27789/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B0.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/db46addc21f7dff761683c6120a785e5/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B01.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDAQL/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAeWx8iiMW5x5FiFrXyTXka//xAAcEAACAgIDAAAAAAAAAAAAAAABAgMRABITICH/2gAIAQEAAQUCg8luI4rGhGtHSzGbSaPGKb81ZKmjCh1//8QAFhEAAwAAAAAAAAAAAAAAAAAAABEg/9oACAEDAQE/ARz/AP/EABcRAAMBAAAAAAAAAAAAAAAAAAARIDH/2gAIAQIBAT8BwU//xAAgEAABAwQCAwAAAAAAAAAAAAAAAQIRISJBUSAxMnGB/9oACAEBAAY/AnzkW5sni0laro0b9GEKvbBaiQJH1DqvH//EAB8QAAICAgEFAAAAAAAAAAAAAAEhABExUUEQYXGBof/aAAgBAQABPyHilNmXUTWRM3f3jk8iCFUuoYZBNuShACASzdGCsM7uVTQXKIhI2CMEM+T1C7tw9P/aAAwDAQACAAMAAAAQU/3BjC//xAAZEQEAAgMAAAAAAAAAAAAAAAABABEQIUH/2gAIAQMBAT8QBW4qb5Kz/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQAQESH/2gAIAQIBAT8QQgGTlFf/xAAgEAEBAAICAQUBAAAAAAAAAAABEQAhMWFBUXGRofCx/9oACAEBAAE/EIRCQuh1cKDuKdawYInO1ffJeuc0G/64X2gkB+mHPlYY/MzzTAbH7vEYhrgtfBMXrAdiV+sIKUbQb3jJYCFaeqYqcDGpJTyrVwTZzlz/2Q=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 불고기 1"
+        title=""
+        src="/static/db46addc21f7dff761683c6120a785e5/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B01.jpeg"
+        srcset="/static/db46addc21f7dff761683c6120a785e5/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B01.jpeg 148w,
+/static/db46addc21f7dff761683c6120a785e5/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B01.jpeg 295w,
+/static/db46addc21f7dff761683c6120a785e5/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B6%88%EA%B3%A0%EA%B8%B01.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>불고기는 3인분 시켰는데, 솔직히 남성 3명이서는 먹고 배부르다고 느끼기엔 좀 부족한 양이다. 그래서 순두부찌개를 옵션으로 넣어놓은 것 같다. 왜냐하면 순두부찌개가 불고기를 1인당 1인분 이상 시켰으면 한 그릇에 3000원밖에 하지 않는다. 이건 살 수 밖에 없다. 왜냐하면 고기를 먹어도 배고프고, 순두부찌개는 맛있으니까.</p>
+<p>불고기를 굽는 팬도 널찍했다. 약간 닭갈비 집?에서 나올 것이라고 해도 믿을만한 약간은 큰 팬이 나왔다. 우리가 직접 굽는 방식이다. 맘에 든다. 나쁘지 않다.</p>
+<p><strong>밑반찬</strong>은 사실 잊어버리고 찍지 않은 것 같은데, 콩나물, 김치, [내가 기억나지 않는 하나], 마늘, 쌈장이 나온다. 맛있다. 계속 먹고 싶은 맛이다. 밑반찬이 맛있어야 입맛이 돌을 수 있다.</p>
+<p>아 참고로, 셀프다. 문제 없다. 맛있으니까.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/9f98df04831e0b4ccfbed93726876f24/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%85%80%ED%94%84.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAECAwX/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAHqpKGyAbWkXMECfKwDPSAA/8QAGxAAAgIDAQAAAAAAAAAAAAAAAAECEQMQEiH/2gAIAQEAAQUC31E6RY0ymUjw8HJDz5GOTev/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPwFj/8QAGBEAAgMAAAAAAAAAAAAAAAAAABIBEBH/2gAIAQIBAT8BUU0aL//EAB4QAAEDBAMAAAAAAAAAAAAAAAABEDERITJBgZHh/9oACAEBAAY/Ank2Qpvs9L0aDKnJkXVW/8QAHxAAAgEEAwEBAAAAAAAAAAAAAAERITFRcRBhoYHB/9oACAEBAAE/IebWXQ8DUmw6/wAyTReQ5nMfQu12PYbSxkeEDDNIva2+P//aAAwDAQACAAMAAAAQLABBCC//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREQ/9oACAEDAQE/EKiojK3/xAAYEQEBAAMAAAAAAAAAAAAAAAABABARYf/aAAgBAgEBPxBVtJumf//EAB8QAQEAAgEEAwAAAAAAAAAAAAERADEhEFFxoWGR8P/aAAgBAQABPxBMTpQQkFIu8wuuyHr8YRF8JhgcaD159YCKFlfUl9GQ7adPGlqubtzUHmZfp+AplXmexGPfcj0//9k='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 셀프"
+        title=""
+        src="/static/9f98df04831e0b4ccfbed93726876f24/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%85%80%ED%94%84.jpeg"
+        srcset="/static/9f98df04831e0b4ccfbed93726876f24/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%85%80%ED%94%84.jpeg 148w,
+/static/9f98df04831e0b4ccfbed93726876f24/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%85%80%ED%94%84.jpeg 295w,
+/static/9f98df04831e0b4ccfbed93726876f24/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%85%80%ED%94%84.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>나는 ‘일단 순두부찌개를 같이 시키면 나중에 배부를지도 모르니까 고기를 먹는 도중에 배고플 것 같으면 따로 더 주문하자’는 전략을 취했는데, 잘한 것 같다. 왜냐하면 막상 순두부찌개를 시키면, 배부름이 서서히 밀려오고 순두부찌개의 양이 실제로 좀 많다 (왜냐하면 따로 메뉴로만으로도 팔 정도이기 때문에).</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/d0d07f27f296df1fd92dd218482f1e3f/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%88%9C%EB%91%90%EB%B6%80%EC%B0%8C%EA%B0%9C.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwIB/9oADAMBAAIQAxAAAAHi32qC7vJJHTOVzQ0VkQRVAk//xAAeEAACAwABBQAAAAAAAAAAAAABAgAREgMEEBMiMv/aAAgBAQABBQKlg5clU0FpC3sCpQjqBnygymMKrFyJcf77f//EABkRAAIDAQAAAAAAAAAAAAAAAAARAQIQE//aAAgBAwEBPwHkIdhE5//EABoRAAICAwAAAAAAAAAAAAAAAAACETEBEBP/2gAIAQIBAT8B7EmFWyRa1//EACAQAAICAQMFAAAAAAAAAAAAAAARAQIhEiJRAyBBYZH/2gAIAQEABj8CUzMrg006emRtv2bSX5FFxWr8NuDODkxXt//EABwQAAICAwEBAAAAAAAAAAAAAAABETEhQVFhkf/aAAgBAQABPyFYvFuSw12yHVex62KcCuweEmILq4OyY1TCzmlwkRX4LoPW5I7stXEhUOz/2gAMAwEAAgADAAAAEDziDHvf/8QAGhEAAgMBAQAAAAAAAAAAAAAAAAERITEQQf/aAAgBAwEBPxDI40NNSR9Nc//EABkRAAMBAQEAAAAAAAAAAAAAAAABMREhEP/aAAgBAgEBPxCpwW+ohI0oQ8//xAAgEAEBAAMAAgIDAQAAAAAAAAABEQAhMUFhUXGBkbHw/9oACAEBAAE/EOkUsgr4rzFJ2opVfb/jAggqVF5qc5lORRXSz+5wSK8p4PrKaDuzb41jwzhtBnyZeyhuyz95YezYNh794VogUevrELf40H45hDf2x2AgDPRmyXP/2Q=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 순두부찌개"
+        title=""
+        src="/static/d0d07f27f296df1fd92dd218482f1e3f/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%88%9C%EB%91%90%EB%B6%80%EC%B0%8C%EA%B0%9C.jpeg"
+        srcset="/static/d0d07f27f296df1fd92dd218482f1e3f/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%88%9C%EB%91%90%EB%B6%80%EC%B0%8C%EA%B0%9C.jpeg 148w,
+/static/d0d07f27f296df1fd92dd218482f1e3f/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%88%9C%EB%91%90%EB%B6%80%EC%B0%8C%EA%B0%9C.jpeg 295w,
+/static/d0d07f27f296df1fd92dd218482f1e3f/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%88%9C%EB%91%90%EB%B6%80%EC%B0%8C%EA%B0%9C.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>순두부찌개도 약간은 특이하다고 말할 수 있겠다. 왜냐하면:</p>
+<ol>
+<li>계란이 들어가지 않는다</li>
+<li>좀 맵다</li>
+<li>대신 두부가 좀 많다</li>
+</ol>
+<p>참고로 순두부 찌개에 들어가는 건더기는 김치와 순두부밖에 없는 듯 했다. 근데 육수가 멸치로 우려낸 맛인 듯 한데, 매우매우 훌륭했다.</p>
+<p>양이 너무 많아서 반절은 그냥 남기게 되었다. 그렇지만 든든하고 엄청 잘 먹었다는 느낌은 없앨래야 없을 수가 없었고, 만족감이 서서히 밀려오기 시작했다. 기분이 좋았다. </p>
+<h1>결론</h1>
+<p><strong>일단은 무난하게 맛있다</strong>. 맛있고, 친구들과 무난히 올 수 있는 식당이라고 생각한다. 컨셉과 주력 메뉴도 다 잡혀 있는 식당이라 가게를 관찰하는 재미나 음식의 맛은 걱정하지 않아도 된다.</p>
+<p>한 가지 아쉬운 점은 순두부찌개에 계란 옵션을 추가하면 좋겠다. 500원 넣고 추가면 100명중 99명은 계란 추가 무조건 한다. 왜 순두부찌개에 계란을 뺐는지 이유가 궁금하다. 업주님께서 감칠맛을 저하시킨다고 판단을 하신 것일까?</p>
+<h1>에필로그</h1>
+<p>아, 아니나 다를까. 어쩐지… 진짜 궁금하긴 해서 네이버에 검색해보니 여러 검색 결과가 나왔는데, <a href="https://blog.naver.com/kyeomjo/221941889694">엄청난 기획으로 이루어진 식당이었다</a>. 칭찬해! </p>
+<p>그리고 심지어 <em>백채에서 새로 만들어 낸 브랜드인 것 같다(!?)</em>. 왜냐하면 네이버에서 검색하면  백채 홈페이지로 연결되는 링크를 볼 수 있다. 정작 링크 타고 들어가면 아무것도 나오지 않는데 말이다. 준비중이어서 그랬나 보다. 하여튼 연관성이 있다. 어쩐지 브랜딩을 확실하게 하더라니까.</p>
+<p><img src="./%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EB%B0%B1%EC%B1%84.png" alt="문기사불백백채"></p>
+<p>그럼 이것으로, <strong>[개발자도 리뷰할 수 있다] 낙성대 문기사불백 리뷰</strong>를 마치겠다. 긴 글 읽어 주셔서 감사합니다.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%83%81%ED%98%B8.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCAwUB/8QAFgEAAwAAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHO0FXZuQ2OcpqmpEyQPrYObAA//8QAHxABAAIBAwUAAAAAAAAAAAAAAgABAxESIQQTFDEy/9oACAEBAAEFAqvbCkjzNNyNVVw/XcAT6rRHhLE2vHlTH6n/xAAYEQACAwAAAAAAAAAAAAAAAAAAEAEREv/aAAgBAwEBPwEtal//xAAYEQACAwAAAAAAAAAAAAAAAAAAEAEREv/aAAgBAgEBPwEpZh//xAAdEAABBAMBAQAAAAAAAAAAAAAAARARIQIxQYGR/9oACAEBAAY/AqUnJDX0vokGmlcvDrUXDK3/xAAhEAEAAgIBAwUAAAAAAAAAAAABABEhMUEQUWFxgbHB8f/aAAgBAQABPyFFo8QszGqNwFeEUGmxMgbeLwHpDbt+QYvaoYZVwGWlB+4RI4aVd5mYbIMvt8QAxhd+en//2gAMAwEAAgADAAAAEPMQvAf/AP/EABgRAQEBAQEAAAAAAAAAAAAAAAEAERAx/9oACAEDAQE/ENTyTbAGHf/EABgRAQADAQAAAAAAAAAAAAAAAAEAEBFB/9oACAECAQE/EFO0wijrf//EACAQAQACAgIBBQAAAAAAAAAAAAERIQAxQXFRYYHB8PH/2gAIAQEAAT8QUjeS09mRGcF6lzB7ZMlr9TiUok1qQnLI3g4CweEQXtvAwggkycwfnGQQMldGV1Ukkr41W8AE4yshJdxx+ZRAgG+jL00h0wEJCQt3hFf0MEgsIp7Yaz//2Q=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="문기사불백 상호"
+        title=""
+        src="/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%83%81%ED%98%B8.jpeg"
+        srcset="/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/59252/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%83%81%ED%98%B8.jpeg 148w,
+/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/20821/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%83%81%ED%98%B8.jpeg 295w,
+/static/d6c67834d4631ef9f2a5d1ea3e3b19ef/ec5fe/%EB%AC%B8%EA%B8%B0%EC%82%AC%EB%B6%88%EB%B0%B1%EC%83%81%ED%98%B8.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+     </p></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEBQH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABxVp7LNvUV5APQCf/xAAcEAEAAgEFAAAAAAAAAAAAAAABAAIhAxESMjT/2gAIAQEAAQUCLby4ryvEDTeuI0qS/qq4/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAEAH/2gAIAQIBAT8BIf/EACAQAAIABQUBAAAAAAAAAAAAAAABAhESMTIDECJBUXH/2gAIAQEABj8CsKXl/TKIVK5GnC32YonSiBfNv//EAB4QAAICAgIDAAAAAAAAAAAAAAERACExQVFhcYGR/9oACAEBAAE/ITaMZEIbhsx5QGHBWTBw5ln7HFkjyPUfAw9SuiKRzoXP/9oADAMBAAIAAwAAABCIwDz/xAAXEQEAAwAAAAAAAAAAAAAAAAAQARFR/9oACAEDAQE/EK0k/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEQEf/aAAgBAgEBPxBGV//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACFBUWFxgaH/2gAIAQEAAT8QkNEXA5KRgoqt+Op4wF6AkZpoJJFhB90mG89ALYcn7MtOxyouboBte2NEeM6u3GqRSr9z/9k=" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 0.5s;transition-delay:0.25s;border-radius:50%"/><noscript><picture><img width="50" height="50" srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/c3bbc/profile-pic.jpg 1x,
+/static/1265356b9e6bab3ff8ccafeaca6d96b8/ac385/profile-pic.jpg 1.5x,
+/static/1265356b9e6bab3ff8ccafeaca6d96b8/587d5/profile-pic.jpg 2x,
+/static/1265356b9e6bab3ff8ccafeaca6d96b8/20b3c/profile-pic.jpg 3x" src="/static/1265356b9e6bab3ff8ccafeaca6d96b8/c3bbc/profile-pic.jpg" alt="Joel Mun" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Joel Mun</strong>. Joel loves Javascript and Typescript. He&#x27;s been looking into Assemblyscript and WebAssembly recently, though.<!-- --> <a href="https://github.com/9oelM">Go check him up on Github!</a></p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2020-01-24--Fundamental-yet-extensive-introduction-to-why-and-how-you-might-want-to-use-redux-observable-for-async-actions/">← <!-- -->Extensive introduction to why and how you might want to use and test redux-observable</a></li><li></li></ul><div id="disqus_thread" identifier="3a27e39b-8169-53c8-996b-39ca31a4440c" title="[개발자도 리뷰 할 수 있다] 낙성대 문기사불백 리뷰" url="https://9oelm.github.io/2020-05-14--[개발자도 리뷰할 수 있다]-낙성대-문기사불백-리뷰/"></div></main><footer>© Joel Mun <!-- -->2020<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a></footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-105275697-3', 'auto', {});
+      
+      
+      
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"2020-05-14-개발자도-리뷰할-수-있다-낙성대-문기사불백-리뷰-acb","path":"/2020-05-14--[개발자도 리뷰할 수 있다]-낙성대-문기사불백-리뷰/"};window.dataPath="76/path---2020-05-14-개발자도-리뷰할-수-있다-낙성대-문기사불백-리뷰-acb-56f-gLzBesHI49FeLAaTX24dJDyG8";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-67b162db32dac4df8e1d.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-218dfb3689e1ed90b306.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-87a06ec9f8b74b5f95a7.js"],"component---src-pages-404-js":["/component---src-pages-404-js-95f5274f97c9156b42f7.js"],"component---src-pages-index-js":["/component---src-pages-index-js-e5fa959f6bd28f72f321.js"],"pages-manifest":["/pages-manifest-7a26ee6b42ca27e517a8.js"]};/*]]>*/</script><script src="/webpack-runtime-8f1e3ace1d82f8100cb5.js" async=""></script><script src="/styles-fa6c583b3cd626e54a0e.js" async=""></script><script src="/app-67b162db32dac4df8e1d.js" async=""></script><script src="/0-63a21d0c1363172370b5.js" async=""></script><script src="/component---src-templates-blog-post-js-87a06ec9f8b74b5f95a7.js" async=""></script></body></html>
