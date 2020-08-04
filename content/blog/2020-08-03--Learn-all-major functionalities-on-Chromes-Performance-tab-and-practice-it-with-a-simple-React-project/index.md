@@ -98,7 +98,7 @@ The entire loading is quite slow if you slow down CPU on Chrome, like this:
 
 This means that on lower-end PCs, it's likely that it's going to be slow like that too. Let's guess for a second. What's making this so slow? Network requests? `generateManyRandomThings` because it's producing so many elements in an array? Save your guess for now. We are going to investigate this thorougly as we are reaching the end of this guide.
 
-You are able to see [the entire source code on Github](https://github.com/9oelM/react-optimization) and [access the deployed website on netlify](https://chrome-react-optimization.netlify.app/). Feel free to open up performance devtools on Chrome and try on your own (the production deployment might behave differently, though)
+You are able to see [the entire source code on Github (Chrome Performance profiles included)](https://github.com/9oelM/react-optimization) and [access the deployed website on netlify](https://chrome-react-optimization.netlify.app/). Feel free to open up performance devtools on Chrome and try on your own (the production deployment might behave differently, though)
 
 ## An overview of all major functionalities in a single slide
 
