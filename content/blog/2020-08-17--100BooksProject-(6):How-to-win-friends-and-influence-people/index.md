@@ -360,7 +360,7 @@ Instead, even for little mistakes, it would be better if you talk about it priva
 - The principles taught in this book will work only when they come from the heart. (231)
 - ... your magic ability to praise people and inspre them with a realization of their latent possibilities. (232)
 
-## My reflection
+## Reflections
 
 I can improve this.
 
