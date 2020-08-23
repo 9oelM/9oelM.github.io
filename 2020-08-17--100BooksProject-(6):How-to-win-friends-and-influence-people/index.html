@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.16aaefe531b6b7795df4.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-4124805c0503dbfe42dd67d7f5715964.woff2) format("woff2"),url(/static/montserrat-latin-100-c8fb2f714bbc7bc3e8dfffa916b286dc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e4bf47bd171a9b2a72dd84c58bf90edf.woff2) format("woff2"),url(/static/montserrat-latin-100italic-d1f3f2d02ee4d7d2d4b1ad865014f189.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-444ae007121264bc1969d49b4031f9b2.woff2) format("woff2"),url(/static/montserrat-latin-200-edbce16a90aa22c297a0307b85789837.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-f316c5d1ec40f3e68654c3f38b3999f3.woff2) format("woff2"),url(/static/montserrat-latin-200italic-d7bbb730d9b5e11720b3eb32326dcca7.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-0a7c6df06e85d978d096d4d18fd8d43d.woff2) format("woff2"),url(/static/montserrat-latin-300-5e86df2cad22d2ef2b03516334afae5e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-c076c4892bc7a4be7b9097e97a35012d.woff2) format("woff2"),url(/static/montserrat-latin-300italic-37c74a8d2d0d36a0a2c6e9a37ee15b0c.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-501ce09c42716a2f6e1503a25eb174c9.woff2) format("woff2"),url(/static/montserrat-latin-400-f29d2b8559699b6beb5b29b25b8bc572.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-882908d9950d9c86ebd380877f293d95.woff2) format("woff2"),url(/static/montserrat-latin-400italic-22e7b04e5f2a901d49d4d342315a715a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-f0f2716c5fe401d175b88715e7d28685.woff2) format("woff2"),url(/static/montserrat-latin-500-991b453bf90a0980e78966d2af7e3d3a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-4590ebba421b3288c305305d7fa7b504.woff2) format("woff2"),url(/static/montserrat-latin-500italic-f3d41e4cdcc2314e49ddcea751d6f87f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-15c24f7109941777774ddd2c636c6a50.woff2) format("woff2"),url(/static/montserrat-latin-600-f6dc6096f48956908c1787d9a722570a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-6d10b80529d5c36c7c09fca7193af0fc.woff2) format("woff2"),url(/static/montserrat-latin-600italic-02c4833312d94b1b0866f073023a250e.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-79982cd1f74c6fa7451bf9b37ead09ff.woff2) format("woff2"),url(/static/montserrat-latin-700-957e93fbbe131a59791cd820d98b7109.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-283438e9577fe6a684466bb100e105ec.woff2) format("woff2"),url(/static/montserrat-latin-700italic-ca627c5ccc65cf80c2ecaea44b997de9.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-35386154b78d046218fc8f88a44ff515.woff2) format("woff2"),url(/static/montserrat-latin-800-756655905d91b77960888262e7d58d35.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-e1b52a7bd83e2324db6d92bdc206844c.woff2) format("woff2"),url(/static/montserrat-latin-800italic-a69f0add9d86c1a84311d7dd8693ba4a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-260c2ea3ef57feb82251952e605a36d5.woff2) format("woff2"),url(/static/montserrat-latin-900-186cae8091da578150d81958e217714a.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-d785fb9fc74588ffb7f306799709a97d.woff2) format("woff2"),url(/static/montserrat-latin-900italic-43b527fe77254f97ea36e2b54e845ec4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-a50c381443e6993188ed9cc4b6806866.woff2) format("woff2"),url(/static/merriweather-latin-300-2c73b119ad85e697123658b8a091ff83.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-bd410cbf8c272acd4fbdd9f61a7015bf.woff2) format("woff2"),url(/static/merriweather-latin-300italic-9deeb422b65afb1daacc039296bb3640.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-f936cb550d4dcd769f75c453207ac5e6.woff2) format("woff2"),url(/static/merriweather-latin-400-ab0616e6d856817eff54eb8c5e1664e4.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-5c9a23d08e2c851e5a25795b940acd4f.woff2) format("woff2"),url(/static/merriweather-latin-400italic-0ab4b54f3b1e8b14cf755970fde8ce35.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-1636f13a52ca3f0eb8784c9c57f62082.woff2) format("woff2"),url(/static/merriweather-latin-700-cc673c945b482dc1378d4a3c95ffd175.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-8b0db67123584893c6591accbc51640c.woff2) format("woff2"),url(/static/merriweather-latin-700italic-513649f5b9ba4675cff15cf3f7ad4f2a.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-46631a9aab93dec3ed34f429dd1a5646.woff2) format("woff2"),url(/static/merriweather-latin-900-a0528570caa2c785891308ce604d8db7.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-a26a8168916e5d4e5485081171d7fdb0.woff2) format("woff2"),url(/static/merriweather-latin-900italic-db42a3f34378e69ef5aebb6717f1f33e.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#ccc;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:0;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}#disqus_thread{width:95%;margin:auto}pre code{white-space:pre-wrap!important;white-space:-moz-pre-wrap!important;white-space:-pre-wrap!important;white-space:-o-pre-wrap!important;word-wrap:break-word!important}</style><meta name="generator" content="Gatsby 2.1.18"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#009688"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><title data-react-helmet="true">100BooksProject: (6): How to Win Friends &amp; Influence People (인간관계론) | Joel&#x27;s dev blog</title><meta data-react-helmet="true" name="description" content="I wrote a summary of each section and my reflections following it. typo alert: I typed so much that I can’t just review all… if you find a typo, please kindly…"/><meta data-react-helmet="true" property="og:title" content="100BooksProject: (6): How to Win Friends &amp; Influence People (인간관계론)"/><meta data-react-helmet="true" property="og:description" content="I wrote a summary of each section and my reflections following it. typo alert: I typed so much that I can’t just review all… if you find a typo, please kindly…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Joel Mun"/><meta data-react-helmet="true" name="twitter:title" content="100BooksProject: (6): How to Win Friends &amp; Influence People (인간관계론)"/><meta data-react-helmet="true" name="twitter:description" content="I wrote a summary of each section and my reflections following it. typo alert: I typed so much that I can’t just review all… if you find a typo, please kindly…"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><link as="script" rel="preload" href="/component---src-templates-blog-post-js-87a06ec9f8b74b5f95a7.js"/><link as="script" rel="preload" href="/0-63a21d0c1363172370b5.js"/><link as="script" rel="preload" href="/app-67b162db32dac4df8e1d.js"/><link as="script" rel="preload" href="/styles-fa6c583b3cd626e54a0e.js"/><link as="script" rel="preload" href="/webpack-runtime-ad3065b6e43d6268e10c.js"/><link as="fetch" rel="preload" href="/static/d/613/path---2020-08-17-100-books-project-6-how-to-win-friends-and-influence-people-f-74-aa9-UUI1l1N7MwyE6d0BbmYsjeRF1A.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div style="margin-left:auto;margin-right:auto;max-width:70rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">Joel&#x27;s dev blog</a></h3></header><main><h1>100BooksProject: (6): How to Win Friends &amp; Influence People (인간관계론)</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">August 17, 2020</p><div><p>I wrote a summary of each section and my reflections following it.</p>
+<p><em>typo alert: I typed so much that I can’t just review all… if you find a typo, please kindly understand that I made a mistake.</em></p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/32653739e3b901dd6068ed44b53d7954/ec5fe/book-cover.jpeg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 540px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGgABAQACAwAAAAAAAAAAAAAAAAQCAwEFBv/EABcBAQEBAQAAAAAAAAAAAAAAAAEAAwL/2gAMAwEAAhADEAAAAZ9vYZ15tYum2fkbGoEWRnpUC//EACAQAAEFAAAHAAAAAAAAAAAAAAIAAQMREgQQExQhIzH/2gAIAQEAAQUCDhzMe1KrULelyZlM0Rya86TAVbpdQ1o+bfP/xAAaEQACAwEBAAAAAAAAAAAAAAABEQACURAS/9oACAEDAQE/ARYmO+Qekorb3//EABgRAAMBAQAAAAAAAAAAAAAAAAABEhAR/9oACAECAQE/AWjhSLW//8QAHhAAAgEEAwEAAAAAAAAAAAAAAAEhAhARMhIgMXH/2gAIAQEABj8CTTUmyzan4bJHJZPSE2RSiKVbbp//xAAfEAEAAgICAgMAAAAAAAAAAAABABEhMUFhcYEQkbH/2gAIAQEAAT8hoKxeZU2ymANxzzhlA/qF5R5uLEy3RzEIFgcSrfoCpXUTuFX2mXch4J3T18Gprn//2gAMAwEAAgADAAAAEHQOjvPf/8QAHBEBAAIBBQAAAAAAAAAAAAAAAQAhEBFhkdHw/9oACAEDAQE/EKoZuOIiBpUfY6z/AP/EABgRAAMBAQAAAAAAAAAAAAAAAAABEBFR/9oACAECAQE/EEcMjlOf/8QAHRABAQEBAQADAQEAAAAAAAAAAREAITFBUWHB8P/aAAgBAQABPxAxuZDTBEEqEUsuQQAGIvjmkcAfD+a5MdwaGk8o/J0wOBVDns+txBPwH7mMkOEXRI0JRV3kD/593I5JwjHXAE/WdR9m/9k='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="book cover"
+        title=""
+        src="/static/32653739e3b901dd6068ed44b53d7954/ec5fe/book-cover.jpeg"
+        srcset="/static/32653739e3b901dd6068ed44b53d7954/59252/book-cover.jpeg 148w,
+/static/32653739e3b901dd6068ed44b53d7954/20821/book-cover.jpeg 295w,
+/static/32653739e3b901dd6068ed44b53d7954/ec5fe/book-cover.jpeg 540w"
+        sizes="(max-width: 540px) 100vw, 540px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h1>Introduction</h1>
+<ul>
+<li>15% of one’s financial success is due to a skill in one’s technical knowledge, and 85% in human engineering (personality and abililty to lead people) (p. xiv, preface). </li>
+<li>Person who’s got some technical knowledge and ability to express ideas, assume leadership, … is the one for higher earning power. (p. xiv, preface)</li>
+</ul>
+<p>9 suggestions on how to get the most out of this book:</p>
+<ol>
+<li>keep the desire to learn and develop the ability to deal with people.</li>
+<li>re-read the chapters for the sake of saving time and getting better results in the long run.</li>
+<li>while reading, stop frequently to think</li>
+<li>read with a pen. Underline important things</li>
+<li>review the book at a constant inverval (e.g. per month)</li>
+<li>learn it by doing it</li>
+<li>probably make some game out of me violating certain principles (e.g. give money to a friend who spots me violating some principle)</li>
+<li>go through a review process at constant intervals for yourself alone (e.g. appraisal of what you’ve all gone through for the last week).</li>
+<li>record the ‘triumphs’ at the end of each chapter.</li>
+</ol>
+<h1>Part 1: Fundamental techniques in handling people</h1>
+<h2>1: If you want to gather honey, don’t kick over the beehive (3~17): Don’t criticize, condemn or complain.</h2>
+<ul>
+<li>People don’t recognize or accept their wrongdoings. They always try to rationalize what they have done. So don’t try to go up to them and directly criticize them to fix things. (3~12) </li>
+<li>When dealing with people, remember we are not dealing with creatures of logic. we are dealing with those of emotion, creatures bristling with prejudices and motivated by pride and vanity (14)</li>
+<li>don’t: criticize, condemn, and complain</li>
+<li>do: understand, forgive (14)</li>
+<li>understanding why they do what they do is more profitable and intriguing than criticism (17)</li>
+</ul>
+<h2>Reflections</h2>
+<p>Personally, I find this part very regrettable, since I’ve been leading my small team, and I cannot deny that I sometimes criticized them for doing something that is not generally acceptable. i.e. telling them this type of code is not good enough, or even wrong. Instead, what I should’ve done is to try to understand why they are writing a code like that in the first place. Why. Why do they not know well about strict equality in javascript? Why can they not organize the architecture of components using clear props and hooks? I think I leaned more onto being emotionally disappointed and not thinking about why. But I really should.</p>
+<p>Also it is very true that people, most of the time, don’t see their faults in themselves, because that’s what and how people are. We are not rational beings. Perhaps that’s why a developer (including me) always says ‘at the time of writing this code, it had to be like this due to such, such and such reasons…’ for writing unsatisfiable lines of code.</p>
+<p>But I do not yet see how this could be applied to peer reviews where I have a feeling that I need to find and tell others about what they need to improve on, because I feel like that’s tantamount to criticism. Well, I’ve only gone through few pages of the book, so I will try to find the answer as I read it.</p>
+<p>But I started to see some pattern already: I don’t want to miss on mentioning this example from the book. A safety manager at a construction site has to get all workers wearing the safety hats all the time, but they don’t, so he has to encourage them somehow. He told them to wear it with authority and the power of regulations, but it doesn’t just work that way. He was able to increase the compliance by asking if the hats were uncomfortable or did not fit properly. And then, he reminded the workers that the hat is to design to protect the workers themselves from serious injuries, finally suggesting that it’d be better the hat could be worn. (6) This may sound like an easy thing, but it’s never easy. Since I am a human being, the first response as someone who’s got a responsibility over other people is frustration and anger. But I believe that the one who ‘upgrades’ those feelings into encouragement and suggestions is the really capable manager.</p>
+<h2>2: The big secret of dealing with people: give honest and sincere appreciation. (18-31)</h2>
+<ul>
+<li>The only way to make people do something I want them to do is to make them want to do it (18).</li>
+<li>The deepest urge in human naure is ‘the desire to be important’. (18)</li>
+<li>Civilization, and the improvement of civizliation, do not exist without the driving desire to be, or feel important (about self). (20)</li>
+<li>People do, can do weird, crazy things to obtain the feeling of importance, while they can also do publicly acclaimed things to do the same. (20-22)</li>
+<li>“The greatest asset I possess, and the way to develop the best that is in a person, is by <strong>appreciation and encouragement</strong>” (24)</li>
+<li>Don’t flatter, but appreciate. Flattery is insincere and ephemeral, imminent to be revealed that it is out of mouth but mind. Give sincere appreciation. Put in efforts actively to give appreciation, since this is one of the most forgotten, neglected virtues (25-31)</li>
+</ul>
+<h2>Reflections</h2>
+<p>Well, yeah. Unfortunately the very nature of a human being is like this. For some underlying reason that we cannot examine for sure, it is much easier to criticize than to appreciate. I am really subject to this principle as well. How many times did I try to find good points in my colleagues or to intentionally put in efforts to actively give them an appreciation? Honestly I hardly remember cases on that. My mindset has been already wrong; I was always thinking of what and why they are not capable of things I think they are supposed to be. I need to transform my mindset into thinking what they are already good about and really trying to give appreciations each time we as a team accomplish little things.</p>
+<p>It’s really weird though, that people are just made to be like this. It’s awkward to give an appreciation. It’s not - on the other hand - to give a criticism. I honestly don’t know why. But I think it’s just what and how (damnned) a person is. </p>
+<h2>3: He who can do this has the whole world with him. He who cannot walks a lonely way: arouse in other person an eager want. (32-50)</h2>
+<ul>
+<li>People don’t care about what you want.</li>
+<li>They care about what they care about.</li>
+<li>When you ask someone to do something, let it always be about what they want but what you want. That way, you gain what you want without even asking for it.</li>
+<li>To do so, put yourself in someone else’s shoes. Think about what would motivate them to do something you want them to do (45)</li>
+</ul>
+<h2>Reflections</h2>
+<p>I start to be highly convinced that this book really stems from deep investigation about inner workings of a person’s mind.</p>
+<p>I only have possessed vague theories about the patterns of how people think and act from my own observations, but I have never been able to put these into materialized form of hypothesis, which is what this book is doing for me instead of me.</p>
+<p>Yes, people do something because they want something, and that’s not going to change. It’s unavoidable. </p>
+<p>I never tried to apply this magical logic in my real-life situations, so I am yet to know about what would happen. But it’s very clear already, to me, that it is just going to work, because I know this is how a person is designed to behave. </p>
+<p>From a company’s perspective, we have something like OKRs, but often they do not align with our real interests. For a few times, I have set up my own OKRs, as well as my team’s OKRs, but they were not really impactful, and just got forgotten as time went by. Maybe we should relate them more with what we really want.</p>
+<h1>Part 2: Six ways to make people like you</h1>
+<h2>1. Do this and you’ll be welcome anywhere: become geniunely interested in other people. (53-65)</h2>
+<ul>
+<li>You can make more friends in two months by becoming interested in other people than you can in two years by trying to get other people interested in you (54)</li>
+<li>Just be geniunely interested in people, and they will like you. Ask questions about their lives, and talk with them. (55-59)</li>
+<li>“If we want to make friends, let’s put ourselves out to do things for other people - things that require time, energy, unselfishness and thoughtfulness.” (60)</li>
+</ul>
+<h2>Reflections</h2>
+<p>For this one, I personally think I’ve been doing well with some people I face at work, but not with everyone. </p>
+<p>I even randomly go up and talk to the members of the business team about very random matters. I just say hi and talk about things about my life and their lives. For some reason the talk always gets funny, because nobody really goes and starts randomly talking to a person in another team. But I think this is really needed, because I have to work closely with the business team in everyday’s work, which is in line with the principles of agile development. How could you make the best teamwork with the people you don’t even say hi to? That’s the reason I say hi almost every day.</p>
+<p>An interesting fact is that as I approach and talk with them, they would tell me about what the business team wants the product team to do, or current status with some of the clients, whether good or bad. They don’t tell me this until I go and start talking to them. But they would if I do. I believe that these little actions form a good bond and teamwork between cooperating teams. I have to keep this going.</p>
+<p>And also, I need to be interested in ALL people - as far as my time and energy would allow - without any discrimination (without considering ‘this guy might be tough to get along with’). Right now I cannot deny the fact that I’m only getting along with the people whom I felt easy to get along with. But I’ve gotta do this for all other people as well. That way they are going to like me as well (if this book is right)</p>
+<p>But one point where I think this book might be a bit outdated on, is that most of the stakeholders in the examples that this book uses to support its argument are human, not machines. For example, A salesman called A showed his/her genuine interested in B to B while A was selling a product to B, and then B responded back with a purchase. Something like that. But what if B were an AI or A were? I mean, this is getting real these days. Big tech companies are making AI pick up restaurants phone calls. Delivery is getting done by robots. Machines are only going to prevail more. Maybe this principle would not work anymore when it gets to the point that quite many things are automated with machines? I will leave it for deeper thoughts for now. </p>
+<h2>2: A simple way to make a good first impression: smile. (66-74)</h2>
+<ul>
+<li>A smile says, “I like you. You make me happy. I am glad to see you.” (66)</li>
+<li>An insincere grin is mechanical and we know it. (67)</li>
+<li>People who smile tend to manage, teach and sell more effectively, and to raise happier children (67)</li>
+<li>The smile also comes through your voice when your face is not necessarily shown to the counterpart (68)</li>
+</ul>
+<h2>Reflections</h2>
+<p>I’m doing quite a good job on this. I tend to smile. But honestly it’s hard to smile on all ocassions I encounter people. I have to train myself a bit more that my smile not only becomes automatic, but sincere at the same time.</p>
+<h2>3: if you don’t do this, you are headed for trouble: remember that a person’s name is to that person the sweetest and most important sound in any language. (75-83)</h2>
+<ul>
+<li>Do put in efforts to memorize the name of people, even if they are just people passing by.</li>
+<li>People feel they are important if you call them by your name (82)</li>
+<li>Deal with all people like this.</li>
+</ul>
+<h2>Reflections</h2>
+<p>Well again I have not been doing this very well. At various places (hard to be told of exact names), I encountered new people, but never tried to encarve their names and spellings into my mind. Action plans: 1. use an app to digialize the namecards I have. 2. make a digital history of the names (and contacts) of new people I met.</p>
+<h2>4: An easy way to become a good conversationalist: be a good listener. Encourage others to talk about themselves.</h2>
+<ul>
+<li>whenever a person talks to you, stop whatever you are doing and listen to him/her (87)</li>
+<li>their egos and feeling of importance can only be palpable when they talk about themselves and accomplishments and you listen to that (93)</li>
+<li>ask about the questions they would enjoy answering (93)</li>
+</ul>
+<h2>Reflections</h2>
+<p>There are countless people I have seen, who don’t have a sense of recognizing they are the only ones who talk in the conversation. Actually that’s not even a conversation because… you don’t converse with someone who only talks to you. It’s … it’s more of him/her talking and you listening. I feel very unfortunate for those. To borrow the terms from this book: ”… inoxicated with their own egos, drunk with a sense of their own importance.” (93) Although this is just another topic (because it’s not about listening but talking from the other side anyways), it’s always a good practice to be cautious about to not become the only one who talks about something for a long time with somebody. An another golden ability I might need to cultivate more upoon is an ability to ‘manage’ the converation when the weight of the talk is biasedly inclining to somebody. Nobody wants that in a big group. </p>
+<h2>5: how to interest people: talk in terms of other people’s interests. (94-98)</h2>
+<ul>
+<li>Study about the field of interest of a visitor when he/she is planning to visit you tomorrow. (94)</li>
+<li>You don’t even need to begin the conversation about what you want if there’s something you want from somebody (95)</li>
+</ul>
+<h2>Reflections</h2>
+<p>Action plans: </p>
+<ol>
+<li>study about the interests of the members of my team, get prepared to talk with them on those subjects</li>
+<li>study about the interests of my friends from news, books, youtube, etc, and try to talk with them, and see if there’s any difference from the past</li>
+</ol>
+<p>Nowadays, it’s become very easier to acquire information about anything due to the development and prevalence of the Internet. Do take advantage of everything about the Internet. Just search on any subjects, digest and prepare it for the incoming encounter.</p>
+<h2>6: How to make people like you instantly: make the other person feel important - and do it sincerely.</h2>
+<ul>
+<li>Little phrases such as “I’m sorry to trouble you,”, “Would you be so kind as to <strong>_</strong>?”, “Won’t you please?”, “Would you mind?”, “Thank you” - little courtesies like these oil the cogs of the monotonous grind of everyday life - and, incidentally, they are the hallmark of good breeding. (102)</li>
+<li>Obviously, to make him like me, Im ust say something nice, not about myself, bbut about him.” (99)</li>
+<li>“Do unto others as you would have others do unto you” (101)</li>
+<li>The unvarnished truth is that almost all the pople you meet feel themselves superior to you in some way, and a sure way to their hearts is to let them realize in some subtle way that you recognize their importance, and recognize it sincerely. (104)</li>
+<li>“You mean a great deal to me and to this company, and you are as important to the success of this restaurant as I am” (110)</li>
+<li>“Talk to poeple about themselves and they will listen for hours” (111)</li>
+</ul>
+<h2>Reflections</h2>
+<p>Action plan: I will need to write the name of the people I know, and then the interests of those people together. And then my research about those areas.</p>
+<h1>Part 3: how to win people to your way of thinking</h1>
+<h2>1: You can’t win an argument: the only way to get the best of an argument is to avoid it.</h2>
+<ul>
+<li>you can’t because if you lose it, you lose it; and if you win it, you lose it (117)</li>
+<li>why? well, suppose you triumph over the other man shoot his argument full of holes and prove that he is <em>non compos mentis</em>. Then what? You will feel fine. But what about him? You have made him feel inferior. You have hurt his pride. He wil resent your triumph. (117)</li>
+<li>why prove to a man he is wrong? Is that going to make him like you? (116)</li>
+<li>there is only one way under high heaven to get the best of an argument - and that is to avoid it. (116)</li>
+<li>… because you will never get your opponent’s good will (118)</li>
+<li>But as soon as his importance was admitted and the argument stopped and he was admitted to expand his ego, he became a sympathetic and kindly human being. (119-120)</li>
+</ul>
+<h2>Reflections</h2>
+<p>So I started to give in when I have a different opinion from my coworker.</p>
+<p>As soon as I have done that, I realized that many times I’m just arguing for my ego, not my idea, because the two conflicting opinions are often just one step away from each other.</p>
+<p>Also, if one’s statement does not directly affect the code health or anything that’s very important, I started to avoid correcting it, because there’s no use for that. I think this is good because it just hurts nobody’s feelings.</p>
+<h2>2: A sure way of making enmies - and how to avoid it: show respect for other person’s opinions. Never say, “You’re wrong”.</h2>
+<ul>
+<li>if you tell them they are wrong, do you make them want to agree with you? Never! For you have struck a direct blow at their intelligence, judgement, pride and self-respect. (123)</li>
+<li>if you are going to prove anything, don’t let anybody know it. Do it subtly, so adroitly, that no one will feel that you are doing it. (124)</li>
+<li>Nobody … will ever object to your saying: “I may be wrong. Let’s examine the facts” (125)</li>
+<li>You will never get into trouble by admitting that you may be wrong. (125)</li>
+<li>Few people are logical. Most of us are prejudiced and biased. Most of us are blighted with preconceived notions, with jealousy, suspicion, fear, envy and pride (126)</li>
+</ul>
+<h2>Reflections</h2>
+<p>The author knows about a person just too much. Very exact and crude. It’s kind of a shame that a person is designed to behave in this way. But that’s how it is. Reading this book up to this point, I am starting to think of a term called ‘human engineering’ out of the blue - I do not even know if this term exists or not - but what the reader is trying to achieve by reading this book should be that. Human engineering. There is absolutely no other better word to describe this.</p>
+<h2>3: If you are wrong, admit it: if you are wrong, admit it quickly and emphatically.</h2>
+<ul>
+<li>The moment you honestly admit that you are wrong right away, the person you are talking with will feel like being more gracious to you. That’s just how it is. (135-136)</li>
+<li>If we know we are going to be rebuked anyhow, isn’t it far better to beat the other person to it and do it ourselves? Isn’t it much easier to listen to self-criticism than to bear condemnation from alien lips? (137)</li>
+<li>By fighting you never get enough, but by yielding you get more than you expected (142)</li>
+</ul>
+<h2>Reflections</h2>
+<p>This is one of the most difficult things. To admit that what I just said is wrong, equivalent to saying I’m not smart and you (Whoever you are) are smart, at least smarter than I am.</p>
+<p>At work, I started saying so many “I don’t know”s, or “I’m not sure”s, and I feel good about it because I am making a safety net. Even if it turns out my statement is wrong, I said I don’t know much, so it’s totally o - nothing to be ashamed of. But when you say “You need to do this because I have done it in the past and it turned out to be working” and it suddenly does not work (which is like half of the cases), then it gets <em>revealed</em> that you are not smart. That’s not a good way. So I decided that I will keep saying “I’m not really sure about this, but …“.</p>
+<h2>4: A drop of honey: begin in a friendly way</h2>
+<ul>
+<li>Will your belligerent tones, your hostile attitude, make it easy for him to agree with you? (143)</li>
+<li>Yet he (Rockefeller) couldn’t have been more gracious, more friendly if he had addressed a group of medical missionaries … Suppose he had told them by his tones and insinuations that they were wrong. (144-145)</li>
+<li>But they may possibly be led to, if we are gentle and fridndly, ever so gentle and ever so friendly. (145)</li>
+<li>No attempt to force his opinions on others. (146-147)</li>
+<li>I decided that showing my anger would not serve any worthwhile purpose. (150)</li>
+</ul>
+<h2>Reflections</h2>
+<p>As a man who’s not trained enough to do this, it’s quite interesting to witness that the first intuition when something’s wrong is that I’ve gotta tell that to the responsible party. It’s often the case that I start talking by listing down the problems and <em>who</em> holds accountable for those.</p>
+<p>But again, following my intuition is never a good choice, as I have been learning from this book; so I decided that I will never begin talking by stating the exact problem I want to solve, which is in most cases not a pleasant thing to be heard by the responsible person.</p>
+<p>Another important thing is that you should <em>not blame the person but the mistake itself</em>. Too many times we just go ahead and hurt one’s feeling. Separate the person from the mistake. Anybody makes a mistake. That person is staying the same. 99% of the times, he/she is just staying the same as a good person. It’s just that they keep making mistakes and we just need to fix them, not the <em>people</em>. </p>
+<h2>5: The secret of Socrates: get the other person saying “yes, yes” immediately.</h2>
+<ul>
+<li>When yo have said “No,” all your pride of personality demands that you remain consistent with yourself. (152)</li>
+<li>Get the other person saying “Yes, yes” at the outset. (152)</li>
+<li>I was determined to get him saying ‘yes, yes’ from the very start (154)</li>
+<li>Do not start from stating the things you and your opponent differ in. State the things both of you agree on anyways. Then slowly move to speak about the ones that you actually differ in.</li>
+</ul>
+<h2>Reflections</h2>
+<p>I experienced and thought about this: when you want to get the other person saying “yes, yes”, you should not immediately start speaking once you encounter your him/her. That’s the case, at least for me. Because my brain runs slow and I need to find the points where we both agree on. So really, the art of speaking might not be without “…uh” or “ummm…”, but <em>with</em> them. Just spend a little more time before speaking. Then you will find really just general points where you all can agree on. </p>
+<h2>6: The safety value in handling complaints: let the other person do the great deal of talking.</h2>
+<ul>
+<li>Let the other people talk themselves out (158)</li>
+<li>If you disagree with them you may be tempted to interrupt. But don’t. It is dangerous. (158)</li>
+<li>My sole participation consisted of smiles, nods and a few gestures. (159)</li>
+<li>Sometimes you don’t even need to speak get a praise from your pair.</li>
+<li>They also had things to boast about and were more ecited about telling me about their accomplishments than about listening to my boasting. (162)</li>
+</ul>
+<h2>7: How to get cooperation: let the other person feel that the idea is his or hers.</h2>
+<ul>
+<li>Isn’t it wiser to make suggetions - and let the other person think out the conclusion? (164)</li>
+<li>I never had … seeking my advice before. It made me feel important (167)</li>
+<li>He didn’t care about credit. He wanted results. So he let Wilson continue to feel that the idea was his. (168)</li>
+</ul>
+<h2>Reflections</h2>
+<p>When I started giving suggestions in the form of a question and emphasized that my idea can always be incorrect, I got more comfortable in suggesting things to my coworkers, and it seemed that they are also feeling better with that.</p>
+<p>To be honest I’ve got many things that I want to directly ask them to change because the way they work might not just work and I feel like I know that. But I don’t do that anymore.</p>
+<p>Now, I always start by asking a question.</p>
+<h2>8: A formula that will work wonders for you: try honestly to see things from the other person’s point of view.</h2>
+<ul>
+<li>Remember that other people may be totally wrong. But they don’t think so. … fool can do that. Try to understand them. Only wise, tolerant, exceptional people even try todo that. (170)</li>
+<li>How would I feel, how would I react if I were in his shoes? (170)</li>
+<li>Starting your conversation by giving the other person the purpose or direction of your conversation, governing what you say by what you would want to hear if you were the listener, and accepting his or her viewpoint will encourage the lisstener to have an open mind to your ideas. (171)</li>
+<li>Why not pause and close your eyes and try to think the whole thing through from another person’s point of view? (174)</li>
+</ul>
+<h2>Reflections</h2>
+<p>Recently I had some affair where I thought some group of people other than me were naturally responsible for the problem that had happened (hard to mention the exact names), but now that I think about it, they put in their own time to plan all things and make things happen. But I didn’t participate in that (of course, it was free to join or not join). But I encountered some problem when I joined the programme they planned and made, I naturally started to blame them in my mind. But the truth is they put in efforts and I didn’t. The truth is, I’ve got absolutely no say in this because I didn’t even try to make it better, and they did.</p>
+<p>Thankfully to my brain, I did not express any signs of my anger on the spot, partially because of this book which just taught me a lot of things - and when intuition commands me to do something when something bad happens, I knew that it’s usually not a right thing - so I just stopped.</p>
+<p>Right now the problem’s gone, so I have a chance to objectively think about what happened. Now that I think about it, first, it’s nothing to be angry about, and second, from their point of view, I would be seen as a person who’s just complaining without even helping in the first place if I expressed my anger.</p>
+<p>So I believe what I still need right now is the ability to objectively think about another person’s perspective.</p>
+<h2>9: What everybody wants: be sympathetic with the other person’s ideas and desires</h2>
+<ul>
+<li>I don’t blame you one iota for feeling as you do. If I were you I would undoubtedly feel just as you do. (176)</li>
+<li>Three-fourths of the people you will ever meet are hungering and thirsting for sympathy. Give it to them, and they will love you. (177)</li>
+<li>After all, if I were she, I would probably feel just as she does. (177)</li>
+<li>… the enormous chemical value of sympathy in neutralizing the acid of hard feelings. (179)</li>
+<li>Sympathy the human species universally craves. The child eagerly displays his injury; or even inflicts a cut or bruise in order to reap abundant sympathy. For the same purpose adults …  (183)</li>
+</ul>
+<h2>10: An appeal that everybody likes: appeal to the nobler motives.</h2>
+<p>a person usually has two reasons for doing a thing: </p>
+<ol>
+<li>one that sounds good: use this one. People get more appealed to this noble motive, than the real one.</li>
+<li>a real one: you don’t need to emphasize that. </li>
+</ol>
+<h2>11: The movies do it, TV does it. Why don’t you do it?: dramatize your ideas.</h2>
+<ul>
+<li>The truth has to be made vivid, interesting, dramatic. You have to use showmanship. The movies do it. Television does it. And you will have to do it if you want attention. (191)</li>
+<li>If I had not dramaized to him the fact that I really wanted to see him, I would probably be still waiting for an appointment. (194)</li>
+</ul>
+<h2>Reflections</h2>
+<p>Thankfully, I feel like I’m really good at this. Whenever I have an interview or an important event like it, I prepare a special way to dramatize my experiences so that I can stand out. <a href="https://9oelm.github.io/2018-04-20--My-story-(1):-changes-that-occurred-from-high-school-to-the-Navy/">An example of one story can be found in this post</a>.</p>
+<h2>12: When nothing else works, try this: throw down a challenge.</h2>
+<ul>
+<li>“The way to get things done, … is to stimulate competition. I do not mean in a sordid, money-getting way, but in the desire to excel.” (197)</li>
+<li>Lawes liked the idea of attempting a job that called for someone “big”. (198)</li>
+<li>The one major factor that motivated people was the work itself. If the work was exciting and interesting, the worker … was motivated to do a good job (199).</li>
+<li>That is what every successful person loves: the game. The chance for self-expression. The chance to prove his or her worth, to excel, to win. (199)</li>
+</ul>
+<h2>Reflections</h2>
+<p>Almost all well motivated individuals I know and saw were excited about some big challenges. They did not like solving an easy problem.</p>
+<p>But my question lasts for another type of person: what about a demotivated person in the first place? I’m sorry to see they are not really encouraged to <em>do work at work</em>. Even if I throw down a challenge, their innate attitude on work is ‘to earn money while not working’, so I don’t know how to deal with this kind of people. Would there be a good solution for this too?</p>
+<h1>Part 4: be a leader: how to change people without giving offense or arousing resentment</h1>
+<h2>1. If you must find fault, tihs is the way to begin: begin with praise and honest appreciation.</h2>
+<ul>
+<li>It is always easier to listen to unpleasant things after we heard some praise of our good points. (205)</li>
+<li>McKinley didn’t want to hurt the man’s feelings. He must not kill the man’s splendid enthusiasm, and yet he had to say “no”. (206)</li>
+<li>Once she realized I had confidence in her, she easily followed my suggestions and soon mastered this function. We have had no problems with her since then (210)</li>
+</ul>
+<h2>Reflections</h2>
+<p>It’s quite absurd that we usually think and behave in a way that’s not really helpful for a coworker whom I think is not productive. I do not look for the good points in him or her; I just look at his or her disadvantages and start the never-ending criticism.</p>
+<p>Okay, but it shouldn’t ever be like that, especially at an environment of startup. First because, it always comes down to the recruiting cost anyways. Even if we fire or not use him or her very much, it’s hard to find a good candidate if you are at a startup at an early stage, because honestly, not so many people are interested in joining an early stage startup. Second, it does not help you anyways to not help your coworker. If your coworker is performing bad and if that’s affecting your performance indirectly too (due to low efficiency, time delayed, etc), it would just be better for you to help that coworker in any ways, e.g. providing valuable feedbacks every single time you see something that can be improved from coworker, learning together with the coworker for knowledge of relevant domain, etc. Third, you are in the same team anyways. The same team means you say hi with each other in the morning. The same team means asking for help whenever needed. And always think in the perspective of the total efficiency: when another member does well, it will double your efficiency if you are closely working with that member.</p>
+<h2>2. How to criticize - and not be hated for it: call attention to people’s mistakes indirectly.</h2>
+<ul>
+<li>Many people begin their criticism with sincere praise followed by the word “but” and ending with a critical statement. … He might then question the sincerity of the original praise … this could be easily overcome by changing the word “but” to “and.” (212)</li>
+<li>If workers did not clean up the space before they left, clean it up by yourself first, and tell them tomorrow that they did an excellent job at cleaning up the space. (213)</li>
+</ul>
+<h2>Reflections</h2>
+<p>This is a hard one. I always struggle when it comes to telling someone that his or her work is not in a sufficient quality. So I tried saying “and” instead of “but”, but it still sounds weird, maybe because I’m not just used to it.</p>
+<p>And whenever I criticize something, I am trying to put it in the best way possible, but it’s also hard, because to criticize easily, I could put any words that would fit into the meaning, but to criticize in kind words, it takes time and a thinking process to create them. I’m still training myself for this.</p>
+<p>So the key to this is not to speak with haste. Whenever you speak fast, you make mistakes, possibly hurting a person’s mind. If you speak slowly and delay the first moment of speaking until you think enough, you prevent mistakes. It makes you feel good that you spoke nicely, and no doubt it works the same way for the listener.</p>
+<h2>3. Talk about your own mistakes first: talk about your own mistakes before criticizing the other person.</h2>
+<ul>
+<li>… you are better than I was at your age. I have been guilty of so many stupid, silly things myself, I have very little inclination to criticize you or anyone. But don’t you think it would have been wiser if you had done so and so? (216)</li>
+<li>“Like many engineers, I have not been noted for my excellent English or spelling …” (216)</li>
+<li>Admitting one’s own mistakes - even when one hasn’t corrected them - can help convince somebody to change his behaviour.(219)</li>
+</ul>
+<h2>Reflections</h2>
+<p>This one has been relatively easy for me; I admit that I’m just the same human being as others; that is to say, I just make the same as or even more mistakes than my peers do. I already know that. That’s why this one sounds easy for me.</p>
+<p>I strongly agree that this one is very powerful one; because it shows that you don’t even deserve to talk about the thing that you are about to give as an advice. But the moment the listener recognizes that, some magic happens; he or she starts to listen carefully. That’s just how human mind works.</p>
+<h2>4. No one likes to take orders: ask questions instead of giving direct orders.</h2>
+<ul>
+<li>He always gave suggestions, not orders. … for example, “Do this or do that,” or “Don’t do this or don’t do that.” He would say, “You might consider this,” or “Do you think that would work?” … “What do you rthink of this?” … He always gave people the opportunity to do things themselves. (220)</li>
+<li>A technique like that saves a person’s pride and gives him or her a feeling of importance. It encourages cooperation instead of rebellion. (220)</li>
+<li>it often stimulates the creativity of the persons whom you ask. (221)</li>
+</ul>
+<h2>Reflections</h2>
+<p>This one is easy too. Always weaken my intention to give an order, and instead ask a question. Never emphasize to the listener that he or she needs to do it. In most cases, they already know about the importance of what I’m saying; it’s just a matter of accepting my suggestion or not.</p>
+<p>Therefore I changed my old attitude. In the past I said, “You should write your code like … because … .” But now I say, “Do you think writing … would be a better solution?” or “It’s just my opinion, but it seems that … might be better,” followed by “but it’s only my suggestion. I could always be wrong.” Maybe it makes them feel comfortable too, but I feel so too, because my suggestion could really be wrong! If mine is wrong and if I insisted it, I would be very ashamed of it. But since I already have said my suggestion could just be wrong, I feel relatively relaxed that way. And if it turns out to be a wrong suggestion, all I have to say is: “oh it’s really wrong. sorry.”</p>
+<h2>5. Let the other person save face</h2>
+<ul>
+<li>We ride roughshod over the feelings of others, getting our own way, finding fault, issuing threats, criticizing … in front of others, without even considering the hurt to the other person’s pride. (223)</li>
+<li>I … expecting my boss to blow up. Instead, he thanked me for my work … and he had confidence that … would be accurate and meaningful to the company. … he had faith in me and knew I had done by best. (226)</li>
+<li>What matters is not what I think of him, but what he thinks of himself. Hurting a man in his dignity is a crime. (226)</li>
+</ul>
+<h2>Reflections</h2>
+<p>It might sound like an easy job, but whenever you find some fault in someone, don’t speak it out loud in front of some other colleagues. It kills the listener. The atmosphere suddenly changes; everyone who is in the hearing range of the conversation would feel it and the listener would be ashmed as much as that. Never speak low of someone in front of anyone. One time, I made a little mistake at work, and someone told me directly in front of a few people why I did my work like that (loudly enough, so that others can hear too). Wow. Then everyone looked at me for a second, nobody spoke a word… and then we resumed work. That was a shameful experiencem and I’m sure nobody wants that.</p>
+<p>Instead, even for little mistakes, it would be better if you talk about it privately with the smallest number of relevant parties (best if just him or her alone)</p>
+<h2>6. How to spur people on to success: praise the slightest improvement and praise every improvement. Be “hearty in your approbation and lavish in your praise.”</h2>
+<ul>
+<li>… the moment a dog showed the lightest improvement, Pete patted and praised him … That’s nothing new. (227)</li>
+<li>… we are somehow reluctant to give our fellow the warm sunshine of praise. (227)</li>
+<li>His old schoolmaster gave him a little praise … that praise changed the future of that boy and made a lasting impression on the history of English literature … His name: H. G. Wells. (229)</li>
+<li>Because he had singled out a specific accomplishment, rather than just making general flattering remarks, his praise bacme much more meaningful … (231)</li>
+<li>The principles taught in this book will work only when they come from the heart. (231)</li>
+<li>… your magic ability to praise people and inspre them with a realization of their latent possibilities. (232)</li>
+</ul>
+<h2>My reflection</h2>
+<p>I can improve this.</p>
+<ol>
+<li>I do not praise the slightest improvement.</li>
+<li>I tend to point out some little mistakes on the other hand.</li>
+<li>It feels a bit awkward to praise the slightest improvement. I think this is really about how wrong a human being is born to be. Even if you are in the same team and working together, you sometimes don’t just feel like praising somebody else, but you can criticize someone very easily. </li>
+</ol>
+<p>So I can do these:</p>
+<ol>
+<li>Train myself to get used to praise someone, and awkward to criticize someone. That’s the only way right now.</li>
+<li>Train myself to see the good sides of a person instead of the opposite sides.</li>
+</ol>
+<p>To do these, I really need to be awake for these goals at work, because such good things don’t usually come out of my mind.</p>
+<h2>7. Give a dog a good name: give the other person a fine reputation to live up to.</h2>
+<ul>
+<li>Instead of bawling him out or threatening him, Mr. Henke called him into his office and had a heart-to-heart talk with him. (233)</li>
+<li>In short, if you want to improve a person in a certain respect, act as though that particular trait were already one of his or her outstanding characteristics. (234)</li>
+</ul>
+<h2>Reflections</h2>
+<p>I agreed. There’s no reason to say that a person is not achieving up to standards even if he or she actually is not (if you are not at a negotiation for salary increase). Encouragement helps.</p>
+<p>But the actuality is that if a colleague keeps asking for help, I sometimes just get frustrated, because I feel like he or she is not working up to his or her expectations. I should recognize that this frustration does not help anybody, including me. I shouldn’t just do this.</p>
+<h2>8. Make the fault seem easy to correct and use encouragement.</h2>
+<ul>
+<li>… but thed fundamentals were all right, and she assured me I woudln’t have any trouble learning a few new steps. (238)</li>
+<li>Tell your child, your spouse, or your employee that he or she is stupid or dumb at a certain thing, has no gift for it, and is doing it all wrong, and hyou have destroyed almost every incentive to try to improve. … But … make the thing seem easy to do, let the other person know that you have faith in his ability to do it, that he has an underdeveloped flair for it (239)</li>
+<li>We celebrated each reduction. (241)</li>
+</ul>
+<h2>9. Making people glad to do what you want: make the other person happy about doing the thing you suggest.</h2>
+<ul>
+<li>it was House’s thorny task to break the unwelcome news to Bryan without giving him offense. … House practically told Bryan that he was <em>too important</em> for the job - and Bryan was satisfied. (243)</li>
+<li>Always make the other person happy about doing the thing you suggest. (244)</li>
+<li>he did it so adroitly that the other person was at least contented with his refusal. (245)</li>
+<li>This new responsibility and title changed her attitude completely, and she fulfilled her duties satisfactorily from then on. … This technique of giving titles and authority worked for Napoleon and it will work for you. (245-246)</li>
+</ul>
+<h2>Reflections</h2>
+<p>So recently I started to give suggestions from my colleague’s perspective: e.g. when I want to say that “I don’t want you to work on this,” he or she might not like me saying this, because it might suggest that he or she is just incompetent at working on this. Instead, I try to say something like this: “I know you are already burdened with so much work, so I just want to lessen the amount of the work you have right now. Don’t burden yourself with more work, you know what I am saying, right?” And usually this one went right as I intended.</p>
+<h1>More remarks I want to make after reading the book</h1>
+<ol>
+<li>
+<p>The principles suggested by this book are quite similar to Christian values. I mean, to a surprising extent, for some reason. But I am not sure why they are. I just know that they are.</p>
+</li>
+<li>
+<p>People always have a reason for what they do. </p>
+<p>Every day you get too see really weird people. I mean really weird ones. Very recently, I saw a man who was throwing down his stuffs to a crosswalk, in the middle of the road, disturbing cars from going anywhere. It might sound weird, but there should just be a reason for that. If he’s crazy, there must be a reason for that. If he got drunk, there must be a reason for that too.</p>
+<p>Likewise, I saw so many different people coming across the world (thankfully I did not only live in my home country but other ones too), living in Hong Kong, China, and Korea… and some other, although durations of staying relatively shorter.</p>
+<p>Everyone thinks differently. That’s just how it is. And I feel grateful that I can think and <em>accept</em> this, because it’s actually pretty hard to embrace this.</p>
+</li>
+<li>
+<p>The relation between AI and the principles suggested by this book</p>
+<p>This is really just a random thought, but this book might get outdated in the future when AI talks with us. The future might just be very imminent; we already have AI calling phones with us. Would they be subject to the principles Dale listed down in the book too? That’s just something to think about.</p>
+</li>
+<li>
+<p>While reading this book, I gave a little online gift (gifticon) to one of my friends with sincere and good intention, and soon, in return, I received a  of a cup of americano, which is even more expensive than what I had to pay.</p>
+</li>
+<li>
+<p>Overall commentary: this book is grounded upon stunning amount of observation on human nature. Then the author builds up the suggestions for us upon those mundane yet insightful observations he made over his lifetime. He also allows me to reflect upon myself because I am also the one whom he describes in his book as “prejudiced and biased, … blighted with preconceived notions, with jealousy, suspicion, fear, envy and pride”. So, really, this book is two-fold. First, it helps you get shaped into a better person yourself. Second, it teaches you how to make friends and influence people.</p>
+</li>
+<li>
+<p>The bottom line of this book is humility, although it never said so. If you list down the things that this Dale asks you to do, you will easily find that this is just a book on how to be humble.</p>
+</li>
+</ol></div><hr style="margin-bottom:1.75rem"/><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMEBQH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABxVp7LNvUV5APQCf/xAAcEAEAAgEFAAAAAAAAAAAAAAABAAIhAxESMjT/2gAIAQEAAQUCLby4ryvEDTeuI0qS/qq4/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAEAH/2gAIAQIBAT8BIf/EACAQAAIABQUBAAAAAAAAAAAAAAABAhESMTIDECJBUXH/2gAIAQEABj8CsKXl/TKIVK5GnC32YonSiBfNv//EAB4QAAICAgIDAAAAAAAAAAAAAAERACExQVFhcYGR/9oACAEBAAE/ITaMZEIbhsx5QGHBWTBw5ln7HFkjyPUfAw9SuiKRzoXP/9oADAMBAAIAAwAAABCIwDz/xAAXEQEAAwAAAAAAAAAAAAAAAAAQARFR/9oACAEDAQE/EK0k/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEQEf/aAAgBAgEBPxBGV//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACFBUWFxgaH/2gAIAQEAAT8QkNEXA5KRgoqt+Op4wF6AkZpoJJFhB90mG89ALYcn7MtOxyouboBte2NEeM6u3GqRSr9z/9k=" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition:opacity 0.5s;transition-delay:0.25s;border-radius:50%"/><noscript><picture><img width="50" height="50" srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/c3bbc/profile-pic.jpg 1x,
+/static/1265356b9e6bab3ff8ccafeaca6d96b8/ac385/profile-pic.jpg 1.5x,
+/static/1265356b9e6bab3ff8ccafeaca6d96b8/587d5/profile-pic.jpg 2x,
+/static/1265356b9e6bab3ff8ccafeaca6d96b8/20b3c/profile-pic.jpg 3x" src="/static/1265356b9e6bab3ff8ccafeaca6d96b8/c3bbc/profile-pic.jpg" alt="Joel Mun" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Joel Mun</strong>. Joel loves Javascript and Typescript. He&#x27;s been looking into Assemblyscript and WebAssembly recently, though.<!-- --> <a href="https://github.com/9oelM">Go check him up on Github!</a></p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2020-08-03--Learn-all-major functionalities-on-Chromes-Performance-tab-and-practice-it-with-a-simple-React-project/">← <!-- -->Learn all major functionalities on Chrome&#x27;s Performance tab and practice it with a simple React project</a></li><li></li></ul><div id="disqus_thread" identifier="c4fd0e97-525a-5309-9344-b6a7f176005f" title="100BooksProject: (6): How to Win Friends &amp; Influence People (인간관계론)" url="https://9oelm.github.io/2020-08-17--100BooksProject-(6):How-to-win-friends-and-influence-people/"></div></main><footer>© Joel Mun <!-- -->2020<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a></footer></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-105275697-3', 'auto', {});
+      
+      
+      
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"2020-08-17-100-books-project-6-how-to-win-friends-and-influence-people-f74","path":"/2020-08-17--100BooksProject-(6):How-to-win-friends-and-influence-people/"};window.dataPath="613/path---2020-08-17-100-books-project-6-how-to-win-friends-and-influence-people-f-74-aa9-UUI1l1N7MwyE6d0BbmYsjeRF1A";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-67b162db32dac4df8e1d.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-218dfb3689e1ed90b306.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-87a06ec9f8b74b5f95a7.js"],"component---src-pages-404-js":["/component---src-pages-404-js-95f5274f97c9156b42f7.js"],"component---src-pages-index-js":["/component---src-pages-index-js-e5fa959f6bd28f72f321.js"],"pages-manifest":["/pages-manifest-f2f8a57b0e1f6594e99e.js"]};/*]]>*/</script><script src="/webpack-runtime-ad3065b6e43d6268e10c.js" async=""></script><script src="/styles-fa6c583b3cd626e54a0e.js" async=""></script><script src="/app-67b162db32dac4df8e1d.js" async=""></script><script src="/0-63a21d0c1363172370b5.js" async=""></script><script src="/component---src-templates-blog-post-js-87a06ec9f8b74b5f95a7.js" async=""></script></body></html>
