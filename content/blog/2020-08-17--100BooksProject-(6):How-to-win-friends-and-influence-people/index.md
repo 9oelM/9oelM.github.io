@@ -417,11 +417,6 @@ So recently I started to give suggestions from my colleague's perspective: e.g. 
 
     This is really just a random thought, but this book might get outdated in the future when AI talks with us. The future might just be very imminent; we already have AI calling phones with us. Would they be subject to the principles Dale listed down in the book too? That's just something to think about.
 
-4. Values conflicting with what we do at a fast growing company
-
-    It's always a long-term plan.
-
-5. While reading this book, I gave a little online gift (gifticon) to one of my friends with sincere and good intention, and soon, in return, I received a  of a cup of americano, which is even more expensive than what I had to pay.
-6. Reflecting on myself as a 'friend' in _How to win Friends..._, and as a 'person' in _& influence People_: am I subduing my ego well?
-7. Overall commentary: this book is grounded upon stunning amount of observation on human nature. Then the author builds up the suggestions for us upon those mundane yet insightful observations he made over his lifetime. He also allows me to reflect upon myself because I am also the one whom he describes in his book as "prejudiced and biased, ... blighted with preconceived notions, with jealousy, suspicion, fear, envy and pride". So, really, this book is two-fold. First, it helps you get shaped into a better person yourself. Second, it teaches you how to make friends and influence people.
-8. The bottom line of this book is humility, although it never said so. If you list down the things that this Dale asks you to do, you will easily find that this is just a book on how to be humble.
+4. While reading this book, I gave a little online gift (gifticon) to one of my friends with sincere and good intention, and soon, in return, I received a  of a cup of americano, which is even more expensive than what I had to pay.
+5. Overall commentary: this book is grounded upon stunning amount of observation on human nature. Then the author builds up the suggestions for us upon those mundane yet insightful observations he made over his lifetime. He also allows me to reflect upon myself because I am also the one whom he describes in his book as "prejudiced and biased, ... blighted with preconceived notions, with jealousy, suspicion, fear, envy and pride". So, really, this book is two-fold. First, it helps you get shaped into a better person yourself. Second, it teaches you how to make friends and influence people.
+6. The bottom line of this book is humility, although it never said so. If you list down the things that this Dale asks you to do, you will easily find that this is just a book on how to be humble.
