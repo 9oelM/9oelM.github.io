@@ -14,7 +14,6 @@ function Bio() {
           <div
             style={{
               display: `flex`,
-              marginBottom: rhythm(2.5),
             }}
           >
             <Image
@@ -31,7 +30,7 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>. Joel loves Javascript and Typescript. He's been looking into Assemblyscript and WebAssembly recently, though.  
+              Written by <strong>{author}</strong>. Joel's been interested in Javascript, Typescript, Assemblyscript, Rust, Dart, and React, Flutter, and more.  
               {` `}
               <a href={`https://github.com/${social.twitter}`}>
                 Go check him up on Github!
