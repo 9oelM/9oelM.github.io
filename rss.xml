@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 13 Sep 2020 15:08:17 GMT</lastBuildDate><item><title><![CDATA[How to make useSelector not a disaster]]></title><description><![CDATA[Disclaimer: We will focus on  itself in this article, rather than third-party libraries like , because it’s out of scope of the article…]]></description><link>https://9oelm.github.io/2020-09-13--How-to-make-useSelector-not-a-disaster/</link><guid isPermaLink="false">https://9oelm.github.io/2020-09-13--How-to-make-useSelector-not-a-disaster/</guid><pubDate>Sun, 13 Sep 2020 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;Disclaimer&lt;/em&gt;: We will focus on &lt;code class=&quot;language-text&quot;&gt;useSelector&lt;/code&gt; itself in this article, rather than third-party libraries like &lt;code class=&quot;language-text&quot;&gt;reselect&lt;/code&gt;, because it’s out of scope of the article. &lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 18 Sep 2020 13:10:29 GMT</lastBuildDate><item><title><![CDATA[How to make useSelector not a disaster]]></title><description><![CDATA[Disclaimer: We will focus on  itself in this article, rather than third-party libraries like , because it’s out of scope of the article…]]></description><link>https://9oelm.github.io/2020-09-13--How-to-make-useSelector-not-a-disaster/</link><guid isPermaLink="false">https://9oelm.github.io/2020-09-13--How-to-make-useSelector-not-a-disaster/</guid><pubDate>Sun, 13 Sep 2020 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;em&gt;Disclaimer&lt;/em&gt;: We will focus on &lt;code class=&quot;language-text&quot;&gt;useSelector&lt;/code&gt; itself in this article, rather than third-party libraries like &lt;code class=&quot;language-text&quot;&gt;reselect&lt;/code&gt;, because it’s out of scope of the article. &lt;/p&gt;
 &lt;h1&gt;How was it like before?&lt;/h1&gt;
 &lt;p&gt;Now, before talking about &lt;code class=&quot;language-text&quot;&gt;useSelector&lt;/code&gt;, we need to know some background. Let’s go back to pre-function component era, where all we needed to care about were the &lt;code class=&quot;language-text&quot;&gt;props&lt;/code&gt;. Not so much you needed to do. Choices were &lt;code class=&quot;language-text&quot;&gt;PureComponent&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;shouldComponentUpdate&lt;/code&gt;. Nothing else. Like this:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;
@@ -10487,7 +10487,48 @@ Entry -&amp;gt; Jump to Image&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Select application
 Entry -&amp;gt; Jump to Entry&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;The suspicious look suspicious.&lt;/h3&gt;
-&lt;p&gt;Suspicious files often do not have or have weird descriptions, and do strange registry operations. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[MD5 and SHA]]></title><description><![CDATA[Sources Lifewire SSLStore Hash A hashing algorithm is a mathematical function that condenses data to a fixed size.  It is easier for the…]]></description><link>https://9oelm.github.io/2018-05-12--MD5-and-SHA/</link><guid isPermaLink="false">https://9oelm.github.io/2018-05-12--MD5-and-SHA/</guid><pubDate>Sat, 12 May 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Sources&lt;/h3&gt;
+&lt;p&gt;Suspicious files often do not have or have weird descriptions, and do strange registry operations. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Windows Registry]]></title><description><![CDATA[Sources microsoft MSDN microsoft MSDN 2 comodo.com What is it “A central hierarchical database used in Microsoft Windows 98, Windows CE…]]></description><link>https://9oelm.github.io/2018-05-12--Windows-Registry/</link><guid isPermaLink="false">https://9oelm.github.io/2018-05-12--Windows-Registry/</guid><pubDate>Sat, 12 May 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Sources&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://support.microsoft.com/en-us/help/256986/windows-registry-information-for-advanced-users&quot;&gt;microsoft MSDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms724182(v=vs.85).aspx&quot;&gt;microsoft MSDN 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://help.comodo.com/topic-159-1-290-3248-.html&quot;&gt;comodo.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;What is it&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“A central hierarchical database used in Microsoft Windows 98, Windows CE, Windows NT, and Windows 2000 &lt;strong&gt;used to store information that is necessary to configure the system&lt;/strong&gt; for one or more users, applications and hardware devices.” &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Registry contains information that Windows &lt;strong&gt;continually references during operation&lt;/strong&gt;, such as profiles for each user, the applications installed on the computer and the types of documents that each can create, property sheet settings for folders and application icons, what hardware exists on the system, and the ports that are being used. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Predefined registry keys (copied directly from microsoft)&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HKEY_CURRENT_USER	Contains the root of the configuration information for the user who is currently logged on. The user&amp;#39;s folders, screen colors, and Control Panel settings are stored here. This information is associated with the user&amp;#39;s profile. This key is sometimes abbreviated as &amp;quot;HKCU.&amp;quot;
+
+HKEY_USERS	Contains all the actively loaded user profiles on the computer. 
+
+HKEY_CURRENT_USER is a subkey of HKEY_USERS. HKEY_USERS is sometimes abbreviated as &amp;quot;HKU.&amp;quot;
+
+HKEY_LOCAL_MACHINE	Contains configuration information particular to the computer (for any user). This key is sometimes abbreviated as &amp;quot;HKLM.&amp;quot;
+
+HKEY_CLASSES_ROOT	
+Is a subkey of HKEY_LOCAL_MACHINE\Software. The information that is stored here makes sure that the correct program opens when you open a file by using Windows Explorer. This key is sometimes abbreviated as &amp;quot;HKCR.&amp;quot; Starting with Windows 2000, this information is stored under both the HKEY_LOCAL_MACHINE and HKEY_CURRENT_USER keys. The HKEY_LOCAL_MACHINE\Software\Classes key contains default settings that can apply to all users on the local computer. The HKEY_CURRENT_USER\Software\Classes key contains settings that override the default settings and apply only to the interactive user. The HKEY_CLASSES_ROOT key provides a view of the registry that merges the information from these two sources. HKEY_CLASSES_ROOT also provides this merged view for programs that are designed for earlier versions of Windows. To change the settings for the interactive user, changes must be made under HKEY_CURRENT_USER\Software\Classes instead of under HKEY_CLASSES_ROOT. To change the default settings, changes must be made under HKEY_LOCAL_MACHINE\Software\Classes. If you write keys to a key under HKEY_CLASSES_ROOT, the system stores the information under HKEY_LOCAL_MACHINE\Software\Classes. If you write values to a key under HKEY_CLASSES_ROOT, and the key already exists under HKEY_CURRENT_USER\Software\Classes, the system will store the information there instead of under HKEY_LOCAL_MACHINE\Software\Classes.
+
+HKEY_CURRENT_CONFIG	Contains information about the hardware profile that is used by the local computer at system startup.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Jargons and registry structure&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HKEY_LOCAL_MACHINE  --&amp;gt; Called &amp;#39;Hive&amp;#39;
+|
+--HARDWARE --&amp;gt; Called &amp;#39;Key&amp;#39;
+|
+--SAM
+|
+--SECURITY
+|
+--SOFTWARE
+    |
+    --...
+    |
+    --Google --&amp;gt; Called &amp;#39;Subkey&amp;#39;
+    |
+    --Other apps&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[MD5 and SHA]]></title><description><![CDATA[Sources Lifewire SSLStore Hash A hashing algorithm is a mathematical function that condenses data to a fixed size.  It is easier for the…]]></description><link>https://9oelm.github.io/2018-05-12--MD5-and-SHA/</link><guid isPermaLink="false">https://9oelm.github.io/2018-05-12--MD5-and-SHA/</guid><pubDate>Sat, 12 May 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Sources&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.lifewire.com/what-is-md5-2625937&quot;&gt;Lifewire&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.thesslstore.com/blog/difference-sha-1-sha-2-sha-256-hash-algorithms/&quot;&gt;SSLStore&lt;/a&gt;&lt;/li&gt;
@@ -10575,48 +10616,7 @@ note: x is n + 1 where n is previous sequence number it just had.&lt;/code&gt;&l
 &lt;/ol&gt;
 &lt;h3&gt;On wireshark&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;tcp.flags.ack == 1 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;to see ack packets.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Windows Registry]]></title><description><![CDATA[Sources microsoft MSDN microsoft MSDN 2 comodo.com What is it “A central hierarchical database used in Microsoft Windows 98, Windows CE…]]></description><link>https://9oelm.github.io/2018-05-12--Windows-Registry/</link><guid isPermaLink="false">https://9oelm.github.io/2018-05-12--Windows-Registry/</guid><pubDate>Sat, 12 May 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Sources&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://support.microsoft.com/en-us/help/256986/windows-registry-information-for-advanced-users&quot;&gt;microsoft MSDN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/en-us/library/windows/desktop/ms724182(v=vs.85).aspx&quot;&gt;microsoft MSDN 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://help.comodo.com/topic-159-1-290-3248-.html&quot;&gt;comodo.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;What is it&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“A central hierarchical database used in Microsoft Windows 98, Windows CE, Windows NT, and Windows 2000 &lt;strong&gt;used to store information that is necessary to configure the system&lt;/strong&gt; for one or more users, applications and hardware devices.” &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The Registry contains information that Windows &lt;strong&gt;continually references during operation&lt;/strong&gt;, such as profiles for each user, the applications installed on the computer and the types of documents that each can create, property sheet settings for folders and application icons, what hardware exists on the system, and the ports that are being used. &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;Predefined registry keys (copied directly from microsoft)&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HKEY_CURRENT_USER	Contains the root of the configuration information for the user who is currently logged on. The user&amp;#39;s folders, screen colors, and Control Panel settings are stored here. This information is associated with the user&amp;#39;s profile. This key is sometimes abbreviated as &amp;quot;HKCU.&amp;quot;
-
-HKEY_USERS	Contains all the actively loaded user profiles on the computer. 
-
-HKEY_CURRENT_USER is a subkey of HKEY_USERS. HKEY_USERS is sometimes abbreviated as &amp;quot;HKU.&amp;quot;
-
-HKEY_LOCAL_MACHINE	Contains configuration information particular to the computer (for any user). This key is sometimes abbreviated as &amp;quot;HKLM.&amp;quot;
-
-HKEY_CLASSES_ROOT	
-Is a subkey of HKEY_LOCAL_MACHINE\Software. The information that is stored here makes sure that the correct program opens when you open a file by using Windows Explorer. This key is sometimes abbreviated as &amp;quot;HKCR.&amp;quot; Starting with Windows 2000, this information is stored under both the HKEY_LOCAL_MACHINE and HKEY_CURRENT_USER keys. The HKEY_LOCAL_MACHINE\Software\Classes key contains default settings that can apply to all users on the local computer. The HKEY_CURRENT_USER\Software\Classes key contains settings that override the default settings and apply only to the interactive user. The HKEY_CLASSES_ROOT key provides a view of the registry that merges the information from these two sources. HKEY_CLASSES_ROOT also provides this merged view for programs that are designed for earlier versions of Windows. To change the settings for the interactive user, changes must be made under HKEY_CURRENT_USER\Software\Classes instead of under HKEY_CLASSES_ROOT. To change the default settings, changes must be made under HKEY_LOCAL_MACHINE\Software\Classes. If you write keys to a key under HKEY_CLASSES_ROOT, the system stores the information under HKEY_LOCAL_MACHINE\Software\Classes. If you write values to a key under HKEY_CLASSES_ROOT, and the key already exists under HKEY_CURRENT_USER\Software\Classes, the system will store the information there instead of under HKEY_LOCAL_MACHINE\Software\Classes.
-
-HKEY_CURRENT_CONFIG	Contains information about the hardware profile that is used by the local computer at system startup.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Jargons and registry structure&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HKEY_LOCAL_MACHINE  --&amp;gt; Called &amp;#39;Hive&amp;#39;
-|
---HARDWARE --&amp;gt; Called &amp;#39;Key&amp;#39;
-|
---SAM
-|
---SECURITY
-|
---SOFTWARE
-    |
-    --...
-    |
-    --Google --&amp;gt; Called &amp;#39;Subkey&amp;#39;
-    |
-    --Other apps&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Base64, Unicode, ASCII, URL]]></title><description><![CDATA[Base64 Sources lifewire mozilla oracle base64 helper Definition “Base64 is a group of similar binary-to-text encoding schemes that represent…]]></description><link>https://9oelm.github.io/2018-05-11--Base64,-Unicode,-ASCII,-URL/</link><guid isPermaLink="false">https://9oelm.github.io/2018-05-11--Base64,-Unicode,-ASCII,-URL/</guid><pubDate>Fri, 11 May 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Base64&lt;/h2&gt;
+&lt;p&gt;to see ack packets.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Base64, Unicode, ASCII, URL]]></title><description><![CDATA[Base64 Sources lifewire mozilla oracle base64 helper Definition “Base64 is a group of similar binary-to-text encoding schemes that represent…]]></description><link>https://9oelm.github.io/2018-05-11--Base64,-Unicode,-ASCII,-URL/</link><guid isPermaLink="false">https://9oelm.github.io/2018-05-11--Base64,-Unicode,-ASCII,-URL/</guid><pubDate>Fri, 11 May 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Base64&lt;/h2&gt;
 &lt;h3&gt;Sources&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.lifewire.com/base64-encoding-overview-1166412&quot;&gt;lifewire&lt;/a&gt;&lt;/li&gt;
@@ -11399,43 +11399,7 @@ obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cool&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// more awesome&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Presentation design: Marketing project on Spotify]]></title><description><![CDATA[1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19]]></description><link>https://9oelm.github.io/2018-04-08--Presentation-design:-Marketing-project-on-Spotify/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--Presentation-design:-Marketing-project-on-Spotify/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/first-slide_orig.png&quot; alt=&quot;1&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide1_1.jpg&quot; alt=&quot;2&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide2.jpg&quot; alt=&quot;3&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide3.jpg&quot; alt=&quot;4&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide4.jpg&quot; alt=&quot;5&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide5.jpg&quot; alt=&quot;6&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide6.jpg&quot; alt=&quot;7&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide7.jpg&quot; alt=&quot;8&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide8.jpg&quot; alt=&quot;9&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide9.jpg&quot; alt=&quot;10&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide10.jpg&quot; alt=&quot;11&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide11.jpg&quot; alt=&quot;12&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide14.jpg&quot; alt=&quot;13&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide15.jpg&quot; alt=&quot;14&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide18.jpg&quot; alt=&quot;15&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide19.jpg&quot; alt=&quot;16&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide29.jpg&quot; alt=&quot;17&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide31.jpg&quot; alt=&quot;18&quot;&gt;
-&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide32.jpg&quot; alt=&quot;19&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[GOOP logs]]></title><description><![CDATA[GOOP does not have a logo yet. I have to make one.  Before doing anything else, I have to know about Jeff’s business clearly. Otherwise, I…]]></description><link>https://9oelm.github.io/2018-04-08--GOOP-logs/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--GOOP-logs/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;GOOP does not have a logo yet. I have to make one. &lt;/p&gt;
+obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cool&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// more awesome&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[GOOP logs]]></title><description><![CDATA[GOOP does not have a logo yet. I have to make one.  Before doing anything else, I have to know about Jeff’s business clearly. Otherwise, I…]]></description><link>https://9oelm.github.io/2018-04-08--GOOP-logs/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--GOOP-logs/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;GOOP does not have a logo yet. I have to make one. &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Before doing anything else, I have to know about Jeff’s business clearly. Otherwise, I cannot create a logo that is most suitable for the public and for Jeff’s (my) team.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Ok. so this is the overview of Jeff’s business. I tried to just digest the content from what Jeff has provided me and what we talked about for the meeting and produce it here. Copying directly from what Jeff provided me (i.e. evernote and other presentation materials) wouldn’t mean anything.&lt;/p&gt;
 &lt;ul&gt;
@@ -11555,7 +11519,43 @@ GOOP has:&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/goop-where-good-friends-stay/id1260299914?ls=1&amp;#x26;mt=8&quot;&gt;been downloaded 10K+ times on Google Play&lt;/a&gt;. Stats not shown on App Store. &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.facebook.com/goop4groups/?ref=goop&quot;&gt;got 1K+ likes on Facebook&lt;/a&gt;. &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Yeah, true that. I have only contributed at the beginning for the logo, design, and landing page, but it was really a worthwhile experience, looking back—especially because Goop has made such a success now. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Time Complexity]]></title><description><![CDATA[What is it? According to Codilty.com: COMPLEXITY CAN BE VIEWED AS THE MAXIMUM NUMBER OF PRIMITIVE OPERATIONS THAT A PROGRAM MAY EXECUTE…]]></description><link>https://9oelm.github.io/2018-04-07--Time-Complexity/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--Time-Complexity/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What is it?&lt;/h2&gt;
+&lt;p&gt;Yeah, true that. I have only contributed at the beginning for the logo, design, and landing page, but it was really a worthwhile experience, looking back—especially because Goop has made such a success now. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Presentation design: Marketing project on Spotify]]></title><description><![CDATA[1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19]]></description><link>https://9oelm.github.io/2018-04-08--Presentation-design:-Marketing-project-on-Spotify/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-08--Presentation-design:-Marketing-project-on-Spotify/</guid><pubDate>Sun, 08 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/first-slide_orig.png&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide1_1.jpg&quot; alt=&quot;2&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide2.jpg&quot; alt=&quot;3&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide3.jpg&quot; alt=&quot;4&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide4.jpg&quot; alt=&quot;5&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide5.jpg&quot; alt=&quot;6&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide6.jpg&quot; alt=&quot;7&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide7.jpg&quot; alt=&quot;8&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide8.jpg&quot; alt=&quot;9&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide9.jpg&quot; alt=&quot;10&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide10.jpg&quot; alt=&quot;11&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide11.jpg&quot; alt=&quot;12&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide14.jpg&quot; alt=&quot;13&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide15.jpg&quot; alt=&quot;14&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide18.jpg&quot; alt=&quot;15&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide19.jpg&quot; alt=&quot;16&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide29.jpg&quot; alt=&quot;17&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide31.jpg&quot; alt=&quot;18&quot;&gt;
+&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/slide32.jpg&quot; alt=&quot;19&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Time Complexity]]></title><description><![CDATA[What is it? According to Codilty.com: COMPLEXITY CAN BE VIEWED AS THE MAXIMUM NUMBER OF PRIMITIVE OPERATIONS THAT A PROGRAM MAY EXECUTE…]]></description><link>https://9oelm.github.io/2018-04-07--Time-Complexity/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--Time-Complexity/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;What is it?&lt;/h2&gt;
 &lt;p&gt;According to &lt;a href=&quot;codility.com&quot;&gt;Codilty.com&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;COMPLEXITY CAN BE VIEWED AS THE MAXIMUM NUMBER OF PRIMITIVE OPERATIONS THAT A PROGRAM MAY EXECUTE. REGULAR OPERATIONS ARE SINGLE ADDITIONS, MULTIPLICATIONS, ASSIGNMENTS ETC. WE MAY LEAVE SOME OPERATIONS UNCOUNTED AND CONCENTRATE ON THOSE THAT ARE PERFORMED THE LARGEST NUMBER OF TIMES. SUCH OPERATIONS ARE REFERRED TO AS DOMINANT.&lt;/p&gt;
@@ -11622,16 +11622,7 @@ FOR &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;INT I &lt;span
 &lt;li&gt;&lt;a href=&quot;http://discrete.gr/complexity/&quot;&gt;http://discrete.gr/complexity/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.quora.com/Why-we-care-for-time-n-space-complexity-even-if-we-have&quot;&gt;https://www.quora.com/Why-we-care-for-time-n-space-complexity-even-if-we-have&lt;/a&gt; super-fast-processors-today&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://callmenick.com/post/time-complexity-analysis-why-its-important&quot;&gt;http://callmenick.com/post/time-complexity-analysis-why-its-important&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[How does a file get compressed?]]></title><description><![CDATA[You know, you sometimes compress files. And today I needed to send a relatively big folder to my friend so I just compressed it. This folder…]]></description><link>https://9oelm.github.io/2018-04-07--How-does-a-file-get-compressed/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--How-does-a-file-get-compressed/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;You know, you sometimes compress files. And today I needed to send a relatively big folder to my friend so I just compressed it. This folder contained a lot of texts (programming assignments and samples and so on, and also lecture notes, things like that). Sometimes I just do so for an enclosing purpose, but this time I did it for both that and file size reduction. Surprisingly, the file size was reduced from 4.9GB down to 1.38GB.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/screen-shot-2017-08-11-at-19-56-37_1_orig.png&quot; alt=&quot;beforeCompression&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/screen-shot-2017-08-11-at-19-56-41_orig.png&quot; alt=&quot;afterCompression&quot;&gt;&lt;/p&gt;
-&lt;p&gt;But I remember that when I compressed .mp3 files together in one folder, they did not reduce in their size almost not at all. So I became curious of the logic behind compression. So I searched up on the Internet.&lt;/p&gt;
-&lt;p&gt;Compression logic (thanks to howstuffworks.com)
-If you have a sentence:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;Ask not what your country can do for you -- ask what you can do for your country.&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Then you can reduce (or change, if you’d like) to: &lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;1 not 2 3 4 5 6 7 8 -- 1 2 8 5 6 7 3 4&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;It’s just like defining variables and using them again and again. So the compressor looks for a repetition that could help reduce the file size. But unlike text files, mp3s or image files have more unique patterns which make it harder to find matching repetitions to decrease the file size. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (5): modules]]></title><description><![CDATA[Getting the hang of it function  has a closure over the scope of the function . Nothing really special is going on here. And here are some…]]></description><link>https://9oelm.github.io/2018-04-07--Scope-and-closure-(5):-modules/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--Scope-and-closure-(5):-modules/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Getting the hang of it&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (5): modules]]></title><description><![CDATA[Getting the hang of it function  has a closure over the scope of the function . Nothing really special is going on here. And here are some…]]></description><link>https://9oelm.github.io/2018-04-07--Scope-and-closure-(5):-modules/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--Scope-and-closure-(5):-modules/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Getting the hang of it&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;myModule&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     
     &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; testString &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;im testing&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -11744,7 +11735,16 @@ hiMachine&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; defaultMember&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; member &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;module-name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; defaultMember&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; alias &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;module-name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; defaultMember &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;module-name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;module-name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Error page and no search result page for Grafolio mobile app]]></title><description><![CDATA[first
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;module-name&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[How does a file get compressed?]]></title><description><![CDATA[You know, you sometimes compress files. And today I needed to send a relatively big folder to my friend so I just compressed it. This folder…]]></description><link>https://9oelm.github.io/2018-04-07--How-does-a-file-get-compressed/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--How-does-a-file-get-compressed/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;You know, you sometimes compress files. And today I needed to send a relatively big folder to my friend so I just compressed it. This folder contained a lot of texts (programming assignments and samples and so on, and also lecture notes, things like that). Sometimes I just do so for an enclosing purpose, but this time I did it for both that and file size reduction. Surprisingly, the file size was reduced from 4.9GB down to 1.38GB.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/screen-shot-2017-08-11-at-19-56-37_1_orig.png&quot; alt=&quot;beforeCompression&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/screen-shot-2017-08-11-at-19-56-41_orig.png&quot; alt=&quot;afterCompression&quot;&gt;&lt;/p&gt;
+&lt;p&gt;But I remember that when I compressed .mp3 files together in one folder, they did not reduce in their size almost not at all. So I became curious of the logic behind compression. So I searched up on the Internet.&lt;/p&gt;
+&lt;p&gt;Compression logic (thanks to howstuffworks.com)
+If you have a sentence:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;Ask not what your country can do for you -- ask what you can do for your country.&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then you can reduce (or change, if you’d like) to: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;1 not 2 3 4 5 6 7 8 -- 1 2 8 5 6 7 3 4&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It’s just like defining variables and using them again and again. So the compressor looks for a repetition that could help reduce the file size. But unlike text files, mp3s or image files have more unique patterns which make it harder to find matching repetitions to decrease the file size. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Error page and no search result page for Grafolio mobile app]]></title><description><![CDATA[first
 second
 third
 fourth]]></description><link>https://9oelm.github.io/2018-04-07--Error-page-and-no-search-result-page-for-Grafolio-mobile-app/</link><guid isPermaLink="false">https://9oelm.github.io/2018-04-07--Error-page-and-no-search-result-page-for-Grafolio-mobile-app/</guid><pubDate>Sat, 07 Apr 2018 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://7oel.weebly.com/uploads/9/5/6/3/95631532/grafolio-networkerror-ver15artboard-1-2x_orig.png&quot; alt=&quot;first&quot;&gt;
@@ -11825,7 +11825,15 @@ Closure lets the function continue to access the lexical scope it was defined in
         console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; i &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;will just work.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (2): writing good codes]]></title><description><![CDATA[FYI Notes made with You don’t know JS. Writing good codes Function scope It encourages the idea that all variables belong to the function…]]></description><link>https://9oelm.github.io/2018-03-24--Scope-and-closure-(2):-writing-good-codes/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-24--Scope-and-closure-(2):-writing-good-codes/</guid><pubDate>Sat, 24 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
+&lt;p&gt;will just work.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (3): hoisting]]></title><description><![CDATA[FYI Notes made with You don’t know JS. Important points on hoisting Hoisting is just basic. Just remember hoisting happens per scope and…]]></description><link>https://9oelm.github.io/2018-03-24--Scope-and-closure-(3):-hoisting/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-24--Scope-and-closure-(3):-hoisting/</guid><pubDate>Sat, 24 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
+&lt;p&gt;Notes made with &lt;a href=&quot;https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch4.md&quot;&gt;You don’t know JS&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Important points on hoisting&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Hoisting is just basic. Just remember hoisting happens &lt;strong&gt;per scope&lt;/strong&gt; and only on variable and function &lt;strong&gt;declarations&lt;/strong&gt;, not assignments or reference.&lt;/li&gt;
+&lt;li&gt;Also remember &lt;strong&gt;functions are hoisted first, and then variables.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The hoisted functions or variables will override any other functions or variables that have the same name.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Function declarations that appear inside of normal blocks like &lt;code class=&quot;language-text&quot;&gt;if&lt;/code&gt; typically hoist to the enclosing (outer) scope.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (2): writing good codes]]></title><description><![CDATA[FYI Notes made with You don’t know JS. Writing good codes Function scope It encourages the idea that all variables belong to the function…]]></description><link>https://9oelm.github.io/2018-03-24--Scope-and-closure-(2):-writing-good-codes/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-24--Scope-and-closure-(2):-writing-good-codes/</guid><pubDate>Sat, 24 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
 &lt;p&gt;Notes made with &lt;a href=&quot;https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md&quot;&gt;You don’t know JS&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Writing good codes&lt;/h2&gt;
 &lt;h3&gt;Function scope&lt;/h3&gt;
@@ -12073,15 +12081,7 @@ For example:&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“In other words, in the pessimistic sense, &lt;strong&gt;most of those optimizations it would make are pointless if eval(..) or with are present, so it simply doesn’t perform the optimizations at all.&lt;/strong&gt;”&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Scope and closure (3): hoisting]]></title><description><![CDATA[FYI Notes made with You don’t know JS. Important points on hoisting Hoisting is just basic. Just remember hoisting happens per scope and…]]></description><link>https://9oelm.github.io/2018-03-24--Scope-and-closure-(3):-hoisting/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-24--Scope-and-closure-(3):-hoisting/</guid><pubDate>Sat, 24 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
-&lt;p&gt;Notes made with &lt;a href=&quot;https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch4.md&quot;&gt;You don’t know JS&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Important points on hoisting&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Hoisting is just basic. Just remember hoisting happens &lt;strong&gt;per scope&lt;/strong&gt; and only on variable and function &lt;strong&gt;declarations&lt;/strong&gt;, not assignments or reference.&lt;/li&gt;
-&lt;li&gt;Also remember &lt;strong&gt;functions are hoisted first, and then variables.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The hoisted functions or variables will override any other functions or variables that have the same name.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Function declarations that appear inside of normal blocks like &lt;code class=&quot;language-text&quot;&gt;if&lt;/code&gt; typically hoist to the enclosing (outer) scope.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React]]></title><description><![CDATA[FYI My notes are overwritten on the content copied from https://reactjs.org/tutorial/tutorial.html. Component React component class, or…]]></description><link>https://9oelm.github.io/2018-03-22--React/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-22--React/</guid><pubDate>Thu, 22 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[React]]></title><description><![CDATA[FYI My notes are overwritten on the content copied from https://reactjs.org/tutorial/tutorial.html. Component React component class, or…]]></description><link>https://9oelm.github.io/2018-03-22--React/</link><guid isPermaLink="false">https://9oelm.github.io/2018-03-22--React/</guid><pubDate>Thu, 22 Mar 2018 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;FYI&lt;/h2&gt;
 &lt;p&gt;My notes are overwritten on the content copied from &lt;a href=&quot;https://reactjs.org/tutorial/tutorial.html&quot;&gt;https://reactjs.org/tutorial/tutorial.html&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Component&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;class ShoppingList extends React.Component {
@@ -12956,57 +12956,7 @@ But the answer to the below post also says we could use &lt;code class=&quot;lan
 &lt;li&gt;/usr/sbin : Same as above, but for scripts with superuser (root) privileges required.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Bonus 2:&lt;/h2&gt;
-&lt;p&gt;I wanted to add all subdirectories of &lt;code class=&quot;language-text&quot;&gt;usr/local/bin&lt;/code&gt; as environment path, but &lt;a href=&quot;https://unix.stackexchange.com/questions/17715/how-can-i-set-all-subdirectories-of-a-directory-into-path&quot;&gt;that’s not what something people recommended&lt;/a&gt;. People say it’s &lt;em&gt;dangerous&lt;/em&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Finding a process with a name]]></title><description><![CDATA[Many times you want to look for a process to kill it.
-Here’s how: the default pgrep command shows the PIDs of all matching processes. the -l…]]></description><link>https://9oelm.github.io/2017-09-21--finding-a-process-with-a-name/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--finding-a-process-with-a-name/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Many times you want to look for a process to kill it.
-Here’s how:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pgrep bash
-2121
-2233
-2456
-2586&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;the default pgrep command shows the PIDs of all matching processes.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pgrep bash -l
-2121 bash
-2233 bash
-2456 bash
-2586 bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;the -l option would also show you the process names. This is useful for something like:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pgrep i915 -l
-330 i915/signal:0
-332 i915/signal:1
-333 i915/signal:2
-334 i915/signal:4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;where each process has a slightly different name.&lt;/p&gt;
-&lt;h2&gt;Killing a process&lt;/h2&gt;
-&lt;p&gt;Simply:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;kill [pid] (equivalent to kill -TERM [pid])&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If a process is behaving errorneously and it won’t shut down, do:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;kill -9 (or -KILL) [pid]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This option forcefully shuts down a process, whereas the default option (without any flags attached) means to kill a process step by step, which is actually -15 or -TERM option.&lt;/p&gt;
-&lt;h2&gt;Easier killing&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pkill -9 bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;It is the same as:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;kill -9 `pgrep bash`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Simply killing all the instances of process  named the same is:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;killall [process name]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Changing mac address semi permanently]]></title><description><![CDATA[How to Dead simple. Open up the file /etc/network/interfaces. It will show you something like: and add at the end of the file, this line…]]></description><link>https://9oelm.github.io/2017-09-21--changing-mac-address-semi-permanently/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--changing-mac-address-semi-permanently/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to&lt;/h2&gt;
-&lt;p&gt;Dead simple.&lt;/p&gt;
-&lt;p&gt;Open up the file /etc/network/interfaces. It will show you something like:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# This file describes the network interfaces avilable on your system 
-# and how to activate them. For more information, see interfaces(5).
-
-source etc/network/interfaces.d/*
-
-# The loopback network interface
-auto lo
-iface lo inet loopback&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;and add at the end of the file, this line:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pre-up ifconfig eth0 hw ether xx:xx:xx:xx:xx:xx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This will spoof your mac address to xx:xx:xx:xx:xx:xx every time your computer boots up.&lt;/p&gt;
-&lt;h2&gt;The better how to&lt;/h2&gt;
-&lt;p&gt;But the above solution sets your mac address to the same value every time.So you might wanna use macchanger:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pre-up macchanger -r eth0 
-pre-up macchanger -r wlan0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Adding these lines to &lt;code class=&quot;language-text&quot;&gt;/etc/network/interfaces&lt;/code&gt; file will set the mac addresses to random values every time your computer wakes up.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using macchanger]]></title><description><![CDATA[What is macchanger Macchanger is a little program that helps you fake (sometimes called spoof) your mac address.  Using ifconfig and…]]></description><link>https://9oelm.github.io/2017-09-21--using-macchanger/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--using-macchanger/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;What is macchanger&lt;/h1&gt;
+&lt;p&gt;I wanted to add all subdirectories of &lt;code class=&quot;language-text&quot;&gt;usr/local/bin&lt;/code&gt; as environment path, but &lt;a href=&quot;https://unix.stackexchange.com/questions/17715/how-can-i-set-all-subdirectories-of-a-directory-into-path&quot;&gt;that’s not what something people recommended&lt;/a&gt;. People say it’s &lt;em&gt;dangerous&lt;/em&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using macchanger]]></title><description><![CDATA[What is macchanger Macchanger is a little program that helps you fake (sometimes called spoof) your mac address.  Using ifconfig and…]]></description><link>https://9oelm.github.io/2017-09-21--using-macchanger/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--using-macchanger/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;What is macchanger&lt;/h1&gt;
 &lt;p&gt;Macchanger is a little program that helps you fake (sometimes called spoof) your mac address. &lt;/p&gt;
 &lt;h2&gt;Using ifconfig and macchanger&lt;/h2&gt;
 &lt;p&gt;The usage is really simple.&lt;/p&gt;
@@ -13057,7 +13007,57 @@ sudo service network-manager start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/etc/init.d/networking stop
 ifconfig eth0 hw ether 02:01:02:03:04:08
 /etc/init.d/networking start &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Then, do &lt;code class=&quot;language-text&quot;&gt;ifconfig&lt;/code&gt; to check the mac address of eth0 interface. It should be 02:01:02:03:04:08. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using tmux]]></title><description><![CDATA[Scrolling in tmux Using tmux, you sometimes wanna scroll up and down the window just like you used to in the normal bash shell. It’s dead…]]></description><link>https://9oelm.github.io/2017-09-21--Using-tmux/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--Using-tmux/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Scrolling in tmux&lt;/h2&gt;
+&lt;p&gt;Then, do &lt;code class=&quot;language-text&quot;&gt;ifconfig&lt;/code&gt; to check the mac address of eth0 interface. It should be 02:01:02:03:04:08. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Finding a process with a name]]></title><description><![CDATA[Many times you want to look for a process to kill it.
+Here’s how: the default pgrep command shows the PIDs of all matching processes. the -l…]]></description><link>https://9oelm.github.io/2017-09-21--finding-a-process-with-a-name/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--finding-a-process-with-a-name/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Many times you want to look for a process to kill it.
+Here’s how:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pgrep bash
+2121
+2233
+2456
+2586&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;the default pgrep command shows the PIDs of all matching processes.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ pgrep bash -l
+2121 bash
+2233 bash
+2456 bash
+2586 bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;the -l option would also show you the process names. This is useful for something like:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pgrep i915 -l
+330 i915/signal:0
+332 i915/signal:1
+333 i915/signal:2
+334 i915/signal:4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;where each process has a slightly different name.&lt;/p&gt;
+&lt;h2&gt;Killing a process&lt;/h2&gt;
+&lt;p&gt;Simply:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;kill [pid] (equivalent to kill -TERM [pid])&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If a process is behaving errorneously and it won’t shut down, do:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;kill -9 (or -KILL) [pid]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This option forcefully shuts down a process, whereas the default option (without any flags attached) means to kill a process step by step, which is actually -15 or -TERM option.&lt;/p&gt;
+&lt;h2&gt;Easier killing&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pkill -9 bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It is the same as:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;kill -9 `pgrep bash`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Simply killing all the instances of process  named the same is:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;killall [process name]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Changing mac address semi permanently]]></title><description><![CDATA[How to Dead simple. Open up the file /etc/network/interfaces. It will show you something like: and add at the end of the file, this line…]]></description><link>https://9oelm.github.io/2017-09-21--changing-mac-address-semi-permanently/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--changing-mac-address-semi-permanently/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;How to&lt;/h2&gt;
+&lt;p&gt;Dead simple.&lt;/p&gt;
+&lt;p&gt;Open up the file /etc/network/interfaces. It will show you something like:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# This file describes the network interfaces avilable on your system 
+# and how to activate them. For more information, see interfaces(5).
+
+source etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and add at the end of the file, this line:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pre-up ifconfig eth0 hw ether xx:xx:xx:xx:xx:xx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will spoof your mac address to xx:xx:xx:xx:xx:xx every time your computer boots up.&lt;/p&gt;
+&lt;h2&gt;The better how to&lt;/h2&gt;
+&lt;p&gt;But the above solution sets your mac address to the same value every time.So you might wanna use macchanger:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pre-up macchanger -r eth0 
+pre-up macchanger -r wlan0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Adding these lines to &lt;code class=&quot;language-text&quot;&gt;/etc/network/interfaces&lt;/code&gt; file will set the mac addresses to random values every time your computer wakes up.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using tmux]]></title><description><![CDATA[Scrolling in tmux Using tmux, you sometimes wanna scroll up and down the window just like you used to in the normal bash shell. It’s dead…]]></description><link>https://9oelm.github.io/2017-09-21--Using-tmux/</link><guid isPermaLink="false">https://9oelm.github.io/2017-09-21--Using-tmux/</guid><pubDate>Thu, 21 Sep 2017 09:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Scrolling in tmux&lt;/h2&gt;
 &lt;p&gt;Using tmux, you sometimes wanna scroll up and down the window just like you used to in the normal bash shell.&lt;/p&gt;
 &lt;p&gt;It’s dead simple as this:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl + b + [&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
