@@ -38,6 +38,7 @@ function Bio() {
               <br />
               {` `}
               Joel's also got his own random thoughts journal (mostly in Korean). 
+              {` `}
               <a href='https://www.notion.so/9oelm/2acfc525c9964be080d218770e6b8431?v=a7970392a2c54d3b857db145ded4de9e'>
                 Check it out too if you are curious.
               </a>
