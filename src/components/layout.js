@@ -3,7 +3,18 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
+import * as DarkReader from 'darkreader';
+
 class Layout extends React.Component {
+  componentDidMount(){
+    DarkReader.enable({
+      brightness: 100,
+      contrast: 90,
+      sepia: 10,
+    });
+    DarkReader.auto();
+  }
+
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
