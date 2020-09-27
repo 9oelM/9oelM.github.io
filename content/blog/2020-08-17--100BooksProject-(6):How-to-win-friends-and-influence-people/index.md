@@ -8,6 +8,10 @@ I wrote a summary of each section and my reflections following it.
 
 _typo alert: I typed so much that I can't just review all... if you find a typo, please kindly understand that I made a mistake._
 
+```toc
+# This code block gets replaced with the TOC
+```
+
 ![book cover](./book-cover.jpeg)
 
 # Introduction

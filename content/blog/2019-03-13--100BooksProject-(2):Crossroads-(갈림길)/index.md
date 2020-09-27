@@ -8,6 +8,10 @@ Sudden encounter over this book just walking by a random bookshelf in the librar
 
 I did not know this book is about christianity. I just picked up this book and looked inside; then I recognized it's a fiction about christianity. Because I read this book translated to Korean, it would be a better idea to write reflections in Korean. Now it starts.
 
+```toc
+# This code block gets replaced with the TOC
+```
+
 # Reflection
 주인공 앤토니 스펜서(토니)는 혹독한 경쟁 사회에서 살아남은, 성공한 사업가다. 그렇지만 그는 다른 사람을 사랑할 줄을 모른다. 이기적인 성격이다. 이혼을 두 번이나 했다. 심지어 똑같은 사람하고 말이다. 아들은 어린 아이에 죽었고, 하나 남은 딸은 본인을 원망하기에 이르렀다. 부와 명예 측면에선 성공했지만 인간으로서는 상당히 실패한 사람인 셈이다. 그런 와중에 토니는 심각한 병에 걸려 혼수상태에 빠지게 되어 꿈을 꾸게 되는데 예수님을 비롯한 많은 존재들을 만나게 된다. 토니는 끝내 변화하여 자신의 생명을 다른 이에게 내어주고, 타인을 사랑할 줄 아는 사람이 된다. 
 

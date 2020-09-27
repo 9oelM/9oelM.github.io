@@ -6,6 +6,10 @@ category: "books"
 
 ![Ego is the enemy](./book.png)
 
+```toc
+# This code block gets replaced with the TOC
+```
+
 # Summary
 
 에고는 성취와 성장을 위한 기회를 빼앗는다. 이런 일이 일어나지 않도록 예방하는 방법은 여러 가지가 있다.

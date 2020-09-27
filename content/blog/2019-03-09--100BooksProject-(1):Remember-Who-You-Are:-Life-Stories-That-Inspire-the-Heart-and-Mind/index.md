@@ -14,6 +14,10 @@ Things I got to know:
 
 Yeap. Got greatly motivated by these, especially as a developer. I need to look further and wider. I need to dream bigger. I need to study more. 
 
+```toc
+# This code block gets replaced with the TOC
+```
+
 # Reading notes
 ## 1. A fall before rising: relax - enjoy and celebrate your life
 - A fall allows you to see the things you could not see when you were up there.
