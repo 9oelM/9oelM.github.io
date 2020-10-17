@@ -1,8 +1,12 @@
 ---
-title: "100BooksProject: (9): Atomic habits (아주 작은 습관의 힘)"
+title: "100BooksProject: (9): Atomic habits"
 date: "2020-10-04T09:00:00.009Z"
 category: "books"
 ---
+
+_typo alert: I typed so much that I can't just review all... if you find a typo, please kindly understand that I made a mistake._
+
+As always, I've summarized the book so that anyone can get the main concept in about 20-30 mins. And then I wrote some reflections and possible applications in my life. Don't get overwhelmed by the table of contents below!
 
 ```toc
 ```
@@ -278,6 +282,7 @@ Then, see where you can insert or modify a behavior.
 
 - _make it invisible._
 
+# The 2nd law: make it attractive
 ## 8: How to make a habit irresistible
 
 - humans are prone to exaggerated versions of reality and cues for survival (102)
@@ -305,6 +310,7 @@ Then, see where you can insert or modify a behavior.
 
 - Some guy wanted to test this theory, so he trained his children to play chess very well. One of them became the youngest world champion for chess. (~114)
 
+## 9: The role of family and friends in shaping your habits
 ### The seductive pull of social norms
 
 - Those who collaborated and bonded with others enjoyed increased safety, ... opportunities. (115)
@@ -439,6 +445,7 @@ The nuance where he says this is like, make it _impossible at all_.
 
 - James did it candidly: he asked his assistant to change the passwords of his social media accounts on Monday, and tell him passwords on Friday. This way he wouldn't waste his time on social media at all for the weekdays. (175)
 
+# The 4th law: make it satisfying
 ## 15: The cardinal rule of behavior change
 
 - Once people who did not wash their hands properly were given premium soaps that smelled and foamed _satisfyingly_, they started to properly wash their hands. (~185)
@@ -516,6 +523,103 @@ It feels good to watch your results grow.
 - The secret to maximizing your odds of success is to choose the right field of competition. (218)
 - in short: genes do not determine your destiny. They determine your areas of opportunity. (219)
 
+### How your personality influences your habits
+
+- Some genes innately influence personalities. 
+- Example: people that tend to have higher natural oxytocin levels, are high in agreeableness, kind, considerate, and warm. They may easily build habits for writing thank-you notes or organizing social events.
+- Habits are not always influenced by personalities, but personalities (or genes) can always us lead to some direction.
+
+> The takeaway is that you should build habits that work for your personality.
+
+- If bodybuilding doesn't work for you, then try rock climbing or cycling. (222)
+- **Habits need to be enjoyable if they are going to stick (4th law).**
+
+### How to find a game where the odds are in your favor
+
+- explore/exploit trial and error. (223)
+
+Find a thing that (224-225):
+1. feels like fun to me, but work to others
+2. makes me lose track of time
+3. gets me greater returns than an average person
+4. comes naturally to me
+
+Alternative methods:
+1. Create a game yourself if you can't find a game where odds are in your favor: Find a new, special, niche market yourself. (225)
+2. Win by being different if you can't win by being better. Make your own major at University. (226)
+
+### How to get the most out of your genes
+
+- (genes) tell us what to work hard on.
+
+> pick behaviors that align with your personality and skills. Work hard on the things that come easy. (227)
+
+## 19: The Goldilocks rule: how to stay motivated in life and work
+
+- To keep yourself motivated, you should work on tasks of "just manageable difficulty". (231)
+- It's about 4% more of your maxium ability (232)
+- If you are in the Goldilocks zone, you can achieve a flow state.
+
+![Goldilocks rule](./goldirocks-rule.JPG)
+
+### How to stay focused when you get bored working on your goals
+
+> At some point it becomes down to who can handle the boredom of training every day, doing the same lifts over and over and over. (233)
+
+> The difference is that they still find a way to show up despite feelings of boredom. (234)
+
+- Perhaps this is why many of the most habit-forming products are those that provide continuous forms of novelty, which is called a _variable reward_ in psychology. (234)
+
+> But stepping up when it's annoying or painful ... (is) the difference between a pro and an amateur. (236)
+
+## 20: The downside of creating good habits
+
+- Upside of habits: can do things without thinking
+- Downside of habits: get used to doing things a certain way and stop paying attention to little errors, without reinforcing or improving your current habits. (239-240)
+
+Therefore, mastery only comes in this equation:
+> Habits + Deliberate practice = Mastery
+
+![mastering](./mastering.png)
+
+### How to review your habits and make adjustments
+
+- This is a good way to avoid slipping into the trap of complacency. (242)
+
+- A NBA coach, Riley, started a system called Career Best Effort program, where players' performance is compared to their peers' and their historical records. Players consistently got motivated by this system, which led to a huge success. (242-244)
+
+- Without reviewing, it's just so easy to get biased. (245)
+- With reviewing, you get to fine-tune things for improvement. (256)
+
+#### James' Annual review questions
+1. What went well this year?
+2. What didn't go so well this year?
+3. What did I learn?
+
+#### James' Integrity report questions
+1. What are the core values that drive my life and work?
+2. How am I living and working with integrity right now?
+3. How can I set a higher standard in the future?
+
+### How to break the beliefs that hold you back
+
+Keep your identity (belief) small. The more you define yourself, you will be tied to that definition. (247-248)
+
+> "I'm an athelete" becomes "I'm the type of personw ho is mentally tough and loves a physical challenge." (248)
+
+> Habits deliver numerous benefits, but the downside is that they can lock us into our previous patterns of thinking and acting - even when the world is shifting around us. Everything is impermanent. Life is constantly changing, so you need to periodically check in to see if your old habits and beliefs are still serving you. A lack of self-awareness is poison. Reflection and review is the antidote. (249)
+
+# Conclusion: the secret to results that last
+
+> Can one tiny change transform your life? It's unlikely you would say so. But what if you made another? And another? And another? At some point, you will have to admit that your life was transformed by one small change. (251)
+
+1. For good habits: make it obvious, attractive, easy and satisfying.
+2. For bad habits: make it invisible, unattractive, hard and unsatisfying.
+
+# Cheatsheet
+
+![create-a-good-habit.png](./create-a-good-habit.png)
+![break-a-bad-habit.png](./break-a-bad-habit.png)
 
 # Reflections and applications
 
@@ -540,20 +644,46 @@ After a year ends and we look back at the codes we wrote, we actually write tonn
 
 ## Habits and freedom
 
-Just never thought this way before. I feel so stupid and wasted for the 24 years I lived without knowing this simple fact. Habits give freedom. Having no habits demolishes freedom.
+Just never thought this way before. I feel so stupid and wasted for the 24 years I lived without knowing this simple fact. Habits give freedom. In other words, having no habits demolishes freedom.
+
+Why did I not know about this? While I was resisting from myself to get up from the bed early in the morning although I was consciously awake, I did not realize that it would give freedom for me to spend my time usefully in the early afternoon, after work.
+
+### Rules and freedom
+
+Similarly, rules may give freedom. Right now it's just a random though, but I think it pretty much makes sense.
+
+Some may oppose the idea of making a lint rule, because it's always opinionated anyways, anyhow. However making a lint rule across the development team gives the team freedom from unreadable, unmaintainable codes.
+
+Similar thing. If there's no law, there's no freedom either. More homecides for obtaining selfish benefits. More thefts. Freedom for all, but at the same time, no freedom for all.
+
+I've been reading _12 Rules for Life_ by Jordan B. Peterson too, and it seems almost definite that we humans really need rules (not only for freedom)
 
 ## My habits scoreboard (65)
-
-## Habits I need to cultivate
+I will make one on Notion privately :)
 
 ## Habits as a Christian
 
-- Get things out of the way.
+- Get obstrusive things out of the sight (remove the cue).
 - Be with friends who are righteous and follow the will of the Christ.
+- Select a browser (for me, Firefox), where I would normally go onto a website to read the Bible and QT materials.
 
 ## All those experiments and names of researches I learned back in my high school for my psychology class that I thought were useless
 
+I was quite surpised by this book mentioning some of the experiments I know already, like Asch's. I never thought that the psychology class I took for my high school would be at some point useful. It turns out it indeed is.
+
+It appears to me that psychology is closely related to forming and locking into habits, and more generally, controlling the self. I won't say psychology is not useful for me again. Because it indeed is.
+
 ## Knowing myself
+
+I would assert that it is the greatest virtue of a human being. Knowing the self. Without recognizing your problems, you never grow.
+
+I am not sure if this is an innate human nature, but almost everyone (including me) seems to be ignoring what they think should be doing despite awareness. I have no doubt that anyone who succeeds in knowing the self will succeed in anything anyways.
+
+## The decisive moments (161~162)
+
+Just the fact that I have a strong realization that if I take certain action, I am going to ruin my whole day makes me more alert these days.
+
+For me, I think it's the shower. If I don't take a shower in the morning (especially in the weekends), I almost know that I am not going to do anything productive for that day until I take a shower. I don't know why, but I don't feel prepared for the day without shower. Thank God taking a shower isn't difficult at all.
 
 ## Real habit changes in my life
 
@@ -562,7 +692,7 @@ Just never thought this way before. I feel so stupid and wasted for the 24 years
     - If for any reason the phone is turned on before sleeping, I turn it off right before I go to bed. (Alarm is set on my Google home mini instead)
     - I put it in my closet while I'm home. 
 2. **Deleting instagram on my phone.** It doesn't mean that I won't do it. I only do it by installing it from the store again. Once I'm done with keeping up to date with my friends, I delete it again. This significantly reduced my wasted time.
-3. **Sleeping at 23pm.** No matter what, I cease doing whatever I have been doing and go to bed at 23.
+3. **Sleeping at 23pm.** No matter what, I cease doing whatever I have been doing and go to bed at 23. After I normalize my sleeping time, I also plan to set a time for waking up.
 4. **Reading a book.** 
     - I reorganized my table so that at least one book is always open on the stand at any time (_making it obvious, easy_).
     - I always bring one book with me when I get out of my house, and read it while commuting, instead of looking at my phone.

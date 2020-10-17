@@ -94,4 +94,3 @@ Creative, integrative, technical, design thinking, technically literate, critica
 2. **Rough out the elements**: sketching a solution at higher level of abstraction than wireframes
 3. **Address risks and rabbit holes**: maybe there are parts missed out. Find those parts.
 4. **Write the pitch**: summarizes the problem, constraints, solution, rabbit holes, and limitations.
-
