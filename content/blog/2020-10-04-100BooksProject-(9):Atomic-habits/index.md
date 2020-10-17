@@ -4,9 +4,9 @@ date: "2020-10-04T09:00:00.009Z"
 category: "books"
 ---
 
-_typo alert: I typed so much that I can't just review all... if you find a typo, please kindly understand that I made a mistake._
-
 As always, I've summarized the book so that anyone can get the main concept in about 20-30 mins. And then I wrote some reflections and possible applications in my life. Don't get overwhelmed by the table of contents below!
+
+_typo alert: I typed so much that I can't just review all... if you find a typo, please kindly understand that I made a mistake._
 
 ```toc
 ```
