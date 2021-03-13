@@ -7,6 +7,8 @@ import SEO from "../components/seo"
 import LandingPageBioDetails from "../components/LandingPageBioDetails";
 import { rhythm } from "../utils/typography"
 
+import './index.css'
+
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
