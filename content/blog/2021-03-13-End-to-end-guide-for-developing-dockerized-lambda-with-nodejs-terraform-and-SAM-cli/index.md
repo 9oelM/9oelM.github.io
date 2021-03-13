@@ -289,3 +289,20 @@ terraform {
 
 Now because you've added a backend and another provider, we will need to run `terraform init` again, and then `terraform apply`. Run it.
 
+# Setting up lambda
+
+Now we will need to develop lambda on the local machine. Install SAM CLI:
+
+```bash
+brew tap aws/tap
+
+brew install aws-sam-cli
+```
+
+Note that the outdated versions would not support running Docker containers, so make sure that your version is the latest.
+
+```bash
+test:(dev) sam --version
+SAM CLI, version 1.20.0
+```
+
