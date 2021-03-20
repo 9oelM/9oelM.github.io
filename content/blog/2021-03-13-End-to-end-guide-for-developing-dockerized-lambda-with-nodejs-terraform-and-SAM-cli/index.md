@@ -1008,7 +1008,7 @@ So far, we've made changes like so:
 5 directories, 17 files
 ```
 
-# Creating API gateway, Lambda, and more on Terraform
+# Creating Terraform resources for lambda and API gateway
 
 Now the majority of the prepartion is done, so we can move onto creating actual lambda and API gateway.
 
@@ -1107,8 +1107,8 @@ resource "aws_api_gateway_deployment" "hello" {
   description = "deployment all APIs related to api.hello.com"
 
   triggers = {
-    # https://github.com/hashicorp/terraform/issues/6613#issuecomment-322264393
     redeployment = timestamp()
+    # https://github.com/hashicorp/terraform/issues/6613#issuecomment-322264393
     # or you can just use md5(file("api_gateway.tf")) to make sure that things only get deployed when they changed
   }
 
@@ -1135,4 +1135,373 @@ In the below example, we have created two different resources with `OPTIONS` and
 
 `aws_lambda_permission`: By default, there's no permission for API gateway to invoke lambda function. So we are just granting a permission to it so that it can be executed.
 
-`aws_api_gateway_integration`: API gateway supports transforming (filtering, preprocessing, ...) a request before it reaches client or a response from the client before it reaches the actual lambda. We are not doing so many things here, but you may want to use it in the future. For more, [read relevant AWS docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-integration-settings.html).
+`aws_api_gateway_integration`: API gateway supports transforming (filtering, preprocessing, ...) a request before it reaches client or a response from the client before it reaches the actual lambda. We are not doing any special things here for this example, but you may want to use it in the future. For more, [read relevant AWS docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-integration-settings.html).
+
+`aws_api_gateway_stage`: API gateway supports separating API into different stages out of the box. You should use this to separate your API across production, staging and development environments. For now, we will only make a stage for current terraform workspace, which is assumed to be `dev` across all examples in this article. Once you apply your changes, you are going to be able to see this on your AWS console:
+
+![stage](./stage.png)
+
+`aws_api_gateway_deployment`: This is equivalent to clicking on 'Deploy API' on AWS console.
+
+![deployment](./api_gateway_deployment.png)
+
+Once resources are created in API gateway, they _must_ be deployed in order to be reachable from external clients. One little problematic thing is `redeployment`; Even if you make a change to your REST API resources, it will not get deployed if `redeployment` argument does not change. There are mainly two ways of getting around this:
+1. Use `timestamp()` to trigger redeployment for every single `apply`. Using this approach, lambda may be down for few seconds while redeployment. But it is for sure that it always deploys, so I would just go with this one if my service does not handle many users.
+2. Use `md5(file("api_gateway.tf"))` to trigger redeployment whenever this file changes. But you need to always make sure that EVERYTHING related to API Gateway deployment only stays inside this file.
+
+Ok. So far we have set up lambda and basic API Gateway configurations. Right now, you can test your API on Postman like this: first, go to AWS API Gateway console, and find a specific endpoint that is deployed to a certain stage. There should be an 'Invoke URL' at the top of the page.
+
+![test-api-gateway-postman.png](./test-api-gateway-postman.png)
+
+Now, open up Postman, and 
+1. Insert your invoke URL
+2. Click 'Authorization', and choose the type 'AWS Signature', and enter `AccessKey` and `SecretKey`. These keys should be coming from one of user's credentials from AWS IAM Console. If you do not have one specialized for calling an API set up with lambda and API gateway from local environment, make one user for that and get the keys.
+3. Insert your AWS Region.
+4. If your API requests any more query parameters or body, insert them.
+5. Click send, then it should work.
+
+![test-api-gateway-postman-1.png](./test-api-gateway-postman-1.png)
+
+If you do not provide AWS Credentials in your request header, it won't work, because so far your API can be only used by IAM users known to the API gateway, and if you are just sending a request from your local computer without providing any access and secret keys, it won't know it's you. To make it work even without providing credentials for any public APIs intended to be exposed to client applications, you should now configure **custom domain**.
+
+So far we have made changes to make lambda and API Gateway resources. The list of files we should have by now is the following.
+
+```bash
+➜  example-lambda git:(master) ✗ tree -I node_modules
+.
+├── IaC
+│   ├── api_gateway.tf
+│   ├── ecr.tf
+│   ├── hello_role.tf
+│   ├── lambda.tf
+│   └── main.tf
+└── server
+    ├── build-and-push-docker-image.sh
+    ├── lerna.json
+    ├── login-docker.sh
+    ├── nodemon.json
+    ├── package-lock.json
+    ├── package.json
+    ├── packages
+    │   └── hello
+    │       ├── Dockerfile
+    │       ├── README.md
+    │       ├── lib
+    │       │   ├── index.js
+    │       │   └── index.ts
+    │       ├── package-lock.json
+    │       ├── package.json
+    │       └── tsconfig.json
+    └── template.yml
+
+5 directories, 19 files
+```
+
+Next, we will see how to create a custom domain and relate that domain to the REST API we just made.
+
+# Creating Terraform resources for Custom domain
+
+Now, the problem is that we have the API, but it's not callable from any external client applications, which is a common case for many projects. So we want to register a domain first to represent our endpoints.
+
+Before making a change for custom domain, we need to setup another AWS provider because we will need to use `us-east-1` region for Edge-optimized custom domain name ([that's the only region that supports creating an ACM certificate for Edge-optimized custom domain name](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-edge-optimized-custom-domain-name.html)). 
+
+There are two choices available for an API endpoint: 1. edge; 2. regional. If your endpoint should be accessed by worldwide clients, use edge; if your endpoint is specifically confined to be used in one specific region in the world, use regional. If you don't know what to do, it totally safe to go with edge for now. First, add another aws provider:
+
+## `main.tf`
+```bash
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.27"
+    }
+   docker = {
+     source  = "kreuzwerker/docker"
+     version = ">= 2.8.0"
+   }
+  }
+  backend "s3" {
+    profile = "localtf"
+    bucket  = "my-iac" # change the bucket name to yours
+    key            = "your-stack-name"
+    region         = "us-west-2" # change to your region
+    dynamodb_table = "terraform-lock"
+  }
+}
+
+provider "aws" {
+  profile = "default"
+  region  = "us-west-2" # you will need to change this to your region
+  assume_role {
+    role_arn     = "arn:aws:iam::{your-account-id}:role/hello_role"
+    session_name = "terraform"
+  }
+}
+
+# for issuing acm certificate
++ provider "aws" {
++  profile = "default"
++  region  = "us-east-1"
++  alias   = "default_us_east_1"
++
++  assume_role {
++    role_arn     = "arn:aws:iam::{your-account-id}:role/hello_role"
++    session_name = "terraform"
++  }
++ }
+
+# you can create this resource in other repository because it's not specific to this project
+# resource "aws_dynamodb_table" "terraform_state_lock" {
+#   name           = "tf-state-locks"
+#   read_capacity  = 5
+#   write_capacity = 5
+#   hash_key       = "LockID"
+#   attribute {
+#     name = "LockID"
+#     type = "S"
+#   }
+# }
+
+# you can create this resource in other repository because it's not specific to this project
+# resource "aws_s3_bucket" "terraform_backend" {
+#   bucket = "tf-backend"
+#   acl    = "private"
+
+#   versioning {
+#     enabled = true
+#   }
+# }
+```
+
+Then, you write the actual code to make a certificate and custom domain.
+
+## `custom_domain.tf`
+
+```bash
+resource "aws_acm_certificate" "hello" {
+  provider          = aws.default_us_east_1
+  domain_name       = "api.hello.com"
+  validation_method = "DNS"
+
+  tags = {
+    Environment = terraform.workspace
+  }
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+resource "aws_acm_certificate_validation" "hello" {
+  provider = aws.default_us_east_1
+
+  certificate_arn         = aws_acm_certificate.hello.arn
+  validation_record_fqdns = [for record in aws_route53_record.hello : record.fqdn]
+}
+
+locals {
+  aws_route53_your_existing_zone_id = "A123A123A123A123"
+}
+
+resource "aws_route53_record" "hello" {
+  for_each = {
+    for dvo in aws_acm_certificate.hello.domain_validation_options : dvo.domain_name => {
+      name   = dvo.resource_record_name
+      record = dvo.resource_record_value
+      type   = dvo.resource_record_type
+    }
+  }
+
+  allow_overwrite = true
+  name            = each.value.name
+  records         = [each.value.record]
+  ttl             = 60
+  type            = each.value.type
+  zone_id         = local.aws_route53_your_existing_zone_id
+}
+```
+
+Make sure you get the existing hosted zone ID (or any other zone ID that you intend to use) from AWS Route53 Console:
+
+![hosted-zone-id.png](./hosted-zone-id.png)
+
+Use that ID to create Route53 Record for the custom domain name.
+
+After you apply your change, you will be able to see ACM certificate being created on AWS Certificate Manager:
+
+![acm-certificate.png](./acm-certificate.png)
+
+Just make sure you verified the status to be 'Issued' and the validation status to be 'success'. You may need to wait for several minutes before this completes. Also, if your certificate is not showing up, make sure that you are on `us-east-1`, not anywhere else.
+
+After you are done with this, now you can go back to API Gateway again, and configure custom domain. Now that you've registered a domain, you can see it right up from API Gateway console:
+
+![custom-domain-name-api-gateway.png](./custom-domain-name-api-gateway.png)
+
+In the certificate dropdown, you should be able to see the domain that you have just created. Do not make create domain name there on the console. Now come back to terraform and let's write the equivalent code for that.
+
+## `custom_domain.tf`
+
+```bash
+resource "aws_acm_certificate" "hello" {
+  provider          = aws.default_us_east_1
+  domain_name       = "api.hello.com"
+  validation_method = "DNS"
+
+  tags = {
+    Environment = terraform.workspace
+  }
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+resource "aws_acm_certificate_validation" "hello" {
+  provider = aws.default_us_east_1
+
+  certificate_arn         = aws_acm_certificate.hello.arn
+  validation_record_fqdns = [for record in aws_route53_record.hello : record.fqdn]
+}
+
+locals {
+  aws_route53_your_existing_zone_id = "A123A123A123A123"
+}
+
+resource "aws_route53_record" "hello" {
+  for_each = {
+    for dvo in aws_acm_certificate.hello.domain_validation_options : dvo.domain_name => {
+      name   = dvo.resource_record_name
+      record = dvo.resource_record_value
+      type   = dvo.resource_record_type
+    }
+  }
+
+  allow_overwrite = true
+  name            = each.value.name
+  records         = [each.value.record]
+  ttl             = 60
+  type            = each.value.type
+  zone_id         = local.aws_route53_your_existing_zone_id
+}
+
++ resource "aws_api_gateway_domain_name" "hello" {
++  security_policy = "TLS_1_2"
++  certificate_arn = aws_acm_certificate_validation.hello.certificate_arn
++  domain_name     = aws_acm_certificate.hello.domain_name
++
++  endpoint_configuration {
++    types = ["EDGE"]
++  }
++ }
+
++ resource "aws_route53_record" "custom_domain_to_cloudfront" {
++ 
++  zone_id = local.aws_route53_your_existing_zone_id
++  name    = "api.hello.com"
++  type    = "CNAME"
++  ttl     = "300"
++  records = [aws_api_gateway_domain_name.hello.cloudfront_domain_name]
++ }
+```
+
+You are just going to fill out the options that you just saw from the API Gateway console. Just fill out the relevant info about certificate, domain name, and endpoint config. 
+
+Now, this is important: you need to create another Route53 Record to map your custom domain to cloudfront. Once you create your custom domain, AWS creates 'API Gateway domain name', circled with red in the below picture:
+
+![another-route53.png](./another-route53.png)
+
+You need to route the traffic to `api.hello.com` to this API Gateway domain name (an example of an API Gateway domain name would be `asdfasdfasdf.cloudfront.net` as long as you are using `EDGE`). That's what we are doing with `aws_route53_record.custom_domain_to_cloudfront` Otherwise, the response to your API will keep showing some weird errors that are really hard to guess the causes of. I found AWS really lacking a documentation on this part, so please be advised on this one. **You need to create another Route53 Record**.
+
+You will be able to verify by entering Route53 console and looking for `api.hello.com`. It should appear as the following:
+
+![route-53-record.png](./route-53-record.png)
+
+## `api_gateway.tf`
+
+Aftrer that, you don't have to do many things; just add base path mapping resource, in `api_gateway.tf`. Even if you do not have an additional trailing path to your endpoint, you _must_ create a base path mapping. Otherwise your API won't be exposed to the public.
+
+```bash
+...
+
++ resource "aws_api_gateway_base_path_mapping" "hello" {
++  api_id      = aws_api_gateway_rest_api.hello.id
++  stage_name  = terraform.workspace
++  domain_name = aws_api_gateway_domain_name.hello.domain_name
++ }
+
+...
+
+```
+
+After applying this change, verify that your API mapping has been created:
+
+![api-mapping.png](./api-mapping.png)
+
+Now, you can go back to Postman, and test your api by requesting GET `api.hello.com/hello`. What may be confusing here is that you are not adding any `path` in base path mapping. If you add `hello` as a path, your API endpoint will be configured  as `api.hello.com/hello/hello`, which is obviously not what we want. So do not add any path mapping if you already have configured your path in `aws_api_gateway_resource`). Anyways, request and response to the API endpoint should work as expected if everything has been setup correctly so far.
+
+# Enabling OPTIONS (preflight request)
+
+Now, our client application, of course, is not Postman, so usually clients will request OPTIONS `api.hello.com/hello` first, and then request GET `api.hello.com/hello`, if they intend to send CORS requests, which is a very common case ([read more about that from MDN docs](https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request))
+
+If you have not done anything related to handling OPTIONS request, it's very likely that you will get some error in your client application, like this ([I got this picture from somewhere else for the purpose of demonstration](https://stackoverflow.com/questions/59909987/aws-api-gateway-403-forbidden-response-to-preflight-options-request)):
+
+![options-cors-error.png](./options-cors-error.png)
+
+So let's do it! There's already a [handy module written by a great dev](https://github.com/squidfunk/terraform-aws-api-gateway-enable-cors), so we will just use that:
+
+## `api_gateway.tf`
+
+```bash
+
+...
+
++ module "cors" {
++  source  = "squidfunk/api-gateway-enable-cors/aws"
++  version = "0.3.1"
++  allow_headers = [
++    # default allowed headers
++    "Authorization",
++    "Content-Type",
++    "X-Amz-Date",
++    "X-Amz-Security-Token",
++    "X-Api-Key",
++    # custom allowed headers
++    "x-my-custom-header",
++  ]
++
++  api_id          = aws_api_gateway_rest_api.hello.id
++  api_resource_id = aws_api_gateway_resource.hello_eng.id
++ }
+```
+Note that if you have any custom headers, you must define it in your config. Next, verify that OPTIONS requests are now allowed on the console:
+
+![verify-options.png](./verify-options.png)
+
+Also, you will need to change your lambda's response header too. Just adding `Access-Control-Allow-Origin": "*"` will work:
+
+## `packages/hello/lib/index.ts`
+
+```ts
+import {
+  APIGatewayProxyEvent,
+  APIGatewayProxyResult
+} from "aws-lambda";
+
+export const handler = async (
+  event: APIGatewayProxyEvent
+): Promise<APIGatewayProxyResult> => {
+  return {
++   headers: {
++     "Access-Control-Allow-Origin": "*",
++   },
+    statusCode: 200,
+    body: `hello`
+  }
+}
+```
+
+Now, apply the changes, and go back to your client app and retry the request. It should be working.
+
+# Bonus #0: connecting with VPC 
+
+# Bonus #1: accessing the public Internet from a lambda that connects to resources inside VPC
