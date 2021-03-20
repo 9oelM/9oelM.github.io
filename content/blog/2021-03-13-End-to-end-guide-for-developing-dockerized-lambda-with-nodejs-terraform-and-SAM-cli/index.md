@@ -734,6 +734,18 @@ So far, we have created these:
 └── template.yml
 ```
 
+Now, create `nodemon.json` under `server/` to watch and build files:
+
+## `nodemon.json`
+```json
+{
+  "watch": ["packages"],
+  "ext": "ts,json,js",
+  "ignore": ["src/**/*.spec.ts", "./**/node_modules", "node_modules", ".aws-sam"],
+  "exec": "sam build --template-file ./template.yaml"
+}
+```
+
 Oh, and you can delete `__tests__` and `lib/hello.js` because we are not using them. Anyways, now we are kind of ready to build this function into a docker image. Let's try it:
 
 ```bash
@@ -788,6 +800,7 @@ resource "aws_iam_role" "hello" {
       {
         "Effect" : "Allow",
         "Principal" : {
+          # this should be set as the 'default' user on your AWS cli.
           # get 'localtf' user's ARN from AWS IAM console
           # it should look like: arn:aws:iam::{aws-account-id}:user/localtf
           # example: arn:aws:iam::123456789:user/localtf
@@ -897,3 +910,229 @@ provider "aws" {
 ```
 
 Once you add `assume_role`, now you can create any resources you want, using the permissions given by that role. Let's now make an ECR repository. Make `ecr.tf`:
+
+## `ecr.tf`
+```bash
+resource "aws_ecr_repository" "hello" {
+  name                 = "${terraform.workspace}-hello"
+  image_tag_mutability = "MUTABLE" # you are going to be overwriting 'latest' tagged image.
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+
+  depends_on = [aws_iam_role_policy_attachment.hello]
+}
+
+data "aws_ecr_image" "latest" {
+  repository_name = aws_ecr_repository.hello.name # from hello_role.tf
+  image_tag       = "latest"
+}
+```
+
+Run `apply` and terraform will soon make ECR.
+
+# Building and pushing the image to ECR
+
+Now that we've made an ECR, we can go back to our server and write a little script to login, build and push the image of the lambda we are writing.
+
+It's pretty much straightforward; just get your AWS cli ready for using; and authenticate to be able to use ECR from Docker CLI:
+
+## `login-docker.sh`
+```bash
+aws ecr get-login-password --region {your-region} | docker login --username AWS --password-stdin {your-account-id}.dkr.ecr.{your-region}.amazonaws.com
+```
+
+Next, tag your Docker image as `latest` and separate timestamnp at the time of the build, so that latest tag will always be the latest built image, and then another image will remain for the record, which you can use later to revert back or do other things in some cases.
+
+## `build-and-push-docker-image.sh`
+```bash
+DEV_HELLO_REPO_URI="{your-account-id}.dkr.ecr.{your-region}.amazonaws.com/dev-hello"
+
+# change to your region for the ease of finding Docker images later
+timestamp=$(TZ=":Asia/Seoul" date +%Y%m%d%H%M%S)
+
+docker build -t "${DEV_HELLO_REPO_URI}:latest" -t "${DEV_HELLO_REPO_URI}:${timestamp}" ./packages/hello
+
+docker push "${DEV_HELLO_REPO_URI}:latest"
+docker push "${DEV_HELLO_REPO_URI}:${timestamp}"
+```
+
+Now, you can test it out yourself as such:
+
+```bash
+# get AWS CLI logged in and ready before as previously explained
+cd server
+
+chmod u+x login-docker.sh
+chmod u+x build-and-push-docker-image.sh
+
+./login-docker.sh
+./build-and-push-docker-image.sh
+```
+
+After this, you will be able to see on AWS ECR:
+
+![aws ecr](./aws-ecr.png)
+
+as you can see, the images are going to be tagged by timestamp, and the latest built image will be always tagged as `latest`, and you are going to reference this tag in Terraform to apply newly built Docker image to lambda.
+
+So far, we've made changes like so:
+
+```bash
+➜  example-lambda git:(master) tree -I node_modules
+.
+├── IaC
+│   ├── ecr.tf
+│   ├── hello_role.tf
+│   └── main.tf
+└── server
+    ├── build-and-push-docker-image.sh
+    ├── lerna.json
+    ├── login-docker.sh
+    ├── nodemon.json
+    ├── package-lock.json
+    ├── package.json
+    ├── packages
+    │   └── hello
+    │       ├── Dockerfile
+    │       ├── README.md
+    │       ├── lib
+    │       │   ├── index.js
+    │       │   └── index.ts
+    │       ├── package-lock.json
+    │       ├── package.json
+    │       └── tsconfig.json
+    └── template.yml
+
+5 directories, 17 files
+```
+
+# Creating API gateway, Lambda, and more on Terraform
+
+Now the majority of the prepartion is done, so we can move onto creating actual lambda and API gateway.
+
+## `lambda.tf` 
+
+First, the most important part: you want to create lambda itself from Docker.
+
+```bash
+module "lambda_function_container_image" {
+  version = "1.43.0"
+  source  = "terraform-aws-modules/lambda/aws"
+
+  function_name = "${terraform.workspace}-HelloEngFunction"
+  description   = "GET /hello"
+
+  create_package = false
+
+  # this will allow Terraform to detect changes in the docker image because
+  # a new image will have a different SHA (digest).
+  image_uri    = "{your-account-id}.dkr.ecr.{your-region}.amazonaws.com/${aws_ecr_repository.hello.name}@${data.aws_ecr_image.latest.image_digest}"
+  package_type = "Image"
+}
+```
+
+There is already a module just made for this, so use it to make lambda. Once you are done, `apply` the changes.
+
+The key here is that you are going to reference an image URI from ECR where the tag is the latest. If you have previously built and pushed a new docker image, the hash of the image is going to be different, thus causing a redeployment of the lambda function. Otherwise it has no idea if the docker image is new or not.
+
+Again, after running the change, you can see the lambda on AWS console:
+
+![lambda-creation-0](./lambda-creation-0.png)
+
+as you can see, compared to other lambdas, it has the package type of 'Image', which means it's not from a Zip, but a Docker image.
+
+![lambda-creation-1](./lambda-creation-1.png)
+
+You should be able to see the image URI (including the hash) of the image at the bottom of the information about lambda. If you click on that image URI, you will be navigated to the latest image on ECR that you just built and pushed.
+
+## `api_gateway.tf`
+
+Now, you will be able to test lambda on AWS Lambda console, but what we want in the end is something like sending GET `/hello` to a certain domain and receiving a response. To be able to do that, we need to setup API Gateway. 
+
+For this example, we will setup a domain at `api.hello.com`.
+
+Here's how: 
+
+```bash
+resource "aws_api_gateway_rest_api" "hello" {
+  description = "all APIs related to api.hello.com"
+  name = "hello-api"
+}
+
+resource "aws_api_gateway_resource" "hello_eng" {
+  path_part   = "hello" # later, you will want to add another path for /bonjour, and so on
+  parent_id   = aws_api_gateway_rest_api.hello.root_resource_id
+  rest_api_id = aws_api_gateway_rest_api.hello.id
+}
+
+resource "aws_api_gateway_method" "hello_eng" {
+  rest_api_id   = aws_api_gateway_rest_api.hello.id
+  resource_id   = aws_api_gateway_resource.hello_eng.id
+  http_method   = "GET"
+  authorization = "NONE"
+}
+
+resource "aws_lambda_permission" "hello_eng" {
+  statement_id  = "AllowExecutionFromAPIGateway"
+  action        = "lambda:InvokeFunction"
+  function_name = module.lambda_function_container_image.this_lambda_function_name
+  principal     = "apigateway.amazonaws.com"
+
+  # More: http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-hello.html
+  # example: arn:aws:execute-api:{your-region}:{your-account-id}:{some-random-hash}/test-invoke-stage/GET/hello
+  # omit slash before aws_api_gateway_resource.hello_eng.path because it has a preceding slash
+  source_arn = "arn:aws:execute-api:{your-region}:{your-account-id}:${aws_api_gateway_rest_api.hello.id}/*/${aws_api_gateway_method.hello_eng.http_method}${aws_api_gateway_resource.hello_eng.path}"
+}
+
+resource "aws_api_gateway_integration" "hello_eng" {
+  rest_api_id             = aws_api_gateway_rest_api.hello.id
+  resource_id             = aws_api_gateway_resource.hello_eng.id
+  http_method             = aws_api_gateway_method.hello_eng.http_method
+  integration_http_method = "GET"
+  type                    = "AWS_PROXY"
+  uri                     = module.lambda_function_container_image.this_lambda_function_invoke_arn
+}
+
+resource "aws_api_gateway_stage" "hello" {
+  description   = "stage of all APIs related to api.hello.com. Right now we have dev only"
+  deployment_id = aws_api_gateway_deployment.hello.id
+  rest_api_id   = aws_api_gateway_rest_api.hello.id
+  stage_name    = terraform.workspace
+}
+
+resource "aws_api_gateway_deployment" "hello" {
+  rest_api_id = aws_api_gateway_rest_api.hello.id
+  description = "deployment all APIs related to api.hello.com"
+
+  triggers = {
+    # https://github.com/hashicorp/terraform/issues/6613#issuecomment-322264393
+    redeployment = timestamp()
+    # or you can just use md5(file("api_gateway.tf")) to make sure that things only get deployed when they changed
+  }
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+```
+
+I will explain the code one by one.
+
+`aws_api_gateway_rest_api` will create a REST api. It usually does not include a single endpoint; it usually contains multiple, like: `api.hello.co/hello`, `api.hello.co/bonjour`, `api.hello.co/nihao`, and so on. On AWS, it is equivalent to a single row in APIs tab:
+
+![API](./rest-api.png)
+
+`aws_api_gateway_resource`: to put it very simply, you can think of this as a single API endpoint that has not yet been deployed. In this case we create a single endpoint ending with `/hello`.
+
+In the below example, we have created two different resources with `OPTIONS` and `POST`, to the same path (hidden by black overlay). We will talk about creating OPTIONS resource to handle preflight requests later. For now, it would suffice to know that creating a REST resource means creating a certain endpoint.
+
+![resource](./rest-resource.png)
+
+`aws_api_gateway_method`: Now, you want to create a REST method for that resource. Our `/hello` endpoint will just require no auth (out of scope of this article), and be a GET method.
+
+`aws_lambda_permission`: By default, there's no permission for API gateway to invoke lambda function. So we are just granting a permission to it so that it can be executed.
+
+`aws_api_gateway_integration`: API gateway supports transforming (filtering, preprocessing, ...) a request before it reaches client or a response from the client before it reaches the actual lambda. We are not doing so many things here, but you may want to use it in the future. For more, [read relevant AWS docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-integration-settings.html).
