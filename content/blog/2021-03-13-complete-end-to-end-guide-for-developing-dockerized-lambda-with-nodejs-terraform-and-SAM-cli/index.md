@@ -1,5 +1,5 @@
 ---
-title: "End to end guide for developing dockerized lambda in Nodejs (Typescript), Terraform and SAM cli"
+title: "Complete end-to-end guide for developing dockerized lambda in Typescript, Terraform and SAM cli"
 date: "2021-03-13T09:00:00.009Z"
 category: "development"
 ---
@@ -8,7 +8,7 @@ This is a full guide to locally develop and deploy a backend app with [a recentl
 
 Needless to say, if you are a great fan of Docker, you would know how amazing it is. What you test on local is what you get when you deploy it, at least at the container level.
 
-Since this feature is quite new, there has been **lots of rabbit holes** I fell into, and I'm sure others will too, so I will break every piece of rabbit hole down so that nobody gets trapped into it.
+Since this feature is quite new, there have been **lots of rabbit holes** I fell into, and I'm sure others will too, so I will break every piece of rabbit hole down so that nobody gets trapped into it. This guide starts from the real basics like making a user, so feel free to skip to the section you need.
 
 # Reason to use Terraform and SAM CLI together
 
@@ -16,7 +16,7 @@ Well, it seems that Terraform supports building a Docker image and deploying it 
 
 And, what SAM CLI? Terraform cannot replace SAM CLI and vice versa. SAM cli is useful in developing local lambdas because it automatically configures endpoints for each lambda and greatly removes barriers to the initial setup. Since lambda functions are 'special' in the way that they only get 'booted up and called' when they are invoked (unlike EC2 or Fargate), just writing a plain `.ts` file and `ts-node my-lambda.ts` would not make it work. Of course there are many other solutions to this matter (such as `sls`) but in this guide I will just use SAM CLI. But for many reasons SAM makes me want to use other better solutions if any... The reason follows right below.
 
-_Disclaimer for the people who are looking for how to 'hot-reload' Dockerfile for typescript or javascript based lambda_: it won't work smoothly as of now. The best bet is to use `nodemon` to watch a certain directory to trigger `sam build` every single time, and in another shell launch `sam local start-api`. It works as expected, but the current problem I see from here is that every single time it `sam build`s, it would make another Docker image and another and so on, so there will be many useless dangling images stacked up in your drive, which you will need to delete manually because SAM CLI does not support passing in a argument that's equivalent to `docker run --rm`. Anyways that's the story, so this is the reason I might want to try some other solutions. [More on this on the relevant issue on Github](https://github.com/aws/aws-sam-cli/issues/921).
+_Disclaimer for the people who are looking for how to 'hot-reload' Dockerfile for typescript or javascript based lambda_: it won't work smoothly as of now. The best bet is to use `nodemon` to watch a certain directory to trigger `sam build` every single time, and in another shell launch `sam local start-api`. It works as expected, but the current problem I see from here is that every single time it `sam build`s, it would make another Docker image and another and so on, so there will be many useless dangling images stacked up in your drive, which you will need to delete manually because SAM CLI does not support passing in a argument that's equivalent to `docker run --rm`. Anyways that's the story, so this is the reason I might want to try some other solutions. [More on this on the relevant issue on Github](https://github.com/aws/aws-sam-cli/issues/921). Please let me know if any of you had a good experience with `sls` because I haven't used it much yet.
 
 Ok. Now let's write some code.
 
@@ -468,8 +468,7 @@ Now, under `server`, we will need to add some utils to build and invoke the func
   "scripts": {
     "start": "concurrently \"npm run watch\" \"npm run api\"",
     "watch": "nodemon",
-    "api": "sam local start-api",
-    "docker:login": "aws ecr get-login-password --region {your-aws-region} | docker login --username AWS --password-stdin {your-aws-account}.dkr.ecr.{your-aws-region}.amazonaws.com"
+    "api": "sam local start-api"
   },
   "name": "server"
 }
@@ -487,22 +486,15 @@ Dependencies:
 Scripts:
 
 - `start`, `watch`, `api`: we will need these to launch our lambda function locally and invoke it.
-- `docker:login`: we will need this to push the docker image to ECR for deployment. More on this later.
 
 Now, you need to create `template.yml` for SAM cli to consume and run what we want to run.
 
 ```yml
-########################################
-# DO NOT USE THIS TEMPLATE TO DEPLOY TO AWS!!!
-# ONLY USE IT FOR LOCAL TESTING
-########################################
-
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
   hello api
   
-# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
     Timeout: 3
@@ -516,7 +508,7 @@ Resources:
       Dockerfile: Dockerfile
     Properties:
       # will automatically use local one if testing on local
-      ImageUri: {your-aws-account-id}.dkr.ecr.{your-aws-region}.amazonaws.com/hello-in-eng
+      ImageUri: {your-aws-account-id}.dkr.ecr.{your-aws-region}.amazonaws.com/dev-hello
       # Note: If the PackageType property is set to Image, then either ImageUri is required, 
       # or you must or you must build your application with necessary Metadata entries in the AWS SAM template file. 
       # For more information, see Building applications.
@@ -526,7 +518,7 @@ Resources:
         helloRoom:
           Type: Api
           Properties:
-            Path: /hello-in-eng
+            Path: /hello
             Method: get
 ```
 
@@ -742,8 +734,26 @@ Now, create `nodemon.json` under `server/` to watch and build files:
   "watch": ["packages"],
   "ext": "ts,json,js",
   "ignore": ["src/**/*.spec.ts", "./**/node_modules", "node_modules", ".aws-sam"],
-  "exec": "sam build --template-file ./template.yaml"
+  "exec": "sam build --template-file ./template.yml"
 }
+```
+
+After creating `nodemon.json`, you can start running `npm run watch` or `npm start`. It would do two things: build Dockerfile as you make any changes under `packages/` directory, and host a local endpoint for the lambda. It will be similar to hot-reload although it seems more like a hack; you won't need to cancel and run `sam local start-api` again once you make a change. If it does not work, try again after creating ECR first.
+
+```bash
+➜  server git:(master) ✗ npm run watch
+
+> server@ watch ~/example-lambda/server
+> nodemon
+
+[nodemon] 2.0.7
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): packages/**/*
+[nodemon] watching extensions: ts,json,js
+[nodemon] starting `sam build --template-file ./template.yml`
+
+...
+
 ```
 
 Oh, and you can delete `__tests__` and `lib/hello.js` because we are not using them. Anyways, now we are kind of ready to build this function into a docker image. Let's try it:
@@ -781,7 +791,7 @@ Everything's cool, docker build succeeded. You can try running the image and tes
 
 ![docker first test](./docker-first-test.png)
 
-OK. It shows the response we've created in `index.ts`. That's good. Now, let's setup 'hot reload' for the server. This is where SAM CLI should startt to come in. But before then, we will need to make a ECR repository with terraform. Let's go back to terraform for a while.
+This is where SAM CLI should start to come in. But before then, we will need to make a ECR repository with terraform. Let's go back to terraform for a while.
 
 # Back to terraform: assume role and ECR
 
@@ -1501,7 +1511,3 @@ export const handler = async (
 ```
 
 Now, apply the changes, and go back to your client app and retry the request. It should be working.
-
-# Bonus #0: connecting with VPC 
-
-# Bonus #1: accessing the public Internet from a lambda that connects to resources inside VPC
