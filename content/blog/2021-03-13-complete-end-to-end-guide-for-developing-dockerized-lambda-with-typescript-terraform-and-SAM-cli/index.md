@@ -1,5 +1,5 @@
 ---
-title: "Complete end-to-end guide for developing dockerized lambda in Typescript, Terraform and SAM cli"
+title: "Complete end-to-end guide for developing dockerized lambda in Typescript, Terraform and SAM CLI"
 date: "2021-03-13T09:00:00.009Z"
 category: "development"
 ---
@@ -8,15 +8,15 @@ This is a full guide to locally develop and deploy a backend app with [a recentl
 
 Needless to say, if you are a great fan of Docker, you would know how amazing it is. What you test on local is what you get when you deploy it, at least at the container level.
 
-Since this feature is quite new, there have been **lots of rabbit holes** I fell into, and I'm sure others will too, so I will break every piece of rabbit hole down so that nobody gets trapped into it. This guide starts from the real basics like making a user, so feel free to skip to the section you need.
+Since this feature is quite new, there have been **lots of rabbit holes** I fell into, and I'm sure others will too, so I will break every piece of rabbit hole down so that nobody gets trapped into it. This guide starts from the real basics like making a user or setting up terraform, so feel free to skip to the section you need.
 
 # Reason to use Terraform and SAM CLI together
 
 Well, it seems that Terraform supports building a Docker image and deploying it to ECR out of the box, but after lots of digging, I noticed that things would get simpler if I just build docker image in another pipeline and deploy it with a few lines of shell script. So Terraform will used to define resources excluding the build and deployment process. There's no problem with that.
 
-And, what SAM CLI? Terraform cannot replace SAM CLI and vice versa. SAM cli is useful in developing local lambdas because it automatically configures endpoints for each lambda and greatly removes barriers to the initial setup. Since lambda functions are 'special' in the way that they only get 'booted up and called' when they are invoked (unlike EC2 or Fargate), just writing a plain `.ts` file and `ts-node my-lambda.ts` would not make it work. Of course there are many other solutions to this matter (such as `sls`) but in this guide I will just use SAM CLI. But for many reasons SAM makes me want to use other better solutions if any... The reason follows right below.
+And, what SAM CLI? Terraform cannot replace SAM CLI and vice versa. SAM cli is useful in developing local lambdas because it automatically configures endpoints for each lambda and greatly removes barriers to the initial setup. Since lambda functions are 'special' in the way that they only get 'booted up and called' when they are invoked (unlike EC2 or Fargate), just doing `ts-node my-lambda.ts` would not make it work. Of course there are many other solutions to this matter (such as `sls`) but in this guide I will just use SAM CLI. But for many reasons SAM makes me want to use other better solutions if any... The reason follows right below.
 
-_Disclaimer for the people who are looking for how to 'hot-reload' Dockerfile for typescript or javascript based lambda_: it won't work smoothly as of now. The best bet is to use `nodemon` to watch a certain directory to trigger `sam build` every single time, and in another shell launch `sam local start-api`. It works as expected, but the current problem I see from here is that every single time it `sam build`s, it would make another Docker image and another and so on, so there will be many useless dangling images stacked up in your drive, which you will need to delete manually because SAM CLI does not support passing in a argument that's equivalent to `docker run --rm`. Anyways that's the story, so this is the reason I might want to try some other solutions. [More on this on the relevant issue on Github](https://github.com/aws/aws-sam-cli/issues/921). Please let me know if any of you had a good experience with `sls` because I haven't used it much yet.
+_Disclaimer for the people who are looking for how to '**hot-reload**' Dockerfile for typescript or javascript based lambda_: it won't work smoothly as of now. The best bet is to use `nodemon` to watch a certain directory to trigger `sam build` every single time, and in another shell launch `sam local start-api`. It works as expected, but the current problem I see from here is that every single time it `sam build`s, it would make another Docker image and another and so on, so there will be many useless dangling images stacked up in your drive, which you will need to delete manually because SAM CLI does not support passing in a argument that's equivalent to `docker run --rm`. Anyways that's the story, so this is the reason I might want to try some other solutions. [More on this on the relevant issue on Github](https://github.com/aws/aws-sam-cli/issues/921). Please let me know if any of you had a good experience with `sls` because I haven't used it much yet.
 
 Ok. Now let's write some code.
 
@@ -412,7 +412,7 @@ About to write to /Users/jm/Desktop/test/test/server/packages/hello/package.json
   "name": "ls",
   "version": "0.0.0",
   "description": "> TODO: description",
-  "author": "9oelM <hj923@hotmail.com>",
+  "author": "9oelM",
   "homepage": "",
   "license": "ISC",
   "main": "lib/hello.js",
@@ -1008,7 +1008,6 @@ So far, we've made changes like so:
     │       ├── Dockerfile
     │       ├── README.md
     │       ├── lib
-    │       │   ├── index.js
     │       │   └── index.ts
     │       ├── package-lock.json
     │       ├── package.json
@@ -1197,7 +1196,6 @@ So far we have made changes to make lambda and API Gateway resources. The list o
     │       ├── Dockerfile
     │       ├── README.md
     │       ├── lib
-    │       │   ├── index.js
     │       │   └── index.ts
     │       ├── package-lock.json
     │       ├── package.json
@@ -1420,7 +1418,7 @@ Now, this is important: you need to create another Route53 Record to map your cu
 
 ![another-route53.png](./another-route53.png)
 
-You need to route the traffic to `api.hello.com` to this API Gateway domain name (an example of an API Gateway domain name would be `asdfasdfasdf.cloudfront.net` as long as you are using `EDGE`). That's what we are doing with `aws_route53_record.custom_domain_to_cloudfront` Otherwise, the response to your API will keep showing some weird errors that are really hard to guess the causes of. I found AWS really lacking a documentation on this part, so please be advised on this one. **You need to create another Route53 Record**.
+You need to route the traffic to `api.hello.com` to this API Gateway domain name (an example of an API Gateway domain name would be `asdfasdfasdf.cloudfront.net` as long as you are using `EDGE`). That's what we are doing with `aws_route53_record.custom_domain_to_cloudfront`. Otherwise, the response to your API will keep showing some weird errors that are really hard to guess the causes of. I found AWS really lacking a documentation on this part, so please be advised on this one. **You need to create another Route53 Record**.
 
 You will be able to verify by entering Route53 console and looking for `api.hello.com`. It should appear as the following:
 
@@ -1511,3 +1509,40 @@ export const handler = async (
 ```
 
 Now, apply the changes, and go back to your client app and retry the request. It should be working.
+
+# Summing up
+
+If you have followed everything, you will have created these files:
+
+```bash
+➜  example-lambda git:(master) ✗ tree -I node_modules
+.
+├── IaC
+│   ├── api_gateway.tf
+│   ├── custom_domain.tf
+│   ├── ecr.tf
+│   ├── hello_role.tf
+│   ├── lambda.tf
+│   └── main.tf
+└── server
+    ├── build-and-push-docker-image.sh
+    ├── lerna.json
+    ├── login-docker.sh
+    ├── nodemon.json
+    ├── package-lock.json
+    ├── package.json
+    ├── packages
+    │   └── hello
+    │       ├── Dockerfile
+    │       ├── README.md
+    │       ├── lib
+    │       │   └── index.ts
+    │       ├── package-lock.json
+    │       ├── package.json
+    │       └── tsconfig.json
+    └── template.yml
+
+5 directories, 20 files
+```
+
+So far, we have looked at how to setup, develop and deploy a dockerized lambda application with Typescript, Terraform and SAM CLI. There are tonnes of things to cover on lambda.. maybe next time, it will be on using resources inside VPC from lambda. I hope you enjoyed this and found some valuable insights. Thank you.
