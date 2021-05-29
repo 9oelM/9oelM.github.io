@@ -26,7 +26,7 @@ First, make sure that you've installed and authorized on your AWS CLI. Installin
 
 After successful installation, run:
 
-```bash
+```tf
 aws configure
 ```
 
@@ -107,7 +107,7 @@ If you haven't already, [install terraform by following an instruction from the 
 
 Now verify version of terraform
 
-```bash
+```tf
 ➜  test terraform --version
 Terraform v0.14.5
 
@@ -119,7 +119,7 @@ And then make `main.tf` file in your project directory (I personally put it into
 
 ## `main.tf`
 
-```bash
+```tf
 terraform {
   required_providers {
     aws = {
@@ -137,7 +137,7 @@ provider "aws" {
 
 Now, run `terraform init`:
 
-```bash
+```tf
 ➜  test terraform init
 
 Initializing the backend...
@@ -167,7 +167,7 @@ Then, we will need to add s3 backend and state locking. But before then, make a 
 
 Now we will need to add more to the policy on DynamoDB we created because we want to create a table:
 
-```bash
+```tf
   "dynamodb:CreateTable",
   "dynamodb:DescribeTable",
   "dynamodb:Scan",
@@ -176,7 +176,7 @@ Now we will need to add more to the policy on DynamoDB we created because we wan
 
 Then you could write this code (by the way, it may be a good idea to put this below IaC in a different general-purpose repository because the current repository is meant to be only used for lambda-related resouces. But for the sake of this article I will just write it away here):
 
-```bash
+```tf
 resource "aws_dynamodb_table" "terraform_state_lock" {
   name           = "tf-state-locks"
   read_capacity  = 5
@@ -191,7 +191,7 @@ resource "aws_dynamodb_table" "terraform_state_lock" {
 
 And then, also add S3 backend (you will need to add relevant IAM policies too here, but since we know how to do it, I will cut the explanation):
 
-```bash
+```tf
 resource "aws_s3_bucket" "b" {
   bucket = "tf-backend"
   acl    = "private"
@@ -206,7 +206,7 @@ Now, run `terraform apply`, verify the changes, and enter `yes`. DynamoDB table 
 
 ## `main.tf`
 
-```bash
+```tf
 terraform {
   required_providers {
     aws = {
@@ -244,7 +244,7 @@ provider "aws" {
 
 Now, add s3 backend and state lock:
 
-```bash
+```tf
 terraform {
   required_providers {
     aws = {
@@ -290,7 +290,7 @@ resource "aws_dynamodb_table" "terraform_state_lock" {
 We are also going to use Docker provider, so add that too:
 
 ## `main.tf`
-```bash
+```tf
 terraform {
   required_providers {
     aws = {
@@ -344,7 +344,7 @@ Now because you've added a backend and another provider, we will need to run `te
 
 Now we will need to develop lambda on the local machine. Install SAM CLI:
 
-```bash
+```tf
 brew tap aws/tap
 
 brew install aws-sam-cli
@@ -352,18 +352,18 @@ brew install aws-sam-cli
 
 Note that the outdated versions would not support running Docker containers, so make sure that your version is the latest.
 
-```bash
+```tf
 test:(dev) sam --version
 SAM CLI, version 1.20.0
 ```
 
 Now, we won't run `sam --init`, because it will make it difficult to make the server into a monorepo structure. The reason that we will want to make it into a monorepo is that it will make it much easier to propery dockerize every single lambda and deploy it with dependencies that each of them only require to have. Instead we will use _lerna_ to initialize the server folder.
 
-```bash
+```tf
 mkdir server
 ```
 
-```bash
+```tf
 |
 - IaC
 - server
@@ -371,7 +371,7 @@ mkdir server
 
 And as usual:
 
-```bash
+```tf
 cd server
 
 npm i -g lerna
@@ -381,7 +381,7 @@ lerna init
 
 Then it will give you this layout:
 
-```bash
+```tf
 ➜  test git:(master) ✗ tree
 .
 ├── IaC
@@ -394,7 +394,7 @@ Then it will give you this layout:
 
 Then, add your first function package. For the sake of this example, let's assume that we want to make a REST API, composed of many lambdas, each returning 'hello' as a response in different languages (which is totally useless in reality, but at least useful here). Our first lambda will be an English one.
 
-```bash
+```tf
 ➜  server git:(master) ✗ lerna create hello
 lerna notice cli v3.18.1
 lerna WARN ENOREMOTE No git remote found, skipping repository property
@@ -435,7 +435,7 @@ lerna success create New package ls created at ./packages/hello
 
 Now the directory structure will look like this:
 
-```bash
+```tf
 ➜  test git:(master) ✗ tree -I node_modules
 .
 ├── IaC
@@ -526,7 +526,7 @@ We won't be able to run `sam build` or `sam local start-api` yet, because we sti
 
 So far we have added `template.yml` for running SAM CLI:
 
-```bash
+```tf
 ➜  server git:(master) ✗ tree -I node_modules
 .
 ├── lerna.json
@@ -544,7 +544,7 @@ So far we have added `template.yml` for running SAM CLI:
 
 Now we will add `Dockerfile` in `packages/hello/`.
 
-```bash
+```tf
 cd packages/hello
 
 touch Dockerfile
@@ -589,7 +589,7 @@ To go through it line by line:
 
 Now we've added a Dockerfile. Now let's setup basic environment for lambda:
 
-```bash
+```tf
 cd packages/hello
 
 ➜  hello git:(master) ✗ tsc --init
@@ -707,7 +707,7 @@ export const handler = async (
 ```
 
 So far, we have created these:
-```bash
+```tf
 ➜  server git:(master) ✗ tree -I node_modules
 .
 ├── lerna.json
@@ -740,7 +740,7 @@ Now, create `nodemon.json` under `server/` to watch and build files:
 
 After creating `nodemon.json`, you can start running `npm run watch` or `npm start`. It would do two things: build Dockerfile as you make any changes under `packages/` directory, and host a local endpoint for the lambda. It will be similar to hot-reload although it seems more like a hack; you won't need to cancel and run `sam local start-api` again once you make a change. If it does not work, try again after creating ECR first.
 
-```bash
+```tf
 ➜  server git:(master) ✗ npm run watch
 
 > server@ watch ~/example-lambda/server
@@ -758,7 +758,7 @@ After creating `nodemon.json`, you can start running `npm run watch` or `npm sta
 
 Oh, and you can delete `__tests__` and `lib/hello.js` because we are not using them. Anyways, now we are kind of ready to build this function into a docker image. Let's try it:
 
-```bash
+```tf
 ➜  packages git:(master) ✗ cd hello
 ➜  hello git:(master) ✗ pwd
 /Users/jm/Desktop/test/test/server/packages/hello
@@ -801,7 +801,7 @@ So how do we do it? First, let's create `hello_role.tf`:
 
 ## `hello_role.tf`
 
-```bash
+```tf
 resource "aws_iam_role" "hello" {
   name = "hello_role"
   assume_role_policy = jsonencode({
@@ -866,7 +866,7 @@ Once you are done writing `hello_role.tf`, run `terraform apply` to make changes
 
 Now, go back to `main.tf` and add:
 
-```bash
+```tf
 terraform {
   required_providers {
     aws = {
@@ -922,7 +922,7 @@ provider "aws" {
 Once you add `assume_role`, now you can create any resources you want, using the permissions given by that role. Let's now make an ECR repository. Make `ecr.tf`:
 
 ## `ecr.tf`
-```bash
+```tf
 resource "aws_ecr_repository" "hello" {
   name                 = "${terraform.workspace}-hello"
   image_tag_mutability = "MUTABLE" # you are going to be overwriting 'latest' tagged image.
@@ -949,14 +949,14 @@ Now that we've made an ECR, we can go back to our server and write a little scri
 It's pretty much straightforward; just get your AWS cli ready for using; and authenticate to be able to use ECR from Docker CLI:
 
 ## `login-docker.sh`
-```bash
+```tf
 aws ecr get-login-password --region {your-region} | docker login --username AWS --password-stdin {your-account-id}.dkr.ecr.{your-region}.amazonaws.com
 ```
 
 Next, tag your Docker image as `latest` and separate timestamnp at the time of the build, so that latest tag will always be the latest built image, and then another image will remain for the record, which you can use later to revert back or do other things in some cases.
 
 ## `build-and-push-docker-image.sh`
-```bash
+```tf
 DEV_HELLO_REPO_URI="{your-account-id}.dkr.ecr.{your-region}.amazonaws.com/dev-hello"
 
 # change to your region for the ease of finding Docker images later
@@ -970,7 +970,7 @@ docker push "${DEV_HELLO_REPO_URI}:${timestamp}"
 
 Now, you can test it out yourself as such:
 
-```bash
+```tf
 # get AWS CLI logged in and ready before as previously explained
 cd server
 
@@ -989,7 +989,7 @@ as you can see, the images are going to be tagged by timestamp, and the latest b
 
 So far, we've made changes like so:
 
-```bash
+```tf
 ➜  example-lambda git:(master) tree -I node_modules
 .
 ├── IaC
@@ -1025,7 +1025,7 @@ Now the majority of the prepartion is done, so we can move onto creating actual 
 
 First, the most important part: you want to create lambda itself from Docker.
 
-```bash
+```tf
 module "lambda_function_container_image" {
   version = "1.43.0"
   source  = "terraform-aws-modules/lambda/aws"
@@ -1064,7 +1064,7 @@ For this example, we will setup a domain at `api.hello.com`.
 
 Here's how: 
 
-```bash
+```tf
 resource "aws_api_gateway_rest_api" "hello" {
   description = "all APIs related to api.hello.com"
   name = "hello-api"
@@ -1175,7 +1175,7 @@ If you do not provide AWS Credentials in your request header, it won't work, bec
 
 So far we have made changes to make lambda and API Gateway resources. The list of files we should have by now is the following.
 
-```bash
+```tf
 ➜  example-lambda git:(master) ✗ tree -I node_modules
 .
 ├── IaC
@@ -1216,7 +1216,7 @@ Before making a change for custom domain, we need to setup another AWS provider 
 There are two choices available for an API endpoint: 1. edge; 2. regional. If your endpoint should be accessed by worldwide clients, use edge; if your endpoint is specifically confined to be used in one specific region in the world, use regional. If you don't know what to do, it totally safe to go with edge for now. First, add another aws provider:
 
 ## `main.tf`
-```bash
+```tf
 terraform {
   required_providers {
     aws = {
@@ -1285,7 +1285,7 @@ Then, you write the actual code to make a certificate and custom domain.
 
 ## `custom_domain.tf`
 
-```bash
+```tf
 resource "aws_acm_certificate" "hello" {
   provider          = aws.default_us_east_1
   domain_name       = "api.hello.com"
@@ -1349,7 +1349,7 @@ In the certificate dropdown, you should be able to see the domain that you have 
 
 ## `custom_domain.tf`
 
-```bash
+```tf
 resource "aws_acm_certificate" "hello" {
   provider          = aws.default_us_east_1
   domain_name       = "api.hello.com"
@@ -1428,7 +1428,7 @@ You will be able to verify by entering Route53 console and looking for `api.hell
 
 Aftrer that, you don't have to do many things; just add base path mapping resource, in `api_gateway.tf`. Even if you do not have an additional trailing path to your endpoint, you _must_ create a base path mapping. Otherwise your API won't be exposed to the public.
 
-```bash
+```tf
 ...
 
 + resource "aws_api_gateway_base_path_mapping" "hello" {
@@ -1459,7 +1459,7 @@ So let's do it! There's already a [handy module written by a great dev](https://
 
 ## `api_gateway.tf`
 
-```bash
+```tf
 
 ...
 
@@ -1514,7 +1514,7 @@ Now, apply the changes, and go back to your client app and retry the request. It
 
 If you have followed everything, you will have created these files:
 
-```bash
+```tf
 ➜  example-lambda git:(master) ✗ tree -I node_modules
 .
 ├── IaC
