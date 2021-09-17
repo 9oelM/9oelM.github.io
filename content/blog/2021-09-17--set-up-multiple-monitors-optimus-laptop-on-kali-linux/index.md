@@ -1,10 +1,10 @@
 ---
-title: "Set up multiple monitors on an Optimus laptop running on Kali linux"
+title: "Set up multiple monitors on an Optimus laptop running Kali linux"
 date: "2021-09-17T09:00:00.009Z"
 category: ["kali linux", "optimius", "graphics"]
 ---
 
-I needed to figure out how to set up multiple monitors on my new laptop, because it wouldn't just work automatically like MacOS or Windows. At the end of a week-long research and accumulation of fragmented information on the Internet, I finally found a way to set it up. So here's my guide.
+I needed to figure out how to set up multiple monitors on my new Kali linux laptop, because it wouldn't just work automatically like MacOS or Windows. At the end of a week-long research and accumulation of fragmented information on the Internet, I finally found a way to set it up. So here's my guide.
 
 # New optimus laptop
 
@@ -18,15 +18,15 @@ I already have my Macbook Pro which runs fairly well despite the two years of ac
 # Problem: Kali linux won't just set up multiple screens for you if you are using an Optimus laptop
 Last time when I was using my little old Samsung laptop without any Nvidia GPU (only Intel integrated graphics) to run some tests on Kali linux, I absolutely had no problems with connecting to a single external screen. **But oh dear, now I'm on a machine that's intended for gaming and it's got a huge Nvidia GPU in it along with the Intel integrated graphics, and I've got two external monitors I want to connect to.** And just in case you don't know what an Optimus means: having an 'Optimus' laptop means you have both Nvidia GPU (dGPU) and iGPU in your machine, and your machine switches back and forth from one to another for different tasks (i.e. your laptop may switch to dGPU once you start up a game which requires a lot more graphic processing than normal). Anyways, in such a case, _it won't just work without additional custom configurations if you are running Kali linux._
 
-**I searched all the way up to the very edge of the Internet, but seriously I couldn't find a single answer that worked for me. [The official documentation on Kali linux](https://www.kali.org/docs/general-use/install-nvidia-drivers-on-kali-linux/) does not work because it is not for laptop but desktop users.** In the end, I found that summing up all those solutions appropriately after clearly understanding what needed to be done is the only way to get it working. Let me start off.
+**I searched all the way up to the very edge of the Internet, but seriously I couldn't find a single answer that worked for me. [The official documentation on Kali linux](https://www.kali.org/docs/general-use/install-nvidia-drivers-on-kali-linux/) does not work because it is not for laptop but desktop users.** In the end, I found that summing up all those answers appropriately after clearly understanding what needed to be done is the only way to get it working. Let me start off.
 
 # Steps to the success
 
 ```
-- Disclaimer #1: this might be a daunting process. Stay calm and keep going on even if you feel like you are lost in the middle.
-- Disclaimer #2: this has been tested on `5.10.0-kali9-amd64` (around July 2021).
-- FYI #1: I'm using KDE.
-- FYI: I've got two external monitors to connect to, both of which are connected via HDMI.
+- Disclaimer #0: this might be a daunting process. Stay calm and keep going on even if you feel like you are lost in the middle.
+- Disclaimer #1: this has been tested on `5.10.0-kali9-amd64` (around July 2021).
+- FYI #0: I'm using KDE.
+- FYI #1: I've got two external monitors to connect to, both of which are connected via HDMI.
 ```
 
 1. Update 
@@ -38,7 +38,7 @@ sudo apt-get update
 sudo apt-get dist-upgrade
 ```
 
-You can plug your HDMI/DP/VGA cables into your machine in advance.
+Btw, you can plug your HDMI/DP/VGA cables into your machine in advance.
 
 2. Install kernal headers
 
@@ -251,4 +251,4 @@ xrandr --auto
 
 Note that changing the preceding number of the script may have an effect as well because the scripts are sorted by name and invoked. If you find it not working, try `ls /etc/X11/Xsession.d`, and try to figure out at which reasonable order the script should be called.
 
-And so that's all of the magic needed to be done. 
+And so that's all of the magic needed to be done. I hope you really got it to work... if things did not work and you got them working somehow by tweaking some bits, please leave it as a comment so that others can look at it. Thank you.
