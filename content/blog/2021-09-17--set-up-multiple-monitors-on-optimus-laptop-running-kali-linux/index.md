@@ -1,5 +1,5 @@
 ---
-title: "Set up multiple monitors on an Optimus laptop running Kali linux"
+title: "Set up multiple monitors on Optimus laptop running Kali linux"
 date: "2021-09-17T09:00:00.009Z"
 category: ["kali linux", "optimius", "graphics"]
 ---
