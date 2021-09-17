@@ -6,6 +6,10 @@ category: ["kali linux", "optimius", "graphics"]
 
 I needed to figure out how to set up multiple monitors on my new Kali linux laptop, because it wouldn't just work automatically like MacOS or Windows. At the end of a week-long research and accumulation of fragmented information on the Internet, I finally found a way to set it up. So here's my guide.
 
+```toc
+# This code block gets replaced with the TOC
+```
+
 # New optimus laptop
 
 ![Razer RZ09-0369 lid](./3.jpg)

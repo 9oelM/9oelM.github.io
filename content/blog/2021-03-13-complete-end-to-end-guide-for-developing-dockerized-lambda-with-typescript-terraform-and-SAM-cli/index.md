@@ -10,6 +10,10 @@ Needless to say, if you are a great fan of Docker, you would know how amazing it
 
 Since this feature is quite new, there have been **lots of rabbit holes** I fell into, and I'm sure others will too, so I will break every piece of rabbit hole down so that nobody gets trapped into it. This guide starts from the real basics like making a user or setting up terraform, so feel free to skip to the section you need.
 
+```toc
+# This code block gets replaced with the TOC
+```
+
 # Reason to use Terraform and SAM CLI together
 
 Well, it seems that Terraform supports building a Docker image and deploying it to ECR out of the box, but after lots of digging, I noticed that things would get simpler if I just build docker image in another pipeline and deploy it with a few lines of shell script. So Terraform will used to define resources excluding the build and deployment process. There's no problem with that.
