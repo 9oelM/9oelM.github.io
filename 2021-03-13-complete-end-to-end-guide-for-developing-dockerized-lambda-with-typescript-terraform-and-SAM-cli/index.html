@@ -51,6 +51,66 @@
   </script><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#009688"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><title data-react-helmet="true">Complete end-to-end guide for developing dockerized lambda in Typescript, Terraform and SAM CLI | Joel&#x27;s dev blog</title><meta data-react-helmet="true" http-equiv="cache-control" content="max-age=0"/><meta data-react-helmet="true" http-equiv="cache-control" content="no-cache"/><meta data-react-helmet="true" http-equiv="expires" content="0"/><meta data-react-helmet="true" http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/><meta data-react-helmet="true" http-equiv="pragma" content="no-cache"/><link as="script" rel="preload" href="/webpack-runtime-4434fcc1974e55690252.js"/><link as="script" rel="preload" href="/framework-de237a875aa45b276a9d.js"/><link as="script" rel="preload" href="/app-7e6089942b2559ef60f2.js"/><link as="script" rel="preload" href="/styles-e9d24b1846c7d6eb9685.js"/><link as="script" rel="preload" href="/d5d7a013bc6c1e2b6d7db819052c16d7efea5559-7243c725e4cce4b855dd.js"/><link as="script" rel="preload" href="/cd7d5f864fc9e15ed8adef086269b0aeff617554-1f9560c85ac0db9a3843.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-96f45fab43acc09917a1.js"/><link as="fetch" rel="preload" href="/page-data/2021-03-13-complete-end-to-end-guide-for-developing-dockerized-lambda-with-typescript-terraform-and-SAM-cli/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3128451518.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/426816048.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:70rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;text-decoration:none;color:inherit" href="/">Joel&#x27;s dev blog</a></h3></header><main><h1>Complete end-to-end guide for developing dockerized lambda in Typescript, Terraform and SAM CLI</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem">March 13, 2021</p><div><p>This is a full guide to locally develop and deploy a backend app with <a href="https://aws.amazon.com/blogs/aws/new-for-aws-lambda-container-image-support/">a recently released container image feature for lambda on AWS</a>. </p>
 <p>Needless to say, if you are a great fan of Docker, you would know how amazing it is. What you test on local is what you get when you deploy it, at least at the container level.</p>
 <p>Since this feature is quite new, there have been <strong>lots of rabbit holes</strong> I fell into, and I’m sure others will too, so I will break every piece of rabbit hole down so that nobody gets trapped into it. This guide starts from the real basics like making a user or setting up terraform, so feel free to skip to the section you need.</p>
+<div class="table-of-contents">
+<ul>
+<li><a href="#reason-to-use-terraform-and-sam-cli-together">Reason to use Terraform and SAM CLI together</a></li>
+<li><a href="#setup-aws-for-terraform">Setup AWS for Terraform</a></li>
+<li>
+<p><a href="#setup-terraform">Setup Terraform</a></p>
+<ul>
+<li><a href="#maintf"><code class="language-text">main.tf</code></a></li>
+<li><a href="#maintf-1"><code class="language-text">main.tf</code></a></li>
+<li><a href="#maintf-2"><code class="language-text">main.tf</code></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#setting-up-lambda">Setting up lambda</a></p>
+<ul>
+<li><a href="#packageshellopackagejson"><code class="language-text">packages/hello/package.json</code></a></li>
+<li><a href="#packageshellolibindexts"><code class="language-text">packages/hello/lib/index.ts</code></a></li>
+<li><a href="#nodemonjson"><code class="language-text">nodemon.json</code></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#back-to-terraform-assume-role-and-ecr">Back to terraform: assume role and ECR</a></p>
+<ul>
+<li><a href="#hello_roletf"><code class="language-text">hello_role.tf</code></a></li>
+<li><a href="#ecrtf"><code class="language-text">ecr.tf</code></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#building-and-pushing-the-image-to-ecr">Building and pushing the image to ECR</a></p>
+<ul>
+<li><a href="#login-dockersh"><code class="language-text">login-docker.sh</code></a></li>
+<li><a href="#build-and-push-docker-imagesh"><code class="language-text">build-and-push-docker-image.sh</code></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#creating-terraform-resources-for-lambda-and-api-gateway">Creating Terraform resources for lambda and API gateway</a></p>
+<ul>
+<li><a href="#lambdatf"><code class="language-text">lambda.tf</code></a></li>
+<li><a href="#api_gatewaytf"><code class="language-text">api_gateway.tf</code></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#creating-terraform-resources-for-custom-domain">Creating Terraform resources for Custom domain</a></p>
+<ul>
+<li><a href="#maintf-3"><code class="language-text">main.tf</code></a></li>
+<li><a href="#custom_domaintf"><code class="language-text">custom_domain.tf</code></a></li>
+<li><a href="#custom_domaintf-1"><code class="language-text">custom_domain.tf</code></a></li>
+<li><a href="#api_gatewaytf-1"><code class="language-text">api_gateway.tf</code></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#enabling-options-preflight-request">Enabling OPTIONS (preflight request)</a></p>
+<ul>
+<li><a href="#api_gatewaytf-2"><code class="language-text">api_gateway.tf</code></a></li>
+<li><a href="#packageshellolibindexts-1"><code class="language-text">packages/hello/lib/index.ts</code></a></li>
+</ul>
+</li>
+<li><a href="#summing-up">Summing up</a></li>
+</ul>
+</div>
 <h1 id="reason-to-use-terraform-and-sam-cli-together" style="position:relative;">Reason to use Terraform and SAM CLI together<a href="#reason-to-use-terraform-and-sam-cli-together" aria-label="reason to use terraform and sam cli together permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <p>Well, it seems that Terraform supports building a Docker image and deploying it to ECR out of the box, but after lots of digging, I noticed that things would get simpler if I just build docker image in another pipeline and deploy it with a few lines of shell script. So Terraform will used to define resources excluding the build and deployment process. There’s no problem with that.</p>
 <p>And, what SAM CLI? Terraform cannot replace SAM CLI and vice versa. SAM cli is useful in developing local lambdas because it automatically configures endpoints for each lambda and greatly removes barriers to the initial setup. Since lambda functions are ‘special’ in the way that they only get ‘booted up and called’ when they are invoked (unlike EC2 or Fargate), just doing <code class="language-text">ts-node my-lambda.ts</code> would not make it work. Of course there are many other solutions to this matter (such as <code class="language-text">sls</code>) but in this guide I will just use SAM CLI. But for many reasons SAM makes me want to use other better solutions if any… The reason follows right below.</p>
@@ -1897,7 +1957,7 @@ resource &quot;aws_route53_record&quot; &quot;hello&quot; {
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/aba1d/profile-pic.jpg 1.5x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/b315d/profile-pic.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/aba1d/profile-pic.jpg 1.5x,
-/static/1265356b9e6bab3ff8ccafeaca6d96b8/b315d/profile-pic.jpg 2x" src="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg" alt="Joel Mun" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Joel Mun</strong>. Joel&#x27;s been interested in Javascript, Typescript, Assemblyscript, Rust, Dart, and React, Flutter, and more.<!-- --> <a href="https://github.com/9oelM">Go check him up on Github!</a><br/> <!-- -->Joel&#x27;s also got his own random thoughts journal (mostly in Korean).<!-- --> <a href="https://www.notion.so/9oelm/2acfc525c9964be080d218770e6b8431?v=a7970392a2c54d3b857db145ded4de9e">Check it out too if you are curious.</a></p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2020-10-04-100BooksProject-(9):Atomic-habits/">← <!-- -->100BooksProject: (9): Atomic habits</a></li><li><a rel="next" href="/2021-05-18--part-1-writing-a-scalable-react-application-with-a-scalable-architecture/">Part 1: writing a react application with a scalable architecture<!-- --> →</a></li></ul><div id="disqus_thread" identifier="9ccee504-5242-541e-a514-4fe2e12f0e13" title="Complete end-to-end guide for developing dockerized lambda in Typescript, Terraform and SAM CLI" url="https://9oelm.github.io/2021-03-13-complete-end-to-end-guide-for-developing-dockerized-lambda-with-typescript-terraform-and-SAM-cli/"></div></main><footer>© Joel Mun <!-- -->2021<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+/static/1265356b9e6bab3ff8ccafeaca6d96b8/b315d/profile-pic.jpg 2x" src="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg" alt="Joel Mun" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Joel Mun</strong>. Joel&#x27;s been interested in Javascript, Typescript, Assemblyscript, Rust, Dart, and React, Flutter, and more.<!-- --> <a href="https://github.com/9oelM">Go check him up on Github!</a><br/> <!-- -->Joel&#x27;s also got his own random thoughts journal (mostly in Korean).<!-- --> <a href="https://www.notion.so/9oelm/2acfc525c9964be080d218770e6b8431?v=a7970392a2c54d3b857db145ded4de9e">Check it out too if you are curious.</a></p></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/2020-10-04-100BooksProject-(9):Atomic-habits/">← <!-- -->100BooksProject: (9): Atomic habits</a></li><li><a rel="next" href="/2021-09-17--set-up-multiple-monitors-on-optimus-laptop-running-kali-linux/">Set up multiple monitors on Optimus laptop running Kali linux<!-- --> →</a></li></ul><div id="disqus_thread" identifier="9ccee504-5242-541e-a514-4fe2e12f0e13" title="Complete end-to-end guide for developing dockerized lambda in Typescript, Terraform and SAM CLI" url="https://9oelm.github.io/2021-03-13-complete-end-to-end-guide-for-developing-dockerized-lambda-with-typescript-terraform-and-SAM-cli/"></div></main><footer>© Joel Mun <!-- -->2021<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
   
   
   if(true) {
