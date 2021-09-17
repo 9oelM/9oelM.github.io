@@ -242,13 +242,12 @@ That's why adding it as a startup script is recommended. It's a bit tricky becau
 This is how I would do it:
 
 ```bash
-vim /etc/X11/Xsession.d/45setup-externalmonitors
+vim /etc/X11/Xsession.d/99setup-externalmonitors
 
 # put this in
-xrandr --setprovideroutputsource 1 0
-xrandr --auto
+(sleep 5; xrandr --setprovideroutputsource 1 0 && xrandr --auto) &
 ```
 
-Note that changing the preceding number of the script may have an effect as well because the scripts are sorted by name and invoked. If you find it not working, try `ls /etc/X11/Xsession.d`, and try to figure out at which reasonable order the script should be called.
+Note that changing the preceding number of the script may have an effect as well because the scripts are sorted by name and invoked. I noticed that the commands I use need to be called as late as possible. So I kind of hacked into it, and found the above command with `sleep` will reasonably work all the time. It will run around 5 seconds after you get logged in, which is enough for other things to get set up. If you still don't find it working, try to fiddle with the order a bit more.
 
 And so that's all of the magic needed to be done. I hope you really got it to work... if things did not work and you got them working somehow by tweaking some bits, please leave it as a comment so that others can look at it. Thank you.
