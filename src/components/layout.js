@@ -2,19 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
-
-import * as DarkReader from 'darkreader';
+import { SF } from "../styles/theme"
 
 class Layout extends React.Component {
-  componentDidMount(){
-    DarkReader.enable({
-      brightness: 100,
-      contrast: 90,
-      sepia: 10,
-    });
-    DarkReader.auto();
-  }
-
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
@@ -27,13 +17,14 @@ class Layout extends React.Component {
             ...scale(1.5),
             marginBottom: rhythm(1.5),
             marginTop: 0,
+            ...SF.darkText
           }}
         >
           <Link
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
+              ...SF.darkText
             }}
             to={`/`}
           >
@@ -47,13 +38,14 @@ class Layout extends React.Component {
           style={{
             fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
+            ...SF.darkText
           }}
         >
           <Link
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
+              ...SF.darkText
             }}
             to={`/`}
           >
@@ -69,11 +61,19 @@ class Layout extends React.Component {
           marginRight: `auto`,
           maxWidth: rhythm(40),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          ...SF.darkBackground,
         }}
       >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
+        <header
+        >{header}</header>
+        <main
+        >{children}</main>
+        <footer
+          style={{
+            ...SF.darkBackground,
+            ...SF.darkText
+          }}
+        >
           © Joel Mun {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>

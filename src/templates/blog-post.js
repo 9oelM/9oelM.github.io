@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
 import "./blog-post.css"
+import { SF } from "../styles/theme"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -21,13 +22,16 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1
+          style={SF.darkText}
+        >{post.frontmatter.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
             display: `block`,
             marginBottom: rhythm(1),
             marginTop: rhythm(-1),
+            ...SF.darkText
           }}
         >
           {post.frontmatter.date}
@@ -39,7 +43,6 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Bio />
-
         <ul
           style={{
             display: `flex`,
@@ -47,16 +50,21 @@ class BlogPostTemplate extends React.Component {
             justifyContent: `space-between`,
             listStyle: `none`,
             padding: 0,
+            ...SF.darkText
           }}
         >
-          <li>
+          <li
+            style={SF.darkText}
+          >
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li>
+          <li
+            style={SF.darkText}
+          >
             {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →

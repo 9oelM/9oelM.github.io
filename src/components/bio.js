@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
+import { SF } from "../styles/theme"
 
 function Bio() {
   return (
@@ -29,8 +30,10 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
-              Written by <strong>{author}</strong>. Joel's been interested in Javascript, Typescript, Assemblyscript, Rust, Dart, and React, Flutter, and more.  
+            <p
+              style={SF.darkText}
+            >
+              Written by <strong>{author}</strong>. His main interests are fullstack and security. Likes GoLang, Typescript, React, Node.js, Wasm and more.  
               {` `}
               <a href={`https://github.com/${social.twitter}`}>
                 Go check him up on Github!
