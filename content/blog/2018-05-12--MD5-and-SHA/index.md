@@ -1,7 +1,7 @@
 ---
 title: "MD5 and SHA"
 date: "2018-05-12T09:00:00.009Z"
-category: "hacking"
+tags: ["hacking"]
 ---
 ### Sources
 * [Lifewire](https://www.lifewire.com/what-is-md5-2625937)

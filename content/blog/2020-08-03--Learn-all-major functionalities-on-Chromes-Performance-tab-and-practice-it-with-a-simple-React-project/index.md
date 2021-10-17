@@ -1,7 +1,7 @@
 ---
 title: "Learn all major functionalities on Chrome's Performance tab and practice it with a simple React project"
 date: "2020-08-03T09:00:00.009Z"
-category: ["javascript", "react", "chrome", "performance", "optimization"]
+tags: ["javascript", "react", "chrome", "performance", "optimization"]
 ---
 
 ## Yes, Chrome's performance tab is overwhelming

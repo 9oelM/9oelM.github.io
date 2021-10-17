@@ -1,7 +1,7 @@
 ---
 title: "Editing environment path and adding custom scripts"
 date: "2017-09-23T09:00:00.009Z"
-category: "linux"
+tags: ["linux", "env"]
 ---
 ## How to (copied from [linuxconfig](https://linuxconfig.org/linux-path-environment-variable))
 ```

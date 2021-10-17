@@ -1,7 +1,7 @@
 ---
 title: "Basic system status checkups for windows"
 date: "2018-05-06T09:00:00.009Z"
-category: "hacking"
+tags: ["hacking", "windows"]
 ---
 ### Helpful link
 * [asecurity](https://asecurity.so/2015/03/%ED%8F%AC%EB%9E%9C%EC%8B%9D-%EC%A6%9D%EA%B1%B0-%ED%99%95%EB%B3%B4%EB%B6%84%EC%84%9D%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91-%EB%8F%84%EA%B5%AC/)

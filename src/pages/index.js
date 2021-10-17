@@ -8,6 +8,7 @@ import LandingPageBioDetails from "../components/LandingPageBioDetails";
 import { rhythm } from "../utils/typography"
 
 import './index.css'
+import { SF } from "../styles/theme"
 
 class BlogIndex extends React.Component {
   render() {
@@ -23,6 +24,29 @@ class BlogIndex extends React.Component {
         />
         <Bio />
         <LandingPageBioDetails />
+        <section
+          style={{
+            width: `100%`,
+          }}
+        >
+          {/* <h3 style={{ margin: 0, padding: 0, marginTop: rhythm(1) }}>See</h3> */}
+          <div style={{ marginTop: rhythm(1) }}></div>
+          {
+            [`Posts`, `Journals`, `Books`, `Tags`].map((tabName) => {
+              return <Link
+              style={{
+                display: 'block',
+                cursor: `pointer`
+              }}
+              // style={{ 
+              //   ...SF.button,
+              //   padding: `${rhythm(0.3)} ${rhythm(0.8)}`,
+              // }}
+              href="/tags"
+            >{tabName}</Link>
+            })
+          }
+        </section>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (

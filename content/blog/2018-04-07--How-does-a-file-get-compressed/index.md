@@ -1,7 +1,7 @@
 ---
 title: "How does a file get compressed?"
 date: "2018-04-07T09:00:00.009Z"
-category: "knowledge"
+tags: ["compression"]
 ---
 You know, you sometimes compress files. And today I needed to send a relatively big folder to my friend so I just compressed it. This folder contained a lot of texts (programming assignments and samples and so on, and also lecture notes, things like that). Sometimes I just do so for an enclosing purpose, but this time I did it for both that and file size reduction. Surprisingly, the file size was reduced from 4.9GB down to 1.38GB.
 

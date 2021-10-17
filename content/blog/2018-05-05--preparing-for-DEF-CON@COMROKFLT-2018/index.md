@@ -1,7 +1,7 @@
 ---
 title: "preparing for DEF CON@COMROKFLT 2018"
 date: "2018-05-05T09:00:00.009Z"
-category: "hacking"
+tags: ["hacking", "defcon"]
 ---
 ## Problem 
 Well, obviously there will be a DEF CON@COMROKFLT about three weeks later. This one will be particular; it is a joint DEF CON between the U.S Navy and the ROK Navy. The paper says koreans and americans will together form several teams.

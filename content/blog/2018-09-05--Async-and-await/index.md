@@ -1,7 +1,7 @@
 ---
 title: "Async, await, promise"
 date: "2018-09-05T09:00:00.009Z"
-category: "development"
+tags: ["development", "javascript", "async"]
 ---
 # Async and await
 ## See

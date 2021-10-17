@@ -1,7 +1,7 @@
 ---
 title: "100 Books Project (2): Crossroads (갈림길)"
 date: "2019-03-13T09:00:00.009Z"
-category: "books"
+tags: ["books"]
 ---
 # Encountering the book
 Sudden encounter over this book just walking by a random bookshelf in the library led me to spend the whole afternoon to read from the start to the end of this book!

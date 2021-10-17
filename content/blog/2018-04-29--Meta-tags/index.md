@@ -1,7 +1,7 @@
 ---
 title: "Meta tags"
 date: "2018-04-29T09:00:00.009Z"
-category: "development"
+tags: ["development", "meta-tag"]
 ---
 ### Sources
 * [1&1](https://www.1and1.com/digitalguide/websites/web-development/the-most-important-meta-tags-and-their-functions/)

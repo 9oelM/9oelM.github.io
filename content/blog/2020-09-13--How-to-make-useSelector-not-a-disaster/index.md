@@ -1,7 +1,7 @@
 ---
 title: "How to make useSelector not a disaster"
 date: "2020-09-13T09:00:00.009Z"
-category: ["javascript", "react"]
+tags: ["javascript", "react", "useSelector"]
 ---
 
 _Disclaimer_: We will focus on `useSelector` itself in this article, rather than third-party libraries like `reselect`, because it's out of scope of the article. 

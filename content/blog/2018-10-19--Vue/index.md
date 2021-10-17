@@ -1,7 +1,7 @@
 ---
 title: "Vue"
 date: "2018-10-19T09:00:00.009Z"
-category: "development"
+tags: ["development", "javascript", "vue"]
 ---
 # No time
 Really, I've got no time to learn Vue. I need to get basic concepts in the shortest length of time.

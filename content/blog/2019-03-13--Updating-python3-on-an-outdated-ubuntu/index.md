@@ -1,8 +1,7 @@
 ---
 title: "Updating python 3 on an outdated Ubuntu"
 date: "2019-03-13T09:00:00.009Z"
-category: "development"
-tags: ["development"]
+tags: ["development", "python", "linux"]
 ---
 # The problem
 Sometimes you cannot easily change the version of Ubuntu _and_ python if you are running them on cloud. I am using [cloud9](c9.io), as you might have expected, because I'm still in the Navy, without any personal devices. I cannot go home to open up my laptop to do anything better.

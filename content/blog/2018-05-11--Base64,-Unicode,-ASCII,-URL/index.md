@@ -1,7 +1,7 @@
 ---
 title: "Base64, Unicode, ASCII, URL"
 date: "2018-05-11T09:00:00.009Z"
-category: "hacking"
+tags: ["hacking", "encoding"]
 ---
 
 

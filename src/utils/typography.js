@@ -27,6 +27,9 @@ Wordpress2016.overrideThemeStyles = () => {
     },
     "h1": {
       fontFamily: `${overridingFontFamily.join(`,`)} !important`
+    },
+    "html,body": {
+      backgroundColor: Theme.Dark25
     }
   }
 }

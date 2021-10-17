@@ -1,7 +1,7 @@
 ---
 title: "My story (1): changes that occurred from high school to the Navy"
 date: "2018-04-20T09:00:00.009Z"
-category: "general"
+tags: ["personal"]
 ---
 ## Before starting to read this
 People change. And so do I. This is a story of how I, as a developer and social being, changed over a course of time. Also a story of how I got out of the problems that I faced. 

@@ -1,3 +1,5 @@
+import { rhythm } from "../utils/typography"
+
 export const Theme = {
     // most dark
     Dark00: '#000000',
@@ -15,5 +17,12 @@ export const SF = {
     },
     darkBackground: {
         backgroundColor: Theme.Dark25
+    },
+    button: {
+        color: Theme.Dark100,
+        backgroundColor: Theme.Dark50,
+        minWidth: `15%`,
+        border: 0,
+        padding: 0,
     }
 }

@@ -1,7 +1,7 @@
 ---
-title: "Configuring vim"
+title: "Configuring and using vim"
 date: "2017-09-25T09:00:00.009Z"
-category: "linux"
+tags: ["linux", "vim"]
 ---
 ## This looks like a pretty awesome boilerplate!
 Well, I just looked at [this repository](https://github.com/amix/vimrc) and it just looks amazing. 
@@ -63,3 +63,109 @@ consult the [stackoverflow question](https://stackoverflow.com/questions/1878974
   ```
 2. Put it into the right folder (see how we did previous configs).
 3. Then it starts working once you restart vim.
+
+
+## How to search in vim
+Search command
+```
+ESC + : + / + [search pattern] + enter
+```
+
+Next match
+```
+n + enter
+```
+
+Previous match
+```
+N + enter
+```
+
+## How to navigate in vim
+Go forward by word
+```
+w
+```
+Go back by word
+```
+b
+```
+Move one character left
+```
+h
+```
+Move one character right
+```
+l
+```
+Move one row down
+```
+j
+```
+Move one row up
+```
+k
+```
+
+
+## How to select, copy and paste in vim
+Select a line (up/down arrow key to include more/less lines)
+```
+V
+```
+Select texts (letter by letter)
+```
+v   
+```
+Select blocks 
+```
+ctrl + v
+```
+
+Then
+Delete
+```
+d
+```
+Copy (called 'yanking')
+```
+y
+```
+
+Then
+Paste after cursor
+```
+p
+```
+Paste before cursor
+```
+P
+```
+
+Note: there is no default cutting operation that could be done with one command.
+
+## Lines
+open a line below the cursor and start insert mode
+```
+o
+```
+open a line above the cursor
+```
+O
+```
+
+## How to undo
+```
+u
+```
+
+## Opening new tabs
+```
+ESC + : + tabnew
+```
+To open a new tab,
+and 
+```
+ESC + : + saveas [filename]
+```
+to save the file.

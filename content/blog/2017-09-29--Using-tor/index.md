@@ -1,6 +1,6 @@
 ---
 title: "Using tor"
-category: "hacking"
+tags: ["hacking", "tor", "network"]
 date: "2017-09-29T09:00:00.009Z"
 ---
 ## Note
@@ -27,7 +27,7 @@ Instead of taking a direct route from source to destination, data packets on the
 
 Below is a picture from the Tor website to help understand.
 
-![Tor network explained](https://www.torproject.org/images/htw2.png)
+![Tor network explained](./0.png)
 
 To create a private network pathway with Tor, the user's software or client incrementally builds a circuit of encrypted connections through relays on the network. The circuit is extended one hop at a time, and each relay along the way knows only which relay gave it data and which relay it is giving data to. No individual relay ever knows the complete path that a data packet has taken. The client negotiates a separate set of encryption keys for each hop along the circuit to ensure that each
 hop can't trace these connections as they pass through. 

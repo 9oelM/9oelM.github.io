@@ -1,7 +1,7 @@
 ---
 title: "100BooksProject: (4): Ego is the enemy (에고라는 적)"
 date: "2020-07-05T09:00:00.009Z"
-category: "books"
+tags: ["books"]
 ---
 
 ![Ego is the enemy](./book.png)

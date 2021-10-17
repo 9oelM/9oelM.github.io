@@ -1,7 +1,7 @@
 ---
 title: "100BooksProject: (5): 초격차 (The Great Gap)"
 date: "2020-07-29T09:00:00.009Z"
-category: "books"
+tags: ["books"]
 ---
 
 # 초격차

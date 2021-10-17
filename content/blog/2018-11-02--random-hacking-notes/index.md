@@ -1,7 +1,7 @@
 ---
 title: "random hacking notes"
 date: "2018-11-02T09:00:00.009Z"
-category: "hacking"
+tags: ["hacking"]
 ---
 # Hacking-notes
 ## Rationale

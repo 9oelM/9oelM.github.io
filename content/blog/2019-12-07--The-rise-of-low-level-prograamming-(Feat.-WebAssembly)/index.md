@@ -1,7 +1,6 @@
 ---
 title: "The rise of low-level programming (feat. WebAssembly)"
 date: "2019-12-07T09:00:00.009Z"
-category: "development"
 tags: ["development", "webassembly", "low-level programming"]
 ---
 ## Back in the old days

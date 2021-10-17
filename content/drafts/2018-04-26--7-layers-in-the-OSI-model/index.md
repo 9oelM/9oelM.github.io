@@ -28,7 +28,7 @@ Open system interconnection model. Developed by the International Standards Orga
 ### Explained 
 Information is passed starting from the top layer: the application layer, like the picture below from [Webopedia](https://www.webopedia.com/quick_ref/OSI_Layers.asp).
 
-![OSI](https://www.webopedia.com/quick_ref/OSI_Layers.asp)
+![OSI](./the-7-layers-of-the-osi-model_5f859a3e25983-2.jpeg)
 
 ### 7. Application layer
 > The application layer serves as the window for users and application processes to access network services. This layer contains a variety of commonly needed functions.

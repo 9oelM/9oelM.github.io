@@ -1,7 +1,7 @@
 ---
 title: "This & Object prototypes (2): this All Makes Sense Now!"
 date: "2018-06-30T09:00:00.009Z"
-category: "development"
+tags: ["development", "javascript"]
 ---
 ### 1. Default binding
 

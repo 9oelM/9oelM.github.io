@@ -1,7 +1,7 @@
 ---
 title: "100BooksProject: (3): When the breath becomes air (숨결이 바람 될 때)"
 date: "2019-08-03T09:00:00.009Z"
-category: "books"
+tags: ["books"]
 ---
 
 ```toc

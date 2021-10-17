@@ -1,7 +1,7 @@
 ---
 title: "Scope and closure (6): Dynamic scope, Polyfilling Block Scope, and Lexical-this"
 date: "2018-04-08T09:00:00.009Z"
-category: "development"
+tags: ["development", "javascript"]
 ---
 
 ## Dynamic scope 

@@ -1,7 +1,7 @@
 ---
 title: "GOOP logs"
 date: "2018-04-08T09:00:00.009Z"
-category: "works"
+tags: ["goop"]
 ---
 
 GOOP does not have a logo yet. I have to make one. 

@@ -1,7 +1,7 @@
 ---
 title: "Finding a process with a name"
 date: "2017-09-21T09:00:00.009Z"
-category: "linux"
+tags: ["linux", "kali"]
 ---
 Many times you want to look for a process to kill it.
 Here's how:

@@ -1,7 +1,7 @@
 ---
 title: "Scope and closure (4): closure"
 date: "2018-03-31T09:00:00.009Z"
-category: "development"
+tags: ["development", "javascript"]
 ---
 ## Definition of closure
 > Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.

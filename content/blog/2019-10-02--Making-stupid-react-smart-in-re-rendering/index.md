@@ -1,7 +1,6 @@
 ---
 title: "Making stupid react smart in re-rendering"
 date: "2019-10-02T09:00:00.009Z"
-category: "development"
 tags: ["development", "react", "purecomponent", "javascript", "typescript", "optimization"]
 ---
 

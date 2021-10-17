@@ -1,7 +1,7 @@
 ---
 title: "This & Object prototypes (1): this or That?"
 date: "2018-04-09T09:00:00.009Z"
-category: "development"
+tags: ["development", "javascript"]
 ---
 ## Using `this` is confusing
 

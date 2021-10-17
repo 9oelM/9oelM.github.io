@@ -1,7 +1,6 @@
 ---
 title: "[...].forEach(saveFromZombies) does not always save people"
 date: "2019-10-12T09:00:00.009Z"
-category: "development"
 tags: ["development", "forEach", "javascript", "typescript"]
 ---
 

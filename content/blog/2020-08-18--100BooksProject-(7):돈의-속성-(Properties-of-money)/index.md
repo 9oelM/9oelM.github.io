@@ -1,7 +1,7 @@
 ---
 title: "100BooksProject: (7): 돈의 속성 (Properties of money)"
 date: "2020-08-18T09:00:00.009Z"
-category: "books"
+tags: ["books"]
 ---
 
 ![돈의 속성](./money.jpeg)

@@ -1,7 +1,7 @@
 ---
 title: "Complete end-to-end guide for developing dockerized lambda in Typescript, Terraform and SAM CLI"
 date: "2021-03-13T09:00:00.009Z"
-category: "development"
+tags: ["books"]
 ---
 
 This is a full guide to locally develop and deploy a backend app with [a recently released container image feature for lambda on AWS](https://aws.amazon.com/blogs/aws/new-for-aws-lambda-container-image-support/). 

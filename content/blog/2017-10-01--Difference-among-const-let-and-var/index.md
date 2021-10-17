@@ -1,5 +1,5 @@
 ---
-category: "development"
+tags: ["development", "javascript"]
 title: "Difference among const, let, var"
 date: "2017-10-01T09:00:00.009Z"
 ---

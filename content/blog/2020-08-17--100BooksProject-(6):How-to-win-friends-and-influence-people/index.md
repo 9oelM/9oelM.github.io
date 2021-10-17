@@ -1,7 +1,7 @@
 ---
 title: "100BooksProject: (6): How to Win Friends & Influence People (인간관계론)"
 date: "2020-08-17T09:00:00.009Z"
-category: "books"
+tags: ["books"]
 ---
 
 I wrote a summary of each section and my reflections following it.

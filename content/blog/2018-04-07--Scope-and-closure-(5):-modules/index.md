@@ -1,7 +1,7 @@
 ---
 title: "Scope and closure (5): modules"
 date: "2018-04-07T09:00:00.009Z"
-category: "development"
+tags: ["development", "javascript"]
 ---
 
 ## Getting the hang of it

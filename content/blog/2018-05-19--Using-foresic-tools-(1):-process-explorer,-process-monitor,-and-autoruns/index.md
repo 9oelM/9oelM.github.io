@@ -1,7 +1,7 @@
 ---
 title: "Using foresic tools (1): process explorer, process monitor, and autoruns"
 date: "2018-05-19T09:00:00.009Z"
-category: "hacking"
+tags: ["hacking"]
 ---
 ## Sources
 * [CSO](https://www.csoonline.com/article/2883958/malware/malware-detection-in-9-easy-steps.html)

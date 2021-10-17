@@ -1,7 +1,7 @@
 ---
 title: "Using macchanger"
 date: "2017-09-21T09:00:00.009Z"
-category: "hacking"
+tags: ["hacking", "macchanger"]
 ---
 # What is macchanger
 Macchanger is a little program that helps you fake (sometimes called spoof) your mac address. 

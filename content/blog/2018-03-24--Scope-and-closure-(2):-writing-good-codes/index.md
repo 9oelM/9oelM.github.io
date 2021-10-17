@@ -1,7 +1,7 @@
 ---
 title: "Scope and closure (2): writing good codes"
 date: "2018-03-24T09:00:00.009Z"
-category: "development"
+tags: ["development", "javascript"]
 ---
 
 ## FYI
