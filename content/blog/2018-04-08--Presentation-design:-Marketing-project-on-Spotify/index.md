@@ -1,6 +1,7 @@
 ---
 title: "Presentation design: Marketing project on Spotify"
 date: "2018-04-08T09:00:00.009Z"
+tab: "post"
 tags: ["design"]
 ---
 ![1](https://7oel.weebly.com/uploads/9/5/6/3/95631532/first-slide_orig.png)

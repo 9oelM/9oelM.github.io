@@ -1,6 +1,7 @@
 ---
 title: "Basic system status checkups for windows"
 date: "2018-05-06T09:00:00.009Z"
+tab: "post"
 tags: ["hacking", "windows"]
 ---
 ### Helpful link

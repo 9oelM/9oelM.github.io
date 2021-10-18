@@ -1,32 +1,35 @@
 import React from "react"
 import PropTypes from "prop-types"
-// Components
+import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
-const Tags = ({ pageContext, data }) => {
+import SEO from "../components/seo"
+import Bio from "../components/bio"
+import { Navigation } from "../components/Navigation"
+const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
   return (
-    <div>
+    <Layout location={location} title={`Joel's dev blog: tags`}>
+      <SEO
+          title={`Joel's dev blog - tagged as ${tag}`}
+          keywords={[`blog`, `javascript`, `typescript`, `react`, `security`, tag]}
+        />
+      <Bio />
+      <Navigation />
       <h1
-        style={{
-          margin: `${rhythm(2)} ${rhythm(1)}`
-        }}
       >{tagHeader}</h1>
       <ul
-        style={{
-          margin: `${rhythm(1)} ${rhythm(2)}`
-        }}
       >
         {edges.map(({ node }) => {
           const { slug } = node.fields
-          const { title } = node.frontmatter
+          const { title, tab } = node.frontmatter
           return (
             <li key={slug}>
-              <Link to={slug}>{title}</Link>
+              <Link to={tab === `journal` ? `/journals${slug}` : slug}>{title}</Link>
             </li>
           )
         })}
@@ -36,11 +39,8 @@ const Tags = ({ pageContext, data }) => {
               You'll come back to it!
             */}
       <Link to="/tags"
-        style={{
-          margin: `${rhythm(1)} ${rhythm(2)}`
-        }}
       >All tags</Link>
-    </div>
+    </Layout>
   )
 }
 Tags.propTypes = {
@@ -81,6 +81,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            tab
           }
         }
       }

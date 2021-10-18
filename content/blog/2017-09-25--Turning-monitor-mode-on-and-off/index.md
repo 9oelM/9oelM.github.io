@@ -2,6 +2,7 @@
 tags: ["hacking", "monitor-mode", "kali"]
 date: "2017-09-25T09:00:00.009Z"
 title: "Turning monitor mode on and off"
+tab: "post"
 ---
 ## On
 This would just work:

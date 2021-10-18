@@ -8,8 +8,13 @@ import kebabCase from "lodash/kebabCase"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
+import { Navigation } from "../components/Navigation"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Bio from "../components/bio"
 
 const TagsPage = ({
+  location,
   data: {
     allMarkdownRemark: { group: tags },
     site: {
@@ -17,18 +22,23 @@ const TagsPage = ({
     },
   },
 }) => (
-  <div>
-    <Helmet title={title} />
+  <Layout location={location} title="Joel's dev blog: tags">
+    <SEO
+          title="Joel's dev blog - tags"
+          keywords={[`blog`, `javascript`, `typescript`, `react`]}
+        />
+      <Bio />
     <div>
-      <h1
+      {/* <h1
         style={{
           margin: `${rhythm(2)} ${rhythm(1)}`
         }}
-      >Tags</h1>
+      >Tags</h1> */}
+
+      <Navigation />
+      <div style={{ marginTop: `40px` }} />
       <ul
-        style={{
-          margin: `${rhythm(1)} ${rhythm(2)}`
-        }}
+       
       >
         {[...tags].sort((a, b) => b.totalCount - a.totalCount).map(tag => (
           <li key={tag.fieldValue}>
@@ -39,7 +49,7 @@ const TagsPage = ({
         ))}
       </ul>
     </div>
-  </div>
+  </Layout>
 )
 
 TagsPage.propTypes = {

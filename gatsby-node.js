@@ -13,6 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
       {
         postsRemark: allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
+          filter: { frontmatter: { tab: { eq: "post" } } }
           limit: 1000
         ) {
           edges {
@@ -22,6 +23,24 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                tab
+              }
+            }
+          }
+        }
+        journalsRemark: allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: { frontmatter: { tab: { eq: "journal" } } }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                tab
               }
             }
           }
@@ -38,26 +57,26 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    // Create blog posts pages.
-    const posts = result.data.postsRemark.edges
-
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+    const createContentPage = (contents, content, index, pathFunc) => {
+      const previous = index === contents.length - 1 ? null : contents[index + 1].node
+      const next = index === 0 ? null : contents[index - 1].node
 
       createPage({
-        path: post.node.fields.slug,
+        path: pathFunc ? pathFunc(content.node.fields.slug) : content.node.fields.slug,
         component: blogPost,
         context: {
-          slug: post.node.fields.slug,
+          slug: content.node.fields.slug,
           previous,
           next,
         },
       })
-    })
-
-
-  // Extract tag data from query
+    }
+    // Create blog posts pages.
+    const posts = result.data.postsRemark.edges
+    posts.forEach((post, index) => createContentPage(posts, post, index))
+    const journals = result.data.journalsRemark.edges
+    journals.forEach((journal, index) => createContentPage(journals, journal, index, (path) => `/journals${path}`))
+    // Extract tag data from query
     const tags = result.data.tagsGroup.group
     // Make tag pages
     tags.forEach(tag => {
@@ -69,6 +88,8 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+
+
   })
 }
 

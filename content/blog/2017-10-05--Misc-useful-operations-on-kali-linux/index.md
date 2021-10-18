@@ -1,6 +1,7 @@
 ---
 title: "Misc useful operations on (kali) linux"
 date: "2017-10-05T09:00:00.009Z"
+tab: "post"
 tags: ["kali"]
 ---
 

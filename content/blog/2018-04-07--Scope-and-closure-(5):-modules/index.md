@@ -1,5 +1,6 @@
 ---
 title: "Scope and closure (5): modules"
+tab: "post"
 date: "2018-04-07T09:00:00.009Z"
 tags: ["development", "javascript"]
 ---

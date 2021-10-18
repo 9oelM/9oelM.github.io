@@ -1,5 +1,6 @@
 ---
 title: "Deploying a serverless crawler with python + lambda"
+tab: "post"
 date: "2019-03-18T09:00:00.009Z"
 tags: ["development", "aws", "python", "serverless", "lambda"]
 ---

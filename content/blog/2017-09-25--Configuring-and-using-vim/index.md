@@ -2,6 +2,7 @@
 title: "Configuring and using vim"
 date: "2017-09-25T09:00:00.009Z"
 tags: ["linux", "vim"]
+tab: "post"
 ---
 ## This looks like a pretty awesome boilerplate!
 Well, I just looked at [this repository](https://github.com/amix/vimrc) and it just looks amazing. 

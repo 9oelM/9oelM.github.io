@@ -1,6 +1,7 @@
 ---
 title: "Scope and closure (4): closure"
 date: "2018-03-31T09:00:00.009Z"
+tab: "post"
 tags: ["development", "javascript"]
 ---
 ## Definition of closure

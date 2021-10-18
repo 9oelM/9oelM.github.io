@@ -2,6 +2,7 @@
 title: "Scope and closure (3): hoisting"
 date: "2018-03-24T09:00:00.009Z"
 tags: ["development", "javascript"]
+tab: "post"
 ---
 
 ## FYI

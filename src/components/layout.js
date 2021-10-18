@@ -8,10 +8,7 @@ class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
-    if (location.pathname === rootPath) {
-      header = (
+    const header = (
         <h1
           style={{
             ...scale(1.5),
@@ -32,28 +29,6 @@ class Layout extends React.Component {
           </Link>
         </h1>
       )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-            ...SF.darkText
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              ...SF.darkText
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
     return (
       <div
         style={{
@@ -71,12 +46,11 @@ class Layout extends React.Component {
         <footer
           style={{
             ...SF.darkBackground,
-            ...SF.darkText
+            ...SF.darkText,
+            marginTop: rhythm(2),
           }}
         >
-          © Joel Mun {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © Joel Mun {new Date().getFullYear()}
         </footer>
       </div>
     )

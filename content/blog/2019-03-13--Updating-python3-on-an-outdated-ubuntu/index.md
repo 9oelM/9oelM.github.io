@@ -1,6 +1,7 @@
 ---
 title: "Updating python 3 on an outdated Ubuntu"
 date: "2019-03-13T09:00:00.009Z"
+tab: "post"
 tags: ["development", "python", "linux"]
 ---
 # The problem

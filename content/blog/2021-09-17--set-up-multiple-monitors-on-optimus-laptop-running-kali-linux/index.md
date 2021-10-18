@@ -2,6 +2,7 @@
 title: "Set up multiple monitors on Optimus laptop running Kali linux"
 date: "2021-09-17T09:00:00.009Z"
 tags: ["kali", "optimius", "graphics"]
+tab: "post"
 ---
 
 I needed to figure out how to set up multiple monitors on my new Kali linux laptop, because it wouldn't just work automatically like MacOS or Windows. At the end of a week-long research and accumulation of fragmented information on the Internet, I finally found a way to set it up. So here's my guide.

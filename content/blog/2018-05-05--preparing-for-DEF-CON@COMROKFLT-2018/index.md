@@ -1,6 +1,7 @@
 ---
 title: "preparing for DEF CON@COMROKFLT 2018"
 date: "2018-05-05T09:00:00.009Z"
+tab: "post"
 tags: ["hacking", "defcon"]
 ---
 ## Problem 

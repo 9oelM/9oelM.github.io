@@ -2,6 +2,7 @@
 title: "Installing torrent on debian based linux"
 date: "2017-09-20T09:00:00.009Z"
 tags: ["linux", "kali", "torrent"]
+tab: "post"
 comments: true
 ---
 ## Guidance

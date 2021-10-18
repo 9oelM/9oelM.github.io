@@ -1,6 +1,7 @@
 ---
 title: "random hacking notes"
 date: "2018-11-02T09:00:00.009Z"
+tab: "post"
 tags: ["hacking"]
 ---
 # Hacking-notes

@@ -2,6 +2,7 @@
 title: "Using bluetooth on kali linux"
 date: "2017-09-28T09:00:00.009Z"
 tags: ["linux", "kali"]
+tab: "post"
 ---
 Check bluetooth status
 ```

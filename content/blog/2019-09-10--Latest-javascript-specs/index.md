@@ -1,6 +1,7 @@
 ---
 title: "New javascript specifications in 2019 (What's new in Javascript - Google I/O '19)"
 date: "2019-09-10T09:00:00.009Z"
+tab: "post"
 tags: ["development", "javascript", "Google I/O '19"]
 ---
 

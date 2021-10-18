@@ -24,5 +24,9 @@ export const SF = {
         minWidth: `15%`,
         border: 0,
         padding: 0,
+    },
+    logoButton: {
+        boxShadow: `none`,
+        marginRight: `8px`,
     }
 }

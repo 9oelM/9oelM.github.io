@@ -1,6 +1,7 @@
 ---
 tags: ["development", "javascript"]
 title: "Difference among const, let, var"
+tab: "post"
 date: "2017-10-01T09:00:00.009Z"
 ---
 ### `var` 

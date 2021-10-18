@@ -1,6 +1,7 @@
 ---
 title: "Extensive introduction to why and how you might want to use and test redux-observable"
 date: "2020-01-24T09:00:00.009Z"
+tab: "post"
 tags: ["development", "rxjs", "async", "observable", "react", "redux", "test", "jest"]
 ---
 # Problem

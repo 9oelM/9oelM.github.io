@@ -1,6 +1,7 @@
 ---
 title: "VPN"
 date: "2017-10-06T09:00:00.009Z"
+tab: "post"
 tags: ["vpn", "network"]
 ---
 ## What is VPN and how does it work

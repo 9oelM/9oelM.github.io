@@ -2,6 +2,7 @@
 title: "Changing mac address semi permanently"
 date: "2017-09-21T09:00:00.009Z"
 tags: ["hacking", "macchanger", "kali"]
+tab: "post"
 ---
 ## How to
 Dead simple.

@@ -1,6 +1,7 @@
 ---
 title: "The shortcuts I like"
 date: "2020-01-08T09:00:00.009Z"
+tab: "post"
 tags: ["development", "shortcuts", "keybinding", "macOS", "chrome", "visual studio code", "iterm", "slack"]
 ---
 

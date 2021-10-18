@@ -1,6 +1,7 @@
 ---
 title: "How to communicate better"
 date: "2020-06-06T09:00:00.009Z"
+tab: "post"
 tags: ["work", "communication"]
 ---
 

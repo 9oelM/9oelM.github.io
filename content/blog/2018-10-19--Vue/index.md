@@ -1,6 +1,7 @@
 ---
 title: "Vue"
 date: "2018-10-19T09:00:00.009Z"
+tab: "post"
 tags: ["development", "javascript", "vue"]
 ---
 # No time

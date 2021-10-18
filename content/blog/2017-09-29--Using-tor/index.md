@@ -2,6 +2,7 @@
 title: "Using tor"
 tags: ["hacking", "tor", "network"]
 date: "2017-09-29T09:00:00.009Z"
+tab: "post"
 ---
 ## Note
 Below content is just a excerpt from the websites. If you need to see in detail, don't hesitate to go onto [the original website](https://www.torproject.org/about/overview.html.en).

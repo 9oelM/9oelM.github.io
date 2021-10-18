@@ -16,8 +16,10 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
     const { location } = this.props
 
+    const isJournalsSubPage = location.pathname.startsWith(`/journals/`)
+
     return (
-      <Layout location={location} title={title}>
+      <Layout location={location} title={`${isJournalsSubPage ? `${title}: journals` : title }`}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -57,7 +59,7 @@ class BlogPostTemplate extends React.Component {
             style={SF.darkText}
           >
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={isJournalsSubPage ? `/journals${previous.fields.slug}` : previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
@@ -66,7 +68,7 @@ class BlogPostTemplate extends React.Component {
             style={SF.darkText}
           >
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={isJournalsSubPage ? `/journals${next.fields.slug}` : next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}

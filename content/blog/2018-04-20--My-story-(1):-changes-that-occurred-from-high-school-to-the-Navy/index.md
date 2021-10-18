@@ -1,6 +1,7 @@
 ---
 title: "My story (1): changes that occurred from high school to the Navy"
 date: "2018-04-20T09:00:00.009Z"
+tab: "post"
 tags: ["personal"]
 ---
 ## Before starting to read this

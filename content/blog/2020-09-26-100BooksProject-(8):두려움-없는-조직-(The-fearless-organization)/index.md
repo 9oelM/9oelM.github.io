@@ -2,6 +2,7 @@
 title: "100BooksProject: (8): 두려움 없는 조직 (The fearless organization)"
 date: "2020-09-26T09:00:00.009Z"
 tags: ["books"]
+tab: "post"
 ---
 
 ![the fearless organization](./the-fearless-organization.jpeg)

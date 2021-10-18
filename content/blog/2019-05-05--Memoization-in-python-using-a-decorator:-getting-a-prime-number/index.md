@@ -1,5 +1,6 @@
 ---
 title: "Memoization in python using a decorator: getting a prime number"
+tab: "post"
 date: "2019-05-05T09:00:00.009Z"
 tags: ["development", "python", "memoization", "prime number", "decorator"]
 ---

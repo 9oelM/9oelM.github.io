@@ -1,6 +1,7 @@
 ---
 title: "Scope and closure (1): lexical Scope"
 date: "2018-03-24T09:00:00.009Z"
+tab: "post"
 tags: ["development", "javascript"]
 ---
 

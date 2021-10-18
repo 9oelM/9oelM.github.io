@@ -4,6 +4,7 @@ import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
 import { SF } from "../styles/theme"
+import { BugcrowdLogo, GithubLogo, HackeroneLogo, LinkedinLogo, MediumLogo } from "./logos"
 
 function Bio() {
   return (
@@ -33,18 +34,14 @@ function Bio() {
             <p
               style={SF.darkText}
             >
-              Written by <strong>{author}</strong>. His main interests are fullstack and security. Likes GoLang, Typescript, React, Node.js, Wasm and more.  
+              Written by <strong>{author}</strong>. His main interests are fullstack and security. Likes GoLang, Typescript, React, Node.js, Wasm and more. Joel's been working as a lead SWE for some length of time. Really familiar with a wide range of tools. Now, he's digging into security.
               {` `}
-              <a href={`https://github.com/${social.twitter}`}>
-                Go check him up on Github!
-              </a>
-              <br />
-              {` `}
-              Joel's also got his own random thoughts journal (mostly in Korean). 
-              {` `}
-              <a href='https://www.notion.so/9oelm/2acfc525c9964be080d218770e6b8431?v=a7970392a2c54d3b857db145ded4de9e'>
-                Check it out too if you are curious.
-              </a>
+              <div style={{ marginTop: '10px'}} />
+              <a style={SF.logoButton} href="https://github.com/9oelM"  target="_blank" rel="noopener noreferer"><GithubLogo /></a>
+              <a style={SF.logoButton} href="https://www.linkedin.com/in/7oelm/"  target="_blank" rel="noopener noreferer"><LinkedinLogo /></a>
+              <a style={SF.logoButton} href="https://hackerone.com/9oelm" target="_blank" rel="noopener noreferer"><HackeroneLogo /></a>
+              <a style={SF.logoButton} href="https://bugcrowd.com/9oelm" target="_blank" rel="noopener noreferer"><BugcrowdLogo /></a>
+              <a style={SF.logoButton} href="https://medium.com/@9oelm" target="_blank" rel="noopener noreferer"><MediumLogo /></a>
             </p>
           </div>
         )

@@ -1,6 +1,7 @@
 ---
 date: "2017-12-31T09:00:00.009Z"
 title: "Difference between cookies and sessions"
+tab: "post"
 tags: ["cookie-vs-session"]
 ---
 ### Cookies

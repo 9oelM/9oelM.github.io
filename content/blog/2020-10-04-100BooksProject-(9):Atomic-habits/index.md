@@ -2,6 +2,7 @@
 title: "100BooksProject: (9): Atomic habits"
 date: "2020-10-04T09:00:00.009Z"
 tags: ["books"]
+tab: "post"
 ---
 
 As always, I've summarized the book so that anyone can get the main concept in about 20-30 mins. And then I wrote some reflections and possible applications in my life. Don't get overwhelmed by the table of contents below!

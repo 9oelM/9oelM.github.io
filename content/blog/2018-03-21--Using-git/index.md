@@ -1,6 +1,7 @@
 ---
 title: "Using git"
 date: "2018-03-21T09:00:00.009Z"
+tab: "post"
 tags: ["git"]
 ---
 ### [How to revert](https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/)

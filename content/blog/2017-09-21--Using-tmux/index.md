@@ -2,6 +2,7 @@
 title: "Using tmux"
 date: "2017-09-21T09:00:00.009Z"
 tags: ["linux", "tmux"]
+tab: "post"
 ---
 ## Scrolling in tmux
 Using tmux, you sometimes wanna scroll up and down the window just like you used to in the normal bash shell.

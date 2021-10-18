@@ -1,6 +1,7 @@
 ---
 title: "Using docker and docker-compose to read data from excel to put it into mongodb"
 date: "2019-08-17T09:00:00.009Z"
+tab: "post"
 tags: ["development", "mongodb", "docker", "docker-compose"]
 ---
 

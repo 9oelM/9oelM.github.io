@@ -1,6 +1,7 @@
 ---
 title: "Meta tags"
 date: "2018-04-29T09:00:00.009Z"
+tab: "post"
 tags: ["development", "meta-tag"]
 ---
 ### Sources

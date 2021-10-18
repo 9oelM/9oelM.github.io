@@ -1,6 +1,7 @@
 ---
 title: "100 Books Project (1): Reflection and reading notes on Remember Who You Are: Life Stories That Inspire the Heart and Mind"
 date: "2019-03-09T09:00:00.009Z"
+tab: "post"
 tags: ["books"]
 ---
 # Reflections

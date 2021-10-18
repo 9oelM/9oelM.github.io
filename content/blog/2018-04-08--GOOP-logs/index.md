@@ -2,6 +2,7 @@
 title: "GOOP logs"
 date: "2018-04-08T09:00:00.009Z"
 tags: ["goop"]
+tab: "post"
 ---
 
 GOOP does not have a logo yet. I have to make one. 

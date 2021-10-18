@@ -1,6 +1,7 @@
 ---
 title: "Some hacking notes"
 date: "2018-05-29T09:00:00.009Z"
+tab: "post"
 tags: ["hacking", "windows"]
 ---
 [detecting security incidents event logs by SANS](https://www.sans.org/reading-room/whitepapers/logging/detecting-security-incidents-windows-workstation-event-logs-34262)
