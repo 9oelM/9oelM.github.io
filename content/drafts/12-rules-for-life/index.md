@@ -9,7 +9,7 @@ category: "books"
 - Question: Why even expect more rules in our lives anyways, while it seems pretty clear that people don't like rules? (vii)
 
 - Answer: 
-
+  
   > But the story of the golden calf also reminds us that without rules we _quickly become slaves to our passions - and there's nothing freeing about that._ (viii)
 
 Most people don't like rules. But they live in a chaos, and they don't like themselves being in a chaos too. That's the reason they would need a set of rules to live against.
@@ -119,7 +119,7 @@ Inconsistent patterns of sleeping and eating can cause a stress too. The body ne
 **Your sleeping and eating schedule need to be consistent in order to keep you out of chaos!** 
 
 > It is for such reasons that I always ask my clinical clients first about sleep. ... If the answer is no, fixing thatt is the first thing I recommend.
->
+> 
 > The next thing I ask about is breakfast. ... eat a fat and protein-heavy breakfastt as soon as possible after they are awaken.
 
 Having a fat, protein-heavy breakfast ASAP will prevent you from having a high insulin level that will make you psychologically unstable. (20-21)
@@ -154,7 +154,7 @@ Standing up straight with shoulders back has not only physical but also psycholo
 Life is terrible, but standing up straight with shoulders back means confidently accepting that and trying to improve it.
 
 > To stand up ... is to accept the terrible responsibility of life, ... means deciding to boluntarily transform the chaos of potential into the realities of habitable order. ... means adopting the burden of self-conscious vulnerability, .... 
->
+> 
 > **So, attend carefully to your posture. Quit drooping and hunching around.** (32)
 
 Then, people will start to perceive you as a dominant being. Why not try it first and see how it goes before even going into defeated mode? (33)
@@ -168,18 +168,64 @@ Then, people will start to perceive you as a dominant being. Why not try it firs
 - even some people going on a kidney transplantation surgery - they won't be able to go on with the best surgery if they just don't take their pills. But why? (36)
 
 - when it comes to giving pills to the pets, people tend to do it much better. You will actually do your best to get them pills. 
-
+  
   > In fact, on average, you care more. People are better at filling and properly administering prescription medication to their pets than to themselves. (37)
 
 - But why?
 
 ## The Oldest Story and the Nature of the World (38)
 
+- Two stories of creation are introduced in Genesis (38):
+  
+  - The 'Priestly' version:
+    
+    - God created the world with his speech.
+  
+  - The 'Jawhist' version 
+
+- In the modern world, we base our thoughts on scientific truths quite naturally, but that is absolutely not the case in the past (38)
+  
+  > Being was understood as **a place of action**, not a place of things. It was understood as something more akin to story or drama (39)
+  
+  - subjective experience can be related more to a novel or a movie than to a science. (39)
+
+## The Domain, Not of Matter, but of What Matters (40)
+
+- The scientific world of matter can be reduced to some fundamental concepts (40)
+
+- The world of experience can be too, to **chaos, order, and consciousness**. (40)
+  
+  - chaos and order cause us to doubt the validity of existence, but consciousness leads to "the real way out".
+
+Chaos (40)
+
+- is..
+  
+  > The foreginer, the tranger, the member of another gang, ... the monster under the bed, the hidden anger of your mother, and the sickness of your child. ... the despair and horror you feel .. where we are when we don't know where we are, and what we are doing when we don't know what we are doing.
+
+- is **all those things and situations we neither know nor understand.**
+
+Order (41)
+
+- is:
+  
+  > explored territory. position and authority. structure of society. tribe, religion, hearth, home and country. the value of the currency. plan for the day. politeness. ...
+
+- **where everything is certain.**
 
 
 
+- Where there is an order, there is chaos. (43)
 
+- Our brains are wired to repond instantly to chaos. (43)
 
+## Chaos and Order: Persnoality, Female and Male
+
+- So far, it's been explained why **chaos and order** are two most fundamental elements of lived experience (Being). Chaos and order are perceived as **personalities** as well. (43-44)
+
+- Perception of things as entities with personality occurs before perception of things as things. This works the same for order and chaos. They are personified first, and then perceived as things and objects. (44)
+
+- Therefore, the most significant elements of our environment of origin were peronsalities, not things, objects or situations. (44)
 
 # Reflections
 
@@ -188,4 +234,3 @@ Then, people will start to perceive you as a dominant being. Why not try it firs
 > But the story of the golden calf also reminds us that without rules we _quickly become slaves to our passions - and there's nothing freeing about that._ (viii)
 
 This is the exact same thing the book _Atomic Habits_ suggests. If you make a habit (or in the context of this book, a _rule_ in your life), it is rather going to free you. For example, if you make a habit to save money, it will going to give you more freedom in buying stuffs later when you need them, while on the surface it might seem like that habit is restricting you from buying anything.
-
