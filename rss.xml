@@ -1,4 +1,259 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 Jan 2022 11:51:26 GMT</lastBuildDate><item><title><![CDATA[당신이 포기하지 말아야 하는 이유]]></title><description><![CDATA[…]]></description><link>https://9oelm.github.io/2021-11-12--당신이-포기하지-말아야-하는-이유/</link><guid isPermaLink="false">https://9oelm.github.io/2021-11-12--당신이-포기하지-말아야-하는-이유/</guid><pubDate>Fri, 12 Nov 2021 09:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;쉬운-성공을-좋아한다&quot; style=&quot;position:relative;&quot;&gt;쉬운 성공을 좋아한다&lt;a href=&quot;#%EC%89%AC%EC%9A%B4-%EC%84%B1%EA%B3%B5%EC%9D%84-%EC%A2%8B%EC%95%84%ED%95%9C%EB%8B%A4&quot; aria-label=&quot;쉬운 성공을 좋아한다 permalink&quot; class=&quot;anchor after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Joel's dev blog]]></title><description><![CDATA[Joel's dev blog on front end, hacking and more]]></description><link>https://9oelm.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 Jan 2022 13:46:31 GMT</lastBuildDate><item><title><![CDATA[elasticpwn: how to collect and analyse data from exposed Elasticsearch and Kibana instances]]></title><description><![CDATA[Your Elasticsearch and Kibana instances are open, and that’s a real problem I have been doing some serious research on the public exposure…]]></description><link>https://9oelm.github.io/2022-01-02--elasticpwn-how-to-find-and-collect-data-from-exposed-elasticsearch-and-kibana-instances/</link><guid isPermaLink="false">https://9oelm.github.io/2022-01-02--elasticpwn-how-to-find-and-collect-data-from-exposed-elasticsearch-and-kibana-instances/</guid><pubDate>Sun, 02 Jan 2022 09:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;your-elasticsearch-and-kibana-instances-are-open-and-thats-a-real-problem&quot; style=&quot;position:relative;&quot;&gt;Your Elasticsearch and Kibana instances are open, and that’s a real problem&lt;a href=&quot;#your-elasticsearch-and-kibana-instances-are-open-and-thats-a-real-problem&quot; aria-label=&quot;your elasticsearch and kibana instances are open and thats a real problem permalink&quot; class=&quot;anchor after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;I have been doing some serious research on the public exposure of Elasticsearch and Kibana instances recently, and here are a few of the reports I made, found to be valid. I’ve been enjoying it so much:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5dfa32a37278ac1a5f7c78deb4e090af/699b7/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 10.81081081081081%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsSAAALEgHS3X78AAAAoUlEQVQI1x3M3QrBYACAYbfoRFyCA8MNCLkCN4GUKMkJY6zhQJTsx758O1hSE2MLtXqV5wKe1PXhMT10OHoGcm1gTsac9TlCm2BqKsGgxbdZ5TLsYm8MxGqJtVCx9zuc0wkpJUIIXNcljmNSQeijO0NcuSJulLnn0zxKOcJilnshgzfqYe22yOWMZ10hrCm8KnlEv40f3Pi830RR9M+SJOEHbtGGKSjMBwsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;hackerone Kibana exposure report 1&quot;
+        title=&quot;hackerone Kibana exposure report 1&quot;
+        src=&quot;/static/5dfa32a37278ac1a5f7c78deb4e090af/fcda8/1.png&quot;
+        srcset=&quot;/static/5dfa32a37278ac1a5f7c78deb4e090af/12f09/1.png 148w,
+/static/5dfa32a37278ac1a5f7c78deb4e090af/e4a3f/1.png 295w,
+/static/5dfa32a37278ac1a5f7c78deb4e090af/fcda8/1.png 590w,
+/static/5dfa32a37278ac1a5f7c78deb4e090af/699b7/1.png 596w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 569px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/934c3f6540a4b29ccd05d6524da7f4ac/854dc/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 9.45945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsSAAALEgHS3X78AAAAoklEQVQI1w3FPQqCYACAYS/XHHSBoKXoBg3NXaAbSEQgQUuBRSSUfqZfYqalCPZHW9YUIsRbz/Iouq/inw2yLCMIAuI4JgxD0jQlThI8KUk9SSg2HIVJFh2Qh4jbckbZaVB0W3z/XzSV5HJDWewHRHeL0/GErusYhoEQAtdxsFzJbjohb9fIm1Xe9QrXfo/V1sVczBHaEHs84mGvKV9PPkXBDza7g+la0DLUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;hackerone Kibana exposure report 2&quot;
+        title=&quot;hackerone Kibana exposure report 2&quot;
+        src=&quot;/static/934c3f6540a4b29ccd05d6524da7f4ac/854dc/2.png&quot;
+        srcset=&quot;/static/934c3f6540a4b29ccd05d6524da7f4ac/12f09/2.png 148w,
+/static/934c3f6540a4b29ccd05d6524da7f4ac/e4a3f/2.png 295w,
+/static/934c3f6540a4b29ccd05d6524da7f4ac/854dc/2.png 569w&quot;
+        sizes=&quot;(max-width: 569px) 100vw, 569px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 579px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bc14d9abd9ab8f0cdfeacdff018cd339/c08bc/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 9.45945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsSAAALEgHS3X78AAAAoUlEQVQI1y3KPwsBYQCAcZ+HD+ArYCTf4FZlNNoko8lusCqTK1L+vAk5b917vZcbnFhO4jXIv8clw295ehK202aqu4SHECmmyKGNGo9+NoM+vnTwtWblehxaDZ5WjnupyMvKEtUrLOK+Xi1RSqHjLzGQHea6RxBF+NUy12yKUz7NqZDmnEniNWsIRyKEwJ1NIAx4xz67LY/jnsvVcDMG8/cF6tuDe7bIgU4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;hackerone Kibana exposure report 3&quot;
+        title=&quot;hackerone Kibana exposure report 3&quot;
+        src=&quot;/static/bc14d9abd9ab8f0cdfeacdff018cd339/c08bc/3.png&quot;
+        srcset=&quot;/static/bc14d9abd9ab8f0cdfeacdff018cd339/12f09/3.png 148w,
+/static/bc14d9abd9ab8f0cdfeacdff018cd339/e4a3f/3.png 295w,
+/static/bc14d9abd9ab8f0cdfeacdff018cd339/c08bc/3.png 579w&quot;
+        sizes=&quot;(max-width: 579px) 100vw, 579px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 472px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3935d55f7c7da5014acf020ce3cca11e/3c5de/4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 77.70270270270271%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAAC1UlEQVQ4y5VUS08TURQeg3FlTIwLFcVHYoRoXPALdGUCIvURNxADyKuFRE0FBDQBAmiEldHEhSzdudHEjY8YFhqMCbFKBS0PW+jQFihtaTuPO4/Pc2faMBBItMnX8809537n3jPnjGAAMMY+Qmu/DvbQCzbcaaO3Bay7Aex+E9SOGmhP+mAaPBowTRPb/QQxY4K9f4VMfTnk0j1QdguQCIqrFOrNa1A9l6A2lIEN3v43wazMwMi/qAHxd6+x9rQf0vMhmKvL9mYnSGgzNicQ+J/GGJbFMJYSSYSTa5DyXp2yGDrtMGzAcTIuouswKcaGbgkL3KETVjUDaYrJ0L4U05HSTSQ5J6yoGhL8mbTjnPNYXvutrmwdJCYi2l6H6N16LHU2INpxw7IcMVoT79QgQn7+vNhWa/HlrkYoD7zQhjrABm5BGxmGyVRb0JjygR0SwIoEqEU5e9gG5+zI+hpz+OVCeoG0T9pL/OxRmFImJ/h7AtLJHZBKCmwUF2zkxY41Jy/ZCfnULkjHqSsqzpBgNi/4A9IJykKi/w0uTjdQyk87BSdsJ8+4AQXbwBGz5Qmphtn9VIvCHA4KyOasdGALFDpAtZT2keC5Y+s1NMUgNE8lmLsSWosLjLjurgCjSVG81VC9VWTzqIZC06M0XoDadBFqcyWUuvNQe1thKnK+sXXExATSkoGVuIxkSkGUejr18gWM7jp7rns9YH18vuthhgJWzxmOKbK+CTSalqCSVTD1aRKhzz7MfviC4OhXTI/9xOyzEYg9XYg/foTYUD9iwwOIDvZAfPMW8mIESCzDjC/ZY8onKt/YKs1zeGIO6XseZGrLkGm+DLnZBel2FdLU1Nk2QnstspxTU681XYHkpmu3XoXsdkHhX6P4inVSS5ApDP5RP+bGpxEJhBH0zUKcmkfo24yVKDgewLyP8z+I/prHAtkFfxDhyRDFziFCsf5AAt9nsvgLD6Dl4X74k4gAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Kibana and Elasticsearch exposure report 4&quot;
+        title=&quot;Kibana and Elasticsearch exposure report 4&quot;
+        src=&quot;/static/3935d55f7c7da5014acf020ce3cca11e/3c5de/4.png&quot;
+        srcset=&quot;/static/3935d55f7c7da5014acf020ce3cca11e/12f09/4.png 148w,
+/static/3935d55f7c7da5014acf020ce3cca11e/e4a3f/4.png 295w,
+/static/3935d55f7c7da5014acf020ce3cca11e/3c5de/4.png 472w&quot;
+        sizes=&quot;(max-width: 472px) 100vw, 472px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;But my enjoyment must be someone else’s pain. Literally thousands of Elasticsearch and Kibana instances are publicly exposed to the Internet. They are just up for grabs, and that is a really serious problem. Sometimes, even top renowned tech companies make mistakes about this, exposing their internal data exposed to the public. The nature of the data stored in these instances are sometimes quite sensitive and are never meant to be shared: be it phone numbers, email addresses, home addresses, names, credit card numbers, even (plaintext!) passwords, internal API logs, private user data specific to the service, and more and more. I’ve seen millions of such data through this journey, which I never expected.&lt;/p&gt;
+&lt;p&gt;I honestly feel so sad for the users who have their data exposed to the public and probably don’t even know about that because it’s the developers who make mistakes, not them. I saw data from huge game studios, shopping malls, and even some of the biggest banks. It’s awful and I wanted to help fix that.&lt;/p&gt;
+&lt;p&gt;But the staggering number of instances and &lt;a href=&quot;https://www.elastic.co/blog/what-is-an-elasticsearch-index&quot;&gt;indices&lt;/a&gt; make it is somewhat difficult to find and collect &lt;strong&gt;interesting, or ‘useful’ data&lt;/strong&gt; from them, which may lead to being awarded of bug bounties. To quickly gather data and filter useful and interesting ones, I decided to craft a tool that would automate removing lot of garbage data that nobody is interested in and help discover interesting data instead.&lt;/p&gt;
+&lt;p&gt;So here it is: &lt;em&gt;&lt;a href=&quot;https://github.com/9oelm/elasticpwn&quot;&gt;elasticpwn&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&quot;elasticpwn-a-brief-overview&quot; style=&quot;position:relative;&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;elasticpwn&lt;/code&gt;: a brief overview&lt;a href=&quot;#elasticpwn-a-brief-overview&quot; aria-label=&quot;elasticpwn a brief overview permalink&quot; class=&quot;anchor after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;In this article, I will walk you through the general workflow of using &lt;code class=&quot;language-text&quot;&gt;elasticpwn&lt;/code&gt;. For the detailed explanation and full options, see &lt;a href=&quot;https://github.com/9oelm/elasticpwn&quot;&gt;README&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Prerequisites: &lt;code class=&quot;language-text&quot;&gt;docker-compose&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;go^1.17&lt;/code&gt;, &lt;a href=&quot;https://shodan.io&quot;&gt;Shodan&lt;/a&gt; or &lt;a href=&quot;https://binaryedge.io&quot;&gt;Binaryedge&lt;/a&gt; account (free account available for both)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Install the tool&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;go install github.com/9oelM/elasticpwn/core/elasticpwn@latest&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get a list of URLs of publicly exposed Elasticsearch and Kibana instances from OSINT platforms like &lt;a href=&quot;https://shodan.io&quot;&gt;shodan.io&lt;/a&gt; or &lt;a href=&quot;https://binaryedge.io&quot;&gt;binaryedge.io&lt;/a&gt;. Here are some starter dorks:&lt;/p&gt;
+&lt;p&gt;binaryedge: find publicly exposed elasticsearch instances in the US&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;elasticSearch AND country:&amp;quot;US&amp;quot; AND product:&amp;quot;Elasticsearch REST API&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;shodan: find publicly exposed elasticsearch instances, excluding false positives&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;elasticsearch 200 -&amp;quot;adminer_sid&amp;quot; -&amp;quot;MiniUPnPd&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Process the urls so that they are in the form of something like:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;123.123.123.123:80
+124.124.124.124:443
+... and so on.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;in a text file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Launch a local mongo server (you don’t have to use mongodb, but for the sake of this tutorial, I will just use it - you can also use &lt;code class=&quot;language-text&quot;&gt;json&lt;/code&gt; output option)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; https://raw.githubusercontent.com/9oelM/elasticpwn/main/docker-compose-mongo-only.yml -o docker-compose-mongo-only.yml &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker-compose -f docker-compose-mongo-only.yml up -d&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code class=&quot;language-text&quot;&gt;elasticpwn&lt;/code&gt; to collect data from the instances&lt;/p&gt;
+&lt;p&gt;This will collect and analyse all possible data from the instances with multiple threads.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;elasticpwn elasticsearch -f list_of_elasticsearch_instances.txt -murl mongodb://root:example@172.17.0.1:27017/ -of mongo -t &lt;span class=&quot;token number&quot;&gt;12&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Generate a report&lt;/p&gt;
+&lt;p&gt;This command will generate a directory called &lt;code class=&quot;language-text&quot;&gt;/report&lt;/code&gt; under CWD.&lt;/p&gt;
+&lt;p&gt;There will be a lot of data, like really a lot, and you can’t just review them all unless there is some form of review system. So there goes the reason for the existence of report feature. By default, &lt;code class=&quot;language-text&quot;&gt;elasticpwn&lt;/code&gt; will do its best to find interesting data like email, password, api logs, etc using its built-in regex matching and show it in addition to basic information about an instance. Based on this data, you can skip uninteresting ones and only leave interesting ones. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;elasticpwn report generate -cn elasticsearch -murl mongodb://root:example@172.17.0.1:27017/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;View the report&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;elasticpwn report view -d ./path-to-report -p &lt;span class=&quot;token number&quot;&gt;9999&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here’s a sample report page containing information about a single Elasticsearch endpoint:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f5890ef201e717efaab1a7f8c6c4a47c/97bfd/elasticpwn-report-sample.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 172.97297297297297%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAjCAIAAAAblL1PAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADLklEQVRIx5WVWXLbMAyGdZcu6TRxbO27ZG3Ubil127S9/0H6kbQ1eWgaZwbDgSD8AIiNRpoWQgxZVpim7Xmh43i243G6lmMeLNO2rf3h4eHxYXd4uN/tdvvHxwN0f79DaAgxiWZ0nGC3M8tS5Hkdx8csr9KkgB+H1XHDDx8+f/r05ePHL+q8g4Hu7r4aQZAmceH7aRQdoyiHCYIMSpIyjoswypOkCIMcHgnySDJFGOZhmBpVNczzj2k6d91yPLZQnrdlOYzjN5hheGrqqaxGmOOxq+sJpihQ65qmB9zPINulaaY8J2yRZU1Z9thK05qzKDqIv0lS4altT8jzvKmq1uDHNJ77btV6Gq+1scIJryPiU8rrEQYdCa7r4enp9wi+X3Go9AQMn2i07QIPhlMBhq6TctTqujPStCpKbBNtTUo0ERh6MISnPiuInPFZVr1OXpaVhu/HYZj5fkLaOTUDWZa33zv7va3OfzOyzqfTD8Im5117yo/imnPxGmWZUBcRG/jbPH8nkzoZ/yedubqWCRtPswJP34WY3wemGLMEnyfl+U2kJlW5krDnZX0mZuhGzxqcJMfLnXWH9v0TydAJ+z8Rti5VQqMzFViKooyyuW5o255t+2+RZ3heHIW5LrLjhK4b2XZgWf6bZJqeIacvrQBjTEm1z+AVb5scB57hezEB41YbuxhWjHk9NVkbY3Eidw3c0vSqdGS/viQzq8vLGMmTDNHbNDYKcnKlRLBwDNcJPTc8HJyNrt1rHw6u5JFIuQvhDdrUDGxQ3qLo9dDjZyMcEhR/8QajB1b/Ijpmi2XQ0pv0loqtftEGckgZTOqPglBbYWshlCWY8jCVrhcHah5NOYmWivwyei+us43kheQyYGngYWt6HL4kwtH0Ukjy8rwy2An05rb9bulN3Z5pWkowF75ur/b2qZKDQVcz0kSOiS34d4BxyyrHBOAbnV/AZJwk4XlZfmJCr9h3gPlgkpfluevU5d8LZpXrNdiKuby+G1rpJs+n0082EY+Ojpy7XMvbvAUe1nV91i/O9a0bMLeuv4T4xz5W7Zlfw24XticNrOPUDyXI8/kPz9Vr4L+kMgeyvf1PawAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;elasticpwn-report-sample.png&quot;
+        title=&quot;elasticpwn-report-sample.png&quot;
+        src=&quot;/static/f5890ef201e717efaab1a7f8c6c4a47c/fcda8/elasticpwn-report-sample.png&quot;
+        srcset=&quot;/static/f5890ef201e717efaab1a7f8c6c4a47c/12f09/elasticpwn-report-sample.png 148w,
+/static/f5890ef201e717efaab1a7f8c6c4a47c/e4a3f/elasticpwn-report-sample.png 295w,
+/static/f5890ef201e717efaab1a7f8c6c4a47c/fcda8/elasticpwn-report-sample.png 590w,
+/static/f5890ef201e717efaab1a7f8c6c4a47c/efc66/elasticpwn-report-sample.png 885w,
+/static/f5890ef201e717efaab1a7f8c6c4a47c/97bfd/elasticpwn-report-sample.png 1078w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;elasticpwn-persisting-your-research&quot; style=&quot;position:relative;&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;elasticpwn&lt;/code&gt;: persisting your research&lt;a href=&quot;#elasticpwn-persisting-your-research&quot; aria-label=&quot;elasticpwn persisting your research permalink&quot; class=&quot;anchor after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;elasticpwn&lt;/code&gt; also offers a way to store and retrieve the reviewed URLs, so that you don’t have to review the same URLs again with the same report page. It often becomes very confusing because some instances are quite similar and the number of the instances is just too large.&lt;/p&gt;
+&lt;p&gt;All you need is a persistent mongo database and an additional installation of &lt;code class=&quot;language-text&quot;&gt;elasticpwn-backend&lt;/code&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Generate the report with &lt;code class=&quot;language-text&quot;&gt;-dn&lt;/code&gt; option:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# -dn should be the url where elasticpwn-backend will be hosted
+elasticpwn report generate -cn elasticsearch -murl mongodb://root:example@172.17.0.1:27017/ -dn http://localhost:9292&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install &lt;code class=&quot;language-text&quot;&gt;elasticpwn-backend&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;go install github.com/9oelM/elasticpwn/report/elasticpwn-backend@latest&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Launch it. You need to specify your persistent mongodb URI as &lt;code class=&quot;language-text&quot;&gt;mongodbUri&lt;/code&gt; option:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;elasticpwn-backend -mongodbUri=mongodb+srv://username:pw@somewhere.mongodb.net/default-collection-name?retryWrites=true&amp;amp;w=majority -databaseCollectionName=elasticsearch_reviewed_urls -databaseName elasticpwn -port 9292
+
+2021/12/28 05:38:54 Connected to database
+2021/12/28 05:38:54 Inserting
+2021/12/28 05:38:54 Test url already created before
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in &amp;quot;debug&amp;quot; mode. Switch to &amp;quot;release&amp;quot; mode in production.
+- using env:   export GIN_MODE=release
+- using code:  gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /ping                     --&amp;gt; main.PingHandler (4 handlers)
+[GIN-debug] GET    /urls                     --&amp;gt; main.GetUrlsHandlerGenerator.func1 (4 handlers)
+[GIN-debug] POST   /urls                     --&amp;gt; main.PostUrlsHandlerGenerator.func1 (4 handlers)
+[GIN-debug] DELETE /urls                     --&amp;gt; main.DeleteUrlsHandlerGenerator.func1 (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:9292&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;With the server turned on, view the report (probably in another shell):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;elasticpwn report view -d ./path-to-report -p 9999&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Then, the report should be available, and each time you hit the ‘review’ button either with the keyboard shortcut or a click, the URL will be saved in the database for you to come back later or filter out duplicates later. If you are consistently generating report - say per week - then persistent database probably the answer.&lt;/p&gt;
+&lt;h1 id=&quot;securing-your-elastic-stack&quot; style=&quot;position:relative;&quot;&gt;Securing your Elastic stack&lt;a href=&quot;#securing-your-elastic-stack&quot; aria-label=&quot;securing your elastic stack permalink&quot; class=&quot;anchor after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;These are some really minimal steps to get your Elastic stack secured:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;set &lt;code class=&quot;language-text&quot;&gt;xpack.security.enabled&lt;/code&gt; as &lt;code class=&quot;language-text&quot;&gt;true&lt;/code&gt; if you are running an old version of the Elastic stack. One really good news is that this is going to be &lt;code class=&quot;language-text&quot;&gt;false&lt;/code&gt; by default in the newest versions. This will help protect lots of instances from being exposed to the world:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Currently, security features are disabled when operating on a basic or trial license when &lt;code class=&quot;language-text&quot;&gt;xpack.security.enabled&lt;/code&gt; has not been explicitly set to true. This behavior is now deprecated. In version 8.0.0, security features will be enabled by default for all licenses, unless explicitly disabled (by setting &lt;code class=&quot;language-text&quot;&gt;xpack.security.enabled&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;false&lt;/code&gt;).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;set password: &lt;code class=&quot;language-text&quot;&gt;bin/elasticsearch-setup-passwords interactive&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;use &lt;code class=&quot;language-text&quot;&gt;WWW-Authenticate&lt;/code&gt; header to restrict access&lt;/li&gt;
+&lt;li&gt;put the instances inside the private network and use VPN&lt;/li&gt;
+&lt;li&gt;and so much more…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Elastic has &lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/secure-cluster.html&quot;&gt;a detailed documentation&lt;/a&gt; on security, so make sure you check it out if you are the guy who manages the Elastic stack in the company.&lt;/p&gt;
+&lt;h1 id=&quot;conclusion&quot; style=&quot;position:relative;&quot;&gt;Conclusion&lt;a href=&quot;#conclusion&quot; aria-label=&quot;conclusion permalink&quot; class=&quot;anchor after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;So far, we have looked at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the problem of data exposure from numerous Elasticsearch and Kibana instances&lt;/li&gt;
+&lt;li&gt;how &lt;code class=&quot;language-text&quot;&gt;elasticpwn&lt;/code&gt; helps detect and analyse the exposed data&lt;/li&gt;
+&lt;li&gt;simple ways to secure the Elastic stack&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thank you, and your feedback is always appreciated.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[당신이 포기하지 말아야 하는 이유]]></title><description><![CDATA[…]]></description><link>https://9oelm.github.io/2021-11-12--당신이-포기하지-말아야-하는-이유/</link><guid isPermaLink="false">https://9oelm.github.io/2021-11-12--당신이-포기하지-말아야-하는-이유/</guid><pubDate>Fri, 12 Nov 2021 09:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;쉬운-성공을-좋아한다&quot; style=&quot;position:relative;&quot;&gt;쉬운 성공을 좋아한다&lt;a href=&quot;#%EC%89%AC%EC%9A%B4-%EC%84%B1%EA%B3%B5%EC%9D%84-%EC%A2%8B%EC%95%84%ED%95%9C%EB%8B%A4&quot; aria-label=&quot;쉬운 성공을 좋아한다 permalink&quot; class=&quot;anchor after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;사람들은 쉽게 성공하고 싶어한다.&lt;/p&gt;
 &lt;p&gt;오늘 처음으로 볼링장에 갔는데 스트라이크가 나오길 바란다.&lt;/p&gt;
 &lt;p&gt;오늘 처음으로 헬스장에 갔는데 살이 빠지기를 기대한다.&lt;/p&gt;
