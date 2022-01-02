@@ -138,7 +138,7 @@ Then, the report should be available, and each time you hit the 'review' button 
 # Securing your Elastic stack
 
 These are some really minimal steps to get your Elastic stack secured:
-- set `xpack.security.enabled` as `true` if you are running an old version of the Elastic stack. One really good news is that this is going to be `false` by default in the newest versions. This will help protect lots of instances from being exposed to the world:
+- set `xpack.security.enabled` as `true` if you are running an old version of the Elastic stack. One really good news is that this is going to be `true` by default in the newest versions. This will help protect lots of instances from being exposed to the world:
     > Currently, security features are disabled when operating on a basic or trial license when `xpack.security.enabled` has not been explicitly set to true. This behavior is now deprecated. In version 8.0.0, security features will be enabled by default for all licenses, unless explicitly disabled (by setting `xpack.security.enabled` to `false`).
 - set password: `bin/elasticsearch-setup-passwords interactive`
 - use `WWW-Authenticate` header to restrict access
