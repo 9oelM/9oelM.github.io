@@ -70,6 +70,8 @@ function SEO({ description, lang, meta, keywords, title }) {
             <meta http-equiv="expires" content="0" />
             <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
             <meta http-equiv="pragma" content="no-cache" />
+            {/* for google search console */}
+            <meta name="google-site-verification" content="Dt05uwJItLiAnlI0X2WgMlaV8GKbS63FimDxxf-Qrxc" />
           </Helmet>
         )
       }}
