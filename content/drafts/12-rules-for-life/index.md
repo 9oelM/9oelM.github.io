@@ -227,6 +227,70 @@ Order (41)
 
 - Therefore, the most significant elements of our environment of origin were peronsalities, not things, objects or situations. (44)
 
+- The personalities majorly have been split into **male** and **female** for a billion years, since when there has been separate sexes (44).
+
+- Naturally, the category of **parent** and **child** has existed for a long time too, unavoidably deeply embedded into our psychology (44)
+
+- We are social and we care about other creatures, which can be translated as environment. (45)
+
+- Our brain also has a capacity to have knowledge about the nature of the world, or the objective world. We grew to **deal with** what's **outside** of what we currently understand. (45)
+
+- When we first started doing this, we used categories representing pre-human animal social world, which is even older than our species. It can be said that the most basic category is the sex: **male** and **female**.
+  
+  > We appear to hhave taken that primordial knowledge of structured, creative opposition (male and female) and begun to interpret everything through its lens (46)
+
+### Order (46)
+
+- is: masculinity, yang of the Taoist yin-yang symbol, men throughout history have been the builders of towns and cities, engineers, stonemasons, bricklayers ..., God the Father, ledgerkeeper, policemen and soldiders, ...
+
+### Chaos (46)
+
+- is: feminine. possibility, the source of ideas, mysterious realm of gestation and birth. the darkness of a cave and the accident by the side of the road. it's the mother grizzly that tears you to pieces. crushing force of sexual selection. 
+
+### Duality of masculinity and feminity (47-)
+
+- Many religious symbols share masculinity and feminity at the same time:
+  
+  - The Star of David
+  
+  - the yoni and lingam of Hinduism
+  
+  - Fuxi and Nuwa in China
+  
+  - the Virgin Mary with the Christ Child
+  
+  - androgyny of Christ
+
+- The structure of the brain also reflects this duality (48): 
+  
+  > the hemispheric structure of the cortex reflects the fundamental division between novelty (the unknown, or chaos) and routinization (the known, order)
+
+- We all know this, but we don't know we know it. **We eternally inhabit order, surroundded by chaos.** (49) (This sentence is what really sums up the last few pages)
+
+- Chaos and order is anywhere in our lives, and the balance between chaos and order is crucial. Being inclined on either side too much may cause a problem. Neither shouldn't exist too. The same applies for other living things (50-51)
+
+## The Garden of Edens (51)
+
+- As previously mentioned, Genesis was combined from multiple sources:
+  
+  - Chapter 1: 'Priestly' story (refer back to 38)
+    
+    - Naturally connects to Chapter 2, suggesting someone or some people carefully attached these two stories together
+  
+  - Chapter 2: 'Jahwist' story
+    
+    - Uses the name YHWH (Jahweh) to describe God
+    
+    - Contains the story of Adam and Eve
+    
+    - Adam was instructed not to touch or eat the Tree of the Knowledge of Good and Evil, but he did
+    
+    - Adam and Eve were not self-conscious: they were naked but not ashamed.
+
+- Chapter 3 has a serpent appearing. While **God only knows why it's inside the garden**,**the serpent appears to play the role of chaos, and the paradise that of order.**
+
+- Where there is an order, there has to be a chaos, _because nothing can be completely walled off from the rest of reality._
+
 # Reflections
 
 ## Freedom
