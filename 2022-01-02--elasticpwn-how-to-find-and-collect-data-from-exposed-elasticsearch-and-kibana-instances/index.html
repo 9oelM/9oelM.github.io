@@ -285,7 +285,7 @@ elasticpwn report generate -cn elasticsearch -murl mongodb://root:example@172.17
 <p>These are some really minimal steps to get your Elastic stack secured:</p>
 <ul>
 <li>
-<p>set <code class="language-text">xpack.security.enabled</code> as <code class="language-text">true</code> if you are running an old version of the Elastic stack. One really good news is that this is going to be <code class="language-text">false</code> by default in the newest versions. This will help protect lots of instances from being exposed to the world:</p>
+<p>set <code class="language-text">xpack.security.enabled</code> as <code class="language-text">true</code> if you are running an old version of the Elastic stack. One really good news is that this is going to be <code class="language-text">true</code> by default in the newest versions. This will help protect lots of instances from being exposed to the world:</p>
 <blockquote>
 <p>Currently, security features are disabled when operating on a basic or trial license when <code class="language-text">xpack.security.enabled</code> has not been explicitly set to true. This behavior is now deprecated. In version 8.0.0, security features will be enabled by default for all licenses, unless explicitly disabled (by setting <code class="language-text">xpack.security.enabled</code> to <code class="language-text">false</code>).</p>
 </blockquote>
