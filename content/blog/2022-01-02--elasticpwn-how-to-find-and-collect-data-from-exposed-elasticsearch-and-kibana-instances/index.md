@@ -10,8 +10,11 @@ tab: "post"
 I have been doing some serious research on the public exposure of Elasticsearch and Kibana instances recently, and here are a few of the reports I made, found to be valid. I've been enjoying it so much:
 
 ![hackerone Kibana exposure report 1](./1.png)
+
 ![hackerone Kibana exposure report 2](./2.png)
+
 ![hackerone Kibana exposure report 3](./3.png)
+
 ![Kibana and Elasticsearch exposure report 4](./4.png)
 
 But my enjoyment must be someone else's pain. Literally thousands of Elasticsearch and Kibana instances are publicly exposed to the Internet. They are just up for grabs, and that is a really serious problem. Sometimes, even top renowned tech companies make mistakes about this, exposing their internal data exposed to the public. The nature of the data stored in these instances are sometimes quite sensitive and are never meant to be shared: be it phone numbers, email addresses, home addresses, names, credit card numbers, even (plaintext!) passwords, internal API logs, private user data specific to the service, and more and more. I've seen millions of such data through this journey, which I never expected.
