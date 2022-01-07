@@ -32,7 +32,7 @@ Prerequisites: `docker-compose`, `go^1.17`, [Shodan](https://shodan.io) or [Bina
 
 1. Install the tool
     ```
-    go install github.com/9oelM/elasticpwn/core/elasticpwn@latest
+    go install github.com/9oelM/elasticpwn/elasticpwn@latest
     ```
 1. Get a list of URLs of publicly exposed Elasticsearch and Kibana instances from OSINT platforms like [shodan.io](https://shodan.io) or [binaryedge.io](https://binaryedge.io). Here are some starter dorks:
 
