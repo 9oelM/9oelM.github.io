@@ -277,7 +277,7 @@ Order (41)
     
     - Naturally connects to Chapter 2, suggesting someone or some people carefully attached these two stories together
   
-  - Chapter 2: 'Jahwist' story
+  - Chapter 2: 'Jahwist' story (52)
     
     - Uses the name YHWH (Jahweh) to describe God
     
@@ -287,7 +287,7 @@ Order (41)
     
     - Adam and Eve were not self-conscious: they were naked but not ashamed.
 
-- Chapter 3 has a serpent appearing. While **God only knows why it's inside the garden**,**the serpent appears to play the role of chaos, and the paradise that of order.**
+- Chapter 3 has a serpent appearing. While **God only knows why it's inside the garden**,**the serpent appears to play the role of chaos, and the paradise that of order.** (53)
 
 - Where there is an order, there has to be a chaos, _because nothing can be completely walled off from the rest of reality._
 
