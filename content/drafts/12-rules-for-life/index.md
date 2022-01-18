@@ -213,8 +213,6 @@ Order (41)
 
 - **where everything is certain.**
 
-
-
 - Where there is an order, there is chaos. (43)
 
 - Our brains are wired to repond instantly to chaos. (43)
@@ -289,7 +287,87 @@ Order (41)
 
 - Chapter 3 has a serpent appearing. While **God only knows why it's inside the garden**,**the serpent appears to play the role of chaos, and the paradise that of order.** (53)
 
-- Where there is an order, there has to be a chaos, _because nothing can be completely walled off from the rest of reality._
+- Where there is an order, there has to be a chaos, _because nothing can be completely walled off from the rest of reality._ (54)
+
+- The absence of chaos would also be problematic: _how could the nature of man ever reach its full potential without challenge and danger?_ (54)
+
+- Anyway, Eve eats the forbidden fruit, and becomes self-conscious. (55-56)
+
+## The Naked Ape
+
+>  What does it mean to know yourself (and your partner) naked?
+
+- Naked means: vulnerable, easily damanged, subject to judgement for beauty and health, unprotected, unarmed. (57)
+
+- But that doesn't mean we can justly resent or hate the Ideal: knowledgeable, accomplished mathematicians should not disappear just because of my poor math skills. (58)
+
+- God spots Adam and Eve being self-conscious, and punishes them with 'having to work' and pregnancy respectively, and they are expelled from Paradise, out into the unknown, chaotic world. (59-61)
+
+- Back to the original query (at 35): why would someone buy prescription medication for his dog, and carefully administer it, and not do the same for himself?
+
+- Answer: why should take care of anything as naked, ugly, ashamed, ... as a descendant of Adam, even if that being is himself? Actually, you are the one who knows the most about yourself, your transgressions, insufficiencies and inadequacies. No one else has more reason to regard you as a pathetic man. **And by witholding something that might do you good (the medication), you can punish yourself for all your failings. A harmless, innocent, unselfconscious dog is more deserving.** (61) 
+
+## Good and Evil (62)
+
+- Dogs and cats are predetors: they kill things and eat them. But we still own them as pets and give them meds when they're sick. (62)
+
+- Why?: because they are predators by nature, without self-conscious. No comprehension of their weakness, vulnerability, pain, and death.
+
+- Humans?: they know. **we know exactly how and where we can be hurt, and why.** _This is as good a definition as any of self-consciousness._
+
+- We can do a lot with that: feel pain, disgust, shame, horror, terrify, humiliate, torture, ... **only man will inflict suffering for the sake of suffering.** *That is the best definition of evil I have been able to formulate.* (63)
+
+- Man can make things worse voluntarily. This validates the idea of Original Sin: who could deny it with the sense of inbuilt corruption and capacity for wrongdoing? (63)
+
+- **No one understands the darkness of the individual better than the individual himself. Who, then, when ill, is going to be fully commited to his own care?** (64)
+
+## A Spark of the Divine
+
+- It might not simply be the self-consciousness that makes us doubt our own worth. Perhaps it is [instead] **our unwillingness - reflected in Adam's shamed hiding - to walk with God, despite our fragility and propensity for evil. (66)**
+
+- We don't take care of ourselves because we know we are fallen creatures. (67)
+
+- 2000 years ago, people were much more barbaric than any peoples in the world right now: arena sports, human (child) sacrifice, ... And right now, aggressive people will just go to jail. Unacceptable. (67-68)
+
+- Widespread belief: people are arrogant and selfish.
+
+- But at the same time, they have exceeding amounts of self-disgust, self-contempt, shame and self-consciousness. **This is the reason they don't value themselves at all** instead of caring of their own importance. Really, they are aware of their own faults and inadequacies, ashamed and doubtful of their own value. 
+  
+  >  **They believe that other people shouldn't suffer, and they will work diligently and altruistically to help them alleviate it. They extend the same courtesy even to the animals they are acquainted with - but not so easily to themselves.** (68)
+
+- Self-sacrifice is well presented by the Christ. But it does not mean to suffer more than what is offered in return. If so, it's just a slave and a tyrant in a relationship.
+
+- Standing up and speaking for yourself and someone else have almost no difference, because anyone is stumbling, sinful and imperfect anyways. (69)
+
+- you don't have a right to torture and mistreat yourself, because: 
+  
+  - God claims you don't belong to yourself
+  
+  - Your Being affects others (i.e. suicide)
+  
+  - We have a spark of the divine in us which belongs to God
+
+- People in fact have overwhelming, unexpected and miraculous ability to  overcome difficulties (i.e. those with severely sick conditions or close ones with the equivalent). It's just amazing how all people go through troubles and make a way out of that all by themselves despite mortal vulnerability, tyranny of the state, and depredations of nature. (70-71)
+
+- Therefore, **humanity deserves some serious respect**. Everyone deserves respect, and you also. (71)
+  
+  > You have some vital role to play in the unfolding destiny of the world. **You are, therefore, morally obliged to take care of yourself.** ... to treat yourself as if you were someone you are reponsible for helping is, instead, **to consider what would be truly good for you.** (72)
+
+- good vs happy: what makes you happy isn't what's good in most cases and we all know that (72)
+
+- always think about what would be good for me and the ways to achieve that. (72-73)
+
+- set a **vision** and **direction** for nobody but yourself (73)
+
+- 
+- 
+# Make friends with people who want the best for you (77)
+
+## The old hometown
+
+- JBP lived in Fairview, Alberta and it was super cold especially in the winter, and the cats (home-grown ones too) faced the risk of death often due to their behavior to seek heat under coldness. (77-79)
+
+## My Friend Chris and His Cousin
 
 # Reflections
 
@@ -298,3 +376,25 @@ Order (41)
 > But the story of the golden calf also reminds us that without rules we _quickly become slaves to our passions - and there's nothing freeing about that._ (viii)
 
 This is the exact same thing the book _Atomic Habits_ suggests. If you make a habit (or in the context of this book, a _rule_ in your life), it is rather going to free you. For example, if you make a habit to save money, it will going to give you more freedom in buying stuffs later when you need them, while on the surface it might seem like that habit is restricting you from buying anything.
+
+Isn't it so ironic? Mere freedom doesn't grant you freedom. It curbs you instead. 
+
+## Order and chaos
+
+Everyone, if not consciously, at least should have an underlying sense of order and chaos in the corner of their minds. We know when things go ''unlike the plan'. We know when things go ''as planned'.
+
+As JBP mentioned, such a phenomenon is unavoidable and already everywhere.
+
+So what becomes important is what I do then. How much am I confident in surviving the world of order and chaos? How much am I ready and prepared in my mind to challenge myself with this?
+
+## Happy vs Good
+
+In Chapter 2, JBP says happy and good don't have a single common thing together. Never thought that way, but sounds so true when I read it.
+
+I pursue a bunch of things daily that makes me happy. I would not recommend that my dog or my child (if I had one) do the same. But why am I doing that myself!? This is the moment I realized that I just need to stop all of this. I shouldn't be pursuing things that make me only happy.
+
+*Good things* tend to last long. *Happy things* don't. I think that's one big difference. Watching a fun short clip on Youtube, for example, surely makes you happy, but it does not deserve to be said 'good' for you (or 'bad', it's just rather nothing but something that makes you happy)
+
+## Treating myself like someone I am responsible for helping
+
+This is absurdly _hard_. Even with the innately selfish human nature. Even after reading the chapter 2, I still keep asking myself: what the heck is going on? Why can't I care myself enough? Why did I miss breakfast so many times knowing that it wouldn't be good for my health? Why did I sleep late and wake up late knowingly? Why
