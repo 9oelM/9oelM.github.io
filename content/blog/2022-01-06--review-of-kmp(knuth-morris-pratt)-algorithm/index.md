@@ -152,43 +152,90 @@ Then finally we find the substring `abcdabcy` at the end of the text with trivia
 
 We know how KMP algorithm works, but we didn't discuss what an efficient way of obtaining an LPS would be when we looked at how to find an LPS. This is how it's done:
 
-```py
-def create_lps_array(word):
-    lps_array = [0] * len(word)
+1. Create `int` variables `j` and `i` to track indices of an `lps_array` of length `len(word)`
+1. Let `j` track the prefix, and let `i` track the suffix of each substring.
+1. Let `j` and `i` all start from index `0`. But because index `0` is always not an LPS, just start `i` from index 1.
+1. Check if `word[j] == word[i]`. If `true`, `lps_array[i] = j + 1` (which is `the length of matching suffix = the index of previously matching prefix + 1`) and increment `j` and `i` by `1`. Otherwise, increment `i` and reset `j` to `lps_array[j - 1]` (which is `the length of previously matching prefix`). Start this step again.
 
-    # for index 0, it will always be 0
-    # so start from index 1
-    i = 1
-    j = 0
-    while i < len(word):
-        if word[i] == word[j]:
-            j += 1
-            lps_array[i] = j
-            i += 1
-        # this one is a little tricky,
-        # when there is a mismatch,
-        # we will check the index of previous
-        # possible prefix.
+This Youtube video just kills it, so I've watched it multiple times. I've set it to start from the LPS part.
 
-				# this is possible because every element in the lps array
-				# represents the number of LPS in the substring from 
-				# the beginning of the string to the index of the element.
-        elif word[i] != word[j] and j != 0:
-            # Note that we do not increment i here.
-            j = lps_array[j-1]
-        else:
-            # j = 0, we move to the next letter,
-            # there was no any prefix found which 
-            # is equal to the suffix for index i
-            lps_array[i] = 0
-            i += 1
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GTJr8OvyEVQ?start=495" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    return lps_array
+For example, for a string: `aabaabaaa`, an LPS can be constructed with the following steps:
+
+```go
+func createLpsArray(word string) []int {
+    wordLen := len(word)
+    var lpsArray [wordLen]int
+
+    i := 1
+    j := 0
+
+    for i < wordLen {
+        if word[j] == word[i] {
+            lpsArray[i] = j + 1
+            ++j
+            ++i
+        // has a prefix longer than 0 already, so check backwards again
+        // when there is a mismatch,
+        // we will check the index of previous
+        // possible prefix.
+        // this is possible because every element in the lps array
+        // represents the number of LPS in the substring from 
+        // the beginning of the string to the index of the element.
+        } else if word[j] != word[i] && j != 0 {
+            j = lpsArray[j - 1]
+        // this means word[j] != word[i] && j == 0
+        // there has been no prefix found so far for the current index i, so just move onto the next
+        // character to find the match
+        } else {
+            ++i
+        }
+    }
+    return lpsArray
+}
 ```
 
-The complexities, where `n` is the length of the string, are as follows:
+<iframe frameborder="0" width="100%" height="300px" src="https://replit.com/@9oelM/createLpsArray?embed=true"></iframe>
+
+The complexities, where `n` is the length of the word, are as follows:
 - Time complexity: `O(n)`
-- Space complexity: `O(n)`
+- Space complexity: `O(n)` because `lpsArray` is `[n]int`.
+
+# Summing everything up together for KMP substring search
+
+Problem: given `a b x a b c a b c a b y` (spaces used for convenience), check if the text contains the pattern `a b c a b y`.
+
+## Get the LPS array
+
+`a b c a b y`:
+
+1. `a` and `b` are not the same, so the array would be
+    ```
+    [0, 0, 0, 0, 0, 0]
+    ```
+1. `a` and `c` are not the same, so the array will still be
+    ```
+    [0, 0, 0, 0, 0, 0]
+    ```
+1. `a` and `a` are the same. Increment `i` and `j` together by one.
+    ```
+    [0, 0, 0, 1, 0, 0]
+    ```
+1. `b` and `b` are the same. Because `lpsArray[i] = lpsArray[j] + 1`, `lpsArray[i] = 1 + 1 = 2`. Increment `i` and `j` together by one.
+    ```
+    [0, 0, 0, 1, 2, 0]
+    ```
+1. `c` and `y` are not the same. Then, look backwards (`j = lpsArray[j - 1]`) to see if there is any other prefixes available. `j = lpsArray[j - 1] = 0`. Again, `word[0] = a` and `a != y`. Mark `0` for the last index:
+    ```
+    [0, 0, 0, 1, 2, 0]
+    ```
+
+Where:
+- `n = length of the string to be matched`
+- `m = length of the pattern to be matched`
+
+The time complexity to build the LPS array is `O(m)`, and that to find the substring from the text is `O(n)`. Therefore, adding them up together yields `O(m + n)`, which is the time complexity of the KMP substring search.
 
 # References
 - https://binary-baba.medium.com/string-matching-kmp-algorithm-27c182efa387
