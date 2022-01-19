@@ -61,6 +61,8 @@ Base64 only uses 6 bits to represent one character because only 2^6 = 64 charact
 
 ### Conversion
 
+#### First example
+
 Here's how you could convert some data to base64:
 
 1) Take in 3 bytes (24 bits) *reminder: a byte can hold (unsigned) numbers from 0 through 255.
@@ -72,31 +74,33 @@ Here's how you could convert some data to base64:
 2) List them as if they are just one number in binary format. 
 
 ```
-11010011 00010011 00110001, so:
+11010011 00010011 00101110, so:
 
-110100110001001100110001
+110100110001001100101110
 ```
 
 3) Dissect them again into 4 segments of 6 bits (because base64 uses 6 bits to represent one character). 
 
 ```
-110100 110001 001100 110001
+110100 110001 001100 101110
 ```
 
 4) Get the decimal values of these 6 bit numbers.
 
 ```
-110100 110001 001100 110001
-52 49 12 49
+110100 110001 001100 101110
+52 49 12 46
 ```
 
-5) Refer to the encoding table to find the matches. Padded zeros at the end become `=`, the padding.
+5) Refer to the encoding table to find the matches. `52` refers to `0`. `49` refers to `x`. `12` refers to `M`. `46` refers to `u`.
 
 ```
-w5MTLg==
+0xMu
 ```
 
-Another example for an ASCII string
+#### Second example
+
+Another example for an ASCII string.
 
 1) Data
 
@@ -122,7 +126,7 @@ Hello
 18 6 21 44 27 6 60 10
 ```
 
-5) Get the encoding from the table
+5) Get the encoding from the table (pad the remaining zeros with `=`)
 
 ```
 SGVsbG8=
