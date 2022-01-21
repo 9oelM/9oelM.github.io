@@ -491,7 +491,7 @@ func createLpsArray(word string) []int {
     return lpsArray
 }
 
-func Reverse(s string) string {
+func reverse(s string) string {
     r := []rune(s)
     for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
         r[i], r[j] = r[j], r[i]
@@ -503,13 +503,13 @@ func shortestPalindrome(s string) string {
   // s + # + reverse(s)
   //  a a c e c a a a # a a a c e c a a
   // [0 1 0 0 0 1 2 2 0 1 2 2 3 4 5 6 7]
-  reversed := Reverse(s)
+  reversed := reverse(s)
   lpsArray := createLpsArray(s + "#" + reversed)
   fmt.Println(lpsArray)
   longestPalindromeLength := lpsArray[len(lpsArray) - 1]
 
   // a aacecaaa
-  return Reverse(s[longestPalindromeLength:]) + s
+  return reverse(s[longestPalindromeLength:]) + s
 }
 
 func main() {
@@ -524,13 +524,19 @@ func main() {
 
 <iframe frameborder="0" width="100%" height="800px" src="https://replit.com/@9oelM/shortest-palindrome-with-lps?lite=true"></iframe>
 
+# Conclusion
+
+So that really sums it up. So far we've looked at the mechanics of KMP substring search and its core component: LPS table. Although finding the shortest palindrome is not directly related to KMP substring search algorithm, the LPS table can be borrowed from its underlying idea to solve the problem in an efficient way.
+
+Personally, this one was hard. The algorithm is really just a few lines, but it requires a lot of thought process to get there. But nice job me, I understood how it works. Hope this post helps someone else too.
+
 # More substring search algorithms
 This post is about KMP algorithm. But there are also other algorithms that can do substring search as efficiently. Check these out too:
 
 - [Boyer-Moore string-search](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm)
 - [Rabin-Karp substring search](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm)
 
-# References
+# Credits
 - https://binary-baba.medium.com/string-matching-kmp-algorithm-27c182efa387
 - https://towardsdatascience.com/pattern-search-with-the-knuth-morris-pratt-kmp-algorithm-8562407dba5b
 - https://leetcode.com/problems/shortest-palindrome/solution/
