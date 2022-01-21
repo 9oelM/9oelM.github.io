@@ -5,6 +5,10 @@ tags: ["algorithm"]
 tab: "post"
 ---
 
+```toc
+# This code block gets replaced with the TOC
+```
+
 # Find the shortest palindrome
 
 So I encountered [this problem](https://leetcode.com/problems/shortest-palindrome/) during my study: 'shortest palindrome'. The problem reads:
