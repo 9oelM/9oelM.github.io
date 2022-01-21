@@ -377,11 +377,118 @@ s consists of lowercase English letters only.</code></pre></div>
 <p>What we really need to do is to build a string like:</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">s + &quot;#&quot; + reverse(s)</code></pre></div>
 <p>and just run <code class="language-text">createLpsArray()</code> function which we learned how to create with that string.</p>
-<p>For example:</p>
+<h2 id="solving-aacecaaa" style="position:relative;">Solving <code class="language-text">aacecaaa</code><a href="#solving-aacecaaa" aria-label="solving aacecaaa permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>For example, for the string: <code class="language-text">aacecaaa</code>,</p>
+<ol>
+<li>
+<p>do <code class="language-text">s+some_unique_delimiter+reverse(s)</code>. <code class="language-text">some_unique_delimiter</code> could be anything that is not in the set of chars specified to be available in the problem, because it will otherwise mix up the LPS table obviously. For this example, we are using a <code class="language-text">#</code>: </p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">aacecaaa#aaacecaa</code></pre></div>
+</li>
+<li>
+<p>create an LPS table on that string first:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">a  a  c  e  c  a  a  a  #  a  a  a  c  e  c  a  a
+
+[0, 1, 0, 0, 0, 1, 2, 2, 0, 1, 2, 2, 3, 4, 5, 6, 7]</code></pre></div>
+</li>
+<li>at this step, we can then notice that the <code class="language-text">aacecaaa</code> has the longest palindrome string of length 7 from index 0. In essence, <em><strong>the LPS table of the crafted string works as viewing the reflection of the original string, which helps to find the longest palindrome in an efficient way.</strong></em></li>
+<li>
+<p>we now know the longest palindrome string is 7 from the index 0. Therefore, the answer has to be:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">reverse(s[7:]) + s</code></pre></div>
+<p>which is</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">a + aacecaaa = aaacecaaa</code></pre></div>
+</li>
+</ol>
+<h2 id="solving-abcd-just-to-give-another-example-for-perfection" style="position:relative;">Solving <code class="language-text">abcd</code> (just to give another example for perfection)<a href="#solving-abcd-just-to-give-another-example-for-perfection" aria-label="solving abcd just to give another example for perfection permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<ol>
+<li>
+<p>do <code class="language-text">s+some_unique_delimiter+reverse(s)</code>. again: </p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">abcd#dcba</code></pre></div>
+</li>
+<li>
+<p>create an LPS table on that string first:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"> a  b  c  d  #  d  c  b  a
+
+[0, 0, 0, 0, 0, 0, 0, 0, 1]</code></pre></div>
+</li>
+<li>
+<p>the longest palindromic string has the length of 1. Therefore, this will be the answer:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">reverse(s[1:]) + s</code></pre></div>
+<p>which is</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">d c b a + b c d = dcbabcd</code></pre></div>
+</li>
+</ol>
+<h1 id="solution-code" style="position:relative;">Solution code<a href="#solution-code" aria-label="solution code permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<p>Finally, the solution will look like this:</p>
+<div class="gatsby-highlight" data-language="go"><pre class="language-go"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token keyword">func</span> <span class="token function">createLpsArray</span><span class="token punctuation">(</span>word <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span> <span class="token punctuation">{</span>
+    wordLen <span class="token operator">:=</span> <span class="token function">len</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span>
+    lpsArray <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">,</span> wordLen<span class="token punctuation">)</span>
+
+    i <span class="token operator">:=</span> <span class="token number">1</span>
+    j <span class="token operator">:=</span> <span class="token number">0</span>
+
+    <span class="token keyword">for</span> i <span class="token operator">&lt;</span> wordLen <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> word<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> word<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token punctuation">{</span>
+            lpsArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span>
+            j<span class="token operator">++</span>
+            i<span class="token operator">++</span>
+        <span class="token comment">// has a prefix longer than 0 already, so check backwards again</span>
+        <span class="token comment">// when there is a mismatch,</span>
+        <span class="token comment">// we will check the index of previous</span>
+        <span class="token comment">// possible prefix.</span>
+        <span class="token comment">// this is possible because every element in the lps array</span>
+        <span class="token comment">// represents the number of LPS in the substring from </span>
+        <span class="token comment">// the beginning of the string to the index of the element.</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> word<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> word<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> j <span class="token operator">!=</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+            j <span class="token operator">=</span> lpsArray<span class="token punctuation">[</span>j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token comment">// this means word[j] != word[i] &amp;&amp; j == 0</span>
+        <span class="token comment">// there has been no prefix found so far for the current index i, so just move onto the next</span>
+        <span class="token comment">// character to find the match</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            i<span class="token operator">++</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> lpsArray
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">Reverse</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+    r <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">rune</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i<span class="token punctuation">,</span> j <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span> i<span class="token punctuation">,</span> j <span class="token operator">=</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> j<span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">{</span>
+        r<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> r<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">string</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">shortestPalindrome</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+  <span class="token comment">// s + # + reverse(s)</span>
+  <span class="token comment">//  a a c e c a a a # a a a c e c a a</span>
+  <span class="token comment">// [0 1 0 0 0 1 2 2 0 1 2 2 3 4 5 6 7]</span>
+  reversed <span class="token operator">:=</span> <span class="token function">Reverse</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+  lpsArray <span class="token operator">:=</span> <span class="token function">createLpsArray</span><span class="token punctuation">(</span>s <span class="token operator">+</span> <span class="token string">"#"</span> <span class="token operator">+</span> reversed<span class="token punctuation">)</span>
+  fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>lpsArray<span class="token punctuation">)</span>
+  longestPalindromeLength <span class="token operator">:=</span> lpsArray<span class="token punctuation">[</span><span class="token function">len</span><span class="token punctuation">(</span>lpsArray<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>
+
+  <span class="token comment">// a aacecaaa</span>
+  <span class="token keyword">return</span> <span class="token function">Reverse</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>longestPalindromeLength<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> s
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  cases <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span>
+    <span class="token string">"aacecaaa"</span><span class="token punctuation">,</span> <span class="token string">"abcd"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> c <span class="token operator">:=</span> <span class="token keyword">range</span><span class="token punctuation">(</span>cases<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">shortestPalindrome</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<iframe frameborder="0" width="100%" height="800px" src="https://replit.com/@9oelM/shortest-palindrome-with-lps?lite=true"></iframe>
 <h1 id="more-substring-search-algorithms" style="position:relative;">More substring search algorithms<a href="#more-substring-search-algorithms" aria-label="more substring search algorithms permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<p>This post is about KMP algorithm. But there are also other algorithms that can do substring search as efficiently. Check these out too:</p>
 <ul>
-<li>Boyer-Moore string-search</li>
-<li>Rabin-Karp substring search</li>
+<li><a href="https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm">Boyer-Moore string-search</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm">Rabin-Karp substring search</a></li>
 </ul>
 <h1 id="references" style="position:relative;">References<a href="#references" aria-label="references permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <ul>
