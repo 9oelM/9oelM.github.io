@@ -454,7 +454,7 @@ s consists of lowercase English letters only.</code></pre></div>
     <span class="token keyword">return</span> lpsArray
 <span class="token punctuation">}</span>
 
-<span class="token keyword">func</span> <span class="token function">Reverse</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+<span class="token keyword">func</span> <span class="token function">reverse</span><span class="token punctuation">(</span>s <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
     r <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">rune</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
     <span class="token keyword">for</span> i<span class="token punctuation">,</span> j <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span> i<span class="token punctuation">,</span> j <span class="token operator">=</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> j<span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">{</span>
         r<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> r<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
@@ -466,13 +466,13 @@ s consists of lowercase English letters only.</code></pre></div>
   <span class="token comment">// s + # + reverse(s)</span>
   <span class="token comment">//  a a c e c a a a # a a a c e c a a</span>
   <span class="token comment">// [0 1 0 0 0 1 2 2 0 1 2 2 3 4 5 6 7]</span>
-  reversed <span class="token operator">:=</span> <span class="token function">Reverse</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+  reversed <span class="token operator">:=</span> <span class="token function">reverse</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
   lpsArray <span class="token operator">:=</span> <span class="token function">createLpsArray</span><span class="token punctuation">(</span>s <span class="token operator">+</span> <span class="token string">"#"</span> <span class="token operator">+</span> reversed<span class="token punctuation">)</span>
   fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>lpsArray<span class="token punctuation">)</span>
   longestPalindromeLength <span class="token operator">:=</span> lpsArray<span class="token punctuation">[</span><span class="token function">len</span><span class="token punctuation">(</span>lpsArray<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>
 
   <span class="token comment">// a aacecaaa</span>
-  <span class="token keyword">return</span> <span class="token function">Reverse</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>longestPalindromeLength<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> s
+  <span class="token keyword">return</span> <span class="token function">reverse</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>longestPalindromeLength<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> s
 <span class="token punctuation">}</span>
 
 <span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
