@@ -1,5 +1,5 @@
 ---
-title: "Find the shortest palindrome: review of the KMP(Knuth–Morris–Pratt) algorithm"
+title: "Find the shortest palindrome: an intensive review of the KMP(Knuth–Morris–Pratt) algorithm"
 date: "2022-01-06T09:00:00.009Z"
 tags: ["algorithm"]
 tab: "post"
