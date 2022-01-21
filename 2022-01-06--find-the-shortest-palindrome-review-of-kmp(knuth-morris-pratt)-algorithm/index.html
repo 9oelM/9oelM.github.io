@@ -109,7 +109,7 @@ s consists of lowercase English letters only.</code></pre></div>
 		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">brute</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
-<iframe frameborder="0" width="100%" height="300px" src="https://replit.com/@9oelM/matching-patterns-bruteforce?lite=true"></iframe>
+<iframe frameborder="0" width="100%" height="800px" src="https://replit.com/@9oelM/matching-patterns-bruteforce?lite=true"></iframe>
 <p>The time complexity will be <code class="language-text">O(n*m)</code> because we are iterating over the string <code class="language-text">n</code> times and each time we are iterating over the pattern <code class="language-text">m</code> times because <code class="language-text">s[i:i+m] == pattern</code> will take at most <code class="language-text">O(m)</code> times to complete, as it is checking string equality.</p>
 <p>Anyway, it is easy to spot the inefficiency. Let’s take a look at the algorithm step by step. First, we will try to match <code class="language-text">abc</code> with <code class="language-text">abc</code>, <code class="language-text">bce</code> with <code class="language-text">abc</code>, <code class="language-text">cea</code> with <code class="language-text">abc</code>, and then <code class="language-text">eab</code> with <code class="language-text">abc</code> and so on. But what we know for sure is that when you encounter <code class="language-text">abc</code>, you already know that the next two words of length <code class="language-text">m</code> will start with <code class="language-text">b</code> and <code class="language-text">c</code>, which are not the start of the characters we are looking for. So we can safely skip the <code class="language-text">b</code> and <code class="language-text">c</code>, and start fresh at <code class="language-text">currentIndex+m</code>.</p>
 <p>Therefore, what’s important is how many characters you can safely skip. But exactly how many characters can you skip?</p>
@@ -202,7 +202,7 @@ s consists of lowercase English letters only.</code></pre></div>
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> lpsArray
 <span class="token punctuation">}</span></code></pre></div>
-<iframe frameborder="0" width="100%" height="300px" src="https://replit.com/@9oelM/createLpsArray?lite=true"></iframe>
+<iframe frameborder="0" width="100%" height="800px" src="https://replit.com/@9oelM/createLpsArray?lite=true"></iframe>
 <p>The complexities, where <code class="language-text">m</code> is the length of the word, are as follows:</p>
 <ul>
 <li>Time complexity: <code class="language-text">O(m)</code>, because the for loop will run <code class="language-text">2m</code> times at its worst and the constant <code class="language-text">2</code> can be removed.</li>
@@ -336,7 +336,7 @@ a b c a b y
 	  fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">kmp</span><span class="token punctuation">(</span>c<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
-<iframe width="100%" height="300px" src="https://replit.com/@9oelM/kmp?lite=true"></iframe>
+<iframe width="100%" height="800px" src="https://replit.com/@9oelM/kmp?lite=true"></iframe>
 <h2 id="complexities" style="position:relative;">Complexities<a href="#complexities" aria-label="complexities permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <p>Given:</p>
 <ul>
@@ -346,7 +346,7 @@ a b c a b y
 <p><strong>The time complexity</strong> to build the LPS array is <code class="language-text">O(m)</code> as we’ve seen before, and that to find the substring from the text is <code class="language-text">O(n)</code>. Therefore, adding them up together yields <strong><code class="language-text">O(m + n)</code></strong>, which is the time complexity of the KMP substring search.</p>
 <p><strong>The space complexity</strong> for LPS array is <code class="language-text">O(m)</code> because it stores length of an array equivalent to <code class="language-text">m</code>. The KMP search alone has the space complexity of <code class="language-text">O(1)</code> because it does not require any variables other than constants. Therefore, the space complexity is <code class="language-text">O(1 + m)</code> which is <strong><code class="language-text">O(m)</code></strong>.</p>
 <h1 id="back-to-the-original-problem-find-the-shortest-palindrome" style="position:relative;">Back to the original problem: find the shortest palindrome<a href="#back-to-the-original-problem-find-the-shortest-palindrome" aria-label="back to the original problem find the shortest palindrome permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<p>Here’s the problem again: </p>
+<p>So let’s revisit the problem again:</p>
 <blockquote>
 <p>You are given a string s. You can convert s to a palindrome by adding characters in front of it. Return the shortest palindrome you can find by performing this transformation.</p>
 </blockquote>
@@ -363,6 +363,21 @@ Constraints:
 
 0 &lt;= s.length &lt;= 5 * 104
 s consists of lowercase English letters only.</code></pre></div>
+<p>But you revisit the problem description and ponder upon it once more. Do you think you can reword it to something relevant to LPS or KMP search while preserving the same goal?</p>
+<p>Yes! If you reword it this way:</p>
+<blockquote>
+<p>Find the longest palindrome substring that starts from index 0.</p>
+</blockquote>
+<p>Actually, we mentioned this already in a very similar term at the beginning of this post:</p>
+<blockquote>
+<p><strong>Find the longest palindrome substring from the beginning of the substring.</strong></p>
+</blockquote>
+<p>Yes. So let’s take the first example for explanation. <code class="language-text">aacecaaa</code> has <code class="language-text">aacecaa</code> as the longest palindrome substring starting from index 0, so we just need to reverse the rest of the string, which happens to be <code class="language-text">a</code>, and prepend it to the string, yielding <code class="language-text">aaacecaaa</code>.</p>
+<p>Now, we don’t have to use KMP algorithm to solve this problem efficiently, but we are going to use the LPS table. KMP algorithm itself isn’t really actually relevant to this problem. Only the LPS table is.</p>
+<p>What we really need to do is to build a string like:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">s + &quot;#&quot; + reverse(s)</code></pre></div>
+<p>and just run <code class="language-text">createLpsArray()</code> function which we learned how to create with that string.</p>
+<p>For example:</p>
 <h1 id="more-substring-search-algorithms" style="position:relative;">More substring search algorithms<a href="#more-substring-search-algorithms" aria-label="more substring search algorithms permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <ul>
 <li>Boyer-Moore string-search</li>
@@ -374,6 +389,7 @@ s consists of lowercase English letters only.</code></pre></div>
 <li><a href="https://towardsdatascience.com/pattern-search-with-the-knuth-morris-pratt-kmp-algorithm-8562407dba5b">https://towardsdatascience.com/pattern-search-with-the-knuth-morris-pratt-kmp-algorithm-8562407dba5b</a></li>
 <li><a href="https://leetcode.com/problems/shortest-palindrome/solution/">https://leetcode.com/problems/shortest-palindrome/solution/</a></li>
 <li><a href="https://youtu.be/GTJr8OvyEVQ">https://youtu.be/GTJr8OvyEVQ</a></li>
+<li><a href="https://leetcode.com/problems/shortest-palindrome/discuss/60113/Clean-KMP-solution-with-super-detailed-explanation">https://leetcode.com/problems/shortest-palindrome/discuss/60113/Clean-KMP-solution-with-super-detailed-explanation</a></li>
 </ul></div><hr style="margin-bottom:1.75rem"/><div style="display:flex"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDAf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABy7nSMycNUI5yDf/EABoQAQEAAwEBAAAAAAAAAAAAAAECAAMSBBH/2gAIAQEAAQUCKcJEdM/YiqC5hvZ3XqtNnSDn/8QAFhEAAwAAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/ASv/xAAWEQADAAAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8BI//EACAQAAIBAwQDAAAAAAAAAAAAAAABAhExQRASISJRUmH/2gAIAQEABj8CpQcZXOz2vwVdj57DkxwXEY4Glm+n/8QAGxAAAgMBAQEAAAAAAAAAAAAAAAERITFBYYH/2gAIAQEAAT8hgUw8H+KVqHQvZJwmVzhuN3ufBm5YyHgQkhCf6Gg//9oADAMBAAIAAwAAABAQKHz/xAAYEQACAwAAAAAAAAAAAAAAAAAAARARUf/aAAgBAwEBPxBIrk//xAAZEQADAAMAAAAAAAAAAAAAAAAAAREQIVH/2gAIAQIBAT8Qbmi+ix//xAAdEAEAAgIDAQEAAAAAAAAAAAABABEhMUFRYXHB/9oACAEBAAE/EG07OyWDzfUTIQvQcUBt9YkDm7GPYqTeWIPe/wBmi62AQwsVa+YlES9/DggPKdTCvL2xUW0HqIqGsT//2Q==" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/aba1d/profile-pic.jpg 1.5x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/b315d/profile-pic.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
