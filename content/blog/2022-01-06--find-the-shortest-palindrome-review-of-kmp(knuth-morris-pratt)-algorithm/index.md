@@ -1,5 +1,5 @@
 ---
-title: "Review of KMP(Knuth–Morris–Pratt) algorithm"
+title: "Find the shortest palindrome: review of the KMP(Knuth–Morris–Pratt) algorithm"
 date: "2022-01-06T09:00:00.009Z"
 tags: ["algorithm"]
 tab: "post"
@@ -79,7 +79,7 @@ func main() {
 }
 ```
 
-<iframe frameborder="0" width="100%" height="300px" src="https://replit.com/@9oelM/matching-patterns-bruteforce?embed=true"></iframe>
+<iframe frameborder="0" width="100%" height="800px" src="https://replit.com/@9oelM/matching-patterns-bruteforce?lite=true"></iframe>
 
 The time complexity will be `O(n*m)` because we are iterating over the string `n` times and each time we are iterating over the pattern `m` times because `s[i:i+m] == pattern` will take at most `O(m)` times to complete, as it is checking string equality.
 
@@ -161,12 +161,12 @@ This Youtube video just kills it, so I've watched it multiple times. I've set it
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GTJr8OvyEVQ?start=495" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-For example, for a string: `aabaabaaa`, an LPS can be constructed with the following steps:
+an LPS can be constructed with the following code:
 
 ```go
 func createLpsArray(word string) []int {
     wordLen := len(word)
-    var lpsArray [wordLen]int
+    lpsArray := make([]int, wordLen)
 
     i := 1
     j := 0
@@ -174,8 +174,8 @@ func createLpsArray(word string) []int {
     for i < wordLen {
         if word[j] == word[i] {
             lpsArray[i] = j + 1
-            ++j
-            ++i
+            j++
+            i++
         // has a prefix longer than 0 already, so check backwards again
         // when there is a mismatch,
         // we will check the index of previous
@@ -186,29 +186,29 @@ func createLpsArray(word string) []int {
         } else if word[j] != word[i] && j != 0 {
             j = lpsArray[j - 1]
         // this means word[j] != word[i] && j == 0
-        // there has been no prefix found so far for the current index i, so just move onto the next
-        // character to find the match
+        // there has been no prefix found so far for the current index i, 
+        // so just move onto the next character to find the match
         } else {
-            ++i
+            i++
         }
     }
     return lpsArray
 }
 ```
 
-<iframe frameborder="0" width="100%" height="300px" src="https://replit.com/@9oelM/createLpsArray?embed=true"></iframe>
+<iframe frameborder="0" width="100%" height="800px" src="https://replit.com/@9oelM/createLpsArray?lite=true"></iframe>
 
-The complexities, where `n` is the length of the word, are as follows:
-- Time complexity: `O(n)`
-- Space complexity: `O(n)` because `lpsArray` is `[n]int`.
+The complexities, where `m` is the length of the word, are as follows:
+- Time complexity: `O(m)`, because the for loop will run `2m` times at its worst and the constant `2` can be removed.
+- Space complexity: `O(m)` because `lpsArray` is `[m]int`.
 
 # Summing everything up together for KMP substring search
 
-Problem: given `a b x a b c a b c a b y` (spaces used for convenience), check if the text contains the pattern `a b c a b y`.
+Problem: given `a b x a b c a b c a b y` (spaces used for convenience), give all starting indices where substring(s) of the text contain the pattern `a b c a b y`.
 
 ## Get the LPS array
 
-`a b c a b y`:
+For the pattern `a b c a b y`:
 
 1. `a` and `b` are not the same, so the array would be
     ```
@@ -231,15 +231,308 @@ Problem: given `a b x a b c a b c a b y` (spaces used for convenience), check if
     [0, 0, 0, 1, 2, 0]
     ```
 
-Where:
+## Perform the substring search using the KMP algorithm
+
+what we have so far:
+```
+a b x a b c a b c a b y
+a b c a b y
+[0, 0, 0, 1, 2, 0]
+```
+
+1. index 0: `a` and `a` are the same, so proceed together
+1. index 1: `b` and `b` are the same, so proceed together
+1. index 2: `x` and `c` are not the same. `lpsArray[2 - 1] == 0`, so there is no prefix found previously. Start fresh again
+1. index 3: `a` and `a` are the same, so proceed together
+1. index 4: `b` and `b` are the same, so proceed together
+1. index 5: `c` and `c` are the same, so proceed together
+1. index 6: `a` and `a` are the same, so proceed together
+1. index 7: `b` and `b` are the same, so proceed together
+1. index 7: `c` and `y` are not the same. But `lpsArray[5 - 1] == 2`, so there is a previously found prefix, of which length is `2`. This means that we already have a match of length 2 right before `c` in the text being searched, which we can now safely ignore. Therefore, start the match from `lpsArray[2]`, which is `c` and `text[8]` which is also `c`.
+1. index 8+: just proceed and we find that the pattern is the substring at the end of the text
+
+This process can be written in code as follows:
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+
+func createLpsArray(word string) []int {
+    wordLen := len(word)
+    lpsArray := make([]int, wordLen)
+
+    i := 1
+    j := 0
+
+    for i < wordLen {
+        if word[j] == word[i] {
+            lpsArray[i] = j + 1
+            j++
+            i++
+        // has a prefix longer than 0 already, so check backwards again
+        // when there is a mismatch,
+        // we will check the index of previous
+        // possible prefix.
+        // this is possible because every element in the lps array
+        // represents the number of LPS in the substring from 
+        // the beginning of the string to the index of the element.
+        } else if word[j] != word[i] && j != 0 {
+            j = lpsArray[j - 1]
+        // this means word[j] != word[i] && j == 0
+        // there has been no prefix found so far for the current index i, so just move onto the next
+        // character to find the match
+        } else {
+            i++
+        }
+    }
+    return lpsArray
+}
+
+func kmp(text string, pattern string) []int {
+    matchingIndices := make([]int, 0)
+    // always false
+    if len(pattern) > len(text) {
+      return matchingIndices
+    }
+    
+    lpsArray := createLpsArray(pattern)
+
+    fmt.Println(lpsArray)
+
+    i := 0
+    j := 0
+    for i < len(text) {
+    // uncomment to debug
+    // fmt.Printf("i: %v, j: %v, text[i]: %v, pattern[j]: %v\n", i, j, string(text[i]), string(pattern[j]))
+      if text[i] == pattern[j] {
+        i++
+        j++
+        if j == len(pattern) {
+          // store the index of the text where the pattern starts inside the text
+          matchingIndices = append(matchingIndices, i - j)
+          j = lpsArray[j - 1]
+        }
+      } else if text[i] != pattern[j] && j != 0 {
+        j = lpsArray[j - 1]
+      // same as text[i] != pattern[j] && j == 0
+      } else {
+        i++
+      }
+    }
+
+    return matchingIndices
+}
+
+func main() {
+  cases := [][]string{
+    {"abxabcabcaby", "abcaby"},
+    {"aaaaaaaaaaabbb", "cc"},
+    {"aaaaaccccccaccaaaaaccbbb", "cc"},{"aabxabcabczabybxabcabcabxaabxabcabcabybcabcabxabcabcabyabyaby", "abcaby"},
+  }
+
+  for _, c := range(cases) {
+	  fmt.Println(kmp(c[0], c[1]))
+  }
+}
+```
+
+<iframe width="100%" height="800px" src="https://replit.com/@9oelM/kmp?lite=true"></iframe>
+
+## Complexities
+
+Given:
 - `n = length of the string to be matched`
 - `m = length of the pattern to be matched`
 
-The time complexity to build the LPS array is `O(m)`, and that to find the substring from the text is `O(n)`. Therefore, adding them up together yields `O(m + n)`, which is the time complexity of the KMP substring search.
+**The time complexity** to build the LPS array is `O(m)` as we've seen before, and that to find the substring from the text is `O(n)`. Therefore, adding them up together yields **`O(m + n)`**, which is the time complexity of the KMP substring search.
+
+**The space complexity** for LPS array is `O(m)` because it stores length of an array equivalent to `m`. The KMP search alone has the space complexity of `O(1)` because it does not require any variables other than constants. Therefore, the space complexity is `O(1 + m)` which is **`O(m)`**.
+
+# Back to the original problem: find the shortest palindrome
+
+So let's revisit the problem again:
+
+> You are given a string s. You can convert s to a palindrome by adding characters in front of it. Return the shortest palindrome you can find by performing this transformation.
+
+    Example 1:
+
+    Input: s = "aacecaaa"
+    Output: "aaacecaaa"
+    Example 2:
+
+    Input: s = "abcd"
+    Output: "dcbabcd"
+    
+    Constraints:
+
+    0 <= s.length <= 5 * 104
+    s consists of lowercase English letters only.
+
+But you revisit the problem description and ponder upon it once more. Do you think you can reword it to something relevant to LPS or KMP search while preserving the same goal?
+
+Yes! If you reword it this way:
+
+> Find the longest palindrome substring that starts from index 0.
+
+Actually, we mentioned this already in a very similar term at the beginning of this post:
+
+> **Find the longest palindrome substring from the beginning of the substring.**
+
+Yes. So let's take the first example for explanation. `aacecaaa` has `aacecaa` as the longest palindrome substring starting from index 0, so we just need to reverse the rest of the string, which happens to be `a`, and prepend it to the string, yielding `aaacecaaa`.
+
+Now, we don't have to use KMP algorithm to solve this problem efficiently, but we are going to use the LPS table. KMP algorithm itself isn't really actually relevant to this problem. Only the LPS table is.
+
+What we really need to do is to build a string like:
+
+```
+s + "#" + reverse(s)
+```
+
+and just run `createLpsArray()` function which we learned how to create with that string.
+
+## Solving `aacecaaa`
+
+For example, for the string: `aacecaaa`,
+
+1. do `s+some_unique_delimiter+reverse(s)`. `some_unique_delimiter` could be anything that is not in the set of chars specified to be available in the problem, because it will otherwise mix up the LPS table obviously. For this example, we are using a `#`: 
+    ```
+    aacecaaa#aaacecaa
+    ```
+
+1. create an LPS table on that string first:
+
+    ```
+    a  a  c  e  c  a  a  a  #  a  a  a  c  e  c  a  a
+
+    [0, 1, 0, 0, 0, 1, 2, 2, 0, 1, 2, 2, 3, 4, 5, 6, 7]
+    ```
+
+1. at this step, we can then notice that the `aacecaaa` has the longest palindrome string of length 7 from index 0. In essence, _**the LPS table of the crafted string works as viewing the reflection of the original string, which helps to find the longest palindrome in an efficient way.**_
+
+1. we now know the longest palindrome string is 7 from the index 0. Therefore, the answer has to be:
+
+    ```
+    reverse(s[7:]) + s
+    ```
+
+    which is
+
+    ```
+    a + aacecaaa = aaacecaaa
+    ```
+
+## Solving `abcd` (just to give another example for perfection)
+
+1. do `s+some_unique_delimiter+reverse(s)`. again: 
+    ```
+    abcd#dcba
+    ```
+
+1. create an LPS table on that string first:
+
+    ```
+     a  b  c  d  #  d  c  b  a
+
+    [0, 0, 0, 0, 0, 0, 0, 0, 1]
+    ```
+
+1. the longest palindromic string has the length of 1. Therefore, this will be the answer:
+    ```
+    reverse(s[1:]) + s
+    ```
+
+    which is
+
+    ```
+    d c b a + b c d = dcbabcd
+    ```
+
+# Solution code
+
+Finally, the solution will look like this:
+
+```go
+package main
+
+import "fmt"
+
+func createLpsArray(word string) []int {
+    wordLen := len(word)
+    lpsArray := make([]int, wordLen)
+
+    i := 1
+    j := 0
+
+    for i < wordLen {
+        if word[j] == word[i] {
+            lpsArray[i] = j + 1
+            j++
+            i++
+        // has a prefix longer than 0 already, so check backwards again
+        // when there is a mismatch,
+        // we will check the index of previous
+        // possible prefix.
+        // this is possible because every element in the lps array
+        // represents the number of LPS in the substring from 
+        // the beginning of the string to the index of the element.
+        } else if word[j] != word[i] && j != 0 {
+            j = lpsArray[j - 1]
+        // this means word[j] != word[i] && j == 0
+        // there has been no prefix found so far for the current index i, so just move onto the next
+        // character to find the match
+        } else {
+            i++
+        }
+    }
+    return lpsArray
+}
+
+func Reverse(s string) string {
+    r := []rune(s)
+    for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
+        r[i], r[j] = r[j], r[i]
+    }
+    return string(r)
+}
+
+func shortestPalindrome(s string) string {
+  // s + # + reverse(s)
+  //  a a c e c a a a # a a a c e c a a
+  // [0 1 0 0 0 1 2 2 0 1 2 2 3 4 5 6 7]
+  reversed := Reverse(s)
+  lpsArray := createLpsArray(s + "#" + reversed)
+  fmt.Println(lpsArray)
+  longestPalindromeLength := lpsArray[len(lpsArray) - 1]
+
+  // a aacecaaa
+  return Reverse(s[longestPalindromeLength:]) + s
+}
+
+func main() {
+  cases := []string{
+    "aacecaaa", "abcd",
+  }
+  for _, c := range(cases) {
+    fmt.Println(shortestPalindrome(c))
+  }
+}
+```
+
+<iframe frameborder="0" width="100%" height="800px" src="https://replit.com/@9oelM/shortest-palindrome-with-lps?lite=true"></iframe>
+
+# More substring search algorithms
+This post is about KMP algorithm. But there are also other algorithms that can do substring search as efficiently. Check these out too:
+
+- [Boyer-Moore string-search](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm)
+- [Rabin-Karp substring search](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm)
 
 # References
 - https://binary-baba.medium.com/string-matching-kmp-algorithm-27c182efa387
 - https://towardsdatascience.com/pattern-search-with-the-knuth-morris-pratt-kmp-algorithm-8562407dba5b
 - https://leetcode.com/problems/shortest-palindrome/solution/
 - https://youtu.be/GTJr8OvyEVQ
-
+- https://leetcode.com/problems/shortest-palindrome/discuss/60113/Clean-KMP-solution-with-super-detailed-explanation
