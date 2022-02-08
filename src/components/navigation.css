@@ -1,0 +1,4 @@
+.navigation-link:hover {
+  background-color: rgba(0, 255, 255, 0.219);
+  transition: 0.3s;
+}
