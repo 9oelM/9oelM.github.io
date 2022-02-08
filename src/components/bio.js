@@ -34,7 +34,7 @@ function Bio() {
             <p
               style={SF.darkText}
             >
-              Written by <strong>{author}</strong>. His main interests are fullstack and security. Likes GoLang, Typescript, React, Node.js, Wasm and more. Joel's been working as a lead SWE for some length of time. Really familiar with a wide range of tools. Now, he's digging into security.
+              Written by <strong>{author}</strong>. Joel likes GoLang, Typescript, React, Node.js, Python, Wasm and more. Equipped with a set of diverse skills, He's been working as a lead SWE for some length of time. He also loves to enlarge the boundaries of his knowledge, mainly by reading books and watching lectures on Youtube. Guitar and piano are necessities at his house.
               {` `}
               <div style={{ marginTop: '10px'}} />
               <a style={SF.logoButton} href="https://github.com/9oelM"  target="_blank" rel="noopener noreferer"><GithubLogo /></a>
