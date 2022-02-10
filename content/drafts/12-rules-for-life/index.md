@@ -359,8 +359,6 @@ Order (41)
 
 - set a **vision** and **direction** for nobody but yourself (73)
 
-
-
 # Rule 3: Make friends with people who want the best for you (77)
 
 ## The old hometown (77)
@@ -537,6 +535,229 @@ Order (41)
 
 - Children are just trying to scout the boundary of permissible behaviors in taking their provoking actions. It's important to let them know the boundary once they do (148)
 
+- You really need to take practical actions to discipline your child. This does not make them dislike you either. Crying is often just a sign of their anger, which is fine to not be concerned about. (149-151)
+
+## Discipline and punish (152)
+
+- Discipline and punish must be handled carefully but are definitely needed (153)
+
+- Emprical evidences from experiments on pigeons show that it's possible to discipline with reward (153-154)
+
+- It's also possible to discpline with negativity. We learn from bad emotions and pains, and will not repeat the action that caused them. (154-155)
+
+- The question is not how to protect children from failures, but to help them learn in a useful, supervised way. Overprotected children won't just know how to deal with failures. (156-157)
+
+- A child with insufficient learning on sharing will fail to socialize with his peers. Lonely. Rejected. Anxiety, depression and resentment. (157)
+
+- Parents not disciplining their children will leave their children vulnerable to fear and pain when they grow up (157)
+
+- Reward and punishment should adequately be used to bring a child success and prevent failure in the world outside the family. The result otherwise is just a semi-grown adult (158-159)
+
+> Poorly socialized children have terrible lives. Thus, it is better to socialize them optimally. (160)
+
+- All children are so different. So how should we discipline children? (160)
+
+## Minimum necessary force (160)
+
+- Two general ''rules about rules':
+  
+  - Don't lay out too many rules for children (160-161)
+  
+  - Use the least force to enforce the rules (161)
+
+- For the second rule: start from the weakest force and determine the appropriate degree of force. (162)
+
+- Children with wonderful politeness and discipline makes everyone smile and attracts compliments (162-163)
+
+- There are a variety of valid reasons for physical punishment: 
+  
+  - to stop worse things from happening because the alternative could be fatal. (163-164)
+  
+  - the word _no_ must be effectively understood to another person without the threat of punishment, and that's not the case for children. If you think about it, adults say _no_ to a child because they are larger, stronger and more capable. (164-165)
+
+- The idea of hitting a child (165):
+  
+  - The definition of ''hitting" is too broad. 
+  
+  - Magnitude and context matter.
+  
+  - Even children know the difference between being bitten by a mean dog and being nipped by his own pet when he plays with it. (165)
+  
+  - If a child smacks her sister in head and gets flicked by her parents, she will build a connection between these two and remember that it is not a good behavior. Otherwise, a child grows up to be an irresponsible, impolite adult. (165-166)
+
+- It all boils down to discipline effectively or ineffectively (166)
+
+- A time out alone until a child calms down can be a good punishment (166)
+
+- Otherwise, test gradually with more force, and see which degree of force suits the child, even up to swatting over the backside (167)
+
+> If you are not thinking such things through, then you're not acting responsibly as a parent. **You're leaving the dirty work to someone else, who will be much dirtier doing it.** (167)
+
+## A summary of principles (167)
+
+1. Limit the rules
+
+2. Use minimum necessary force
+
+3. Parents should come in pairs (one more here)
+   
+   - Life of an adult is usually hectic and may leave him at the danger of being unreasonable with children. This is the reason some other adult should be together (167)
+
+4. Parents should understand their own capacity to be harsh, vengeful, arrogant, resentful, angry and deceitful. (168)
+   
+   - Adults are humans too, so they may rage over their children for insufficient reasons (168)
+
+5. Parents have a duty to act as proxies for the real world (169)
+
+## The good child - and the responsible parent (169)
+
+- This secion just sums up the previous claims and recommendations in the current chapter
+
+> You love your kids, after all. If their actions make you dislike them, think what an effect they will have on other people, who care much less about them than you. (170)
+
+# Rule 6: Set your house in perfect order before you criticize the world (173)
+
+## A Religious problem (173)
+
+- You won't call criminals involed in serious massacres as religious, even if they have belief in total destruction of humanity. (173-174)
+
+- Looking at these massacres leads us to rethink Being and curse the criminals (175)
+
+- Life is full of troubles and hardships that aren't necessarily self-inflicted. Despair, disease, aging, and death are unavoidable (175)
+
+- Given these conditions, Leo Tolstoy knew that just comitting a suicide might as well be one of the best options out there (175-176)
+
+- This line of thought also motivates mass murder followed by suicide (176-177)
+
+## Vengeance or transformation (177)
+
+- A man might blame God, and if an atheist, the fate. (177-178)
+
+- Evil deeds like murder may rise from terrible things experienced by one (178-179)
+
+- The converse case exists too: evil doesn't necessarily nurture another evil. It is also possible to learn good and do good by experiencing evil. (179-181)
+
+- Solzhenitsyn, prisoner of the brutal Soviet camp, is a prime example of  not cursing God (or fate) and instead (sort of) change the mainstream of thoughts in the world by debunking the communist tyranny. (181-183)
+
+## Things fall apart (183)
+
+- Whole peoples refused to judge reality, to criticize Being, and to blame God (183)
+
+- People build social structures and systems. But we become complacent after that, becoming corrupt and blind to the problems, as well illustrated by the Bible (183-184)
+
+- Is it really because of God (or fate) when things fall apart? Maybe not. (184-185)
+
+- Failure to prepare when the necessity for preparation is wel known is just nothing but sin. (185)
+
+## Clean up your life (185)
+
+> Have you clean up your life? If the answer is no, here's something to try: _Start to stop doing what you know to be wrong._ Start stopping today. (185)
+
+- You know what's wrong. You just need to stop doing it (186)
+
+> Don't blame capitalism, the radical left, or the iniquity of your enemies. Don't reorganize the state until you have ordered your own experience. Have some humility. If you cannot bring peace to your household, how dare you try to rule a city? (186)
+
+- 186-187 is just full of useful sentences, so just read it on your own
+
+# Rule 7: Pursue what is meaningful (not what is expedient) (189)
+
+## Get while the getting's good (189)
+
+- Life is suffering. The simplest solution to that may be pursuing pleasure. Is there an alternative? (189-191)
+
+- Our ancestors gave good answers to this but we can't still understand them due to their complexity. But we started to notice what we are doing. (192)
+
+## The delay of gratification (192)
+
+> Something better might be attained in the future by giving up something of value in the present (193)
+
+- The theme of delay of gratification is marked by sacrifice in the Bible (193)
+
+- We learned that regulation of impulses could bring rewards in the future (193)
+
+- It's still very easy to forgo the benefits in the future and spend them right away now (194)
+
+- First question: what must be sacrified? Small ones, but larger ones bring greater impact in the future. (195)
+
+- Second question: what would be the largest, most effective - most pleasing - of all possible sacrifices? and how good might the best possible future be, if the most effective sacrifice could be made?(195)
+
+- Sacrifice doesn't necessarily guarantee reward, and no one knows why (196)
+
+- Only under stabilized civilization, a stable social contract can be expected (196)
+
+- People learned to share with others, to receive from them in the future (197-198)
+
+- Another question surfaces: what is the greatest possible sacrifice? (199)
+
+- Why did God have to demand Issac's life from Abraham despite the happy ending? (200)
+
+- Let's begin thinking with this: sometimes things do not go well, and that maybe because of what we value the most (200)
+
+- How to catch a monkey: a monkey won't take its hand out of a tiny jar without letting what he grabbed go. (200)
+
+> Something valuable, given up, ensures future prosperity. (201)
+
+- Mary believes it's right to bring a baby into this terrible world, who turned out to offer his life for the better of Being (201)
+
+- The Christian sacrificial drama of Son and Self is archetypal, and can't get more sacrificial than that, because it's already at its maximum. (202)
+
+- Even God had to make his Son a sacrifice for the betterment of the entire humanity. (202)
+
+- But it was the Christ, the Son of God, who did it. Is there some practical example?: Socrates. (202)
+
+- Socrates didn't seek expediency under conspiracy against him, and chose death instead (202-204)
+
+## Death, toil and evil (204)
+
+- The (natural) tragedy is not the primary source of suffering. Evil is. (204-205)
+
+- The tale of Adam and Eve: having to work was another terrible thing, but the knowledge of Good and Evil turned out to be much more terrible (205)
+
+- Once you experience pain, you know how to reproduce it, especially upon others (205)
+
+- Abel's sacrifice is accepted by God, and Cain's isn't. (206)
+
+- With the knowledge of Good and Evil, Cain knows how to hurt, and so he murders Abel. The murder is even more replicated and multiplied in his descendents. (206-207)
+
+> Earthquakes, floods, poverty, cancer - we're tough enough to take on all of that. But human evil adds a whole new dimension of misery to the world. (207)
+
+- What motivates such evil? The hard lot of life, magnified by the consequence of continually rejected sacrifices. (208)
+
+- The problem of life = how to sacrifice to diminish suffering + evil (209)
+
+## Evil, contronted (209)
+
+- Cain is not happy, but Abel is. Cain envies him. That envy and hope for Abel's misfortune brings about Cain's conscious murder of Abel (209-210)
+
+- Christ takes an opposite action to Cain (210)
+
+- Christ's taking on the sins of mankind may solve the problem of destructiveness of man and tragedy (211)
+
+- No one can improve the situation without knowing the most wicked thoughts and the source of them. That is the reason Christ encounters Satan in the desert (211-212)
+
+> [This means that] Christ is forever He who determines to take personal responsibility for the full depth of human depravity ... to contront and deeply consider and risk the temptations posed by the most malevolent elements of human nature. (212)
+
+- Satan must be the one who confronts and offers tempts Christ because he is the very archetype of Evil and Christ is that of Good. (213)
+
+- Christ is not tempted by Satan to transform desert rocks into bread. This means that there is more important thing than food (perhaps means expediency) even under extreme difficulties: to dine on the Word of God (the pursuit of higher meaning as the mode of living) (213-214)
+
+- Christ overcomes the next two temptations. Second temptation: Satan tempts Christ by telling him to throw himself off a cliff, and let God save him. Christ rejects because he knows salvation does not depend on God showing his superiority asked by His Son (215)
+
+- Third temptation: Satan asks Christ to take the kingdoms of the world, which is basically everything - power, control, submission, vengeance, ... and this is a great immediate expediency. But the urge for the establishment of the Kingdom of God on Earth leads to the rejection of the temptation (216-217)
+
+- But why has Christianity failed to have the desired effect? (217)
+
+## Christianity and its problems (218)
+
+- Carl Jung hypotheized that Christianity failed to address suffering (218)
+
+- Then people started to wonder if the material world held solutions not yet known instead, which contributed to rapid development of science (218)
+
+- However Christianity accompanied some great achievements. Slavery was an admirable nobility before Christianity. Then it brought all people regardless of their social positions (slave, master, nobleman, commoner) on the same ground, level and rights. (218-220)
+
+- Christianity had problems. They only arose after solving entirely different set of problems. But it's clear that post-Christianity world was less barbaric than before. (220)
+
+- The fact that Christianity solved such problems disappeared as time went by (220)
 # Reflections
 
 ## Freedom
@@ -566,3 +787,5 @@ I pursue a bunch of things daily that makes me happy. I would not recommend that
 ## Treating myself like someone I am responsible for helping
 
 This is absurdly _hard_. Even with the innately selfish human nature. Even after reading the chapter 2, I still keep asking myself: what the heck is going on? Why can't I care myself enough? Why did I miss breakfast so many times knowing that it wouldn't be good for my health? Why did I sleep late and wake up late knowingly? Why
+
+## Grow the hell up: what it means to be a responsible adult
