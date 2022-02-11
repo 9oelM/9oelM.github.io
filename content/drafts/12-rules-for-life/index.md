@@ -859,6 +859,34 @@ Order (41)
 
 ## Not advice (277)
 
+- Psychotherapy is not advice. It's a genuine conversation (= mostly listening) (277)
+
+- JP listens a lot to his clients in his clinical practice. His clients have otherwise no one else to talk to. They say so many unexpected things but it's not boring to listen. (278-280)
+
+- JP had one client who thinks she was raped multiple times when she was drunken, making her memory about that unsure. JP could have inclined to either side: to tell her 1) that she is an innocent victim, or 2) that she's a walking disaster. Either choice would have been accepted and understood by the client anyway, which would have been advice, but JP decided to listen instead (280-285)
+
+## Figure it out for yourself (285)
+
+- JP let her talk, and she talked a lot, but they still didn't figure out if she was raped, because that was such a complex question. She left the therapy less vague, though (285)
+
+- People, when you let them talk, think. Then, they can figure out stupid things that they shoudln't do (286)
+
+- True thinking doesn't mean you thinking alone. It requires disagreement, conflict, adjustment ... (286-287)
+
+> A listening person is your collaborator and your opponent (287)
+
+## A listening person (288)
+
+- Your reaction may affect the person talking to you (288-290)
+
+> You can be pretty smart if you can just shut up (290)
+
+- Deciding when to talk back while listening requires great deal of considerations (290-291)
+
+> That's key to the psychotherapeutic process: two people tell each other the truth - and both listen. (291)
+
+## How should you listen? (292)
+
 # Reflections
 
 ## Freedom
