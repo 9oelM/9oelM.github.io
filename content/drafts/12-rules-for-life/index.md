@@ -789,7 +789,76 @@ Order (41)
 
 - Think about the camp guards. Nobody said _no_ when they really needed to do so. Become the one who can say that by saying it when appropriate (252)
 
-> If you betray yourself, if you say untrue things, if you act out a lie, you weaken your character. 
+> If you betray yourself, if you say untrue things, if you act out a lie, you weaken your character. ... only the most cynical, hopeless philosophy insists that reality could be improved through falsification. (252)
+
+- life-lie is just ignoring a very palpable stuff (252-253)
+
+- ignoring error is also "inauthentic": "Did what I want happen?" No. Then the world is unfair. (254)
+
+- A liar knows he's lying, but often soon forgets that he is lying (254)
+
+- Not speaking up for the truth when necessary is almost the same thing too, given the example of Soilzhenitsyn debunking the true side of communism (254-255)
+
+> deceitful, inauthentic individual existence is the precursor to social totalitarianism. (256)
+
+- not facing the truth doesn't help at all in any situations, especially in familial or cultural contexts (256-257)
+
+- honesty may fail to bring Paradise, but manage to reduce suffering (also demonstrated by JP's real life examples) (257)
+
+- totalitarianism (= everything that needs tobe discovered has been discovered) vs 'courageous individual confrontation with being': [totalitarian] is not what saves. What saves is the willingness to learn from what you don't know. (259)
+
+- one compelling failure of totalitarianism is communism (259-261)
+
+- deceit causes misery (262)
+
+## The truth, instead (262)
+
+- We need to make decisions, and more importantly: aim (262)
+
+> Thus, we have to think, and plan, and limit, and posit, in order to live at all (262)
+
+- reliance on tradition (culture) could help: doing what other people always do, like making friends. (263)
+
+- The moral from the ancient Egyption mytha bout Osiris and his son: the attentive son can restore the vision (eye) of his father (263-264)
+
+- It's crucial to learn from what we see (264-265)
+
+- Every learning may cause death or a great positive change, as demonstrated by the lesson from Christian tradition (265)
+
+- Set your ambitions, even if you are uncertain about what they could be (265)
+
+- When you are working for the ambition, watch, observe, and improve. And do not lie to yourself (266)
+
+- Truthfully paying attention to matters will allow your goal to transform itself (266)
+
+- A totalitarian thinks his goal is already perfect and absolute (266)
+
+- Do what your reality shows you, not what others' show you. _You become your own person._ (267)
+
+- But facing the truth will generate conflicts, which you will need to accep and deal with (268)
+
+> You have to take a terrible risk to find out. Live in truth, or live in deceit, face the consequences, and draw your conclusions. (268)
+
+- You need the "act of faith" despite the risk of uncertainty. (268-269)
+
+- The meta-goal (the goal of goals) could be "live in truth": act diligently towards some well-articulated, defined, and temporary end. (269)
+
+- Life is suffering, but it is insufficient to turn the world into Hell. Lies can. (269)
+
+- Big lies, accumulated from little lies, spoil the whole world (269-272)
+
+- Lies also often fail to produce the expected results (272)
+
+- Hell comes when lies have destroyed the relationship between individual or state and reality itself (272)
+
+> See the truth. Tell the truth (273)
+
+- When in trouble, try telling the truth (274)
+
+# Rule 9: Assume that the person you are listening to might know something you don't (277)
+
+## Not advice (277)
+
 # Reflections
 
 ## Freedom
