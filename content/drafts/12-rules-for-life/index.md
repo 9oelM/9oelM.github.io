@@ -871,7 +871,7 @@ Order (41)
 
 - People, when you let them talk, think. Then, they can figure out stupid things that they shoudln't do (286)
 
-- True thinking doesn't mean you thinking alone. It requires disagreement, conflict, adjustment ... (286-287)
+- True thinking doesn't mean you thinking alone. It requires disagreement, conflict, adjustment, ... with other listeners (286-287)
 
 > A listening person is your collaborator and your opponent (287)
 
@@ -886,6 +886,48 @@ Order (41)
 > That's key to the psychotherapeutic process: two people tell each other the truth - and both listen. (291)
 
 ## How should you listen? (292)
+
+- Carl Rogers (psychotherapist), knowing the power of listening, suggested this way of discussion: each person can speak up for himself **only after he has first restated the ideas and feelings of the previous speaker accurately.** (292)
+
+- Several advantages to this approach:
+  1. You genuinely understand what the person is saying (292)
+  1. It aids the person in consolidation and utility of memory (293)
+  1. It poses difficulty to the careless construction of straw-man arguments (293)
+
+- Even the speakers themselves have a hard time articulating their ideas because it's the first time they say them (294)
+
+## Primate dominance - hierarchy manoeuvres - and wit (295)
+
+- There are some forms of bad conversations where individuals just fight for their own stories (295-296)
+
+- Sympathetic responses offered during a genuine (good) conversation indicate the teller is valued. Counterexample: men trying to "fix things" too early in the conversation with women (297-298)
+
+- Lecture is also a conversation. A good lecturer would attend to the response of single, identifiable group of people: nodding, shaking head, frowning, ... (299)
+
+- Wit, fun, jokes included conversation sometimes help where appropriate (300-301)
+
+## Conversation on the way (301)
+
+- The final form of conversation akin to listening is a form of mutual exploration: where everyone actively engages in sharing and formulating ideas (301)
+
+- Mutal exploration is the most difficult but useful form of conversation (302)
+
+- You must know you don't know everything and be ready to accept conclusions drawn by others. More knowledge will make you suffer less (302)
+
+- Converstaion desiring the truth is made up of listening and speaking. It's engaging, vital, interesting and meaningful that way (303)
+
+# Rule 10: Be precise in your speech (307)
+
+## Why is my laptop obsolete? (307)
+
+- Why does a laptop become obsolete just in a few years? It's due to our perceptions and interaction between the complexity of the world and them (307-308)
+
+- A laptop is just a tiny fraction of the entire system of the technologies, and it only takes a short time for it to fade away (308-309)
+
+## Tools, obstacles and extension into the world (309)
+
+- We only perceive necessary ones out of many things in the complex world, but this is not the case for perceiving _objects._ (309)
+
 
 # Reflections
 
