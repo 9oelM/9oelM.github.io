@@ -757,7 +757,39 @@ Order (41)
 
 - Christianity had problems. They only arose after solving entirely different set of problems. But it's clear that post-Christianity world was less barbaric than before. (220)
 
-- The fact that Christianity solved such problems disappeared as time went by (220)
+- The fact that Christianity solved such problems disappeared as time went by. Then the only problems that it couldn't solve remained and got manifest (220-221)
+
+- 
+
+# Rule 8: Tell the truth - or at least, don't lie
+
+## Truth in no no-man's-land (241)
+
+- JP gives two examples in his real life where he just told the truth to his patients (clients) without circumvention and that did make the situation even better. (241-245)
+
+## My landlord (246)
+
+- JP had a neighbor who suffered alcohol addiction and couldn't really control his life. He would wake up to JP's house at two in the morning and try to sell his stuff to get some money to buy more alcohol. (246-247)
+
+- JP thought a lot before speaking, and spoe the truth, that he needs to stop doing that. The relationship did not deteriorate. (247-248)
+
+## Manipulate the world (248)
+
+- We often "act politically", or do "life-lies" by crafting our speech (248-249)
+
+- A person who lives by "life-lies" lives on two premises (both are unjustifiable):
+  1. current knowledge is sufficient to define what is good
+  1. reality would be unbearable if left to its own devices
+
+> The faculty of rationality inclines dangerously to pride: all I know is all that needs to be known (249)
+
+- Some people define their utopia and try to make it reality. This may lead to naively formulated goal, which is not really a goal (249-250)
+
+- If you don't reveal yourself, that means others can't notice you. And if you do, the opposite happens, and you can gather information and renew yourself (251-252)
+
+- Think about the camp guards. Nobody said _no_ when they really needed to do so. Become the one who can say that by saying it when appropriate (252)
+
+> If you betray yourself, if you say untrue things, if you act out a lie, you weaken your character. 
 # Reflections
 
 ## Freedom
