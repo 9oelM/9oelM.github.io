@@ -1028,9 +1028,40 @@ Order (41)
 
 - We do what we can to make the best of things, in our vulnerability and fragility (350)
 
-- The criminals of mass massacres mentioned earlier in the book appointed themselves as the judges of the human race that is supposedly failed and corrupt, assuming the role of heros (351)
+- The criminals of mass massacres mentioned earlier in the book appointed themselves as the judges of the human race that is supposedly failed and corrupt, allegedly assuming the role of heros (351)
 
-- 
+- University students in humanities suffer mental health problems, berated by such criminals. And it's worse for young men (351)
+  - The natural personalities of boys and the social structure and thoughts about boys put them at an unfavorable position (this part is hard to summarize. Just read the full section) (351-354)
+
+## Career and marriage (354)
+
+- Statistics generally show that marriage is becoming less important to people (354-355)
+
+- Men increasingly don't go to universities, while women preferably want to marry employed university graduates, for protection against social and economic vulnerabilities. This is not good for both women and men (356-357)
+
+## The patriarchy: help or hindrance? (357)
+
+- Culture is oppressive, but thinking only that way is ignorant, ungrateful and dangerous (357-358)
+
+- It is perverse to consider the culture symbolically, archetypally, mythically male, which is the reason 'the patriarchy' can easily be swallowed (358)
+
+- Numerous historical evidences show that women were often put at a inferior position, when it comes to discussion of men's tyranny (359)
+
+- But the opression of the patriarchy was an collective attempt by men and women together to free each other from privation, disease and drudgery (359)
+  - Arunachalam Muruganantham: male inventor of low-cost sanitary pad-making machine for women with menstrual period (360)
+  - James Young Simpson: first started anaesthesia to ease childbirth pain, male. (360)
+  - Dr. Earle Cleveland Haas: creator of first practical tampoon (361)
+  - Gregory Goodwin Pincus: inventor of birth control pill (361)
+
+- But the law and education are arguing for male oppression, and there are institutions for promoting radical political actions related to it (361)
+
+## Postmodernism and the long arm of Marx (362)
+
+- The disciplines are heavily influenced by Marxist humanists, who believed that Western principles of individual freedom or the free market only guised inequality, domination and exploitation under the hood. Instead, a practical social change was required (362)
+
+- Marxism put into practice in the Soviet Union, China, Vietnam, Cambodia, and North Korea brought about miserable lives of the citizens (362-363)
+
+
 
 # Reflections
 
