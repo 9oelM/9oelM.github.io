@@ -928,6 +928,109 @@ Order (41)
 
 - We only perceive necessary ones out of many things in the complex world, but this is not the case for perceiving _objects._ (309)
 
+- Objects are not directly perceived. They exist in a complex relationship to one another, not as independent objects. Instead, we make them sufficiently simple for sufficient understanding. **This is the why we must be precise in our aim.** (310-311)
+
+- We also have an ability to extend ourselves into a subject. Examples: a machine, a team, a country, ... (311-313)
+
+## The world is simple only when it behaves (313)
+
+- We don't necessarily think about how exactly a car works (bolts, joints and engines...) when we drive. But we do when a car quits (313-315)
+
+- Our vision is usually low-resolution unless there is a need for a higher one (314)
+
+> The limitations of all our perceptions of things and selves manifest themselves when something we can usually depend on in our simplified world breaks down (315)
+
+## You and I are simple only when the world behaves (315)
+
+- When things break down, things that were ignored strike us with a detail. Then we need to protect ourselves with precise intent and aim (315-317)
+
+## What do we see when we don't know what we're looking at? (317)
+
+> What we perceive, when things fall apart (like financial crisis, war, etc), is no longer the stage and settings of habitable order (317)
+
+- That is because the chaos is usually hidden from our vision when things are in order (317)
+
+- When things fall apart, our perception no longer works, and our reflexive, bodily response takes charge, and tries to figure our the situation (318-319)
+
+- Example: a wife deceived by her husband who had an affair (319-323)
+
+- Chaos continues until order comes back (319-320)
+
+- Why is a crisis unexpected? Because it's easier to keep the peace and not talk about the problems (321)
+
+- The traditional division of labour has left three choices:
+  1. slavery (not good enough)
+  1. tyranny (not good enough)
+  1. negotiation: best option, but difficult to face, because this requires uncovering all problems (322)
+
+- If a husband or a wife decides to put up with a problem between them, the white elephant will only get bigger, and plague them all (323-325)
+
+> Why avoid, when avoidance necessarily and inevitably poisons the future? (326)
+
+> Why remain vague, when it renders life stagnant and murky? ... not thinking about something you don't want to know about doesn't make it go away. (326)
+
+> Isn't it better to prepare, to sharpen your sword, to peer into the darkness ... ? (327)
+
+- If you keep ignoring the problems, the outcome will not be favorable anyways (327)
+
+> Why refuse to specify, when specifying the problem, would enable its solution? (327)
+
+- Earlier care, courage and honesty help (329)
+
+- We can give a structure to a chaos when it appears, and re-establish order, through careful and precise speech. Vague speech will only cause things to remain vague (330)
+
+## The construction of soul and world (330)
+
+- Problems give a rise to chaos, but this also gives a chance for new and benevolent order, if one decides to face and fix the problems (331)
+
+- "I'm unhappy" is a good start (331)
+
+> This is difficult, but the difficulty is not relevant, because the alternative is worse (331)
+
+## Wheat from chaff (332)
+
+- Precision separates unique terrible thing from others that didn't happen (332)
+
+- Maybe terrible things turn out to be not that terrible (332-333)
+
+- Shirking the responsibility of confronting terrible things will only contribute to chaos (333)
+
+> With careful thought and language, the singular, stellar destiny that justifies existence can be extracted from the multitude of murky and unpleasant futures that are far more likely to manifest themselves of their own accord. (333)
+
+# Rule 11: Do not bother children when they are skateboarding (337)
+
+## Danger and mastery (337)
+
+- Skateboarding is dangerous, but that's the point for the kids (338-339)
+
+![stakestoppers](./skatestoppers.jpeg)
+
+
+- Canadian legislation governing the safety of children playing became stricter (notably installations of skatestoppers), but JP thinks it's sufficiently safe and already supervised by their parents (338-339)
+
+- If playgrounds are too safe, kids will find a way to **make it dangerous again, because they want challenges**. That's what most people do to develop themselves in actual lives too (339)
+
+> We can still be both confident in our experience and confronting the chaos that helps us develop (339)
+
+## Success and resentment (340)
+
+- There is a plentiful evidence that evil intent always exists under the hood in most human actions (340-342)
+
+- The motivation for lawmakers may not be genuine. JP only can find the operation of anti-human spirit from the legislation (343)
+
+## More about Chris (343)
+
+- Chris was first mentioned in page 79.
+
+- Chris is a prime example of that anti-human spirit. Absent of a job, girlfriend, money, he grew skeptical about the society and started to hate people. He was a great disturbance to JP and his family's lives when they were living together. Chris ended up committing a suicide later, despite his few attempts for a better life (343-348)
+
+## Self-appointed judges of the human race (349)
+
+- We do what we can to make the best of things, in our vulnerability and fragility (350)
+
+- The criminals of mass massacres mentioned earlier in the book appointed themselves as the judges of the human race that is supposedly failed and corrupt, assuming the role of heros (351)
+
+- 
 
 # Reflections
 
