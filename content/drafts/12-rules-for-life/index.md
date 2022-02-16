@@ -1095,7 +1095,42 @@ Order (41)
 
 - A state arguing for the hierarchy based on power is not only supporting one-sided radicalism, but also indoctrination (about ideologically-predicated theories about the nature of men and women) (371)
 
-- 
+- Social constructionism: society must be altered, or bias eliminated, until all outcomes are equitable. This means gender differences must be regarded as socially constructed, which is not in line with the argument for transgender surgery (372)
+
+- All outcomes obviously cannot be equalized (373)
+  - Women should make as much as men; black women should make as much as white women; then should salary be adjusted for all parameters of race, or even any dimension, like IQ, attractiveness, body weight, ...? (373-374)
+  - Group identity isn't a thing. It can be fractionated right down to the level of the individual: every person is so much unique (374)
+
+- None of this complexity is never discussed by postmodernists and Marxists. (374)
+
+- While it is empirically possible to minize the innate differences between boys and girls with pressure, that would not be freeing people of either gender to make their own choices (375)
+  - Why not then force equity-minded males to be trained more on nursing, and the females on engineering? (375)
+
+## Boys into girls (375)
+
+- Social constructionist theory also claims the world would be much improved (less aggression from boys) if boys were socialized like girls: tenderness, sensitivity to feelings, nurturance, ... (375)
+  - But, 1) Aggression is innate is not learned as social constructionist theory argues and 2) disappears at around age 4 as a kid grows up and 3) can bear some utility or value (376-367)
+
+## Compassion as a vice (377)
+
+- Many of JP's clients have problem in their jobs due to lack of aggressiveness (= overly agreeable): they go through so-called "assertiveness training" (377)
+
+- Insufficient aggressiveness has clear disadvantages while some advantages obviously exist: one can't speakup for oneself when one has to (377)
+
+- Learning to feel the resentment at such a situation is important. One cause may be being taken advantage of (378)
+
+> It's a good idea to tell the person you are confronting exactly what you would like them to do instead of what they have done or currently are doing ... the person oppressing you is likely no wiser than you, especially about you (378-379)
+
+- The opposite of a criminal is not a saint but an Oedipal mother: being too protective about a child (379)
+
+- The moral in the story of Hansel and Gretel: too much protection devastates the developing soul (witch = Oedipal mother) (381)
+
+- Bachofen proposed Das Mutterrecht: society was once dominated by women first, but then now men, despite no evidence to support that. Marija Gimbutas and Merlin Stone argued the same thing (381-382)
+
+- Carl Jung, encountering Bachofen's insistence, 
+
+
+
 
 # Reflections
 
