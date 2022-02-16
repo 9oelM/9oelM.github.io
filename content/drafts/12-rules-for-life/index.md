@@ -1061,7 +1061,41 @@ Order (41)
 
 - Marxism put into practice in the Soviet Union, China, Vietnam, Cambodia, and North Korea brought about miserable lives of the citizens (362-363)
 
+## Lest we forget: ideas have consequences (363)
 
+- The World War I degraded the lives of most people in the West (363)
+
+- The democratic Republicans fought against fascist Nationalists in the Spanish Civil War in 1936 (364)
+  - democratic Republicans had George Orwell, Ernest Hemingway. Americans, Canadians and Brits (International Brigade, set up by Communist International)
+
+- While the attention was drawn to the Spanish Civil War, the Soviet Union oppressed kulaks. A kulak is a peasant in Russia wealthy enough to own a farm and hire labor. Emerging after the emancipation of serfs in the 19th century the kulaks resisted Stalin's forced collectivization, but millions were arrested, exiled, or killed (364)
+
+- Despite all this, the Western attitude towards communism stayed positive (365)
+
+- World War II broke out, the Soviet Union allied with the West, against Germany, Italy, and Japan (365)
+
+- Several figures including Malcom Muggeridge, George Orwell, Jean-Paul Sartre, Solzhenitsyn debunked communism's moral credibility that was demolished (365-366)
+
+- Despite such debunkers, Marxist ideas transformed instead of being removed, letting the powerful oppress everyone (367)
+
+- Derrida argues hierarchical structures emerged to include the beneficiaries and to exclude the rest, which is built right in to the language, which is quite radical (367)
+  - example: "women" because men gain by excluding women
+
+- Derrida's philosophy denies the idea that hierarchical structure can be made by something other than power (i.e. biological distinction between men and women, which is science, not power). Hierarchical position and reputation can't be the consequence of skill and competence (people just dominate the field that they are good at) (368)
+
+- The fact that power plays a role in human motivation does not mean that it plays the only role, or even the primary role (368)
+
+- Not all interpretations (problems) are equally valid, but there are only a few viable solutions to problems (369)
+  - example 1: inequal distribution of valuable goods being a threat to the stability of society doesn't mean that forced redistribution is the solution (369-370)
+  - example 2: incremental remake of university administrations into private corps is a mistake? (= the government can interfere) (370)
+
+> **There is not a shred of hard evidence to support ... that Western society is pathologically patriarchal; that the prime lesson of history is that men, rather than nature, were the primary source of the oppression of women (rather than, as in most cases, their partners and supporters); that all hierarchies are based on power and aimed at exclusion. Hierarchies exist for many reasons - some arguably valid, some not - and are incredibly ancient, evolutionarily speaking. Do male crustaceans oppress female crustaceans? Should their hierachies be upended?** (370)
+
+- In a well-functioning, practical society, the prime determiner of status is nothing but competence, which is well-backed by empirical and academic evidences in social sciences. (371)
+
+- A state arguing for the hierarchy based on power is not only supporting one-sided radicalism, but also indoctrination (about ideologically-predicated theories about the nature of men and women) (371)
+
+- 
 
 # Reflections
 
