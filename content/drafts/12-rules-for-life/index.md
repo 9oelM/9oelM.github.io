@@ -1127,8 +1127,41 @@ Order (41)
 
 - Bachofen proposed Das Mutterrecht: society was once dominated by women first, but then now men, despite no evidence to support that. Marija Gimbutas and Merlin Stone argued the same thing (381-382)
 
-- Carl Jung, encountering Bachofen's insistence, 
+- Carl Jung, encountering Bachofen's insistence, found that it is a psychological reality, rather than a historical one. Consciousness, a symbolically masculine trait, also helps women struggle upwards towards the light (382)
 
+- The Terrible Mother: a too-caring mom (383)
+
+- Various tales showing that the symbolic masculinity helps solve problems (383-386)
+
+- Example of JP's mother who is agreeable, but has been successful in fostering the independence of her children (386)
+
+## Toughen up, you weasel (387)
+
+- JP once joined railway workers to work. Railway workers worked in a rude, harassing manner with one another, but that was how they got things done for hard jobs (387-388)
+
+- Another guy ("lunchbucket") joined, and couldn't stand it, so he quit (388)
+
+> The harassment that is part of acceptance on a working crew is a test: are you touch, entertaining, competent and reliable? If not, go away. (389)
+
+- The example of the famous advertisement "The insult that Made a Man out of Mac" summarizing human sexual psychology: a weak, embarrassed and self-conscious man identifies parts to improve his body to win over a bully and get a girlfriend (389-390)
+
+- Men do not want to be dependent. That's women's clear advantage (390)
+
+- Absence of Nelson (the bully) in the Simpsons would make the school full of resentful, narcissistic, touchy, soft children (390-391)
+
+> Men have to toughen up. Men demand it, and women want it, even though they may not approve of the harsh and contemptuous attitude ... (391)
+
+- Men need to toughen up by pushing themselves and one another (392)
+
+- Enough adventure and aggressiveness among boys should help them make themselves useful (392)
+
+> If they're healthy, women don't want boys. They want men. They want someone to content with; someone to grapple with. If they are tough, they want someone tougher ... they desire someone who brings to the table something they can't ... (392)
+
+- If you think tough men are dangerous, wait until you see what weak men are capable of (393)
+
+# Rule 12: Pet a cat when you encounter one on the street (395)
+
+## Dogs are OK too (395)
 
 
 
