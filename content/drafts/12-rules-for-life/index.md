@@ -1163,7 +1163,9 @@ Order (41)
 
 ## Dogs are OK too (395)
 
+- JP has a dog, Sikko. Old but smart (395)
 
+- 
 
 # Reflections
 
