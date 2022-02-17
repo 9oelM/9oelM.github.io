@@ -14,6 +14,7 @@ function SEO({ description, lang, meta, keywords, title }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
+
         return (
           <Helmet
             htmlAttributes={{
@@ -65,6 +66,17 @@ function SEO({ description, lang, meta, keywords, title }) {
               )
               .concat(meta)}
           >
+            <meta name="description" content={metaDescription} />
+            <meta name="keywords" content={keywords?.join(`, `)} />
+            <meta name="author" content={data.site.siteMetadata.author} />
+            <meta name="copyright" content={data.site.siteMetadata.author} />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={metaDescription} />
+            <meta property="og:type" content="website" />
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:creator" content={data.site.siteMetadata.author} />
+            <meta name="twitter:title" content={title} />
+            <meta name="twitter:description" content={metaDescription} />
             <meta http-equiv="cache-control" content="max-age=0" />
             <meta http-equiv="cache-control" content="no-cache" />
             <meta http-equiv="expires" content="0" />

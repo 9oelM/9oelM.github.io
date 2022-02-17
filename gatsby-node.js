@@ -24,6 +24,8 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 title
                 tab
+                tags
+                keywords
               }
             }
           }
@@ -41,6 +43,8 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 title
                 tab
+                tags
+                keywords
               }
             }
           }

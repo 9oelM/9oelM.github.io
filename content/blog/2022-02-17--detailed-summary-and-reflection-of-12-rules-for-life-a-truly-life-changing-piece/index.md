@@ -1,10 +1,26 @@
 ---
-title: "100BooksProject: (10): 12 Rules for Life"
-date: "2021-05-21T09:00:00.009Z"
+title: "12 Rules for Life: a detailed summary and reflection of a truly life-changing book (11 / 100)"
+date: "2022-02-17T09:00:00.009Z"
 category: "books"
+tags: ["life"]
+tab: "post"
+keywords: ["12 Rules for life", "summary", "reflection", "jordan peterson"]
 ---
 
-# Foreword (vii-xxvii)
+## 12 Rules for Life
+
+![12 rules for life cover](12-rules-for-life-cover.jpeg)
+
+This post is a very detailed summary and reflection of [Jordan Peterson](https://www.jordanbpeterson.com/about/)'s book: _[12 Rules for Life](https://www.amazon.com/12-Rules-Life-Antidote-Chaos/dp/0345816021)_. Each short summary always refers back to the relevant page number in the book. The post ends with my personal reflection. Some may ask why the summary should be so long, while you could just go and read the book again. Well, the book itself quite lengthy and contains lots of atomic logics, and the summary is still short compared to the book. The point of making a summary for myself personally is to quickly get back anytime to here and find the part in the book that was or became meaningful to me. Oh, and sorry about the typos ahead that even I don't know they exist due to the length of this post. Please let me know if you find one.
+
+Please feel very free to skip the table of contents.
+
+## Table of contents
+
+```toc
+```
+
+## Foreword (vii-xxvii)
 
 - Question: Why even expect more rules in our lives anyways, while it seems pretty clear that people don't like rules? (vii)
 
@@ -26,7 +42,7 @@ While modern response to different rules of different societies was relativism, 
 
 > We are rule generators. And given that we are moral animals, what must be the effectt of our simplistic modern relativism upon us? It means that **we are hobbling ourselves by pretending to be something we are not.** (xxv)
 
-# Overture (xxviii-)
+## Overture (xxviii-)
 
 Jordan first started to answer some questions about ilfe on Quora, and started to get some popularity there. In 2013, he started to upload videos of his lectures at university, which got popular too. (~xxx)
 
@@ -36,15 +52,15 @@ The title was picked as so because it's clear that we need rules. We need order.
 
 > If we each live properly, we will collectively flourish. (xxxix)
 
-# Rule 1: Stand up straight with your shoulders back (1)
+## Rule 1: Stand up straight with your shoulders back (1)
 
-## Lobsters - and territory
+### Lobsters - and territory
 
 Lobsters have a simple nervous systems which could be thoroughly studied by scientists (1). This helps us understand how our brain and behavior function too.
 
 Lobsters want a secure, reliable and sustainable home where prey is abundant. What happens when multiple lobsters want the same space? The same happens for songbirds. (2)
 
-## Birds - and territory
+### Birds - and territory
 
 Wrens would warn and fight you when you get into their territory. Both wrens and lobsters are obsessed with status and position.
 
@@ -56,7 +72,7 @@ A pandemic across birds would kill the least dominant and the most vulnerable bi
 
 Territorial conflict imposes a problem: how to win or lose without the disagreeing parties incurring too great a cost (because the winner might be hurt even after winning, which means the 3rd bird can come in and take the space). (4)
 
-## Conflict - and territory
+### Conflict - and territory
 
 A defated wolf shows its subordination to a victor by a specific gesture. Dolphins make certain sounds to reduce conflict between dominant and subordinate group members. Many other animals behave like so. (5)
 
@@ -70,7 +86,7 @@ Victors will have high serotonin and low octopamine, and losers the reverse. (8-
 
 > (Winner lobster) ... is a coky, strutting sort of shellfish, much less liekly to back down when challenged. ... (the loser lobster is) ... a defeated-looking, scrunched-up, inhibited, drooping, skulking sort of lobster, very likely to hang around street corners ... (8-9)
 
-## The principle of unequal distribution (9)
+### The principle of unequal distribution (9)
 
 The defeated lobster is more likely to lose in the next fight. The winning lobster, the reverse. Similarly: 
 
@@ -81,7 +97,7 @@ The defeated lobster is more likely to lose in the next fight. The winning lobst
 
 This is known as Price's law. Anyways, nature has produced a very simple and efficient mechanism for a hierarchy of lobsters. The winner takes it all, the loser can't get anything. (10-11)
 
-## All the girls (11)
+### All the girls (11)
 
 Female lobsters naturally get attracted to dominant (winning) lobsters (the most efficient, correct way to identify the best man)
 
@@ -89,7 +105,7 @@ The dominant lobster gets all the girls too.
 
 The dominance hierarchy of lobsters exhibit the same features as the environment to which all complex life has adapted. **Lobsters have existed from a really long time ago only with a very simple nervous system, but they still had a mechanism to think about status and society** (13).
 
-## The nature of nature (13)
+### The nature of nature (13)
 
 Nature is not a simple thing.
 
@@ -98,7 +114,7 @@ Nature is not a simple thing.
 
 There exists an ancient and fundamental part in our brain that keeps track of our position in the dominance hierarchy: the reason we act like lobsters when we are defeated. Weak people exhibit low levels of serotoin, thus much of stress and vulnerability to illness, death and depression. (18)
 
-## Top and Bottom (18)
+### Top and Bottom (18)
 
 If you are at the top, you get all of the best parts: good counterpart, health, opportunities, ... If you are at the botttom, you don't get anything. Terrible food, nowhere to live, poor mental and physical conditions, etc. We are not talking about possessing money here; it's just about a general human life (18-19)
 
@@ -110,7 +126,7 @@ If you are already stressed, even the smallest external stimuli will cause chain
 
 If you are at the top (not stressed), you already know you are safe and all good, so chances of you being damanged from a threat is substantially low. **The result is that you still stay clam, tall, straight, and confident**. (20)
 
-## Malfunction (20)
+### Malfunction (20)
 
 #### Sleeping and eating
 
@@ -139,7 +155,7 @@ Another example: agoraphobia or experience of being bullied. Just functions in t
 
 **Continuation of these bad habits or psychological state will only lead to itself again!** (-26)
 
-## Rising Up
+### Rising Up
 
 ![1](./1.jpeg)
 
@@ -159,9 +175,9 @@ Life is terrible, but standing up straight with shoulders back means confidently
 
 Then, people will start to perceive you as a dominant being. Why not try it first and see how it goes before even going into defeated mode? (33)
 
-# Rule 2: Treat yourself like someone you are responsible for helping (35)
+## Rule 2: Treat yourself like someone you are responsible for helping (35)
 
-## Why won't you just take your damn pills? (35)
+### Why won't you just take your damn pills? (35)
 
 - people tend to miss out on taking the pills for various reasons, both unintendedly and intendedly. (35)
 
@@ -173,7 +189,7 @@ Then, people will start to perceive you as a dominant being. Why not try it firs
 
 - But why?
 
-## The Oldest Story and the Nature of the World (38)
+### The Oldest Story and the Nature of the World (38)
 
 - Two stories of creation are introduced in Genesis (38):
   
@@ -189,7 +205,7 @@ Then, people will start to perceive you as a dominant being. Why not try it firs
   
   - subjective experience can be related more to a novel or a movie than to a science. (39)
 
-## The Domain, Not of Matter, but of What Matters (40)
+### The Domain, Not of Matter, but of What Matters (40)
 
 - The scientific world of matter can be reduced to some fundamental concepts (40)
 
@@ -217,7 +233,7 @@ Order (41)
 
 - Our brains are wired to repond instantly to chaos. (43)
 
-## Chaos and Order: Persnoality, Female and Male
+### Chaos and Order: Persnoality, Female and Male
 
 - So far, it's been explained why **chaos and order** are two most fundamental elements of lived experience (Being). Chaos and order are perceived as **personalities** as well. (43-44)
 
@@ -237,15 +253,15 @@ Order (41)
   
   > We appear to hhave taken that primordial knowledge of structured, creative opposition (male and female) and begun to interpret everything through its lens (46)
 
-### Order (46)
+#### Order (46)
 
 - is: masculinity, yang of the Taoist yin-yang symbol, men throughout history have been the builders of towns and cities, engineers, stonemasons, bricklayers ..., God the Father, ledgerkeeper, policemen and soldiders, ...
 
-### Chaos (46)
+#### Chaos (46)
 
 - is: feminine. possibility, the source of ideas, mysterious realm of gestation and birth. the darkness of a cave and the accident by the side of the road. it's the mother grizzly that tears you to pieces. crushing force of sexual selection. 
 
-### Duality of masculinity and feminity (47-)
+#### Duality of masculinity and feminity (47-)
 
 - Many religious symbols share masculinity and feminity at the same time:
   
@@ -267,7 +283,7 @@ Order (41)
 
 - Chaos and order is anywhere in our lives, and the balance between chaos and order is crucial. Being inclined on either side too much may cause a problem. Neither shouldn't exist too. The same applies for other living things (50-51)
 
-## The Garden of Edens (51)
+### The Garden of Edens (51)
 
 - As previously mentioned, Genesis was combined from multiple sources:
   
@@ -293,7 +309,7 @@ Order (41)
 
 - Anyway, Eve eats the forbidden fruit, and becomes self-conscious. (55-56)
 
-## The Naked Ape
+### The Naked Ape
 
 >  What does it mean to know yourself (and your partner) naked?
 
@@ -307,7 +323,7 @@ Order (41)
 
 - Answer: why should take care of anything as naked, ugly, ashamed, ... as a descendant of Adam, even if that being is himself? Actually, you are the one who knows the most about yourself, your transgressions, insufficiencies and inadequacies. No one else has more reason to regard you as a pathetic man. **And by witholding something that might do you good (the medication), you can punish yourself for all your failings. A harmless, innocent, unselfconscious dog is more deserving.** (61) 
 
-## Good and Evil (62)
+### Good and Evil (62)
 
 - Dogs and cats are predetors: they kill things and eat them. But we still own them as pets and give them meds when they're sick. (62)
 
@@ -321,7 +337,7 @@ Order (41)
 
 - **No one understands the darkness of the individual better than the individual himself. Who, then, when ill, is going to be fully commited to his own care?** (64)
 
-## A Spark of the Divine
+### A Spark of the Divine
 
 - It might not simply be the self-consciousness that makes us doubt our own worth. Perhaps it is [instead] **our unwillingness - reflected in Adam's shamed hiding - to walk with God, despite our fragility and propensity for evil. (66)**
 
@@ -359,23 +375,23 @@ Order (41)
 
 - set a **vision** and **direction** for nobody but yourself (73)
 
-# Rule 3: Make friends with people who want the best for you (77)
+## Rule 3: Make friends with people who want the best for you (77)
 
-## The old hometown (77)
+### The old hometown (77)
 
-- JBP lived in Fairview, Alberta and it was super cold especially in the winter, and the cats (home-grown ones too) faced the risk of death often due to their behavior to seek heat under coldness. (77-79)
+- JP lived in Fairview, Alberta and it was super cold especially in the winter, and the cats (home-grown ones too) faced the risk of death often due to their behavior to seek heat under coldness. (77-79)
 
-## My Friend Chris and His Cousin (79)
+### My Friend Chris and His Cousin (79)
 
 - His friends Chris and Ed were young delinquent people doing stupid things that teenagers do, including marijuana. (79-81)
 
-## Teenage Wasteland (81)
+### Teenage Wasteland (81)
 
 - JP and his friends often went to creepy parties, and no one knew what they were doing there (81)
 - Not so many families in Alberta decided to send their kids to universities and that wasn't because of financial concerns (82
   )
 
-## Some different friends - and some more of the same (83)
+### Some different friends - and some more of the same (83)
 
 - JP made a road trip with his friends, Carl and Chris, pretty far away from Alberta, and did the same stupid thing there, just drinking and wasting time. (84)
 - When they all grew up, JP expected Chris and Ed to be actually grown up, but that wasn't the case. (85)
@@ -387,7 +403,7 @@ Order (41)
 
 - Freud calls this 'repetition compulsion', an unconscious drive to repeat the horrors of the past. (87)
 
-## Rescuing the damned (87)
+### Rescuing the damned (87)
 
 - Trying to help people in such difficulties is not an easy job at all (87)
 - Often, the motivation to help is vanity, narcissism, a desire to draw attention to one's own compassion and good-will (91)
@@ -400,12 +416,12 @@ Order (41)
 - It's very likely that a person intentionally chose to reject the path upward. They use their misery as a proof for the world's injustice (92-93)
 - You don't have to and probably shouldn't befriend them. (93)
 
-## A Reciprocal Arrangement (95)
+### A Reciprocal Arrangement (95)
 
 - If you have a friend you wouldn't recommend to your sister or others, why would you befriend him yourself (95)
 - Good friends will let you know you're doing good when you are, and bad when you are doing bad. (95)
 
-# Rule 4: Compare yourself to who you were yesterday, not to who someone else is today
+## Rule 4: Compare yourself to who you were yesterday, not to who someone else is today
 
 - No matter how good you are at something, there must be someone better than you (99)
 
@@ -413,7 +429,7 @@ Order (41)
 
 - Just stop listening. There will always be people better than you and you can't change that. (101)
 
-## Many good names (101)
+### Many good names (101)
 
 - The good and the bad (outcomes) certainly exist when you work on something. So how can we still ignore this critical self consciousness on the outcome or abilities? (101)
 
@@ -437,7 +453,7 @@ Order (41)
 
 - You know what you need, what you need to do, when you lie about to yourself, how much time you need to spend on that and that, ... when you pause for a second and think about it. It's all on you. Therefore, comparing yourself to others can't make sense there because everything is very unique to you (106-107)
 
-## The Point of Our Eyes (or, Take Stock) (107)
+### The Point of Our Eyes (or, Take Stock) (107)
 
 - We are always aiming at something, and trying to move towards the goal, the better future. (107-108)
 
@@ -453,7 +469,7 @@ Order (41)
 
 - How can you know that you are improving, with what standard? First, aim small. If you are just beginning on this whole thing, just set a small goal for the day, and reward you if you do it. Then.. repeat that. (111)
 
-## What You Want and What You See (112)
+### What You Want and What You See (112)
 
 - People wouldn't be able to see interferences when focusing on something they are paying attention to. That's how we deal with the overwhelming complexity of the world: by ignoring it. (112-114)
 
@@ -473,7 +489,7 @@ Order (41)
 
 - Careful observation can show your beliefs. These come from incredibly complex chains of thoughts and processes, all the way from the antiquity. Some beliefs come from fundamental teachings from the cultures, including the Bible (121)
 
-## Old Testament God and New Testament God (122)
+### Old Testament God and New Testament God (122)
 
 - People seem to think of the Old Testament God as a harsh and dangerous God, and the New Testament God as a forgiving and loving God. (122)
 
@@ -483,7 +499,7 @@ Order (41)
 
 - Keep trying to do better. To do that, you need to pay attention (126)
 
-## Pay attention (126)
+### Pay attention (126)
 
 - Just stop and think about what's bothering you, what might give you motivation, and so on (126-127)
 
@@ -491,9 +507,9 @@ Order (41)
 
 > Realization is dawning. Instead of playing the tyrant, therefore, you are paying attention. You are telling the truth, instead of manipulating the world. You are negotiating, instead of playing the martyr or the tyrant ... You are discovering who you are, and what you want, and what you are willing to do. ... Attend to the day, but aim at the highest good. ... Now, your trajectory is heavenward. (129)
 
-# Rule 5: Do not let your children do anything that makes you dislike them (133)
+## Rule 5: Do not let your children do anything that makes you dislike them (133)
 
-## Actually, it's not OK (133)
+### Actually, it's not OK (133)
 
 - Some parents leave their children behave carelessly in public (133-134)
 
@@ -503,7 +519,7 @@ Order (41)
 
 - However, sometimes, unconscious (or conscious) hatred can prevent parents from giving enough concern to a child (137-138)
 
-## Everybody hates arithmetic (138)
+### Everybody hates arithmetic (138)
 
 - Small quotidian concerns are insidious, and it certainly takes up a lot of your time. JP had a client who had to spent hours per month to get his son to sleep after fighting (138)
 
@@ -521,7 +537,7 @@ Order (41)
 
 - Children are damaged when they are just left with full freedom, without any discipline or care, and they are often ignored by their peers because they are poorly socialized (144-145)
 
-## Parent or Friend (145)
+### Parent or Friend (145)
 
 - Parents neglect discplinary approaches for the fear of themselves not being liked or loved anymore, or for deliberate reasons. **This is not good.**(145)
 
@@ -537,7 +553,7 @@ Order (41)
 
 - You really need to take practical actions to discipline your child. This does not make them dislike you either. Crying is often just a sign of their anger, which is fine to not be concerned about. (149-151)
 
-## Discipline and punish (152)
+### Discipline and punish (152)
 
 - Discipline and punish must be handled carefully but are definitely needed (153)
 
@@ -557,7 +573,7 @@ Order (41)
 
 - All children are so different. So how should we discipline children? (160)
 
-## Minimum necessary force (160)
+### Minimum necessary force (160)
 
 - Two general ''rules about rules':
   
@@ -593,7 +609,7 @@ Order (41)
 
 > If you are not thinking such things through, then you're not acting responsibly as a parent. **You're leaving the dirty work to someone else, who will be much dirtier doing it.** (167)
 
-## A summary of principles (167)
+### A summary of principles (167)
 
 1. Limit the rules
 
@@ -609,15 +625,15 @@ Order (41)
 
 5. Parents have a duty to act as proxies for the real world (169)
 
-## The good child - and the responsible parent (169)
+### The good child - and the responsible parent (169)
 
 - This secion just sums up the previous claims and recommendations in the current chapter
 
 > You love your kids, after all. If their actions make you dislike them, think what an effect they will have on other people, who care much less about them than you. (170)
 
-# Rule 6: Set your house in perfect order before you criticize the world (173)
+## Rule 6: Set your house in perfect order before you criticize the world (173)
 
-## A Religious problem (173)
+### A Religious problem (173)
 
 - You won't call criminals involed in serious massacres as religious, even if they have belief in total destruction of humanity. (173-174)
 
@@ -629,7 +645,7 @@ Order (41)
 
 - This line of thought also motivates mass murder followed by suicide (176-177)
 
-## Vengeance or transformation (177)
+### Vengeance or transformation (177)
 
 - A man might blame God, and if an atheist, the fate. (177-178)
 
@@ -639,7 +655,7 @@ Order (41)
 
 - Solzhenitsyn, prisoner of the brutal Soviet camp, is a prime example of  not cursing God (or fate) and instead (sort of) change the mainstream of thoughts in the world by debunking the communist tyranny. (181-183)
 
-## Things fall apart (183)
+### Things fall apart (183)
 
 - Whole peoples refused to judge reality, to criticize Being, and to blame God (183)
 
@@ -649,7 +665,7 @@ Order (41)
 
 - Failure to prepare when the necessity for preparation is wel known is just nothing but sin. (185)
 
-## Clean up your life (185)
+### Clean up your life (185)
 
 > Have you clean up your life? If the answer is no, here's something to try: _Start to stop doing what you know to be wrong._ Start stopping today. (185)
 
@@ -659,15 +675,15 @@ Order (41)
 
 - 186-187 is just full of useful sentences, so just read it on your own
 
-# Rule 7: Pursue what is meaningful (not what is expedient) (189)
+## Rule 7: Pursue what is meaningful (not what is expedient) (189)
 
-## Get while the getting's good (189)
+### Get while the getting's good (189)
 
 - Life is suffering. The simplest solution to that may be pursuing pleasure. Is there an alternative? (189-191)
 
 - Our ancestors gave good answers to this but we can't still understand them due to their complexity. But we started to notice what we are doing. (192)
 
-## The delay of gratification (192)
+### The delay of gratification (192)
 
 > Something better might be attained in the future by giving up something of value in the present (193)
 
@@ -707,7 +723,7 @@ Order (41)
 
 - Socrates didn't seek expediency under conspiracy against him, and chose death instead (202-204)
 
-## Death, toil and evil (204)
+### Death, toil and evil (204)
 
 - The (natural) tragedy is not the primary source of suffering. Evil is. (204-205)
 
@@ -725,7 +741,7 @@ Order (41)
 
 - The problem of life = how to sacrifice to diminish suffering + evil (209)
 
-## Evil, contronted (209)
+### Evil, contronted (209)
 
 - Cain is not happy, but Abel is. Cain envies him. That envy and hope for Abel's misfortune brings about Cain's conscious murder of Abel (209-210)
 
@@ -747,7 +763,7 @@ Order (41)
 
 - But why has Christianity failed to have the desired effect? (217)
 
-## Christianity and its problems (218)
+### Christianity and its problems (218)
 
 - Carl Jung hypotheized that Christianity failed to address suffering (218)
 
@@ -761,19 +777,19 @@ Order (41)
 
 - 
 
-# Rule 8: Tell the truth - or at least, don't lie
+## Rule 8: Tell the truth - or at least, don't lie
 
-## Truth in no no-man's-land (241)
+### Truth in no no-man's-land (241)
 
 - JP gives two examples in his real life where he just told the truth to his patients (clients) without circumvention and that did make the situation even better. (241-245)
 
-## My landlord (246)
+### My landlord (246)
 
 - JP had a neighbor who suffered alcohol addiction and couldn't really control his life. He would wake up to JP's house at two in the morning and try to sell his stuff to get some money to buy more alcohol. (246-247)
 
 - JP thought a lot before speaking, and spoe the truth, that he needs to stop doing that. The relationship did not deteriorate. (247-248)
 
-## Manipulate the world (248)
+### Manipulate the world (248)
 
 - We often "act politically", or do "life-lies" by crafting our speech (248-249)
 
@@ -811,7 +827,7 @@ Order (41)
 
 - deceit causes misery (262)
 
-## The truth, instead (262)
+### The truth, instead (262)
 
 - We need to make decisions, and more importantly: aim (262)
 
@@ -855,9 +871,9 @@ Order (41)
 
 - When in trouble, try telling the truth (274)
 
-# Rule 9: Assume that the person you are listening to might know something you don't (277)
+## Rule 9: Assume that the person you are listening to might know something you don't (277)
 
-## Not advice (277)
+### Not advice (277)
 
 - Psychotherapy is not advice. It's a genuine conversation (= mostly listening) (277)
 
@@ -865,7 +881,7 @@ Order (41)
 
 - JP had one client who thinks she was raped multiple times when she was drunken, making her memory about that unsure. JP could have inclined to either side: to tell her 1) that she is an innocent victim, or 2) that she's a walking disaster. Either choice would have been accepted and understood by the client anyway, which would have been advice, but JP decided to listen instead (280-285)
 
-## Figure it out for yourself (285)
+### Figure it out for yourself (285)
 
 - JP let her talk, and she talked a lot, but they still didn't figure out if she was raped, because that was such a complex question. She left the therapy less vague, though (285)
 
@@ -875,7 +891,7 @@ Order (41)
 
 > A listening person is your collaborator and your opponent (287)
 
-## A listening person (288)
+### A listening person (288)
 
 - Your reaction may affect the person talking to you (288-290)
 
@@ -885,7 +901,7 @@ Order (41)
 
 > That's key to the psychotherapeutic process: two people tell each other the truth - and both listen. (291)
 
-## How should you listen? (292)
+### How should you listen? (292)
 
 - Carl Rogers (psychotherapist), knowing the power of listening, suggested this way of discussion: each person can speak up for himself **only after he has first restated the ideas and feelings of the previous speaker accurately.** (292)
 
@@ -896,7 +912,7 @@ Order (41)
 
 - Even the speakers themselves have a hard time articulating their ideas because it's the first time they say them (294)
 
-## Primate dominance - hierarchy manoeuvres - and wit (295)
+### Primate dominance - hierarchy manoeuvres - and wit (295)
 
 - There are some forms of bad conversations where individuals just fight for their own stories (295-296)
 
@@ -906,7 +922,7 @@ Order (41)
 
 - Wit, fun, jokes included conversation sometimes help where appropriate (300-301)
 
-## Conversation on the way (301)
+### Conversation on the way (301)
 
 - The final form of conversation akin to listening is a form of mutual exploration: where everyone actively engages in sharing and formulating ideas (301)
 
@@ -916,15 +932,15 @@ Order (41)
 
 - Converstaion desiring the truth is made up of listening and speaking. It's engaging, vital, interesting and meaningful that way (303)
 
-# Rule 10: Be precise in your speech (307)
+## Rule 10: Be precise in your speech (307)
 
-## Why is my laptop obsolete? (307)
+### Why is my laptop obsolete? (307)
 
 - Why does a laptop become obsolete just in a few years? It's due to our perceptions and interaction between the complexity of the world and them (307-308)
 
 - A laptop is just a tiny fraction of the entire system of the technologies, and it only takes a short time for it to fade away (308-309)
 
-## Tools, obstacles and extension into the world (309)
+### Tools, obstacles and extension into the world (309)
 
 - We only perceive necessary ones out of many things in the complex world, but this is not the case for perceiving _objects._ (309)
 
@@ -932,7 +948,7 @@ Order (41)
 
 - We also have an ability to extend ourselves into a subject. Examples: a machine, a team, a country, ... (311-313)
 
-## The world is simple only when it behaves (313)
+### The world is simple only when it behaves (313)
 
 - We don't necessarily think about how exactly a car works (bolts, joints and engines...) when we drive. But we do when a car quits (313-315)
 
@@ -940,11 +956,11 @@ Order (41)
 
 > The limitations of all our perceptions of things and selves manifest themselves when something we can usually depend on in our simplified world breaks down (315)
 
-## You and I are simple only when the world behaves (315)
+### You and I are simple only when the world behaves (315)
 
 - When things break down, things that were ignored strike us with a detail. Then we need to protect ourselves with precise intent and aim (315-317)
 
-## What do we see when we don't know what we're looking at? (317)
+### What do we see when we don't know what we're looking at? (317)
 
 > What we perceive, when things fall apart (like financial crisis, war, etc), is no longer the stage and settings of habitable order (317)
 
@@ -979,7 +995,7 @@ Order (41)
 
 - We can give a structure to a chaos when it appears, and re-establish order, through careful and precise speech. Vague speech will only cause things to remain vague (330)
 
-## The construction of soul and world (330)
+### The construction of soul and world (330)
 
 - Problems give a rise to chaos, but this also gives a chance for new and benevolent order, if one decides to face and fix the problems (331)
 
@@ -987,7 +1003,7 @@ Order (41)
 
 > This is difficult, but the difficulty is not relevant, because the alternative is worse (331)
 
-## Wheat from chaff (332)
+### Wheat from chaff (332)
 
 - Precision separates unique terrible thing from others that didn't happen (332)
 
@@ -997,9 +1013,9 @@ Order (41)
 
 > With careful thought and language, the singular, stellar destiny that justifies existence can be extracted from the multitude of murky and unpleasant futures that are far more likely to manifest themselves of their own accord. (333)
 
-# Rule 11: Do not bother children when they are skateboarding (337)
+## Rule 11: Do not bother children when they are skateboarding (337)
 
-## Danger and mastery (337)
+### Danger and mastery (337)
 
 - Skateboarding is dangerous, but that's the point for the kids (338-339)
 
@@ -1012,19 +1028,19 @@ Order (41)
 
 > We can still be both confident in our experience and confronting the chaos that helps us develop (339)
 
-## Success and resentment (340)
+### Success and resentment (340)
 
 - There is a plentiful evidence that evil intent always exists under the hood in most human actions (340-342)
 
 - The motivation for lawmakers may not be genuine. JP only can find the operation of anti-human spirit from the legislation (343)
 
-## More about Chris (343)
+### More about Chris (343)
 
 - Chris was first mentioned in page 79.
 
 - Chris is a prime example of that anti-human spirit. Absent of a job, girlfriend, money, he grew skeptical about the society and started to hate people. He was a great disturbance to JP and his family's lives when they were living together. Chris ended up committing a suicide later, despite his few attempts for a better life (343-348)
 
-## Self-appointed judges of the human race (349)
+### Self-appointed judges of the human race (349)
 
 - We do what we can to make the best of things, in our vulnerability and fragility (350)
 
@@ -1033,13 +1049,13 @@ Order (41)
 - University students in humanities suffer mental health problems, berated by such criminals. And it's worse for young men (351)
   - The natural personalities of boys and the social structure and thoughts about boys put them at an unfavorable position (this part is hard to summarize. Just read the full section) (351-354)
 
-## Career and marriage (354)
+### Career and marriage (354)
 
 - Statistics generally show that marriage is becoming less important to people (354-355)
 
 - Men increasingly don't go to universities, while women preferably want to marry employed university graduates, for protection against social and economic vulnerabilities. This is not good for both women and men (356-357)
 
-## The patriarchy: help or hindrance? (357)
+### The patriarchy: help or hindrance? (357)
 
 - Culture is oppressive, but thinking only that way is ignorant, ungrateful and dangerous (357-358)
 
@@ -1055,13 +1071,13 @@ Order (41)
 
 - But the law and education are arguing for male oppression, and there are institutions for promoting radical political actions related to it (361)
 
-## Postmodernism and the long arm of Marx (362)
+### Postmodernism and the long arm of Marx (362)
 
 - The disciplines are heavily influenced by Marxist humanists, who believed that Western principles of individual freedom or the free market only guised inequality, domination and exploitation under the hood. Instead, a practical social change was required (362)
 
 - Marxism put into practice in the Soviet Union, China, Vietnam, Cambodia, and North Korea brought about miserable lives of the citizens (362-363)
 
-## Lest we forget: ideas have consequences (363)
+### Lest we forget: ideas have consequences (363)
 
 - The World War I degraded the lives of most people in the West (363)
 
@@ -1106,12 +1122,12 @@ Order (41)
 - While it is empirically possible to minize the innate differences between boys and girls with pressure, that would not be freeing people of either gender to make their own choices (375)
   - Why not then force equity-minded males to be trained more on nursing, and the females on engineering? (375)
 
-## Boys into girls (375)
+### Boys into girls (375)
 
 - Social constructionist theory also claims the world would be much improved (less aggression from boys) if boys were socialized like girls: tenderness, sensitivity to feelings, nurturance, ... (375)
   - But, 1) Aggression is innate is not learned as social constructionist theory argues and 2) disappears at around age 4 as a kid grows up and 3) can bear some utility or value (376-367)
 
-## Compassion as a vice (377)
+### Compassion as a vice (377)
 
 - Many of JP's clients have problem in their jobs due to lack of aggressiveness (= overly agreeable): they go through so-called "assertiveness training" (377)
 
@@ -1135,7 +1151,7 @@ Order (41)
 
 - Example of JP's mother who is agreeable, but has been successful in fostering the independence of her children (386)
 
-## Toughen up, you weasel (387)
+### Toughen up, you weasel (387)
 
 - JP once joined railway workers to work. Railway workers worked in a rude, harassing manner with one another, but that was how they got things done for hard jobs (387-388)
 
@@ -1159,17 +1175,79 @@ Order (41)
 
 - If you think tough men are dangerous, wait until you see what weak men are capable of (393)
 
-# Rule 12: Pet a cat when you encounter one on the street (395)
+## Rule 12: Pet a cat when you encounter one on the street (395)
 
-## Dogs are OK too (395)
+### Dogs are OK too (395)
 
 - JP has a dog, Sikko. Old but smart (395)
 
-- 
+- Tajfel's studies show 1) people are social (to the co-members); and 2) people are antisocial (to members outside a group) (397)
 
-# Reflections
+- This can be a solution to a complex problem of optimization between cooperation and competition (397)
 
-## Freedom
+- But anyway, the reason JP mentions his dog first is to have dog people sided with him too, based on the minimal group paradigm suggested by Tajfel (398)
+
+- JP was trying to talk through an issue with a client who had a husband fighting cancer for five years who just received a death sentence (399)
+
+- JP has two children, the daugter being Mikhaila. JP and Tammy found she had a juvenile idiopathic arthritis (JIA) at the age of 6. (400-401)
+
+- Thinking about Julian, his son, JP notices that what can be truly loved about a person is inseparable from their limitations (402)
+
+- Tammy accidentally administered ten times the recommended does the first few injections of a drug that was only used for adults in Canada, Mikhaila being the first adolescent to use it. And she was fixed by then (403)
+
+- Mikhaila was alright until she continuously took medications and reached grade eleven. Her joints were deteriorating and needed her hip replaced by then immediately (404)
+
+- What a perfect being lacks is limitation (404)
+
+> If you are already everything, everywhere, always, there is nowhere to go and nothing to be ... that idea has helped me deal with the terrible fragility of Being. (404)
+
+- Superman, as well as other fictional heroes, got boring because he became invulnerable. So the writer had to reboot Superman with introduction of its limitations (405-407)
+
+- But the suffering caused by such limits makes us question the existence of Being itself (407)
+
+- But it's also a dead end if you confront the idea of Being: suicide or genocide, or worse (408)
+
+- One sure thing is that actions taken against the idea of Being and the world will only make life worse (408-409)
+
+- Is there any good alternative? Can Being truly be justified, given all sorts of suffering? This can't be answered by _thinking_  (409)
+
+- It should be _noticing_, instead of thinkning. You may notice that **_when you love someone, it's not despite their limitations. It's because of their limitations_** (409-410)
+
+### Disintegration and pain (410)
+
+- Some of Mikhaila's joints started to disintegrated again, and she had to take stronger medicine to alleviate the pain. She went through multiple surgeries, and grew quite tolerant to the medication. She ditched it soon. It wasn't good overall anyway (410-413)
+
+- How can you manage this? Spend some time to talk and think about how you could manage the situation. If you think about it whenever you'd like to, you're soon going to be lost. As long as you are careful, you can manage it (413-415)
+
+### Dogs, again - but finally, cats (415)
+
+- Dogs are like people. Very friendly. Cats are not. (415)
+
+- But cats are almost a manifestation of nature, of Being. (415)
+
+- Cats will sometimes let you pet, sometimes not (415)
+
+- Apart from petting cats, perhaps there is something that would make you laugh or be relieved for some weird reasons. Do it. (i.e. watching Simpsons episode, for JP) (416)
+
+> Then you will get a reminder for just fifteen seconds that the wonder of Being might make up for the ineradicable suffering that accompanies it (416)
+
+## Coda (419)
+
+### What shall I do with my newfound pen of light? (419)
+
+- JP was handed over a pen that would beam light out its tip so that writing would be easier in dark (419)
+
+- Maybe, talking and reconciling with your partner and finding the truth (not the answer you want) in that process is similar to discussion with God (420-422).
+
+- In such a spirit, what shall I do with my newfound pen of light? (422)
+
+- JP decided to ask himself the hardest questions of life he could think of, and await the answers (using the rules mentioned). That's what we need to do too! (423-435)
+
+![what will you write with your pen of light?](what-will-you-write-with-your-pen-of-light.jpeg)
+
+## Reflections (in progress...)
+
+### Freedom
 
 > But the story of the golden calf also reminds us that without rules we _quickly become slaves to our passions - and there's nothing freeing about that._ (viii)
 
@@ -1177,24 +1255,54 @@ This is the exact same thing the book _Atomic Habits_ suggests. If you make a ha
 
 Isn't it so ironic? Mere freedom doesn't grant you freedom. It curbs you instead. 
 
-## Order and chaos
+### Order and chaos
 
 Everyone, if not consciously, at least should have an underlying sense of order and chaos in the corner of their minds. We know when things go ''unlike the plan'. We know when things go ''as planned'.
 
-As JBP mentioned, such a phenomenon is unavoidable and already everywhere.
+As JP mentioned, such a phenomenon is unavoidable and already everywhere.
 
 So what becomes important is what I do then. How much am I confident in surviving the world of order and chaos? How much am I ready and prepared in my mind to challenge myself with this?
 
-## Happy vs Good
+### Happy vs Good
 
-In Chapter 2, JBP says happy and good don't have a single common thing together. Never thought that way, but sounds so true when I read it.
+In Chapter 2, JP says happy and good don't have a single common thing together. Never thought that way, but sounds so true when I read it.
 
 I pursue a bunch of things daily that makes me happy. I would not recommend that my dog or my child (if I had one) do the same. But why am I doing that myself!? This is the moment I realized that I just need to stop all of this. I shouldn't be pursuing things that make me only happy.
 
 *Good things* tend to last long. *Happy things* don't. I think that's one big difference. Watching a fun short clip on Youtube, for example, surely makes you happy, but it does not deserve to be said 'good' for you (or 'bad', it's just rather nothing but something that makes you happy)
 
-## Treating myself like someone I am responsible for helping
+### Treating myself like someone I am responsible for helping
 
-This is absurdly _hard_. Even with the innately selfish human nature. Even after reading the chapter 2, I still keep asking myself: what the heck is going on? Why can't I care myself enough? Why did I miss breakfast so many times knowing that it wouldn't be good for my health? Why did I sleep late and wake up late knowingly? Why
+This is absurdly _hard_. Even with the innately selfish human nature. Even after reading the chapter 2, I still keep asking myself: what the heck is going on? Why can't I care myself enough? Why did I miss breakfast so many times knowing that it wouldn't be good for my health? Why did I sleep late and wake up late knowingly?
 
-## Grow the hell up: what it means to be a responsible adult
+After reading _[Atomic Habits](https://9oelm.github.io/2020-10-04-100BooksProject-(9):Atomic-habits/)_, I decided to get rid of the bad habits, but it wasn't still easy. But after reading about the second rule, I now have enough motivation to try again.
+
+There is almost not a single day, or just a single day so far in 2022 that I have missed having breakfast. I'm also making a record of the time I go to sleep and wake up since the beginning of 2022. _Persistence is the key._ Despite the absence of record for the late 2021, I know it must have been so dreadful. Here's the record so far for 2022:
+
+January:
+
+![January sleeping record](january-sleeping-record.jpeg)
+
+February:
+
+![February sleeping record](february-sleeping-record.jpeg)
+
+Not so bad, but not satisfying, I would say. My target bedtime is 11AM and wake-up time 7AM or earlier. But overall, it's much more positive than the last year's me. I got this and I can do this.
+
+### Growing the hell up: what it means to be a responsible adult
+
+If you search 'grow the hell up' on Google, one of the first things you will probably see is Jordan Peterson's lecture, or his tweet, or something from him anyway.
+
+I like this wording very much: grow the hell up. Yes, everyone needs to grow the hell up.
+
+Just thinking about how I behave throughout the day, if someone were monitoring me 24/7 and I didn't know that (like God), then I would feel 200% embarrassed for what I have been doing.
+
+Too many parts of my life are still so childish. Can't control myself. No disciplines, no rules. Sometimes just doing what I want for fun, for expediency. For immediate happiness.
+
+So that line really touched me because I really need to grow the hell up. Otherwise, what's so different between myself and a child apart from the uselessly gigantic magnitude of my body.
+
+An adult is an adult. An adult who doesn't want to take responsibilties - _not_ wanting to do the dishes, do exercises, pay the bill, take a shower, brush teeth, empty the trash can, do laundry, make a living, give presents to friends, visit parents once in a while - is just a child. It's just doing what others always do. Easy.
+
+In the times of Covid, especially when I am just stuck at home, no one's watching me other than myself, so I am quite programmed to sit in front of my laptop and do useless stuffs like surfing on the web, which is obviously not quite the definition of a grown-up adult. This isn't what I should do and I've got a clear aim for the year (undisclosed). I shouldn't be doing this.
+
+
