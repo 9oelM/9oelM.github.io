@@ -1,10 +1,9 @@
 ---
 title: "12 Rules for Life: a detailed summary and reflection of a truly life-changing book (11 / 100)"
 date: "2022-02-17T09:00:00.009Z"
-category: "books"
-tags: ["life"]
+tags: ["books", "life"]
 tab: "post"
-keywords: ["12 Rules for life", "summary", "reflection", "jordan peterson"]
+keywords: ["12 Rules for life", "detail", "summary", "reflection", "jordan peterson"]
 ---
 
 ## 12 Rules for Life
@@ -465,7 +464,7 @@ Order (41)
 
 - Do a real deal with yourself, just like you do with others, if you can't easily fix your own flaws, like compensating yourself with a cup of coffee when you get things fixed or done (110-111)
 
-> A little careful kindness goes a long way, and judicious reward is a powerful motivator. Then you could take that small bit of yourself by  the hand and **do the damn dishes.** (111)
+> A little careful kindness goes a long way, and judicious reward is a powerful motivator. Then you could take that small bit of yourself by the hand and **do the damn dishes.** (111)
 
 - How can you know that you are improving, with what standard? First, aim small. If you are just beginning on this whole thing, just set a small goal for the day, and reward you if you do it. Then.. repeat that. (111)
 
@@ -1253,15 +1252,9 @@ Order (41)
 
 This is the exact same thing the book _Atomic Habits_ suggests. If you make a habit (or in the context of this book, a _rule_ in your life), it is rather going to free you. For example, if you make a habit to save money, it will going to give you more freedom in buying stuffs later when you need them, while on the surface it might seem like that habit is restricting you from buying anything.
 
-Isn't it so ironic? Mere freedom doesn't grant you freedom. It curbs you instead. 
+Isn't it so ironic? Mere freedom doesn't grant you freedom. It curbs you instead.
 
-### Order and chaos
-
-Everyone, if not consciously, at least should have an underlying sense of order and chaos in the corner of their minds. We know when things go ''unlike the plan'. We know when things go ''as planned'.
-
-As JP mentioned, such a phenomenon is unavoidable and already everywhere.
-
-So what becomes important is what I do then. How much am I confident in surviving the world of order and chaos? How much am I ready and prepared in my mind to challenge myself with this?
+The connection lies in _Rule 7: Pursue what is meaningful (not what is expedient)_. Almost all expediency comes at a cost and is not necessary. You can free yourself from any rules at all, but after all, that is not meaningful and is going to limit the boundaries of what you can do, since this world is not the paradise.
 
 ### Happy vs Good
 
@@ -1270,6 +1263,16 @@ In Chapter 2, JP says happy and good don't have a single common thing together. 
 I pursue a bunch of things daily that makes me happy. I would not recommend that my dog or my child (if I had one) do the same. But why am I doing that myself!? This is the moment I realized that I just need to stop all of this. I shouldn't be pursuing things that make me only happy.
 
 *Good things* tend to last long. *Happy things* don't. I think that's one big difference. Watching a fun short clip on Youtube, for example, surely makes you happy, but it does not deserve to be said 'good' for you (or 'bad', it's just rather nothing but something that makes you happy)
+
+### Order and chaos
+
+Everyone, if not consciously, at least should have an underlying sense of order and chaos in the corner of their minds. We know when things go 'unlike the plan'. We know when things go ''as planned'.
+
+As JP mentioned, such a phenomenon is unavoidable and already everywhere.
+
+So what becomes important is what I do then. How much am I confident in surviving the world of order and chaos? How much am I ready and prepared in my mind to challenge myself with this?
+
+Perhaps I will first need to start the day with the daily plans. Not needlessly long, but just concise enough to specify what it is that I need to do for the day.
 
 ### Treating myself like someone I am responsible for helping
 
@@ -1291,6 +1294,8 @@ Not so bad, but not satisfying, I would say. My target bedtime is 11AM and wake-
 
 ### Growing the hell up: what it means to be a responsible adult
 
+I personally think being a responsible adult is one of the palpable themes in the book. Specifically, Rule 5 entails the reason to be one. Although the title reads _Do not let your children do anything that makes you dislike them_, JP's point is right on the fact that all children will become adults some day. Therefore, if children are not disciplined and not trained to be social and responsible to live along with others, they are not going to be a good adult when they grow up. That's JP's insistence with which I agree.
+
 If you search 'grow the hell up' on Google, one of the first things you will probably see is Jordan Peterson's lecture, or his tweet, or something from him anyway.
 
 I like this wording very much: grow the hell up. Yes, everyone needs to grow the hell up.
@@ -1303,6 +1308,32 @@ So that line really touched me because I really need to grow the hell up. Otherw
 
 An adult is an adult. An adult who doesn't want to take responsibilties - _not_ wanting to do the dishes, do exercises, pay the bill, take a shower, brush teeth, empty the trash can, do laundry, make a living, give presents to friends, visit parents once in a while - is just a child. It's just doing what others always do. Easy.
 
-In the times of Covid, especially when I am just stuck at home, no one's watching me other than myself, so I am quite programmed to sit in front of my laptop and do useless stuffs like surfing on the web, which is obviously not quite the definition of a grown-up adult. This isn't what I should do and I've got a clear aim for the year (undisclosed). I shouldn't be doing this.
+In the times of Covid, especially when I am just stuck at home, no one's watching me other than myself, so I am quite programmed to sit in front of my laptop and do useless stuffs like surfing on the web, which is obviously not quite the definition of a grown-up adult. This isn't what I should do and I've got a clear aim for the year (undisclosed).
 
+### Confidence
+
+Being stooped doesn't help. This is what JP mentioned in the first chapter: _Stand up straight with your shoulders back_.
+
+I still remember my stooped, or crooked posture during my high school years. Now that I think back, there were reasons for it:
+
+1. My backpack was way too heavy, which my made my shoulders rounded, and overall posture stooped. Due to the stupid fear that I would leave something behind in my school locker when I would need it home, I just decided to carry everything in my bag. And that was the time iPad didn't exist yet, and still lots of academic materials were in an actual materialistic form. Anyway, due to some naive decision I decided to carry everything in my bag, and so I even got myself a very hard and strong bag: a [Swissgear](https://www.swissgear.com/) one. That allowed me to carry even heavier things with me, which then contributed to stooping my neck and shoulders even more.
+2. The high school was a time of difficulties. I could barely sleep and almost always could not have breakfast due to overwhelming amount of assignments and homework. I think I wanted to be compensated somehow by being recognized of my difficulty, and represented that desire by having that stupid posture, implying something like: "hey man, I'm out of my energy. Guess what made me like this".
+
+Overall, stupid reasons. But I fixed that right after graduating, or in the middle of my high school years - I don't quite remember clearly. But now I'm standing up straight with my shoulders back. The only problem is that my occupation is somewhat prone to rounded shoulders (haha).
+
+This also leads to the topic of confidence (sometimes blatancy, too). Why not get confident instead of denouncing or disbeliving yourself. Even if you fail later, there's a bad reason not to get confident about yourself.
+
+Everyone enters the world of chaos every moment. That often leads the way down to being unconfident. You're doing some project at work and someone quits his job and you're lost. You've filed an application for higher education and unsure about the upcoming result. You've launched a business and unconfident if things will work out. All of these things. But when you think about it, there's really no reason to be unconfident. Of course, being critical and being unconfident are differnt and you already know why. Being critical is OK and will help. But unconfident? why? Even confidence with no reason may be better than unconfidence sometimes.
+
+### Good friends
+
+I feel grateful for having my present friends. They're all motivated, successful individuals. They know how to enjoy, challenge, endeavor, and sometimes chill. We sometimes help each other, talk through some problem, or hang out together. They are certainly not of the type that I wouldn't want my family members or another friend to be friends with, which is coherent with _Rule 3: Make friends with people who want the best for you_.
+
+### Comparison and self-esteem
+
+From some of the casual chats with my friends, I noticed that some of them are comparatively more subject to comparing themselves with others. And this is an evident problem for me too, but under my unconsciousness, I kind of try to become oblivious to this because of the fear that merely noticing it might hurt my self-esteem.
+
+There are millions of developers who are more skillful and able than me. I'm also now 'stuck' between employment and education because I now need to go back to school and finish my degree, which will take at least 1.5 years for which I am not sure if I will be able to work. My friends and other successful individuals I get to look at on Linkedin are all off schools and at work, seemingly commencing a good career path. That actually makes me not want to go onto Linkedin too often. Many job offers are knocking on the door weekly but I can't simply accept them for now, unless they are part time or full time promised for some distant future. I feel like I'm _late_ compared to others. But _Rule 4: Compare yourself to who you were yesterday, not to who someone else is today._ To iterate the core of JP's argument just once more: there is no point comparing others with you. What's even being _late_? There's no _late_. Already, _late_ can be justified when there's someone else to be compared with.
+
+Anyway, I decided not to slip into the swamp of dismal comparisons anymore. My goal is mine, and my life is mine. Can't be compared with others'.
 
