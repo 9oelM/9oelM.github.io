@@ -1,5 +1,5 @@
 ---
-title: "How to compile C++ code into Emscripten into Webassembly and use it in Webpack + Typescript + React project"
+title: "How to compile C++ code into Webassembly with Emscripten + Docker and use it in Webpack + Typescript + React project"
 date: "2022-05-09T09:00:00.009Z"
 tags: ["webassembly", "javascript", "emscripten"]
 tab: "post"
