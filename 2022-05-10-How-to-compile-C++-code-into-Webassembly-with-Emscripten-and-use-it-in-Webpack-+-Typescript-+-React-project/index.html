@@ -105,7 +105,7 @@ Use <span class="token string">'docker scan'</span> to run Snyk tests against im
 <span class="token comment"># exported from C. Make sure you put them into extern "C" {} block in your c++ code. </span>
 <span class="token comment"># Then simply prefix the functions you are going to export with an underscore, and add it to the list below</span>
 
-<span class="token comment"># Comment out -s "FILESYSTEM=0" if you don't need to use fs (i.e. use it on web entirely)</span>
+<span class="token comment"># Uncomment -s "FILESYSTEM=0" if you don't need to use fs (i.e. use it on web entirely)</span>
 
 <span class="token comment"># if you create more dependencies of fib.cc, simply add them to the end of the below command, like: -o ./fib.js fib.cc add.cc anotherdep.cc and_so_on.cc</span>
 em++ -O3 -s <span class="token assign-left variable">WASM</span><span class="token operator">=</span><span class="token number">1</span> -s <span class="token assign-left variable">EXPORTED_RUNTIME_METHODS</span><span class="token operator">=</span><span class="token string">'[<span class="token entity" title="\&quot;">\"</span>cwrap<span class="token entity" title="\&quot;">\"</span>]'</span> -s <span class="token assign-left variable">ALLOW_MEMORY_GROWTH</span><span class="token operator">=</span><span class="token number">1</span> -s <span class="token assign-left variable">MODULARIZE</span><span class="token operator">=</span><span class="token number">1</span> -s <span class="token string">'EXPORT_NAME="fib"'</span> -s <span class="token string">'EXPORTED_FUNCTIONS=["_fib"]'</span> -s <span class="token string">"ENVIRONMENT='web'"</span> -o ./fib.js fib.cc add.cc
