@@ -4,7 +4,7 @@ date: "2019-03-02T09:00:00.009Z"
 category: "works"
 ---
 So I nearly worked half a year (indeed!) on the project [Youtube Lite](https://youtube-lite.js.org).
-Here's a [related post on that if you wanna see.](https://9oelm.github.io/2018-09-18--Controlled-youtube-(2):-adding-tests/)
+Here's a [related post on that if you wanna see.](https://joel.is-a.dev/2018-09-18--Controlled-youtube-(2):-adding-tests/)
 
 # Things I learned
 

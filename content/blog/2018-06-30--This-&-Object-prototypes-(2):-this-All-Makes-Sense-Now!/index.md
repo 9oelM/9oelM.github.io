@@ -106,7 +106,7 @@ Just any global context calling the function that had an implicit binding would 
     ```
 
 ### 3. Explicit binding
-Use `call` and `apply` to use a selected object for `this` binding. Also refer to [the previous post](https://9oelm.github.io/development/2018/04/09/This-&-Object-prototypes-(1)-this-or-That.html).
+Use `call` and `apply` to use a selected object for `this` binding. Also refer to [the previous post](https://joel.is-a.dev/development/2018/04/09/This-&-Object-prototypes-(1)-this-or-That.html).
 
 Invoke `foo` with explicit binding to `obj` using `call`:
 

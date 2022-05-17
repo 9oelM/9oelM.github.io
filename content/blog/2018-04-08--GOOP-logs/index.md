@@ -139,7 +139,7 @@ and then, i tried to make them into feasible figures. also, I tried to make vers
 
 ## Making the landing page
 
-(https://9oelm.github.io/GOOP/)[https://9oelm.github.io/GOOP/]
+(https://joel.is-a.dev/GOOP/)[https://joel.is-a.dev/GOOP/]
 
 # Goop now
 I worked on [GOOP](https://goop.ai)'s project together with Jeff & Peter even before they started building a service. You can see my related posts on that. 

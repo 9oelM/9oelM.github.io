@@ -436,7 +436,7 @@ const styles = theme => ({
 But I did not quite get the hang of how it works and how it actually gets applied to React. So I finally found the [API](https://material-ui.com/customization/css-in-js/).
 
 ## Starting off
-[Last time](https://9oelm.github.io/works/2018/06/13/Creating-music-player-(2)-Specifics.html), we looked into how redux in a web development project could be installed and set up. Now we are going to find out how to actually connect the source with redux configruations (for example, editing state in the `store` when a button is clicked)
+[Last time](https://joel.is-a.dev/works/2018/06/13/Creating-music-player-(2)-Specifics.html), we looked into how redux in a web development project could be installed and set up. Now we are going to find out how to actually connect the source with redux configruations (for example, editing state in the `store` when a button is clicked)
 
 ## Redux and React are not... a family
 They are just separate, unrelated libraries. They are just good to be used together. 

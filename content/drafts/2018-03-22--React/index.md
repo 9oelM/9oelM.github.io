@@ -268,7 +268,7 @@ this.setState((prevState, props) => ({
 
 ## Exploring, astray
 
-So from [React (1)](https://9oelm.github.io/development/2018/03/21/React-(1).html) to [React (4)](https://9oelm.github.io/development/2018/04/05/React-(4).html), I think I learned things, so I plan to create a little gallery app.
+So from [React (1)](https://joel.is-a.dev/development/2018/03/21/React-(1).html) to [React (4)](https://joel.is-a.dev/development/2018/04/05/React-(4).html), I think I learned things, so I plan to create a little gallery app.
 
 I did not know anything, so I decided to go for the easiest way: `create-react-app`.
 

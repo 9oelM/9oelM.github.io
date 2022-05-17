@@ -278,7 +278,7 @@ a person usually has two reasons for doing a thing:
 
 ## Reflections
 
-Thankfully, I feel like I'm really good at this. Whenever I have an interview or an important event like it, I prepare a special way to dramatize my experiences so that I can stand out. [An example of one story can be found in this post](https://9oelm.github.io/2018-04-20--My-story-(1):-changes-that-occurred-from-high-school-to-the-Navy/).
+Thankfully, I feel like I'm really good at this. Whenever I have an interview or an important event like it, I prepare a special way to dramatize my experiences so that I can stand out. [An example of one story can be found in this post](https://joel.is-a.dev/2018-04-20--My-story-(1):-changes-that-occurred-from-high-school-to-the-Navy/).
 
 ## 12: When nothing else works, try this: throw down a challenge.
 

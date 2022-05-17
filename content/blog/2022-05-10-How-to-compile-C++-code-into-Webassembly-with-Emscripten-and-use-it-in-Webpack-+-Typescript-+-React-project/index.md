@@ -21,7 +21,7 @@ But the answer was a big fat no. And this use-case is very poorly and fragmented
 
 First off, just look at the demo and confirm it's working. lol.
 
-https://9oelm.github.io/emscripten-cplusplus-webpack-example/
+https://joel.is-a.dev/emscripten-cplusplus-webpack-example/
 
 ## Repo
 
