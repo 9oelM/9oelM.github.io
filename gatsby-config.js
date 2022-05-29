@@ -138,5 +138,6 @@ module.exports = {
         shortname: `joelmun`
       }
     },
+    `gatsby-plugin-sitemap`,
   ],
 }
