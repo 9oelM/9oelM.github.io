@@ -94,3 +94,8 @@ jobs:
           fi
 ```
 
+First, I didn't want to spend a lot on this because by doing this I am already commiting some of my time, while I got many other things to do. So there's no fancy database, no pixel-by-pixel comparison with the previous image - anything like that. no. Just wanted to keep it as simple as possible. So I initially wanted to run the cron job like every 5 minutes, so that I would immediately know if there's a change from the website.
+
+But then I found that a consistent cron behavior is not possible at all for Github actions, probably due to heavy loads of actions from numerous users every day. Here's a related info: https://upptime.js.org/blog/2021/01/22/github-actions-schedule-not-working/
+
+So what happened when I set the cron schedule to `'*/5 * * * *'` was that it just didn't run at all. So I changed it to `*/30` and it started to work reasonably, and getting an update every 30-ish minutes was still OK.
