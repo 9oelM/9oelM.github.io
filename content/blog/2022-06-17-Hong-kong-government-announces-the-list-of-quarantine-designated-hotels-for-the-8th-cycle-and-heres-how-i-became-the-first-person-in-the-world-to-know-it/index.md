@@ -1,6 +1,6 @@
 ---
 title: "Hong Kong government announces the list of quarantine designated hotels for the 8th cycle, and here's how I became the first person in the world to know it."
-date: "2022-06-09T09:00:00.009Z"
+date: "2022-06-17T09:00:00.009Z"
 tags: ["life", "hacking"]
 tab: "post"
 keywords: ["hong kong", "qurantine", "hotel", "github actions"]
@@ -28,8 +28,8 @@ And what's really frustrating also was that even **the date of announcement of t
 |---|---------------------------------|----------------------------|-------------------------------------------------------------------|---|
 |   |  1 March 2022 - 31 July 2022 (7th)     |  1 August 2022 - 31 October 2022 (8th) | 16 June 2022                            |  46 days |
 |   |  1 December 2021 - 28 February 2022 (6th)       |   1 March 2022 - 31 July 2022 (7th)     | 31 December 2021           | 60 days |
-|   |   1 September 2021 - November 30 2021 (5th)   |  1 December 2021 - 28 February 2022 (6th)  |          19 October 2021  | 43 days |
-|   |   20 June 2021 - 31 August 2021 (4th)  |   1 September 2021 - November 30 2021 (5th)  |   30 July 2021  | 33 days  |
+|   |   1 September 2021 - 30 November 2021 (5th)   |  1 December 2021 - 28 February 2022 (6th)  |          19 October 2021  | 43 days |
+|   |   20 June 2021 - 31 August 2021 (4th)  |   1 September 2021 - 30 November 2021 (5th)  |   30 July 2021  | 33 days  |
 
 Historically, HK government announced the list of hotels in the next cycle before one to two months. And it was late May/very early June when I was trying to find a hotel.. so I expected the list of the hotels for the 8th cycle to be announced quite soon (which turned out to happen about a fortnight later).
 
@@ -39,15 +39,15 @@ So without being able to make a certain _and_ great choice , I was looking for a
 - This hotel is obviously not the best (Google Review 3.8, 4 stars), but other hotels were quite occupied already. I spent hours trying to look for a better one but could not find one.
 - Even the employees at this hotel do not know if the hotel would be joining the list of quarantine designated hotels for the next cycle. If it turns out it's not, then I would need to book another hotel.
 
-So that apparently wasn't the end of the story. I had to do something. I wanted to be the first person in the world to know about the list of hotels in the 8th cycle when Hong Kong government would announce it (which was yesterday, June 16) and choose another hotel if needed, cancelling the one I booked originally.
+So that apparently wasn't the end of the story. I had to do something. Because there were many global competitors travelling to Hong Kong, I wanted to be the first person in the world to know about the list of hotels in the 8th cycle when Hong Kong government would announce it (which was yesterday, June 16) and choose another hotel if needed, cancelling the one I booked originally.
 
-## Cron in Github actions + Telegram bot
+## Cron in Github actions + Telegram bot to the rescue
 
 So I decided to monitor [the website](https://www.coronavirus.gov.hk/eng/designated-hotel-list.html) using Github actions and Telegram. The workflows were simple. There were two:
-- `screenshot_designated_hotels_landing_page.yml`: just sends a screenshot of https://www.coronavirus.gov.hk/eng/designated-hotel-list.html to me via Telegram so that I can check if there's an additional remark about the eighth cycle.
+- `screenshot_designated_hotels_landing_page.yml`: just sends a screenshot of https://www.coronavirus.gov.hk/eng/designated-hotel-list.html to me via Telegram so that I can check as soon as there's an additional remark about the eighth cycle.
 - `send_designated_hotels_list_pdf.yml`: sends a PDF of the list of designated hotels in the 8th cycle if it is available.
 
-Really simple - just a few lines of codes in Github workflow files:
+It's really simple - just a few lines of codes in Github workflow files:
 
 `screenshot_designated_hotels_landing_page.yml`:
 ```yml
@@ -94,8 +94,42 @@ jobs:
           fi
 ```
 
-First, I didn't want to spend a lot on this because by doing this I am already commiting some of my time, while I got many other things to do. So there's no fancy database, no pixel-by-pixel comparison with the previous image - anything like that. no. Just wanted to keep it as simple as possible. So I initially wanted to run the cron job like every 5 minutes, so that I would immediately know if there's a change from the website.
+First, I didn't want to spend a lot on this because by doing this I felt like I was already commiting some of my time to these workflow files, while I got many other things to do. So there's no fancy database, no pixel-by-pixel comparison with the previous image - anything like that. no. Just wanted to keep it as simple as possible. And then I initially wanted to run the cron job like every 5 minutes, so that I would immediately know if there's a change from the website.
 
-But then I found that a consistent cron behavior is not possible at all for Github actions, probably due to heavy loads of actions from numerous users every day. Here's a related info: https://upptime.js.org/blog/2021/01/22/github-actions-schedule-not-working/
+But then I found that a consistent cron behavior is not possible at all for Github actions, probably due to heavy loads of actions from numerous users every day. Here's a related info: https://upptime.js.org/blog/2021/01/22/github-actions-schedule-not-working/. I honestly did not expect Github to have such an issue just because it's Github. It's not a little company.. but it has that issue anyway - still pretty much ongoing, and unlikely to be solved in the near future. 
 
 So what happened when I set the cron schedule to `'*/5 * * * *'` was that it just didn't run at all. So I changed it to `*/30` and it started to work reasonably, and getting an update every 30-ish minutes was still OK.
+
+So then, [after implementing this on my Github repo](https://github.com/9oelm/cron), my Github workflows would run periodically like this
+
+![githubactions.png](./githubactions.png)
+
+and I would get such messages in my private channel on Telegram:
+
+![tg0.png](./tg0.png)
+
+Notice that the time interval between messages is not even. Sometimes it's 20 mins, sometimes it's 40, 30... but whatever. It works and just does the job.
+
+And finally, after long boring time of just checking the same images over and over - I finally noticed some noticeable development in my messages from yesterday night. First of all, my second workflow was designed to send [PDF](https://www.coronavirus.gov.hk/pdf/designated-hotel-list-v8_en.pdf) only if the URL does not return 404. And so I wasn't getting any PDF files through Telegram as long as the HK government hadn't uploaded the file yet. I knew, though, that it was going to be this exact url: https://www.coronavirus.gov.hk/pdf/designated-hotel-list-v8_en.pdf because previous files exhibited the same pattern of just appending the version (cycle) number and language at the end of the pdf file. That's why I kept sending the request for that file. 
+
+Finally, my Telegram bot sent my first `designated_hotel_list_v8.pdf` to me at 10:38PM on June 16, 2022, KST.  
+![tg3.png](./tg3.png)
+
+But it wasn't quite the file I was expecting:
+![tg2.png](./tg2.png)
+
+But at the same time, it was something. It wasn't the 404 I was getting anymore. It was the big fat 200 I longed for. The time was coming. And guess what, the next message would contain the actual PDF. That was 11:18PM on June 16, 2022, KST.
+
+![tg4.png](./tg4.png)
+
+![tg5.png](./tg5.png)
+
+So I looked at the list of hotels, found that the hotel I booked a room from is still in the list, and also that the list didn't change almost at all from the previous cycle, which kind of made me disappointed because I was thinking of all the effort put into this little Telegram bot.
+
+But remember I wasn't satisfied with the hotel I booked and I didn't even go to yet. So now that I had a clear, _deterministic_ list of the hotels that have the quarantine package in August, I searched through the ones that might still have any vacancies and eventually picked one of them that looked decent (at least better than the last one) and made a reservation right away. It was STILL HARD though - many hotels were already fully booked, although people didn't even know if the hotel they chose was going to support quarantine package for sure. Anyway, the hotel I newly booked now stands on an average score of 4.2 in Google reviews, and especially recent ones were quite nicely wrote. I liked this one better.
+
+And so that's how I became the first person in the world to know about the list of hotels in the eighth cycle in Hong Kong (probably).
+
+Moral of the story: even little automation helps.
+
+See y'all in Hong Kong.
