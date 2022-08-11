@@ -1,0 +1,8 @@
+.resume-button {
+  border: 2px solid #80DEEA !important;
+  transition: all 200ms;
+}
+.resume-button:hover {
+  background: #80DEEA !important;
+  color: #424242 !important;
+}

@@ -1,6 +1,7 @@
 import { rhythm } from "../utils/typography"
 
 export const Theme = {
+    CYAN: `#80DEEA`,
     // most dark
     Dark00: '#000000',
     Dark25: '#212121',
