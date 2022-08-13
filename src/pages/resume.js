@@ -42,7 +42,7 @@ const ResumePage = ({
       <Navigation />
       <div style={{ marginTop: `40px` }} />
       <div style={{ width: `100%`, display: `flex`, justifyContent: `center` }}>
-      <a target="_blank" href="/joel-hj-mun-resume-2.pdf" class="resume-button" style={{ ...SF.button, padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, cursor: `pointer`, borderRadius: `5px`, background: Theme.Dark50, color: Theme.Dark100 }}>Get my latest résumé here!!</a>
+      <a target="_blank" href="/joel-hj-mun-resume-3.pdf" class="resume-button" style={{ ...SF.button, padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`, cursor: `pointer`, borderRadius: `5px`, background: Theme.Dark50, color: Theme.Dark100 }}>Get my latest résumé here!!</a>
       </div>
     </div>
   </Layout>
