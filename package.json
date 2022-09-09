@@ -17,9 +17,11 @@
     "gatsby-plugin-manifest": "^2.4.27",
     "gatsby-plugin-offline": "^3.2.26",
     "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-reddit": "^0.1.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^2.6.31",
     "gatsby-plugin-sitemap": "^5.15.0",
+    "gatsby-plugin-twitter": "^4.22.0",
     "gatsby-plugin-typography": "^2.5.10",
     "gatsby-remark-autolink-headers": "^2.3.13",
     "gatsby-remark-copy-linked-files": "^2.3.13",
@@ -63,6 +65,6 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "deploy": "gatsby build && echo \"joel.is-a.dev\" >> ./public/CNAME && ./node_modules/.bin/gh-pages -d public -b master"
+    "deploy": "rm -rf ./public && gatsby build && echo \"joel.is-a.dev\" > ./public/CNAME && ./node_modules/.bin/gh-pages -d public -b master"
   }
 }
