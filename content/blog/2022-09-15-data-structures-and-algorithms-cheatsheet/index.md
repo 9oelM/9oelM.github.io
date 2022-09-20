@@ -1,5 +1,5 @@
 ---
-title: "My own data structures and algorithms cheatsheet"
+title: "Data structures and algorithms cheatsheet"
 date: "2022-09-15T09:00:00.009Z"
 tags: ["algorithm"]
 tab: "post"
