@@ -510,3 +510,31 @@ def test_trie() -> bool:
 ```
 
 ## Dijkstra's algorithm
+
+# Dynamic programming
+
+Usually, dymamic programming would consist of creating some memo that stores information about certain index.
+
+Here's an example:
+
+> Given two integer arrays nums1 and nums2, return the maximum length of a subarray that appears in both arrays.
+
+> 
+  ```
+  Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
+  Output: 3
+  Explanation: The repeated subarray with maximum length is [3,2,1].
+  ```
+
+The answer based on DP would be marking the index with some adjustment on the value that was marked in previous iteration.
+
+```py
+class Solution:
+    def findLength(self, nums1: List[int], nums2: List[int]) -> int:
+        max_lengths = [[0] * (len(nums2) + 1) for _ in range(len(nums1) + 1)]
+        for n1_index in range(0, len(nums1)):
+            for n2_index in range(0, len(nums2)):
+                if nums1[n1_index] == nums2[n2_index]:
+                    max_lengths[n1_index + 1][n2_index + 1] = max_lengths[n1_index][n2_index] + 1
+        return max(max(row) for row in max_lengths)
+```
