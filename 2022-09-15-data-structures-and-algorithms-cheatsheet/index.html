@@ -48,16 +48,39 @@
         }
       }
     })
-  </script><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#009688"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><title data-react-helmet="true">Data structures and algorithms cheatsheet | Joel&#x27;s dev blog</title><meta data-react-helmet="true" name="description" content="Preface Arrays and strings Useful code snippets Linked lists Stacks and queues Graphs and trees DFS and BFS Dealing with the adjacency list Topological sort DAG…"/><meta data-react-helmet="true" name="keywords" content="data structures, algorithm"/><meta data-react-helmet="true" name="author" content="Joel Mun"/><meta data-react-helmet="true" name="copyright" content="Joel Mun"/><meta data-react-helmet="true" property="og:title" content="Data structures and algorithms cheatsheet"/><meta data-react-helmet="true" property="og:description" content="Preface Arrays and strings Useful code snippets Linked lists Stacks and queues Graphs and trees DFS and BFS Dealing with the adjacency list Topological sort DAG…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Joel Mun"/><meta data-react-helmet="true" name="twitter:title" content="Data structures and algorithms cheatsheet"/><meta data-react-helmet="true" name="twitter:description" content="Preface Arrays and strings Useful code snippets Linked lists Stacks and queues Graphs and trees DFS and BFS Dealing with the adjacency list Topological sort DAG…"/><meta data-react-helmet="true" http-equiv="cache-control" content="max-age=0"/><meta data-react-helmet="true" http-equiv="cache-control" content="no-cache"/><meta data-react-helmet="true" http-equiv="expires" content="0"/><meta data-react-helmet="true" http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/><meta data-react-helmet="true" http-equiv="pragma" content="no-cache"/><meta data-react-helmet="true" name="google-site-verification" content="bP_WsRWQpdoQqfJ80oHjGcWePMZ8Oa4TNQiT9UgDbfY"/><link href="//fonts.googleapis.com/css?family=Noto+Sans+KR:700|Noto+Sans+KR:400,400i,700,700i,900,900i" rel="stylesheet" type="text/css"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><link rel="preconnect" href="https://embed.redditmedia.com"/><link rel="preconnect" href="https://www.reddit.com"/><link rel="preconnect" href="https://www.redditstatic.com"/><link as="script" rel="preload" href="/webpack-runtime-8ba729b67ee3770aff49.js"/><link as="script" rel="preload" href="/framework-29ba174b433dc5858bed.js"/><link as="script" rel="preload" href="/app-8f18d4d515f96e543a47.js"/><link as="script" rel="preload" href="/styles-e9d24b1846c7d6eb9685.js"/><link as="script" rel="preload" href="/commons-4e0b51572f4e218ee5e2.js"/><link as="script" rel="preload" href="/993e8de6c2890ca75e83b87a5adcc0733b99fd45-8f5aee00595b7b0ef6e1.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-84be0fc5ab74629edadb.js"/><link as="fetch" rel="preload" href="/page-data/2022-09-15-data-structures-and-algorithms-cheatsheet/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3128451518.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/426816048.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:70rem;padding:2.625rem 1.3125rem;background-color:#212121"><header><h1 style="font-size:3.95285rem;line-height:4.375rem;margin-bottom:2.625rem;margin-top:0;color:#E0E0E0"><a style="box-shadow:none;text-decoration:none;color:#E0E0E0" href="/">Joel&#x27;s dev blog</a></h1></header><main><a href="https://hits.seeyoufarm.com" style="border:none;color:transparent"><img style="margin-bottom:0" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2F9oelm.github.io&amp;count_bg=%23848683&amp;title_bg=%23555555&amp;icon=&amp;icon_color=%23E7E7E7&amp;title=hits+since+2022&amp;edge_flat=false"/></a><h1 style="color:#E0E0E0;margin-top:5px">Data structures and algorithms cheatsheet</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem;color:#E0E0E0">September 15, 2022</p><div><div class="table-of-contents">
+  </script><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#009688"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png"/><title data-react-helmet="true">Data structures and algorithms cheatsheet | Joel&#x27;s dev blog</title><meta data-react-helmet="true" name="description" content="Preface Big O cheatsheet Arrays and strings Useful code snippets Sliding window Intuition Sliding window of dynamic range Two pointers Tarversing from the right…"/><meta data-react-helmet="true" name="keywords" content="data structures, algorithm"/><meta data-react-helmet="true" name="author" content="Joel Mun"/><meta data-react-helmet="true" name="copyright" content="Joel Mun"/><meta data-react-helmet="true" property="og:title" content="Data structures and algorithms cheatsheet"/><meta data-react-helmet="true" property="og:description" content="Preface Big O cheatsheet Arrays and strings Useful code snippets Sliding window Intuition Sliding window of dynamic range Two pointers Tarversing from the right…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Joel Mun"/><meta data-react-helmet="true" name="twitter:title" content="Data structures and algorithms cheatsheet"/><meta data-react-helmet="true" name="twitter:description" content="Preface Big O cheatsheet Arrays and strings Useful code snippets Sliding window Intuition Sliding window of dynamic range Two pointers Tarversing from the right…"/><meta data-react-helmet="true" http-equiv="cache-control" content="max-age=0"/><meta data-react-helmet="true" http-equiv="cache-control" content="no-cache"/><meta data-react-helmet="true" http-equiv="expires" content="0"/><meta data-react-helmet="true" http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/><meta data-react-helmet="true" http-equiv="pragma" content="no-cache"/><meta data-react-helmet="true" name="google-site-verification" content="bP_WsRWQpdoQqfJ80oHjGcWePMZ8Oa4TNQiT9UgDbfY"/><link href="//fonts.googleapis.com/css?family=Noto+Sans+KR:700|Noto+Sans+KR:400,400i,700,700i,900,900i" rel="stylesheet" type="text/css"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><link rel="preconnect" href="https://embed.redditmedia.com"/><link rel="preconnect" href="https://www.reddit.com"/><link rel="preconnect" href="https://www.redditstatic.com"/><link as="script" rel="preload" href="/webpack-runtime-8ba729b67ee3770aff49.js"/><link as="script" rel="preload" href="/framework-29ba174b433dc5858bed.js"/><link as="script" rel="preload" href="/app-8f18d4d515f96e543a47.js"/><link as="script" rel="preload" href="/styles-e9d24b1846c7d6eb9685.js"/><link as="script" rel="preload" href="/commons-4e0b51572f4e218ee5e2.js"/><link as="script" rel="preload" href="/993e8de6c2890ca75e83b87a5adcc0733b99fd45-8f5aee00595b7b0ef6e1.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-84be0fc5ab74629edadb.js"/><link as="fetch" rel="preload" href="/page-data/2022-09-15-data-structures-and-algorithms-cheatsheet/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3128451518.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/426816048.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:70rem;padding:2.625rem 1.3125rem;background-color:#212121"><header><h1 style="font-size:3.95285rem;line-height:4.375rem;margin-bottom:2.625rem;margin-top:0;color:#E0E0E0"><a style="box-shadow:none;text-decoration:none;color:#E0E0E0" href="/">Joel&#x27;s dev blog</a></h1></header><main><a href="https://hits.seeyoufarm.com" style="border:none;color:transparent"><img style="margin-bottom:0" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2F9oelm.github.io&amp;count_bg=%23848683&amp;title_bg=%23555555&amp;icon=&amp;icon_color=%23E7E7E7&amp;title=hits+since+2022&amp;edge_flat=false"/></a><h1 style="color:#E0E0E0;margin-top:5px">Data structures and algorithms cheatsheet</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.75rem;color:#E0E0E0">September 15, 2022</p><div><div class="table-of-contents">
 <ul>
 <li><a href="#preface">Preface</a></li>
+<li><a href="#big-o-cheatsheet">Big O cheatsheet</a></li>
 <li>
 <p><a href="#arrays-and-strings">Arrays and strings</a></p>
 <ul>
 <li><a href="#useful-code-snippets">Useful code snippets</a></li>
+<li>
+<p><a href="#sliding-window">Sliding window</a></p>
+<ul>
+<li><a href="#intuition">Intuition</a></li>
+<li><a href="#sliding-window-of-dynamic-range">Sliding window of dynamic range</a></li>
 </ul>
 </li>
-<li><a href="#linked-lists">Linked lists</a></li>
+<li><a href="#two-pointers">Two pointers</a></li>
+<li><a href="#tarversing-from-the-right">Tarversing from the right</a></li>
+<li><a href="#sorting-the-array">Sorting the array</a></li>
+<li><a href="#precomputation">Precomputation</a></li>
+<li><a href="#index-has-a-hash-key">Index has a hash key</a></li>
+</ul>
+</li>
+<li><a href="#hash">Hash</a></li>
+<li>
+<p><a href="#linked-lists">Linked lists</a></p>
+<ul>
+<li><a href="#the-dummy-head-technique">The ‘dummy head’ technique</a></li>
+<li><a href="#singly-linked-list-does-a-lot">Singly linked list does a lot</a></li>
+<li><a href="#the-runner-technique">The runner technique</a></li>
+<li><a href="#reversing-the-list">Reversing the list</a></li>
+<li><a href="#cycle-detection">Cycle detection</a></li>
+</ul>
+</li>
 <li><a href="#stacks-and-queues">Stacks and queues</a></li>
 <li>
 <p><a href="#graphs-and-trees">Graphs and trees</a></p>
@@ -84,10 +107,45 @@
 <li><a href="#dijkstras-algorithm">Dijkstra’s algorithm</a></li>
 </ul>
 </li>
+<li><a href="#dynamic-programming">Dynamic programming</a></li>
 </ul>
 </div>
 <h1 id="preface" style="position:relative;">Preface<a href="#preface" aria-label="preface permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <p>This is my own curated list of tips and tricks about data structures and algorithms, in Python or TypeScript.</p>
+<h1 id="big-o-cheatsheet" style="position:relative;">Big O cheatsheet<a href="#big-o-cheatsheet" aria-label="big o cheatsheet permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<p>Everything is from <a href="bigocheatsheet.com">bigocheatsheet.com</a>. It’s just that I don’t visit it as often as my blog.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/0cf2907c9259fb4d96f3585a029371fe/2dab4/bigocheatsheet1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAACh0lEQVQ4y2VT124cMRBTL9vrbfM1O2cbCZy3xDDy/9/FUF4nSOCHgdqI5HAk0Z3uYeoGruugmwbSeQgh/gvvP++lyL3F19JgtAKFYp7k/uFoMTUFZAhQ6aJSfy9Ya6G5/vX2hrauPwFuhx7fhoBcC4ylgCOwKDnJ/klKAGWeI5Jg6Hvcnp/x+PKCy+2Gtm2htX4n8iFi6ko8PWToLhncFwHVEsMaD20dnHNMNpjmGd9/vqJfFghjIAhirleIaYKUEjnJEuDQD3j58YrqMEPFCFUESEPAbVuhqEprBW8lLH2J5xMPNYzey9dUG9YVjpacTidYZ2mPRn7PeXBQ1vDOBSr5n9jSpZArrCcF4yQcmXKrsUYCKg1PwwdHdkliwT1PkkVgWQUOUaCmhwP906kpqYO6KuHXGZHh6JvMMpjDiDBPVLbAeAdD0lSy94Hr1Cw2jcSGIJpnxqTz1OW7I8opQ1lTVSsRGCZKFA39qgnAMRQSWZYaprEwv+0bLFS8+D06Kowdm5K6fLk9ojlEdAR0qUscbRBoGyZV+1rnJMv3FzAsK4lLDCz1D+jKMRQfCo8PN+RLhuxAQIahN46HFcEKggUCN3xaNS9FWrEeT+imFlkiZZllCpYviuQxY7nyp/QRlgbbO4JdOVYsOVOoCdZSdcXknCV7dnGcF5IVWFneTJLZ78Cu+lDYsgTTBdhZvIO6M1X2HOlfSArpqa/S99s9nLaNb69DxXVNG0aCjvTQZx8Kh3WDGyPMSKCBDSGwpsFmktDc07N8t8K71EmDfhgR+xIiT9+MQS8FzwquVSq92+5gpwh/3sv1T1S6UNVRwR33vXjeS3Z8syPzi+MITxsagrSMOu6eJ8DfMO44RALxe28AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="bigocheatsheet1.png"
+        title="bigocheatsheet1.png"
+        src="/static/0cf2907c9259fb4d96f3585a029371fe/fcda8/bigocheatsheet1.png"
+        srcset="/static/0cf2907c9259fb4d96f3585a029371fe/12f09/bigocheatsheet1.png 148w,
+/static/0cf2907c9259fb4d96f3585a029371fe/e4a3f/bigocheatsheet1.png 295w,
+/static/0cf2907c9259fb4d96f3585a029371fe/fcda8/bigocheatsheet1.png 590w,
+/static/0cf2907c9259fb4d96f3585a029371fe/efc66/bigocheatsheet1.png 885w,
+/static/0cf2907c9259fb4d96f3585a029371fe/c83ae/bigocheatsheet1.png 1180w,
+/static/0cf2907c9259fb4d96f3585a029371fe/2dab4/bigocheatsheet1.png 1461w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
 <h1 id="arrays-and-strings" style="position:relative;">Arrays and strings<a href="#arrays-and-strings" aria-label="arrays and strings permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <ul>
 <li>An array can work as a replacement for hash tables if you know the range of indices that will go into the array. But sometimes it will waste spaces.</li>
@@ -98,6 +156,119 @@
 <p>Initialize an empty array of length 10 full of 0’s:</p>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token function">Array</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span></code></pre></div>
 <div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py">arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span></code></pre></div>
+<p>Be careful when you are creating a 2D array in Python:</p>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py">doesnt_work_arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token comment"># doesn't work</span>
+2d_arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token comment"># works</span></code></pre></div>
+<h2 id="sliding-window" style="position:relative;">Sliding window<a href="#sliding-window" aria-label="sliding window permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<ul>
+<li>Sliding window technique is used in subarray or substring problems, like longest, shortest, or target value.</li>
+<li>For these problems, there is usually an apparent brute force solution that runs in O(N²), O(2^N)</li>
+<li>Two pointers move in the same direction in the way that they will never overtake each other (O(n))</li>
+<li>The key concept is you want to keep track of the previous best information you have</li>
+</ul>
+<h3 id="intuition" style="position:relative;">Intuition<a href="#intuition" aria-label="intuition permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>FYI: Big help from this <a href="https://stackoverflow.com/questions/8269916/what-is-sliding-window-algorithm-examples">stackoverflow answer</a>.</p>
+<p>Sliding window can be used when you want to efficiently get the maximum sum of a subarray of length 5 in an array, for example.</p>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token punctuation">[</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">]</span></code></pre></div>
+<p>The bruteforce algorithm will clearly introduce <code class="language-text">O(length_of_the_array * length_of_the_subarray)</code> time complexity. But we can improve by ‘sliding the window’:</p>
+<ul>
+<li>The first subarray’s sum is sum(5, 7, 1, 4, 3) = 20</li>
+<li>The second subarray’s sum is sum(7, 1, 4, 3, 6) = 21</li>
+<li>… and so on</li>
+</ul>
+<p>But the only numbers changing in the calculation are the first and the last number (<code class="language-text">5</code> and <code class="language-text">6</code>). So simply subtracting <code class="language-text">5</code> from and adding <code class="language-text">6</code> to the first subarray’s sum would deduce the second array’s sum. The same goes for the next subarrays.</p>
+<p>This will result in <code class="language-text">O(n)</code> time complexity because subtracting and adding ops are fixed at <code class="language-text">2 * O(1)</code> regardless of length of the array/subarray.</p>
+<h3 id="sliding-window-of-dynamic-range" style="position:relative;">Sliding window of dynamic range<a href="#sliding-window-of-dynamic-range" aria-label="sliding window of dynamic range permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<p>Sometimes, the sliding window’s length is not fixed. A good example is <a href="https://leetcode.com/problems/minimum-window-substring/">Minimum window substring</a>. In this case, you will need to move the <code class="language-text">start</code> and <code class="language-text">end</code> pointers to the array dynamically. </p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/41fe00b45c1839cb139b0610b72310d0/7c5b4/dynamic-sliding-window.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.86486486486486%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACDklEQVQ4y1VT2ZKbQAzkNxJz3wzDcNrGeGu9yT6kNnnM/39LRy0Wb+VBNQxIrW6p8aIoACMITijLHOt6gXNWo65LfR/Hoea0bfOMpqlQVQWMqRGGvgbzvKLIYJpaE6axx3ZbcT7PWJZJ3+V5qoks6PsO0zTAWoNRcrVxZ2GlAZuzqQKyiOzYkadtjRYx+I2JBOzkPgxOgfiNTW3Xoh86rWWOxwJemJhliUpknE7f4H8+M5GgbHYEZVNuk+WoJeJkH4tHOQQ8ZpIkEdI0VgkHc6ogKFnN86iyb7crXG9xaweca4swDhBHMkOyIjsmNwLCBgRiIRlQHqWSKZ9nAZuncZdL2ZcZtamUhDI0wozsyITseOpGzb5NsmPTg6GTxRC4qgvkRQrf/w5fxhOEp6+llBr5c05p8iWZYHm2bzqXvMU6DNZish1GY9G7DubTRsz3OLdKKOdlptRNZ5CVqUo8PMogYJJGGCuDVea22RF3N2MkoIyGaqjQc7bF+/WOt3nFr+1Vz9UOcGKdwwoEO7yYZrH6lqM6Nn24QiVbmdXv7Q1/JD7Wh5w/8PfnB94fD9RN+QTkSTMv86Rb5lKWeV/OJhu/Xpbdh+r+84SsylA0BVrXorYiQRagdon8//6UixQSlEAE5v1+v6krlCGHP/RuXzsNHAYah5kPuXzmll9eNlzXM7ZVWDUOc9UqQzZj3T8gU33WFL7HxAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="dynamic-sliding-window.png"
+        title="dynamic-sliding-window.png"
+        src="/static/41fe00b45c1839cb139b0610b72310d0/fcda8/dynamic-sliding-window.png"
+        srcset="/static/41fe00b45c1839cb139b0610b72310d0/12f09/dynamic-sliding-window.png 148w,
+/static/41fe00b45c1839cb139b0610b72310d0/e4a3f/dynamic-sliding-window.png 295w,
+/static/41fe00b45c1839cb139b0610b72310d0/fcda8/dynamic-sliding-window.png 590w,
+/static/41fe00b45c1839cb139b0610b72310d0/efc66/dynamic-sliding-window.png 885w,
+/static/41fe00b45c1839cb139b0610b72310d0/c83ae/dynamic-sliding-window.png 1180w,
+/static/41fe00b45c1839cb139b0610b72310d0/7c5b4/dynamic-sliding-window.png 1309w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">from</span> collections <span class="token keyword">import</span> defaultdict
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> Dict
+
+<span class="token keyword">def</span> <span class="token function">minimum_window_substring</span><span class="token punctuation">(</span>s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> substr<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">str</span><span class="token punctuation">:</span>
+  substr_hash<span class="token punctuation">:</span> Dict<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">)</span>
+  window_hash<span class="token punctuation">:</span> Dict<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">)</span>
+
+  <span class="token comment"># for "ABCDAB", need_unique_chars_count will be 4 because A and B overlap</span>
+  <span class="token comment"># it's just len(substr_hash)</span>
+  need_unique_chars_count <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">for</span> c <span class="token keyword">in</span> substr<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> substr_hash<span class="token punctuation">[</span>c<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span> need_unique_chars_count <span class="token operator">+=</span> <span class="token number">1</span>
+    substr_hash<span class="token punctuation">[</span>c<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+
+  have_unique_chars_count <span class="token operator">=</span> <span class="token number">0</span>
+  minimum_window_bounds <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+  start <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token comment"># initiate 'end' from the beginning of the string</span>
+  <span class="token keyword">for</span> end <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> s<span class="token punctuation">[</span>end<span class="token punctuation">]</span> <span class="token keyword">in</span> substr_hash<span class="token punctuation">:</span>
+      window_hash<span class="token punctuation">[</span>s<span class="token punctuation">[</span>end<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+      <span class="token comment"># minimum requiremenet to create a window</span>
+      <span class="token comment"># for this char (which is s[end]) has been fulfilled</span>
+      <span class="token keyword">if</span> window_hash<span class="token punctuation">[</span>s<span class="token punctuation">[</span>end<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">==</span> substr_hash<span class="token punctuation">[</span>s<span class="token punctuation">[</span>end<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        have_unique_chars_count <span class="token operator">+=</span> <span class="token number">1</span>
+    
+    <span class="token comment"># while the condition to create a valid sliding window has</span>
+    <span class="token comment"># been fulfilled</span>
+    <span class="token keyword">while</span> have_unique_chars_count <span class="token operator">==</span> need_unique_chars_count<span class="token punctuation">:</span>
+      curr_window_size <span class="token operator">=</span> end <span class="token operator">-</span> start <span class="token operator">+</span> <span class="token number">1</span>
+      <span class="token comment"># current valid window size is smaller than the existing one</span>
+      <span class="token comment"># therefore we need to replace the window</span>
+      <span class="token keyword">if</span> minimum_window_bounds<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">or</span> curr_window_size <span class="token operator">&lt;</span> minimum_window_bounds<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> minimum_window_bounds<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        minimum_window_bounds <span class="token operator">=</span> <span class="token punctuation">[</span>start<span class="token punctuation">,</span> end<span class="token punctuation">]</span>
+      <span class="token comment"># keep shrinking from the leftmost character because</span>
+      <span class="token comment"># we checked everything with it</span>
+      window_hash<span class="token punctuation">[</span>s<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span>
+      <span class="token comment"># if you happen to take out the character</span>
+      <span class="token comment"># that was required for the minimum window,</span>
+      <span class="token comment"># decrement have_unique_chars_count by 1</span>
+      <span class="token keyword">if</span> s<span class="token punctuation">[</span>start<span class="token punctuation">]</span> <span class="token keyword">in</span> substr_hash <span class="token keyword">and</span> window_hash<span class="token punctuation">[</span>s<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> substr_hash<span class="token punctuation">[</span>s<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        have_unique_chars_count <span class="token operator">-=</span> <span class="token number">1</span>
+      start <span class="token operator">+=</span> <span class="token number">1</span>
+  <span class="token keyword">if</span> minimum_window_bounds<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token string">""</span>
+  <span class="token keyword">return</span> s<span class="token punctuation">[</span>minimum_window_bounds<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">:</span>minimum_window_bounds<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span></code></pre></div>
+<p>Complexities:</p>
+<ul>
+<li>time O(len(s) + len(substr)) because both <code class="language-text">start</code> and <code class="language-text">end</code> pointer scan the string <code class="language-text">s</code> for only one time.</li>
+<li>space: O(len(s) + len(substr)) because all we use is the hashmap for each string.</li>
+</ul>
+<h2 id="two-pointers" style="position:relative;">Two pointers<a href="#two-pointers" aria-label="two pointers permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<h2 id="tarversing-from-the-right" style="position:relative;">Tarversing from the right<a href="#tarversing-from-the-right" aria-label="tarversing from the right permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<h2 id="sorting-the-array" style="position:relative;">Sorting the array<a href="#sorting-the-array" aria-label="sorting the array permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<h2 id="precomputation" style="position:relative;">Precomputation<a href="#precomputation" aria-label="precomputation permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<h2 id="index-has-a-hash-key" style="position:relative;">Index has a hash key<a href="#index-has-a-hash-key" aria-label="index has a hash key permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<h1 id="hash" style="position:relative;">Hash<a href="#hash" aria-label="hash permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <p>Use <code class="language-text">defaultdict</code> in Python instead of checking for the key every time:</p>
 <div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">from</span> collections <span class="token keyword">import</span> defaultdict
 
@@ -113,16 +284,15 @@ somedict2 <span class="token operator">=</span> defaultdict<span class="token pu
 somedict3 <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token keyword">lambda</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>somedict3<span class="token punctuation">[</span><span class="token string">'test3'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># 3</span></code></pre></div>
 <h1 id="linked-lists" style="position:relative;">Linked lists<a href="#linked-lists" aria-label="linked lists permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<ul>
-<li>
-<p><strong>The ‘dummy head’</strong> technique: pointing to the actual head is useful for languages where there is a no explicit expression of a pointer (like <code class="language-text">LinkedListNode *node</code> in C++). So it would go like this in TS:</p>
+<h2 id="the-dummy-head-technique" style="position:relative;">The ‘dummy head’ technique<a href="#the-dummy-head-technique" aria-label="the dummy head technique permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>pointing to the actual head is useful for languages where there is a no explicit expression of a pointer (like <code class="language-text">LinkedListNode *node</code> in C++). So it would go like this in TS:</p>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">const</span> dummyHead<span class="token operator">:</span> LinkedListNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedListNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 dummyhead<span class="token punctuation">.</span>next <span class="token operator">=</span> actualHead</code></pre></div>
-</li>
-<li>You can do a lot without making a singly linked list a doubly linked list.</li>
-<li>
-<p><strong>The runner technique</strong>: it employs two pointers at the same time. For example, when you want to get the middle node of the array, you can use this.</p>
+<h2 id="singly-linked-list-does-a-lot" style="position:relative;">Singly linked list does a lot<a href="#singly-linked-list-does-a-lot" aria-label="singly linked list does a lot permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>You can do a lot without making a singly linked list a doubly linked list.</p>
+<h2 id="the-runner-technique" style="position:relative;">The runner technique<a href="#the-runner-technique" aria-label="the runner technique permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>it employs two pointers at the same time. For example, when you want to get the middle node of the array, you can use this.</p>
 <div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">middleNode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">:</span>
   slow <span class="token operator">=</span> head
   fast <span class="token operator">=</span> head
@@ -142,9 +312,7 @@ dummyhead<span class="token punctuation">.</span>next <span class="token operato
     
     <span class="token keyword">return</span> slow
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
-</li>
-<li>
-<p><strong>Reversing the list</strong>: classic. goes like this:</p>
+<h2 id="reversing-the-list" style="position:relative;">Reversing the list<a href="#reversing-the-list" aria-label="reversing the list permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>head<span class="token operator">:</span> ListNode <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token operator">:</span> ListNode <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> curr <span class="token operator">=</span> head
   <span class="token keyword">let</span> prev <span class="token operator">=</span> <span class="token keyword">null</span>
@@ -160,9 +328,11 @@ dummyhead<span class="token punctuation">.</span>next <span class="token operato
   <span class="token keyword">return</span> prev
 <span class="token punctuation">}</span></code></pre></div>
 <p>Reversing the list may be the alternative for a variable to store values sometimes. </p>
-</li>
-<li>
-<p><strong>Cycle detection</strong>: a variation of the runner technique.</p>
+<h2 id="cycle-detection" style="position:relative;">Cycle detection<a href="#cycle-detection" aria-label="cycle detection permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>A variation of the runner technique.
+Think about it this way: there are two runners in a circular track, one at a slower speed than the other.
+Their speeds are fixed. Then the faster one will catch up with the slower one at least once in a while.
+In that sense, this technique is also called tortoise and hare algorithm.</p>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">hasCycle</span><span class="token punctuation">(</span>head<span class="token operator">:</span> ListNode <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> slow <span class="token operator">=</span> head
   <span class="token keyword">let</span> fast <span class="token operator">=</span> head
@@ -178,8 +348,53 @@ dummyhead<span class="token punctuation">.</span>next <span class="token operato
 
   <span class="token keyword">return</span> <span class="token boolean">false</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
-</li>
-</ul>
+<p>Detecting the entry node to the cycle is an extension of the code above. This however requires some mathmatical reasoning:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/972cc2edb49eb8d9258e6b7406bf7014/f8915/cycle-entry-detection.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAAAsSAAALEgHS3X78AAACZklEQVQ4y42UW3bbMAxEvY/aEp+yJD+aND3t/lfG4oKEwthKkw+YMCkMZ0AAh3E8lWHAjgW//j8W78fi3KB+SkHter2UKadiMfZ9bweCMADYwGedpiQAq+4vy7nc79dyuSwl51gsZs8OBKzrXGL0G6Ab6+FZQFlTDOLnyqy79FOG3Dq650MXK+sQXEnBl+RcTUMH+sRQ5QmD6F0JblSLrvp/p1tZfSpziOUlzcp8DalcQhbQ4y7o4SQHL3EWO5fZx3IPkwZgf9JFz37FpfxOa3kVn71FQIcddpWhSOVm5ChbH4pvsriAiwC/it3aZdn7D8x6XyXD8ih2atbn8Tj+0BXwoZ09svoAyM9FJMAAeTA8i03CAv9V9+qDsE9uB6tXe7zu1RUQKdhPkUcwib+Lz0ruWHPbX+SBAE3y/xzF7+p3Y4gs28AnGMYE8UgAkVcvQLmx1QvypIBDlybNIWXCR0lKR3352BLPBXu5xbIUPi1JHbPSJBsgeYQJeVtbTgHlMdgjJb57AGtP2pHWpE3neaqSSS7BBKUOPIpEJNsjPQJq2y6zMqR1laEBkmgSDrD6wgyA+hBJy2p8aDmbTE+9bEm2XAIUuxZkr0r3T6C7vWwBSANYB0a7gD3WauOnQO/jy9VBChMDBHx8KN7xoYg/BdwGbJs0oV0w7IB9GxCQqTGz3OVWizbOLLdfStbJLFIZS7QZoNa3UweYd8pmF9Bk+a7prTMGtdNme9PlCTA1Odb8tB11Rx3C9rYVdth6+r+AJulN5L6lRQeoTRsmNXv857tvS0YugTbCrm1CA3rTte7DdPjiUf4BaIO1CfxVlD0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="cycle-entry-detection.png"
+        title="cycle-entry-detection.png"
+        src="/static/972cc2edb49eb8d9258e6b7406bf7014/fcda8/cycle-entry-detection.png"
+        srcset="/static/972cc2edb49eb8d9258e6b7406bf7014/12f09/cycle-entry-detection.png 148w,
+/static/972cc2edb49eb8d9258e6b7406bf7014/e4a3f/cycle-entry-detection.png 295w,
+/static/972cc2edb49eb8d9258e6b7406bf7014/fcda8/cycle-entry-detection.png 590w,
+/static/972cc2edb49eb8d9258e6b7406bf7014/f8915/cycle-entry-detection.png 748w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>The crux of it is the last sentence:</p>
+<blockquote>
+<p>You need to move the <code class="language-text">head</code> and <code class="language-text">slow</code> nodes forward (by one node each time), and then <strong>they will meet each other at the entry point.</strong></p>
+</blockquote>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">detectCycle</span><span class="token punctuation">(</span>head<span class="token operator">:</span> ListNode <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token operator">:</span> ListNode <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> maybeNodeInLoop <span class="token operator">=</span> <span class="token function">hasCycle</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>maybeNodeInLoop<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">null</span>
+
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>maybeNodeInLoop <span class="token operator">!=</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// practically, it never becomes null because there is a cycle</span>
+    maybeNodeInLoop <span class="token operator">=</span> maybeNodeInLoop<span class="token operator">?.</span>next <span class="token operator">??</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    head <span class="token operator">=</span> head<span class="token operator">?.</span>next <span class="token operator">??</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <h1 id="stacks-and-queues" style="position:relative;">Stacks and queues<a href="#stacks-and-queues" aria-label="stacks and queues permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h1 id="graphs-and-trees" style="position:relative;">Graphs and trees<a href="#graphs-and-trees" aria-label="graphs and trees permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h2 id="dfs-and-bfs" style="position:relative;">DFS and BFS<a href="#dfs-and-bfs" aria-label="dfs and bfs permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
@@ -653,7 +868,27 @@ FULLY_VISITED <span class="token operator">=</span> <span class="token number">2
     <span class="token keyword">assert</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span>
     <span class="token keyword">assert</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"bananas"</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> <span class="token boolean">True</span></code></pre></div>
-<h2 id="dijkstras-algorithm" style="position:relative;">Dijkstra’s algorithm<a href="#dijkstras-algorithm" aria-label="dijkstras algorithm permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2></div><hr style="margin-bottom:1.75rem"/><div style="display:flex"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDAf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABy7nSMycNUI5yDf/EABoQAQEAAwEBAAAAAAAAAAAAAAECAAMSBBH/2gAIAQEAAQUCKcJEdM/YiqC5hvZ3XqtNnSDn/8QAFhEAAwAAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/ASv/xAAWEQADAAAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8BI//EACAQAAIBAwQDAAAAAAAAAAAAAAABAhExQRASISJRUmH/2gAIAQEABj8CpQcZXOz2vwVdj57DkxwXEY4Glm+n/8QAGxAAAgMBAQEAAAAAAAAAAAAAAAERITFBYYH/2gAIAQEAAT8hgUw8H+KVqHQvZJwmVzhuN3ufBm5YyHgQkhCf6Gg//9oADAMBAAIAAwAAABAQKHz/xAAYEQACAwAAAAAAAAAAAAAAAAAAARARUf/aAAgBAwEBPxBIrk//xAAZEQADAAMAAAAAAAAAAAAAAAAAAREQIVH/2gAIAQIBAT8Qbmi+ix//xAAdEAEAAgIDAQEAAAAAAAAAAAABABEhMUFRYXHB/9oACAEBAAE/EG07OyWDzfUTIQvQcUBt9YkDm7GPYqTeWIPe/wBmi62AQwsVa+YlES9/DggPKdTCvL2xUW0HqIqGsT//2Q==" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
+<h2 id="dijkstras-algorithm" style="position:relative;">Dijkstra’s algorithm<a href="#dijkstras-algorithm" aria-label="dijkstras algorithm permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<h1 id="dynamic-programming" style="position:relative;">Dynamic programming<a href="#dynamic-programming" aria-label="dynamic programming permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<p>Usually, dymamic programming would consist of creating some memo that stores information about certain index.</p>
+<p>Here’s an example:</p>
+<blockquote>
+<p>Given two integer arrays nums1 and nums2, return the maximum length of a subarray that appears in both arrays.</p>
+</blockquote>
+<blockquote>
+</blockquote>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
+Output: 3
+Explanation: The repeated subarray with maximum length is [3,2,1].</code></pre></div>
+<p>The answer based on DP would be marking the index with some adjustment on the value that was marked in previous iteration.</p>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">findLength</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums1<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums2<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        max_lengths <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>nums2<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>nums1<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> n1_index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> n2_index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> nums1<span class="token punctuation">[</span>n1_index<span class="token punctuation">]</span> <span class="token operator">==</span> nums2<span class="token punctuation">[</span>n2_index<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                    max_lengths<span class="token punctuation">[</span>n1_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>n2_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> max_lengths<span class="token punctuation">[</span>n1_index<span class="token punctuation">]</span><span class="token punctuation">[</span>n2_index<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> <span class="token builtin">max</span><span class="token punctuation">(</span><span class="token builtin">max</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span> <span class="token keyword">for</span> row <span class="token keyword">in</span> max_lengths<span class="token punctuation">)</span></code></pre></div></div><hr style="margin-bottom:1.75rem"/><div style="display:flex"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDAf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABy7nSMycNUI5yDf/EABoQAQEAAwEBAAAAAAAAAAAAAAECAAMSBBH/2gAIAQEAAQUCKcJEdM/YiqC5hvZ3XqtNnSDn/8QAFhEAAwAAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/ASv/xAAWEQADAAAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8BI//EACAQAAIBAwQDAAAAAAAAAAAAAAABAhExQRASISJRUmH/2gAIAQEABj8CpQcZXOz2vwVdj57DkxwXEY4Glm+n/8QAGxAAAgMBAQEAAAAAAAAAAAAAAAERITFBYYH/2gAIAQEAAT8hgUw8H+KVqHQvZJwmVzhuN3ufBm5YyHgQkhCf6Gg//9oADAMBAAIAAwAAABAQKHz/xAAYEQACAwAAAAAAAAAAAAAAAAAAARARUf/aAAgBAwEBPxBIrk//xAAZEQADAAMAAAAAAAAAAAAAAAAAAREQIVH/2gAIAQIBAT8Qbmi+ix//xAAdEAEAAgIDAQEAAAAAAAAAAAABABEhMUFRYXHB/9oACAEBAAE/EG07OyWDzfUTIQvQcUBt9YkDm7GPYqTeWIPe/wBmi62AQwsVa+YlES9/DggPKdTCvL2xUW0HqIqGsT//2Q==" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/aba1d/profile-pic.jpg 1.5x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/b315d/profile-pic.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/aba1d/profile-pic.jpg 1.5x,
