@@ -12,6 +12,12 @@ keywords: ["data structures", "algorithm"]
 
 This is my own curated list of tips and tricks about data structures and algorithms, in Python or TypeScript.
 
+# Big O cheatsheet
+
+Everything is from [bigocheatsheet.com](bigocheatsheet.com). It's just that I don't visit it as often as my blog.
+
+![bigocheatsheet1.png](./bigocheatsheet1.png)
+
 # Arrays and strings
 
 - An array can work as a replacement for hash tables if you know the range of indices that will go into the array. But sometimes it will waste spaces.
@@ -27,6 +33,108 @@ const arr = Array(100).fill(0)
 ```py
 arr = [0] * 10
 ```
+
+Be careful when you are creating a 2D array in Python:
+
+```py
+doesnt_work_arr = [[0] * 10] * 10 # doesn't work
+2d_arr = [[0] * 10 for _ in range(10)] # works
+```
+
+## Sliding window
+
+- Sliding window technique is used in subarray or substring problems, like longest, shortest, or target value.
+- For these problems, there is usually an apparent brute force solution that runs in O(N²), O(2^N)
+- Two pointers move in the same direction in the way that they will never overtake each other (O(n))
+- The key concept is you want to keep track of the previous best information you have
+
+### Intuition
+
+FYI: Big help from this [stackoverflow answer](https://stackoverflow.com/questions/8269916/what-is-sliding-window-algorithm-examples).
+
+Sliding window can be used when you want to efficiently get the maximum sum of a subarray of length 5 in an array, for example.
+
+```py
+[ 5, 7, 1, 4, 3, 6, 2, 9, 2 ]
+```
+
+The bruteforce algorithm will clearly introduce `O(length_of_the_array * length_of_the_subarray)` time complexity. But we can improve by 'sliding the window':
+
+- The first subarray's sum is sum(5, 7, 1, 4, 3) = 20
+- The second subarray's sum is sum(7, 1, 4, 3, 6) = 21
+- ... and so on
+
+But the only numbers changing in the calculation are the first and the last number (`5` and `6`). So simply subtracting `5` from and adding `6` to the first subarray's sum would deduce the second array's sum. The same goes for the next subarrays.
+
+This will result in `O(n)` time complexity because subtracting and adding ops are fixed at `2 * O(1)` regardless of length of the array/subarray.
+
+### Sliding window of dynamic range
+
+Sometimes, the sliding window's length is not fixed. A good example is [Minimum window substring](https://leetcode.com/problems/minimum-window-substring/). In this case, you will need to move the `start` and `end` pointers to the array dynamically. 
+
+![dynamic-sliding-window.png](./dynamic-sliding-window.png)
+
+```py
+from collections import defaultdict
+from typing import Dict
+
+def minimum_window_substring(s: str, substr: str) -> str:
+  substr_hash: Dict[str, int] = defaultdict(int)
+  window_hash: Dict[str, int] = defaultdict(int)
+
+  # for "ABCDAB", need_unique_chars_count will be 4 because A and B overlap
+  # it's just len(substr_hash)
+  need_unique_chars_count = 0
+  for c in substr:
+    if substr_hash[c] == 0: need_unique_chars_count += 1
+    substr_hash[c] += 1
+
+  have_unique_chars_count = 0
+  minimum_window_bounds = [-1, -1]
+  start = 0
+  # initiate 'end' from the beginning of the string
+  for end in range(len(s)):
+    if s[end] in substr_hash:
+      window_hash[s[end]] += 1
+      # minimum requiremenet to create a window
+      # for this char (which is s[end]) has been fulfilled
+      if window_hash[s[end]] == substr_hash[s[end]]:
+        have_unique_chars_count += 1
+    
+    # while the condition to create a valid sliding window has
+    # been fulfilled
+    while have_unique_chars_count == need_unique_chars_count:
+      curr_window_size = end - start + 1
+      # current valid window size is smaller than the existing one
+      # therefore we need to replace the window
+      if minimum_window_bounds[0] == -1 or curr_window_size < minimum_window_bounds[1] - minimum_window_bounds[0] + 1:
+        minimum_window_bounds = [start, end]
+      # keep shrinking from the leftmost character because
+      # we checked everything with it
+      window_hash[s[start]] -= 1
+      # if you happen to take out the character
+      # that was required for the minimum window,
+      # decrement have_unique_chars_count by 1
+      if s[start] in substr_hash and window_hash[s[start]] < substr_hash[s[start]]:
+        have_unique_chars_count -= 1
+      start += 1
+  if minimum_window_bounds[0] == -1:
+    return ""
+  return s[minimum_window_bounds[0]:minimum_window_bounds[1] + 1]
+```
+
+## Two pointers
+
+## Tarversing from the right
+
+## Sorting the array
+
+## Precomputation
+
+## Index has a hash key
+
+
+# Hash
 
 Use `defaultdict` in Python instead of checking for the key every time:
 
@@ -48,74 +156,116 @@ print(somedict3['test3']) # 3
 
 # Linked lists
 
-- **The 'dummy head'** technique: pointing to the actual head is useful for languages where there is a no explicit expression of a pointer (like `LinkedListNode *node` in C++). So it would go like this in TS:
-    ```ts
-    const dummyHead: LinkedListNode = new LinkedListNode()
+## The 'dummy head' technique
 
-    dummyhead.next = actualHead
-    ```
-- You can do a lot without making a singly linked list a doubly linked list.
-- **The runner technique**: it employs two pointers at the same time. For example, when you want to get the middle node of the array, you can use this.
-    ```py
-    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
-      slow = head
-      fast = head
-      while fast and fast.next:
-          slow = slow.next
-          fast = fast.next.next
-          
-      return slow
-    ```
+pointing to the actual head is useful for languages where there is a no explicit expression of a pointer (like `LinkedListNode *node` in C++). So it would go like this in TS:
 
-    ```ts
-    function middleNode(head: ListNode | null): ListNode | null {
-        let slow = head
-        let fast = head
-        
-        while (fast && fast.next) {
-            fast = fast.next.next
-            slow = slow!.next!
-        }
-        
-        return slow
-    };
-    ```
-- **Reversing the list**: classic. goes like this:
-    ```ts
-    function reverseList(head: ListNode | null): ListNode | null {
-      let curr = head
-      let prev = null
-      let next = null
+```ts
+const dummyHead: LinkedListNode = new LinkedListNode()
 
-      while (curr) {
-        next = curr.next
-        curr.next = prev
-        prev = curr
-        curr = next
-      }
+dummyhead.next = actualHead
+```
 
-      return prev
+## Singly linked list does a lot
+
+You can do a lot without making a singly linked list a doubly linked list.
+
+## The runner technique
+
+it employs two pointers at the same time. For example, when you want to get the middle node of the array, you can use this.
+
+```py
+def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+  slow = head
+  fast = head
+  while fast and fast.next:
+      slow = slow.next
+      fast = fast.next.next
+      
+  return slow
+```
+
+```ts
+function middleNode(head: ListNode | null): ListNode | null {
+    let slow = head
+    let fast = head
+    
+    while (fast && fast.next) {
+        fast = fast.next.next
+        slow = slow!.next!
     }
-    ```
-    Reversing the list may be the alternative for a variable to store values sometimes. 
-- **Cycle detection**: a variation of the runner technique.
-    ```ts
-    function hasCycle(head: ListNode | null): boolean {
-      let slow = head
-      let fast = head
+    
+    return slow
+};
+```
 
-      while (fast && fast.next) {
-        slow = slow?.next ?? null
-        fast = fast?.next?.next ?? null
+## Reversing the list
+```ts
+function reverseList(head: ListNode | null): ListNode | null {
+  let curr = head
+  let prev = null
+  let next = null
 
-        if (slow === fast) {
-          return true
-        }
-      }
+  while (curr) {
+    next = curr.next
+    curr.next = prev
+    prev = curr
+    curr = next
+  }
 
-      return false
-    };
-    ```
+  return prev
+}
+```
+
+Reversing the list may be the alternative for a variable to store values sometimes. 
+
+## Cycle detection
+
+A variation of the runner technique.
+Think about it this way: there are two runners in a circular track, one at a slower speed than the other.
+Their speeds are fixed. Then the faster one will catch up with the slower one at least once in a while.
+In that sense, this technique is also called tortoise and hare algorithm.
+
+```ts
+function hasCycle(head: ListNode | null): boolean {
+  let slow = head
+  let fast = head
+
+  while (fast && fast.next) {
+    slow = slow?.next ?? null
+    fast = fast?.next?.next ?? null
+
+    if (slow === fast) {
+      return true
+    }
+  }
+
+  return false
+};
+```
+
+Detecting the entry node to the cycle is an extension of the code above. This however requires some mathmatical reasoning:
+
+![cycle-entry-detection.png](./cycle-entry-detection.png)
+
+The crux of it is the last sentence:
+
+> You need to move the `head` and `slow` nodes forward (by one node each time), and then **they will meet each other at the entry point.**
+
+```ts
+function detectCycle(head: ListNode | null): ListNode | null {
+  let maybeNodeInLoop = hasCycle(head)
+
+  if (!maybeNodeInLoop) return null
+
+  while (maybeNodeInLoop != head) {
+    // practically, it never becomes null because there is a cycle
+    maybeNodeInLoop = maybeNodeInLoop?.next ?? null;
+    head = head?.next ?? null;
+  }
+  return head;
+};
+```
 
 # Stacks and queues
 
