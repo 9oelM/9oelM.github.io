@@ -118,14 +118,7 @@
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
     >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/0cf2907c9259fb4d96f3585a029371fe/2dab4/bigocheatsheet1.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
+      <span
     class="gatsby-resp-image-background-image"
     style="padding-bottom: 67.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAACh0lEQVQ4y2VT124cMRBTL9vrbfM1O2cbCZy3xDDy/9/FUF4nSOCHgdqI5HAk0Z3uYeoGruugmwbSeQgh/gvvP++lyL3F19JgtAKFYp7k/uFoMTUFZAhQ6aJSfy9Ya6G5/vX2hrauPwFuhx7fhoBcC4ylgCOwKDnJ/klKAGWeI5Jg6Hvcnp/x+PKCy+2Gtm2htX4n8iFi6ko8PWToLhncFwHVEsMaD20dnHNMNpjmGd9/vqJfFghjIAhirleIaYKUEjnJEuDQD3j58YrqMEPFCFUESEPAbVuhqEprBW8lLH2J5xMPNYzey9dUG9YVjpacTidYZ2mPRn7PeXBQ1vDOBSr5n9jSpZArrCcF4yQcmXKrsUYCKg1PwwdHdkliwT1PkkVgWQUOUaCmhwP906kpqYO6KuHXGZHh6JvMMpjDiDBPVLbAeAdD0lSy94Hr1Cw2jcSGIJpnxqTz1OW7I8opQ1lTVSsRGCZKFA39qgnAMRQSWZYaprEwv+0bLFS8+D06Kowdm5K6fLk9ojlEdAR0qUscbRBoGyZV+1rnJMv3FzAsK4lLDCz1D+jKMRQfCo8PN+RLhuxAQIahN46HFcEKggUCN3xaNS9FWrEeT+imFlkiZZllCpYviuQxY7nyp/QRlgbbO4JdOVYsOVOoCdZSdcXknCV7dnGcF5IVWFneTJLZ78Cu+lDYsgTTBdhZvIO6M1X2HOlfSArpqa/S99s9nLaNb69DxXVNG0aCjvTQZx8Kh3WDGyPMSKCBDSGwpsFmktDc07N8t8K71EmDfhgR+xIiT9+MQS8FzwquVSq92+5gpwh/3sv1T1S6UNVRwR33vXjeS3Z8syPzi+MITxsagrSMOu6eJ8DfMO44RALxe28AAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
@@ -144,7 +137,6 @@
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
       />
-  </a>
     </span></p>
 <h1 id="arrays-and-strings" style="position:relative;">Arrays and strings<a href="#arrays-and-strings" aria-label="arrays and strings permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <ul>
@@ -159,6 +151,20 @@
 <p>Be careful when you are creating a 2D array in Python:</p>
 <div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py">doesnt_work_arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token comment"># doesn't work</span>
 2d_arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token comment"># works</span></code></pre></div>
+<p>Creating an array of certain range of contiguous characters:</p>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py">count <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"z"</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># access the index corresponding to "c" (should be 2nd index)</span>
+count<span class="token punctuation">[</span><span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"c"</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">]</span></code></pre></div>
+<p>Remember that uppercase letters come first in the ASCII order (and there are some special characters in between <code class="language-text">&quot;Z&quot;</code> and <code class="language-text">&quot;a&quot;</code>)</p>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span>
+<span class="token number">65</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"Z"</span><span class="token punctuation">)</span>
+<span class="token number">90</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>
+<span class="token number">97</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"z"</span><span class="token punctuation">)</span>
+<span class="token number">122</span></code></pre></div>
 <h2 id="sliding-window" style="position:relative;">Sliding window<a href="#sliding-window" aria-label="sliding window permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <ul>
 <li>Sliding window technique is used in subarray or substring problems, like longest, shortest, or target value.</li>
@@ -179,19 +185,35 @@
 <p>But the only numbers changing in the calculation are the first and the last number (<code class="language-text">5</code> and <code class="language-text">6</code>). So simply subtracting <code class="language-text">5</code> from and adding <code class="language-text">6</code> to the first subarray’s sum would deduce the second array’s sum. The same goes for the next subarrays.</p>
 <p>This will result in <code class="language-text">O(n)</code> time complexity because subtracting and adding ops are fixed at <code class="language-text">2 * O(1)</code> regardless of length of the array/subarray.</p>
 <h3 id="sliding-window-of-dynamic-range" style="position:relative;">Sliding window of dynamic range<a href="#sliding-window-of-dynamic-range" aria-label="sliding window of dynamic range permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
-<p>Sometimes, the sliding window’s length is not fixed. A good example is <a href="https://leetcode.com/problems/minimum-window-substring/">Minimum window substring</a>. In this case, you will need to move the <code class="language-text">start</code> and <code class="language-text">end</code> pointers to the array dynamically. </p>
+<p>Sometimes, the sliding window’s length is not fixed. In this case, you will need to move the <code class="language-text">start</code> and <code class="language-text">end</code> pointers to the array dynamically. </p>
+<details>
+ <summary>👉 Example 1: <a target="_blank" href="https://leetcode.com/problems/minimum-window-substring/">Minimum window substring</a></summary>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 394px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60.810810810810814%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsSAAALEgHS3X78AAACIElEQVQoz21S2XLaUAz1N3SSErM5kDAQg23A+8pmMEshTUja/v+PnOpcoNPO9EGjq+VKR0fSBkMLztTF0B5jJDKeemJ76PRNmGIPRg6M3gDWeIKJF2DkTNAWm7pnWqgbXejNNppGB+3OEzQvjLDaVMhmC8wWK0RpjuW6wiSIkc+XKJYl0vkK62qH/bcjStH5ao1CchebLdwwhj1x8dx/UUW14XiKXII5Cy5XiLNCdIkwTpVvs91LoRMW0iSTBqfvbzh//sTucMT7+ROvb2d8/Pil/nR7fWjPAtuTz1GaCco50nyGrJjDj2KFOJEGFGvqw/ZCLMsN1tudFH5HtTuogtSloCV9mhdEKKQzE+fSJZGCqqgUZ5IXZxgLd2wSRIniOIhFuz6iJFMUxSJEV28Z0LiAJC9Uoid8MMhx2Yi6a9rQjSfU9AYeGi21gL91rd5U+s9SSCaFcE3LwcvIVjK0HWVzm46QbgnX3DT9BEE/r8K+xnoDE63HLjRfxjicXlHtDwop+bqh41K4pFTGDZNUydQPVQ7/kQK+QxndtOxLQd5WWW0VJ1/ua7ir6WqM+4e6krta/Z/3Vxn9Zl98uuiG+JtotB8vI7tEJF2IiNvlOK4g8YVTxpwrv0RFALQZVz4R8s8FkQ6NsPfHkzqDtdwcCzJAxEzm+OSIhb1rcTYcu56MHygKyC21OhvOzg8kl8vgxgidJ6A3DaVv9k3+Z+tX/RvtqXuH0t3jdAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="sliding-window-example1.png"
+        title="sliding-window-example1.png"
+        src="/static/c78568f647f82647e34fb2ebf33afefe/cc097/sliding-window-example1.png"
+        srcset="/static/c78568f647f82647e34fb2ebf33afefe/12f09/sliding-window-example1.png 148w,
+/static/c78568f647f82647e34fb2ebf33afefe/e4a3f/sliding-window-example1.png 295w,
+/static/c78568f647f82647e34fb2ebf33afefe/cc097/sliding-window-example1.png 394w"
+        sizes="(max-width: 394px) 100vw, 394px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
     >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/41fe00b45c1839cb139b0610b72310d0/7c5b4/dynamic-sliding-window.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
+      <span
     class="gatsby-resp-image-background-image"
     style="padding-bottom: 64.86486486486486%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACDklEQVQ4y1VT2ZKbQAzkNxJz3wzDcNrGeGu9yT6kNnnM/39LRy0Wb+VBNQxIrW6p8aIoACMITijLHOt6gXNWo65LfR/Hoea0bfOMpqlQVQWMqRGGvgbzvKLIYJpaE6axx3ZbcT7PWJZJ3+V5qoks6PsO0zTAWoNRcrVxZ2GlAZuzqQKyiOzYkadtjRYx+I2JBOzkPgxOgfiNTW3Xoh86rWWOxwJemJhliUpknE7f4H8+M5GgbHYEZVNuk+WoJeJkH4tHOQQ8ZpIkEdI0VgkHc6ogKFnN86iyb7crXG9xaweca4swDhBHMkOyIjsmNwLCBgRiIRlQHqWSKZ9nAZuncZdL2ZcZtamUhDI0wozsyITseOpGzb5NsmPTg6GTxRC4qgvkRQrf/w5fxhOEp6+llBr5c05p8iWZYHm2bzqXvMU6DNZish1GY9G7DubTRsz3OLdKKOdlptRNZ5CVqUo8PMogYJJGGCuDVea22RF3N2MkoIyGaqjQc7bF+/WOt3nFr+1Vz9UOcGKdwwoEO7yYZrH6lqM6Nn24QiVbmdXv7Q1/JD7Wh5w/8PfnB94fD9RN+QTkSTMv86Rb5lKWeV/OJhu/Xpbdh+r+84SsylA0BVrXorYiQRagdon8//6UixQSlEAE5v1+v6krlCGHP/RuXzsNHAYah5kPuXzmll9eNlzXM7ZVWDUOc9UqQzZj3T8gU33WFL7HxAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
   ></span>
@@ -210,8 +232,10 @@
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
       />
-  </a>
     </span></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Input: s = &quot;ADOBECODEBANC&quot;, t = &quot;ABC&quot;
+Output: &quot;BANC&quot;
+Explanation: The minimum window substring &quot;BANC&quot; includes &#39;A&#39;, &#39;B&#39;, and &#39;C&#39; from string t.</code></pre></div>
 <div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">from</span> collections <span class="token keyword">import</span> defaultdict
 <span class="token keyword">from</span> typing <span class="token keyword">import</span> Dict
 
@@ -263,6 +287,58 @@
 <li>time O(len(s) + len(substr)) because both <code class="language-text">start</code> and <code class="language-text">end</code> pointer scan the string <code class="language-text">s</code> for only one time.</li>
 <li>space: O(len(s) + len(substr)) because all we use is the hashmap for each string.</li>
 </ul>
+</details>
+<details>
+ <summary>👉 Example 2: <a target="_blank" href="https://leetcode.com/problems/minimum-size-subarray-sum/">Minimum Size Subarray Sum</a></summary>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 388px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 31.756756756756754%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAABQ0lEQVQY0zVR7XLCIBD0QVo7Gq2m+UAhIQkB8mliq6O17/8u2wPbHztzLMfu7bHYfcQ4iBxRwpCwI9IDf+LIPe+4hM5ClgjjFMFHik2UIqT+mO4YF8hLRf0Cy1WABeMZxvkMWdUQBDtM4IXy5244oekGKG1wvd2hmxaq7WHHCabpCC0yMuK5BPsXdO73x48XFcrAUHNpO3rcoelH5MRJbclMoyK+Mk50AC81Yp5judnjbbvHS/CO1/WWBEm5nz9xuT9w/rrC0gS3b1dfYNoOcVagsC1CLqkuIf/qVcQQxEdExClKkcgK6zDGImQcimKGogATkiL2fjoXWdNjF6uqDSYyHafZx++GEaWq0VOa4TTjQGtbrtbPyFtacKZpF7pBRPGdSEtReV54oVJpD0OTu50WZFSbxmOXcmT0IcNpQm0bL/gL3aLFwGlGXCYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="sliding-window-example2.png"
+        title="sliding-window-example2.png"
+        src="/static/c79862df4cc45ed9b786c4efb90b3810/96c67/sliding-window-example2.png"
+        srcset="/static/c79862df4cc45ed9b786c4efb90b3810/12f09/sliding-window-example2.png 148w,
+/static/c79862df4cc45ed9b786c4efb90b3810/e4a3f/sliding-window-example2.png 295w,
+/static/c79862df4cc45ed9b786c4efb90b3810/96c67/sliding-window-example2.png 388w"
+        sizes="(max-width: 388px) 100vw, 388px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Input: target = 7, nums = [2,3,1,2,4,3]
+Output: 2
+Explanation: The subarray [4,3] has the minimal length under the problem constraint.</code></pre></div>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">import</span> math
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">minSubArrayLen</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token number">0</span>
+        left <span class="token operator">=</span> <span class="token number">0</span>
+        subarray_sum<span class="token punctuation">,</span> subarray_len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> math<span class="token punctuation">.</span>inf
+        <span class="token comment"># right pointer always increases</span>
+        <span class="token keyword">for</span> right<span class="token punctuation">,</span> num <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            subarray_sum <span class="token operator">+=</span> num
+            <span class="token comment"># if the subarray's sum satisfies the condition,</span>
+            <span class="token comment"># increase the left pointer until the subarray's sum</span>
+            <span class="token comment"># does not satisfy the condition anymore</span>
+            <span class="token keyword">while</span> subarray_sum <span class="token operator">>=</span> target<span class="token punctuation">:</span>
+                subarray_len <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>right <span class="token operator">-</span> left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> subarray_len<span class="token punctuation">)</span>
+                subarray_sum <span class="token operator">-=</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
+                left <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> <span class="token number">0</span> <span class="token keyword">if</span> subarray_len <span class="token operator">==</span> math<span class="token punctuation">.</span>inf <span class="token keyword">else</span> subarray_len</code></pre></div>
+<p>Complexities:</p>
+<ul>
+<li>time: </li>
+<li>space: O(1)</li>
+</ul>
+</details>
 <h2 id="two-pointers" style="position:relative;">Two pointers<a href="#two-pointers" aria-label="two pointers permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <h2 id="tarversing-from-the-right" style="position:relative;">Tarversing from the right<a href="#tarversing-from-the-right" aria-label="tarversing from the right permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <h2 id="sorting-the-array" style="position:relative;">Sorting the array<a href="#sorting-the-array" aria-label="sorting the array permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
@@ -353,14 +429,7 @@ In that sense, this technique is also called tortoise and hare algorithm.</p>
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
     >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/972cc2edb49eb8d9258e6b7406bf7014/f8915/cycle-entry-detection.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
+      <span
     class="gatsby-resp-image-background-image"
     style="padding-bottom: 125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAAAsSAAALEgHS3X78AAACZklEQVQ4y42UW3bbMAxEvY/aEp+yJD+aND3t/lfG4oKEwthKkw+YMCkMZ0AAh3E8lWHAjgW//j8W78fi3KB+SkHter2UKadiMfZ9bweCMADYwGedpiQAq+4vy7nc79dyuSwl51gsZs8OBKzrXGL0G6Ab6+FZQFlTDOLnyqy79FOG3Dq650MXK+sQXEnBl+RcTUMH+sRQ5QmD6F0JblSLrvp/p1tZfSpziOUlzcp8DalcQhbQ4y7o4SQHL3EWO5fZx3IPkwZgf9JFz37FpfxOa3kVn71FQIcddpWhSOVm5ChbH4pvsriAiwC/it3aZdn7D8x6XyXD8ih2atbn8Tj+0BXwoZ09svoAyM9FJMAAeTA8i03CAv9V9+qDsE9uB6tXe7zu1RUQKdhPkUcwib+Lz0ruWHPbX+SBAE3y/xzF7+p3Y4gs28AnGMYE8UgAkVcvQLmx1QvypIBDlybNIWXCR0lKR3352BLPBXu5xbIUPi1JHbPSJBsgeYQJeVtbTgHlMdgjJb57AGtP2pHWpE3neaqSSS7BBKUOPIpEJNsjPQJq2y6zMqR1laEBkmgSDrD6wgyA+hBJy2p8aDmbTE+9bEm2XAIUuxZkr0r3T6C7vWwBSANYB0a7gD3WauOnQO/jy9VBChMDBHx8KN7xoYg/BdwGbJs0oV0w7IB9GxCQqTGz3OVWizbOLLdfStbJLFIZS7QZoNa3UweYd8pmF9Bk+a7prTMGtdNme9PlCTA1Odb8tB11Rx3C9rYVdth6+r+AJulN5L6lRQeoTRsmNXv857tvS0YugTbCrm1CA3rTte7DdPjiUf4BaIO1CfxVlD0AAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
@@ -377,7 +446,6 @@ In that sense, this technique is also called tortoise and hare algorithm.</p>
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
       />
-  </a>
     </span></p>
 <p>The crux of it is the last sentence:</p>
 <blockquote>
@@ -402,14 +470,7 @@ In that sense, this technique is also called tortoise and hare algorithm.</p>
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
     >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/b03c37496ddfb49b21e797d108ade0f1/1d69c/0.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
+      <span
     class="gatsby-resp-image-background-image"
     style="padding-bottom: 41.891891891891895%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABLklEQVQY002Q7XqDIAyFvf/729bWStW14kBAPgVEWLTds+bXgeRNTlJZawkhOedSCp24Uqq8hfeBMfbUUmv+p59RQa7rOlCzS6jtR4xB5yNAOOeapsnb5lNB3+Ot7VJK+SjY4Xz0MCFjIra0eu+11u/toTCmgic1zYaZFVP+P/nIbnVPBqZdLDrkfuRCiHd8IGKkDAaAxpMeRgJeXrA1pm/RmjYXs/aFzho1dYzxSSqXGoS4kNrv8BLi5/lirXnB8I+weLBFLhl4IQ3lUttlNwVjmblBlqqQDhfM1nfO5321Skl56wdh4unaWh8xFah7GJ/O1y6t0Tj/VbcupFNz11ptW/q4IBvStb3Ps6jgPPuGOU+UgFVj9Lwv/HrGGCil8IRSYwycmpIfKAZESvkLPanKOFMaKdMAAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
@@ -426,7 +487,6 @@ In that sense, this technique is also called tortoise and hare algorithm.</p>
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
       />
-  </a>
     </span></p>
 <p><strong>DFS</strong>: Makes a discovery into the last found vertex (branch) first.</p>
 <p>A DFS would usually involve passing <code class="language-text">graph</code> and <code class="language-text">visited</code> as a reference to the function:</p>
@@ -704,14 +764,7 @@ FULLY_VISITED <span class="token operator">=</span> <span class="token number">2
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 528px; "
     >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/34dc353be066fb1577586f4d19689501/4af8e/trie0.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
+      <span
     class="gatsby-resp-image-background-image"
     style="padding-bottom: 96.62162162162163%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAABi0lEQVQ4y4WT5w7CMAyE8/6Phxg/mEJA2XuVZfRZcuSmLViK6trJ2b5LgiT2+XyifzqddL3f71KuzkId4Pl8lsVioQvfcv9AQwrmAVerla4U8Bdo8F35zZfLRbtbr9dyPB5L+TrQUMUdPp2Z4RuPaQN/O8zzXFqtlszn87hps9lIo9GQ2+32V6ACIIoCNJ1OI28YQLPZrHb8AqBPAJhlmYJ6wPv9rjFyAP4SJ6RCGBijWRxABGL0/X7/U6DgfyC/qup2u5Xn86k+Y9c9BAWkE1a73ZblcqlB645vv9+X8XgcDxwOB2k2m1qgSqDAeIzJIUb2QtDxaDSKQmDcguFwKJPJpCBQBIST3W4n1+u1cBCfOCOmheCSacinPIbH46EJlhfCropX3Giw6+UFqryHqRAUe71eJSGMZx831UPaMhsHg0HppXS73ai0v2adTkcLx5H9BnjkMMraOHaw1+tpzvOJQOyFT9QvAcIj/Ng3FQLVKeQ7ZBGz8QuAtA53xp8ZPALIIV6N54zivvMvZu7N9C3My4wAAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
@@ -727,19 +780,11 @@ FULLY_VISITED <span class="token operator">=</span> <span class="token number">2
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
       />
-  </a>
     </span> <span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
     >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/821da7811fe3e1e69d1873db3cf5544e/2eb79/trie1.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
+      <span
     class="gatsby-resp-image-background-image"
     style="padding-bottom: 89.86486486486487%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACTklEQVQ4y3VUa5OiQAzk//+n/XKrW7fnlle7vgDf4htEQRRQMJeON3PM6qVqCiZMejqdBIu+2e12M55RFJHnebRer8WnVvVM1Sx6YtWDi8VCnofDgeI41t+fgWnA6o3qHcFZlgm7+XxO0+lUQOEriuKBqXq3nrGC7fd7Wq1W5Ps+1Wo18e12O834f3FWFf16vVIQBMLKtm19M4DLspQzy+VSvuGi4/FoMMQyALfbrSwUACDKer2e1u98PtNsNtPFUhdpQGyUE2kCDCtJEvGBCQABcrlcRD/f3zK7vU7f0LDKDuJDpzAMaTgcCigk6Pf7zHjOgGc5G4YJvbzYHBPQZDIximMp7QAGNsqQDoCjKGbmATUaY+p29/Itywq+8EhpmjPgmE6nk87SAguwcRxHUlYGxp1OR4DzS8YypNw6sVFREBkMBhw/os1mcwcEiOPY5Lo2pxs+ALquqwvyXS8UyPNmLIkrev5N+cbONd8CR8FppHIQgGgPtEkUHUTPoig1IN5hk4lH7fZI4nRjJ8mV9cq0dqhqnufUbDZ19dvtttHE+D4colg7Zhj9K8r9kKq0L1XDmMFGo5EIjlbBJWAL9tAO3dBqtR5+FFZ1Sur1Or2//xRQ9CICbNuR4EbjF72+/mD/RrIAe2in+tWYlLujZGYzBulK76GNMMNfX79573M1x1wkWwAwRZ+fn1ywvtbOmBQFWhQ3BvQJW0wF+vLj455+p7PjPgxITRbm+O3Nk5g7hvFzEJcAp2mhL0Dgen2WfRznrOfV6EMUsyxNDf8AHiFlrS4KdG4AAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
@@ -758,7 +803,6 @@ FULLY_VISITED <span class="token operator">=</span> <span class="token number">2
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
       />
-  </a>
     </span></p>
 <p>Complexities (where <code class="language-text">k</code> is the length of a string and <code class="language-text">n</code> is the number of strings stored)</p>
 <ul>
