@@ -123,6 +123,10 @@ def minimum_window_substring(s: str, substr: str) -> str:
   return s[minimum_window_bounds[0]:minimum_window_bounds[1] + 1]
 ```
 
+Complexities:
+- time O(len(s) + len(substr)) because both `start` and `end` pointer scan the string `s` for only one time.
+- space: O(len(s) + len(substr)) because all we use is the hashmap for each string.
+
 ## Two pointers
 
 ## Tarversing from the right
