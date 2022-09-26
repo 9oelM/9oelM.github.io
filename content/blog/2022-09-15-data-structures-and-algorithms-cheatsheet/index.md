@@ -6,6 +6,14 @@ tab: "post"
 keywords: ["data structures", "algorithm"]
 ---
 
+
+$a^2 + b^2 = c^2$
+
+$$
+a^2 + b^2 = c^2
+$$
+
+
 ```toc
 ```
 # Preface
@@ -62,6 +70,20 @@ Remember that uppercase letters come first in the ASCII order (and there are som
 >>> ord("z")
 122
 ```
+
+## Why an array has `O(1)` armortized insertion time
+
+- An array has:
+  - `length`: the actual number of elements in the array
+  - `capacity`: the size of the memory allocated for the array (always bigger than or equal to `length`)
+- Appending an element to an array while its length is less than or equal to the `capacity` is an apparent `O(1)`
+- When the `capacity` is full, `length` (= `capacity`) elements need to be copied over to a brand new array
+- Usually, the array will need to double in its `capacity` (powers of 2). Therefore, array increases its `capacity` only when `length = 2^k` for some `k > 0` (you need to resize at `2, 4, 8, 16, ...`).
+- Total number of times for resizing `capacity`: `floor(log_2(n))`. At certain `n = length`, the array would have been resized for `floor(log_2(n))` times. For example, if your `length` is `34`, that means is `floor(log_2(34)) = 5`. 
+- The total (accumulated) cost at `length`: `1 + 2 + 4 + 8 + ... + 2^(floor(log_2(length))`
+
+
+
 
 ## Sliding window
 
@@ -223,16 +245,17 @@ Complexities:
 
 ## Two pointers
 
-## Tarversing from the right
+## Traversing from the right
+
+Sometimes you need to start from the back of the array.
 
 ## Sorting the array
 
 ## Precomputation
 
+# Hash tables, Stack, Queue (Deque)
 
-
-# Hash
-
+## Hash tables
 Use `defaultdict` in Python instead of checking for the key every time:
 
 ```py
@@ -250,6 +273,8 @@ print(somedict2['test2']) # 0
 somedict3 = defaultdict(lambda: 3)
 print(somedict3['test3']) # 3
 ```
+
+
 
 # Linked lists
 
@@ -625,6 +650,7 @@ For example, for a complete binary tree, the number of leaves will be  n / 2 = O
 
 ## Path discovery
 
+## Dijkstra's algorithm
 ### Finding all paths in a graph from a to b
 
 This is an example of using DFS to find all paths from vertex 0 to n - 1.
@@ -658,6 +684,9 @@ Complexities (where `k` is the length of a string and `n` is the number of strin
 A trie is useful when you need to search for matching prefix from many strings. No major languages offer this data structure in their std. Your own implementation is needed.
 
 **Note that `TrieNode` itself does not contain the character** although from illustration of the tries above it may look like that.
+
+<details>
+ <summary>👉 Trie implementation</summary>
 
 ```py
 class TrieNode:
@@ -743,7 +772,8 @@ def test_trie() -> bool:
     return True
 ```
 
-## Dijkstra's algorithm
+</details>
+
 
 # Dynamic programming
 

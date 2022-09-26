@@ -7,7 +7,9 @@ export const Navigation = () => {
     const location = useLocation()
     console.log()
 
-    return [[`Posts`, `/`], [`Journals`, `/journals/`], [`Tags`, `/tags/`], [`résumé`, `/resume/`]].map(([tabName, tabPath]) => {
+    return [[`Posts`, `/`], [`Journals`, `/journals/`], [`Tags`, `/tags/`], 
+      // [`résumé`, `/resume/`]
+    ].map(([tabName, tabPath]) => {
         return <Link
         key={tabName}
         className="navigation-link"

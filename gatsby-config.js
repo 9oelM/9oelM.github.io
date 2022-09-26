@@ -28,6 +28,13 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
@@ -76,7 +83,6 @@ module.exports = {
         trackingId: "UA-105275697-3"
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -86,6 +92,8 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#009688`,
         display: `minimal-ui`,
+        icon: `icons/android-chrome-512x512.png`, // This path is relative to the root of the site.
+        include_favicon: true, 
       },
     },
     `gatsby-plugin-remove-serviceworker`,
