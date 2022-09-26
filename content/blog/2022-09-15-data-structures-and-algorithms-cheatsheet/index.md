@@ -41,6 +41,28 @@ doesnt_work_arr = [[0] * 10] * 10 # doesn't work
 2d_arr = [[0] * 10 for _ in range(10)] # works
 ```
 
+Creating an array of certain range of contiguous characters:
+
+```py
+count = [0] * (ord("z") - ord("a") + 1)
+
+# access the index corresponding to "c" (should be 2nd index)
+count[ord("c") - ord("a")]
+```
+
+Remember that uppercase letters come first in the ASCII order (and there are some special characters in between `"Z"` and `"a"`)
+
+```py
+>>> ord("A")
+65
+>>> ord("Z")
+90
+>>> ord("a")
+97
+>>> ord("z")
+122
+```
+
 ## Sliding window
 
 - Sliding window technique is used in subarray or substring problems, like longest, shortest, or target value.
@@ -70,9 +92,23 @@ This will result in `O(n)` time complexity because subtracting and adding ops ar
 
 ### Sliding window of dynamic range
 
-Sometimes, the sliding window's length is not fixed. A good example is [Minimum window substring](https://leetcode.com/problems/minimum-window-substring/). In this case, you will need to move the `start` and `end` pointers to the array dynamically. 
+- Sometimes, the sliding window's length is not fixed. In this case, you will need to move the `start` and `end` pointers to the array dynamically.
+- Dynamic range sliding window qs often involes using a hash to store previous information and starting again from there once some condition is met
+
+<details>
+ <summary>👉 Example 1: Minimum window substring</summary>
+
+![Leetcode problem](https://leetcode.com/problems/minimum-window-substring/)
+
+![sliding-window-example1.png](./sliding-window-example1.png)
 
 ![dynamic-sliding-window.png](./dynamic-sliding-window.png)
+
+```
+Input: s = "ADOBECODEBANC", t = "ABC"
+Output: "BANC"
+Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+```
 
 ```py
 from collections import defaultdict
@@ -127,6 +163,64 @@ Complexities:
 - time O(len(s) + len(substr)) because both `start` and `end` pointer scan the string `s` for only one time.
 - space: O(len(s) + len(substr)) because all we use is the hashmap for each string.
 
+</details>
+
+<details>
+ <summary>👉 Example 2: Minimum Size Subarray Sum</summary>
+
+![Leetcode problem](https://leetcode.com/problems/minimum-size-subarray-sum)
+![sliding-window-example2.png](./sliding-window-example2.png)
+
+```
+Input: target = 7, nums = [2,3,1,2,4,3]
+Output: 2
+Explanation: The subarray [4,3] has the minimal length under the problem constraint.
+```
+
+```py
+import math
+
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        if len(nums) == 0:
+            return 0
+        left = 0
+        subarray_sum, subarray_len = 0, math.inf
+        # right pointer always increases
+        for right, num in enumerate(nums):
+            subarray_sum += num
+            # if the subarray's sum satisfies the condition,
+            # increase the left pointer until the subarray's sum
+            # does not satisfy the condition anymore
+            while subarray_sum >= target:
+                subarray_len = min(right - left + 1, subarray_len)
+                subarray_sum -= nums[left]
+                left += 1
+        return 0 if subarray_len == math.inf else subarray_len
+```
+
+Complexities:
+- time: 
+- space: O(1)
+
+</details>
+
+## Index as a hash key
+
+- The index can be used as a hash table holding index and boolean value as key and value without forgetting about the initial value itself
+
+    Example:
+    ```py
+    arr = [4,1,5,2,2]
+
+    for n in arr:
+      if n < len(arr) and n > 0 and arr[n] > 0:
+        arr[n] *= -1
+
+    has_three = arr[3] < 0 # false
+    has_two = arr[2] < 0 # true
+    ```
+
 ## Two pointers
 
 ## Tarversing from the right
@@ -135,7 +229,6 @@ Complexities:
 
 ## Precomputation
 
-## Index has a hash key
 
 
 # Hash
@@ -564,6 +657,8 @@ Complexities (where `k` is the length of a string and `n` is the number of strin
 
 A trie is useful when you need to search for matching prefix from many strings. No major languages offer this data structure in their std. Your own implementation is needed.
 
+**Note that `TrieNode` itself does not contain the character** although from illustration of the tries above it may look like that.
+
 ```py
 class TrieNode:
     def __init__(self) -> None:
@@ -628,21 +723,6 @@ class TrieNode:
             return delete_curr
 
         _delete(self, word, 0)
-
-
-def print_words(node: TrieNode, word: str) -> None:
-    """
-    Prints all the words in a Trie
-    :param node: root node of Trie
-    :param word: Word variable should be empty at start
-    :return: None
-    """
-    if node.is_leaf:
-        print(word, end=" ")
-
-    for key, value in node.nodes.items():
-        print_words(value, word + key)
-
 
 def test_trie() -> bool:
     words = "banana bananas bandana band apple all beast".split()
