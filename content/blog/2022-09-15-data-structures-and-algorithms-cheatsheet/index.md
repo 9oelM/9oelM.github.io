@@ -6,14 +6,6 @@ tab: "post"
 keywords: ["data structures", "algorithm"]
 ---
 
-
-$a^2 + b^2 = c^2$
-
-$$
-a^2 + b^2 = c^2
-$$
-
-
 ```toc
 ```
 # Preface
@@ -71,19 +63,42 @@ Remember that uppercase letters come first in the ASCII order (and there are som
 122
 ```
 
-## Why an array has `O(1)` armortized insertion time
+## Why an arraylist (or just list) has $O(1)$ armortized insertion time
 
-- An array has:
-  - `length`: the actual number of elements in the array
-  - `capacity`: the size of the memory allocated for the array (always bigger than or equal to `length`)
-- Appending an element to an array while its length is less than or equal to the `capacity` is an apparent `O(1)`
-- When the `capacity` is full, `length` (= `capacity`) elements need to be copied over to a brand new array
-- Usually, the array will need to double in its `capacity` (powers of 2). Therefore, array increases its `capacity` only when `length = 2^k` for some `k > 0` (you need to resize at `2, 4, 8, 16, ...`).
-- Total number of times for resizing `capacity`: `floor(log_2(n))`. At certain `n = length`, the array would have been resized for `floor(log_2(n))` times. For example, if your `length` is `34`, that means is `floor(log_2(34)) = 5`. 
-- The total (accumulated) cost at `length`: `1 + 2 + 4 + 8 + ... + 2^(floor(log_2(length))`
+### Basic idea
+- An arraylist has:
+  - $length$: the actual number of elements in the list
+  - $capacity$: the size of the memory allocated for the list (always bigger than or equal to $length$)
+- Appending an element to an list while its length is less than or equal to the $capacity$ is an apparent $O(1)$
+- When the $capacity$ is full, $length$ (= $capacity$) elements need to be copied over to a brand new list, which is not $O(1)$
 
+### The cost of resizing
 
+- Usually, the list will need to double in its $capacity$ (powers of 2). Therefore, list increases its $capacity$ only when $length = 2^k$ for some integer $k > 0$ (you need to resize at $2, 4, 8, 16, ...$).
+- Total number of times for resizing $capacity$ is $floor(log_2(n))$. At certain $length$, the list would have been resized for $floor(log_2(n))$ times. For example, if your $length$ is $34$, that means is the list would have been resized for $floor(log_2(34)) = 5$ times. 
+- The total (accumulated) cost of resizing at $length$: $1 + 2 + 4 + 8 + ... + 2^{floor(log_2(length))}$
+- We know $\sum_{i=0}^{k}2^k = 2^{k + 1} - 1$. For example, $k = 4 \Rightarrow \sum_{i=0}^{k}2^k = 1 + 2 + 4 + 8 + 16 = 31 = 2^{k + 1} - 1$
+- Therefore, the total accumulated cost of resizing at $length$ = $2^{floor(log_2(length)) + 1} - 1 = 2^{k + 1} - 1$ where $k$ is the number of times of resizing.
 
+### The cost of $O(1)$ ops
+
+- Up to a certain $k = 2^{floor(log_2(length))}$, the accumulative cost of $O(1)$ operations is $2^k - k + 1$. For exmaple, let $k = 5 \Rightarrow 2^5 - 5 + 1 = 28$. Other $4 (=k)$ ops are all resizing ops at 2, 4, 8, and 16 (you don't resize at 1).
+- Because we are interested in the amortized time complexity, we will have to divide the entire cost by $2^k + 1$. 
+- $2^k + 1$ is the general worst case, since the last operation (the $+1$ part) triggers the resizing.
+
+### Conclusion
+
+$$
+\frac{\text{Accumulative resizing cost} + \text{Accumulative constant ops cost}}{\text{Number of total ops}} = \newline
+\frac{(2^{k + 1} - 1) + (2^k - k + 1)}{2^k + 1} < \newline
+\frac{(2^{k + 1} - 1) + (2^k - k + 1)}{2^k} = \newline
+\frac{(2^{k + 1}) + (2^k - k)}{2^k} =\newline
+\frac{(2^{k}2) + (2^k - k)}{2^k} =\newline
+2 + 1 - \frac{k}{2^k}\newline
+\text{and clearly,} \lim_{k \to \infty}{3 - \frac{k}{2^k}} = 3 
+\newline
+\Rightarrow \text{inserting } 2^k + 1 \text{ elements into the list has an amortized time complexity of } O(3) = O(1) \text{ per insertion}
+$$
 
 ## Sliding window
 
@@ -120,7 +135,7 @@ This will result in `O(n)` time complexity because subtracting and adding ops ar
 <details>
  <summary>👉 Example 1: Minimum window substring</summary>
 
-![Leetcode problem](https://leetcode.com/problems/minimum-window-substring/)
+[Leetcode problem](https://leetcode.com/problems/minimum-window-substring/)
 
 ![sliding-window-example1.png](./sliding-window-example1.png)
 
@@ -190,7 +205,7 @@ Complexities:
 <details>
  <summary>👉 Example 2: Minimum Size Subarray Sum</summary>
 
-![Leetcode problem](https://leetcode.com/problems/minimum-size-subarray-sum)
+[Leetcode problem](https://leetcode.com/problems/minimum-size-subarray-sum)
 ![sliding-window-example2.png](./sliding-window-example2.png)
 
 ```
@@ -245,13 +260,20 @@ Complexities:
 
 ## Two pointers
 
+Quite similar concept to the sliding window. Need to use two pointers each pointing at different parts of the array.
+
 ## Traversing from the right
 
 Sometimes you need to start from the back of the array.
 
 ## Sorting the array
 
+- If an array is sorted, there may be more optimal solution
+- Sorting an array may simplify the problem
+
 ## Precomputation
+
+Precomutation of prefix/suffix/sum/product might be useful
 
 # Hash tables, Stack, Queue (Deque)
 
@@ -274,7 +296,9 @@ somedict3 = defaultdict(lambda: 3)
 print(somedict3['test3']) # 3
 ```
 
+## Stack
 
+You can easily simulate the behavior of a stack using a `list` in Python or `array` in JavaScript
 
 # Linked lists
 

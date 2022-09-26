@@ -5,3 +5,18 @@ pre code{
  white-space: -o-pre-wrap !important;    /* Opera 7 */
  word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
 }
+
+summary {
+  color: #E0E0E0;
+  cursor: pointer;
+  padding: 0.75rem;
+}
+summary:hover {
+  color: #E0E0E0;
+  background-color: #616161;
+  cursor: pointer;
+}
+
+.katex-display {
+  color: #E0E0E0;
+}
