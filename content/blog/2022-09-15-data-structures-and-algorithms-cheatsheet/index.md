@@ -6,8 +6,7 @@ tab: "post"
 keywords: ["data structures", "algorithm"]
 ---
 
-```toc
-```
+
 # Preface
 
 This is my own curated list of tips and tricks about data structures and algorithms, in Python or TypeScript.
@@ -18,7 +17,55 @@ Everything is from [bigocheatsheet.com](bigocheatsheet.com). It's just that I do
 
 ![bigocheatsheet1.png](./bigocheatsheet1.png)
 
-# Arrays and strings
+# Checklist
+
+If you are able to bring up **complexities amd implementations** in mind just by looking at each topic, you are in a good shape.
+
+- [Array](#arrays)
+- [Hash table](#hash-tables)
+- [String](#strings)
+  - [KMP algorithm](https://9oelm.github.io/2022-01-06--find-the-shortest-palindrome-an-intensive-review-of-kmp(knuth-morris-pratt)-algorithm/)
+- [Linked List](#linked-lists)
+  - [Singly linked list](#singly-linked-list-implementation)
+  - [Doubly linked list](#doubly-linked-list-implementation)
+- [Stack](#stack)
+- [Queue](#queue)
+  - [Deque](#deque)
+  - [Priority queue](#priority-queue)
+- [Tree](#graphs-and-trees)
+  - Binary tree
+  - [Heap](#heap)
+  - [Trie](#trie-prefix-tree)
+  - Red-black tree
+  - AVL tree
+- [Graph](#graphs)
+  - [BFS](#dfs-and-bfs)
+  - [DFS](#dfs-and-bfs)
+  - [Topological sort](#topological-sort)
+    - [BFS sort](#iterative-topological-sort-kahns-algorithm)
+    - [DFS sort](#classic-dfs-topological-sort)
+  - Shortest path
+    - Dijkstra’s shortest path algorithm
+    - Bellman–Ford algorithm
+  - Cycle detection
+    - Floyd's cycle detection algorithm (tortoise and hare)
+  - Minimum spanning tree
+    - Prim’s algorithm
+    - Kruskal’s algorithm
+  - Union find
+  - Strongly connected components
+- [Dynamic programming](#dynamic-programming)
+
+If you want to have a look at the entire table of contents, please do so:
+<details>
+  <summary>👉 Table of contents</summary>
+
+  ```toc
+  ```
+
+</details>
+
+# Arrays
 
 - An array can work as a replacement for hash tables if you know the range of indices that will go into the array. But sometimes it will waste spaces.
 - otherwise, do use hash tables because they have O(1) amortized time complexity.
@@ -275,6 +322,10 @@ Sometimes you need to start from the back of the array.
 
 Precomutation of prefix/suffix/sum/product might be useful
 
+# Strings
+
+- Watch out for the range of the input strings (characters): for example, `a` to `z`.
+
 # Hash tables, Stack, Queue (Deque)
 
 ## Hash tables
@@ -300,7 +351,382 @@ print(somedict3['test3']) # 3
 
 You can easily simulate the behavior of a stack using a `list` in Python or `array` in JavaScript
 
+## Queue
+
+### Standard queue
+
+A normal queue would work in a FIFO fashion. In most cases, you would use Python because it has a queue built into its stdlib.
+
+| op     | explanation                                                                      | time complexity |
+|--------|----------------------------------------------------------------------------------|-----------------|
+| put    | inserts an item into the back of the queue (also called 'enqueue' or 'prepend').              | O(1)            |
+| get    | removes and returns an item from the front of the queue (also called 'dequeue' or 'pop'). | O(1)            |
+| .queue | returns a data structure that can be referenced just like a list                 | -               |
+
+<details>
+<summary>👉 Standard queue implementation</summary>
+
+```py
+from typing import Generic, TypeVar
+from doubly_linked_list import DoublyLinkedList
+
+T = TypeVar("T")
+
+class Queue(Generic[T]):
+  def __init__(self):
+    self.dll = DoublyLinkedList()
+
+  def is_empty(self):
+    return len(self.dll) == 0
+
+  def prepend(self, value: T):
+    self.dll.insert_at(0, value)
+
+  def pop(self) -> T:
+    return self.dll.remove_at(len(self.dll) - 1)
+
+q = Queue[int]()
+
+print(q.is_empty())
+q.prepend(1)
+print(q.pop()) # 1
+q.prepend(2) # 2 1
+q.prepend(3) # 3 2 1
+print(q.pop())
+q.prepend(4) # 4 3 2 1
+print(q.is_empty()) # false
+print(q.pop()) # 1
+print(q.pop()) # 2
+print(q.is_empty())
+```
+</details>
+
+### Deque
+
+A queue with two ends.
+
+| op     | explanation                                                                      | time complexity |
+|--------|----------------------------------------------------------------------------------|-----------------|
+| appendleft    | appends an item to the left of the queue | O(1)            |
+| popleft    | removes and returns an item from the left of the queue | O(1)            |
+| append    | appends an item to the right of the queue | O(1)            |
+| pop    | removes and returns an item from the right of the queue | O(1)            |
+| `[index]` | references the index of a deque just like a list                 | O(1)               |
+
+<details>
+<summary>👉 Deque implementation</summary>
+
+```py
+from typing import Generic, TypeVar
+from doubly_linked_list import DoublyLinkedList, debug
+
+T = TypeVar("T")
+
+class Deque(Generic[T]):
+  def __init__(self):
+    self.dll = DoublyLinkedList()
+
+  def is_empty(self):
+    return len(self.dll) == 0
+
+  def append(self, value: T):
+    self.dll.insert_at(len(self.dll), value)
+
+  def prepend(self, value: T):
+    self.dll.insert_at(0, value)
+
+  def pop(self) -> T:
+    return self.dll.remove_at(len(self.dll) - 1)
+
+  def popleft(self) -> T:
+    return self.dll.remove_at(0)
+
+q = Deque[int]()
+
+deque = Deque()
+
+deque.prepend(1)
+deque.prepend(2)
+deque.prepend(3)
+deque.prepend(4)
+debug(deque.dll) # 1
+
+deque.append(5)
+deque.append(6)
+debug(deque.dll) # [4,3,2,1,5,6]
+
+deque.popleft() # 4
+deque.pop() # 6
+debug(deque.dll) # [3,2,1,5]
+```
+</details>
+
+### Priority queue
+
+- All elements in a priority queue need to have a priority associated with them. 
+- The queue will maintain a sorted order throughout its lifetime
+- uses `heapq` (heap data structure) internally 
+
+| op     | explanation                                                                      | time complexity |
+|--------|----------------------------------------------------------------------------------|-----------------|
+| put    | inserts an item into the queue (also called 'enqueue').              | O(1)            |
+| get    | removes and returns an item from the queue (also called 'dequeue'). | O(1)            |
+| .queue | returns a data structure that can be referenced just like a list                | -               |
+
+```py
+from queue import PriorityQueue
+
+q = PriorityQueue()
+
+q.put((2, 'code'))
+q.put((1, 'eat'))
+q.put((3, 'sleep'))
+
+q.queue # [(1, 'eat'), (2, 'code'), (3, 'sleep')]
+while not q.empty():
+    next_item = q.get()
+    print(next_item)
+
+#   (1, 'eat')
+#   (2, 'code')
+#   (3, 'sleep')
+```
+
+<details>
+<summary>👉 Priority queue implementation</summary>
+</details>
+
 # Linked lists
+
+## Singly linked list implementation
+
+<details>
+<summary>👉 Singly linked list implementation</summary>
+
+```py
+from typing import Iterator, Union
+
+
+class Node:
+  def __init__(self, value=None, nxt=None, prev=None):
+    self.value = value
+    self.nxt = nxt
+    self.prev = prev
+  
+  def __str__(self) -> str:
+    return f"{{value:{self.value}}}"
+
+class SinglyLinkedList:
+  def __init__(self):
+    self.head = Node()
+    self.len = 0
+
+  def __len__(self):
+    return self.len
+
+  def is_empty(self) -> bool:
+    return len(self) == 0
+
+  def connect_in_between(self, prev: Node, middle: Node, nxt: Node):
+    prev.nxt = middle
+    middle.nxt = nxt
+
+  def traverse(self) -> Iterator[Node]:
+    # head is a dummy pointer
+    ptr = self.head.nxt
+
+    while ptr is not None:
+      yield ptr
+      ptr = ptr.nxt
+  
+  def traverse_right_before(self, index: int) -> Node:
+    ptr = self.head
+
+    visit_count = index
+    while ptr.nxt is not None and visit_count > 0:
+      ptr = ptr.nxt
+      visit_count -= 1
+
+    if visit_count != 0:
+      raise Exception(f"Index out of bounds: {index}")
+
+    return ptr
+
+  def insert_at(self, index: int, value) -> Node:
+    prev = self.traverse_right_before(index)
+    middle = Node(value)
+    nxt = prev.nxt
+    self.connect_in_between(prev, middle, nxt)
+
+    self.len += 1
+  
+    return middle
+
+  def remove_at(self, index: int) -> Node:
+    prev = self.traverse_right_before(index)
+    prev_nxt = prev.nxt
+    two_nodes_away_node: Union[Node, None] = prev.nxt.nxt
+    prev.nxt = two_nodes_away_node
+
+    self.len -= 1
+    # assert self.len >= 0
+
+    return prev_nxt
+
+ll = SinglyLinkedList()
+def debug():
+  for node in ll.traverse():
+    print(node, end=" ")
+  print("")
+  
+ll.insert_at(0, 1)
+ll.insert_at(0, 2)
+ll.insert_at(0, 3)
+ll.insert_at(0, 4)
+ll.insert_at(0, 5)
+ll.insert_at(0, 6)
+ll.insert_at(0, 1)
+ll.insert_at(0, 3)
+ll.insert_at(5, 100)
+debug() 
+# {value:3} {value:1} {value:6} {value:5} {value:4} {value:100} {value:3} {value:2} {value:1} 
+ll.remove_at(5)
+debug()
+# {value:3} {value:1} {value:6} {value:5} {value:4} {value:3} {value:2} {value:1} 
+ll.remove_at(0)
+ll.remove_at(0)
+ll.remove_at(3)
+debug()
+# {value:6} {value:5} {value:4} {value:2} {value:1}
+ll.remove_at(0)
+ll.remove_at(len(ll) - 1)
+debug()
+# {value:5} {value:4} {value:2} 
+ll.insert_at(2, 50)
+debug()
+# {value:5} {value:4} {value:50} {value:2} 
+```
+
+</details>
+
+### Doubly linked list implementation
+
+<details>
+<summary>👉 Doubly linked list implementation</summary>
+
+```py
+from typing import Iterator, Union
+
+
+class Node:
+  def __init__(self, value=None, nxt=None, prev=None):
+    self.value = value
+    self.nxt = nxt
+    self.prev = prev
+  
+  def __str__(self) -> str:
+    return f"{{value:{self.value}}}"
+
+class DoublyLinkedList:
+  def __init__(self):
+    self.head = Node()
+    self.tail = Node()
+    self.head.nxt = self.tail
+    self.tail.prev = self.head
+    self.length = 0
+
+  def __len__(self) -> int:
+    return self.length
+
+  def traverse(self) -> Iterator[Node]:
+    ptr = self.head
+    while ptr:
+      if ptr == self.head or ptr == self.tail:
+        ptr = ptr.nxt
+      else:
+        yield ptr
+        ptr = ptr.nxt
+
+  def traverse_from_right(self) -> Iterator[Node]:
+    ptr = self.tail
+    while ptr:
+      if ptr == self.head or ptr == self.tail:
+        ptr = ptr.prev
+      else:
+        yield ptr
+        ptr = ptr.prev
+
+  def connect_in_between(self, prev: Node, middle: Node, nxt: Node):
+    prev.nxt = middle
+    middle.prev = prev
+
+    middle.nxt = nxt
+    nxt.prev = middle
+
+  def traverse_up_to(self, index: int):
+    if len(self) < index:
+      raise Exception(f"Index out of bounds at {index}")
+
+    ptr = self.head
+    
+    visit_count = index
+    
+    while ptr.nxt is not None and visit_count > 0:
+      ptr = ptr.nxt
+      visit_count -= 1
+    
+    # should never get here, but just an exhaustive check
+    if visit_count != 0:
+      raise Exception(f"Index out of bounds at {index}")
+
+    return ptr
+
+  def insert_at(self, index: int, value):
+    prev = self.traverse_up_to(index)
+
+    nxt = prev.nxt
+    middle = Node(value)
+    self.connect_in_between(prev, middle, nxt)
+    self.length += 1
+
+  def at(self, index: int) -> Union[Node, None]:
+    if len(self) <= index:
+      raise Exception(f"Index out of bounds at {index}")
+
+    prev = self.traverse_up_to(index)
+    if prev.nxt == self.tail:
+      return None
+    return prev.nxt
+
+  def remove_at(self, index: int):
+    prev = self.traverse_up_to(index)
+    two_nodes_away_node = prev.nxt.nxt
+
+    prev.nxt = two_nodes_away_node
+    two_nodes_away_node.prev = prev
+    self.length -= 1
+
+def debug(dll: DoublyLinkedList):
+  for node in dll.traverse():
+    print(node, end="")
+  print("")
+  for node in dll.traverse_from_right():
+    print(node, end="")
+  print("")
+
+doubly_linked_list = DoublyLinkedList()
+doubly_linked_list.insert_at(0, 0)
+doubly_linked_list.insert_at(0, 1)
+doubly_linked_list.insert_at(0, 2)
+doubly_linked_list.insert_at(0, 3)
+doubly_linked_list.insert_at(4, 100)
+debug(doubly_linked_list)
+doubly_linked_list.remove_at(0)
+doubly_linked_list.remove_at(3)
+doubly_linked_list.remove_at(1)
+debug(doubly_linked_list)
+```
+</details>
 
 ## The 'dummy head' technique
 
@@ -413,9 +839,7 @@ function detectCycle(head: ListNode | null): ListNode | null {
 };
 ```
 
-# Stacks and queues
-
-# Graphs and trees
+# Graphs
 
 ## DFS and BFS
 ![0.png](./0.png)
@@ -674,7 +1098,7 @@ For example, for a complete binary tree, the number of leaves will be  n / 2 = O
 
 ## Path discovery
 
-## Dijkstra's algorithm
+
 ### Finding all paths in a graph from a to b
 
 This is an example of using DFS to find all paths from vertex 0 to n - 1.
@@ -692,6 +1116,14 @@ class Solution:
       dfs(0, [0])
       return all_paths
 ```
+
+## Dijkstra's algorithm
+
+## Heap
+
+Heap
+
+# Tree
 
 ## Trie (Prefix tree)
 
