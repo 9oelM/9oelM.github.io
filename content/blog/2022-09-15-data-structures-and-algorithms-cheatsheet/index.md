@@ -32,7 +32,7 @@ If you are able to bring up **complexities amd implementations** in mind just by
 - [Queue](#queue)
   - [Deque](#deque)
   - [Priority queue](#priority-queue)
-- [Tree](#graphs-and-trees)
+- [Tree](#trees)
   - Binary tree
   - [Heap](#heap)
   - [Trie](#trie-prefix-tree)
@@ -55,6 +55,7 @@ If you are able to bring up **complexities amd implementations** in mind just by
   - Union find
   - Strongly connected components
 - [Dynamic programming](#dynamic-programming)
+- [Bit manipulation](#dynamic-programming)
 
 If you want to have a look at the entire table of contents, please do so:
 <details>
@@ -839,6 +840,101 @@ function detectCycle(head: ListNode | null): ListNode | null {
 };
 ```
 
+# Trees
+
+- A tree is an undirected and connected acyclic graph
+- A tree has $n$ nodes and $n - 1$ edges
+- A tree is a recurisve data structure with subtrees
+
+## Terms
+- Neighbor: Parent or child of a node
+- Ancestor: A node reachable by traversing its parent chain
+- Descendant: A node in the node's subtree
+- Degree: Number of children of a node
+- Degree of a tree: Maximum degree of nodes in the tree
+- Distance: Number of edges along the shortest path between two nodes
+- Level/Depth: Number of edg?es along the unique path between a node and the root node
+- Height of a node: Number of edges from the node to the deepest leaf
+- Height of a tree: a height of the root
+- Width: Number of nodes in a level
+- Leaf: A node that does not have a child node in the tree
+- Sibiling: nodes that share the same parent
+- Subtree: basically subgraph
+
+## Binary tree
+
+- A **binary tree** is a tree 
+  - where a parent node has two edges at max, each connecting to each of two nodes.
+- A **complete binary tree** is a tree where every level of the tree is fully filled with the possible exception of the last level where the nodes must be as far left as possible (see the pic below)
+    ![binary-tree-0.png](./binary-tree-0.png)
+- A **balanced binary tree** is a binary tree structure in which the left and right subtrees of every node differ in height by no more than 1.
+    ![binary-tree-2.png](./binary-tree-2.png)
+- A **full binary tree** is a binary tree in which each node has exactly zero or two children.
+    ![binary-tree-1.png](./binary-tree-1.png)
+
+## Binary search and binary search tree (BST)
+
+A binary search is:
+- an algorithm searches through a sorted collection by dividing the search set into two and comparing an element to the one that is larger or smaller than the element being searched for.
+
+A binary search tree (BST) is a tree:
+- where $\text{all left descendents' values} < n < \text{all right descendents' values}$ for every node's value $n$.
+    ![binary-search-tree-0.png](./binary-search-tree-0.png)
+
+<detail>
+<summary>👉 General idea of binary search implementation</summary>
+
+This post on leetcode discussion just needs pretty much everything we need in terms of binary search: [Check it out](https://leetcode.com/discuss/general-discussion/786126/Python-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems).
+
+A very general form of binary search function would look like this:
+
+```py
+def binary_search(array) -> int:
+    def condition(value) -> bool:
+        pass
+
+    left, right = min(search_space), max(search_space) # could be [0, n], [1, n] etc. Depends on problem
+    while left < right:
+        mid = left + (right - left) // 2
+        if condition(mid):
+            right = mid
+        else:
+            left = mid + 1
+    return left
+```
+
+</detail>
+<detail>
+<summary>👉 General array binary search implementation</summary>
+
+From the previous code, we can easily derive a way to implement binary search for an array.
+
+```py
+def binary_search(nums: List[int], target: int) -> int:
+    left, right = 0, len(nums) - 1
+    while left < right: 
+        mid = left + (right - left) // 2
+        if nums[mid] >= target: 
+            right = mid
+        else: 
+            left = mid + 1
+    return left if nums[left] == target else -1
+```
+
+</detail>
+
+### Insertion algorithm
+
+### Removal algorithm
+
+## AVL tree
+
+**AVL trees**
+
+## Red-black tree
+
+**Red-black trees**
+
 # Graphs
 
 ## DFS and BFS
@@ -935,11 +1031,6 @@ def create_graph(edges: List[List[int]]):
 ```
 
 The same goes for `visited` dict. In some cases, it may be better use a fixed length array to achieve it.
-
-- **binary tree** is a tree where `all left descndents' values <= n < all right descendents' values` for every node value `n`.
-  - a **complete binary tree** is a tree where every level of the tree is fully filled.
-- **red-black trees**
-- **AVL trees**
 
 ## Topological sort
 
@@ -1258,3 +1349,7 @@ class Solution:
                     max_lengths[n1_index + 1][n2_index + 1] = max_lengths[n1_index][n2_index] + 1
         return max(max(row) for row in max_lengths)
 ```
+
+# Bit manipulation
+
+## General tips and tricks for bit manipulation
