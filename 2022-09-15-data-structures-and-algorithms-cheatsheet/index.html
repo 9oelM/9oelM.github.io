@@ -1364,6 +1364,7 @@ In that sense, this technique is also called tortoise and hare algorithm.</p>
     <span class="token keyword">return</span> left <span class="token keyword">if</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">==</span> target <span class="token keyword">else</span> <span class="token operator">-</span><span class="token number">1</span></code></pre></div>
 </detail>
 <p>For searching the binary tree, recursion may be the most intuitive choice. For example:</p>
+<detail>
 <summary>👉 Recursive binary tree DFS from the root</summary>
 <div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">binary_tree_traversal</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> Union<span class="token punctuation">[</span>Node<span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
   <span class="token keyword">if</span> root <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
@@ -1376,6 +1377,7 @@ In that sense, this technique is also called tortoise and hare algorithm.</p>
   binary_tree_traversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span></code></pre></div>
 </detail>
 <p>However, iterative approach also works quite well.</p>
+<detail>
 <summary>👉 Iterative binary tree DFS from the root</summary>
 <div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">binary_tree_traversal_iterative_dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> Union<span class="token punctuation">[</span>Node<span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
   stack <span class="token operator">=</span> <span class="token punctuation">[</span>root<span class="token punctuation">]</span>
@@ -1390,6 +1392,7 @@ In that sense, this technique is also called tortoise and hare algorithm.</p>
       stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
       stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span></code></pre></div>
 </detail>
+<detail>
 <summary>👉 Iterative binary tree BFS from the root</summary>
 <div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">from</span> queue <span class="token keyword">import</span> Queue
 
