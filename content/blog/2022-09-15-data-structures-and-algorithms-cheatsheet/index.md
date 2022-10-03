@@ -853,7 +853,7 @@ function detectCycle(head: ListNode | null): ListNode | null {
 - Degree: Number of children of a node
 - Degree of a tree: Maximum degree of nodes in the tree
 - Distance: Number of edges along the shortest path between two nodes
-- Level/Depth: Number of edg?es along the unique path between a node and the root node
+- Level/Depth: Number of edges along the unique path between a node and the root node
 - Height of a node: Number of edges from the node to the deepest leaf
 - Height of a tree: a height of the root
 - Width: Number of nodes in a level
@@ -922,6 +922,67 @@ def binary_search(nums: List[int], target: int) -> int:
 ```
 
 </detail>
+
+For searching the binary tree, recursion may be the most intuitive choice. For example:
+
+<summary>👉 Recursive binary tree DFS from the root</summary>
+
+```py
+def binary_tree_traversal(root: Union[Node, None]):
+  if root is None:
+    return
+  # --
+  # do what you want to do here
+  # (code)
+  # --
+  binary_tree_traversal(root.left)
+  binary_tree_traversal(root.right)
+```
+
+</detail>
+
+However, iterative approach also works quite well.
+
+<summary>👉 Iterative binary tree DFS from the root</summary>
+
+```py
+def binary_tree_traversal_iterative_dfs(root: Union[Node, None]):
+  stack = [root]
+
+  while stack:
+    node = stack.pop()
+    # --
+    # do what you want to do here
+    # (code)
+    # --
+    if node:
+      stack.append(node.left)
+      stack.append(node.right)
+```
+
+</detail>
+
+<summary>👉 Iterative binary tree BFS from the root</summary>
+
+```py
+from queue import Queue
+
+def binary_tree_traversal_iterative_dfs(root: Union[Node, None]):
+  queue = Queue[Node]()
+  queue.put(root)
+  while not queue.empty():
+    node = queue.get()
+    # --
+    # do what you want to do here
+    # (code)
+    # --
+    if node:
+      queue.put(node.left)
+      queue.put(node.right)
+```
+
+</detail>
+
 
 ### Insertion algorithm
 
