@@ -88,9 +88,13 @@
 <h1 id="checklist" style="position:relative;">Checklist<a href="#checklist" aria-label="checklist permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <p>If you are able to bring up <strong>complexities amd implementations</strong> in mind just by looking at each topic, you are in a good shape.</p>
 <ul>
-<li><a href="#arrays-and-strings">Array</a></li>
+<li><a href="#arrays">Array</a></li>
 <li><a href="#hash-tables">Hash table</a></li>
-<li><a href="#arrays-and-strings">String</a></li>
+<li><a href="#strings">String</a>
+<ul>
+<li><a href="https://9oelm.github.io/2022-01-06--find-the-shortest-palindrome-an-intensive-review-of-kmp(knuth-morris-pratt)-algorithm/">KMP algorithm</a></li>
+</ul>
+</li>
 <li><a href="#linked-lists">Linked List</a>
 <ul>
 <li><a href="#singly-linked-list-implementation">Singly linked list</a></li>
@@ -104,7 +108,7 @@
 <li><a href="#priority-queue">Priority queue</a></li>
 </ul>
 </li>
-<li><a href="#graphs-and-trees">Tree</a>
+<li><a href="#trees">Tree</a>
 <ul>
 <li>Binary tree</li>
 <li><a href="#heap">Heap</a></li>
@@ -145,10 +149,11 @@
 </ul>
 </li>
 <li><a href="#dynamic-programming">Dynamic programming</a></li>
+<li><a href="#dynamic-programming">Bit manipulation</a></li>
 </ul>
 <p>If you want to have a look at the entire table of contents, please do so:</p>
 <details>
-  <summary>Table of contents</summary>
+  <summary>👉 Table of contents</summary>
 <div class="table-of-contents">
 <ul>
 <li>
@@ -161,7 +166,7 @@
 <p><a href="#checklist">Checklist</a></p>
 </li>
 <li>
-<p><a href="#arrays-and-strings">Arrays and strings</a></p>
+<p><a href="#arrays">Arrays</a></p>
 <ul>
 <li>
 <p><a href="#useful-code-snippets">Useful code snippets</a></p>
@@ -198,6 +203,9 @@
 <p><a href="#precomputation">Precomputation</a></p>
 </li>
 </ul>
+</li>
+<li>
+<p><a href="#strings">Strings</a></p>
 </li>
 <li>
 <p><a href="#hash-tables-stack-queue-deque">Hash tables, Stack, Queue (Deque)</a></p>
@@ -245,6 +253,30 @@
 </ul>
 </li>
 <li>
+<p><a href="#trees">Trees</a></p>
+<ul>
+<li>
+<p><a href="#terms">Terms</a></p>
+</li>
+<li>
+<p><a href="#binary-tree">Binary tree</a></p>
+</li>
+<li>
+<p><a href="#binary-search-and-binary-search-tree-bst">Binary search and binary search tree (BST)</a></p>
+<ul>
+<li><a href="#insertion-algorithm">Insertion algorithm</a></li>
+<li><a href="#removal-algorithm">Removal algorithm</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#avl-tree">AVL tree</a></p>
+</li>
+<li>
+<p><a href="#red-black-tree">Red-black tree</a></p>
+</li>
+</ul>
+</li>
+<li>
 <p><a href="#graphs">Graphs</a></p>
 <ul>
 <li>
@@ -286,10 +318,16 @@
 <li>
 <p><a href="#dynamic-programming">Dynamic programming</a></p>
 </li>
+<li>
+<p><a href="#bit-manipulation">Bit manipulation</a></p>
+<ul>
+<li><a href="#general-tips-and-tricks-for-bit-manipulation">General tips and tricks for bit manipulation</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </details>
-<h1 id="arrays-and-strings" style="position:relative;">Arrays and strings<a href="#arrays-and-strings" aria-label="arrays and strings permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h1 id="arrays" style="position:relative;">Arrays<a href="#arrays" aria-label="arrays permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <ul>
 <li>An array can work as a replacement for hash tables if you know the range of indices that will go into the array. But sometimes it will waste spaces.</li>
 <li>otherwise, do use hash tables because they have O(1) amortized time complexity.</li>
@@ -576,6 +614,10 @@ has_two <span class="token operator">=</span> arr<span class="token punctuation"
 </ul>
 <h2 id="precomputation" style="position:relative;">Precomputation<a href="#precomputation" aria-label="precomputation permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <p>Precomutation of prefix/suffix/sum/product might be useful</p>
+<h1 id="strings" style="position:relative;">Strings<a href="#strings" aria-label="strings permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ul>
+<li>Watch out for the range of the input strings (characters): for example, <code class="language-text">a</code> to <code class="language-text">z</code>.</li>
+</ul>
 <h1 id="hash-tables-stack-queue-deque" style="position:relative;">Hash tables, Stack, Queue (Deque)<a href="#hash-tables-stack-queue-deque" aria-label="hash tables stack queue deque permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h2 id="hash-tables" style="position:relative;">Hash tables<a href="#hash-tables" aria-label="hash tables permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <p>Use <code class="language-text">defaultdict</code> in Python instead of checking for the key every time:</p>
@@ -1122,6 +1164,254 @@ In that sense, this technique is also called tortoise and hare algorithm.</p>
   <span class="token punctuation">}</span>
   <span class="token keyword">return</span> head<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<h1 id="trees" style="position:relative;">Trees<a href="#trees" aria-label="trees permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ul>
+<li>A tree is an undirected and connected acyclic graph</li>
+<li>A tree has <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> nodes and <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></span> edges</li>
+<li>A tree is a recurisve data structure with subtrees</li>
+</ul>
+<h2 id="terms" style="position:relative;">Terms<a href="#terms" aria-label="terms permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<ul>
+<li>Neighbor: Parent or child of a node</li>
+<li>Ancestor: A node reachable by traversing its parent chain</li>
+<li>Descendant: A node in the node’s subtree</li>
+<li>Degree: Number of children of a node</li>
+<li>Degree of a tree: Maximum degree of nodes in the tree</li>
+<li>Distance: Number of edges along the shortest path between two nodes</li>
+<li>Level/Depth: Number of edges along the unique path between a node and the root node</li>
+<li>Height of a node: Number of edges from the node to the deepest leaf</li>
+<li>Height of a tree: a height of the root</li>
+<li>Width: Number of nodes in a level</li>
+<li>Leaf: A node that does not have a child node in the tree</li>
+<li>Sibiling: nodes that share the same parent</li>
+<li>Subtree: basically subgraph</li>
+</ul>
+<h2 id="binary-tree" style="position:relative;">Binary tree<a href="#binary-tree" aria-label="binary tree permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<ul>
+<li>A <strong>binary tree</strong> is a tree
+<ul>
+<li>where a parent node has two edges at max, each connecting to each of two nodes.</li>
+</ul>
+</li>
+<li>A <strong>complete binary tree</strong> is a tree where every level of the tree is fully filled with the possible exception of the last level where the nodes must be as far left as possible (see the pic below)
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6b119f18177404a48c4ca09c09952a57/34abc/binary-tree-0.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 36.486486486486484%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAA4ElEQVQoz11R7QqDMAz0/Z9v4vCfbgqKrfhZP9pmXLZE2YGkaZLLnU1ijATs+05935PkiHI+joN6azkPIeh9CJ6MseR90JmEfsAQvvM8tXivYeF/DbnUBAnFSG3bcgGY55mVCkxndGBZFq0hohdwzpG19kuIbeM4kvde1SAXJcMwqDIQC8k0TboIvwE5W8YBA2gEqURs3baNz1AmUVwgX9eVye6kSdd1TAjJIIAVDFbVm8rypXac2zhCBSLUtU3DDkCMBcaY61HugII8z6koSrV1vWzQvrqqKX2klGVPvf8AM5QilR5JoIwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="binary-tree-0.png"
+        title="binary-tree-0.png"
+        src="/static/6b119f18177404a48c4ca09c09952a57/fcda8/binary-tree-0.png"
+        srcset="/static/6b119f18177404a48c4ca09c09952a57/12f09/binary-tree-0.png 148w,
+/static/6b119f18177404a48c4ca09c09952a57/e4a3f/binary-tree-0.png 295w,
+/static/6b119f18177404a48c4ca09c09952a57/fcda8/binary-tree-0.png 590w,
+/static/6b119f18177404a48c4ca09c09952a57/efc66/binary-tree-0.png 885w,
+/static/6b119f18177404a48c4ca09c09952a57/c83ae/binary-tree-0.png 1180w,
+/static/6b119f18177404a48c4ca09c09952a57/34abc/binary-tree-0.png 3164w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+<li>A <strong>balanced binary tree</strong> is a binary tree structure in which the left and right subtrees of every node differ in height by no more than 1.
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/eabc406c489acfbf94a349972e8a4f30/b54cd/binary-tree-2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAABnklEQVQ4y3VTgXKCMAzt/3+hTKUbFCkHCigUATW7ly1cOm+5q7Th9ZG8PM3r9SLEuq40jiPJGU/ZS17O0zTR/X5/wyGMHLq2JVcUNM/LG/B6vUbnoiioqqoNp/EGh+fzSX3f0+12o2EY3giR19XhA8Cjq7+kTNh13fYSYFzSQOQQy7IwkbzDvcfjEWFNlmV0Pp+3JKpFrm3bLYcKoZm1lvWUALlzLtLT5HketYmAPtBJE4Ywcl4qQoAIOFS6EeJHWpK2Qgi8sNcta61ET6xxHGIN0Z4km6aheZ5Z07quoylrMlQqk0aF8lEmLMuScucYnCQJ6wTCn31gSWTqevKHw4GJQbbf73lvxLhoEQmQC4FYQ9tGm/10OrEswEgXRrscrWLpSf7XsmiMpw6jTYyJwzawEbTUU47/eoGrQ+BOZBv9ZfgPhCCTC5pQAn/T0ntuFVgx+1Yhysakvff8RIWY8PrrOZkgNAb55XKhynsmqnzFU+67niVgwqZuaLfb0ae1ZNMjZV8ZVxvCtA1APIoWsT6SD0qBP1pyrqD0mDLuG+opjuk/CS2oAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="binary-tree-2.png"
+        title="binary-tree-2.png"
+        src="/static/eabc406c489acfbf94a349972e8a4f30/fcda8/binary-tree-2.png"
+        srcset="/static/eabc406c489acfbf94a349972e8a4f30/12f09/binary-tree-2.png 148w,
+/static/eabc406c489acfbf94a349972e8a4f30/e4a3f/binary-tree-2.png 295w,
+/static/eabc406c489acfbf94a349972e8a4f30/fcda8/binary-tree-2.png 590w,
+/static/eabc406c489acfbf94a349972e8a4f30/efc66/binary-tree-2.png 885w,
+/static/eabc406c489acfbf94a349972e8a4f30/c83ae/binary-tree-2.png 1180w,
+/static/eabc406c489acfbf94a349972e8a4f30/b54cd/binary-tree-2.png 1662w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+<li>A <strong>full binary tree</strong> is a binary tree in which each node has exactly zero or two children.
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 386px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5560fbcf3fa85e92f3fa6ac920cefd19/7bc0b/binary-tree-1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 152.7027027027027%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAfCAYAAADnTu3OAAAACXBIWXMAABYlAAAWJQFJUiTwAAADeUlEQVRIx4VWZ0trQRC9PzT4A1QERUVNBL9YEOyFqLGLigp2sSARe0n8oGAXG2IXbNidx5nHrLP3hrgQdu/N7OzMmTNnr0Nxxs/Pj1l3dXVRcXExVVRU0MnJCb/7/v727HHiOfv6+uJ1S0sLNTc387vt7W3Kzs6mp6cnz6F/OpS5oKCA1x8fHzz39vbS/Py8iVI7dbQD7QSGEmF5eTldXFyYTZWVlXR0dORxiNmJFZE7jYWFBUpISKDBwUEqLCykxMREc5iGxpOydrS1tUW7u7t0fX1N/f39dHBwQKurq3R6ekqHh4fU19dncNR7Y0ZYVlZGNTU11NbWRj6fj525R21tLaWmprLd6OioSd84lLBHRkbYkYyJiQmmDMbb2xvPc3NzVFJSwnteX18ZhsXFxd8IEdXn56ehyP7+vnF4dXVFdXV1vH5/f+cZUQkXMQBBY2Pjf4eSqpAUPMvMzKSHhwc+xO/308zMjOVwYGCAqaNJj8xMhHAmEU5NTVEwGGSqCJaorsYZtqWlpWzX0NDAa9nv6PYBPYaHhz0FAInFqR5ggYbH8PDs7Ix6enr4RIlA+CgnozhLS0ueznBz1+no6OCKdXd3U3p6Ou3s7FiYiiEqmpSUREVFRZxiNBq1DjcR4k8ZiBQU0KcKnYDV0NAQr+/u7rhY0o5WL0t15CXkSfimGYACaYEYHx+nyclJE71JOS8vjzY2Ntiwvb2dWltbLaLLnJubS2trayYSHCwCYWEIgoIi1dXVjKPGQ5zt7e1xqwE/FA4wpaSkMFfdeHv0EH9q6UL60ilClcfHRxaNUChk7TE8lAehiB5ggbvyMtbX12l6etoKxtEPQmLgI2oTDoctLHUAkC+0aVNTE93c3Pz2shijU/Lz8+ny8pIBT05OpuPjY0uZxRkok5aWRisrK6w0uGdg62ijqqoqS+ojkQinrAksh+P97OyslT5Ew3HfbsvLy8YIqjw2NmZxTWw7Ozv5QBlQKRDf0fhB+wKBADtCBLjtpFBumUMmOTk5HAB4jDWEwqOHLy8vrH+4P2JdD9r2/Pyc72tkJiR3NMvdtJAUBed4thZt4t3Jf32qABL8DLHjfTXc3t4yrriI0KLokOfnZw8EMS96PSQ6iCq4lpWVxQSGCGdkZFB9fT2/A03cXw9xI7y/v2fSQv5RSYgEnjc3N7mDRP61w3+B+OLrcZEVyAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="binary-tree-1.png"
+        title="binary-tree-1.png"
+        src="/static/5560fbcf3fa85e92f3fa6ac920cefd19/7bc0b/binary-tree-1.png"
+        srcset="/static/5560fbcf3fa85e92f3fa6ac920cefd19/12f09/binary-tree-1.png 148w,
+/static/5560fbcf3fa85e92f3fa6ac920cefd19/e4a3f/binary-tree-1.png 295w,
+/static/5560fbcf3fa85e92f3fa6ac920cefd19/7bc0b/binary-tree-1.png 386w"
+        sizes="(max-width: 386px) 100vw, 386px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+</ul>
+<h2 id="binary-search-and-binary-search-tree-bst" style="position:relative;">Binary search and binary search tree (BST)<a href="#binary-search-and-binary-search-tree-bst" aria-label="binary search and binary search tree bst permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>A binary search is:</p>
+<ul>
+<li>an algorithm searches through a sorted collection by dividing the search set into two and comparing an element to the one that is larger or smaller than the element being searched for.</li>
+</ul>
+<p>A binary search tree (BST) is a tree:</p>
+<ul>
+<li>where <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>all left descendents’ values</mtext><mo>&#x3C;</mo><mi>n</mi><mo>&#x3C;</mo><mtext>all right descendents’ values</mtext></mrow><annotation encoding="application/x-tex">\text{all left descendents' values} &#x3C; n &#x3C; \text{all right descendents' values}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord text"><span class="mord">all left descendents’ values</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x3C;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x3C;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">all right descendents’ values</span></span></span></span></span></span> for every node’s value <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span></span>.
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1ffb1444166c6411feb6bec238b99f35/8ce22/binary-search-tree-0.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmUlEQVQoz3WS627bMAyF8/5PNgwY9msNtgJp2sZL4tjxLdaV1DdITtNmWwkTJsijI4o8q5QSn3k2U7fMdVNi1c+xb766Hc7fB6JiLtI9V5yfXkC0pN4xi/9DmPOSlCm6jC44I4GpOSPDDJogRIZDR9XMpcts+yHSzfeXLIRAUKEPZikC7WXkNHRX8NLsvrN8fagwYSE5TsJg/0OoSdmaltZNRBW6YIhJuWig93O5YrTKvgu4mPjde2av1KPwZeOIZRR/EdZ+onYTL6cDnb0sy4ie9faRzjl+7VoOnS355uL5sdnxVDu+vQZMuJ/lahbPqzkTJBKSItc3akp4iURVmskxeyn5IMpgI8ch8v3ZYsP9swvh3g74pDiJWAmY/NdYlvNmognjBeOVIEtX68pSj3kUei+bQTxNMFwk0EfLGD2nYOiiK53mwz4qj0fD+mCoel9meZw8P0+W7dndE86lq8AkvsTzNe6jY9ZwG8G6tjwcLfsxsD17qsEXsk3r2A2e0cm7sBdxf4y5iT3nM6Ho+wKuxZvAcy1j/gDBpVvkhLtVPgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="binary-search-tree-0.png"
+        title="binary-search-tree-0.png"
+        src="/static/1ffb1444166c6411feb6bec238b99f35/fcda8/binary-search-tree-0.png"
+        srcset="/static/1ffb1444166c6411feb6bec238b99f35/12f09/binary-search-tree-0.png 148w,
+/static/1ffb1444166c6411feb6bec238b99f35/e4a3f/binary-search-tree-0.png 295w,
+/static/1ffb1444166c6411feb6bec238b99f35/fcda8/binary-search-tree-0.png 590w,
+/static/1ffb1444166c6411feb6bec238b99f35/8ce22/binary-search-tree-0.png 685w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+</ul>
+<detail>
+<summary>👉 General idea of binary search implementation</summary>
+<p>This post on leetcode discussion just needs pretty much everything we need in terms of binary search: <a href="https://leetcode.com/discuss/general-discussion/786126/Python-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems">Check it out</a>.</p>
+<p>A very general form of binary search function would look like this:</p>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">binary_search</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">condition</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    left<span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>search_space<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">max</span><span class="token punctuation">(</span>search_space<span class="token punctuation">)</span> <span class="token comment"># could be [0, n], [1, n] etc. Depends on problem</span>
+    <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
+        mid <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+        <span class="token keyword">if</span> condition<span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            right <span class="token operator">=</span> mid
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> left</code></pre></div>
+</detail>
+<detail>
+<summary>👉 General array binary search implementation</summary>
+<p>From the previous code, we can easily derive a way to implement binary search for an array.</p>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">binary_search</span><span class="token punctuation">(</span>nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+    left<span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span> 
+        mid <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+        <span class="token keyword">if</span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">>=</span> target<span class="token punctuation">:</span> 
+            right <span class="token operator">=</span> mid
+        <span class="token keyword">else</span><span class="token punctuation">:</span> 
+            left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> left <span class="token keyword">if</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">==</span> target <span class="token keyword">else</span> <span class="token operator">-</span><span class="token number">1</span></code></pre></div>
+</detail>
+<p>For searching the binary tree, recursion may be the most intuitive choice. For example:</p>
+<summary>👉 Recursive binary tree DFS from the root</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">binary_tree_traversal</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> Union<span class="token punctuation">[</span>Node<span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> root <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span>
+  <span class="token comment"># --</span>
+  <span class="token comment"># do what you want to do here</span>
+  <span class="token comment"># (code)</span>
+  <span class="token comment"># --</span>
+  binary_tree_traversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+  binary_tree_traversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span></code></pre></div>
+</detail>
+<p>However, iterative approach also works quite well.</p>
+<summary>👉 Iterative binary tree DFS from the root</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">binary_tree_traversal_iterative_dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> Union<span class="token punctuation">[</span>Node<span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  stack <span class="token operator">=</span> <span class="token punctuation">[</span>root<span class="token punctuation">]</span>
+
+  <span class="token keyword">while</span> stack<span class="token punctuation">:</span>
+    node <span class="token operator">=</span> stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># --</span>
+    <span class="token comment"># do what you want to do here</span>
+    <span class="token comment"># (code)</span>
+    <span class="token comment"># --</span>
+    <span class="token keyword">if</span> node<span class="token punctuation">:</span>
+      stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+      stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span></code></pre></div>
+</detail>
+<summary>👉 Iterative binary tree BFS from the root</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">from</span> queue <span class="token keyword">import</span> Queue
+
+<span class="token keyword">def</span> <span class="token function">binary_tree_traversal_iterative_dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> Union<span class="token punctuation">[</span>Node<span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  queue <span class="token operator">=</span> Queue<span class="token punctuation">[</span>Node<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  queue<span class="token punctuation">.</span>put<span class="token punctuation">(</span>root<span class="token punctuation">)</span>
+  <span class="token keyword">while</span> <span class="token keyword">not</span> queue<span class="token punctuation">.</span>empty<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    node <span class="token operator">=</span> queue<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># --</span>
+    <span class="token comment"># do what you want to do here</span>
+    <span class="token comment"># (code)</span>
+    <span class="token comment"># --</span>
+    <span class="token keyword">if</span> node<span class="token punctuation">:</span>
+      queue<span class="token punctuation">.</span>put<span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+      queue<span class="token punctuation">.</span>put<span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span></code></pre></div>
+</detail>
+<h3 id="insertion-algorithm" style="position:relative;">Insertion algorithm<a href="#insertion-algorithm" aria-label="insertion algorithm permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<h3 id="removal-algorithm" style="position:relative;">Removal algorithm<a href="#removal-algorithm" aria-label="removal algorithm permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<h2 id="avl-tree" style="position:relative;">AVL tree<a href="#avl-tree" aria-label="avl tree permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p><strong>AVL trees</strong></p>
+<h2 id="red-black-tree" style="position:relative;">Red-black tree<a href="#red-black-tree" aria-label="red black tree permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p><strong>Red-black trees</strong></p>
 <h1 id="graphs" style="position:relative;">Graphs<a href="#graphs" aria-label="graphs permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h2 id="dfs-and-bfs" style="position:relative;">DFS and BFS<a href="#dfs-and-bfs" aria-label="dfs and bfs permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <p><span
@@ -1223,15 +1513,6 @@ BFS may be more useful than DFS in general if you are looking for the shortest p
     graph<span class="token punctuation">[</span>e<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>e<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
     graph<span class="token punctuation">[</span>e<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>e<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre></div>
 <p>The same goes for <code class="language-text">visited</code> dict. In some cases, it may be better use a fixed length array to achieve it.</p>
-<ul>
-<li><strong>binary tree</strong> is a tree where <code class="language-text">all left descndents' values &lt;= n &lt; all right descendents' values</code> for every node value <code class="language-text">n</code>.
-<ul>
-<li>a <strong>complete binary tree</strong> is a tree where every level of the tree is fully filled.</li>
-</ul>
-</li>
-<li><strong>red-black trees</strong></li>
-<li><strong>AVL trees</strong></li>
-</ul>
 <h2 id="topological-sort" style="position:relative;">Topological sort<a href="#topological-sort" aria-label="topological sort permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <p><img src="/7fe47cb805aa882ae9c1af68863aa48e/topological0.svg" alt="topological0.svg">
 <img src="/9b7cf1dca1f308bc49fc8eac752a5144/topological1.svg" alt="topological1.svg"></p>
@@ -1602,7 +1883,9 @@ Explanation: The repeated subarray with maximum length is [3,2,1].</code></pre><
             <span class="token keyword">for</span> n2_index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
                 <span class="token keyword">if</span> nums1<span class="token punctuation">[</span>n1_index<span class="token punctuation">]</span> <span class="token operator">==</span> nums2<span class="token punctuation">[</span>n2_index<span class="token punctuation">]</span><span class="token punctuation">:</span>
                     max_lengths<span class="token punctuation">[</span>n1_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>n2_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> max_lengths<span class="token punctuation">[</span>n1_index<span class="token punctuation">]</span><span class="token punctuation">[</span>n2_index<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span>
-        <span class="token keyword">return</span> <span class="token builtin">max</span><span class="token punctuation">(</span><span class="token builtin">max</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span> <span class="token keyword">for</span> row <span class="token keyword">in</span> max_lengths<span class="token punctuation">)</span></code></pre></div></div><hr style="margin-bottom:1.75rem"/><div style="display:flex"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDAf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABy7nSMycNcA5yDf/EABsQAQEAAgMBAAAAAAAAAAAAAAIBAAMEEBIR/9oACAEBAAEFAoshll0n6AlkZFez2+U6X6s6/8QAFhEAAwAAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/ASv/xAAWEQADAAAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8BI//EACEQAAIBAwMFAAAAAAAAAAAAAAABAhESMRAhIkFRUmGx/9oACAEBAAY/AqWjjL6cna+xV4PXkOTLFtFDS650/8QAHBABAAIDAQEBAAAAAAAAAAAAAQARITFBUWGB/9oACAEBAAE/IUqmDqN4W5Kwm8ZA+Azepup69/I24MS9yB2UUUP9Ran/2gAMAwEAAgADAAAAEBjvfP/EABgRAAIDAAAAAAAAAAAAAAAAAAABEBFR/9oACAEDAQE/EEimT//EABkRAAMAAwAAAAAAAAAAAAAAAAABERAhUf/aAAgBAgEBPxBuaL6LH//EAB0QAQACAgMBAQAAAAAAAAAAAAEAESExQVFhcZH/2gAIAQEAAT8QxUa1NXTzfUtHMFAPVG32DRy7D9iPblYA9ZQHN0KILFQ18lOduq0cEY8GBbNZe45/S+kZYZ//2Q==" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
+        <span class="token keyword">return</span> <span class="token builtin">max</span><span class="token punctuation">(</span><span class="token builtin">max</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span> <span class="token keyword">for</span> row <span class="token keyword">in</span> max_lengths<span class="token punctuation">)</span></code></pre></div>
+<h1 id="bit-manipulation" style="position:relative;">Bit manipulation<a href="#bit-manipulation" aria-label="bit manipulation permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h2 id="general-tips-and-tricks-for-bit-manipulation" style="position:relative;">General tips and tricks for bit manipulation<a href="#general-tips-and-tricks-for-bit-manipulation" aria-label="general tips and tricks for bit manipulation permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2></div><hr style="margin-bottom:1.75rem"/><div style="display:flex"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDAf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABy7nSMycNcA5yDf/EABsQAQEAAgMBAAAAAAAAAAAAAAIBAAMEEBIR/9oACAEBAAEFAoshll0n6AlkZFez2+U6X6s6/8QAFhEAAwAAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/ASv/xAAWEQADAAAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8BI//EACEQAAIBAwMFAAAAAAAAAAAAAAABAhESMRAhIkFRUmGx/9oACAEBAAY/AqWjjL6cna+xV4PXkOTLFtFDS650/8QAHBABAAIDAQEBAAAAAAAAAAAAAQARITFBUWGB/9oACAEBAAE/IUqmDqN4W5Kwm8ZA+Azepup69/I24MS9yB2UUUP9Ran/2gAMAwEAAgADAAAAEBjvfP/EABgRAAIDAAAAAAAAAAAAAAAAAAABEBFR/9oACAEDAQE/EEimT//EABkRAAMAAwAAAAAAAAAAAAAAAAABERAhUf/aAAgBAgEBPxBuaL6LH//EAB0QAQACAgMBAQAAAAAAAAAAAAEAESExQVFhcZH/2gAIAQEAAT8QxUa1NXTzfUtHMFAPVG32DRy7D9iPblYA9ZQHN0KILFQ18lOduq0cEY8GBbNZe45/S+kZYZ//2Q==" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/aba1d/profile-pic.jpg 1.5x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/b315d/profile-pic.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/aba1d/profile-pic.jpg 1.5x,
