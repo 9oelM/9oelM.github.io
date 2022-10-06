@@ -54,6 +54,8 @@ If you are able to bring up **complexities amd implementations** in mind just by
     - Kruskal’s algorithm
   - Union find
   - Strongly connected components
+- [Sorting](#sorting)
+  - [Overview](#overview)
 - [Dynamic programming](#dynamic-programming)
 - [Bit manipulation](#dynamic-programming)
 
@@ -1386,6 +1388,24 @@ def test_trie() -> bool:
 
 </details>
 
+# Sorting
+
+## Overview
+
+| Algorithm      | Brief explanation | Best | Average | Worst | Worst Space | In-place | Stable |
+|----------------|-------------------|------|---------|-------|-------------|----------|--------|
+| Selection sort |  Repeatedly select the next smallest element from the unsorted array usually on the right part                 |  $O(n^2)$    |      $O(n^2)$    |     $O(n^2)$   |     $O(1)$         |       |
+| Insertion sort |                   |      |         |       |    Yes         |
+| Bubble sort    |                   |      |         |       |    Yes         |
+| Merge sort     |                   |      |         |       |    Yes         |
+| Quicksort      |                   |      |         |       |    No         |
+| Heapsort       |                   |      |         |   $O(1)$    |    No         |
+| Counting sort  |                   |      |         |       |    Yes      |
+| Radix sort     |                   |      |         |       |             |
+
+## Stability in sorting
+
+A sorting algorithm is stable if two objects with equal keys appear in the same order even after being sorted
 
 # Dynamic programming
 
