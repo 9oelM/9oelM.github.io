@@ -50,24 +50,24 @@ def remove_max(heap, heap_length):
 
     return max_value
 
-def heapify(the_list):
+def heapify(arr):
 
     # Bubble down from the leaf nodes up to the top
-    for index in range(len(the_list) - 1, -1, -1):
-        bubble_down(the_list, len(the_list), index)
+    for index in range(len(arr) - 1, -1, -1):
+        bubble_down(arr, len(arr), index)
 
-def heapsort(the_list):
+def heapsort(arr):
 
-    heapify(the_list)
+    heapify(arr)
 
-    heap_size = len(the_list)
+    heap_size = len(arr)
 
     while heap_size > 0:
 
         # Remove the largest item and update the heap size
-        largest_value = remove_max(the_list, heap_size)
+        largest_value = remove_max(arr, heap_size)
         heap_size -= 1
 
         # Store the removed value at the end of the list, after
         # the entries used by the heap
-        the_list[heap_size] = largest_value
+        arr[heap_size] = largest_value
