@@ -904,6 +904,7 @@ def binary_search(array) -> int:
 ```
 
 </detail>
+
 <detail>
 <summary>👉 General array binary search implementation</summary>
 
@@ -925,6 +926,7 @@ def binary_search(nums: List[int], target: int) -> int:
 
 For searching the binary tree, recursion may be the most intuitive choice. For example:
 
+<detail>
 <summary>👉 Recursive binary tree DFS from the root</summary>
 
 ```py
@@ -943,6 +945,7 @@ def binary_tree_traversal(root: Union[Node, None]):
 
 However, iterative approach also works quite well.
 
+<detail>
 <summary>👉 Iterative binary tree DFS from the root</summary>
 
 ```py
@@ -962,6 +965,7 @@ def binary_tree_traversal_iterative_dfs(root: Union[Node, None]):
 
 </detail>
 
+<detail>
 <summary>👉 Iterative binary tree BFS from the root</summary>
 
 ```py
