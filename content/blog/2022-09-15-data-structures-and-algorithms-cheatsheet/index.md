@@ -1394,14 +1394,247 @@ def test_trie() -> bool:
 
 | Algorithm      | Brief explanation | Best | Average | Worst | Worst Space | In-place | Stable |
 |----------------|-------------------|------|---------|-------|-------------|----------|--------|
-| Selection sort |  Repeatedly select the next smallest element from the unsorted array usually on the right part                 |  $O(n^2)$    |      $O(n^2)$    |     $O(n^2)$   |     $O(1)$         |       |
-| Insertion sort |                   |      |         |       |    Yes         |
-| Bubble sort    |                   |      |         |       |    Yes         |
-| Merge sort     |                   |      |         |       |    Yes         |
-| Quicksort      |                   |      |         |       |    No         |
-| Heapsort       |                   |      |         |   $O(1)$    |    No         |
-| Counting sort  |                   |      |         |       |    Yes      |
+| Selection sort |  **Repeatedly select the next smallest element from the unsorted array** usually on the right part, append it at the back of the sorted array on the left part                 |  $O(n^2)$    |      $O(n^2)$    |     $O(n^2)$   |     $O(1)$         |   O    |    X   |
+| Insertion sort |  **Divide the array into sorted and unsorted parts, and repeatedly move the first element from the unsorted (right) to the sorted (left)** and make it sorted                 |  $O(n)$ (when already sorted)   |      $O(n^2)$    |     $O(n^2)$ (descending order)   |     $O(1)$         |   O    |    O   |
+| Bubble sort    |   **Iterate multiple times to swap two adjacent elements until they are in the sorted order**   |     $O(n)$   (already sorted)       |   $O(n^2)$   |   $O(n^2)$  (descending order)    |   O(1)    |     O       |   O    |
+| Merge sort     |  **Split the array into two and merge them by sorting them at the same time recursively**  |   $O(nlogn)$   |   $O(nlogn)$       |   $O(nlogn)$     |    $O(n)$         |   N   |   Y    |
+| Heapsort       |    **Convert the array into a heap, and repeatedly move the largest item to the end of the array**    | $O(n)$ (everything in the input is identical) | $O(nlog(n))$        |  $O(nlog(n))$ (heapify) $+ O(nlog(n))$ (heappop) $= O(nlog(n))$. Fine print: heapify can be implemented in $O(n)$ using Floyd's algo, but overall TC stays the same |  $O(1)$    |    Y    |   N   |
+| Counting sort  |  **Count the occurrence of each item in the array and use the counts to compute the indices**     |   $O(n)$   |     $O(n)$    |   $O(n)$    |   $O(n)$    |   N   |    Y   |
+| Quicksort      |                   |      |         |       |            |
 | Radix sort     |                   |      |         |       |             |
+
+### Implementations
+
+<details>
+<summary>👉 Selection sort</summary>
+
+```py
+def selection_sort(arr):
+  for i in range(len(arr)):
+      # Run through the unsorted elements in the input, finding
+      # the smallest one.
+      smallest_index = i
+      for j in range(i + 1, len(arr)):
+          if arr[j] < arr[smallest_index]:
+              smallest_index = j
+
+      # Move the smallest element to the front of the unsorted portion
+      # of the input (swapping with whatever's already there).
+      arr[i], arr[smallest_index] = arr[smallest_index], the_list[i]
+```
+
+</details>
+
+<details>
+<summary>👉 Insertion sort</summary>
+
+```py
+def insertion_sort(arr):
+
+  # For each item in the input list
+  for index in range(len(arr)):
+
+      # Shift it to the left until it's in the right spot
+      while index > 0 and arr[index - 1] >= arr[index]:
+          arr[index], arr[index - 1] = arr[index - 1], arr[index]
+          index -= 1
+```
+
+</details>
+
+<details>
+<summary>👉 Bubble sort</summary>
+
+```py
+# Bubble sort in Python
+
+def bubbleSort(array):
+  # loop to access each array element
+  for i in range(len(array)):
+
+    # loop to compare array elements
+    for j in range(0, len(array) - i - 1):
+
+      # compare two adjacent elements
+      # change > to < to sort in descending order
+      if array[j] > array[j + 1]:
+
+        # swapping elements if elements
+        # are not in the intended order
+        temp = array[j]
+        array[j] = array[j+1]
+        array[j+1] = temp
+```
+
+</details>
+
+<details>
+<summary>👉 Merge sort</summary>
+
+```py
+def mergeSort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left = arr[:mid]
+        right = arr[mid:]
+
+        # Recursive call on each half
+        mergeSort(left)
+        mergeSort(right)
+
+        # Two iterators for traversing the two halves
+        i = 0
+        j = 0
+        
+        # Iterator for the main list
+        k = 0
+        
+        # "merge" here
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+              # The value from the left half has been used
+              arr[k] = left[i]
+              # Move the iterator forward
+              i += 1
+            else:
+                arr[k] = right[j]
+                j += 1
+            # Move to the next slot
+            k += 1
+
+        # For all the remaining values
+        while i < len(left):
+            arr[k] = left[i]
+            i += 1
+            k += 1
+
+        while j < len(right):
+            arr[k]=right[j]
+            j += 1
+            k += 1
+```
+
+</details>
+<details>
+<summary>👉 Heap sort</summary>
+
+```py
+def left_child_index(parent_index):
+    return parent_index * 2 + 1
+
+def right_child_index(parent_index):
+    return parent_index * 2 + 2
+
+def bubble_down(heap, heap_length, index):
+    '''
+    Restore a max heap where the value at index may
+    be out of place (i.e.: smaller than its children).
+    '''
+    while index < heap_length:
+        left_index  = left_child_index(index)
+        right_index = right_child_index(index)
+
+        # If we don't have any child nodes, we can stop
+        if left_index >= heap_length:
+            break
+
+        # Find the larger of the two children
+        larger_child_index = left_index
+        if right_index < heap_length and heap[left_index] < heap[right_index]:
+            larger_child_index = right_index
+
+        # Are we larger than our children?
+        # If so, swap with the larger child.
+        if heap[index] < heap[larger_child_index]:
+            heap[index], heap[larger_child_index] = heap[larger_child_index], heap[index]
+
+            # Continue bubbling down
+            index = larger_child_index
+        else:
+
+            # We're larger than both children, so we're done
+            break
+
+def remove_max(heap, heap_length):
+    '''
+    Remove and return the largest item from a heap.
+    Updates the heap in-place, maintaining validity.
+    '''
+    # Grab the largest value from the root
+    max_value = heap[0]
+
+    # Move the last item in the heap into the root position
+    heap[0] = heap[heap_length - 1]
+
+    # And bubble down from the root to restore the heap
+    bubble_down(heap, heap_length - 1, 0)
+
+    return max_value
+
+def heapify(arr):
+
+    # Bubble down from the leaf nodes up to the top
+    for index in range(len(arr) - 1, -1, -1):
+        bubble_down(arr, len(arr), index)
+
+def heapsort(arr):
+
+    heapify(arr)
+
+    heap_size = len(arr)
+
+    while heap_size > 0:
+
+        # Remove the largest item and update the heap size
+        largest_value = remove_max(arr, heap_size)
+        heap_size -= 1
+
+        # Store the removed value at the end of the list, after
+        # the entries used by the heap
+        arr[heap_size] = largest_value
+```
+
+</details>
+<details>
+<summary>👉 Counting sort</summary>
+
+```py
+def counting_sort(arr, max_value):
+
+  # Count the number of times each value appears.
+  # counts[0] stores the number of 0's in the input
+  # counts[4] stores the number of 4's in the input
+  # etc.
+  counts = [0] * (max_value + 1)
+  for item in arr:
+      counts[item] += 1
+
+  # Overwrite counts to hold the next index an item with
+  # a given value goes. So, counts[4] will now store the index
+  # where the next 4 goes, not the number of 4's our
+  # list has.
+  num_items_before = 0
+  for i, count in enumerate(counts):
+      counts[i] = num_items_before
+      num_items_before += count
+
+  # Output list to be filled in
+  sorted_arr = [None] * len(arr)
+
+  # Run through the input list
+  for item in arr:
+
+      # Place the item in the sorted list
+      sorted_arr[ counts[item] ] = item
+
+      # And, make sure the next item we see with the same value
+      # goes after the one we just placed
+      counts[item] += 1
+
+  return sorted_arr
+```
+
+</details>
 
 ## Stability in sorting
 
