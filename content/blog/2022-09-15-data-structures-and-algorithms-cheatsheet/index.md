@@ -33,7 +33,7 @@ If you are able to bring up **complexities amd implementations** in mind just by
   - [Deque](#deque)
   - [Priority queue](#priority-queue)
 - [Tree](#trees)
-  - Binary tree
+  - [Binary tree](#binary-tree)
   - [Heap](#heap)
   - [Trie](#trie-prefix-tree)
   - Red-black tree
@@ -868,6 +868,7 @@ function detectCycle(head: ListNode | null): ListNode | null {
 - A **binary tree** is a tree 
   - where a parent node has two edges at max, each connecting to each of two nodes.
 - A **complete binary tree** is a tree where every level of the tree is fully filled with the possible exception of the last level where the nodes must be as far left as possible. This is also a property of heap.
+  - In a complete binary tree, $\text{number of nodes} = 2\text{height of the tree}+1 − 1 - \text{number of empty nodes in the bottomost level}$
     ![binary-tree-0.png](./binary-tree-0.png)
 - A **balanced binary tree** is a binary tree structure in which the left and right subtrees of every node differ in height by no more than 1.
     ![binary-tree-2.png](./binary-tree-2.png)
@@ -986,6 +987,119 @@ def binary_tree_traversal_iterative_dfs(root: Union[Node, None]):
 ```
 
 </details>
+
+## Heap
+
+- A min heap is a complete binary tree where the smallest value is at the top.
+- A max heap is a complete binary tree where the max value is at the top. (otherwise, you could negate the key of a node in a min heap to use it as a max heap)
+- A binary heap usually means min heap.
+- In a min heap, every node is smaller than or equal to its children (the reverse for the max heap)
+- A simple rule to remember the heap 'order' goes **left to right, top to bottom**
+- Questions dealing with min/max may be relevant to heap 
+
+![heap0.jpeg](./heap0.jpeg)
+
+### Min heap time complexities
+
+$n = \text{number of nodes in the complete binary tree}$
+
+| Op                       | how | TC        | TC remarks |
+|--------------------------|-----|-----------|---|
+| peek (get min)       |     |$O(1)$    |   |
+| remove min           | Keep swapping the value with the smallest child if the smallest child is less than the value we are bubbling down.   |$O(logn)$ | bubbling down would take at most $O(h) = O(logn)$ time, where $h$ is the height of the complete binary tree  |
+| insert a new element     | Keep bubbling up while there is a parent to compare against and that parent is greater than the item      | $O(logn)$ |  bubbling up would take at most $O(h) = O(logn)$ time, where $h$ is the height of the complete binary tree |
+| overall space complexity |      |$O(n)$    |   |
+
+### Min heap implementation logics
+
+#### An array can represent a heap
+
+- Due to the ordering of the complete binary tree, an array can be used to represent a heap:
+
+![heap1.jpeg](./heap1.jpeg)
+
+- Because of the complete binary tree's property, the indices of a parent, left child, and right child can be identified given an index:
+    ```py
+    ...
+
+    def get_parent_idx(self, idx):
+        return (idx - 1) // 2
+
+    def get_left_child_idx(self, idx):
+        return idx * 2 + 1
+
+    def get_right_child_idx(self, idx):
+        return idx * 2 + 2
+    
+    ...
+    ```
+    Notice the meaning of $* 2$ and $/ 2$. This is because the next level must have twice as many elements as the previous level in a complete binary tree.
+
+    For example, given an index of `3`:
+    - its parent is `3 - 1 // 2 = 2`
+    - its left child is `3 * 2 + 1 = 7`
+    - its right child is `3 * 2 + 2 = 8` 
+    ![heap3.jpeg](./heap3.jpeg)
+
+#### Insertion
+1. Put the new element into the last position of the complete binary tree
+2. Compare the new element with its parent, and swap with the parent if it is greater than the element.
+3. Repeat 1-2. This process is called 'bubbling up'
+
+#### Removal
+1. Removal only happens at the top of the heap only
+1. Move the element at the last position (bottommost & rightmost) of the complete binary tree to its top
+1. See if any of its children are smaller than the element
+1. Swap the element with the smaller one of the children nodes
+1. Repeat 3-4. This process is called 'bubbling down' (also known as 'sift down')
+
+### Heapify: How is it $O(n)$?
+
+| Option                       | TC        |
+|--------------------------|----|
+|**naive approach**: create an empty heap, and add the items one by one, bubbling up for $n$ times|$O(nlogn)$|
+|**efficient approach**: start from the leaf nodes at the bottom. go up each level to swap the parent with the children if it needs to be. repeat until you reach the top. |$O(n)$|
+
+- We all know about the naive approach by now
+- In the efficient approach:
+  - start from the bottommost, rightmost node in the complete binary tree that has a child
+  - bubble the node down if possible
+  - repeat by going backwards in the array index order until the root is reached
+![heap4.jpeg](./heap4.jpeg)
+
+![heap5.jpeg](./heap5.jpeg)
+
+- Why is bubbling down is much more efficient than bubbling up (FYI if implemented correctly, `bubble_up` will only need to be used to perform an insert to an existing heap)?
+  - The number of operations required for `bubble_down` and `bubble_up` is proportional to the distance the node may have to move. 
+  - For `bubble_down`, it is the distance to the bottom of the tree, so `bubble_down` is expensive for nodes at the top of the tree. 
+  - With `bubble_up`, the work is proportional to the distance to the top of the tree, so `bubble_up` is expensive for nodes at the bottom of the tree.
+  - The tree has smaller number of nodes at the top, and larger at the bottom
+  - Intuitively, `bubble_down` will cost less work if every node were to be gone through
+
+#### Calculation of the work: `bubble_down`
+
+![heap6.png](./heap6.png)
+
+As you can see, the total work for `bubble_down` is
+
+$\text{(bubble\_down work at the bottommost level)} + \text{(bubble\_down work at the next bottommost level)} + ... + \text{(bubble\_down work at the top level)} = $
+
+$O(0 \times n/2) + O(1 \times n/4) + O(2 \times n/8) + ... + O(h \times 1)$
+
+where $n = \text{number of nodes in the complete binary tree}$. Remember each work is the number of edges a node may have to go down at most in a single `bubble_down` operation.
+
+The sum of the work is equal to $n$. The proof requires the knowledge of some math concepts, so it'll be skipped here.
+
+#### Calculation of the work: `bubble_up`
+
+The total work for `bubble_up` is
+
+$\text{(bubble\_up work at the topmost level)} + \text{(bubble\_up work at the next top level)} + ... + \text{(bubble\_up work at the bottommost level)} =$
+
+$O(h \times n/2) + O((h-1) \times n/4) + O((h-2) \times n/8) + ... + O(0 \times 1)$
+
+The first term, $O(h \times n/2)$, is already $O(h) * n = O(nlogn)$, so it's obvious it requires more work than `bubble_down` strategy.
+
 
 ## AVL tree
 
@@ -1269,116 +1383,6 @@ class Solution:
 ```
 
 ## Dijkstra's algorithm
-
-## Heap
-
-- A min heap is a complete binary tree where the smallest value is at the top.
-- A max heap is a complete binary tree where the max value is at the top. (otherwise, you could negate the key of a node in a min heap to use it as a max heap)
-- A binary heap usually means min heap.
-- In a min heap, every node is smaller than or equal to its children (the reverse for the max heap)
-- A simple rule to remember the heap 'order' goes **left to right, top to bottom**
-- Questions dealing with min/max may be relevant to heap 
-
-![heap0.jpeg](./heap0.jpeg)
-
-### Min heap time complexities
-
-$n = \text{number of nodes in the complete binary tree}$
-
-| Op                       | how | TC        | TC remarks |
-|--------------------------|-----|-----------|---|
-| peek (get min)       |     |$O(1)$    |   |
-| remove min           | Keep swapping the value with the smallest child if the smallest child is less than the value we are bubbling down.   |$O(logn)$ | bubbling down would take at most $O(h) = O(logn)$ time, where $h$ is the height of the complete binary tree  |
-| insert a new element     | Keep bubbling up while there is a parent to compare against and that parent is greater than the item      | $O(logn)$ |  bubbling up would take at most $O(h) = O(logn)$ time, where $h$ is the height of the complete binary tree |
-| overall space complexity |      |$O(n)$    |   |
-
-### Min heap implementation logics
-
-#### An array can represent a heap
-
-- Due to the ordering of the complete binary tree, an array can be used to represent a heap:
-
-![heap1.jpeg](./heap1.jpeg)
-
-- Because of the complete binary tree's property, the indices of a parent, left child, and right child can be identified given an index:
-    ```py
-    ...
-
-    def get_parent_idx(self, idx):
-        return (idx - 1) // 2
-
-    def get_left_child_idx(self, idx):
-        return idx * 2 + 1
-
-    def get_right_child_idx(self, idx):
-        return idx * 2 + 2
-    
-    ...
-    ```
-    Notice the meaning of $* 2$ and $/ 2$. This is because the next level must have twice as many elements as the previous level in a complete binary tree.
-
-    For example, given an index of `3`:
-    - its parent is `3 - 1 // 2 = 2`
-    - its left child is `3 * 2 + 1 = 7`
-    - its right child is `3 * 2 + 2 = 8` 
-    ![heap3.jpeg](./heap3.jpeg)
-
-#### Insertion
-1. Put the new element into the last position of the complete binary tree
-2. Compare the new element with its parent, and swap with the parent if it is greater than the element.
-3. Repeat 1-2. This process is called 'bubbling up'
-
-#### Removal
-1. Removal only happens at the top of the heap only
-1. Move the element at the last position (bottommost & rightmost) of the complete binary tree to its top
-1. See if any of its children are smaller than the element
-1. Swap the element with the smaller one of the children nodes
-1. Repeat 3-4. This process is called 'bubbling down' (also known as 'sift down')
-
-### Heapify: How is it $O(n)$?
-
-| Option                       | TC        |
-|--------------------------|----|
-|**naive approach**: create an empty heap, and add the items one by one, bubbling up for $n$ times|$O(nlogn)$|
-|**efficient approach**: start from the leaf nodes at the bottom. go up each level to swap the parent with the children if it needs to be. repeat until you reach the top. |$O(n)$|
-
-- We all know about the naive approach by now
-- In the efficient approach:
-  - start from the bottommost, rightmost node in the complete binary tree that has a child
-  - bubble the node down if possible
-  - repeat by going backwards in the array index order until the root is reached
-![heap4.jpeg](./heap4.jpeg)
-
-![heap5.jpeg](./heap5.jpeg)
-
-- Why is bubbling down is much more efficient than bubbling up (FYI if implemented correctly, `bubble_up` will only need to be used to perform an insert to an existing heap)?
-  - The number of operations required for `bubble_down` and `bubble_up` is proportional to the distance the node may have to move. 
-  - For `bubble_down`, it is the distance to the bottom of the tree, so `bubble_down` is expensive for nodes at the top of the tree. 
-  - With `bubble_up`, the work is proportional to the distance to the top of the tree, so `bubble_up` is expensive for nodes at the bottom of the tree.
-  - The tree has smaller number of nodes at the top, and larger at the bottom
-  - Intuitively, `bubble_down` will cost less work if every node were to be gone through
-
-#### Calculation of the work: `bubble_down`
-
-![heap6.png](./heap6.png)
-
-As you can see, the total work for `bubble_down` is
-
-$\text{(bubble\_down work at the bottommost level)} + \text{(bubble\_down work at the next bottommost level)} + ... + \text{(bubble\_down work at the top level)} = $
-
-$O(0 \times n/2) + O(1 \times n/4) + O(2 \times n/8) + ... + O(h \times 1)$
-
-where $n = \text{number of nodes in the complete binary tree}$.
-
-The sum of the work is equal to $n$. The proof requires the knowledge of some math concepts, so it'll be skipped here.
-
-#### Calculation of the work: `bubble_up`
-
-The total work for `bubble_up` is
-
-$\text{(bubble\_up work at the topmost level)} + \text{(bubble\_up work at the next top level)} + ... + \text{(bubble\_up work at the bottommost level)} =$
-
-$O(h \times n/2) + O((h-1) \times n/4) + O((h-2) \times n/8) + ... + O(0 \times 1)$
 
 # Tree
 
