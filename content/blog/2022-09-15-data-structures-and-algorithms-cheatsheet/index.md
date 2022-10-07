@@ -868,7 +868,7 @@ function detectCycle(head: ListNode | null): ListNode | null {
 - A **binary tree** is a tree 
   - where a parent node has two edges at max, each connecting to each of two nodes.
 - A **complete binary tree** is a tree where every level of the tree is fully filled with the possible exception of the last level where the nodes must be as far left as possible. This is also a property of heap.
-  - In a complete binary tree, $\text{number of nodes} = 2\text{height of the tree}+1 − 1 - \text{number of empty nodes in the bottomost level}$
+  - In a complete binary tree, $\text{number of nodes} = 2^{\text{height of the tree}+1} − 1 - \text{number of empty nodes in the bottomost level}$
     ![binary-tree-0.png](./binary-tree-0.png)
 - A **balanced binary tree** is a binary tree structure in which the left and right subtrees of every node differ in height by no more than 1.
     ![binary-tree-2.png](./binary-tree-2.png)
@@ -1774,3 +1774,5 @@ class Solution:
 # Bit manipulation
 
 ## General tips and tricks for bit manipulation
+
+- A bit shift takes an $O(1)$ time. This is because it is mostly a single instruction in a CPU.
