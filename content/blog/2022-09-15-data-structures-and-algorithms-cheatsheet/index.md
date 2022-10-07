@@ -1010,6 +1010,101 @@ $n = \text{number of nodes in the complete binary tree}$
 | insert a new element     | Keep bubbling up while there is a parent to compare against and that parent is greater than the item      | $O(logn)$ |  bubbling up would take at most $O(h) = O(logn)$ time, where $h$ is the height of the complete binary tree |
 | overall space complexity |      |$O(n)$    |   |
 
+### Min heap implementation
+
+<details>
+<summary>👉 Min heap implementation</summary>
+
+```py
+from typing import Generic, List, TypeVar
+
+T = TypeVar('T')
+
+class MinHeap(Generic[T]):
+  def parent_index(self, index: int) -> int:
+    return (index - 1) // 2
+
+  def left_child_index(self, index: int) -> int:
+    return index * 2 + 1
+  
+  def right_child_index(self, index: int) -> int:
+    return index * 2 + 2
+
+  def is_index_valid(self, index: int, arr: List[T]) -> bool:
+    return 0 <= index <= len(arr) - 1
+
+  def bubble_down(self, parent_index: int, arr: List[T]) -> None:
+    """
+    Bubble the element down until the a node is smaller than its children
+    """
+    while self.is_index_valid(parent_index, arr):
+      left = self.left_child_index(parent_index)
+      right = self.right_child_index(parent_index)
+
+      # find the smaller one between left and right (it may not exist)
+      smaller_child_index = None
+      if self.is_index_valid(left, arr) and arr[left] < arr[parent_index]:
+        smaller_child_index = left
+      if self.is_index_valid(right, arr) and arr[right] < arr[parent_index] and arr[right] <= arr[left]:
+        smaller_child_index = right
+
+      if smaller_child_index is not None:
+        arr[smaller_child_index], arr[parent_index] = arr[parent_index], arr[smaller_child_index]
+        # keep bubbling down
+        parent_index = smaller_child_index
+      else:
+        break
+
+  def bubble_up(self, child_index: int, arr: List[T]) -> None:
+      """
+      Bubble the node up until the node has all of its children bigger than itself
+      """
+      while self.is_index_valid(child_index, arr):
+        parent_index = self.parent_index(child_index)
+        # if child_index == 0
+        if not self.is_index_valid(parent_index, arr):
+          break
+        if arr[child_index] < arr[parent_index]:
+          arr[child_index], arr[parent_index] = arr[parent_index], arr[child_index]
+          child_index = parent_index
+        else:
+          break
+
+  def peek(self, arr: List[T]) -> T:
+    return arr[0]
+
+  def push(self, arr: List[T], new_elem: T) -> List[T]:
+    """
+    1. Add the node to the last indexing order of the array (rightmost, bottommost part of the tree)
+    2. Bubble that node up
+    """
+    arr.append(new_elem)
+    self.bubble_up(len(arr) - 1, arr)
+
+    return arr
+
+  def pop(self, arr: List[T]) -> T:
+    """
+    1. Remove the smallest node
+    2. Move the last node in the array indexing order to the first index (to the root of the tree)
+    3. Bubble that node down
+    """
+    smallest = arr[0]
+    last = arr.pop()
+    if last is not smallest:
+      arr[0] = last
+      self.bubble_down(0, arr)
+
+    return smallest
+
+  def heapify(self, arr: List[T]) -> None:
+    # last level leaves don't need to be bubbled down
+    for i in range(len(arr) // 2, -1, -1):
+      self.bubble_down(i, arr)
+```
+
+</details>
+
 ### Min heap implementation logics
 
 #### An array can represent a heap
@@ -1099,6 +1194,7 @@ $\text{(bubble\_up work at the topmost level)} + \text{(bubble\_up work at the n
 $O(h \times n/2) + O((h-1) \times n/4) + O((h-2) \times n/8) + ... + O(0 \times 1)$
 
 The first term, $O(h \times n/2)$, is already $O(h) * n = O(nlogn)$, so it's obvious it requires more work than `bubble_down` strategy.
+
 
 
 ## AVL tree
@@ -1776,3 +1872,54 @@ class Solution:
 ## General tips and tricks for bit manipulation
 
 - A bit shift takes an $O(1)$ time. This is because it is mostly a single instruction in a CPU.
+
+## Arithmetic vs logical right shift
+
+- logical right shift (`>>>`): shifts bits to right, filling the sign bit with 0
+- arithmetic right shift (`>>`): shifts bits to right filling the sign bit with 1. Equivalent to $num / 2$
+- logical left shift (`<<<`): shifts bits to left, filling the first bit with 0
+- arithmetic left shift (`<<`): shifts bits to left filling the first bit with 1. Equivalent to $num \times{2}$
+
+## Common tasks
+
+<details>
+<summary>👉 Get nth bit</summary>
+
+```py
+def get_nth_bit(num: int, n: int) -> int
+  """
+  perform AND between the nth bit and the number with only nth bit set as 1 and others as 0
+  """
+  return (num & (1 << n)) != 0
+```
+
+</details>
+
+<details>
+<summary>👉 Set nth bit</summary>
+
+```py
+def set_nth_bit(num: int, n: int) -> int
+  """
+  perform OR between the nth bit and the number with only nth bit set as 1 and others as 0
+  """
+  return (num | (1 << n))
+```
+
+</details>
+
+<details>
+<summary>👉 Clear nth bit</summary>
+
+```py
+def set_nth_bit(num: int, n: int) -> int
+  """
+  perform AND between the nth bit and the number with only nth bit set as 1 and others as 0
+  """
+  mask = ~(1 << n)
+  return num & mask
+```
+
+</details>
+
+

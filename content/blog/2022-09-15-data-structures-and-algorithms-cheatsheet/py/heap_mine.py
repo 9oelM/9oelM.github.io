@@ -1,11 +1,8 @@
 from typing import Generic, List, TypeVar
-import math
+
 T = TypeVar('T')
 
 class MinHeap(Generic[T]):
-  def __init__(self):
-    pass
-
   def parent_index(self, index: int) -> int:
     return (index - 1) // 2
 
@@ -19,6 +16,9 @@ class MinHeap(Generic[T]):
     return 0 <= index <= len(arr) - 1
 
   def bubble_down(self, parent_index: int, arr: List[T]) -> None:
+    """
+    Bubble the element down until the a node is smaller than its children
+    """
     while self.is_index_valid(parent_index, arr):
       left = self.left_child_index(parent_index)
       right = self.right_child_index(parent_index)
@@ -38,6 +38,9 @@ class MinHeap(Generic[T]):
         break
 
   def bubble_up(self, child_index: int, arr: List[T]) -> None:
+      """
+      Bubble the node up until the node has all of its children bigger than itself
+      """
       while self.is_index_valid(child_index, arr):
         parent_index = self.parent_index(child_index)
         # if child_index == 0
@@ -53,12 +56,21 @@ class MinHeap(Generic[T]):
     return arr[0]
 
   def push(self, arr: List[T], new_elem: T) -> List[T]:
+    """
+    1. Add the node to the last indexing order of the array (rightmost, bottommost part of the tree)
+    2. Bubble that node up
+    """
     arr.append(new_elem)
     self.bubble_up(len(arr) - 1, arr)
 
     return arr
 
   def pop(self, arr: List[T]) -> T:
+    """
+    1. Remove the smallest node
+    2. Move the last node in the array indexing order to the first index (to the root of the tree)
+    3. Bubble that node down
+    """
     smallest = arr[0]
     last = arr.pop()
     if last is not smallest:
@@ -71,8 +83,3 @@ class MinHeap(Generic[T]):
     # last level leaves don't need to be bubbled down
     for i in range(len(arr) // 2, -1, -1):
       self.bubble_down(i, arr)
-
-# heap = MinHeap()
-# arr = [3,2,1]
-# heap.heapify(arr)
-# print(arr)

@@ -33,11 +33,13 @@ def test():
       my_heap.push(test_arr, num)
       heapq.heappush(arr, num)
       compare_and_check(arr, test_arr)
+      compare_and_check(heapq.nsmallest(1, arr)[0], my_heap.peek(test_arr))
     for _ in range(10):
       a = heapq.heappop(arr)
       b = my_heap.pop(test_arr)
       compare_and_check(a, b)
       compare_and_check(arr, test_arr)
+      compare_and_check(heapq.nsmallest(1, arr)[0], my_heap.peek(test_arr))
 
   print("Pass")
 test()
