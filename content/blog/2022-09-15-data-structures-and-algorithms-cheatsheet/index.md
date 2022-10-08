@@ -1205,6 +1205,114 @@ The first term, $O(h \times n/2)$, is already $O(h) * n = O(nlogn)$, so it's obv
 
 **Red-black trees**
 
+## Trie (Prefix tree)
+
+Trie is a special arrangement of nodes such that a prefix of each string is recursively stored up to the root node.
+
+![trie0.png](./trie0.png) 
+
+![trie1.png](./trie1.png)
+
+Complexities (where `k` is the length of a string and `n` is the number of strings stored)
+- time
+  - search: O(k)
+  - insert: O(k)
+- space: O(n * k)
+
+A trie is useful when you need to search for matching prefix from many strings. No major languages offer this data structure in their std. Your own implementation is needed.
+
+**Note that `TrieNode` itself does not contain the character** although from illustration of the tries above it may look like that.
+
+<details>
+ <summary>👉 Trie implementation</summary>
+
+```py
+class TrieNode:
+    def __init__(self) -> None:
+        # you can change this to self.nodes: List[TrieNode] = [None] * characters_len
+        # if you know the exact set of characters you will receive
+        self.nodes: dict[str, TrieNode] = {}
+        # is_leaf tells if the node is the end of a word
+        self.is_leaf = False
+
+    def insert_many(self, words: list[str]) -> None:
+        for word in words:
+            self.insert(word)
+
+    def insert(self, word: str) -> None:
+        """
+        recursively insert char by char
+        """
+        curr = self
+        for char in word:
+            if char not in curr.nodes:
+                curr.nodes[char] = TrieNode()
+            curr = curr.nodes[char]
+        curr.is_leaf = True
+
+    def find(self, word: str) -> bool:
+        """
+        recurisvely find char by char
+        if one char in the middle is not in the tree,
+        return false
+        """
+        curr = self
+        for char in word:
+            if char not in curr.nodes:
+                return False
+            curr = curr.nodes[char]
+        return curr.is_leaf
+
+    def delete(self, word: str) -> None:
+        """
+        Deletes a word in a Trie
+        :param word: word to delete
+        :return: None
+        """
+
+        def _delete(curr: TrieNode, word: str, index: int) -> bool:
+            if index == len(word):
+                # If word does not exist
+                if not curr.is_leaf:
+                    return False
+                curr.is_leaf = False
+                return len(curr.nodes) == 0
+            char = word[index]
+            char_node = curr.nodes.get(char)
+            # If char not in current trie node
+            if not char_node:
+                return False
+            # Flag to check if node can be deleted
+            delete_curr = _delete(char_node, word, index + 1)
+            if delete_curr:
+                del curr.nodes[char]
+                return len(curr.nodes) == 0
+            return delete_curr
+
+        _delete(self, word, 0)
+
+def test_trie() -> bool:
+    words = "banana bananas bandana band apple all beast".split()
+    root = TrieNode()
+    root.insert_many(words)
+    # print_words(root, "")
+    assert all(root.find(word) for word in words)
+    assert root.find("banana")
+    assert not root.find("bandanas")
+    assert not root.find("apps")
+    assert root.find("apple")
+    assert root.find("all")
+    root.delete("all")
+    assert not root.find("all")
+    root.delete("banana")
+    assert not root.find("banana")
+    assert root.find("bananas")
+    return True
+```
+
+</details>
+
+
 # Graphs
 
 ## DFS and BFS
@@ -1459,7 +1567,6 @@ For example, for a complete binary tree, the number of leaves will be  n / 2 = O
 
 ## Path discovery
 
-
 ### Finding all paths in a graph from a to b
 
 This is an example of using DFS to find all paths from vertex 0 to n - 1.
@@ -1479,113 +1586,6 @@ class Solution:
 ```
 
 ## Dijkstra's algorithm
-
-# Tree
-
-## Trie (Prefix tree)
-
-Trie is a special arrangement of nodes such that a prefix of each string is recursively stored up to the root node.
-
-![trie0.png](./trie0.png) ![trie1.png](./trie1.png)
-
-Complexities (where `k` is the length of a string and `n` is the number of strings stored)
-- time
-  - search: O(k)
-  - insert: O(k)
-- space: O(n * k)
-
-A trie is useful when you need to search for matching prefix from many strings. No major languages offer this data structure in their std. Your own implementation is needed.
-
-**Note that `TrieNode` itself does not contain the character** although from illustration of the tries above it may look like that.
-
-<details>
- <summary>👉 Trie implementation</summary>
-
-```py
-class TrieNode:
-    def __init__(self) -> None:
-        # you can change this to self.nodes: List[TrieNode] = [None] * characters_len
-        # if you know the exact set of characters you will receive
-        self.nodes: dict[str, TrieNode] = {}
-        # is_leaf tells if the node is the end of a word
-        self.is_leaf = False
-
-    def insert_many(self, words: list[str]) -> None:
-        for word in words:
-            self.insert(word)
-
-    def insert(self, word: str) -> None:
-        """
-        recursively insert char by char
-        """
-        curr = self
-        for char in word:
-            if char not in curr.nodes:
-                curr.nodes[char] = TrieNode()
-            curr = curr.nodes[char]
-        curr.is_leaf = True
-
-    def find(self, word: str) -> bool:
-        """
-        recurisvely find char by char
-        if one char in the middle is not in the tree,
-        return false
-        """
-        curr = self
-        for char in word:
-            if char not in curr.nodes:
-                return False
-            curr = curr.nodes[char]
-        return curr.is_leaf
-
-    def delete(self, word: str) -> None:
-        """
-        Deletes a word in a Trie
-        :param word: word to delete
-        :return: None
-        """
-
-        def _delete(curr: TrieNode, word: str, index: int) -> bool:
-            if index == len(word):
-                # If word does not exist
-                if not curr.is_leaf:
-                    return False
-                curr.is_leaf = False
-                return len(curr.nodes) == 0
-            char = word[index]
-            char_node = curr.nodes.get(char)
-            # If char not in current trie node
-            if not char_node:
-                return False
-            # Flag to check if node can be deleted
-            delete_curr = _delete(char_node, word, index + 1)
-            if delete_curr:
-                del curr.nodes[char]
-                return len(curr.nodes) == 0
-            return delete_curr
-
-        _delete(self, word, 0)
-
-def test_trie() -> bool:
-    words = "banana bananas bandana band apple all beast".split()
-    root = TrieNode()
-    root.insert_many(words)
-    # print_words(root, "")
-    assert all(root.find(word) for word in words)
-    assert root.find("banana")
-    assert not root.find("bandanas")
-    assert not root.find("apps")
-    assert root.find("apple")
-    assert root.find("all")
-    root.delete("all")
-    assert not root.find("all")
-    root.delete("banana")
-    assert not root.find("banana")
-    assert root.find("bananas")
-    return True
-```
-
-</details>
 
 # Sorting
 
@@ -1869,18 +1869,37 @@ class Solution:
 
 # Bit manipulation
 
-## General tips and tricks for bit manipulation
-
-- A bit shift takes an $O(1)$ time. This is because it is mostly a single instruction in a CPU.
-
 ## Arithmetic vs logical right shift
 
+- A bit shift takes an $O(1)$ time. This is because it is mostly a single instruction in a CPU.
 - logical right shift (`>>>`): shifts bits to right, filling the sign bit with 0
 - arithmetic right shift (`>>`): shifts bits to right filling the sign bit with 1. Equivalent to $num / 2$
 - logical left shift (`<<<`): shifts bits to left, filling the first bit with 0
 - arithmetic left shift (`<<`): shifts bits to left filling the first bit with 1. Equivalent to $num \times{2}$
 
+## Two's complement
+
+
 ## Common tasks
+
+<details>
+<summary>👉 Get the bit length to represent an integer</summary>
+
+```py
+a = 100
+
+a.bit_length() # 7
+
+# or you could do old school
+def get_bit_len(num: int) -> int
+  length = 0
+  while num: 
+      num >>= 1 
+      length += 1 
+  return length
+```
+
+</details>
 
 <details>
 <summary>👉 Get nth bit</summary>
@@ -1896,10 +1915,10 @@ def get_nth_bit(num: int, n: int) -> int
 </details>
 
 <details>
-<summary>👉 Set nth bit</summary>
+<summary>👉 Set nth bit as 1</summary>
 
 ```py
-def set_nth_bit(num: int, n: int) -> int
+def set_nth_bit_as_1(num: int, n: int) -> int
   """
   perform OR between the nth bit and the number with only nth bit set as 1 and others as 0
   """
@@ -1912,14 +1931,32 @@ def set_nth_bit(num: int, n: int) -> int
 <summary>👉 Clear nth bit</summary>
 
 ```py
-def set_nth_bit(num: int, n: int) -> int
+def clear_nth_bit(num: int, n: int) -> int:
   """
   perform AND between the nth bit and the number with only nth bit set as 1 and others as 0
   """
   mask = ~(1 << n)
   return num & mask
+
+# 103 99 99
+print(0b01100111, 0b01100011, clear_nth_bit(0b01100111, 2))
 ```
 
 </details>
 
+
+<details>
+<summary>👉 Set nth bit to 0 or 1</summary>
+
+```py
+def set_nth_bit(num: int, n: int, is_1=True) -> int:
+  val = 1 if is_1 else 0
+  mask = ~(1 << n)
+  return (num & mask) | (val << i)
+
+# 103 99 99
+print(0b01100111, 0b01100011, clear_nth_bit(0b01100111, 2))
+```
+
+</details>
 
