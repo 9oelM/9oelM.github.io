@@ -276,6 +276,9 @@
 <p><a href="#min-heap-time-complexities">Min heap time complexities</a></p>
 </li>
 <li>
+<p><a href="#min-heap-implementation">Min heap implementation</a></p>
+</li>
+<li>
 <p><a href="#min-heap-implementation-logics">Min heap implementation logics</a></p>
 <ul>
 <li><a href="#an-array-can-represent-a-heap">An array can represent a heap</a></li>
@@ -297,6 +300,9 @@
 </li>
 <li>
 <p><a href="#red-black-tree">Red-black tree</a></p>
+</li>
+<li>
+<p><a href="#trie-prefix-tree">Trie (Prefix tree)</a></p>
 </li>
 </ul>
 </li>
@@ -331,12 +337,6 @@
 </ul>
 </li>
 <li>
-<p><a href="#tree">Tree</a></p>
-<ul>
-<li><a href="#trie-prefix-tree">Trie (Prefix tree)</a></li>
-</ul>
-</li>
-<li>
 <p><a href="#sorting">Sorting</a></p>
 <ul>
 <li>
@@ -356,7 +356,9 @@
 <li>
 <p><a href="#bit-manipulation">Bit manipulation</a></p>
 <ul>
-<li><a href="#general-tips-and-tricks-for-bit-manipulation">General tips and tricks for bit manipulation</a></li>
+<li><a href="#arithmetic-vs-logical-right-shift">Arithmetic vs logical right shift</a></li>
+<li><a href="#twos-complement">Two’s complement</a></li>
+<li><a href="#common-tasks">Common tasks</a></li>
 </ul>
 </li>
 </ul>
@@ -1230,7 +1232,7 @@ In that sense, this technique is also called tortoise and hare algorithm.</p>
 </li>
 <li>A <strong>complete binary tree</strong> is a tree where every level of the tree is fully filled with the possible exception of the last level where the nodes must be as far left as possible. This is also a property of heap.
 <ul>
-<li>In a complete binary tree, <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>number of nodes</mtext><mo>=</mo><mn>2</mn><mtext>height of the tree</mtext><mo>+</mo><mn>1</mn><mtext>−</mtext><mn>1</mn><mo>−</mo><mtext>number of empty nodes in the bottomost level</mtext></mrow><annotation encoding="application/x-tex">\text{number of nodes} = 2\text{height of the tree}+1 − 1 - \text{number of empty nodes in the bottomost level}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">number of nodes</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">2</span><span class="mord text"><span class="mord">height of the tree</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">−</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">number of empty nodes in the bottomost level</span></span></span></span></span></span>
+<li>In a complete binary tree, <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>number of nodes</mtext><mo>=</mo><msup><mn>2</mn><mrow><mtext>height of the tree</mtext><mo>+</mo><mn>1</mn></mrow></msup><mtext>−</mtext><mn>1</mn><mo>−</mo><mtext>number of empty nodes in the bottomost level</mtext></mrow><annotation encoding="application/x-tex">\text{number of nodes} = 2^{\text{height of the tree}+1} − 1 - \text{number of empty nodes in the bottomost level}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">number of nodes</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.9324379999999999em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">height of the tree</span></span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mord">−</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">number of empty nodes in the bottomost level</span></span></span></span></span></span>
 <span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
@@ -1526,6 +1528,95 @@ In that sense, this technique is also called tortoise and hare algorithm.</p>
 </tr>
 </tbody>
 </table>
+<h3 id="min-heap-implementation" style="position:relative;">Min heap implementation<a href="#min-heap-implementation" aria-label="min heap implementation permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<details>
+<summary>👉 Min heap implementation</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">from</span> typing <span class="token keyword">import</span> Generic<span class="token punctuation">,</span> List<span class="token punctuation">,</span> TypeVar
+
+T <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">'T'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MinHeap</span><span class="token punctuation">(</span>Generic<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">parent_index</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> index<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+
+  <span class="token keyword">def</span> <span class="token function">left_child_index</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> index<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> index <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span>
+  
+  <span class="token keyword">def</span> <span class="token function">right_child_index</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> index<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> index <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">2</span>
+
+  <span class="token keyword">def</span> <span class="token function">is_index_valid</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> index<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> arr<span class="token punctuation">:</span> List<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> index <span class="token operator">&lt;=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
+
+  <span class="token keyword">def</span> <span class="token function">bubble_down</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> parent_index<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> arr<span class="token punctuation">:</span> List<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    Bubble the element down until the a node is smaller than its children
+    """</span>
+    <span class="token keyword">while</span> self<span class="token punctuation">.</span>is_index_valid<span class="token punctuation">(</span>parent_index<span class="token punctuation">,</span> arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      left <span class="token operator">=</span> self<span class="token punctuation">.</span>left_child_index<span class="token punctuation">(</span>parent_index<span class="token punctuation">)</span>
+      right <span class="token operator">=</span> self<span class="token punctuation">.</span>right_child_index<span class="token punctuation">(</span>parent_index<span class="token punctuation">)</span>
+
+      <span class="token comment"># find the smaller one between left and right (it may not exist)</span>
+      smaller_child_index <span class="token operator">=</span> <span class="token boolean">None</span>
+      <span class="token keyword">if</span> self<span class="token punctuation">.</span>is_index_valid<span class="token punctuation">(</span>left<span class="token punctuation">,</span> arr<span class="token punctuation">)</span> <span class="token keyword">and</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>parent_index<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        smaller_child_index <span class="token operator">=</span> left
+      <span class="token keyword">if</span> self<span class="token punctuation">.</span>is_index_valid<span class="token punctuation">(</span>right<span class="token punctuation">,</span> arr<span class="token punctuation">)</span> <span class="token keyword">and</span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>parent_index<span class="token punctuation">]</span> <span class="token keyword">and</span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        smaller_child_index <span class="token operator">=</span> right
+
+      <span class="token keyword">if</span> smaller_child_index <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>smaller_child_index<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>parent_index<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>parent_index<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>smaller_child_index<span class="token punctuation">]</span>
+        <span class="token comment"># keep bubbling down</span>
+        parent_index <span class="token operator">=</span> smaller_child_index
+      <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>
+
+  <span class="token keyword">def</span> <span class="token function">bubble_up</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> child_index<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> arr<span class="token punctuation">:</span> List<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+      <span class="token triple-quoted-string string">"""
+      Bubble the node up until the node has all of its children bigger than itself
+      """</span>
+      <span class="token keyword">while</span> self<span class="token punctuation">.</span>is_index_valid<span class="token punctuation">(</span>child_index<span class="token punctuation">,</span> arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        parent_index <span class="token operator">=</span> self<span class="token punctuation">.</span>parent_index<span class="token punctuation">(</span>child_index<span class="token punctuation">)</span>
+        <span class="token comment"># if child_index == 0</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>is_index_valid<span class="token punctuation">(</span>parent_index<span class="token punctuation">,</span> arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+          <span class="token keyword">break</span>
+        <span class="token keyword">if</span> arr<span class="token punctuation">[</span>child_index<span class="token punctuation">]</span> <span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>parent_index<span class="token punctuation">]</span><span class="token punctuation">:</span>
+          arr<span class="token punctuation">[</span>child_index<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>parent_index<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>parent_index<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>child_index<span class="token punctuation">]</span>
+          child_index <span class="token operator">=</span> parent_index
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+          <span class="token keyword">break</span>
+
+  <span class="token keyword">def</span> <span class="token function">peek</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> arr<span class="token punctuation">:</span> List<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> T<span class="token punctuation">:</span>
+    <span class="token keyword">return</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+  <span class="token keyword">def</span> <span class="token function">push</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> arr<span class="token punctuation">:</span> List<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">,</span> new_elem<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    1. Add the node to the last indexing order of the array (rightmost, bottommost part of the tree)
+    2. Bubble that node up
+    """</span>
+    arr<span class="token punctuation">.</span>append<span class="token punctuation">(</span>new_elem<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>bubble_up<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> arr
+
+  <span class="token keyword">def</span> <span class="token function">pop</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> arr<span class="token punctuation">:</span> List<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> T<span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    1. Remove the smallest node
+    2. Move the last node in the array indexing order to the first index (to the root of the tree)
+    3. Bubble that node down
+    """</span>
+    smallest <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    last <span class="token operator">=</span> arr<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> last <span class="token keyword">is</span> <span class="token keyword">not</span> smallest<span class="token punctuation">:</span>
+      arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> last
+      self<span class="token punctuation">.</span>bubble_down<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> smallest
+
+  <span class="token keyword">def</span> <span class="token function">heapify</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> arr<span class="token punctuation">:</span> List<span class="token punctuation">[</span>T<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token comment"># last level leaves don't need to be bubbled down</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      self<span class="token punctuation">.</span>bubble_down<span class="token punctuation">(</span>i<span class="token punctuation">,</span> arr<span class="token punctuation">)</span></code></pre></div>
+</details>
 <h3 id="min-heap-implementation-logics" style="position:relative;">Min heap implementation logics<a href="#min-heap-implementation-logics" aria-label="min heap implementation logics permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
 <h4 id="an-array-can-represent-a-heap" style="position:relative;">An array can represent a heap<a href="#an-array-can-represent-a-heap" aria-label="an array can represent a heap permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
 <ul>
@@ -1785,6 +1876,167 @@ In that sense, this technique is also called tortoise and hare algorithm.</p>
 <p><strong>AVL trees</strong></p>
 <h2 id="red-black-tree" style="position:relative;">Red-black tree<a href="#red-black-tree" aria-label="red black tree permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <p><strong>Red-black trees</strong></p>
+<h2 id="trie-prefix-tree" style="position:relative;">Trie (Prefix tree)<a href="#trie-prefix-tree" aria-label="trie prefix tree permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>Trie is a special arrangement of nodes such that a prefix of each string is recursively stored up to the root node.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 528px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/34dc353be066fb1577586f4d19689501/4af8e/trie0.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 96.62162162162163%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAABkElEQVQ4y52U2a7CMAxE+/9fxwMq4g1axA5l38HoRJrITUuvdC1FlMSezHjcZpbE5/MJv+/32/b7fVg8+7OuyH4BHg4HWywWYZ3P5/8BUqCi4/Foy+XSVquVXS6XxnknoJJ8AVI3m42t12s7nU6N81/AWSqVuN/vAUgB09frZW25nQwpol+9Xs+qqopJs9nM+v2+Xa/XPw2qASJzPp+Hpb4RPGMOrDGrE9D3heTpdNoAhBn7MMWsLoMCoGTAEFcB8AWYgkEsAVLTZlA0hQTA2gKpKkpzUpYZRuAqRsBQSVzweDwsz/PQPwUsMYizNoMyGUF/kKpAJuNSlmWjn+Px2CaTSa2fEXC73QZmAGiAZRBnyPWAjBV7SPeKBJpBnZlLxwHwdITUCp35mgj4q8H0iv/02L81PtfvCzTOoRaMB4NBkKuAzXA4tOfzaemLIINqDP0XhltHo1H8ZKmfGAFrv08riqII5kl+DZBeAgq7tBATvBHqM3nkS1ENEOoc7Ha7OGMEUrmMJdmqI5f92+0WAL/Hec4M7K8SSgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="trie0.png"
+        title="trie0.png"
+        src="/static/34dc353be066fb1577586f4d19689501/4af8e/trie0.png"
+        srcset="/static/34dc353be066fb1577586f4d19689501/12f09/trie0.png 148w,
+/static/34dc353be066fb1577586f4d19689501/e4a3f/trie0.png 295w,
+/static/34dc353be066fb1577586f4d19689501/4af8e/trie0.png 528w"
+        sizes="(max-width: 528px) 100vw, 528px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/821da7811fe3e1e69d1873db3cf5544e/2eb79/trie1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 89.86486486486487%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACQ0lEQVQ4y3VUgW6qQBDs/3+WNq+xqRqtioCAKKKiYFUQFHBeZhWEai+5HOxxs7Mze7zh17her7V1t9vBNE1sNpuX+7/H26tg9WPHcWQlYBzH5X4xXwJWs3LmeY4wDHE+n2HbNjzPw3Q6RRRFEuN+FbAK/PaKFQdByIqArVZLYsvlUuJ/VSOA1UyXywVBEGA+n8MwDIklSYLFYlEesCxLkvi+L3vVyp4AV6uVsJrNZjUmiqJIssIk257B9wO47uJJ05qGRZkELrLzeTQawXVd+Y7xINjieNyJBC8ZFgcLjThZGg8TSNd1eJ6LND3fnffx/q5hu92KPFVQYUjXqAvLKQZ7j04zttl4+Py0MJ+H97LPUNUDwjAS9ylHyXC/34sBmqYLQDFoxHg8FtZpeoFhHGDbh5qjrEDTNAGlmQLI8qjRZKKD4MVgqf1+X5KdTqdam+T5jc3hwCRT6Lomkgkgs5umA9t2kecZkuRctspkMpH1eDwijhMBqjY/cIWmmdC0KZIkfjS278fY72+CkxENYfZOp1OyVVW11si8NbbNntzCMG6VMWHpMjNSB5pRtAPd5T61pZ50lQZkWYb1eo3hcPh32zBjo9FAu92WHwJBecA0LbkVHx//ZDIpK6C+lIR3+8G8wpCZVVXD9/dADpFds9nEYNCTZlcUFcOhIgaxim63K2sV8OmmRNEFg4FXMnYcF73eTN6/vlawrB95TtMU67WPVsupgL34OWQZ9UrL9zi+wHGi+/8wxumU1fqQDX4DfJD6D3ZiZUO9cb/BAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="trie1.png"
+        title="trie1.png"
+        src="/static/821da7811fe3e1e69d1873db3cf5544e/fcda8/trie1.png"
+        srcset="/static/821da7811fe3e1e69d1873db3cf5544e/12f09/trie1.png 148w,
+/static/821da7811fe3e1e69d1873db3cf5544e/e4a3f/trie1.png 295w,
+/static/821da7811fe3e1e69d1873db3cf5544e/fcda8/trie1.png 590w,
+/static/821da7811fe3e1e69d1873db3cf5544e/efc66/trie1.png 885w,
+/static/821da7811fe3e1e69d1873db3cf5544e/c83ae/trie1.png 1180w,
+/static/821da7811fe3e1e69d1873db3cf5544e/2eb79/trie1.png 1256w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Complexities (where <code class="language-text">k</code> is the length of a string and <code class="language-text">n</code> is the number of strings stored)</p>
+<ul>
+<li>time
+<ul>
+<li>search: O(k)</li>
+<li>insert: O(k)</li>
+</ul>
+</li>
+<li>space: O(n * k)</li>
+</ul>
+<p>A trie is useful when you need to search for matching prefix from many strings. No major languages offer this data structure in their std. Your own implementation is needed.</p>
+<p><strong>Note that <code class="language-text">TrieNode</code> itself does not contain the character</strong> although from illustration of the tries above it may look like that.</p>
+<details>
+ <summary>👉 Trie implementation</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">class</span> <span class="token class-name">TrieNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token comment"># you can change this to self.nodes: List[TrieNode] = [None] * characters_len</span>
+        <span class="token comment"># if you know the exact set of characters you will receive</span>
+        self<span class="token punctuation">.</span>nodes<span class="token punctuation">:</span> <span class="token builtin">dict</span><span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">,</span> TrieNode<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token comment"># is_leaf tells if the node is the end of a word</span>
+        self<span class="token punctuation">.</span>is_leaf <span class="token operator">=</span> <span class="token boolean">False</span>
+
+    <span class="token keyword">def</span> <span class="token function">insert_many</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> words<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> word <span class="token keyword">in</span> words<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>insert<span class="token punctuation">(</span>word<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">insert</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> word<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        recursively insert char by char
+        """</span>
+        curr <span class="token operator">=</span> self
+        <span class="token keyword">for</span> char <span class="token keyword">in</span> word<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> char <span class="token keyword">not</span> <span class="token keyword">in</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">:</span>
+                curr<span class="token punctuation">.</span>nodes<span class="token punctuation">[</span>char<span class="token punctuation">]</span> <span class="token operator">=</span> TrieNode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">[</span>char<span class="token punctuation">]</span>
+        curr<span class="token punctuation">.</span>is_leaf <span class="token operator">=</span> <span class="token boolean">True</span>
+
+    <span class="token keyword">def</span> <span class="token function">find</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> word<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        recurisvely find char by char
+        if one char in the middle is not in the tree,
+        return false
+        """</span>
+        curr <span class="token operator">=</span> self
+        <span class="token keyword">for</span> char <span class="token keyword">in</span> word<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> char <span class="token keyword">not</span> <span class="token keyword">in</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">False</span>
+            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">[</span>char<span class="token punctuation">]</span>
+        <span class="token keyword">return</span> curr<span class="token punctuation">.</span>is_leaf
+
+    <span class="token keyword">def</span> <span class="token function">delete</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> word<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        Deletes a word in a Trie
+        :param word: word to delete
+        :return: None
+        """</span>
+
+        <span class="token keyword">def</span> <span class="token function">_delete</span><span class="token punctuation">(</span>curr<span class="token punctuation">:</span> TrieNode<span class="token punctuation">,</span> word<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> index<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> index <span class="token operator">==</span> <span class="token builtin">len</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token comment"># If word does not exist</span>
+                <span class="token keyword">if</span> <span class="token keyword">not</span> curr<span class="token punctuation">.</span>is_leaf<span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> <span class="token boolean">False</span>
+                curr<span class="token punctuation">.</span>is_leaf <span class="token operator">=</span> <span class="token boolean">False</span>
+                <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>curr<span class="token punctuation">.</span>nodes<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span>
+            char <span class="token operator">=</span> word<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+            char_node <span class="token operator">=</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">.</span>get<span class="token punctuation">(</span>char<span class="token punctuation">)</span>
+            <span class="token comment"># If char not in current trie node</span>
+            <span class="token keyword">if</span> <span class="token keyword">not</span> char_node<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">False</span>
+            <span class="token comment"># Flag to check if node can be deleted</span>
+            delete_curr <span class="token operator">=</span> _delete<span class="token punctuation">(</span>char_node<span class="token punctuation">,</span> word<span class="token punctuation">,</span> index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> delete_curr<span class="token punctuation">:</span>
+                <span class="token keyword">del</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">[</span>char<span class="token punctuation">]</span>
+                <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>curr<span class="token punctuation">.</span>nodes<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span>
+            <span class="token keyword">return</span> delete_curr
+
+        _delete<span class="token punctuation">(</span>self<span class="token punctuation">,</span> word<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">test_trie</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+    words <span class="token operator">=</span> <span class="token string">"banana bananas bandana band apple all beast"</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    root <span class="token operator">=</span> TrieNode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    root<span class="token punctuation">.</span>insert_many<span class="token punctuation">(</span>words<span class="token punctuation">)</span>
+    <span class="token comment"># print_words(root, "")</span>
+    <span class="token keyword">assert</span> <span class="token builtin">all</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>find<span class="token punctuation">(</span>word<span class="token punctuation">)</span> <span class="token keyword">for</span> word <span class="token keyword">in</span> words<span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"bandanas"</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"apps"</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"all"</span><span class="token punctuation">)</span>
+    root<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token string">"all"</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"all"</span><span class="token punctuation">)</span>
+    root<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"bananas"</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span></code></pre></div>
+</details>
 <h1 id="graphs" style="position:relative;">Graphs<a href="#graphs" aria-label="graphs permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h2 id="dfs-and-bfs" style="position:relative;">DFS and BFS<a href="#dfs-and-bfs" aria-label="dfs and bfs permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <p><span
@@ -2074,167 +2326,6 @@ FULLY_VISITED <span class="token operator">=</span> <span class="token number">2
       dfs<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
       <span class="token keyword">return</span> all_paths</code></pre></div>
 <h2 id="dijkstras-algorithm" style="position:relative;">Dijkstra’s algorithm<a href="#dijkstras-algorithm" aria-label="dijkstras algorithm permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
-<h1 id="tree" style="position:relative;">Tree<a href="#tree" aria-label="tree permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<h2 id="trie-prefix-tree" style="position:relative;">Trie (Prefix tree)<a href="#trie-prefix-tree" aria-label="trie prefix tree permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
-<p>Trie is a special arrangement of nodes such that a prefix of each string is recursively stored up to the root node.</p>
-<p><span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 528px; "
-    >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/34dc353be066fb1577586f4d19689501/4af8e/trie0.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 96.62162162162163%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAABkElEQVQ4y52U2a7CMAxE+/9fxwMq4g1axA5l38HoRJrITUuvdC1FlMSezHjcZpbE5/MJv+/32/b7fVg8+7OuyH4BHg4HWywWYZ3P5/8BUqCi4/Foy+XSVquVXS6XxnknoJJ8AVI3m42t12s7nU6N81/AWSqVuN/vAUgB09frZW25nQwpol+9Xs+qqopJs9nM+v2+Xa/XPw2qASJzPp+Hpb4RPGMOrDGrE9D3heTpdNoAhBn7MMWsLoMCoGTAEFcB8AWYgkEsAVLTZlA0hQTA2gKpKkpzUpYZRuAqRsBQSVzweDwsz/PQPwUsMYizNoMyGUF/kKpAJuNSlmWjn+Px2CaTSa2fEXC73QZmAGiAZRBnyPWAjBV7SPeKBJpBnZlLxwHwdITUCp35mgj4q8H0iv/02L81PtfvCzTOoRaMB4NBkKuAzXA4tOfzaemLIINqDP0XhltHo1H8ZKmfGAFrv08riqII5kl+DZBeAgq7tBATvBHqM3nkS1ENEOoc7Ha7OGMEUrmMJdmqI5f92+0WAL/Hec4M7K8SSgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="trie0.png"
-        title="trie0.png"
-        src="/static/34dc353be066fb1577586f4d19689501/4af8e/trie0.png"
-        srcset="/static/34dc353be066fb1577586f4d19689501/12f09/trie0.png 148w,
-/static/34dc353be066fb1577586f4d19689501/e4a3f/trie0.png 295w,
-/static/34dc353be066fb1577586f4d19689501/4af8e/trie0.png 528w"
-        sizes="(max-width: 528px) 100vw, 528px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-  </a>
-    </span> <span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
-    >
-      <a
-    class="gatsby-resp-image-link"
-    href="/static/821da7811fe3e1e69d1873db3cf5544e/2eb79/trie1.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 89.86486486486487%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACQ0lEQVQ4y3VUgW6qQBDs/3+WNq+xqRqtioCAKKKiYFUQFHBeZhWEai+5HOxxs7Mze7zh17her7V1t9vBNE1sNpuX+7/H26tg9WPHcWQlYBzH5X4xXwJWs3LmeY4wDHE+n2HbNjzPw3Q6RRRFEuN+FbAK/PaKFQdByIqArVZLYsvlUuJ/VSOA1UyXywVBEGA+n8MwDIklSYLFYlEesCxLkvi+L3vVyp4AV6uVsJrNZjUmiqJIssIk257B9wO47uJJ05qGRZkELrLzeTQawXVd+Y7xINjieNyJBC8ZFgcLjThZGg8TSNd1eJ6LND3fnffx/q5hu92KPFVQYUjXqAvLKQZ7j04zttl4+Py0MJ+H97LPUNUDwjAS9ylHyXC/34sBmqYLQDFoxHg8FtZpeoFhHGDbh5qjrEDTNAGlmQLI8qjRZKKD4MVgqf1+X5KdTqdam+T5jc3hwCRT6Lomkgkgs5umA9t2kecZkuRctspkMpH1eDwijhMBqjY/cIWmmdC0KZIkfjS278fY72+CkxENYfZOp1OyVVW11si8NbbNntzCMG6VMWHpMjNSB5pRtAPd5T61pZ50lQZkWYb1eo3hcPh32zBjo9FAu92WHwJBecA0LbkVHx//ZDIpK6C+lIR3+8G8wpCZVVXD9/dADpFds9nEYNCTZlcUFcOhIgaxim63K2sV8OmmRNEFg4FXMnYcF73eTN6/vlawrB95TtMU67WPVsupgL34OWQZ9UrL9zi+wHGi+/8wxumU1fqQDX4DfJD6D3ZiZUO9cb/BAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="trie1.png"
-        title="trie1.png"
-        src="/static/821da7811fe3e1e69d1873db3cf5544e/fcda8/trie1.png"
-        srcset="/static/821da7811fe3e1e69d1873db3cf5544e/12f09/trie1.png 148w,
-/static/821da7811fe3e1e69d1873db3cf5544e/e4a3f/trie1.png 295w,
-/static/821da7811fe3e1e69d1873db3cf5544e/fcda8/trie1.png 590w,
-/static/821da7811fe3e1e69d1873db3cf5544e/efc66/trie1.png 885w,
-/static/821da7811fe3e1e69d1873db3cf5544e/c83ae/trie1.png 1180w,
-/static/821da7811fe3e1e69d1873db3cf5544e/2eb79/trie1.png 1256w"
-        sizes="(max-width: 590px) 100vw, 590px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-  </a>
-    </span></p>
-<p>Complexities (where <code class="language-text">k</code> is the length of a string and <code class="language-text">n</code> is the number of strings stored)</p>
-<ul>
-<li>time
-<ul>
-<li>search: O(k)</li>
-<li>insert: O(k)</li>
-</ul>
-</li>
-<li>space: O(n * k)</li>
-</ul>
-<p>A trie is useful when you need to search for matching prefix from many strings. No major languages offer this data structure in their std. Your own implementation is needed.</p>
-<p><strong>Note that <code class="language-text">TrieNode</code> itself does not contain the character</strong> although from illustration of the tries above it may look like that.</p>
-<details>
- <summary>👉 Trie implementation</summary>
-<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">class</span> <span class="token class-name">TrieNode</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-        <span class="token comment"># you can change this to self.nodes: List[TrieNode] = [None] * characters_len</span>
-        <span class="token comment"># if you know the exact set of characters you will receive</span>
-        self<span class="token punctuation">.</span>nodes<span class="token punctuation">:</span> <span class="token builtin">dict</span><span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">,</span> TrieNode<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-        <span class="token comment"># is_leaf tells if the node is the end of a word</span>
-        self<span class="token punctuation">.</span>is_leaf <span class="token operator">=</span> <span class="token boolean">False</span>
-
-    <span class="token keyword">def</span> <span class="token function">insert_many</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> words<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-        <span class="token keyword">for</span> word <span class="token keyword">in</span> words<span class="token punctuation">:</span>
-            self<span class="token punctuation">.</span>insert<span class="token punctuation">(</span>word<span class="token punctuation">)</span>
-
-    <span class="token keyword">def</span> <span class="token function">insert</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> word<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        recursively insert char by char
-        """</span>
-        curr <span class="token operator">=</span> self
-        <span class="token keyword">for</span> char <span class="token keyword">in</span> word<span class="token punctuation">:</span>
-            <span class="token keyword">if</span> char <span class="token keyword">not</span> <span class="token keyword">in</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">:</span>
-                curr<span class="token punctuation">.</span>nodes<span class="token punctuation">[</span>char<span class="token punctuation">]</span> <span class="token operator">=</span> TrieNode<span class="token punctuation">(</span><span class="token punctuation">)</span>
-            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">[</span>char<span class="token punctuation">]</span>
-        curr<span class="token punctuation">.</span>is_leaf <span class="token operator">=</span> <span class="token boolean">True</span>
-
-    <span class="token keyword">def</span> <span class="token function">find</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> word<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        recurisvely find char by char
-        if one char in the middle is not in the tree,
-        return false
-        """</span>
-        curr <span class="token operator">=</span> self
-        <span class="token keyword">for</span> char <span class="token keyword">in</span> word<span class="token punctuation">:</span>
-            <span class="token keyword">if</span> char <span class="token keyword">not</span> <span class="token keyword">in</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token boolean">False</span>
-            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">[</span>char<span class="token punctuation">]</span>
-        <span class="token keyword">return</span> curr<span class="token punctuation">.</span>is_leaf
-
-    <span class="token keyword">def</span> <span class="token function">delete</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> word<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        Deletes a word in a Trie
-        :param word: word to delete
-        :return: None
-        """</span>
-
-        <span class="token keyword">def</span> <span class="token function">_delete</span><span class="token punctuation">(</span>curr<span class="token punctuation">:</span> TrieNode<span class="token punctuation">,</span> word<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> index<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> index <span class="token operator">==</span> <span class="token builtin">len</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token comment"># If word does not exist</span>
-                <span class="token keyword">if</span> <span class="token keyword">not</span> curr<span class="token punctuation">.</span>is_leaf<span class="token punctuation">:</span>
-                    <span class="token keyword">return</span> <span class="token boolean">False</span>
-                curr<span class="token punctuation">.</span>is_leaf <span class="token operator">=</span> <span class="token boolean">False</span>
-                <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>curr<span class="token punctuation">.</span>nodes<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span>
-            char <span class="token operator">=</span> word<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
-            char_node <span class="token operator">=</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">.</span>get<span class="token punctuation">(</span>char<span class="token punctuation">)</span>
-            <span class="token comment"># If char not in current trie node</span>
-            <span class="token keyword">if</span> <span class="token keyword">not</span> char_node<span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token boolean">False</span>
-            <span class="token comment"># Flag to check if node can be deleted</span>
-            delete_curr <span class="token operator">=</span> _delete<span class="token punctuation">(</span>char_node<span class="token punctuation">,</span> word<span class="token punctuation">,</span> index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
-            <span class="token keyword">if</span> delete_curr<span class="token punctuation">:</span>
-                <span class="token keyword">del</span> curr<span class="token punctuation">.</span>nodes<span class="token punctuation">[</span>char<span class="token punctuation">]</span>
-                <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>curr<span class="token punctuation">.</span>nodes<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span>
-            <span class="token keyword">return</span> delete_curr
-
-        _delete<span class="token punctuation">(</span>self<span class="token punctuation">,</span> word<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
-
-<span class="token keyword">def</span> <span class="token function">test_trie</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
-    words <span class="token operator">=</span> <span class="token string">"banana bananas bandana band apple all beast"</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    root <span class="token operator">=</span> TrieNode<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    root<span class="token punctuation">.</span>insert_many<span class="token punctuation">(</span>words<span class="token punctuation">)</span>
-    <span class="token comment"># print_words(root, "")</span>
-    <span class="token keyword">assert</span> <span class="token builtin">all</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>find<span class="token punctuation">(</span>word<span class="token punctuation">)</span> <span class="token keyword">for</span> word <span class="token keyword">in</span> words<span class="token punctuation">)</span>
-    <span class="token keyword">assert</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span>
-    <span class="token keyword">assert</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"bandanas"</span><span class="token punctuation">)</span>
-    <span class="token keyword">assert</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"apps"</span><span class="token punctuation">)</span>
-    <span class="token keyword">assert</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">)</span>
-    <span class="token keyword">assert</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"all"</span><span class="token punctuation">)</span>
-    root<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token string">"all"</span><span class="token punctuation">)</span>
-    <span class="token keyword">assert</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"all"</span><span class="token punctuation">)</span>
-    root<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span>
-    <span class="token keyword">assert</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span>
-    <span class="token keyword">assert</span> root<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">"bananas"</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> <span class="token boolean">True</span></code></pre></div>
-</details>
 <h1 id="sorting" style="position:relative;">Sorting<a href="#sorting" aria-label="sorting permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h2 id="overview" style="position:relative;">Overview<a href="#overview" aria-label="overview permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <table>
@@ -2560,7 +2651,68 @@ Explanation: The repeated subarray with maximum length is [3,2,1].</code></pre><
                     max_lengths<span class="token punctuation">[</span>n1_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>n2_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> max_lengths<span class="token punctuation">[</span>n1_index<span class="token punctuation">]</span><span class="token punctuation">[</span>n2_index<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span>
         <span class="token keyword">return</span> <span class="token builtin">max</span><span class="token punctuation">(</span><span class="token builtin">max</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span> <span class="token keyword">for</span> row <span class="token keyword">in</span> max_lengths<span class="token punctuation">)</span></code></pre></div>
 <h1 id="bit-manipulation" style="position:relative;">Bit manipulation<a href="#bit-manipulation" aria-label="bit manipulation permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
-<h2 id="general-tips-and-tricks-for-bit-manipulation" style="position:relative;">General tips and tricks for bit manipulation<a href="#general-tips-and-tricks-for-bit-manipulation" aria-label="general tips and tricks for bit manipulation permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2></div><hr style="margin-bottom:1.75rem"/><div style="display:flex"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDAf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABy7nSMycNcA5yDf/EABsQAQEAAgMBAAAAAAAAAAAAAAIBAAMEEBIR/9oACAEBAAEFAoshll0n6AlkZFez2+U6X6s6/8QAFhEAAwAAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/ASv/xAAWEQADAAAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8BI//EACEQAAIBAwMFAAAAAAAAAAAAAAABAhESMRAhIkFRUmGx/9oACAEBAAY/AqWjjL6cna+xV4PXkOTLFtFDS650/8QAHBABAAIDAQEBAAAAAAAAAAAAAQARITFBUWGB/9oACAEBAAE/IUqmDqN4W5Kwm8ZA+Azepup69/I24MS9yB2UUUP9Ran/2gAMAwEAAgADAAAAEBjvfP/EABgRAAIDAAAAAAAAAAAAAAAAAAABEBFR/9oACAEDAQE/EEimT//EABkRAAMAAwAAAAAAAAAAAAAAAAABERAhUf/aAAgBAgEBPxBuaL6LH//EAB0QAQACAgMBAQAAAAAAAAAAAAEAESExQVFhcZH/2gAIAQEAAT8QxUa1NXTzfUtHMFAPVG32DRy7D9iPblYA9ZQHN0KILFQ18lOduq0cEY8GBbNZe45/S+kZYZ//2Q==" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
+<h2 id="arithmetic-vs-logical-right-shift" style="position:relative;">Arithmetic vs logical right shift<a href="#arithmetic-vs-logical-right-shift" aria-label="arithmetic vs logical right shift permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<ul>
+<li>A bit shift takes an <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></span> time. This is because it is mostly a single instruction in a CPU.</li>
+<li>logical right shift (<code class="language-text">>>></code>): shifts bits to right, filling the sign bit with 0</li>
+<li>arithmetic right shift (<code class="language-text">>></code>): shifts bits to right filling the sign bit with 1. Equivalent to <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>u</mi><mi>m</mi><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">num / 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">u</span><span class="mord mathnormal">m</span><span class="mord">/</span><span class="mord">2</span></span></span></span></span></li>
+<li>logical left shift (<code class="language-text">&lt;&lt;&lt;</code>): shifts bits to left, filling the first bit with 0</li>
+<li>arithmetic left shift (<code class="language-text">&lt;&lt;</code>): shifts bits to left filling the first bit with 1. Equivalent to <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>u</mi><mi>m</mi><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">num \times{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">u</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span></span></span></span></span></span></li>
+</ul>
+<h2 id="twos-complement" style="position:relative;">Two’s complement<a href="#twos-complement" aria-label="twos complement permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<h2 id="common-tasks" style="position:relative;">Common tasks<a href="#common-tasks" aria-label="common tasks permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<details>
+<summary>👉 Get the bit length to represent an integer</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py">a <span class="token operator">=</span> <span class="token number">100</span>
+
+a<span class="token punctuation">.</span>bit_length<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 7</span>
+
+<span class="token comment"># or you could do old school</span>
+<span class="token keyword">def</span> <span class="token function">get_bit_len</span><span class="token punctuation">(</span>num<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span>
+  length <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">while</span> num<span class="token punctuation">:</span> 
+      num <span class="token operator">>></span><span class="token operator">=</span> <span class="token number">1</span> 
+      length <span class="token operator">+=</span> <span class="token number">1</span> 
+  <span class="token keyword">return</span> length</code></pre></div>
+</details>
+<details>
+<summary>👉 Get nth bit</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">get_nth_bit</span><span class="token punctuation">(</span>num<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span>
+  <span class="token triple-quoted-string string">"""
+  perform AND between the nth bit and the number with only nth bit set as 1 and others as 0
+  """</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>num <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> n<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span></code></pre></div>
+</details>
+<details>
+<summary>👉 Set nth bit as 1</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">set_nth_bit_as_1</span><span class="token punctuation">(</span>num<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span>
+  <span class="token triple-quoted-string string">"""
+  perform OR between the nth bit and the number with only nth bit set as 1 and others as 0
+  """</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>num <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> n<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+</details>
+<details>
+<summary>👉 Clear nth bit</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">clear_nth_bit</span><span class="token punctuation">(</span>num<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+  <span class="token triple-quoted-string string">"""
+  perform AND between the nth bit and the number with only nth bit set as 1 and others as 0
+  """</span>
+  mask <span class="token operator">=</span> <span class="token operator">~</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> n<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> num <span class="token operator">&amp;</span> mask
+
+<span class="token comment"># 103 99 99</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">0b01100111</span><span class="token punctuation">,</span> <span class="token number">0b01100011</span><span class="token punctuation">,</span> clear_nth_bit<span class="token punctuation">(</span><span class="token number">0b01100111</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+</details>
+<details>
+<summary>👉 Set nth bit to 0 or 1</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">set_nth_bit</span><span class="token punctuation">(</span>num<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> is_1<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+  val <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">if</span> is_1 <span class="token keyword">else</span> <span class="token number">0</span>
+  mask <span class="token operator">=</span> <span class="token operator">~</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> n<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>num <span class="token operator">&amp;</span> mask<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token punctuation">(</span>val <span class="token operator">&lt;&lt;</span> i<span class="token punctuation">)</span>
+
+<span class="token comment"># 103 99 99</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">0b01100111</span><span class="token punctuation">,</span> <span class="token number">0b01100011</span><span class="token punctuation">,</span> clear_nth_bit<span class="token punctuation">(</span><span class="token number">0b01100111</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+</details></div><hr style="margin-bottom:1.75rem"/><div style="display:flex"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDAf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABy7nSMycNcA5yDf/EABsQAQEAAgMBAAAAAAAAAAAAAAIBAAMEEBIR/9oACAEBAAEFAoshll0n6AlkZFez2+U6X6s6/8QAFhEAAwAAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/ASv/xAAWEQADAAAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8BI//EACEQAAIBAwMFAAAAAAAAAAAAAAABAhESMRAhIkFRUmGx/9oACAEBAAY/AqWjjL6cna+xV4PXkOTLFtFDS650/8QAHBABAAIDAQEBAAAAAAAAAAAAAQARITFBUWGB/9oACAEBAAE/IUqmDqN4W5Kwm8ZA+Azepup69/I24MS9yB2UUUP9Ran/2gAMAwEAAgADAAAAEBjvfP/EABgRAAIDAAAAAAAAAAAAAAAAAAABEBFR/9oACAEDAQE/EEimT//EABkRAAMAAwAAAAAAAAAAAAAAAAABERAhUf/aAAgBAgEBPxBuaL6LH//EAB0QAQACAgMBAQAAAAAAAAAAAAEAESExQVFhcZH/2gAIAQEAAT8QxUa1NXTzfUtHMFAPVG32DRy7D9iPblYA9ZQHN0KILFQ18lOduq0cEY8GBbNZe45/S+kZYZ//2Q==" alt="Joel Mun" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/aba1d/profile-pic.jpg 1.5x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/b315d/profile-pic.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/1265356b9e6bab3ff8ccafeaca6d96b8/99438/profile-pic.jpg 1x,
 /static/1265356b9e6bab3ff8ccafeaca6d96b8/aba1d/profile-pic.jpg 1.5x,
