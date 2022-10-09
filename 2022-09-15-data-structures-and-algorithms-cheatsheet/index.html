@@ -322,6 +322,9 @@
 <p><a href="#dealing-with-the-adjacency-list">Dealing with the adjacency list</a></p>
 </li>
 <li>
+<p><a href="#preorder-inorder-postoreder-traversal">Preorder, inorder, postoreder traversal</a></p>
+</li>
+<li>
 <p><a href="#topological-sort">Topological sort</a></p>
 <ul>
 <li><a href="#dag-directed-acyclic-graph">DAG (Directed acyclic graph)</a></li>
@@ -2209,6 +2212,125 @@ BFS may be more useful than DFS in general if you are looking for the shortest p
     graph<span class="token punctuation">[</span>e<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>e<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
     graph<span class="token punctuation">[</span>e<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>e<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre></div>
 <p>The same goes for <code class="language-text">visited</code> dict. In some cases, it may be better use a fixed length array to achieve it.</p>
+<h2 id="preorder-inorder-postoreder-traversal" style="position:relative;">Preorder, inorder, postoreder traversal<a href="#preorder-inorder-postoreder-traversal" aria-label="preorder inorder postoreder traversal permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>In DFS for binary trees, there are multiple ways of traversal:</p>
+<ul>
+<li>Preoreder: Root -> Left subtree -> Right subtree</li>
+<li>Inorder: Left subtree -> Root -> Right subtree</li>
+<li>Postorder: Left subtree -> Right subtree -> Root</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6b8ac70c49226d1a86788a9b8c3e7649/ab7eb/traversal0.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 25.675675675675674%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAFABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGOAD//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAEFAn//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAE/IX//2gAMAwEAAgADAAAAEHAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGBAAAgMAAAAAAAAAAAAAAAAAAEEBEBH/2gAIAQEAAT8QUDyv/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="traversal0.jpeg"
+        title="traversal0.jpeg"
+        src="/static/6b8ac70c49226d1a86788a9b8c3e7649/1c72d/traversal0.jpg"
+        srcset="/static/6b8ac70c49226d1a86788a9b8c3e7649/a80bd/traversal0.jpg 148w,
+/static/6b8ac70c49226d1a86788a9b8c3e7649/1c91a/traversal0.jpg 295w,
+/static/6b8ac70c49226d1a86788a9b8c3e7649/1c72d/traversal0.jpg 590w,
+/static/6b8ac70c49226d1a86788a9b8c3e7649/a8a14/traversal0.jpg 885w,
+/static/6b8ac70c49226d1a86788a9b8c3e7649/fbd2c/traversal0.jpg 1180w,
+/static/6b8ac70c49226d1a86788a9b8c3e7649/ab7eb/traversal0.jpg 1860w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<details>
+<summary>👉 Preorder traversal implementation</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">preorder</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> node <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span>
+  <span class="token comment"># do something with node here</span>
+  do_something_with<span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+  preorder<span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+  preorder<span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">preorder_iterative</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  stack <span class="token operator">=</span> <span class="token punctuation">[</span>root<span class="token punctuation">]</span>
+  <span class="token keyword">while</span> stack<span class="token punctuation">:</span>
+    curr_node <span class="token operator">=</span> stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span> 
+    do_something_with<span class="token punctuation">(</span>curr_node<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> curr_node<span class="token punctuation">.</span>right <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span> 
+      stack<span class="token punctuation">.</span>push<span class="token punctuation">(</span>curr_node<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+    <span class="token comment"># first, traverse all the way down to the leftmost bottom node</span>
+    <span class="token keyword">if</span> curr_node<span class="token punctuation">.</span>left <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span> 
+      stack<span class="token punctuation">.</span>push<span class="token punctuation">(</span>curr_node<span class="token punctuation">.</span>left<span class="token punctuation">)</span></code></pre></div>
+</details>
+<details>
+<summary>👉 Inorder traversal implementation</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">inorder</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> node <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span>
+  inorder<span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+  <span class="token comment"># do something with node here</span>
+  <span class="token comment"># the first node to be reached is the leftmost node at the bottom</span>
+  do_something_with<span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+  inorder<span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">inorder_iterative</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  curr_node <span class="token operator">=</span> root
+  <span class="token keyword">while</span> stack <span class="token keyword">or</span> curr_node<span class="token punctuation">:</span>
+    <span class="token comment"># go all the way to left first</span>
+    <span class="token keyword">if</span> curr_node <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+      stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>curr_node<span class="token punctuation">)</span>
+      curr_node <span class="token operator">=</span> curr_node<span class="token punctuation">.</span>left
+    <span class="token comment"># and then, take turns to inspect right and left nodes</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+      curr_node <span class="token operator">=</span> stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+      do_something_with<span class="token punctuation">(</span>curr_node<span class="token punctuation">)</span>
+      curr_node <span class="token operator">=</span> curr_node<span class="token punctuation">.</span>right</code></pre></div>
+</details>
+<details>
+<summary>👉 Postorder traversal implementation</summary>
+<div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">postorder</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> node <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span>
+  postorder<span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+  postorder<span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+  <span class="token comment"># do something with node here</span>
+  <span class="token comment"># the first node to be reached is the leftmost node at the bottom</span>
+  do_something_with<span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">postorder_iterative</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  stack <span class="token operator">=</span> <span class="token punctuation">[</span>root<span class="token punctuation">]</span>
+  curr_node <span class="token operator">=</span> root
+  prev_node <span class="token operator">=</span> <span class="token boolean">None</span>
+  <span class="token keyword">while</span> stack<span class="token punctuation">:</span>
+    prev_node <span class="token operator">=</span> curr_node
+    curr_node <span class="token operator">=</span> stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>
+      curr_node<span class="token punctuation">.</span>left <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span> <span class="token keyword">and</span> 
+      curr_node<span class="token punctuation">.</span>left <span class="token keyword">is</span> <span class="token keyword">not</span> prev_node <span class="token keyword">and</span> 
+      curr_node<span class="token punctuation">.</span>right <span class="token keyword">is</span> <span class="token keyword">not</span> prev_node
+    <span class="token punctuation">)</span><span class="token punctuation">:</span>
+      stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>curr_node<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>
+        curr_node<span class="token punctuation">.</span>right <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span> <span class="token keyword">and</span> 
+        curr_node<span class="token punctuation">.</span>right <span class="token keyword">is</span> <span class="token keyword">not</span> prev_node
+      <span class="token punctuation">)</span><span class="token punctuation">:</span>
+        stack<span class="token punctuation">.</span>apepnd<span class="token punctuation">(</span>curr_node<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+      <span class="token keyword">else</span><span class="token punctuation">:</span>
+        do_something_with<span class="token punctuation">(</span>stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+</details>
 <h2 id="topological-sort" style="position:relative;">Topological sort<a href="#topological-sort" aria-label="topological sort permalink" class="anchor after"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <p><img src="/7fe47cb805aa882ae9c1af68863aa48e/topological0.svg" alt="topological0.svg">
 <img src="/9b7cf1dca1f308bc49fc8eac752a5144/topological1.svg" alt="topological1.svg"></p>
