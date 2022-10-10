@@ -13,6 +13,7 @@ import { SF } from "../styles/theme"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
+    console.log(this.props)
     const { title, siteUrl } = this.props.data.site.siteMetadata
     const { previous, next } = this.props.pageContext
     const { location } = this.props
@@ -40,6 +41,17 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           {post.frontmatter.date}
+        </p>
+        <p
+          style={{
+            ...scale(-1 / 5),
+            display: `block`,
+            marginBottom: rhythm(1),
+            marginTop: rhythm(-1),
+            ...SF.darkText
+          }}
+        >
+          ⏳ {post.fields.readingTime.text}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -107,6 +119,11 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         keywords
+      }
+      fields {
+        readingTime {
+          text
+        }
       }
     }
   }

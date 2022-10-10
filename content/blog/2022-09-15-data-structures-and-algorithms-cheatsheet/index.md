@@ -1,5 +1,5 @@
 ---
-title: "Data structures and algorithms cheatsheet"
+title: "All-in-one data structures and algorithms cheatsheet"
 date: "2022-09-15T09:00:00.009Z"
 tags: ["algorithm"]
 tab: "post"
@@ -67,6 +67,51 @@ If you want to have a look at the entire table of contents, please do so:
   ```
 
 </details>
+
+# Big-O and its friends
+
+#### Mathematical definition of Big-O
+
+$f(x) = O(g(x))$ if there exists $c$ and $k$ where $0 <= f(x) <= c * g(x)$ for some $k <= x$
+
+#### Intuitive definition of Big-O
+
+- Worst time complexity of an algorithm. Denotes an upper boundary. 
+- How fast a program's runtime grows asymptotically when the size of the input increases towards infinity
+
+![tc1.png](./tc1.png)
+
+#### Mathematical definition of Big-Omega
+
+$f(x) = Ω(g(x))$ if there exists $c$ and $k$ where $0 <= c * g(x) <= f(x)$ for all $k <= x$
+
+#### Intuitive definition of Big-Omega
+
+Best time complexity of an algorithm. Denotes a lower boundary.
+
+![tc0.png](./tc0.png)
+
+#### Mathematical definition of Big-Theta
+
+$f(x) = \Omega{(g(x))}\space \text{and}\space f(x) = O(g(x)) \Rightarrow \Theta{(g(x))}$
+
+In other words,
+
+$c_{1} * g(x) <= f(x) <= c_{2} * g(x)$
+
+#### Intuitive definition of Big-Theta
+
+It must be the case that $f(x)$ is essentially the same function as $g(x)$ if the constants on each function are removed, if any.
+
+#### Big-O computations
+
+- If $f(x)$ is a sum of several terms, the term of the largest growth rate can be left without others because we only care about the biggest term}|
+  - example: $f(x) = O(nlogn) + O(n) = O(nlogn)$
+- If $f(x)$ is a product of several factors, any constants C terms in the product that do not depend on $x$ can be omitted.
+  - example: $f(x) = O(5nlogn) = O(nlogn)$
+- Proving Big-O often requires choosing an arbitrary $c$ and $k$:
+  - example: show that $O(f(x)) = O(x^4) \space \text{where} \space f(x) = 6x^4-2x^3+5$ 
+  - proof: $|6x^4 - 2x^3 + 5| \leq 6x^4 + 2x^4 + 5x^4 = 13x^4 \Rightarrow f(x) = O(x^4) \text{ given } c = 13 \text{ for all } 0 \leq k = 1 \leq x $ 
 
 # Arrays
 

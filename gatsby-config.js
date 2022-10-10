@@ -68,6 +68,7 @@ module.exports = {
               // elements: [`h1`, `h4`],
             },
           },
+          `gatsby-remark-reading-time`,
           // `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,

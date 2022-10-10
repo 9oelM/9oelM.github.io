@@ -45,6 +45,7 @@ export const ContentsListing = ({ data, location, title }) => {
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
+              <small style={{ marginLeft: `0.25rem` }}>| ⏳ {node.fields.readingTime.text}</small>
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
