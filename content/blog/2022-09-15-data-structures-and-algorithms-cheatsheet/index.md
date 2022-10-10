@@ -113,6 +113,77 @@ It must be the case that $f(x)$ is essentially the same function as $g(x)$ if th
   - example: show that $O(f(x)) = O(x^4) \space \text{where} \space f(x) = 6x^4-2x^3+5$ 
   - proof: $|6x^4 - 2x^3 + 5| \leq 6x^4 + 2x^4 + 5x^4 = 13x^4 \Rightarrow f(x) = O(x^4) \text{ given } c = 13 \text{ for all } 0 \leq k = 1 \leq x $ 
 
+# Review of exponents
+
+#### Rule of power
+
+- Rule: $(b^x)^y = b^{xy}$
+- Example: $(2^3)^3 = 2^6$
+
+#### Multiplying exponents
+
+- Rule: $(b^x)(b^y) = b^{x+y}$
+- Example: $(2^3)(2^3) = 2^5$
+
+#### Dividing exponents
+
+- Rule: $\frac{b^x}{b^y} = b^{x-y}$
+- Example: $\frac{2^5}{2^2} = 2^3$
+
+#### Rule Taking the power of two multiplied terms
+
+- Rule: $(a * b)^x = a^{x} * b^{x}$
+- Example: $(2 * 3)^3 = 216 = 2^3(3^3) = 8 * 27 = 216$
+
+# Review of Logarithms
+
+#### Relationship between the logarithm and the exponent function
+
+The logarithm is the inverse of the exponent function.
+
+$log_{a}{b} = x \Leftrightarrow a^x = b$
+
+example: 
+
+$log_{2}{8} = 3 \Leftrightarrow 2^3 = 8$
+
+#### Log of a product
+
+- Rule: $log_{b}{(x \times y)} = log_{b}{x} + log_{b}{y}$
+- Example: $log_{2}{(4 \times 8)} = log_{2}{32} = 5 = log_{2}{4} + log_{2}{8} = 2 + 3$
+- Reasoning: $(b^x)(b^y) = b^{x+y}$
+
+#### Log of a fraction
+
+- Rule: $log_{b}{\frac{x}{y}} = log_{b}{x} - log_{b}{y}$
+- Example: $log_{2}{\frac{32}{4}} = log_{2}{8} = 3 = log_{2}{32} - log_{2}{4} = 5 - 2 = 3$
+- Reasoning: $\frac{b^x}{b^y} = b^{x-y}$
+
+#### Log of a power
+
+- Rule: $log_{b}{x^y} = y \times log_{b}{x}$
+- Example: $log_{2}{4} = 2$
+- Reasoning: $(b^c)^d = b^{cd}$
+
+#### A power of a log
+
+- Rule: $x^{log_{b}{y}} = y^{log_{b}{x}}$
+- Example: $4^{log_{2}{8}} = 4^3 = 4 \times 4 \times 4 = 8 \times 8 = 8^2 = 8^{log_{2}{4}}$
+- Reason: $x^{log_{b}{y}} = b^{(log_{b}{x})(log_{b}{y})}$
+
+#### Change of a base
+
+- Rule: $log_{b}{x} = \frac{log_{d}{x}}{log_{d}{b}}$
+- Example: $log_{4}{64} = 3 = \frac{log_{2}{64}}{log_{2}{4}} = \frac{6}{2} = 3$
+
+# Amortized analysis
+
+**Amortized analysis** is a worst-case analysis of a a sequence of operations to obtain a tighter bound on the overall or average cost per operation in the sequence than is obtained by separately analyzing each operation in the sequence.
+
+There are two prominent examples:
+- Amortized $O(1)$ of `array.append()`
+- Amortized $O(1)$ of `dict[key]`
+
 # Arrays
 
 - An array can work as a replacement for hash tables if you know the range of indices that will go into the array. But sometimes it will waste spaces.
@@ -158,7 +229,7 @@ Remember that uppercase letters come first in the ASCII order (and there are som
 122
 ```
 
-## Why an arraylist (or just list) has $O(1)$ armortized insertion time
+## Why an arraylist has $O(1)$ armortized insertion time
 
 ### Basic idea
 - An arraylist has:
@@ -378,7 +449,7 @@ Precomutation of prefix/suffix/sum/product might be useful
 
 A hash table stores data in a key-value pair. In a 'good' implementation of a hash table, the lookup by key takes amortized $O(1)$ time which can be mathematically proven.
 
-## Hash table implementation logics
+#### Hash table implementation logics
 
 - An array is a random access data structure, meaning that any index can be accessed in $O(1)$ time.
 - A hash table is an abstract data structure because the underlying data structure can usually be an array. It does something called **hashing**, which is a translation from an arbitrary key to an integer number that behaves as an index of an array.
@@ -386,7 +457,7 @@ A hash table stores data in a key-value pair. In a 'good' implementation of a ha
 - For that reason, two different hashcodes may end up in the same array index. This is called **collision**. 
 - In a terrible hash table with bad a hash function that causes lots of collisions, the lookup may take $O(n)$/
 
-### Hash function
+#### Hash function
 
 A **hash function** $h(k)$ used for a hash table, where $k$ is an integer key, $u$ is the maximum positive integer key, and $m$ is some integer that is $m << u$, can be defined as follows:
 
@@ -431,7 +502,7 @@ This function works the best _only_ when keys are uniformly distributed. For exa
 
 Therefore, we want the performance of our data structure to be independent of the keys we choose to store.
 
-### Universal hashing and $O(1)$
+#### Universal hashing
 
 For a large enough key domain $u$, every hash function will be bad for some set of $t$ inputs. However, we can achieve good expected bounds on hash table performance by choosing **our hash function randomly from a large family of hash functions.**
 
@@ -447,6 +518,13 @@ In plain terms, for all $x, y$ that belong to $U$ and are distinct from each oth
 
 To put it even easier: the probability of a collision for two different keys $x$ and $y$ given a
 hash function randomly chosen from $H$ is $1/m$. This is can easily be seen because $\frac{\text{\# hash functions that map x and y to the same location}}{\text{total \# of hash functions}} = \frac{\frac{|H|}{m}}{|H|} = \frac{1}{m}$
+
+#### Collision resolution strategies
+
+Separate chaining
+
+#### Amortized $O(1)$ analysis
+
 
 <details>
 <summary>
@@ -496,7 +574,39 @@ print(somedict3['test3']) # 3
 
 # Stack
 
-You can easily simulate the behavior of a stack using a `list` in Python or `array` in JavaScript
+You can easily simulate the behavior of a stack using a `list` in Python or `array` in JavaScript.
+
+<details>
+<summary>
+👉 Stack implementation
+</summary>
+
+```py
+from typing import TypeVar, Generic, Union
+
+T = TypeVar('T')
+
+class Stack(Generic[T]):
+  def __init__(self):
+    self.arr = []
+
+  def __len__(self):
+    return len(self.arr)
+
+  def pop(self) -> Union[T, None]:
+    return self.arr.pop()
+
+  def push(self, item: T) -> None:
+    self.arr.append(item)
+
+  def peek(self) -> T:
+    if len(self.arr) == 0:
+      raise Exception("Length is zero")
+
+    return self.arr[-1]
+```
+
+</details>
 
 # Queue
 
@@ -614,9 +724,9 @@ debug(deque.dll) # [3,2,1,5]
 - The queue will maintain a sorted order throughout its lifetime
 - uses `heapq` (heap data structure) internally 
 
-| op     | explanation                                                                      | time complexity |
+| stdlib op     | explanation                                                                      | time complexity |
 |--------|----------------------------------------------------------------------------------|-----------------|
-| put    | inserts an item into the queue (also called 'enqueue').              | $O(logn))            |
+| put    | inserts an item into the queue (also called 'enqueue').              | $O(logn)$            |
 | get    | removes and returns an item from the queue (also called 'dequeue'). | $O(logn)$            |
 | .queue | returns a data structure that can be referenced just like a list                | -               |
 
@@ -640,7 +750,47 @@ while not q.empty():
 ```
 
 <details>
-<summary>👉 Priority queue implementation</summary>
+<summary>👉 Priority queue implementation using <code>heapq</code></summary>
+
+```py
+from typing import Generic, Tuple, TypeVar, Union
+import heapq
+
+T = TypeVar('T')
+
+class PriorityQueue(Generic[T]):
+  def __init__(self):
+    self.heap = []
+  
+  def put(self, item: T):
+    heapq.heappush(self.heap, item)
+  
+  def get(self) -> Union[T, None]:
+    if not self.heap:
+      raise Exception("No elements in the heap")
+
+    return heapq.heappop(self.heap)
+
+  def __len__(self) -> None:
+    return len(self.heap)
+
+  def __bool__(self) -> bool:
+    return len(self.heap) != 0
+pq = PriorityQueue[Tuple[int, str]]()
+
+pq.put((1, "one"))
+pq.put((5, "five"))
+pq.put((2, "two"))
+pq.put((10, "ten"))
+
+while pq:
+  # (1, 'one')
+  # (2, 'two')
+  # (5, 'five')
+  # (10, 'ten')
+  print(pq.get())
+```
+
 </details>
 
 # Linked lists
@@ -2227,3 +2377,7 @@ print(0b01100111, 0b01100011, clear_nth_bit(0b01100111, 2))
 
 ## Combination vs permutation
 
+# References
+
+- Amortized analysis: https://www.cs.cornell.edu/courses/cs3110/2011fa/supplemental/lec20-amortized/amortized.htm
+- Hash table and amortized analysis: https://www.cs.cornell.edu/courses/cs312/2008sp/lectures/lec20.html

@@ -13,7 +13,6 @@ import { SF } from "../styles/theme"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    console.log(this.props)
     const { title, siteUrl } = this.props.data.site.siteMetadata
     const { previous, next } = this.props.pageContext
     const { location } = this.props

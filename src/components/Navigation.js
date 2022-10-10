@@ -5,7 +5,6 @@ import './navigation.css'
 
 export const Navigation = () => {
     const location = useLocation()
-    console.log()
 
     return [[`Posts`, `/`], [`Journals`, `/journals/`], [`Tags`, `/tags/`], 
       // [`résumé`, `/resume/`]
