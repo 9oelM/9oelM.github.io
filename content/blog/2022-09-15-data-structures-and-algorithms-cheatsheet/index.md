@@ -22,7 +22,7 @@ Everything is from [bigocheatsheet.com](bigocheatsheet.com). It's just that I do
 If you are able to bring up **complexities amd implementations** in mind just by looking at each topic, you are in a good shape.
 
 - [Array](#arrays)
-- [Hash table](#hash-tables)
+- [Hash table](#hash-table)
 - [String](#strings)
   - [KMP algorithm](https://9oelm.github.io/2022-01-06--find-the-shortest-palindrome-an-intensive-review-of-kmp(knuth-morris-pratt)-algorithm/)
 - [Linked List](#linked-lists)
@@ -329,9 +329,108 @@ Precomutation of prefix/suffix/sum/product might be useful
 
 - Watch out for the range of the input strings (characters): for example, `a` to `z`.
 
-# Hash tables, Stack, Queue (Deque)
+# Hash table
 
-## Hash tables
+A hash table stores data in a key-value pair. In a 'good' implementation of a hash table, the lookup by key takes amortized $O(1)$ time which can be mathematically proven.
+
+## Hash table implementation logics
+
+- An array is a random access data structure, meaning that any index can be accessed in $O(1)$ time.
+- A hash table is an abstract data structure because the underlying data structure can usually be an array. It does something called **hashing**, which is a translation from an arbitrary key to an integer number that behaves as an index of an array.
+- The length of the array can be much smaller than the number hashcodes (output of the hash functions). 
+- For that reason, two different hashcodes may end up in the same array index. This is called **collision**. 
+- In a terrible hash table with bad a hash function that causes lots of collisions, the lookup may take $O(n)$/
+
+### Hash function
+
+A **hash function** $h(k)$ used for a hash table, where $k$ is an integer key, $u$ is the maximum positive integer key, and $m$ is some integer that is $m << u$, can be defined as follows:
+
+$$
+h(k): \{0, ..., u - 1\} \rightarrow \{0, ..., m - 1\}
+$$
+
+If $m << u$, $h(k)$ is not injective (one-to-one) by pigeonhole principle. In other words, $∀h\text{ }∃a,b\text{ } \text{s.t }h(a) = h(b)$. This is collision.
+
+**Chaining** is the easiest technique to resolve this problem. Whenever there is a collision, store them a linked list. A node in the linked list would contain the original key and value. The hashcode will be used to iterate through a linked list that corresponds to the key. The structure may be better described with TypeScript:
+
+```ts
+interface KeyValNode<T> {
+  key: number; // hashcode
+  data: T; // data to be held
+}
+
+type HashTable<T> = LinkedList<KeyValNode<T>>[]
+```
+
+A simple hash function can be implemented by getting a remainder which is `k % m` in Python, where $m$ is an appropriate prime number:
+
+$$
+h(k) = \text{(k mod m)}
+$$
+
+For example,
+
+$$
+k = 9\newline
+m = 7\newline
+\Rightarrow h(k) = 2
+$$
+
+$$
+k = 5\newline
+m = 7\newline
+\Rightarrow h(k) = 5
+$$
+
+This function works the best _only_ when keys are uniformly distributed. For example, let's say you got $m = 11$. And what if you put the elements of the set $K = \{12, 23, 34, 45, 56\}$ into the hash table? The remainder will always be 1, and the lookup time will take $O(m)$.
+
+Therefore, we want the performance of our data structure to be independent of the keys we choose to store.
+
+### Universal hashing and $O(1)$
+
+For a large enough key domain $u$, every hash function will be bad for some set of $t$ inputs. However, we can achieve good expected bounds on hash table performance by choosing **our hash function randomly from a large family of hash functions.**
+
+The definition of the set of hash functions we are looking for is as follows:
+
+Let $U$ be the set of universe keys and $H$ be a finite collection of hash functions mapping $U$ into ${0, 1, ... , m − 1}$. Then $H$ is called universal if, 
+
+$$
+\text{for } x, y ∈ U, (x \neq y), |\{h ∈ H : h(x) = h(y)\}| = \frac{|H|}{m}
+$$
+
+In plain terms, for all $x, y$ that belong to $U$ and are distinct from each other, the cardinality of pairs of $h(x), h(y)$ that collide with each other (where $h$ belongs to $H$) is equal to the cardinality of the set of hash functions $H$ divided by $m$.
+
+To put it even easier: the probability of a collision for two different keys $x$ and $y$ given a
+hash function randomly chosen from $H$ is $1/m$. This is can easily be seen because $\frac{\text{\# hash functions that map x and y to the same location}}{\text{total \# of hash functions}} = \frac{\frac{|H|}{m}}{|H|} = \frac{1}{m}$
+
+<details>
+<summary>
+👉 Hash table implementation
+</summary>
+
+```py
+
+```
+
+</details>
+
+
+<details>
+<summary>
+👉 Useful references
+</summary>
+
+- http://www.mi.fu-berlin.de/wiki/pub/Main/GunnarKlauP1winter0708/discMath_klau_hash_II.pdf
+- https://www.cs.bu.edu/faculty/homer/537/talks/SarahAdelBargal_UniversalHashingnotes.pdf
+- https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/ce9e94705b914598ce78a00a70a1f734_MIT6_006S20_lec4.pdf
+- https://www.cs.jhu.edu/~langmea/resources/lecture_notes/130_universal_hashing_pub.pdf
+- https://courses.cs.washington.edu/courses/cse525/13sp/scribe/lec5.pdf
+- https://cs.stackexchange.com/questions/249/when-is-hash-table-lookup-o1
+
+</details>
+
+## Hash table tips in Python
+
 Use `defaultdict` in Python instead of checking for the key every time:
 
 ```py
@@ -350,11 +449,11 @@ somedict3 = defaultdict(lambda: 3)
 print(somedict3['test3']) # 3
 ```
 
-## Stack
+# Stack
 
 You can easily simulate the behavior of a stack using a `list` in Python or `array` in JavaScript
 
-## Queue
+# Queue
 
 ### Standard queue
 
@@ -472,8 +571,8 @@ debug(deque.dll) # [3,2,1,5]
 
 | op     | explanation                                                                      | time complexity |
 |--------|----------------------------------------------------------------------------------|-----------------|
-| put    | inserts an item into the queue (also called 'enqueue').              | O(1)            |
-| get    | removes and returns an item from the queue (also called 'dequeue'). | O(1)            |
+| put    | inserts an item into the queue (also called 'enqueue').              | $O(logn))            |
+| get    | removes and returns an item from the queue (also called 'dequeue'). | $O(logn)$            |
 | .queue | returns a data structure that can be referenced just like a list                | -               |
 
 ```py
@@ -1195,7 +1294,22 @@ $O(h \times n/2) + O((h-1) \times n/4) + O((h-2) \times n/8) + ... + O(0 \times 
 
 The first term, $O(h \times n/2)$, is already $O(h) * n = O(nlogn)$, so it's obvious it requires more work than `bubble_down` strategy.
 
+### Python's `heapq`
 
+|  | Description | TC | TC Description |
+|---|------------|---|------------|
+| `heapq.heappush(heap: List, item: T)` | Inserts a new item and bubbles it up to fulfill heap properties | $O(logn)$ | `bubble_up` takes $O(logn)$ time |
+| `heapqq.heappop(heap: List) -> T` | Removes the smallest item in the heap and bubbles the largest element from the root down to the bottom to fulfill heap properties | $O(logn)$ | `bubble_down` takes $O(logn)$ time |
+| `heapq.heappushpop(heap: List, new_item: T)` | Inserts an item to and **and then** removes another from a heap. Slightly faster than separate calls to push and pop. Still the same TC | $O(logn)$ |  |
+| `heaq.heapreplace(heap: List, item: T)` | Removes an item from **and then** inserts an item to a heap. Slightly faster than separate calls to push and pop. Still the same TC | $O(logn)$ |  |
+| `heapq.merge(iterables: Iterable[Iterable], key: Callable, reverse: bool)` | Merge multiple sorted inputs into a single sorted output (for example, merge timestamped entries from multiple log files). Returns an iterator over the sorted values. | ?? |  |
+| `heapq.heapify(heap: List)` | Makes an array into the one that satisfies heap properties | $O(n)$ | Running `bubble_down` from the bottom of the tree leads to linear TC |
+| `heapq.nlarest(k: int, iterable: Iterable, key: Callable)` | Get k largest elements from the collection. Note that the iterable doesn't have to be in a 'heapified' state | $O(nlog(k))$ where k is the # elements to be returned | Explained below |
+| `heapq.nsmallest(k: int, iterable: Iterable, key: Callable)` | Get k smallest elements from the collection. Note that the iterable doesn't have to be in a 'heapified' state | $O(nlog(k))$ where k is the # elements to be returned | 1. Calls heapify on the first $t$ elements in the array. A little heap of size $k$ is created: $O(k)$ <br/> 2. All other $n - k$ elements are added to the little heap using `heapreplace`: $O((n - k)\times{log(k)})$ <br/> 3. Once step 2 is done, heappop all items from the heap and put them in an array in a reversed order: $log(k) + n$ <br/> 4. Since $n > k$, we can say step 2 is $O(nlog(k))$. <br/> 5. $\text{Total TC} = O(nlog(k)) + O(log(k)) + O(n) = O(nlog(k))$  |
+
+### Applications of the heap
+
+- When you feel like you can use a heap but can't get any further, maybe think about using multiple heaps?
 
 ## AVL tree
 
@@ -1409,6 +1523,110 @@ def create_graph(edges: List[List[int]]):
 ```
 
 The same goes for `visited` dict. In some cases, it may be better use a fixed length array to achieve it.
+
+## Preorder, inorder, postoreder traversal
+
+In DFS for binary trees, there are multiple ways of traversal:
+- Preoreder: Root -> Left subtree -> Right subtree
+- Inorder: Left subtree -> Root -> Right subtree
+- Postorder: Left subtree -> Right subtree -> Root
+
+![traversal0.jpeg](./traversal0.jpeg)
+
+<details>
+<summary>👉 Preorder traversal implementation</summary>
+
+```py
+def preorder(node):
+  if node is None:
+    return
+  # do something with node here
+  do_something_with(node)
+  preorder(node.left)
+  preorder(node.right)
+
+def preorder_iterative(root):
+  stack = [root]
+  while stack:
+    curr_node = stack.pop() 
+    do_something_with(curr_node)
+    if curr_node.right is not None: 
+      stack.push(curr_node.right)
+    # first, traverse all the way down to the leftmost bottom node
+    if curr_node.left is not None: 
+      stack.push(curr_node.left)
+```
+
+</details>
+
+<details>
+<summary>👉 Inorder traversal implementation</summary>
+
+```py
+def inorder(node):
+  if node is None:
+    return
+  inorder(node.left)
+  # do something with node here
+  # the first node to be reached is the leftmost node at the bottom
+  do_something_with(node)
+  inorder(node.right)
+
+def inorder_iterative(root):
+  stack = []
+  curr_node = root
+  while stack or curr_node:
+    # go all the way to left first
+    if curr_node is not None:
+      stack.append(curr_node)
+      curr_node = curr_node.left
+    # and then, take turns to inspect right and left nodes
+    else:
+      curr_node = stack.pop()
+      do_something_with(curr_node)
+      curr_node = curr_node.right
+```
+
+</details>
+
+<details>
+<summary>👉 Postorder traversal implementation</summary>
+
+```py
+def postorder(node):
+  if node is None:
+    return
+  postorder(node.left)
+  postorder(node.right)
+  # do something with node here
+  # the first node to be reached is the leftmost node at the bottom
+  do_something_with(node)
+
+def postorder_iterative(root):
+  stack = [root]
+  curr_node = root
+  prev_node = None
+  while stack:
+    prev_node = curr_node
+    curr_node = stack[-1]
+    if (
+      curr_node.left is not None and 
+      curr_node.left is not prev_node and 
+      curr_node.right is not prev_node
+    ):
+      stack.append(curr_node.left)
+    else:
+      if (
+        curr_node.right is not None and 
+        curr_node.right is not prev_node
+      ):
+        stack.apepnd(curr_node.right)
+      else:
+        do_something_with(stack.pop())
+```
+
+</details>
+
 
 ## Topological sort
 
@@ -1959,4 +2177,8 @@ print(0b01100111, 0b01100011, clear_nth_bit(0b01100111, 2))
 ```
 
 </details>
+
+# Miscellaneous
+
+## Combination vs permutation
 
