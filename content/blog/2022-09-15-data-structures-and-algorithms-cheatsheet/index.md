@@ -2051,65 +2051,90 @@ def count_components(n: int, edges: List[List[int]]) -> int:
   - When united, the parent of the set of all nodes a node belong to becomes the parent of the set that the node was united to.
   - For some of the edges, the union may be redundant in case another one happened already before to join the node to the set. In this case, don't do anything.
   - This process involves two major operations called `find` and `union`.
+    - `find`: answers the question of whether there is a path connecting one object to another.
+    - `union`: used to join two subsets into a single subset. This models the actual connection/path between the two objects.
 
 #### Union find algorithm complexities
 
+Assume:
+- $m$ `union` operations are undertaken
+- $n$ elements
 
+| Complexities | Op: find disjoint sets | Remarks | 
+|--------------|-------------------|--|    
+| Time         | $O(m\alpha(n))$  | $\alpha(n)$ is a slowly growing function. For practical purposes, $\alpha(n) \leq 4$. $\Rightarrow O(m\alpha(n)) \approx O(m4) = O(m)$ |
+| Space        | $O(n)$  |
 
 <details>
 <summary>
 👉 Union find algorithm
-
-
 </summary>
 
 ```py
+from typing import List
 
-def union_find(n: int, edges: List[List[int]]):
-  # init parent. at first, all nodes are parents of themselves
-  parent: List[int] = [i for in range(n)]
-  # track # nodes connected to the parent
-  # at first, all nodes have rank of 1 because they are parents themselves
-  rank: List[int] = [1] * n
 
-  def find_union(node: int):
-    result = node
+class DisjointSet:
+  # assume that 
+  # num_nodes is the total number of the nodes
+  # edges are the undirected edges between nodes
+    def __init__(self, num_nodes: int) -> None:
+        # track # nodes connected to the parent
+        # at first, all nodes have rank of 1 because they are parents themselves
+        self.ranks = [1] * num_nodes
+        # init parent. at first, all nodes are parents of themselves
+        self.parents = list(range(num_nodes))
 
-    # loop until the node itself is its own parent
-    while node != parent[result]:
-      # path compression
-      # optimize the path
-      # if no grandparent, this line does nothing
-      parent[result] = parent[parent[result]]
-      result = parent[result]
-    return result
+    def union(self, src: int, dst: int) -> bool:
+        """
+        src and dst nodes must be connected nodes, probably represented by an adjacency list
+        """
+        src_parent = self.find_parent_iterative(src)
+        dst_parent = self.find_parent_iterative(dst)
 
-  def union(a, b) -> int:
-    # remember, on the first run,
-    # parent1 and parent2 are obviously going to be different
-    # because every node is a parent of itself
-    parent1, parent2 = find_union(a), find_union(b)
+        # they already have the same parents. Don't unify them
+        if src_parent == dst_parent:
+            return False
 
-    # if parents are the same already, don't do any union
-    if parent1 == parent2:
-      return 0
+        # decide which node is going to be the parent
+        # the one that has a higher rank is going to be the parent
+        if self.ranks[dst_parent] >= self.ranks[src_parent]:
+            self.parents[src_parent] = dst_parent
+            self.ranks[dst_parent] += self.ranks[src_parent]
+        else:
+            self.parents[dst_parent] = src_parent
+            self.ranks[src_parent] += self.ranks[dst_parent]
 
-    # decide which node is going to be the parent
-    # for the current logic, the one that has higher
-    # rank is going to be the parent
-    if rank[parent2] > rank[parent1]:
-      parent[parent1] = parent2
-      # merge the entire set that the node belonged to
-      rank[parent2] += rank[parent1]
-    else:
-      parent[parent2] = parent1
-      # merge the entire set that the node belonged to
-      rank[parent1] += rank[parent2]
+        return True
+    
+    def find_parent(self, node: int) -> int:
+        """
+        find the parent until you find the 'root' parent of sets
+        the root parent has its parent as itself, so the recursion
+        must stop here
+        """
+        if self.parents[node] == node:
+            return node
+        self.parents[node] = self.find_parent(self.parents[node])
+        return self.parents[node]
 
-    return 1
+    def find_parent_iterative(self, node: int) -> int:
+        """
+        iterative version of find_parent (use this when recursion depth is likely to exceed)
+        again, don't stop until we find the 'root' parent in the set
+        """
+        while self.parents[node] != node:
+            self.parents[node] = self.parents[self.parents[node]]
+            node = self.parents[node]
+        return self.parents[node]
 
-  for a, b in edges:
-    union(a, b)
+djs = DisjointSet(8)
+edges = [[0,1],[1,0],[1,2],[2,1],[6,5],[6,7],[2,7],[3,4]]
+for e in edges:
+  djs.union(e[0], e[1])
+print(set(djs.find_parent(x) for x in range(8))) # {4, 5}. This means there are two disjoint sets in total, respectively having 4 and 5 as their parents
+print(djs.parents) # [1, 5, 1, 4, 4, 5, 5, 5] (only care about index 4 & 5)
+print(djs.ranks) # [1, 3, 1, 1, 2, 6, 1, 1] (only care about index 4 & 5)
 ```
 
 </details>
@@ -2126,7 +2151,7 @@ def union_find(n: int, edges: List[List[int]]):
 | Insertion sort |  **Divide the array into sorted and unsorted parts, and repeatedly move the first element from the unsorted (right) to the sorted (left)** and make it sorted                 |  $O(n)$ (when already sorted)   |      $O(n^2)$    |     $O(n^2)$ (descending order)   |     $O(1)$         |   O    |    O   |
 | Bubble sort    |   **Iterate multiple times to swap two adjacent elements until they are in the sorted order**   |     $O(n)$   (already sorted)       |   $O(n^2)$   |   $O(n^2)$  (descending order)    |   O(1)    |     O       |   O    |
 | Merge sort     |  **Split the array into two and merge them by sorting them at the same time recursively**  |   $O(nlogn)$   |   $O(nlogn)$       |   $O(nlogn)$     |    $O(n)$         |   X   |   O    |
-| Heapsort       |    **Convert the array into a heap, and repeatedly move the largest item to the end of the array**    | $O(n)$ (everything in the input is identical) | $O(nlog(n))$        |  $O(nlog(n))$ (heapify) $+ O(nlog(n))$ (heappop) $= O(nlog(n))$. Fine print: heapify can be implemented in $O(n)$ using Floyd's algo, but overall TC stays the same |  $O(1)$    |    O    |   X   |
+| Heapsort       |    **Convert the array into a heap, and repeatedly move the largest item to the end of the array**    | $O(n)$ (everything in the input is identical) | $O(nlog(n))$        |  $O(n)$ (heapify) $+ O(nlog(n))$ (heappop) $= O(nlog(n))$. |  $O(1)$    |    O    |   X   |
 | Counting sort  |  **Count the occurrence of each item in the array and use the counts to compute the indices**     |   $O(n)$   |     $O(n)$    |   $O(n)$    |   $O(n)$    |   X   |    O   |
 | Quicksort      |                   |      |         |       |            |
 | Radix sort     |                   |      |         |       |             |
@@ -2246,77 +2271,16 @@ def mergeSort(arr):
 <details>
 <summary>👉 Heap sort</summary>
 
+Refer back to the [heap implementation](#min-heap-implementation) for the implementation of heap itself.
+
 ```py
-def left_child_index(parent_index):
-    return parent_index * 2 + 1
-
-def right_child_index(parent_index):
-    return parent_index * 2 + 2
-
-def bubble_down(heap, heap_length, index):
-    '''
-    Restore a max heap where the value at index may
-    be out of place (i.e.: smaller than its children).
-    '''
-    while index < heap_length:
-        left_index  = left_child_index(index)
-        right_index = right_child_index(index)
-
-        # If we don't have any child nodes, we can stop
-        if left_index >= heap_length:
-            break
-
-        # Find the larger of the two children
-        larger_child_index = left_index
-        if right_index < heap_length and heap[left_index] < heap[right_index]:
-            larger_child_index = right_index
-
-        # Are we larger than our children?
-        # If so, swap with the larger child.
-        if heap[index] < heap[larger_child_index]:
-            heap[index], heap[larger_child_index] = heap[larger_child_index], heap[index]
-
-            # Continue bubbling down
-            index = larger_child_index
-        else:
-
-            # We're larger than both children, so we're done
-            break
-
-def remove_max(heap, heap_length):
-    '''
-    Remove and return the largest item from a heap.
-    Updates the heap in-place, maintaining validity.
-    '''
-    # Grab the largest value from the root
-    max_value = heap[0]
-
-    # Move the last item in the heap into the root position
-    heap[0] = heap[heap_length - 1]
-
-    # And bubble down from the root to restore the heap
-    bubble_down(heap, heap_length - 1, 0)
-
-    return max_value
-
-def heapify(arr):
-
-    # Bubble down from the leaf nodes up to the top
-    for index in range(len(arr) - 1, -1, -1):
-        bubble_down(arr, len(arr), index)
-
 def heapsort(arr):
-
     heapify(arr)
-
     heap_size = len(arr)
-
     while heap_size > 0:
-
         # Remove the largest item and update the heap size
         largest_value = remove_max(arr, heap_size)
         heap_size -= 1
-
         # Store the removed value at the end of the list, after
         # the entries used by the heap
         arr[heap_size] = largest_value
@@ -2328,7 +2292,6 @@ def heapsort(arr):
 
 ```py
 def counting_sort(arr, max_value):
-
   # Count the number of times each value appears.
   # counts[0] stores the number of 0's in the input
   # counts[4] stores the number of 4's in the input
