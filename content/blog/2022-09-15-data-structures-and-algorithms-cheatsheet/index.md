@@ -465,18 +465,7 @@ $$
 h(k): \{0, ..., u - 1\} \rightarrow \{0, ..., m - 1\}
 $$
 
-If $m << u$, $h(k)$ is not injective (one-to-one) by pigeonhole principle. In other words, $∀h\text{ }∃a,b\text{ } \text{s.t }h(a) = h(b)$. This is collision.
-
-**Chaining** is the easiest technique to resolve this problem. Whenever there is a collision, store them a linked list. A node in the linked list would contain the original key and value. The hashcode will be used to iterate through a linked list that corresponds to the key. The structure may be better described with TypeScript:
-
-```ts
-interface KeyValNode<T> {
-  key: number; // hashcode
-  data: T; // data to be held
-}
-
-type HashTable<T> = LinkedList<KeyValNode<T>>[]
-```
+If $m << u$, $h(k)$ is not injective (one-to-one) by pigeonhole principle. In other words, $∀h\text{ }∃a,b\text{ } \text{s.t }h(a) = h(b)$. This is called collision. A method to handle this will be soon introduced.
 
 A simple hash function can be implemented by getting a remainder which is `k % m` in Python, where $m$ is an appropriate prime number:
 
@@ -521,7 +510,19 @@ hash function randomly chosen from $H$ is $1/m$. This is can easily be seen beca
 
 #### Collision resolution strategies
 
-Separate chaining
+**1. Chaining.** It is the easiest technique to resolve this problem. Whenever there is a collision, store them a linked list. A node in the linked list would contain the original key and value. The hashcode will be used to iterate through a linked list that corresponds to the key. The structure may be better described with TypeScript:
+
+```ts
+interface KeyValNode<T> {
+  key: number; // hashcode
+  val: T; // data to be held
+  next: KeyValNode<T> | null;
+  prev: KeyValNode<T> | null;
+}
+
+type HashTable<T> = LinkedList<KeyValNode<T>>[];
+```
+
 
 #### Amortized $O(1)$ analysis
 
@@ -1997,6 +1998,121 @@ class Solution:
       dfs(0, [0])
       return all_paths
 ```
+
+#### Union find (disjoint set): naive algorithm
+
+Union find AKA disjoint set is an algorithm for searching disjoint sets of nodes in a graph.
+
+A naive union find algorithm would involve running a DFS from every node with a `visited` set. Each valid DFS call would add to the disjoint set. This will take $O(|E| + |V|)$ time, but there's a better algorithm.
+
+<details>
+<summary>
+👉 Naive union find algorithm
+</summary>
+
+```py
+from typing import List
+
+
+def count_components(n: int, edges: List[List[int]]) -> int:
+  graph: List[List[int]] = []
+  for _ in edges:
+    graph.append([])
+  for edge in edges:
+    from_, to = edge
+    assert len(edge) == 2
+    graph[from_].append(to)
+    graph[to].append(from_)
+  
+  visited = [0] * n
+
+  num_connected_components = 0
+  for i in range(n):
+    if visited[i] == 0:
+      num_connected_components += 1
+      stack = [*graph[i]]
+      while stack:
+        node = stack.pop()
+        if visited[node] == 0:
+          stack.extend(graph[node])
+        visited[node] = 1
+  return num_connected_components
+```
+
+</details>
+
+#### Union find (disjoint set): efficient algorithm
+
+1. Treat all nodes as separate sets in the beginning. Each node is a parent of itself.
+1. Keep track of the `parent` and the `rank` of each node.
+  - `parent` is a single node in a disjoint set that represents that set
+  - `rank` is the number of nodes connected to the parent
+1. Unite each of nodes with one another based on the adjacency table.
+  - When united, the parent of the set of all nodes a node belong to becomes the parent of the set that the node was united to.
+  - For some of the edges, the union may be redundant in case another one happened already before to join the node to the set. In this case, don't do anything.
+  - This process involves two major operations called `find` and `union`.
+
+#### Union find algorithm complexities
+
+
+
+<details>
+<summary>
+👉 Union find algorithm
+
+
+</summary>
+
+```py
+
+def union_find(n: int, edges: List[List[int]]):
+  # init parent. at first, all nodes are parents of themselves
+  parent: List[int] = [i for in range(n)]
+  # track # nodes connected to the parent
+  # at first, all nodes have rank of 1 because they are parents themselves
+  rank: List[int] = [1] * n
+
+  def find_union(node: int):
+    result = node
+
+    # loop until the node itself is its own parent
+    while node != parent[result]:
+      # path compression
+      # optimize the path
+      # if no grandparent, this line does nothing
+      parent[result] = parent[parent[result]]
+      result = parent[result]
+    return result
+
+  def union(a, b) -> int:
+    # remember, on the first run,
+    # parent1 and parent2 are obviously going to be different
+    # because every node is a parent of itself
+    parent1, parent2 = find_union(a), find_union(b)
+
+    # if parents are the same already, don't do any union
+    if parent1 == parent2:
+      return 0
+
+    # decide which node is going to be the parent
+    # for the current logic, the one that has higher
+    # rank is going to be the parent
+    if rank[parent2] > rank[parent1]:
+      parent[parent1] = parent2
+      # merge the entire set that the node belonged to
+      rank[parent2] += rank[parent1]
+    else:
+      parent[parent2] = parent1
+      # merge the entire set that the node belonged to
+      rank[parent1] += rank[parent2]
+
+    return 1
+
+  for a, b in edges:
+    union(a, b)
+```
+
+</details>
 
 ## Dijkstra's algorithm
 
