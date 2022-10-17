@@ -11,64 +11,17 @@ keywords: ["data structures", "algorithm"]
 
 This is my own curated list of tips and tricks about data structures and algorithms, in Python or TypeScript.
 
-# Big O cheatsheet
-
-Everything is from [bigocheatsheet.com](bigocheatsheet.com). It's just that I don't visit it as often as my blog.
-
-![bigocheatsheet1.png](./bigocheatsheet1.png)
-
 # Checklist
 
 If you are able to bring up **complexities amd implementations** in mind just by looking at each topic, you are in a good shape.
 
-- [Array](#arrays)
-- [Hash table](#hash-table)
-- [String](#strings)
-  - [KMP algorithm](https://9oelm.github.io/2022-01-06--find-the-shortest-palindrome-an-intensive-review-of-kmp(knuth-morris-pratt)-algorithm/)
-- [Linked List](#linked-lists)
-  - [Singly linked list](#singly-linked-list-implementation)
-  - [Doubly linked list](#doubly-linked-list-implementation)
-- [Stack](#stack)
-- [Queue](#queue)
-  - [Deque](#deque)
-  - [Priority queue](#priority-queue)
-- [Tree](#trees)
-  - [Binary tree](#binary-tree)
-  - [Heap](#heap)
-  - [Trie](#trie-prefix-tree)
-  - Red-black tree
-  - AVL tree
-- [Graph](#graphs)
-  - [BFS](#dfs-and-bfs)
-  - [DFS](#dfs-and-bfs)
-  - [Topological sort](#topological-sort)
-    - [BFS sort](#iterative-topological-sort-kahns-algorithm)
-    - [DFS sort](#classic-dfs-topological-sort)
-  - Shortest path
-    - Dijkstra’s shortest path algorithm
-    - Bellman–Ford algorithm
-  - Cycle detection
-    - Floyd's cycle detection algorithm (tortoise and hare)
-  - Minimum spanning tree
-    - Prim’s algorithm
-    - Kruskal’s algorithm
-  - Union find
-  - Strongly connected components
-- [Sorting](#sorting)
-  - [Overview](#overview)
-- [Dynamic programming](#dynamic-programming)
-- [Bit manipulation](#dynamic-programming)
-
-If you want to have a look at the entire table of contents, please do so:
-<details>
-  <summary>👉 Table of contents</summary>
-
-  ```toc
-  ```
-
-</details>
-
 # Big-O and its friends
+
+#### Big O cheatsheet
+
+Everything is from [bigocheatsheet.com](bigocheatsheet.com). It's just that I don't visit it as often as my blog.
+
+![bigocheatsheet1.png](./bigocheatsheet1.png)
 
 #### Mathematical definition of Big-O
 
@@ -445,7 +398,7 @@ Precomutation of prefix/suffix/sum/product might be useful
 
 - Watch out for the range of the input strings (characters): for example, `a` to `z`.
 
-# Hash table
+# Hash table (Hash map)
 
 A hash table stores data in a key-value pair. In a 'good' implementation of a hash table, the lookup by key takes amortized $O(1)$ time which can be mathematically proven.
 
@@ -455,7 +408,7 @@ A hash table stores data in a key-value pair. In a 'good' implementation of a ha
 - A hash table is an abstract data structure because the underlying data structure can usually be an array. It does something called **hashing**, which is a translation from an arbitrary key to an integer number that behaves as an index of an array.
 - The length of the array can be much smaller than the number hashcodes (output of the hash functions). 
 - For that reason, two different hashcodes may end up in the same array index. This is called **collision**. 
-- In a terrible hash table with bad a hash function that causes lots of collisions, the lookup may take $O(n)$/
+- In a terrible hash table with bad a hash function that causes lots of collisions, the lookup may take $O(n)$.
 
 #### Hash function
 
@@ -510,7 +463,15 @@ hash function randomly chosen from $H$ is $1/m$. This is can easily be seen beca
 
 #### Collision resolution strategies
 
-**1. Chaining.** It is the easiest technique to resolve this problem. Whenever there is a collision, store them a linked list. A node in the linked list would contain the original key and value. The hashcode will be used to iterate through a linked list that corresponds to the key. The structure may be better described with TypeScript:
+As discussed, a collision must happen anyway when there are $m$ slots and $u$ items to insert into the slots, where $u > m$, due to the pigeonhole principle. Here are the strategies to resolve the collision.
+
+**1. Separate chaining.** 
+- Easiest technique to resolve this problem. 
+- Whenever there is a collision, append the new data to a linked list (called a bucket) allocated to that specific index of the array. 
+- A node in the linked list would contain the original key and value. 
+- The hashcode will be used to iterate through a linked list that corresponds to the key. 
+
+The structure may be better described with TypeScript:
 
 ```ts
 interface KeyValNode<T> {
@@ -522,6 +483,51 @@ interface KeyValNode<T> {
 
 type HashTable<T> = LinkedList<KeyValNode<T>>[];
 ```
+
+![hash0.png](./hash0.png)
+
+**2. Linear probing.**
+- one method of open addressing
+- No linked list, directly store data in the array records
+- **used when there are more slots in the array than the values to be stored**
+- If there is a collision, store the data at `(index + n) % hash_table_len` where `n` is the first `n`th index at which you find the array slot is empty. For example, if you wanted to insert data at index 5 but notice it's not empty but index 6 is, simply put it at 6.
+- Formally, the linear probing function can be given by $h(x, i) = (f(x) + i)\space  mod\space N$ where $i = 1,2,3,...$
+  - Usually, $f(x)$ would just be $f(x) = x$ in its simplest form.
+  - $N$ is the length of the array
+
+![hash1.png](./hash1.png)
+
+**3. Quadratic probing.**
+- another method of open addressing
+- similar to linear probing, but the interval between probes increases quadratically. Resolve collisions by examining certain cells (1,4,9, ...) away from the original probe point
+- therefore, it does not check all slots in the array and may not find a vacant slot in the end
+- clustering 
+- quadratic probing function: $h_{i}(k) = (h(k) + i^2)\space mod\space N$, where 
+  - $h(k)$ is the original hash function (probably just $h(k) = k\space mod\space N$)
+  - $h_{i}(k)$ is the hash function for each index $i$
+  - $N$ is the length of the array
+
+**4. Double hashing.**
+- another method of open addressing
+- double hashing function: $h(k, i) =(h_{1}(k) + i \times h_{2}(k))\space mod\space N$ where $h_{1}(k)$ and $h_{2}(k)$ are two ordinary hash functions.
+  - For a popular case, let $h_{1}(k) = k\space mod\space N$ and $h_{2}(k) = P - (k\space mod\space P)$
+    - Let $P$ a well chosen prime number less than $N$, and $N$ be the length of the array
+
+#### Importance of the load factor
+
+$\text{Load factor} = \frac{\text{\# filled slots in the array}}{\text{total \# slots in the array}}$
+
+- As load factor increases towards 100%, it becomes increasingly difficult to find/insert a given key.
+- That is why the load factor is normally limited to 70~80% at maximum and for some algorithms just 50%.
+- Once the load factor exceeds the boundary, double the array size, and rehash every element again
+
+#### Collision resolution strategies comparision
+
+Strategy
+Separate Chaining
+Linear probing
+Quadratic probing
+Double hashing
 
 
 #### Amortized $O(1)$ analysis
@@ -2067,7 +2073,7 @@ Assume:
 
 <details>
 <summary>
-👉 Union find algorithm
+👉 Union find algorithm implementation
 </summary>
 
 ```py
@@ -2460,3 +2466,14 @@ print(0b01100111, 0b01100011, clear_nth_bit(0b01100111, 2))
 
 - Amortized analysis: https://www.cs.cornell.edu/courses/cs3110/2011fa/supplemental/lec20-amortized/amortized.htm
 - Hash table and amortized analysis: https://www.cs.cornell.edu/courses/cs312/2008sp/lectures/lec20.html
+- Hash table collision resolution: 
+  - http://www.cs.cmu.edu/~ab/15-121N11/lectures/lecture16.pdf
+  - https://stackoverflow.com/questions/4980757/how-do-hashtables-deal-with-collisions
+  - https://courses.cs.washington.edu/courses/cse326/02wi/lectures/lecture12/lecture12-hash2.pdf
+  - https://courses.csail.mit.edu/6.006/fall11/lectures/lecture10.pdf
+  - https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/
+- Disjoint set:
+  - https://stackoverflow.com/questions/6342967/why-is-the-ackermann-function-related-to-the-amortized-complexity-of-union-find
+  - https://people.cs.umass.edu/~barring/cs611/lecture/7.pdf
+  - https://www.youtube.com/watch?v=ID00PMy0-vE
+  - https://www.youtube.com/watch?v=ahz0HvV_QYU
