@@ -2339,13 +2339,53 @@ A sorting algorithm is stable if two objects with equal keys appear in the same 
 
 # Dynamic programming
 
+#### Sub-problems
+
+- All dynamic programming problems involve sub-problems after all
+- Solve complex problems by breaking them down into their smaller parts and storing the results of the subproblems
+- a DP algorithm will exhaustively search through all of the possible subproblems, and then choose the best solution based on that. 
+- Greedy algorithms only search through one subproblem, which means they’re less exhaustive searches by definition.
+
+#### Memoization
+
 Usually, dymamic programming would consist of creating some memo that stores information about certain index.
 
-Here's an example:
+
+<details>
+<summary>👉 Example of calculating nth term in fibonacci sequence with memo</summary>
+
+```py
+memo = []
+for i in range(20):
+    memo.append(-1)
+
+def fib(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+
+    if memo[n] != -1:
+        return memo[n]
+    
+    memo[n] = fib(n-1) + fib(n-2)
+    return memo[n]
+
+print(fib(6))
+```
+
+The time complexity is just $O(n)$ whereas the approach without memo would be $O(2^n)$.
+
+<details>
+
+<details>
+
+<summary>
+👉 Another example of finding the maximum length of subarray appearing in both arrays
+</summary>
 
 > Given two integer arrays nums1 and nums2, return the maximum length of a subarray that appears in both arrays.
 
-> 
   ```
   Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
   Output: 3
@@ -2365,20 +2405,103 @@ class Solution:
         return max(max(row) for row in max_lengths)
 ```
 
+</details>
+
+
+#### top-down vs bottom-up dynamic programming
+
+- top-down: start with the large, complex problem, and understand how to break it down into smaller subproblems, memoizing the problem into parts.
+- bottom-up: starts with the smallest possible subproblems, figures out a solution to them, and then slowly builds itself up to solve the larger, more complicated subproblem.
+
 # Bit manipulation
 
-## Arithmetic vs logical right shift
+#### Arithmetic vs logical right shift
 
 - A bit shift takes an $O(1)$ time. This is because it is mostly a single instruction in a CPU.
-- logical right shift (`>>>`): shifts bits to right, filling the sign bit with 0
-- arithmetic right shift (`>>`): shifts bits to right filling the sign bit with 1. Equivalent to $num / 2$
-- logical left shift (`<<<`): shifts bits to left, filling the first bit with 0
-- arithmetic left shift (`<<`): shifts bits to left filling the first bit with 1. Equivalent to $num \times{2}$
+- logical right shift (`>>>`): shifts bits to right, always filling the sign bit with 0.  Discard the least significant bit.
+- arithmetic right shift (`>>`): shifts bits to right filling the sign bit with the existing sign bit. Discard the least significant bit. Example: `0b0111 >> 1 == 0b0011` and `0b1100 >> 1 == 0b1110` Equivalent to $num / 2$
+- logical left shift (`<<<`): shifts bits to left, filling the first bit with 0. **Same as arithmetic left shift.**
+- arithmetic left shift (`<<`): shifts bits to left filling the first bit with 0. Equivalent to $num \times{2}$
 
-## Two's complement
+#### The basics of two's complement
 
+- It's a way that a computer stores integers in bits.
+- A computer needs to represent both negative and positive integers.
+- Uses N-bit number, where N - 1 bits are used to represent the actual integer, and the most significant 1 bit is used for the sign bit
 
-## Common tasks
+Example with 4 bits:
+
+| Decimal | 2's complement form |
+| ------- | ------------------- |
+| 7       | 0111                |
+| 6       | 0110                |
+| 5       | 0101                |
+| 4       | 0100                |
+| 3       | 0011                |
+| 2       | 0010                |
+| 1       | 0001                |
+| 0       | 0000                |
+| \-1     | 1111                |
+| \-2     | 1110                |
+| \-3     | 1101                |
+| \-4     | 1100                |
+| \-5     | 1011                |
+| \-6     | 1010                |
+| \-7     | 1001                |
+| \-8     | 1000                |
+
+The reason that one more negative number is able to be represented is because there is only a positive zero, which is `0000`. Because + is the only sign that represents zero, it has one less number it can represent.
+
+$N$ bits in two's complement can represent numbers from $-2^{N-1}$ to $2^{N-1} - 1$. 
+
+For this example, it would be $N = 4 \Rightarrow$ from $-2^{3} = -8$ to $2^{3} - 1 = 7$
+
+#### Converting to a negative two's complement
+
+All positive integers are already in two's complement form, except if the most significant bit should be the sign bit. In that case, there's nothing you can do other than increasing the number of bits used for the number.
+
+Below are the steps for creating a negative number in two's complement
+
+1. Write a number in a binary form, without the sign. Take 10 for example. Since this is already 4 bits, we are going to need 5 bits to represent -10:
+    ```
+    01010  
+    ```
+1. Invert the digits: `~(digit)`
+    ```
+    10101  
+    ```
+1. And add 1 to it
+    ```
+    10110
+    ```
+
+#### Converting from a negative two's complement
+
+Again, you don't need to convert a positive two's complement to a normal binary representation because it is already in that form already. Conversion from a negative two's complement to a binary number without the sign goes the same with converting to a negative two's complement. Example:
+
+1. Get a number in two's complement. -10 in this case:
+    ```
+    10110
+    ```
+1. Invert the digits: `~(digit)`
+    ```
+    01001
+    ```
+1. And add 1 to it
+    ```
+    01010
+    ```
+
+So `01010` is a 10. We now know `10110` means -10.
+
+#### Two's complement arithmetic
+
+Just add them like how you would do in a decimal arithmetic.
+
+![twos0.png](./twos0.png)
+![twos1.png](./twos1.png)
+
+#### Common tasks
 
 <details>
 <summary>👉 Get the bit length to represent an integer</summary>
@@ -2458,9 +2581,150 @@ print(0b01100111, 0b01100011, clear_nth_bit(0b01100111, 2))
 
 </details>
 
+### More bit operations in Python
+
+#### Print in binary form
+```py
+print(bin(n))
+```
+
+#### Count bits of 1's in the number
+```py
+bin(n).count('1')
+```
+
+#### Filling bits
+Beyond the range of a number, think of it as bits filled with 0
+```py
+1 # this is 0b1 but also 0b0000001
+```
+
+#### Python 3 bit system
+Python 3's bit system allows an integer to have as many bits as the memory allows. In other words, it does not restrict the bits to be within 32 or 64 bits. 
+
+Python 3 will use `long` type to denote integers having the size bigger than `sys.maxsize`.
+
+```bash
+>>> import sys
+>>> type(sys.maxsize)
+<type 'int'>
+>>> type(sys.maxsize+1)
+<type 'long'>
+```
+
+This sometimes a problem when we expect an arithmetic left shift to be automatically masked within 32 bits or 64 bits range. For example, in Java:
+
+```java
+class Main {  
+  public static void main(String args[]) { 
+    // prints "0"
+    System.out.println(0x80000000 << 1); 
+  } 
+}
+```
+
+But Python 3 will still give you the number beyond 32 bits:
+```bash
+>>> 0x80000000 << 1
+4294967296
+```
+
+This is good sometimes but bad when you want to have it automatically masked, so you need to do it manually:
+
+```bash
+>>> (0x80000000 << 1) & 0xFFFFFFFF
+0
+```
+
 # Miscellaneous
 
-## Combination vs permutation
+#### Combination vs permutation
+
+- Permutation: order of elements **matters**
+  - Get a permutation of $n$ elements without repetition: $n!$
+  - Get a permutation of $n$ elements with repetition possible: $n^n$
+  - Choose $k$ objects from $n$ objects, where order matters: $\frac{n!}{({n-k})!}$
+- Combination: order of elements **doesn't matter**
+  - Choose $k$ objects from $n$ objects, where order doesn't matter: $\frac{n!}{k!({n-k})!}$
+
+#### Combination vs permutation: example
+
+How many different 5-card hands can be made from a standard deck of cards (52 cards)? 
+
+First, we immediately know that we're looking for a combination because the order of cards in a hand doesn't matter.
+
+So that's gonna be $\frac{52!}{5!({52-5})!} = \frac{52!}{5!({47})!}$
+
+For $\frac{52!}{47!}$, we know it's $52 \times 51 \times 50 \times 49 \times 48$, which is just the number of ways 5 cards can end up in a single hand.
+
+$5!$ in the denominator is there because we want to remove hands that are different permutations but the same combination. For example, we know `♦️1 ♦️2 ♦️3 ♦️4 ♦️5` and `♦️5 ♦️2 ♦️3 ♦️4 ♦️1` are different permutations but the same combination, so we want to get rid of it.
+
+$5!$ is the same as asking "how many different ways can I arrange 5 cards?". And if you divide the number of ways 5 cards can end up in a single hand by that, that means you are eliminating the duplicate ways (permutations) you can arrange 5 cards.
+
+If you just want to know how many different 5-card hands can be made from a standard deck of cards (52 cards) **where order of the cards matters**, just remove $5!$ from the expression and that's the answer: $\frac{52!}{47!}$
+
+#### Combination and permutation in Python
+
+```py
+from itertools import permutations 
+  
+perm = permutations([1, 2, 3], 2) 
+"""
+(1, 2)
+(1, 3)
+(2, 1)
+(2, 3)
+(3, 1)
+(3, 2)
+"""
+```
+
+```py
+from itertools import combinations
+  
+comb = combinations([1, 2, 3], 2)
+"""
+(1, 2)
+(1, 3)
+(2, 3)
+"""
+```
+
+```py
+from itertools import combinations_with_replacement 
+  
+comb = combinations_with_replacement([1, 2, 3], 2) 
+"""
+(1, 1)
+(1, 2)
+(1, 3)
+(2, 2)
+(2, 3)
+(3, 3) 
+"""
+```
+
+#### Python `int` vs `round`
+
+- `int(float_num)` gets rid of numbers after the decimal place 
+- `round(float_num)` floors or ceils the number to the closest integer 
+
+```
+x       int floor   round   ceil
+1.0     1   1       1       1
+1.1     1   1       1       2
+1.5     1   1       2       2
+1.9     1   1       2       2
+-1.1    -1  -2      -1      -1
+-1.5    -1  -2      -2      -1
+-1.9    -1  -2      -2      -1
+-2.5    -2  -3      -2      -2
+-1.5    -1  -2      -2      -1
+-0.5    0   -1      0       0
+0.5     0   0       0       1
+1.5     1   1       2       2
+2.5     2   2       2       3
+```
 
 # References
 
@@ -2477,3 +2741,8 @@ print(0b01100111, 0b01100011, clear_nth_bit(0b01100111, 2))
   - https://people.cs.umass.edu/~barring/cs611/lecture/7.pdf
   - https://www.youtube.com/watch?v=ID00PMy0-vE
   - https://www.youtube.com/watch?v=ahz0HvV_QYU
+- Two's complement:
+  - https://www.cs.cornell.edu/~tomf/notes/cps104/twoscomp.html
+- General bit manipulation:
+   - https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/
+   - https://leetcode.com/problems/sum-of-two-integers/discuss/84278/A-summary%3A-how-to-use-bit-manipulation-to-solve-problems-easily-and-efficiently
