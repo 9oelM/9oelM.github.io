@@ -7,9 +7,12 @@ book_rating: 5
 keywords: ["think again", "adam grant", "book"]
 ---
 
-This is my own full summary and reflection on _Think Again_ by [Adam Grant](https://adamgrant.net/), who's already a very renowned professor teaching at Wharton, and also a bestselling author of multiple books about psychology and organization.
+This is my summary and reflection on _Think Again_ by [Adam Grant](https://adamgrant.net/), who's already a very renowned professor teaching at Wharton, and also a bestselling author of multiple books about psychology and organization.
 
 ![Cover page of Think Again by Adam Grant](./cover.jpeg)
+
+```toc
+```
 
 ## Prologue
 
@@ -78,3 +81,129 @@ This is my own full summary and reflection on _Think Again_ by [Adam Grant](http
 
 ![The confidence sweet spot](./3.jpeg)
 
+- Benefits of doubt: the more often they felt like imposters, the higher their performance reviews from their supervisors.
+  1. makes you work harder
+  1. makes you work smarter by rethinking the strategy
+  1. makes you a better learner
+  1. basically, makes you stay in the confident humility.
+
+### Chapter 3. The Joy of Being Wrong
+
+- In one experiment in Harvard, participants were harshly challenged with views opposite of theirs. Some found it bewildering, while others found it enjoyable and thrilling.
+
+> They aren’t just comfortable being wrong; they actually seem to be thrilled by it.
+
+- Being wrong isn't bad
+
+- But the ego often shuts us down than open up when a core belief is questioned
+
+- Next level: to _enjoy_ being wrong
+
+- Being wrong means you're _learning_, honest, and willing to learn.
+
+- Detachment: 
+  - detach yourself from the past self if you know your belief was wrong
+  - separate your opinion from your identity: who you are should be a question of what you value, not what you believe
+
+- Your views should constantly evolue through rethinking and 'updating' (being wrong & learning again). Changing beliefs sooner is better than later 
+
+> I’ve noticed a paradox in great scientists and superforecasters: the reason they’re so comfortable being wrong is that they’re terrified of being wrong. What sets them apart is the time horizon. They’re determined to reach the correct answer in the long run, and they know that means they have to be open to stumbling, backtracking, and rerouting in the short run.
+
+### Chapter 4. The Good Fight Club: The Psychology of Constructive Conflict
+
+- Relationship conflict vs task conflict
+  - relationship conflict: emotional, personal conflict. Gets in the way of rethinking
+  - task conflict: conflict on idea/opinions. Leads to contructive, rethinking conversation.
+  - well-performing teams have consistently low relationship conflict and frequently and blatantly engage in task conflicts whenever they need to
+
+> “The absence of conflict is not harmony, it’s apathy.”
+
+- It's crucial to know how to have a good fight
+
+- Be 100% open to a good fight. Encourage it and get used to it.
+
+- "The plight of the people pleaser": don't avoid conflict just because you don't want anyone to get mad at you.
+
+> Strong leaders engage their critics and make themselves stronger. Weak leaders silence their critics and make themselves weaker.
+
+- Let caring people challenge you
+
+- Don't agree to disagree: arguing is a sign of respect.
+
+- Prevent task conflict from spilling over into relationship conflict.
+  - Think of a dispute as a debate rather than a disagreement. Disagreement feels personal and hostile. Instead, start by asking "can we debate?"
+  - Argue about _how this idea might be right_ instead of _why this idea is right_
+
+## Part II: Interpersonal thinking
+
+### Chapter 5. Dances with Foes: How to Win Debates and Influence People
+
+- How to open up people's minds instead of shutting them down
+
+- Use a collaborative approach with more humility, curiosity and invitation to think more like scientists.
+
+- Debate is not a war. Preacher/prosecutor mindset is not appropriate.
+
+> It’s more like a dance that hasn’t been choreographed, negotiated with a partner who has a different set of steps in mind.
+
+- Plan and find expected areas of agreement. Find common grounds. Accept valid points from the opponent.
+- It's not ncessary to pour out all reasons to support the case. Too many points would come at the cost of having to defend more arguments, especially listeners don't really care about what you say.
+- No offense or defense. Your argument doesn't have to be the strongest.
+- Questions help. Less assertive but putting a step forward together.
+
+![4.png](./4.png)
+
+- What if people don't want to dance anyway?
+  - Start with common ground and fewer reasons
+  - Show more curiosity and interest
+  - Be tranquil
+  - Test your understanding of the other side's feelings by asking
+
+- Moderate confidence may be better than low or high confidence
+
+### Chapter 6. Bad Blood on the Diamond: Diminishing Prejudice by Destabilizing Streotypes
+
+- People are against other groups for a few or no valid or significant reasons at all
+
+- Group polarization: interacting with people who share the streotypes already, which fortifies the existing view
+
+- How to cope:
+  - Common identity: doesn't work
+  - Empathy towards the other: doesn't work
+  - Thinking about arbitariness of animosity: works
+
+- Offer counterfactual thinking. Let people imagine how their views would have been if they were in a different situation. i.e. if you were born Black, Hispanic, Asian, ...
+
+> Psychologists find that many of our beliefs are cultural truisms: widely shared, but rarely questioned.
+
+> As a general rule, it’s those with greater power who need to do more of the rethinking, both because they’re more likely to privilege their own perspectives and because their perspectives are more likely to go unquestioned.
+
+### Chapter 7. Vaccine Whisperers and Mild-Mannered Interrogators: How the Right Kind of Listening Motivates People to Change
+
+- People took it for granted that Measles vaccine is risky and did not get their children vaxxed
+- Preaching-mode govnts failed to turn their minds. 
+- What doesn't sway us can make our beliefs stronger. Resistence hardens.
+- Just telling them hard facts backfires in many cases
+- Movitational interviewing: instead, ask questions and listen to the answers
+  - start with humility and curiosity. activates a rethinking cycle.
+  - statistically and clinically proven effect
+
+> When people ignore advice, it isn’t always because they disagree with it. Sometimes they’re resisting the sense of pressure and the feeling that someone else is controlling their decision.
+
+- Sustain talk vs change talk: go for change talk for a motivational interview
+  - Sustain talk: about mantaining the status quo
+  - Change talk: referencing a desire, ability, need or commitment to make adjustments
+
+> The objective is not to be a leader or a follower, but a guide.
+
+- _Just **listen**_.
+
+> interacting with an empathetic, nonjudgmental, attentive listener made people less anxious and defensive.
+
+- "Inverse charisma": be a great listener.
+
+- Listening is a display of respect and expression of care
+
+## Part III. Collective rethinking: Creating Communities of Lifelong Learners
+
+### Chapter 8. Charged Conversations: Depolarizing our divided discussions
