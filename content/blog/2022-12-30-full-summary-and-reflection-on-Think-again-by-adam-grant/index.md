@@ -1,13 +1,13 @@
 ---
-title: "Full summary and reflection on <Think Again> by Adam Grant"
-date: "2022-06-09T09:00:00.009Z"
+title: "Full summary of <Think Again> by Adam Grant (13 / 100)"
+date: "2022-12-30T09:00:00.009Z"
 tags: ["books"]
 tab: "post"
-book_rating: 5
+book_rating: 3
 keywords: ["think again", "adam grant", "book"]
 ---
 
-This is my summary and reflection on _Think Again_ by [Adam Grant](https://adamgrant.net/), who's already a very renowned professor teaching at Wharton, and also a bestselling author of multiple books about psychology and organization.
+This is my summary on _Think Again_ by [Adam Grant](https://adamgrant.net/), who's already a very renowned professor teaching at Wharton, and also a bestselling author of multiple books about psychology and organization.
 
 ![Cover page of Think Again by Adam Grant](./cover.jpeg)
 
@@ -207,3 +207,119 @@ This is my summary and reflection on _Think Again_ by [Adam Grant](https://adamg
 ## Part III. Collective rethinking: Creating Communities of Lifelong Learners
 
 ### Chapter 8. Charged Conversations: Depolarizing our divided discussions
+
+- binary bias: seeking clarity and closure by simplifying a complex continuum into two categories
+  -Overcome the bias: a good starting point is to become aware of the range of perspectives across a given spectrum.
+  - Problems are often more complex than just being binary. Realization of complexity gives us humility and doubts on existing opinions, and thus leads to rethinking.
+  - Resisting the impulse to simplify is a step toward becoming more argument literate.
+  - Humans, like polarizing issues, rarely come in binaries.
+
+- accept uncertainty around complex issues
+  - people pay more attention when you accept it
+  - people will ignore or even deny the existence of a problem if they’re not fond of the solution.
+  - include caveats and contingencies
+
+- put yourselves in another person's shoes
+  - The greater the distance between us and an adversary, the more likely we are to oversimplify their actual motives and invent explanations that stray far from their reality
+  - productive conversations cover a much more varied spectrum of emotions
+  
+### Chapter 9. Rewriting the Textbook: Teaching Students to Question Knowledge
+
+- Knowledge is evolving every second. Students need to be motivated to update their knowledge in the present.
+
+- Rethinking is a kind of education
+
+- Unlearning is important. Discard old, outdated, wrong knowledge and adopt the new and correct knowledge
+
+- Rethinking needs to become a regular habit. Unfortunately, traditional methods of education don’t always allow students to form that habit.
+
+- Students get more knowledge and skill from active-learning sessions entaling more effort
+
+- Lectures are not always the best method of learning, and they are not enough to develop students into lifelong learners
+
+> good teachers introduce new thoughts, but great teachers introduce new ways of thinking
+
+### Chapter 10. That's Not the Way We've Always Done: Building Cultures of Learning at Work
+
+> Rethinking is not just an individual skill. It’s a collective capability, and it depends heavily on an organization’s culture.
+
+> Rethinking is more likely to happen in a learning culture, where growth is the core value and rethinking cycles are routine.
+
+- The worst thing about best practices is that once we’ve declared a routine the best, it becomes frozen in time.
+
+- Focusing on results is not favorable for long-term learning. Provide an environment where people feel safe to discuss and introduce new ways of thinking and the problems in current thinking.
+
+- Rethinking is more likely when we separate the initial decision makers from the later decision evaluators.
+
+![5.png](./5.png)
+
+> Even if the outcome of a decision is positive, it doesn’t necessarily qualify as a success. If the process was shallow, you were lucky. If the decision process was deep, you can count it as an improvement: you’ve discovered a better practice. If the outcome is negative, it’s a failure only if the decision process was shallow. If the result was negative but you evaluated the decision thoroughly, you’ve run a smart experiment.
+
+## Part IV. Conclusion
+### Chapter 11. Escaping Tunnel Vision: Reconsidering Our Best-Laid Career and Life Plans
+
+- Whenever you feel like you 'gotta stay on track' for your career, rethink once more.
+
+> We all have notions of who we want to be and how we hope to lead our lives. ... The danger of the plans is that they can give us tunnel vision, blinding us to alternative possibilities.
+
+> When we dedicate ourselves to a plan and it isn’t going as we hoped, our first instinct isn’t usually to rethink it. Instead, we tend to double down and sink more resources in the plan. This pattern is called escalation of commitment.
+
+- There’s a fine line between heroic persistence and foolish stubbornness.
+
+> “What do you want to be when you grow up? As if growing up is finite. As if at some point you become something and that’s the end.”
+
+- Choosing a career isn’t like finding a soul mate. It’s possible that your ideal job hasn’t even been invented yet.
+
+> I’ve noticed that the students who are the most certain about their career plans at twenty are often the ones with the deepest regrets by thirty.
+
+> For the record, I think it’s better to lose the past two years of progress than to waste the next twenty. In hindsight,
+
+- Answering these career checkup questions is a way to periodically activate rethinking cycles.
+
+![6.png](./6.png)
+
+- Chasing happiness often chases it away, probably because 
+  - we ruminate about why our lives aren't more joyful than honoring moments of joy.
+  - we spend too much time striving for peak happniess
+  - we overemphasize pleasure at the expense of purpose
+
+> When we pursue happiness, we often start by changing our surroundings. We expect to find bliss in a warmer climate or a friendlier dorm, but any joy that those choices bring about is typically temporary. You are you. 
+
+- Passion is developed rather than discovered
+
+> writing out a plan for your life “is like driving at night in the fog. You can only see as far as your headlights, but you can make the whole trip that way.”
+
+- The simplest way to start rethinking our options is to question what we do daily.
+
+## Actions for impact
+
+1. Think like a scientist
+2. Define your identity in terms of values, not opinions
+3. Seek out information that goes against your views
+4. Beware of getting stranded at the summit of Mount Stupid (more confidence means more overestimation)
+5. Harness the benefits of doubt
+6. Embrace the joy of being wrong
+7. Learn something new from each person you meet
+8. Build a challenge network, not just a support network
+9. Don’t shy away from constructive conflicts
+10. Practice the art of persuasive listening
+11. Question how rather than why
+12. Ask "What evidence would change your mind?": try to know what would open their minds
+13. Ask how people originally formed an opinion
+14. Acknowledge common ground
+15. Remember less is often more
+16. Reinforce freedom of choice
+17. Have a conversation about the conversation
+18. Complexify contentious topic
+19. Do not shy away from caveats and contingencies
+20. Expand your emotional range
+21. Have a weekly myth-busting discussion at dinner
+22. Invite kids to do multiple drafts and seek feedback from others.
+23. Stop asking kids what they want to be when they grow up
+24. Abandon best practices
+25. Establish psychological safety
+26. Keep a rethinking scoreboard
+27. Throw out the ten-year plan
+28. Rethink your actions, not just your surroundings
+29. Schedule a life checkup
+30. Make time to think again
