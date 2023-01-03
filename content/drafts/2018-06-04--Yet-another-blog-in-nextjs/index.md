@@ -5,7 +5,7 @@ category: "works"
 ---
 
 
-## Set up basic things ([see previous post on basic things with next.js](https://joel.is-a.dev/development/2018/06/01/Next.js-(1)-Basic-setup-and-understanding.html))
+## Set up basic things ([see previous post on basic things with next.js](https://9oelm.github.io/development/2018/06/01/Next.js-(1)-Basic-setup-and-understanding.html))
 
 ### Install next, react, react-dom & grommet command line tools and grommet
 ```

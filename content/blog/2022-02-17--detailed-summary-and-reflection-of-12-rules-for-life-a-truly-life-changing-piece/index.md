@@ -1278,7 +1278,7 @@ Perhaps I will first need to start the day with the daily plans. Not needlessly 
 
 This is absurdly _hard_. Even with the innately selfish human nature. Even after reading the chapter 2, I still keep asking myself: what the heck is going on? Why can't I care myself enough? Why did I miss breakfast so many times knowing that it wouldn't be good for my health? Why did I sleep late and wake up late knowingly?
 
-After reading _[Atomic Habits](https://joel.is-a.dev/2020-10-04-100BooksProject-(9):Atomic-habits/)_, I decided to get rid of the bad habits, but it wasn't still easy. But after reading about the second rule, I now have enough motivation to try again.
+After reading _[Atomic Habits](https://9oelm.github.io/2020-10-04-100BooksProject-(9):Atomic-habits/)_, I decided to get rid of the bad habits, but it wasn't still easy. But after reading about the second rule, I now have enough motivation to try again.
 
 There is almost not a single day, or just a single day so far in 2022 that I have missed having breakfast. I'm also making a record of the time I go to sleep and wake up since the beginning of 2022. _Persistence is the key._ Despite the absence of record for the late 2021, I know it must have been so dreadful. Here's the record so far for 2022:
 

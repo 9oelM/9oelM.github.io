@@ -8,7 +8,7 @@ keywords: ["webassembly", "risc-v", "emulator", "simulator", "web"]
 
 So I have enrolled in this [computer architecture class](https://icsl.yonsei.ac.kr/eee3530/) for the current semester. The lecture is based on [the RISC-V instruction set](https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf), which was quite of a surprise to me because it is not the popular kind of instruction set in the practical industry yet, although rapidly growing.
 
-And I was looking for some project to do for fun. A few days ago, [I dug into Emscripten a bit and did some experiment with it](https://github.com/9oelM/emscripten-cplusplus-webpack-example), which is what [my previous blog post](https://joel.is-a.dev/2022-05-10-How-to-compile-C++-code-into-Webassembly-with-Emscripten-and-use-it-in-Webpack-+-Typescript-+-React-project/) is about. Upon thinking about it, I found [my professor's simple RISC-V simulator, named Kite](https://github.com/yonsei-icsl/Kite), is based on C++. Then everything moved quite quickly because I just found a suitable target to turn into Webassembly for fun. This blog post is a short reflection/how-to-guide for that.
+And I was looking for some project to do for fun. A few days ago, [I dug into Emscripten a bit and did some experiment with it](https://github.com/9oelM/emscripten-cplusplus-webpack-example), which is what [my previous blog post](https://9oelm.github.io/2022-05-10-How-to-compile-C++-code-into-Webassembly-with-Emscripten-and-use-it-in-Webpack-+-Typescript-+-React-project/) is about. Upon thinking about it, I found [my professor's simple RISC-V simulator, named Kite](https://github.com/yonsei-icsl/Kite), is based on C++. Then everything moved quite quickly because I just found a suitable target to turn into Webassembly for fun. This blog post is a short reflection/how-to-guide for that.
 
 ## Table of contents
 ```toc
@@ -374,7 +374,7 @@ Additionally, you will have to free all pointers in `finally`. Your wasm will ha
 
 ## Compilation of existing C++ into Webassembly
 
-So how do you export functions from C++? [The basic walkthrough is extensively covered in my previous blog post](https://joel.is-a.dev/2022-05-10-How-to-compile-C++-code-into-Webassembly-with-Emscripten-and-use-it-in-Webpack-+-Typescript-+-React-project/).
+So how do you export functions from C++? [The basic walkthrough is extensively covered in my previous blog post](https://9oelm.github.io/2022-05-10-How-to-compile-C++-code-into-Webassembly-with-Emscripten-and-use-it-in-Webpack-+-Typescript-+-React-project/).
 
 But, since the previous blog post is quite general, some more explanation may be needed for the specific context of this project.
 
@@ -440,7 +440,7 @@ So I would just run `./dockerutil.sh -c run` or `./dockerutil.sh -c build` and t
 
 Now I just need to `./dockerutil.sh -c build` for the first time to build the image, and `./dockerutil.sh -c run`.
 
-Then two files will be created: `kite_wasm.js` and `kite_wasm.wasm`. Since I am using Webpack for my React project, I would need some glue code like below ([more details on this in my previous post](https://joel.is-a.dev/2022-05-10-How-to-compile-C++-code-into-Webassembly-with-Emscripten-and-use-it-in-Webpack-+-Typescript-+-React-project/)):
+Then two files will be created: `kite_wasm.js` and `kite_wasm.wasm`. Since I am using Webpack for my React project, I would need some glue code like below ([more details on this in my previous post](https://9oelm.github.io/2022-05-10-How-to-compile-C++-code-into-Webassembly-with-Emscripten-and-use-it-in-Webpack-+-Typescript-+-React-project/)):
 
 ```js
 import { kite } from "./kite_wasm.js"
