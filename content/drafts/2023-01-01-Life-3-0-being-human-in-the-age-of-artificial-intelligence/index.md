@@ -7,6 +7,9 @@ book_rating: 1
 keywords: ["life 3.0", "artificial intelligence", "book"]
 ---
 
+I noticed that my previous summaries are too comprehensive and inclusive, so from now on I will try to be more succinct. Here's the summary for _Life 3.0: Being Human in the Age of Artificial Intelligence_ by Max Tegmark. 
+Initially, upon the introduction of ChatGPT and realizing how powerful this is, I was curious if my job is really going to disappear in the future, and if so, how and when. I also wanted to know how difficult it is and what is required to build a general AI that knows and learns about general human behavior and needs. In essence, I was in a deep search of the progression and potential of AI towards the future.
+
 ```toc
 ```
 
@@ -75,7 +78,6 @@ AI has demonstrated major breakthroughs in complex problems including Atari game
 - Weapons: AI weapons would be deadly if buggy, without any human intervention. Another problem is whether to start a global AI arms race or to prevent it from starting. But there’s less agreement about what precisely should be banned and how a ban would be enforced. Killer robots may be made ethical, but it remains a question as to what it really means to be ethical.
 - Jobs and wages: most people are earning more on an absolute scale, but income inequality has grown larger, probably due to technology. 
 
-
 ### Jobs
 
 For this section, I intend to be a little bit more detailed due to my personal interest in the job prospects under the strong influence of the AI empire.
@@ -102,7 +104,54 @@ Dealing with demise of most jobs: giving people income without jobs
 
 In summary, there’s absolutely no guarantee that we’ll manage to build **human-level AGI in our lifetime—or ever**. But there’s also **no watertight argument that we won’t**.
 
+
+# Chapter 4. Intelligence Explosion?
+
+- Human-level AGI may or may not be possible, but if we succeed at some point, it will trigger an intelligence explosion: human-level AGI creates superintelligence. 
+- If humans control intelligence explosion, they would take over the world in a few years.
+- If AI itself leads the intelligence explosion, it will take over the world even faster.
+  - For superintelligence, humans would be five year old kids keeping it in a jail.
+- A quick intelligence explosion occuring in a matter of days would probably lead to a single, unipolar world power
+- A slow intelligence explosion over decades will lead to multipolar world powers because tech develops over time, providing people with a room to catch up with the frontrunners
+- Superintelligence could enable coordination on ever-larger cosmic scales.
+- Cyborgs and uploads (emulations) are probable, but it is an unpopular opinion among scholars that it is the quickest route to supperintelligence
+
+> We need to start thinking hard about which outcome we prefer and how to steer in that direction, because if we don’t know what we want, we’re unlikely to get it
+
+# Chapter 5. Aftermath: The Next 10,000 Years
+
+Honestly, this chapter was quite uninteresting to me because it explains different types of aftermath scenarios following the advancement in AGI. So I am just going to copy and paste the summary from the book:
+
+- Superintelligence can peacefully coexist with humans either because it’s forced to (**enslaved-god scenario**) or because it’s “friendly AI” that wants to (**libertarian-utopia, protector-god, benevolent-dictator and zookeeper scenarios**). 
+- Superintelligence can be prevented by an AI (**gatekeeper scenario**) or by humans (**1984 scenario**), by deliberately forgetting the technology (**reversion scenario**) or by lack of incentives to build it (**egalitarian-utopia scenario**). 
+- Humanity can go extinct and get replaced by AIs (**conqueror and descendant scenarios**) or by nothing (**self-destruction scenario**). 
+- There’s absolutely no consensus on which, if any, of these scenarios are desirable, and all involve objectionable elements. This makes it all the more important to continue and deepen the conversation around our future goals, so that we don’t inadvertently drift or steer in an unfortunate direction.
+
+# Chapter 6. Our Cosmic Endowment: The Next Billion Years and Beyond
+
+Who said Max is not a physicist. He now explores possibilities and challenges with our cosmic endowment through the lens of physics, given the hypothetical breakthroughs in AGI and thus limits to the overwhelming technological advancement.
+
+- Making the most of your resources: from the PoV of physicist, anything made up of atoms or quarks and electrons are resources. Advanced tech can rearrange it into any other substances to facilitate process/communication/any other goals. One way to gain and take advantage of vast amount of energy is to build a Dyson sphere.
+
+![dyson-sphere.png](./dyson-sphere.png)
+
+- Inefficiency: we are still very bad at being efficient with resources. Digesting a candy bar is 0.000000001% efficient, burning coal 0.00000003%, and most other daily things we do. We can be much more efficient with making use of advanced technology like sphaleron process and cosmic resources like black holes, quasars.
+- Bounded by spacetime: the infinite Universe doesn't mean we can see or travel to the edge of it because we are limited by the speed of light.
+- Controlling with the carrot: information will have value among commodities if any, and will be transmitted at the speed of light.
+- When civilizations clash: clash is deemed to be unlikely because of low possibility of discovery of another civilization, similar intelligence levels of superintelligence, and aligned goals. It would be more of a persuation or assimilation than a clash because it is more efficient for expansion.
+- life still has the potential to flourish on Earth under enough caution and planning
+
+# Chapter 7. Goals
+
+To think more about goals in relation to AI, we need to get a in-depth look at what a goal is.
+
+- Physics: the origin of goals. In all laws of classical physics, the nature prefers the optimal way - minimizing or maximizing some quantity. This is hardwaried to the nature. We can call this behavior goal-oriented (towards optimization). Another goal could heat death, which is the maximally messy end state of something, uniformly spread out. Observation of gravity and thermodynamics suggests our goal is not only about the hopeless heat death.
+- Biology: the evolution of goals. Reproduction was the dominant goal in the throughout the Drawinian evolution. Most efficient copiers outcompete others. But the fundamental goal of dissipation has not changed, because the goal of replication aids in dissipation (planet with lives is more efficient at dissipating energy). Today's humans act upon bounded rationality by deciding actions based on a few rules of thumb.
+- Psychology: the pursuit of and rebellion against goals. The rules of thumb can be said to be _feelings_. Feelings help a brain quickly make a decision. Our brain rebels against our genes and can make us consciously reject the goal of replication. With our brains, the ultimate authority is our feelings, not our genes.
+- Engineering: outsourcing goals. Machines, if designed to operate in a certain way, they can exhibit goal-oriented behavior (or design). Overall, the Earth is flourishing with goal-oriented machines possibily surpassing the magnitude of goal-oriented entities found from the nature. Evolved entities like machines can have more diverse, complex, arbitary goals. Due to bounded rationality of these entities, sometimes their goals are not aligned with ours.
+- Friendly AI: Aligning goals. 
+
 # Thoughts
 
-- No one knows what is going to happen next, and when it is going to happen, if anything happens. This gives a sufficient reason for me to think more about adaptability and wisdom. If you don't know where the ball is going to be thrown at in dodgeball, make yourself more agile and shrewd.
-- It appears that passion is not a guaranteed ticket to success anymore? The world has stayed that way so far. Under this setup, no one had to consider the risk of being outperformed by AI. All they had to do was to set a specific goal to achieve and just go for it so that they could get better than most of other 'humans'. As probably the most compelling example as of now, What would happen for the artists
+- **Adaptability.** No one knows what is going to happen next, and when it is going to happen, if anything happens. This gives a sufficient reason for me to think more about adaptability and wisdom. If you don't know where the ball is going to be thrown at in dodgeball, make yourself more agile and shrewd.
+- **Passion = success?** It appears that passion is not a guaranteed ticket to success anymore? The world has stayed that way so far. Under this setup, no one had to consider the risk of being outperformed by AI. All they had to do was to set a specific goal to achieve and just go for it so that they could get better than most of other 'humans'. As probably the most compelling example as of now, what would happen for the artists? I honestly do not know what the future would be like for them. AI is so brutally, shockingly good at creating arts right now. They can create an profound and captivating story behind some art too, and many gullible people will listen and believe, if they don't know they are not human.
