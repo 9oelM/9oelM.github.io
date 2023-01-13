@@ -10,6 +10,8 @@ keywords: ["life 3.0", "artificial intelligence", "book"]
 I noticed that my previous summaries are too comprehensive and inclusive, so from now on I will try to be more succinct. Here's the summary for _Life 3.0: Being Human in the Age of Artificial Intelligence_ by Max Tegmark. 
 Initially, upon the introduction of ChatGPT and realizing how powerful this is, I was curious if my job is really going to disappear in the future, and if so, how and when. I also wanted to know how difficult it is and what is required to build a general AI that knows and learns about general human behavior and needs. In essence, I was in a deep search of the progression and potential of AI towards the future.
 
+![life-3-0-book-cover.jpeg](./life-3-0-book-cover.jpeg)
+
 ```toc
 ```
 
@@ -46,7 +48,7 @@ Initially, upon the introduction of ChatGPT and realizing how powerful this is, 
   - a narrow AI trained on chess can't do anything on the game of Go, for example
   - today's AI is mostly narrow, whereas human intelligence is broad and general
 - but AI is growing fast. If AI is the sea and human competence is a land with hills, the sea level has been consistently rising
-  - > Now the flood has reached the foothills, and our outposts there are contemplating retreat\
+  - > Now the flood has reached the foothills, and our outposts there are contemplating retreat
   - overcoming all hills will happen with "universal intelligence" where given enough time and resources, it can make itself able to accomplish any goal as well as any other intelligent entity (including machines themselves)
 - memory, computation, learning, and intelligence are substrate-independent: able to take on a life of their own that doesn’t depend on or reflect the details of their underlying material substrate.
   - for example, when two programmers talk about code, they don't talk about how transistors work
@@ -97,10 +99,9 @@ There are arguments between job pessimists and optimists on AI.
 - optimists: the automated jobs will be replaced by new ones that are even better, which is what’s always happened before, as in Industrial Revolution and so on.
 
 Dealing with demise of most jobs: giving people income without jobs
-- Proiding people with both income and purpose without jobs should be doable. 
+- Providing people with both income and purpose without jobs should be doable. 
   - income: basic income, or governments intentionally hiring people in place of AI. Also, income for a decent life is generally dropping. But redistribution of income requires a general consensus among the members of the society.
   - purpose: jobs provide people with purpose: friends, colleagues, lifestyle, respect, self-esteem, sense of being needed, and so on. To create a low-employment society that flourishes rather than degenerates into self-destructive behavior, we therefore need to understand how to help such well-being-inducing activities thrive.
-
 
 In summary, there’s absolutely no guarantee that we’ll manage to build **human-level AGI in our lifetime—or ever**. But there’s also **no watertight argument that we won’t**.
 
@@ -111,7 +112,7 @@ In summary, there’s absolutely no guarantee that we’ll manage to build **hum
 - If humans control intelligence explosion, they would take over the world in a few years.
 - If AI itself leads the intelligence explosion, it will take over the world even faster.
   - For superintelligence, humans would be five year old kids keeping it in a jail.
-- A quick intelligence explosion occuring in a matter of days would probably lead to a single, unipolar world power
+- A quick intelligence explosion occurring in a matter of days would probably lead to a single, unipolar world power
 - A slow intelligence explosion over decades will lead to multipolar world powers because tech develops over time, providing people with a room to catch up with the frontrunners
 - Superintelligence could enable coordination on ever-larger cosmic scales.
 - Cyborgs and uploads (emulations) are probable, but it is an unpopular opinion among scholars that it is the quickest route to supperintelligence
@@ -138,20 +139,48 @@ Who said Max is not a physicist. He now explores possibilities and challenges wi
 - Inefficiency: we are still very bad at being efficient with resources. Digesting a candy bar is 0.000000001% efficient, burning coal 0.00000003%, and most other daily things we do. We can be much more efficient with making use of advanced technology like sphaleron process and cosmic resources like black holes, quasars.
 - Bounded by spacetime: the infinite Universe doesn't mean we can see or travel to the edge of it because we are limited by the speed of light.
 - Controlling with the carrot: information will have value among commodities if any, and will be transmitted at the speed of light.
-- When civilizations clash: clash is deemed to be unlikely because of low possibility of discovery of another civilization, similar intelligence levels of superintelligence, and aligned goals. It would be more of a persuation or assimilation than a clash because it is more efficient for expansion.
+- When civilizations clash: clash is deemed to be unlikely because of low possibility of discovery of another civilization, similar intelligence levels of superintelligence, and aligned goals. It would be more of a persuasion or assimilation than a clash because it is more efficient for expansion.
 - life still has the potential to flourish on Earth under enough caution and planning
 
 # Chapter 7. Goals
 
 To think more about goals in relation to AI, we need to get a in-depth look at what a goal is.
 
-- Physics: the origin of goals. In all laws of classical physics, the nature prefers the optimal way - minimizing or maximizing some quantity. This is hardwaried to the nature. We can call this behavior goal-oriented (towards optimization). Another goal could heat death, which is the maximally messy end state of something, uniformly spread out. Observation of gravity and thermodynamics suggests our goal is not only about the hopeless heat death.
-- Biology: the evolution of goals. Reproduction was the dominant goal in the throughout the Drawinian evolution. Most efficient copiers outcompete others. But the fundamental goal of dissipation has not changed, because the goal of replication aids in dissipation (planet with lives is more efficient at dissipating energy). Today's humans act upon bounded rationality by deciding actions based on a few rules of thumb.
+- Physics: the origin of goals. In all laws of classical physics, the nature prefers the optimal way - minimizing or maximizing some quantity. This is hardwired to the nature. We can call this behavior goal-oriented (towards optimization). Another goal could heat death, which is the maximally messy end state of something, uniformly spread out. Observation of gravity and thermodynamics suggests our goal is not only about the hopeless heat death.
+- Biology: the evolution of goals. Reproduction was the dominant goal in the throughout the Darwinian evolution. Most efficient copiers outcompete others. But the fundamental goal of dissipation has not changed, because the goal of replication aids in dissipation (planet with lives is more efficient at dissipating energy). Today's humans act upon bounded rationality by deciding actions based on a few rules of thumb.
 - Psychology: the pursuit of and rebellion against goals. The rules of thumb can be said to be _feelings_. Feelings help a brain quickly make a decision. Our brain rebels against our genes and can make us consciously reject the goal of replication. With our brains, the ultimate authority is our feelings, not our genes.
-- Engineering: outsourcing goals. Machines, if designed to operate in a certain way, they can exhibit goal-oriented behavior (or design). Overall, the Earth is flourishing with goal-oriented machines possibily surpassing the magnitude of goal-oriented entities found from the nature. Evolved entities like machines can have more diverse, complex, arbitary goals. Due to bounded rationality of these entities, sometimes their goals are not aligned with ours.
+- Engineering: outsourcing goals. Machines, if designed to operate in a certain way, they can exhibit goal-oriented behavior (or design). Overall, the Earth is flourishing with goal-oriented machines possibly surpassing the magnitude of goal-oriented entities found from the nature. Evolved entities like machines can have more diverse, complex, arbitrary goals. Due to bounded rationality of these entities, sometimes their goals are not aligned with ours.
 - Friendly AI: Aligning goals. 
+  - A friendly AI is an AI whose goals are aligned with ours. This is important because a supperintelligence will be so good at accomplishing goals, which would be disastrous if not aligned with ours. 
+  - Achieving human goals by inferring from human behavior is fairly complicated. 
+  - Whatever the goal of a superintelligence is, we can guess its subgoals that the original goal entails. A sheep-saving robot would rescue no more sheep if it runs into the bomb, so it has an incentive for self-preservation as a subgoal.
+  ![ai-subgoals.png](./ai-subgoals.png)
+  - Growing intelligence poses a danger to retaining the the original goal
+- Ethics: choosing goals. Whose goal among humans' to follow? There has only been a general consensus on underlying principles on ethics: utilitarianism, diversity, autonomy, and legacy. But these principles carry their own problems too.
+- Ultimate goals: this is an open-ended question - how to define an ultimate goal for a superintelligence that is NOT undefined and does NOT lead to the elimination of humanity. More research and discussion is needed on the philosophy and ethics.
+
+# Chapter 8. Consciousness
+
+- Need to know what defines the consciousness of a machine or any entity
+- What is consciousness?: Broad definition of consciousness = subjective experience. No need for behavior, perception, self-awareness, emotions or attention.
+- What's the problem?: Why is self-driving car deemed to be unconscious, while a driving person conscious? Experiencing driving is separate from colors, sounds, emotions, a and a feeling of self. Then why is a person, a set of re-arranged particles of nothing significant, conscious and if so, why not machines?
+  ![consciousness.png](./consciousness.png)
+- Is consciousness beyond science?: Any theory predicting which physical systems are conscious is scientific (the pretty hard problem)
+- What behaviors are conscious: although we are conscious, we ignore most parts of the sensory inputs and selectively focus on a few of them.
+- Where is consciousness?: organs responsible for taking the sensory inputs are not only related to consciousness. Retina takes the same input on visual tricks, but the brain thinks differently as it looks at them. Hunger and nausea don't stem from the stomach but the brain.
+- When is consciousness?: human consciousness lives in the past by a quarter second. Reflexes are unconscious.
+- How might AI consciousness feel?: it's impossible to answer this question fully with the state-of-the-art theories.
+- Meaning: the future of intelligence is important, but the future of consciousness is ever more important than that because it gives meaning. Without consciousness, there is no meaning. If machines get smarter than us, we need to value the ability to subjectively experience qualia more than the ability to think intelligently.
 
 # Thoughts
 
-- **Adaptability.** No one knows what is going to happen next, and when it is going to happen, if anything happens. This gives a sufficient reason for me to think more about adaptability and wisdom. If you don't know where the ball is going to be thrown at in dodgeball, make yourself more agile and shrewd.
-- **Passion = success?** It appears that passion is not a guaranteed ticket to success anymore? The world has stayed that way so far. Under this setup, no one had to consider the risk of being outperformed by AI. All they had to do was to set a specific goal to achieve and just go for it so that they could get better than most of other 'humans'. As probably the most compelling example as of now, what would happen for the artists? I honestly do not know what the future would be like for them. AI is so brutally, shockingly good at creating arts right now. They can create an profound and captivating story behind some art too, and many gullible people will listen and believe, if they don't know they are not human.
+- **Adaptability.** As the author mentions, no one knows what is going to happen next for AI, and when it is going to happen, if anything happens. This gives a sufficient reason for me to think more about adaptability and wisdom. If you don't know where the ball is going to be thrown at in dodgeball, make yourself more agile and shrewd. Essentially, this goes back to _Think Again_ as well, because it's the best when you constantly adapt you to the ever-changing environment. And the biggest threat to adaptability, in my opinion, is actually laziness and comfort. It's fundamental human nature that we want to take a rest and chill. But we need to do beyond that in order to do _well_. This is why I think I should keep up with the macro trend in several big factors that run the world, like tech, economy, politics and so on.
+- **So am I losing my job?** For the reasons previously laid out, the answer is that I don't know yet, but I should closely monitor the development of AI so that I can change my path accordingly. But it's quite true that already some professions are being eclipsed by AI. One day I stumbled on a JD of copywriter, and it actually has 'experience with ChatGPT or other AI tools' as something good to have. But the next step might just be AI replacing the role of copywriter completely, because it already is so good at this kind of task. For example:
+    ![chatgpt0.png](./chatgpt0.png)
+    
+    well, I've got to say I am not a pro copywriter, but it certainly has some quality. It's not bad.
+- **The future of AI**. Now that I think about it after reading the book, I was too naive and clueless. I thought in a binary way; Either AI takes over the world, or it cannot. But the book addresses this problem in the way that is more complex: there is no simple answer, because when and how end up being so different by large. I've been also ignorant of possible outcomes of the advent of superintelligence. I was somewhat pessimistic about the development of AGI because it takes a lot of computing resources and time to train a working, generalized model that can assist humans like ChatGPT. But if you look at how much we just have accomplished over twenty years from 2000, that was a gigantic upgrade. By 2000, we didn't even have smartphones, but now we are talking about ChatGPT. The technological growth has definitely been exponential. It might just be a matter of time for superintelligence to appear in my life's time.
+- **Passion = success?** It appears that passion is not a guaranteed ticket to success anymore? The world has stayed that way so far. Under this setup, no one had to consider the risk of being outperformed by AI. All they had to do was to set a specific goal to achieve and just go for it so that they could get better than most of other 'humans'. As probably the most compelling example as of now, what would happen for the artists? I honestly do not know what the future would be like for them. AI is so brutally, shockingly good at creating arts right now. They can create a profound and captivating story behind some art too, and many gullible people will listen and believe, if they don't know they are not human. So the equation of success that I have been thinking of might become wrong soon.
+- **Technology and humanities**. Despite several years of being in the discipline of technology, I hardly thought seriously about why humanities would matter. But it should be quite natural that these have to progress hand in hand, shouldn't it? The more technology gets developed, the more impact it will have on our daily lives, thus the more we need to think about its ethical, moral considerations. It's great that OpenAI, arguably the leading organization in AI research and development, seems to have been working hard on the ethical side too because it pinpoints potential ethical biases in the questions raised by user. Here are some examples where I asked some racially biased questions on ChatGPT intentionally:
+  ![openai.png](./openai.png)
+  ![openai1.png](./openai1.png)
