@@ -6,7 +6,7 @@ import './navigation.css'
 export const Navigation = () => {
     const location = useLocation()
 
-    return [[`Posts`, `/`], [`Journals`, `/journals/`], [`Tags`, `/tags/`], 
+    return [[`Projects`, `/projects/`], [`Posts`, `/`], [`Journals`, `/journals/`], [`Tags`, `/tags/`], 
       // [`résumé`, `/resume/`]
     ].map(([tabName, tabPath]) => {
         return <Link
