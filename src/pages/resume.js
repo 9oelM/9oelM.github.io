@@ -29,8 +29,6 @@ const ResumePage = ({
           title="Joel's dev blog - resume"
           keywords={[`blog`, `resume`]}
         />
-        <a href="https://hits.seeyoufarm.com" style={{ border: `none`, color: 'transparent' }}><img style={{ marginBottom: 0 }} src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2F9oelm.github.io&count_bg=%23848683&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits+since+2022&edge_flat=false"/></a>
-        <div style={{ height: `10px`}} />
       <Bio />
     <div>
       {/* <h1
