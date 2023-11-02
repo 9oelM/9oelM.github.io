@@ -307,9 +307,75 @@ Below is the description of the variables being used from `self.reserves`:
 | name | description |
 |-|-|
 | `last_update_timestamp` | the timestamp at which `lending_accumulator` was updated for the last time, in seconds since the epoch |
-| `lending_accumulator` |  |
-| `current_lending_rate` | |
+| `lending_accumulator` | cumulated liquidity index. Tracks the interest cumulated by the reserve during the time interval, updated whenever a borrow, deposit, repay, redeem, swap, liquidation event occurs. |
+| `current_lending_rate` | the current lending rate that was calculated by [`get_interest_rates` of `DefaultInterestRateModel`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/irms/default_interest_rate_model.cairo#L49-L61) |
 
+The equation for calculating a cumulated liquidity index is as follows:
+
+$$
+Index_n = Index_{n-1} * (1 + r \times t)
+$$
+where
+$$
+t = \text{Time Interval}
+$$
+$$
+r = \text{Interest Rate}
+$$
+$$
+n = n^{th}\text{ index calculated}
+$$
+
+To find the final amount of borrowing or deposit with the accrued interests considered, all you need to do is to multiply the raw principal value with the cumulated liquidity index.
+
+Here's an example for calculating accrued interests for borrowing and deposit.
+
+Let's say we got \$SIS and \$BRO tokens:
+
+| Token | Oracle Price (USD) | Collateral factor | $R_{\text{slope1}}$ | $R_{\text{slope2}}$ | $R_0$ | $U_{\text{optimal}}$ | Reserve factor | 
+|-|-|-|-|-|-|-|-|
+| \$SIS | 100 | 50% | 0.1 | 0.5 | 1% | 60% | 10% |
+| \$BRO | 50 | 75% | 0.2 | 0.3 | 5% | 80% | 20% |
+
+Bob deposits $10000$ \$BRO, Alice deposits $100$ \$SIS.
+
+Alice borrows $22.5$ \$BRO = $22.5 \times 50 = \$1125 < 100 \times 100 \times 0.5 = \$5000$, well within the value of collateral supplied.
+
+Now,
+$$
+U_{BRO} = \frac{22.5}{10,000} = 0.00225 \\ = 
+0.225\% < U_{{BRO}{_{Optimal}}} = 80\% \\
+$$
+
+$$
+U_{BRO} <= U_{{BRO}{_{Optimal}}} \rArr \\ R_{{\text{BRO}}_\text{Borrow}} = R_{{\text{BRO}}_\text{0}} + \frac{U_{BRO}}{U_{{BRO}{_{Optimal}}}}(U_{{BRO}{_{slope1}}}) \\ = 0.05 + \frac{0.00225}{0.8} \times 0.2 = 0.0505625
+$$
+
+$$
+R_{{BRO}{_{Supply}}} = R_{{\text{BRO}}_\text{Borrow}} \times U_{BRO} \times (1 - \text{Reserve Factor}_{BRO}) = 0.0505625 \times 0.00225 \times (1 - 0.2)
+$$
+
+<!-- Simply put, `lending_accumulator` is the part of the compound interest formula except the principal $P$. The formula is:
+
+$$
+A = P(1 + \frac{r}{n})^{nt}
+$$
+
+where
+$A = \text{Final Amount}$,
+$P = \text{Principal}$,
+$r = \text{Interest rate}$ (could be either supply or borrow interest rate),
+$n = \text{Number of times interest applied per time period}$, 
+$t = \text{Number of time periods elapsed}$.
+
+Now when it comes to the accumulator, we don't care about $P$, so let's leave it aside for now. Then we are left with
+
+$$
+(1 + \frac{r}{n})^{nt}
+$$
+
+and we already store and retrieve `current_lending_rate` in `get_lending_accumulator` and times that by $(1 - \text{reserve factor})$, because the protocol wants to take profit from the borrow interest rate. -->
+ 
 
 # Technical review
 
