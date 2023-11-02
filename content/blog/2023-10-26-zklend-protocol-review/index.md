@@ -352,7 +352,7 @@ U_{BRO} <= U_{{BRO}{_{Optimal}}} \rArr \\ R_{{\text{BRO}}_\text{Borrow}} = R_{{\
 $$
 
 $$
-R_{{BRO}{_{Supply}}} = R_{{\text{BRO}}_\text{Borrow}} \times U_{BRO} \times (1 - \text{Reserve Factor}_{BRO}) = 0.0505625 \times 0.00225 \times (1 - 0.2)
+% R_{{BRO}{_{Supply}}} = R_{{\text{BRO}}_\text{Borrow}} \times U_{BRO} \times (1 - \text{Reserve Factor}_{BRO}) = 0.0505625 \times 0.00225 \times (1 - 0.2)
 $$
 
 <!-- Simply put, `lending_accumulator` is the part of the compound interest formula except the principal $P$. The formula is:
