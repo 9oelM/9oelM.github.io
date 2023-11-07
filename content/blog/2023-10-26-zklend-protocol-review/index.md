@@ -309,23 +309,26 @@ Below is the description of the variables being used from `self.reserves`:
 | name | description |
 |-|-|
 | `last_update_timestamp` | the timestamp at which `lending_accumulator` was updated for the last time, in seconds since the epoch |
-| `lending_accumulator` | cumulated liquidity index. Tracks the interest cumulated by the reserve during the time interval, updated whenever a borrow, deposit, repay, redeem, swap, liquidation event occurs. |
+| `lending_accumulator` | cumulated liquidity index (or simply interest index). Tracks the interest cumulated by the reserve during the time interval, updated whenever a borrow, deposit, repay, redeem, swap, liquidation event occurs. |
 | `current_lending_rate` | the current lending rate that was calculated by [`get_interest_rates` of `DefaultInterestRateModel`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/irms/default_interest_rate_model.cairo#L49-L61) |
 
 The equation for calculating a cumulated liquidity/borrow index is as follows:
 
 $$
-Index_n = Index_{n-1} * (1 + r \times t)
+Index_n = Index_{n-1} \times (1 + r \times t)
 $$
 where
 $$
-t = \text{Time Interval}
+t = \text{Time Interval} \text{ (length of time since the last index calculation)}
 $$
 $$
 r = \text{Interest Rate}
 $$
 $$
 n = n^{th}\text{ index calculated}
+$$
+$$
+Index_0 = 1
 $$
 
 we can see that $r$ is represented by `current_lending_rate * (1 - reserve_factor)`, and $t$ by `time_diff / SECONDS_PER_YEAR` (look at the comment in the code), and $Index_{n-1}$ by `reserve.lending_accumulator`.
@@ -360,7 +363,7 @@ It is the same logic as [`get_lending_accumulator`](https://github.com/zkLend/zk
 
 #### Example: interest rate calculation
 
-To find the final amount of borrowing or deposit with the accrued interests considered, all you need to do is to multiply the raw principal value with the cumulated liquidity index.
+To find the final amount of borrowing or deposit with the accrued interests considered, all you need to do is to multiply the raw principal value with the cumulated liquidity/borrow index. But calculating the index requires calculating interest rates. So let's dive into one example. This example is based on zklend's smart contract tests.
 
 Here's an example for calculating accrued interests for borrowing and deposit.
 
@@ -373,16 +376,24 @@ Let's say we got \$SIS and \$BRO tokens:
 
 Bob deposits $10000$ \$BRO, Alice deposits $100$ \$SIS.
 
-Alice borrows $22.5$ \$BRO = $22.5 \times 50 = \$1125 < 100 \times 100 \times 0.5 = \$5000$, well within the value of collateral supplied.
+Alice borrows 
+
+\$22.5 \$BRO =
+
+$$
+\$22.5 \times 50 = \$1125 < 100 \times 100 \times 0.5 = \$5000
+$$
+
+which is well within the value of collateral supplied.
 
 Now,
 $$
-U_{BRO} = \frac{22.5}{10,000} = 0.00225 \\\ = 
-0.225\% < U_{{BRO}{_{Optimal}}} = 80\% \\\
+U_{BRO} = \frac{22.5}{10,000} = 0.00225 \newline = 
+0.225\% < U_{{BRO}{_{Optimal}}} = 80\% \newline
 $$
 
 $$
-U_{BRO} <= U_{{BRO}{_{Optimal}}} \rArr \\\ R_{{\text{BRO}}_\text{Borrow}} = R_{{\text{BRO}}_\text{0}} + \frac{U_{BRO}}{U_{{BRO}{_{Optimal}}}}(U_{{BRO}{_{slope1}}}) \\\ = 0.05 + \frac{0.00225}{0.8} \times 0.2 = 0.0505625
+U_{BRO} <= U_{{BRO}{_{Optimal}}} \rArr \newline R_{{\text{BRO}}_\text{Borrow}} = R_{{\text{BRO}}_\text{0}} + \frac{U_{BRO}}{U_{{BRO}{_{Optimal}}}}(U_{{BRO}{_{slope1}}}) \newline = 0.05 + \frac{0.00225}{0.8} \times 0.2 = 0.0505625
 $$
 
 Now we calculate the supply interest rate, but without considering the reserve factor for now.
@@ -394,33 +405,23 @@ $$
 So there we have it:
 
 $$
-R_{{\text{BRO}}_\text{Borrow}} = 0.0505625 \\\
+R_{{\text{BRO}}_\text{Borrow}} = 0.0505625 \newline
 R_{{BRO}{_{\text{Supply (no reserve)}}}} = 0.000113765625
 $$
 
 #### Example (continued): cumulated liquidity index & cumulated borrow index calculation
 
-<!-- Simply put, `lending_accumulator` is the part of the compound interest formula except the principal $P$. The formula is:
+And let's say:
+- 100 seconds have elapsed, starting from timestamp 0
+- no cumulated liquidity index and cumulated borrow index were calculated before, making them 1 respectively by default
+
+Then you can calculate them as follows:
 
 $$
-A = P(1 + \frac{r}{n})^{nt}
+\text{Cumulated Liquidity Index}_n = \text{Cumulated Liquidity Index}_{n-1} \times (1 + r \times t) = 1 \times (1 + )
+\newline
+\text{Cumulated Borrow Index}_n = \text{Cumulated Liquidity Index}_{n-1} \times (1 + r \times t) = 1 \times (1 + ())
 $$
-
-where
-$A = \text{Final Amount}$,
-$P = \text{Principal}$,
-$r = \text{Interest rate}$ (could be either supply or borrow interest rate),
-$n = \text{Number of times interest applied per time period}$, 
-$t = \text{Number of time periods elapsed}$.
-
-Now when it comes to the accumulator, we don't care about $P$, so let's leave it aside for now. Then we are left with
-
-$$
-(1 + \frac{r}{n})^{nt}
-$$
-
-and we already store and retrieve `current_lending_rate` in `get_lending_accumulator` and times that by $(1 - \text{reserve factor})$, because the protocol wants to take profit from the borrow interest rate. -->
- 
 
 # Technical review
 
