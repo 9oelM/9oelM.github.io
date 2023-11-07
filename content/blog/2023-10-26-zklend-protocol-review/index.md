@@ -1,5 +1,5 @@
 ---
-title: "Intro to DeFi lending protocols, with zklend as an example"
+title: "Technical intro to DeFi lending protocols, with zklend as an example"
 date: "2023-10-26T09:00:00.009Z"
 tags: ["blockchain", "dev"]
 tab: "post"
@@ -363,7 +363,7 @@ It is the same logic as [`get_lending_accumulator`](https://github.com/zkLend/zk
 
 #### Example: interest rate calculation
 
-To find the final amount of borrowing or deposit with the accrued interests considered, all you need to do is to multiply the raw principal value with the cumulated liquidity/borrow index. But calculating the index requires calculating interest rates. So let's dive into one example. This example is based on zklend's smart contract tests.
+To find the final amount of borrowing or deposit with the accrued interests considered, all you need to do is to multiply the raw principal value with the cumulated liquidity/borrow index. But calculating the index requires calculating interest rates. So let's dive into one example. This example is based on [zklend's smart contract tests](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/tests/market.cairo#L198).
 
 Here's an example for calculating accrued interests for borrowing and deposit.
 
