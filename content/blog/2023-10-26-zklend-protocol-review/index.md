@@ -418,10 +418,42 @@ And let's say:
 Then you can calculate them as follows:
 
 $$
-\text{Cumulated Liquidity Index}_n = \text{Cumulated Liquidity Index}_{n-1} \times (1 + r \times t) = 1 \times (1 + )
+\text{Cumulated Liquidity Index}_n = \newline 
+\text{Cumulated Liquidity Index}_{n-1} \times (1 + r \times t) = \newline
+1 \times (1 + (0.000113765625 \times (1 - 0.2)) \times \frac{100}{365 \times 86400}) = 1.000000000288598744292237442
 \newline
-\text{Cumulated Borrow Index}_n = \text{Cumulated Liquidity Index}_{n-1} \times (1 + r \times t) = 1 \times (1 + ())
 $$
+$$
+\text{Cumulated Borrow Index}_n = \newline
+\text{Cumulated Borrow Index}_{n-1} \times (1 + r \times t) = \newline
+1 \times (1 + 0.0505625 \times \frac{100}{365 \times 86400}) = 1.000000160332635717909690512
+$$
+
+Instead of factoring the reserve factor into the lending rate, we instead do it when we calculate it in the cumulated liquidity index. 
+
+$t$ is calculated as 100 seconds divided by the number of seconds per year (without caring about leap years).
+
+Other than this, the calculation above should be straightforward.
+
+#### Example (continued): compound interest calculation
+
+Now we have calculated the interest indices, we can calculate the compoud interest for Alice's \$BRO borrowing of 22.5, and Bob's \$BRO deposit of 10000, at 100th seconds.
+
+$$
+\text{Final Amount}_{BRO, deposit, 100, Bob} = \newline
+\text{Principal}_{BRO, deposit, Alice} \times \text{Cumulated Liquidity Index}_{\text{BRO, 100}} =\newline 
+10000 \times 1.000000000288598744292237442 =\newline
+10000.000002885987442922
+$$
+
+$$
+\text{Final Amount}_{BRO, borrow, 100, Alice} =\newline 
+\text{Principal}_{BRO, borrow, Alice} \times \text{Cumulated Borrow Index}_{\text{BRO, 100}} =\newline 
+22.5 \times 1.000000160332635717909690512=\newline
+22.500003607484303652
+$$
+
+Consequently, Bob will see $10000.000002885987442922$ \$zBRO on his Metamask instead of $10000$ \$zBRO. Alice on the other hand will have to repay $0.000003607484303652$ additional interest for her borrowing of \$BRO.
 
 # Technical review
 
@@ -608,3 +640,5 @@ fn get_debt_accumulator(self: @ContractState, token: ContractAddress) -> felt252
 ```
 
 Let's talk about what an accumulator does first. Accumulator is a way to compound the interest since the last block timestamp.
+
+## Precision
