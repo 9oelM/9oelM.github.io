@@ -10,7 +10,7 @@ keywords: ["zklend", "cairo"]
 # This code block gets replaced with the TOC
 ```
 
-Here's an extensive intro to DeFi lending protocols, especially for dummys like me. We will look at fundamental concepts and theory, primarily complemented by zklend smart contract codebase at [the commit hash of 10dfb3d1f01b1177744b038f8417a5a9c3e94185](https://github.com/zkLend/zklend-v1-core/commit/10dfb3d1f01b1177744b038f8417a5a9c3e94185).
+Here's an extensive intro to DeFi lending protocols, especially for a dummy like me. We will look at fundamental concepts and theory, primarily complemented by zklend smart contract codebase at [the commit hash of 10dfb3d1f01b1177744b038f8417a5a9c3e94185](https://github.com/zkLend/zklend-v1-core/commit/10dfb3d1f01b1177744b038f8417a5a9c3e94185).
 
 # How a lending protocol works
 
@@ -219,6 +219,8 @@ As you noticed from the equation, the supply interest rate curve must always be 
 
 ### Compound interest calculation
 
+#### Cumulated liquidity index
+
 But calculating borrow and supply interest rates is not the end of the story. What we've looked at so far is calculation of simple interest rate, without regards to time.
 
 If you have deposited a sum of a token, the interest should pile up on top of another as time goes on. Therefore we need a way to calculate compound interest.
@@ -310,7 +312,7 @@ Below is the description of the variables being used from `self.reserves`:
 | `lending_accumulator` | cumulated liquidity index. Tracks the interest cumulated by the reserve during the time interval, updated whenever a borrow, deposit, repay, redeem, swap, liquidation event occurs. |
 | `current_lending_rate` | the current lending rate that was calculated by [`get_interest_rates` of `DefaultInterestRateModel`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/irms/default_interest_rate_model.cairo#L49-L61) |
 
-The equation for calculating a cumulated liquidity index is as follows:
+The equation for calculating a cumulated liquidity/borrow index is as follows:
 
 $$
 Index_n = Index_{n-1} * (1 + r \times t)
@@ -325,6 +327,38 @@ $$
 $$
 n = n^{th}\text{ index calculated}
 $$
+
+we can see that $r$ is represented by `current_lending_rate * (1 - reserve_factor)`, and $t$ by `time_diff / SECONDS_PER_YEAR` (look at the comment in the code), and $Index_{n-1}$ by `reserve.lending_accumulator`.
+
+This works exactly the same way for [`get_debt_accumulator`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/view.cairo#L69):
+
+```rust
+fn get_debt_accumulator(self: @ContractState, token: ContractAddress) -> felt252 {
+    internal::assert_reserve_enabled(self, token);
+    let reserve = self.reserves.read_for_get_debt_accumulator(token);
+
+    let block_timestamp: felt252 = get_block_timestamp().into();
+    if (reserve.last_update_timestamp == block_timestamp) {
+        // Accumulator already updated on the same block
+        reserve.debt_accumulator
+    } else {
+        // Apply simple interest
+        let time_diff = safe_math::sub(block_timestamp, reserve.last_update_timestamp);
+
+        // (current_borrowing_rate * time_diff / SECONDS_PER_YEAR + 1) * accumulator
+        let temp_1 = safe_math::mul(reserve.current_borrowing_rate, time_diff);
+        let temp_2 = safe_math::div(temp_1, SECONDS_PER_YEAR);
+        let temp_3 = safe_math::add(temp_2, safe_decimal_math::SCALE);
+        let latest_accumulator = safe_decimal_math::mul(temp_3, reserve.debt_accumulator);
+
+        latest_accumulator
+    }
+}
+```
+
+It is the same logic as [`get_lending_accumulator`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/view.cairo#L32-L67), except that the reserve factor is not a part of the equation because we are taking profit from the debtors, not for lending. That means we want to take the full borrow index as it is from the debt, and instead lower the liquidity index for lending so that the protocol can take certain % as a profit.
+
+#### Example: interest rate calculation
 
 To find the final amount of borrowing or deposit with the accrued interests considered, all you need to do is to multiply the raw principal value with the cumulated liquidity index.
 
@@ -343,17 +377,28 @@ Alice borrows $22.5$ \$BRO = $22.5 \times 50 = \$1125 < 100 \times 100 \times 0.
 
 Now,
 $$
-U_{BRO} = \frac{22.5}{10,000} = 0.00225 \\ = 
-0.225\% < U_{{BRO}{_{Optimal}}} = 80\% \\
+U_{BRO} = \frac{22.5}{10,000} = 0.00225 \\\ = 
+0.225\% < U_{{BRO}{_{Optimal}}} = 80\% \\\
 $$
 
 $$
-U_{BRO} <= U_{{BRO}{_{Optimal}}} \rArr \\ R_{{\text{BRO}}_\text{Borrow}} = R_{{\text{BRO}}_\text{0}} + \frac{U_{BRO}}{U_{{BRO}{_{Optimal}}}}(U_{{BRO}{_{slope1}}}) \\ = 0.05 + \frac{0.00225}{0.8} \times 0.2 = 0.0505625
+U_{BRO} <= U_{{BRO}{_{Optimal}}} \rArr \\\ R_{{\text{BRO}}_\text{Borrow}} = R_{{\text{BRO}}_\text{0}} + \frac{U_{BRO}}{U_{{BRO}{_{Optimal}}}}(U_{{BRO}{_{slope1}}}) \\\ = 0.05 + \frac{0.00225}{0.8} \times 0.2 = 0.0505625
 $$
 
+Now we calculate the supply interest rate, but without considering the reserve factor for now.
+
 $$
-% R_{{BRO}{_{Supply}}} = R_{{\text{BRO}}_\text{Borrow}} \times U_{BRO} \times (1 - \text{Reserve Factor}_{BRO}) = 0.0505625 \times 0.00225 \times (1 - 0.2)
+R_{{BRO}{_{\text{Supply (no reserve)}}}} = R_{{\text{BRO}}_\text{Borrow}} \times U_{BRO} = 0.0505625 \times 0.00225 = 0.000113765625
 $$
+
+So there we have it:
+
+$$
+R_{{\text{BRO}}_\text{Borrow}} = 0.0505625 \\\
+R_{{BRO}{_{\text{Supply (no reserve)}}}} = 0.000113765625
+$$
+
+#### Example (continued): cumulated liquidity index & cumulated borrow index calculation
 
 <!-- Simply put, `lending_accumulator` is the part of the compound interest formula except the principal $P$. The formula is:
 
