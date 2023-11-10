@@ -95,7 +95,7 @@ Here's an example:
 
 Utilization rate of an asset will change whenever there is a new borrowing or supply.
 
-Here's [`calculate_utilization_rate`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/irms/default_interest_rate_model.cairo#L63-L71) from zklend contract:
+Here's [calculate_utilization_rate](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/irms/default_interest_rate_model.cairo#L63-L71) from zklend contract:
 
 ```rust
 fn calculate_utilization_rate(reserve_balance: felt252, total_debt: felt252) -> felt252 {
@@ -253,7 +253,7 @@ fn felt_balance_of(self: @ContractState, account: ContractAddress) -> felt252 {
 
 `felt_balance_of` reads from `ContractState` the raw balance of the token, but it times that with `accumulator`. So that's the secret. If the value of `accumulator` is somehow dynamic, every time your Metamask wallet calls `balanceOf` from the blockchain, the token balance should also be dynamic.
 
-But what does `accumulator` do? First of all, [`get_accumulator`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/z_token/internal.cairo#L31-L35) will get the corresponding accumulator that is in the `Market` contract by calling `get_lending_accumulator`.
+But what does `accumulator` do? First of all, [get_accumulator](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/z_token/internal.cairo#L31-L35) will get the corresponding accumulator that is in the `Market` contract by calling `get_lending_accumulator`.
 
 ```rust
 fn get_accumulator(self: @ContractState) -> felt252 {
@@ -263,7 +263,7 @@ fn get_accumulator(self: @ContractState) -> felt252 {
 }
 ```
 
-This is [`get_lending_accumulator`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/view.cairo#L32-L67), where the compound interest is calculated:
+This is [get_lending_accumulator](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/view.cairo#L32-L67), where the compound interest is calculated:
 
 ```rust
 fn get_lending_accumulator(self: @ContractState, token: ContractAddress) -> felt252 {
@@ -333,7 +333,7 @@ $$
 
 we can see that $r$ is represented by `current_lending_rate * (1 - reserve_factor)`, and $t$ by `time_diff / SECONDS_PER_YEAR` (look at the comment in the code), and $Index_{n-1}$ by `reserve.lending_accumulator`.
 
-This works exactly the same way for [`get_debt_accumulator`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/view.cairo#L69):
+This works exactly the same way for [get_debt_accumulator](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/view.cairo#L69):
 
 ```rust
 fn get_debt_accumulator(self: @ContractState, token: ContractAddress) -> felt252 {
@@ -435,26 +435,6 @@ $t$ is calculated as 100 seconds divided by the number of seconds per year (with
 
 Other than this, the calculation above should be straightforward.
 
-#### Example (continued): compound interest calculation
-
-Now we have calculated the interest indices, we can calculate the compoud interest for Alice's \$BRO borrowing of 22.5, and Bob's \$BRO deposit of 10000, at 100th seconds.
-
-$$
-\text{Final Amount}_{BRO, deposit, 100, Bob} = \newline
-\text{Principal}_{BRO, deposit, Alice} \times \text{Cumulated Liquidity Index}_{\text{BRO, 100}} =\newline 
-10000 \times 1.000000000288598744292237442 =\newline
-10000.000002885987442922
-$$
-
-$$
-\text{Final Amount}_{BRO, borrow, 100, Alice} =\newline 
-\text{Principal}_{BRO, borrow, Alice} \times \text{Cumulated Borrow Index}_{\text{BRO, 100}} =\newline 
-22.5 \times 1.000000160332635717909690512=\newline
-22.500003607484303652
-$$
-
-Consequently, Bob will see $10000.000002885987442922$ \$zBRO on his Metamask instead of $10000$ \$zBRO. Alice on the other hand will have to repay $0.000003607484303652$ additional interest for her borrowing of \$BRO.
-
 # Technical review
 
 ## Deposit
@@ -471,7 +451,7 @@ fn deposit(ref self: ContractState, token: ContractAddress, amount: felt252) {
 }
 ```
 
-Again, [that](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/external.cairo#L41C1-L45C2) will call `internal::deposit` from [`market/internal.cairo`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L67-L108).
+Again, [that](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/external.cairo#L41C1-L45C2) will call [`internal::deposit` from `market/internal.cairo`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L67-L108).
 
 ```rust
 // deposit in market/external.cairo
@@ -639,6 +619,173 @@ fn get_debt_accumulator(self: @ContractState, token: ContractAddress) -> felt252
 }
 ```
 
-Let's talk about what an accumulator does first. Accumulator is a way to compound the interest since the last block timestamp.
+We already discussed in depth what an accumulator is and why it needs to be used. They need to be updated every single time the corresponding interest rate needs to change. 
+
+After updating the accumulators, [amount_to_treasury](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L815) is calculated and that amount is sent to the treasury, in the form of zToken. Remember that zToken is redeemable at 1:1 rate with the underlying asset, so it's the same as sending real token to the reasury.
+
+Next in `internal::deposit`, [update_rates_and_raw_total_debt](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L81) is called. This function does two things as it name suggests; but it will only update the rate for `deposit` operation, as you can tell from the argument of `0` for `abs_delta_raw_total_debt`.
+
+However if `reserve.last_update_timestamp` is not the current block timestamp, the debt accumulator would still get updated and will affect the interest rate calculated inside [update_rates_and_raw_total_debt](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L81), because the 'scaled' debt (that is, principal value of debt multiplied by the latest debt accumulator) would be slightly larger than the one calculated at the previous block timestamp.
+
+[Here is `update_rates_and_raw_total_debt`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L840):
+
+```rust
+fn update_rates_and_raw_total_debt(
+    ref self: ContractState,
+    token: ContractAddress,
+    updated_debt_accumulator: felt252,
+    is_delta_reserve_balance_negative: bool,
+    abs_delta_reserve_balance: felt252,
+    is_delta_raw_total_debt_negative: bool,
+    abs_delta_raw_total_debt: felt252,
+) {
+    let this_address = get_contract_address();
+
+    let StorageBatch1{
+        interest_rate_model, raw_total_debt: raw_total_debt_before } = self
+        .reserves
+        .read_interest_rate_model_and_raw_total_debt(token);
+
+    // Makes sure reserve exists
+    // (the caller must check it's enabled if needed since it's not validated here)
+    assert(interest_rate_model.is_non_zero(), errors::RESERVE_NOT_FOUND);
+
+    let reserve_balance_before: felt252 = IERC20Dispatcher {
+        contract_address: token
+    }.balanceOf(this_address).try_into().expect(errors::BALANCE_OVERFLOW);
+
+    let reserve_balance_after = if is_delta_reserve_balance_negative {
+        safe_math::sub(reserve_balance_before, abs_delta_reserve_balance)
+    } else {
+        safe_math::add(reserve_balance_before, abs_delta_reserve_balance)
+    };
+
+    let raw_total_debt_after = if is_delta_raw_total_debt_negative {
+        safe_math::sub(raw_total_debt_before, abs_delta_raw_total_debt)
+    } else {
+        safe_math::add(raw_total_debt_before, abs_delta_raw_total_debt)
+    };
+
+    let scaled_up_total_debt_after = safe_decimal_math::mul(
+        raw_total_debt_after, updated_debt_accumulator
+    );
+    let ModelRates{lending_rate: new_lending_rate, borrowing_rate: new_borrowing_rate } =
+        IInterestRateModelDispatcher {
+        contract_address: interest_rate_model
+    }.get_interest_rates(reserve_balance_after, scaled_up_total_debt_after);
+
+    // Writes to storage
+    self.reserves.write_rates(token, new_lending_rate, new_borrowing_rate);
+    if raw_total_debt_before != raw_total_debt_after {
+        self.reserves.write_raw_total_debt(token, raw_total_debt_after);
+    }
+
+    self
+        .emit(
+            contract::Event::InterestRatesSync(
+                contract::InterestRatesSync {
+                    token, lending_rate: new_lending_rate, borrowing_rate: new_borrowing_rate
+                }
+            )
+        );
+}
+```
+
+It reads existing `interest_rate_model`, `raw_total_debt: raw_total_debt_before` from the storage. And then runs calculations to get parameters for `IInterestRateModelDispatcher.get_interest_rates`.
+
+After that, the newly calculated interest rates and debt are updated.
+
+Finally, [`transferFrom` of the underlying ERC20 token is called](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L103) in `internal::deposit` function. This is where the actual transfer happens.
+
+Lastly, [the interest bearing zToken of the exact same deposit amount for that specific ERC20 token is minted](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L107) back to the user, so they can track the sum of their principal and interest at any time.
+
+## Withdraw
+
+Everything that is meant to be accessed on zklend frontend is defined in [`src/market/external.cairo`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/external.cairo), just like `deposit`. So is `withdraw`, and it again calls `internal::withdraw`.
+
+[`withdraw` in `src/market/internal.cairo`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L110):
+
+```rust
+fn withdraw(ref self: ContractState, token: ContractAddress, amount: felt252) {
+    assert(amount.is_non_zero(), errors::ZERO_AMOUNT);
+
+    let caller = get_caller_address();
+    withdraw_internal(ref self, caller, token, amount);
+}
+```
+
+So the real meat must be in [`withdraw_internal`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L659).
+
+[`withdraw_internal` in `src/market/internal.cairo`](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L659):
+
+```rust
+fn withdraw_internal(
+    ref self: ContractState, user: ContractAddress, token: ContractAddress, amount: felt252
+) {
+    let UpdatedAccumulators{debt_accumulator: updated_debt_accumulator, .. } = update_accumulators(
+        ref self, token
+    );
+
+    assert_reserve_enabled(@self, token);
+    let z_token_address = self.reserves.read_z_token_address(token);
+
+    // NOTE: it's fine to call out to external contract here before state update since it's trusted
+    let amount_burnt = burn_z_token_internal(ref self, z_token_address, user, amount);
+
+    // Updates interest rate
+    update_rates_and_raw_total_debt(
+        ref self,
+        token, // token
+        updated_debt_accumulator, // updated_debt_accumulator
+        true, // is_delta_reserve_balance_negative
+        amount_burnt, // abs_delta_reserve_balance
+        false, // is_delta_raw_total_debt_negative
+        0, // abs_delta_raw_total_debt
+    );
+
+    self
+        .emit(
+            contract::Event::Withdrawal(
+                contract::Withdrawal { user, token, face_amount: amount_burnt }
+            )
+        );
+
+    // Gives underlying tokens to user
+    let amount_burnt: u256 = amount_burnt.into();
+    let transfer_success = IERC20Dispatcher {
+        contract_address: token
+    }.transfer(user, amount_burnt);
+    assert(transfer_success, errors::TRANSFER_FAILED);
+
+    // It's easier to post-check collateralization factor, at the cost of making failed
+    // transactions more expensive.
+    let is_asset_used_as_collateral = is_used_as_collateral(@self, user, token);
+
+    // No need to check if the asset is not used as collateral at all
+    if is_asset_used_as_collateral {
+        assert_not_undercollateralized(@self, user, true);
+    }
+}
+```
+
+Basically, the exact opposite of `internal::deposit`.
+
+## Withdraw all
+
+## Borrow
+
+## Repay
+
+## Repay for
+
+## Repay all
+
+## Enable collateral
+
+## Disable collateral
+
+## Liquidate
+
+## Flash loan
 
 ## Precision
