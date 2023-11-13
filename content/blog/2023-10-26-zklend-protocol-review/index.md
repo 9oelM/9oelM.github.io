@@ -435,6 +435,20 @@ $t$ is calculated as 100 seconds divided by the number of seconds per year (with
 
 Other than this, the calculation above should be straightforward.
 
+## Liquidation
+
+A few more terms need to be defined to be able to understand liquidation.
+
+Health factor. $\text{Health factor} = \frac{\sum{Collateral_i \times \text{Collateral factor}_i}}{\sum{Liability_i}}$. It denotes the status of user's position. If the health factor is lower than 1, the position may be liquidated, because that would mean the value of collaterals is not enough to back the value of borrowings.
+
+Borrowing capacity. 
+
+Borrow factor. 
+
+Liquidation bonus. Additional % applied on the collateral received after the repayment.
+
+Liquidators are only allowed to repay no more than the amount that will bring the borrower’s Health Factor back to 1.
+
 # Technical review
 
 ## Deposit
@@ -770,22 +784,376 @@ fn withdraw_internal(
 
 Basically, the exact opposite of `internal::deposit`.
 
-## Withdraw all
+The first bit is the same; It starts off by calling `update_accumulators` to get `updated_debt_accumulator` which will be used as an argument to `update_rates_and_raw_total_debt`:
+
+```rust
+let UpdatedAccumulators{debt_accumulator: updated_debt_accumulator, .. } = update_accumulators(
+        ref self, token
+    );
+```
+
+Then, the corresponding amount of zToken is burnt:
+
+```rust
+let z_token_address = self.reserves.read_z_token_address(token);
+
+// NOTE: it's fine to call out to external contract here before state update since it's trusted
+let amount_burnt = burn_z_token_internal(ref self, z_token_address, user, amount);
+```
+
+If `amount` is not zero, zToken's `external::burn` will be called:
+
+```rust
+fn burn(ref self: ContractState, user: ContractAddress, amount: felt252) {
+    internal::only_market(@self);
+
+    let accumulator = internal::get_accumulator(@self);
+
+    let scaled_down_amount = safe_decimal_math::div(amount, accumulator);
+    assert(scaled_down_amount.is_non_zero(), errors::INVALID_BURN_AMOUNT);
+
+    let raw_balance_before = self.raw_balances.read(user);
+    let raw_balance_after = safe_math::sub(raw_balance_before, scaled_down_amount);
+    self.raw_balances.write(user, raw_balance_after);
+
+    let raw_supply_before = self.raw_total_supply.read();
+    let raw_supply_after = safe_math::sub(raw_supply_before, scaled_down_amount);
+    self.raw_total_supply.write(raw_supply_after);
+
+    let amount: u256 = amount.into();
+    self
+        .emit(
+            contract::Event::Transfer(
+                contract::Transfer { from: user, to: contract_address_const::<0>(), value: amount }
+            )
+        );
+}
+```
+
+`let accumulator = internal::get_accumulator(@self);` gets the current lending accumulator so it can be used for further calculations. Remember, zToken has a dynamic balance due to the accumulator.
+
+So why `let scaled_down_amount = safe_decimal_math::div(amount, accumulator);`? The reason is that the amount that the user requests to withdraw, passed down as `amount: felt252` argument, already assumes that the amount has the interest index (the accumulator) factored in.
+
+Let's go back to the example presented before.
+
+![aDai balance #1](./aDai-balance-1.png)
+
+If you see `aDAI` (just imagine it's a zToken, it's the same thing essentially anyways) balance of $1011.413002069442100983$ and let's say you want to withdraw everything that you have.
+
+Then you know that the amount that you are looking at on MetaMask is the principal amount multiplied by the lending accumulator.
+
+However, in `fn burn`, we want to subtract the `amount` from the principal (denoted as `raw_*` in the code) which does not have the accumulator factored in; it is literally the exact amount that the user had deposited before. To be able to do that, we need to convert `amount` into the same scale. This is because we only store the principal value on the blockchain instead of the principal multiplied by the accumulator.
+
+Now we understand why it has to be:
+
+```rust
+let raw_balance_after = safe_math::sub(raw_balance_before, scaled_down_amount);
+```
+
+and 
+
+```rust
+let raw_supply_after = safe_math::sub(raw_supply_before, scaled_down_amount);
+```
+
+Lastly, `Transfer` event where the token is sent to the null address is emitted, and `burn` function exits.
+
+Next up is `update_rates_and_raw_total_debt`:
+
+```rust
+update_rates_and_raw_total_debt(
+    ref self,
+    token, // token
+    updated_debt_accumulator, // updated_debt_accumulator
+    true, // is_delta_reserve_balance_negative
+    amount_burnt, // abs_delta_reserve_balance
+    false, // is_delta_raw_total_debt_negative
+    0, // abs_delta_raw_total_debt
+);
+```
+
+Similar to `deposit` function, we are running this because we know that the supply of a token has changed, and this must affect the position on the interest rate curve as per the earlier discussion. Notice `true, // is_delta_reserve_balance_negative` because we know that the reserve balance (the supply of the token being withdrawn) has decreased.
+
+Calling `update_rates_and_raw_total_debt` will update borrowing and lending interest rates.
+
+Then, the corresponding amount of ERC20 token is `transfer`red to the user. Remember `amount_burnt` of zToken must be sent because a pair of zToken and ERC20 should be 1:1 in terms of their amounts.
+
+```rust
+// Gives underlying tokens to user
+let amount_burnt: u256 = amount_burnt.into();
+let transfer_success = IERC20Dispatcher {
+    contract_address: token
+}.transfer(user, amount_burnt);
+```
+
+After that, collateralization checks are done. If the user withdraws too much that his borrowing is undercollateralized, the transaction would fail.
+
+```rust
+// It's easier to post-check collateralization factor, at the cost of making failed
+// transactions more expensive.
+let is_asset_used_as_collateral = is_used_as_collateral(@self, user, token);
+
+// No need to check if the asset is not used as collateral at all
+if is_asset_used_as_collateral {
+    assert_not_undercollateralized(@self, user, true);
+}
+```
+
+It's easier to check collateralization after all calculations regarding everything else are finished, because that way all variables such as the amount of token after withdrawal are already available for use. We will look at collateralization checks in more details in later sections.
 
 ## Borrow
 
+At this point, we know how `src/market/external.cairo` and `src/market/internal.cairo` work, so we will go straight into [internal::borrow](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L122):
+
+```rust
+fn borrow(ref self: ContractState, token: ContractAddress, amount: felt252) {
+    let caller = get_caller_address();
+
+    let UpdatedAccumulators{debt_accumulator: updated_debt_accumulator, .. } = update_accumulators(
+        ref self, token
+    );
+
+    assert_reserve_enabled(@self, token);
+
+    let scaled_down_amount = safe_decimal_math::div(amount, updated_debt_accumulator);
+    assert(scaled_down_amount.is_non_zero(), errors::INVALID_AMOUNT);
+
+    // Updates user debt data
+    let raw_user_debt_before = self.raw_user_debts.read((caller, token));
+    let raw_user_debt_after = safe_math::add(raw_user_debt_before, scaled_down_amount);
+    self.raw_user_debts.write((caller, token), raw_user_debt_after);
+
+    set_user_has_debt(ref self, caller, token, raw_user_debt_before, raw_user_debt_after);
+
+    // Updates interest rate
+    update_rates_and_raw_total_debt(
+        ref self,
+        token, // token
+        updated_debt_accumulator, // updated_debt_accumulator
+        true, // is_delta_reserve_balance_negative
+        amount, // abs_delta_reserve_balance
+        false, // is_delta_raw_total_debt_negative
+        scaled_down_amount // abs_delta_raw_total_debt
+    );
+
+    // Enforces token debt limit
+    assert_debt_limit_satisfied(@self, token);
+
+    self
+        .emit(
+            contract::Event::Borrowing(
+                contract::Borrowing {
+                    user: caller, token: token, raw_amount: scaled_down_amount, face_amount: amount
+                }
+            )
+        );
+
+    // It's easier to post-check collateralization factor
+    assert_not_undercollateralized(@self, caller, true);
+
+    let amount_u256: u256 = amount.into();
+    let transfer_success = IERC20Dispatcher {
+        contract_address: token
+    }.transfer(caller, amount_u256);
+    assert(transfer_success, errors::TRANSFER_FAILED);
+}
+```
+
+First, we get the latest debt accumulator by running `update_accumulators`.
+
+Then again we need to 'scale down' the `amount` argument at `let scaled_down_amount = safe_decimal_math::div(amount, updated_debt_accumulator)`, because the amount that the user is requesting already has the borrowing accumulator factored in.
+
+The scaled down amount can now be used to subtract from or add to the principal of the user's debt:
+
+```rust
+// Updates user debt data
+let raw_user_debt_before = self.raw_user_debts.read((caller, token));
+let raw_user_debt_after = safe_math::add(raw_user_debt_before, scaled_down_amount);
+self.raw_user_debts.write((caller, token), raw_user_debt_after);
+
+set_user_has_debt(ref self, caller, token, raw_user_debt_before, raw_user_debt_after);
+```
+
+Now we update the interest rate again by calling `update_rates_and_raw_total_debt`:
+
+```rust
+// Updates interest rate
+update_rates_and_raw_total_debt(
+    ref self,
+    token, // token
+    updated_debt_accumulator, // updated_debt_accumulator
+    true, // is_delta_reserve_balance_negative
+    amount, // abs_delta_reserve_balance
+    false, // is_delta_raw_total_debt_negative
+    scaled_down_amount // abs_delta_raw_total_debt
+);
+```
+
+Notice the difference in the parameters passed in compared to `deposit` or `withdraw`:
+
+`true, // is_delta_reserve_balance_negative` because the contract is borrowing a portion of the reserve to the user;
+
+`amount, // abs_delta_reserve_balance` because `amount` is the actual amount that the user will receive as a result of borrowing;
+
+`false, // is_delta_raw_total_debt_negative` because the total debt increases as a result of borrowing;
+
+`scaled_down_amount // abs_delta_raw_total_debt` because the absolute amount of the difference in total debt that does not consider the borrowing interest index is `scaled_down_amount`.
+
+Then, the [debt limit](https://zklend.gitbook.io/documentation/using-zklend/technical/asset-parameters#borrow-caps) is checked:
+
+```rust
+// Enforces token debt limit
+assert_debt_limit_satisfied(@self, token);
+```
+
+On [zklend documentation](https://zklend.gitbook.io/documentation/using-zklend/technical/asset-parameters#borrow-caps), this is described as a "borrow cap". The debt limit is not per individual user; It is imposed at the individual liquidity pool level:
+
+![zklend borrow caps](./zklend-borrow-caps.png)
+
+When the amount of total borrowing per token reaches the limit specified by the protocol, users won't be able to borrow anymore until someone repays his debt. 
+
+The debt limit can be checked at https://starkscan.co/contract/0x04c0a5193d58f74fbace4b74dcf65481e734ed1714121bdc571da345540efa05#read-write-contract. For example, for USDT of contract address `0x068f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8`:
+
+![usdt reserve data.png](./usdt_reserve_data.png)
+
+The debt limit is `500000000000`. Because it has `6` decimal places, the actual debt limit is $\frac{500000000000}{10^6}=500,000$, which is in line with zklend's documentation.
+
+Then, the collateralization is checked by `assert_not_undercollateralized(@self, caller, true)` because users shouldn't be able to borrow if they are not backed by enough collaterals.
+
+Finally, after all checks are done, the requested amount is `transfer`red to the user:
+
+```rust
+let amount_u256: u256 = amount.into();
+let transfer_success = IERC20Dispatcher {
+    contract_address: token
+}.transfer(caller, amount_u256);
+assert(transfer_success, errors::TRANSFER_FAILED);
+```
+
 ## Repay
 
-## Repay for
+Repayment takes three kinds: [fn repay](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L174), [fn repay_for](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L192), and [fn repay_all](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L212). All is the same, except that `repay_for` is used to repay for someone else's debt, and `repay_all` is used to repay for all debt owed.
 
-## Repay all
+So let's look at `repay`:
 
-## Enable collateral
+```rust
+fn repay(ref self: ContractState, token: ContractAddress, amount: felt252) {
+    assert(amount.is_non_zero(), errors::ZERO_AMOUNT);
 
-## Disable collateral
+    let caller = get_caller_address();
+
+    let DebtRepaid{raw_amount, face_amount } = repay_debt_route_internal(
+        ref self, caller, caller, token, amount
+    );
+    self
+        .emit(
+            contract::Event::Repayment(
+                contract::Repayment {
+                    repayer: caller, beneficiary: caller, token, raw_amount, face_amount
+                }
+            )
+        );
+}
+```
+
+All business is done at [repay_debt_route_internal](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L708C4-L708C4):
+
+```rust
+/// `amount` with `0` means repaying all. Returns actual debt amounts repaid.
+fn repay_debt_route_internal(
+    ref self: ContractState,
+    repayer: ContractAddress,
+    beneficiary: ContractAddress,
+    token: ContractAddress,
+    amount: felt252
+) -> DebtRepaid {
+    assert_reserve_enabled(@self, token);
+
+    let updated_debt_accumulator = view::get_debt_accumulator(@self, token);
+
+    if amount.is_zero() {
+        let user_raw_debt = self.raw_user_debts.read((beneficiary, token));
+        assert(user_raw_debt.is_non_zero(), errors::NO_DEBT_TO_REPAY);
+
+        let repay_amount = safe_decimal_math::mul(user_raw_debt, updated_debt_accumulator);
+
+        repay_debt_internal(ref self, repayer, beneficiary, token, repay_amount, user_raw_debt);
+
+        DebtRepaid { raw_amount: user_raw_debt, face_amount: repay_amount }
+    } else {
+        let raw_amount = safe_decimal_math::div(amount, updated_debt_accumulator);
+        assert(raw_amount.is_non_zero(), errors::INVALID_AMOUNT);
+        repay_debt_internal(ref self, repayer, beneficiary, token, amount, raw_amount);
+
+        DebtRepaid { raw_amount, face_amount: amount }
+    }
+}
+```
+
+This function is just a step before calling `repay_debt_internal`, and is designed to be called in all of the three repayment functions, and the code is pretty straightforward, given what we have been discussing so far.
+
+So let's look at [repay_debt_internal](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/internal.cairo#L740):
+
+```rust
+/// ASSUMPTION: `repay_amount` = `raw_amount` * Debt Accumulator.
+/// ASSUMPTION: it's always called by `repay_debt_route_internal`.
+/// ASSUMPTION: raw_amount is non zero.
+fn repay_debt_internal(
+    ref self: ContractState,
+    repayer: ContractAddress,
+    beneficiary: ContractAddress,
+    token: ContractAddress,
+    repay_amount: felt252,
+    raw_amount: felt252
+) {
+    let this_address = get_contract_address();
+
+    let UpdatedAccumulators{debt_accumulator: updated_debt_accumulator, .. } = update_accumulators(
+        ref self, token
+    );
+
+    // No need to check if user is overpaying, as `safe_math::sub` below will fail anyways
+    // No need to check collateral value. Always allow repaying even if it's undercollateralized
+
+    // Updates user debt data
+    let raw_user_debt_before = self.raw_user_debts.read((beneficiary, token));
+    let raw_user_debt_after = safe_math::sub(raw_user_debt_before, raw_amount);
+    self.raw_user_debts.write((beneficiary, token), raw_user_debt_after);
+
+    set_user_has_debt(ref self, beneficiary, token, raw_user_debt_before, raw_user_debt_after);
+
+    // Updates interest rate
+    update_rates_and_raw_total_debt(
+        ref self,
+        token, // token
+        updated_debt_accumulator, // updated_debt_accumulator
+        false, // is_delta_reserve_balance_negative
+        repay_amount, // abs_delta_reserve_balance
+        true, // is_delta_raw_total_debt_negative
+        raw_amount // abs_delta_raw_total_debt
+    );
+
+    // Takes token from user
+    let repay_amount: u256 = repay_amount.into();
+    let transfer_success = IERC20Dispatcher {
+        contract_address: token
+    }.transferFrom(repayer, this_address, repay_amount);
+    assert(transfer_success, errors::TRANSFER_FAILED);
+}
+```
 
 ## Liquidate
 
+Let us recall the purpose of liquidation.
+
+```rust
+
+```
+
 ## Flash loan
 
+## Storage
+
 ## Precision
+
+## Oracle
