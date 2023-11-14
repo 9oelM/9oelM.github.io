@@ -1,9 +1,9 @@
 ---
-title: "Technical intro to DeFi lending protocols, with zklend as an example"
+title: "Technical intro to DeFi lending protocols (with code), with zklend as an example"
 date: "2023-10-26T09:00:00.009Z"
 tags: ["blockchain", "dev"]
 tab: "post"
-keywords: ["zklend", "cairo"]
+keywords: ["zklend", "cairo", "defi", "lending", "code"]
 ---
 
 ```toc
@@ -1334,11 +1334,17 @@ $$
 which means Alice is not overcollateralized, which if it was the case make the transaction rejected.
 
 Liquidation should only work for undercollateralized positions. Liquidators cannot liquidate healthy positions.
-
+<!-- 
 ## Flash loan
+
+Flash loan does not exist in TradFi, so there really is no term to explain that. But essentially it is a transaction that borrows an asset from the protocol and makes use of it somehow and returns it back to the protocol with a fee at the end of the protocol.
+
+Because the transaction would fail if the user does not return the borrowed asset at the end of the transaction anyway, there is no need to supply a collateral for the transaction to happen.
 
 ## Storage
 
 ## Precision
 
 ## Oracle
+
+[Pragma Oracle](https://www.pragmaoracle.com/) is used for zklend protocol.  -->
