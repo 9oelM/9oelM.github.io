@@ -371,17 +371,17 @@ Let's say we got \$SIS and \$BRO tokens:
 
 | Token | Oracle Price (USD) | Collateral factor | $R_{\text{slope1}}$ | $R_{\text{slope2}}$ | $R_0$ | $U_{\text{optimal}}$ | Reserve factor | 
 |-|-|-|-|-|-|-|-|
-| \$SIS | 100 | 50% | 0.1 | 0.5 | 1% | 60% | 10% |
-| \$BRO | 50 | 75% | 0.2 | 0.3 | 5% | 80% | 20% |
+| \$SIS | 50 | 50% | 0.1 | 0.5 | 1% | 60% | 10% |
+| \$BRO | 100 | 75% | 0.2 | 0.3 | 5% | 80% | 20% |
 
 Bob deposits $10000$ \$BRO, Alice deposits $100$ \$SIS.
 
 Alice borrows 
 
-\$22.5 \$BRO =
+22.5 \$BRO =
 
 $$
-\$22.5 \times 50 = \$1125 < 100 \times 100 \times 0.5 = \$5000
+22.5 \times \$100 = \$2250 < 100 \times 50 \times 0.5 = \$2500
 $$
 
 which is well within the value of collateral supplied.
@@ -435,19 +435,18 @@ $t$ is calculated as 100 seconds divided by the number of seconds per year (with
 
 Other than this, the calculation above should be straightforward.
 
+
 ## Liquidation
 
 A few more terms need to be defined to be able to understand liquidation.
 
-Health factor. $\text{Health factor} = \frac{\sum{Collateral_i \times \text{Collateral factor}_i}}{\sum{Liability_i}}$. It denotes the status of user's position. If the health factor is lower than 1, the position may be liquidated, because that would mean the value of collaterals is not enough to back the value of borrowings.
+**Health factor**. $\text{Health factor} = \frac{\sum{Collateral_i \times \text{USD value of Collateral}_i \times \text{Collateral factor}_i}}{\sum{Liability_i \times \text{USD value of Liability}_i}}$. It denotes the status of user's position. If the health factor is lower than 1, the position may be liquidated, because that would mean the value of collaterals is not enough to back the value of borrowings.
 
-Borrowing capacity. 
+**Liquidation bonus** (or penalty, for debtors). Additional % applied on the collateral deposited by the debtor, which in turn is received by the liquidator after the repayment. This is to incentivize liquidators to liquidate.
 
-Borrow factor. 
+Potential liquidators will be monitoring the market closely and frequently, and try to call `liquidate()` earlier than their competitors with suitable amount of gas fee that might get their transaction get through earlier than others. Once the transaction gets through, the debtor's position will be liquidated and the corresponding amount of collateral in USD plus the liquidation bonus will be paid back to the liquidator. Liquidators are only allowed to repay no more than the amount that will bring the borrower’s Health Factor back to 1.
 
-Liquidation bonus. Additional % applied on the collateral received after the repayment.
-
-Liquidators are only allowed to repay no more than the amount that will bring the borrower’s Health Factor back to 1.
+Liquidation is essential to the healthy operation of a lending protocol; it removes unhealthy, undercollateralized positions to keep it healthy.
 
 # Technical review
 
@@ -1020,6 +1019,15 @@ The debt limit is `500000000000`. Because it has `6` decimal places, the actual 
 
 Then, the collateralization is checked by `assert_not_undercollateralized(@self, caller, true)` because users shouldn't be able to borrow if they are not backed by enough collaterals.
 
+There is a new term that we need to know about regarding `assert_not_undercollateralized`: **borrow factor**. It is a variable used to deduce the risk-adjusted value of a liability of a certain asset. For example, [on zklend, the following is true](https://zklend.gitbook.io/documentation/using-zklend/technical/asset-parameters#for-borrow-lend):
+
+| asset | collateral factor | borrow factor | 
+|-|-|-|
+| ETH | 80% | 100% |
+| USDT | 70% | 91% |
+
+Let's say you have deposited \$1000 worth of ETH and want to borrow USDT. That means you can borrow $1000 \times 0.8 \times 0.91 = 728$ dollars worth of USDT at max only. Essentially, borrow factor works to adjust the risk of the asset that is being borrowed, just like how collateral factor is used to adjust that of the asset being collateralized. So `assert_not_undercollateralized` takes this into account too.
+
 Finally, after all checks are done, the requested amount is `transfer`red to the user:
 
 ```rust
@@ -1144,11 +1152,150 @@ fn repay_debt_internal(
 
 ## Liquidate
 
-Let us recall the purpose of liquidation.
+[internal::liquidate](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/src/market/external.cairo#L100):
 
 ```rust
+fn liquidate(
+    ref self: ContractState,
+    user: ContractAddress,
+    debt_token: ContractAddress,
+    amount: felt252,
+    collateral_token: ContractAddress
+) {
+    let caller = get_caller_address();
 
+    // Validates input
+    assert(amount.is_non_zero(), errors::ZERO_AMOUNT);
+
+    assert_reserve_enabled(@self, debt_token);
+    assert_reserve_enabled(@self, collateral_token);
+    let debt_reserve_decimals = self.reserves.read_decimals(debt_token);
+    let collateral_reserve = self.reserves.read(collateral_token);
+
+    // Liquidator repays debt for user
+    let DebtRepaid{raw_amount, .. } = repay_debt_route_internal(
+        ref self, caller, user, debt_token, amount
+    );
+
+    // Can only take from assets being used as collateral
+    let is_collateral = is_used_as_collateral(@self, user, collateral_token);
+    assert(is_collateral, errors::NONCOLLATERAL_TOKEN);
+
+    // Liquidator withdraws collateral from user
+    let oracle_addr = self.oracle.read();
+    let debt_token_price = IPriceOracleDispatcher {
+        contract_address: oracle_addr
+    }.get_price(debt_token);
+    let collateral_token_price = IPriceOracleDispatcher {
+        contract_address: oracle_addr
+    }.get_price(collateral_token);
+    let debt_value_repaid = safe_decimal_math::mul_decimals(
+        debt_token_price, amount, debt_reserve_decimals
+    );
+    let equivalent_collateral_amount = safe_decimal_math::div_decimals(
+        debt_value_repaid, collateral_token_price, collateral_reserve.decimals
+    );
+    let one_plus_liquidation_bonus = safe_math::add(
+        safe_decimal_math::SCALE, collateral_reserve.liquidation_bonus
+    );
+    let collateral_amount_after_bonus = safe_decimal_math::mul(
+        equivalent_collateral_amount, one_plus_liquidation_bonus
+    );
+
+    IZTokenDispatcher {
+        contract_address: collateral_reserve.z_token_address
+    }.move(user, caller, collateral_amount_after_bonus);
+
+    // Checks user collateralization factor after liquidation
+    assert_not_overcollateralized(@self, user, false);
+
+    self
+        .emit(
+            contract::Event::Liquidation(
+                contract::Liquidation {
+                    liquidator: caller,
+                    user,
+                    debt_token,
+                    debt_raw_amount: raw_amount,
+                    debt_face_amount: amount,
+                    collateral_token,
+                    collateral_amount: collateral_amount_after_bonus,
+                }
+            )
+        );
+}
 ```
+
+This is a publicly visible function that can be called directly by any liquidators.
+
+The first step is the same as the `repay` function; The liquidator will repay for the undercollateralized asset for the debtor.
+
+The next step is to take the collateral away from the debtor as a liquidator.
+
+The amount that the liquidator is able to take away from the debtor is always $\text{Amount of the collateral in USD equivalent to the amount being repaid by the liquidator} \times (1 + \text{Liquidation bonus})$, where $\text{Liquidation bonus}$ varies from an asset to asset, and is decided by the protocol.
+
+Currently, zklend's liquidation bonus ranges from 10% to 15%:
+
+![liquidation bonus](./liquidation-bonus.png)
+
+After calculating the amount of collateral to be transferred to the liquidator, the function simply `move`s the zToken of the corresponding collateral from the debtor to the liquidator:
+
+```rust
+IZTokenDispatcher {
+    contract_address: collateral_reserve.z_token_address
+}.move(user, caller, collateral_amount_after_bonus);
+```
+
+Lastly, since zklend only allows the liquidator to recover the debtor's position back to the health factor of 1 at maximum, it checks if the debtor is overcollateralized:
+
+```rust
+assert_not_overcollateralized(@self, user, false);
+```
+
+Here's an example of liquidation that works, adopted from [zklend's test case](https://github.com/zkLend/zklend-v1-core/blob/10dfb3d1f01b1177744b038f8417a5a9c3e94185/tests/market.cairo#L998).
+
+The setup is the same as the example used in the interest rate calculation:
+
+| Token | Oracle Price (USD) | Collateral factor | $R_{\text{slope1}}$ | $R_{\text{slope2}}$ | $R_0$ | $U_{\text{optimal}}$ | Reserve factor | Liquidation bonus | 
+|-|-|-|-|-|-|-|-|-|
+| \$SIS | 50 | 50% | 0.1 | 0.5 | 1% | 60% | 10% | 20% |
+| \$BRO | 100 | 75% | 0.2 | 0.3 | 5% | 80% | 20% | 10% |
+
+Bob deposits $10000$ \$BRO, Alice deposits $100$ \$SIS.
+
+Alice borrows 
+
+22.5 \$BRO =
+
+$$
+22.5 \times \$100 = \$2250 < 100 \times 50 \times 0.5 = \$2500
+$$
+
+So initially Alice is in a healthy position, because her health factor would be 
+
+$$\text{Health factor} = \frac{\sum{Collateral_i \times \text{USD value of Collateral}_i \times \text{Collateral factor}_i}}{\sum{Liability_i \times \text{USD value of Liability}_i}} \newline
+= \frac{2500}{2250} > 1
+$$
+
+Now, let's suppose the price of \$SIS declines to \$40. Then Alice's health factor will be:
+
+$$
+\frac{
+    100 \times 40 \times 0.5
+}{
+    2250
+} = \frac{
+    2000
+}{
+    2250
+} = \frac{
+    8
+}{9} < 1
+$$
+
+This means $\frac{1}{9}$ of Alice's liabilities = \$250 worth of \$BRO is now undercollateralized and can be readily liquidated by anyone.
+
+While monitoring the market, Bob notices Alice is in an undercollateralized position, so he calls `liquidate()` function, repaying 6.25 \$BRO for Alice instead.
 
 ## Flash loan
 
