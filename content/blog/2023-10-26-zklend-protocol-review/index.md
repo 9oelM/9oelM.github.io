@@ -1297,6 +1297,44 @@ This means $\frac{1}{9}$ of Alice's liabilities = \$250 worth of \$BRO is now un
 
 While monitoring the market, Bob notices Alice is in an undercollateralized position, so he calls `liquidate()` function, repaying 6.25 \$BRO for Alice instead.
 
+Bob expects to receive: 
+$$
+(\frac{
+    \text{Amount repaid}_\text{BRO} \times \text{Price in USD}_\text{BRO}
+}{
+    \text{Price in USD}_\text{SIS}
+}) \times (1 + \text{Liquidation bonus}_\text{SIS}) = \newline
+(\frac{
+    6.25 \times 100
+}{
+    40
+}) \times (1 + 0.2) = \newline
+18.75
+$$
+
+... 18.75 \$SIS, which is worth $18.75 \times 40 = 750$ dollars. He spent $6.25 \times 100 = 625$ dollars to repay, so as long as the gas fee is low enough, he's made a profit of $750 - 625 - \text{gas}$ dollars.
+
+After liquidation, Alice's health factor is:
+
+$$
+\frac{
+    81.25 \times 40 \times 0.5
+}
+{
+    (22.5 - 6.25) \times 100
+} = \newline 
+\frac{
+    1625
+}
+{
+    1625
+} = 1
+$$
+
+which means Alice is not overcollateralized, which if it was the case make the transaction rejected.
+
+Liquidation should only work for undercollateralized positions. Liquidators cannot liquidate healthy positions.
+
 ## Flash loan
 
 ## Storage
