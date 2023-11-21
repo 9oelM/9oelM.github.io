@@ -1,5 +1,5 @@
 ---
-title: "Technical intro to DeFi lending protocols (with code), with zklend as an example"
+title: "Technical intro to DeFi lending protocols with zkLend codebase as an example"
 date: "2023-10-26T09:00:00.009Z"
 tags: ["blockchain", "dev"]
 tab: "post"
