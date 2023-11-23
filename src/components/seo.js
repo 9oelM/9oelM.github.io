@@ -16,6 +16,7 @@ function SEO({ description, lang, meta, keywords, title }) {
           description || data.site.siteMetadata.description
 
         return (
+          <>
           <Helmet
             htmlAttributes={{
               lang,
@@ -77,6 +78,19 @@ function SEO({ description, lang, meta, keywords, title }) {
             {/* for google search console */}
             <meta name="google-site-verification" content="bP_WsRWQpdoQqfJ80oHjGcWePMZ8Oa4TNQiT9UgDbfY" />
           </Helmet>
+          <Helmet
+            script={[{
+              type: `text/javascript`,
+              innerHtml: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-QQ3QN5WD6K');`
+            }]}
+          >
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-QQ3QN5WD6K"></script>
+          </Helmet>
+          </>
         )
       }}
     />

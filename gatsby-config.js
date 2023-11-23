@@ -79,12 +79,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-105275697-3"
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Joel's dev blog`,
