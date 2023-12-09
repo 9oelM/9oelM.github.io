@@ -111,11 +111,15 @@ fn calculate_utilization_rate(reserve_balance: felt252, total_debt: felt252) -> 
 
 The function's calculation is as follows: $\frac{\text{total debt}}{reserve + \text{total debt}}$. Here, $reserve$ denotes the cash available in the liquidity pool that is not being utilized.
 
+Note that when in used in practice, `total_debt` will have to reflect not only the principal that was borrowed by the user, but also the interests accrued. Otherwise the calculation will result in a wrong value that does not take any interests accrued into account.
+
 ## Interest rate
 
 For the interest rate, we need to talk about the interest rate model first. An interest model is meant to encourage borrowing when there is enough capital, and discourage borrowing (encourage repayment) and additional supply when there is not enough capital. Logically, we arrive at the conclusion that the interest rate must be high when there is high utilization rate, and low when there is low utilization rate.
 
-We would also want to set an optimal utilization rate, because we generally would not want the utilization rate to be too low (no one's using it) or too high (no one can borrow anymore). 
+We would also want to set an optimal utilization rate, because we generally would not want the utilization rate to be too low (no one's using it) or too high (no one can borrow anymore).
+
+It would be worth noting that the interest rates will change when every single transaction that affects the balance of supply or debt happens. The scope of the interest rates to be discussed in this post, therefore, are only variable interest rates.
 
 ### Borrow interest rate
 
@@ -1266,7 +1270,7 @@ Bob deposits $10000$ \$BRO, Alice deposits $100$ \$SIS.
 Alice borrows 
 
 22.5 \$BRO =
-
+    
 $$
 22.5 \times \$100 = \$2250 < 100 \times 50 \times 0.5 = \$2500
 $$
@@ -1334,6 +1338,14 @@ $$
 which means Alice is not overcollateralized, which if it was the case make the transaction rejected.
 
 Liquidation should only work for undercollateralized positions. Liquidators cannot liquidate healthy positions.
+
+## Storage
+
+
+
+## Precision
+
+
 <!-- 
 ## Flash loan
 
