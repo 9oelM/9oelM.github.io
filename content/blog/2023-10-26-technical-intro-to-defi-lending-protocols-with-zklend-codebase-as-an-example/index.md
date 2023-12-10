@@ -59,7 +59,9 @@ Bob thinks the value of ETH will dramatically increase over time, so just a simp
    4. Bob started with 2 ETH that was equivalent to 2400 USD, but after the price increase, he made additional 400 USD in addition to 800 USD that is the increase in the USD value of 2 ETH.
 6. Imagine if Bob held 3 ETH from the beginning. Then this would be valued at 4800 USD after the price increase, leaving Bob with 1200 USD of profit as well. Without the protocol, he wouldn't have been able to achieve the same profit.
 
-#### Shorting
+#### Other usages
+
+Other use cases include shorting, liquidity management, arbitraging, etc. The list is not exhausitive and readily available on the Internet. 
 
 ### Liquidate
 
@@ -69,7 +71,7 @@ Then other users get a chance to liquidate that user's position. In liquidation,
 
 ### Repay
 
-repay for the amount of token you borrowed, plus the accrued interest.
+Repay for the amount of token you borrowed, plus the accrued interest.
 
 ## Over-collateralization
 
