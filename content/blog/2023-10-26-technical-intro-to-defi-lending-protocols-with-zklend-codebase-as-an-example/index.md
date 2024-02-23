@@ -65,7 +65,7 @@ Other use cases include shorting, liquidity management, arbitraging, etc. The li
 
 ### Liquidate
 
-The value of tokens supplied as collaterals fluctuates over time. For example, if you have deposited 1.1 ETH as a collateral, it might be 1809.47 USD today, but it could have been 1790 USD yesterday. In such a case, the total value of collaterals might not be able to cover the total amount of tokens borrowed by a user. 
+The value of tokens supplied as collaterals fluctuates over time. For example, if you have deposited 1.1 ETH as a collateral, it might be 1790 USD today, but it could have been 1809.47 USD yesterday. In such a case, the total value of collaterals might not be able to cover the total amount of tokens borrowed by a user. 
 
 Then other users get a chance to liquidate that user's position. In liquidation, a substantial amount of the user's debt can be repaid by the liquidator, and the borrower will take an additional percentage of the user's collateral as a liquidation bonus (or a penalty, from POV of the borrower). More on this later too.
 
@@ -1343,11 +1343,11 @@ Liquidation should only work for undercollateralized positions. Liquidators cann
 
 ## Storage
 
-
+WIP
 
 ## Precision
 
-
+WIP
 <!-- 
 ## Flash loan
 
