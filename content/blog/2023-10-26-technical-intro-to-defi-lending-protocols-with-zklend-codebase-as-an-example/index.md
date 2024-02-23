@@ -79,7 +79,7 @@ Any lending protocol would want to assume over-colleteralization for maximum mea
 
 Usually, lending protocols would restrict which assets can be used as a collateral. However, it's also worth noting that there are some protocols that allow users to create their own pairs of asset to be borrowed and collateralized.
 
-An example of overcollateralization can be seen in any lending protocols; For example, \$LINK has a 79% of collateral factor on Compound today. This means if you deposit \$100 worth of \$LINK, you will be ables to borrow \$79 worth of any assets without being liquidated.
+An example of overcollateralization can be seen in any lending protocols; For example, \$LINK has a 79% of collateral factor on Compound today. This means if you deposit \$100 worth of \$LINK, you will be able to borrow \$79 worth of any assets without being liquidated.
 
 ## Utilization rate
 
@@ -117,7 +117,7 @@ Note that when in used in practice, `total_debt` will have to reflect not only t
 
 ## Interest rate
 
-For the interest rate, we need to talk about the interest rate model first. An interest model is meant to encourage borrowing when there is enough capital, and discourage borrowing (encourage repayment) and additional supply when there is not enough capital. Logically, we arrive at the conclusion that the interest rate must be high when there is high utilization rate, and low when there is low utilization rate.
+For the interest rate, we need to talk about the interest rate model first. An interest rate model is meant to encourage borrowing when there is enough capital, and discourage borrowing (encourage repayment) and additional supply when there is not enough capital. Logically, we arrive at the conclusion that the interest rate must be high when there is high utilization rate, and low when there is low utilization rate.
 
 We would also want to set an optimal utilization rate, because we generally would not want the utilization rate to be too low (no one's using it) or too high (no one can borrow anymore).
 
