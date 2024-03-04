@@ -441,6 +441,86 @@ $t$ is calculated as 100 seconds divided by the number of seconds per year (with
 
 Other than this, the calculation above should be straightforward.
 
+#### Update frequency of cumulated liquidity index and interest rates
+
+The cumulated liquidity index is updated once per block only. You can go back and check this line:
+
+```rust
+if (reserve.last_update_timestamp == block_timestamp) {
+    // Accumulator already updated on the same block
+    reserve.debt_accumulator
+}
+```
+
+So even if further transactions take place in the same block, the accumulator will change only once for the first transaction in the block and that will be it.
+
+However, interest rates will update every transaction that relates to the change in the amount of value borrowed/lent. This means that the accumulator will take the last available interest rate into consideration, which should be from more than or equal to one previous block from the current block.
+
+This makes sense because accumulators use the time difference between the last update time and now. So it's not possible to update accumulators more than once in the same block.
+
+But the liquidity in the same block can change multiple times, which means there can be varying interest rates per block. The last interest rate of that block will be used for the next accumulator calculation in the later block.
+
+Accumulator example:
+- https://starkscan.co/event/0x0359993b4c7ceac20c64fdfb74a9096e0bde30fe8b7439b2382c63f4256405e1_1
+- https://starkscan.co/event/0x052fd45de382dbd2b2f69d5d313135cf392ed9736b649aa03d2bf25d812afe39_0
+
+Two different `AccumulatorsSync` events for the same token `0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7`, but the value of accumulators stays the same.
+
+Interest rates example:
+- https://starkscan.co/event/0x061536cd135f4e51f861b693208cee8b1c47f8b0962fca5d90efe89b9f64d71a_2
+- https://starkscan.co/event/0x052fd45de382dbd2b2f69d5d313135cf392ed9736b649aa03d2bf25d812afe39_2
+
+Two different `InterestRatesSync` events, in the same block 10000, for the same asset `0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7` but different `lending_rate` and `borrowing_rate`.
+
+#### Approximation of compound interest over a time period
+
+It is impossible to predictably calculate the compound interest accrued/earned from the protocol because the interest rate is variable every block, and the movement of interest rates cannot be predicted without users' actions.
+
+There is a way to run an approximate calculation: **continuous compounding interest formula**.
+
+$$
+P(t) = P_0e^{rt}
+$$
+
+where
+
+$P(t) = \text{value at time }t$
+
+$P_0 = \text{original principal}$
+
+$e = \text{Euler's number}$
+
+$r = \text{annual interest rate}$
+
+$t = \text{length of time the interest rate is applied per year}$
+
+To elaborate, let's take an example: you deposit 25 USDC and wait for a month. The projected average APY over the month is 5%, so we just take a stable 5% APY for example.
+
+Then,
+
+$$
+P(t) = P_0 × e^{r \times t} = 25 * e^{0.05 \times \frac{1}{12}} = 25.1043839823
+$$
+
+This means the compound interest for an average of 5% APY over a month is approximately 0.10 zUSDC.
+
+The reason we use continuous compounding is that the frequency of compounding is simply impossible to be predicted in the case of lending protocols on blockchain and the time difference between each compounding is always different. The frequency of compounding under a given time period is $\text{the number of blocks that contain at least one transaction regarding a particular token on the protocol}$.
+
+Let's give an example of `AccumulatorsSync` event for token `0x68f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8` from block 61993 to 61998:
+
+-  at block 61993
+-  at block 61997
+-  at block 61998
+
+| block  |  event   |   timestamp   |  time diff (secs) from previous compounding |
+|--------|----------|-----|-----|
+| 61993 | [link](https://starkscan.co/event/0x0764b9c1cd4884ebc8232ed50198d685c20d9231d9db6f528c0c20f7a884e876_1) | 1684912486 | - |
+| 61997 | [link](https://starkscan.co/event/0x06940256795acc94ade489a2c23634286860b387845fa628eb40d0841e9a2c44_1) | 1684912643 | 157 |
+| 61998 | [link](https://starkscan.co/event/0x020bfd1d027523232b9a613f32968ae892cb2227f2c4b0adadc262beb5a41952_1) | 1684912678 | 35 |
+
+Given that there were already existing accumulators before block 61993, the lending and borrowing accumulators compounded 3 times within the specified block range.
+
+And the time difference between each compounding event is different, making us unable to use the traditional compound interest formula ($A = P(1 + \frac{r}{n})^{nt}$), where you need to specify $\text{n = number of compounding periods per unit of time}$, which is always variable as explained in above example. Also, each compounding period isn't constant; so this equation can't really be used, because it assumes that each compounding period is the same. Therefore, a fair approximation can be better deduced by using continuous compounding interest formula.
 
 ## Liquidation
 
