@@ -1427,7 +1427,7 @@ WIP
 
 ## Precision
 
-WIP
+Precision is a very important topic
 <!-- 
 ## Flash loan
 
