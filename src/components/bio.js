@@ -34,7 +34,7 @@ function Bio() {
             <p
               style={SF.darkText}
             >
-              Written by <strong>{author}</strong>. Joel likes Typescript, React, Node.js, GoLang, Python, Wasm and more. He also loves to enlarge the boundaries of his knowledge, mainly by reading books and watching lectures on Youtube. Guitar and piano are necessities at his home.
+              Written by <strong>{author}</strong>. Joel likes Rust, GoLang, Typescript, Wasm and more. He also loves to enlarge the boundaries of his knowledge, mainly by reading books and watching lectures on Youtube. Guitar and piano are necessities at his home.
               {` `}
               <div style={{ marginTop: '10px'}} />
               <a style={SF.logoButton} href="https://github.com/9oelM"  target="_blank" rel="noopener noreferer"><GithubLogo /></a>
