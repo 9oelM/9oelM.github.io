@@ -30,7 +30,7 @@ If you wanna learn about the structure of calldata, keep reading.
 
 ## Legacy format
 
-Let's take an example of [Transaction of hash 0x06b8627ba886d457d32cc5a2ef0cc99741fc67b1142ce3f180a29b817b6f5f33](https://starkscan.co/tx/0x06b8627ba886d457d32cc5a2ef0cc99741fc67b1142ce3f180a29b817b6f5f33#overview), which is a transaction sent to zkLend, that has 3 calls: namely `approve`, `deposit` and `enable_collateral`.
+Let's take an example of [Transaction of hash 0x06b8627ba886d457d32cc5a2ef0cc99741fc67b1142ce3f180a29b817b6f5f33](https://starkscan.co/tx/0x06b8627ba886d457d32cc5a2ef0cc99741fc67b1142ce3f180a29b817b6f5f33#overview), which is a transaction that has 3 calls: namely `approve`, `deposit` and `enable_collateral`.
 
 ![legacy.png](./legacy.png)
 

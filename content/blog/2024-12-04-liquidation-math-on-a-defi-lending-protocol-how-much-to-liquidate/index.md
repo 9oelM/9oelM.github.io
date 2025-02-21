@@ -6,8 +6,6 @@ tab: "post"
 keywords: ["defi", "lending", "liquidation", "code", "math"]
 ---
 
-_A prerequisite to understanding this post is [Technical intro to DeFi lending protocols with zkLend codebase as an example](https://9oelm.github.io/2023-10-26-technical-intro-to-defi-lending-protocols-with-zklend-codebase-as-an-example/)._
-
 **Liquidation in DeFi lending** occurs when a borrower's loan-to-value (LTV) ratio exceeds the protocol's liquidation threshold, either due to a drop in collateral value or an increase in the borrowed asset's value. This mechanism protects the platform's solvency by ensuring loans remain adequately backed. 
 
 When the threshold is breached, smart contracts allow anyone to trigger liquidation, repaying part of the debt and receiving collateral plus a bonus as an incentive. This process mitigates insolvency risks caused by market volatility.
