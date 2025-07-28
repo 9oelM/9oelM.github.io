@@ -26,7 +26,7 @@ keywords: ["블록체인", "취업", "질문"]
 
 결론부터 말하자면 최악의 시나리오에서 유수 대학에서 4년제 컴공을 졸업한 사람과 경쟁할 자신이 있어야 합니다. 그건 본인이 자신감을 어떻게든 가지는 수 밖에 없구요.
 
-자신감만 있으면 전공자든 비전공자든 열심히 준비하기만 하면 좋은 결과가 있을 수 밖에 없습니다.
+[비전공자라고 자신없어하지 마세요.](https://www.threads.com/@nerdycrypto.dev/post/C9025CUSsbh?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg) 자신감만 있으면 전공자든 비전공자든 열심히 준비하기만 하면 좋은 결과가 있을 수 밖에 없습니다.
 
 진입장벽이 좀 높아서 처음엔 필히 안 좋은 회사에서 시작할 수밖에 없을 수도 있습니다. 어쩔 수 없는 단계지만 그곳에서 얼마나 빠르게 상승할 수 있는지가 관건이고 그건 오로지 본인에게 달려있습니다.
 
@@ -206,7 +206,7 @@ USD를 들고 있을 수 있는 외환계좌를 선택하게 되면 USD를 그�
 ### 채용 공고는 어떻게 찾아보나요?
 링크드인은 검색 기능이 너무 안 좋아서 개인적으로 사용하진 않습니다.
 
-- 구글에 다음 키워드로 검색: `site:http://jobs.ashbyhq.com OR site:http://boards.greenhouse.io OR site:http://jobs.lever.co OR site:http://apply.workable.com OR site:*.http://breezy.hr/p/ “내 키워드”`
+- [구글에 다음 키워드로 검색](https://www.threads.com/@nerdycrypto.dev/post/DMcCMNGhoo6?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg): `site:http://jobs.ashbyhq.com OR site:http://boards.greenhouse.io OR site:http://jobs.lever.co OR site:http://apply.workable.com OR site:*.http://breezy.hr/p/ “내 키워드”`
 
   ![1.png](./1.png)
 
@@ -244,7 +244,7 @@ USD를 들고 있을 수 있는 외환계좌를 선택하게 되면 USD를 그�
 
 쉽지 않습니다. 영어 해야하죠, 인터뷰 빡세게 봐야하죠, 코드 잘 적어야 하죠, 블록체인 잘 이해해야 하죠, 오픈소스 잘 해야 하죠, 네트워킹 잘 해야 하죠..
 
-그리고 글로벌 인재들과 경쟁을 하기 때문에 한국 내에서 취업하는 것보다는 배로 어렵습니다. 상상해보세요. 하버드 나온 인도인도 내가 지원하는 포지션에 지원하고 있을 수도.
+그리고 글로벌 인재들과 경쟁을 하기 때문에 한국 내에서 취업하는 것보다는 10-20배로 어렵습니다. 상상해 보세요. 하버드 나온 인도인도 내가 지원하는 포지션에 지원하고 있을 수도. 그리고 [80% 포지션이 미국, 유럽 타임존에 집중되어 있습니다. APAC은 기술적으로 소외된 지역입니다.](https://www.threads.com/@nerdycrypto.dev/post/DMY8JQnhlcv?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg) 그래서 **더 잘해야 합니다**.
 
 하지만. 불가능한 건 아닙니다. 그니까 제가 생각하는 극단적인 불가능의 정도는 프로 야구선수 되기 정도의 불가능입니다. 이 정도는 당연히 아니고요. 그 불가능의 정도에서 한 100,000 정도만 곱하면 될 것 같습니다. $\text{프로 야구선수 될 수 있는 확률} \times 100000$
 
@@ -254,4 +254,27 @@ USD를 들고 있을 수 있는 외환계좌를 선택하게 되면 USD를 그�
 
 ### 블록체인 노동시장에서 개발자로써 경쟁력을 가질 수 있는 방법이 궁금합니다.
 
+1. [자소서랑 커버레터 잘 적으세요.](https://www.threads.com/@nerdycrypto.dev/post/DMgfRFWh9qk?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg)
+1. [오픈소스 기여하세요.](https://www.threads.com/@nerdycrypto.dev/post/C9G4ziiItnO?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg) 본인 프로젝트 말고 유명한 프로젝트 하나라도 기여하세요.
+1. [영어 공부하세요.](https://www.threads.com/@nerdycrypto.dev/post/C9bUfRYPSIx?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg) 말듣쓰읽 편식하지 말고 다 하세요.
+1. [블록체인 트렌드 꼭 공부하세요.](https://t.me/joelweb3kr)
+1. [네트워킹 하세요.](https://www.threads.com/@nerdycrypto.dev/post/C9MYHZnoAMx?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg)
+1. [지인 추천 받으세요.](https://www.threads.com/@nerdycrypto.dev/post/DMceCAvvI42?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg)
+1. [공부하는 법을 배우세요.](https://www.threads.com/@nerdycrypto.dev/post/C9ELpcdPeiA?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg)
+1. [개발 블로그 운영하세요.](https://www.threads.com/@nerdycrypto.dev/post/C8-x-S1STwc?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg)
+1. [개인 프로젝트 만드세요.](https://www.threads.com/@nerdycrypto.dev/post/C859TbAP1Lb?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg)
+1. [본인의 업적을 블로그, 트위터, 링크드인, 스레드, 유튜브 등에 꾸준히 업로드하세요.](https://www.threads.com/@nerdycrypto.dev/post/DMdB-fQvtie?xmt=AQF0tBJq2fdQL5MKPlmJ-Ei5d0zMi3NxceWOYjkqLmbUOg)
+
 ### 다른 업계 (web2)에 종사하는데 쉽게 넘어갈 수 있는 방법이 있나요?
+
+**There is no silver bullet.** 한 가지 정답은 없습니다. 저는 말씀드렸듯이 정말 우연찮은 계기로 넘어왔습니다. 플랫메이트가 크립토 VC에서 일하는 친구였고, 대학교 막학기에는 옆 자리에 앉은 친구에게 말을 걸었더니 크립토 회사에서 일을 한다길래 어쩌다 보니 Web3 파트타임 일을 추천받았습니다. 그러니까 다시 말하자면 네트워킹 + Web2 경력이 만든 결과였죠.
+
+여러분에게도 여러분만의 계기가 있을 겁니다.
+
+## 주인장 소셜
+
+이 글이 도움이 되었다면 저의 소셜도 참고 바랍니다.
+
+- [스레드](https://www.threads.com/@nerdycrypto.dev/)
+- [텔래그램 채널](https://t.me/joelweb3kr)
+- [카카오톡 오픈채팅방](https://open.kakao.com/o/ge7kPiEg)
