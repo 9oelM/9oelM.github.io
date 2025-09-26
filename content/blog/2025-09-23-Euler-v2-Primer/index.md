@@ -1,5 +1,5 @@
 ---
-title: "Euler V2"
+title: "Euler V2 Primer"
 date: "2025-09-23T09:00:00.009Z"
 tags: ["blockchain", "dev"]
 tab: "post"
@@ -135,6 +135,23 @@ On the other hand, the first row of `cluster.ltvs` only has `USDT` and `USDf` wi
 
 # Ethereum Vault Connector (EVC)
 
+> The EVC primarily **mediates between vaults, contracts** that implement the ERC-4626 interface and contain additional logic for interfacing with other vaults.
+
+> When a user wishes to borrow, they must link their accounts and collateral vaults to the borrowed-from vault via the EVC. The liability vault, also known as the "controller", is then consulted whenever a user wants to perform an action potentially impacting account's solvency, such as withdrawing collateral. The EVC is responsible for calling the controller which determines whether the action is allowed or if it should be blocked to prevent account insolvency.
+
+> The EVC is the connective tissue of Euler V2's modular system. It sits between users (or contracts) and the underlying vaults, enabling cross-vault collateralization, composable markets, and seamless integrations with other DeFi protocols. By standardizing how vaults interact, the EVC makes it easy to build new products, automate strategies, and manage risk at scale.
+
+In short, EVC works to manage relationships between multiple vaults while allowing users to lend or borrow using those vaults, maintaining their solvency.
+
+It also has other convenient features to access vaults on Euler:
+
+- Batching: Group multiple actions (deposits, borrows, swaps, repayments, etc.) into a single atomic transaction.
+- Sub-accounts: Create up to 256 isolated positions per wallet, enabling sophisticated risk management and strategy separation.
+- Operators: Delegate control of sub-accounts to trusted contracts or automation bots for advanced use cases (e.g., stop-loss, intent-based trading).
+- Deferred Checks: Temporarily exceed limits or health factors within a batch, as long as all checks pass at the end—enabling powerful workflows.
+- Unified Authentication: The EVC handles authentication, so vaults can focus on authorization and business logic.
+- Liquidations: ensures that all steps—collateral seizure, debt repayment, and reward distribution—are performed atomically and securely.
+
 <!-- ## Oracle
 
 Todo
@@ -150,3 +167,5 @@ Todo
 - https://docs.euler.finance/developers/contract-addresses/
 - https://evc.wtf/docs/contracts/ethereum-vault-connector-contracts
 - https://docs.euler.finance/developers/
+- https://github.com/euler-xyz/euler-price-oracle/blob/master/docs/whitepaper.md
+- https://github.com/euler-xyz/ethereum-vault-connector/blob/master/docs/whitepaper.md
